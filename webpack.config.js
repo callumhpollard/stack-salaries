@@ -1,6 +1,6 @@
 module.exports = {
   entry: [
-    './client/src/components/app.jsx',
+      './client/src/components/app.jsx',
       './client/src/components/cloud.jsx',
       './client/src/components/footer.jsx',
       './client/src/components/login.jsx',
