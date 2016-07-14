@@ -1,0 +1,40 @@
+{
+  "name": "stack-salaries",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./server/server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-core": "^6.2.1",
+    "babel-loader": "^6.2.0",
+    "babel-preset-es2015": "^6.1.18",
+    "babel-preset-react": "^6.1.18",
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.15.2",
+    "browserify": "^9.0.3",
+    "cors": "^2.7.1",
+    "express": "^4.14.0",
+    "history": "^1.17.0",
+    "jquery": "^2.2.1",
+    "jwt-simple": "^0.5.0",
+    "lodash": "^3.10.1",
+    "mongoose": "^4.5.3",
+    "morgan": "^1.7.0",
+    "node-notifier": "^4.2.1",
+    "nodemon": "^1.9.2",
+    "passport": "^0.3.2",
+    "passport-jwt": "^2.1.0",
+    "passport-local": "^1.0.0",
+    "react": "^0.14.3",
+    "react-dom": "^0.14.3",
+    "react-router": "^1.0.3",
+    "reactify": "^1.1.0",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^2.4.0"
+  }
+}
