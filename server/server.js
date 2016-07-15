@@ -12,6 +12,7 @@ var passportAuth = require('./passport/passport');
 var localAuth = require('./passport/local');
 var githubAuth = require('./passport/github');
 var passport = require('passport');
+var logout = require('express-passport-logout');
 
 var app = express();
 
@@ -151,6 +152,9 @@ app.post('/signup', function(req, res, next){
 
 });
 
+app.get('/logout', logout(), function(req, res, next){
+  res.redirect('/login');
+});
 
 // test authentication
 function ensureAuthenticated(req, res, next) {

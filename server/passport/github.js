@@ -11,10 +11,37 @@ var githubLogin = new GitHubStrategy({
     clientSecret: '9e2ce18dccdfebb6c90ec47be0691ccb42f21e95',
     callbackURL: "http://127.0.0.1:3000/auth/github/callback"
   }, function(accessToken, refreshToken, profile, done) {
-    return done(null, profile);
+
+  User.findOne({ githubId: profile.id }, function(err, user) {
+        console.log("THIS IS OUR USER IN OUR FIND CREATE " + user);
+        if(err) {
+          console.log(err);  // handle errors!
+        }
+        if (!err && user !== null) {
+          done(null, user);
+        } else {
+          user = new User({
+            githubId: profile.id,
+            name: profile.displayName,
+            email: profile.email
+          });
+          user.save(function(err) {
+            if(err) {
+              console.log(err);  // handle errors!
+            } else {
+              console.log("saving user ...");
+              done(null, user);
+            }
+          });
+        }
+      });
   }
 );
 
+
+
+    // return done(null, profile);
+    //   }
 
 passport.use(githubLogin);
 
@@ -51,3 +78,9 @@ passport.use(githubLogin);
 //         });
 //       }
 //     });
+
+
+ // User.findOrCreate({ githubId: profile.id }, function (err, user) {
+ //      return done(err, user);
+ //    });
+ //  }
