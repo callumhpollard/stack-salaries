@@ -1,22 +1,24 @@
 import React from 'react';
 import Login from './login';
-import Main from './main';
+import Logo from './logo';
+import Results from './results';
 import Search from './search';
-import Cloud from './cloud';
+import Footer from './footer';
 
-const App = React.createClass({
+const Stats = React.createClass({
   render: function() {
     return (
       <div>
+        <Logo/>
         <Login/>
         <div>
-          <Main/>
+          <Results/>
           <Search/>
-          <Cloud/>
+          <Footer/>
         </div>
       </div>
     );
   }
 });
 
-export default App;
+export default Stats;
