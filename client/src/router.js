@@ -17,11 +17,11 @@ export default (
         </Route>
       </Route>
 
-      {/*<Route path="login">
+      <Route path="login">
         <Route component={MainLayout}>
-          <IndexRoute component={LoginPage} />
+          <IndexRoute component={LoginForm} />
         </Route>
-      </Route>*/}
+      </Route>
 
     </Route>
   </Router>

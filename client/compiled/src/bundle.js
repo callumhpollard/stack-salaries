@@ -25648,17 +25648,15 @@
 	    _react2.default.createElement(_reactRouter.Route, { path: '/', component: _app2.default }),
 	    _react2.default.createElement(
 	      _reactRouter.Route,
-	      { path: '/results', component: _mainLayout2.default },
-	      _react2.default.createElement(_reactRouter.IndexRoute, { component: _stats2.default })
+	      { path: 'results' },
+	      _react2.default.createElement(
+	        _reactRouter.Route,
+	        { component: _mainLayout2.default },
+	        _react2.default.createElement(_reactRouter.IndexRoute, { component: _stats2.default })
+	      )
 	    )
 	  )
 	);
-
-	// {<Route path="login">
-	//   <Route component={MainLayout}>
-	//     <IndexRoute component={LoginPage} />
-	//   </Route>
-	// </Route>}
 
 /***/ },
 /* 231 */
