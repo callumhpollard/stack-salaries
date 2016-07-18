@@ -3,9 +3,9 @@ import React from 'react';
 const LoginForm = React.createClass({
   constructor() {
     this.state = {
-      user: '',
-      password: '',
-      authToken: ''
+      user: "",
+      password: "",
+      authToken: ""
     };
   }
 
@@ -28,8 +28,8 @@ const LoginForm = React.createClass({
     var data = {user: this.state.user, password: this.state.password};
 
     $.ajax({
-      url:'http://localhost:3000/signin',
-      type:'POST',
+      url:"http://localhost:3000/signin",
+      type:"POST",
       contentType:"application/json",
       data: JSON.stringify(data);
       success: function(data) {
@@ -37,6 +37,21 @@ const LoginForm = React.createClass({
           authToken: data;
         })
       },
+      error: function(err) {
+        console.log(err);
+      }
+    })
+  }
+
+  userAuthToken (callback) {
+    $.ajax({
+      url:"http://localhost:3000/results",
+      type:"GET",
+      contentType:"application/json",
+      beforeSend: function(xhr) {
+        xhr.setRequestHeader("Authorization", 'Basic', btoa(this.state.authToken));
+      },
+      success: callback,
       error: function(err) {
         console.log(err);
       }
