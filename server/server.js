@@ -16,10 +16,10 @@ var logout = require('express-passport-logout');
 
 var app = express();
 
-app.use(morgan('combined'));
+app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, './public')));
+app.use(express.static(path.join(__dirname, '../client/compiled')));
 
 
 // Mongoose Connection (Refactor into Separate File)
@@ -35,24 +35,23 @@ function generateToken(user){
   return jwt.encode({ sub: user.id, iat: timestamp }, secret.secret);
 }
 
-app.use(passport.initialize());
-app.use(passport.session());
-
 // Set to false since tokens are being used
 // This is Passport Authentication setup
 // Github auth will be added here as well
 var requireAuth = passport.authenticate('jwt', { session: false } );
 var requireSignIn = passport.authenticate('local', { session: false });
-var githubAuth = passport.authenticate('github', { session: false });
+// var githubAuth = passport.authenticate('github', { session: false });
+
+// function ensureAuthenticated(req, res, next) {
+//   if (req.isAuthenticated()) {
+//     // req.user is available for use here
+//     return next(); }
+
+//   // denied. redirect to login
+//   res.redirect('/')
+// }
 
 
-// serialize and deserialize
-passport.serializeUser(function(user, done) {
-  done(null, user);
-});
-passport.deserializeUser(function(obj, done) {
-  done(null, obj);
-});
 
 // Allow all headers
 app.all('*', function(req, res, next) { 
@@ -79,20 +78,15 @@ app.post('/stackentry', function(req, res, next){
 
 });
 
-// app.get('/auth/github', passport.authenticate('github'), function(req, res){
+
+// Github Oauth Disabled
+// app.get('/auth/github', githubAuth, function(req, res){
 // });
 
-app.get('/auth/github', githubAuth, function(req, res){
-});
-
-app.get('/auth/github/callback', githubAuth, function(req, res) {
-    res.redirect('/users');
-});
-
-
-// app.get('/auth/github/callback', passport.authenticate('github', { failureRedirect: '/login' }), function(req, res) {
+// app.get('/auth/github/callback', githubAuth, function(req, res) {
 //     res.redirect('/users');
 // });
+
 
 // GET all users
 app.get('/users', function(req, res, next){
@@ -103,6 +97,21 @@ app.get('/users', function(req, res, next){
       throw err;
     }
   });
+});
+
+app.get('/users/:id', function(req, res, next){
+  var id = req.params.id;
+
+  // A friendly error to display if no user matches the id
+  var err = "No such user with the given id";
+
+   User.findOne({ id: id}, function(err, existingUser){
+    if(err) {
+      res.send(err);
+    } else {
+      res.json(existingUser);
+    }
+   });
 });
 
 // The middleware will verify credentials
@@ -118,10 +127,10 @@ app.post('/signup', function(req, res, next){
   var email = req.body.email;
   var password = req.body.password;
 
-  // Validation to check if all the fields were being passed
-  // if(!email || !password || !name){
-  //   return res.send(422, {error: "Please fill out all the fields"});
-  // }
+  Validation to check if all the fields were being passed
+  if(!email || !password || !name){
+    return res.send(422, {error: "Please fill out all the fields"});
+  }
 
   // Check email already exists
   User.findOne({ email: email}, function(err, existingUser){
@@ -155,12 +164,6 @@ app.post('/signup', function(req, res, next){
 app.get('/logout', logout(), function(req, res, next){
   res.redirect('/login');
 });
-
-// test authentication
-function ensureAuthenticated(req, res, next) {
-  if (req.isAuthenticated()) { return next(); }
-  res.redirect('/');
-}
 
 
 var port = process.env.PORT || 3000;
