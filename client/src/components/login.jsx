@@ -5,7 +5,7 @@ const Login = React.createClass({
   render: function() {
     return(
       <div>
-      <button className="btn btn-primary login"><Link to='/results'>Login</Link></button>
+      <button className="btn btn-primary login"><Link to='/login'>Login</Link></button>
       </div>
     );
   }
