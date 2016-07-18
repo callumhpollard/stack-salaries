@@ -89,7 +89,7 @@ app.post('/stackentry', function(req, res, next){
 
 
 // GET all users
-app.get('/users', function(req, res, next){
+app.get('/users', requireAuth, function(req, res, next){
   User.find({}, function(err, users){
     if(!err) {
       res.send(200, users);
@@ -127,7 +127,7 @@ app.post('/signup', function(req, res, next){
   var email = req.body.email;
   var password = req.body.password;
 
-  Validation to check if all the fields were being passed
+  // Validation to check if all the fields were being passed
   if(!email || !password || !name){
     return res.send(422, {error: "Please fill out all the fields"});
   }
