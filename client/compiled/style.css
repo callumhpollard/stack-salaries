@@ -135,3 +135,7 @@ body {
 .login {
   margin-left: 50px;
 }
+
+input[type="text"] {
+  color: #000;
+}

@@ -1,7 +1,10 @@
 import React from 'react';
 
-const LoginForm = React.createClass({
+class LoginForm extends React.Component{
   constructor() {
+
+    super();
+
     this.state = {
       user: "",
       password: "",
@@ -12,17 +15,16 @@ const LoginForm = React.createClass({
   changeUser(e) {
     this.setState({
       user: e.target.value
-    })
+    });
   }
 
   changePassword(e) {
     this.setState({
       password: e.target.value
-    })
+    });
   }
 
-
-  loginToServer (e) {
+  loginToServer(e) {
     e.preventDefault();
 
     var data = {user: this.state.user, password: this.state.password};
@@ -31,18 +33,19 @@ const LoginForm = React.createClass({
       url:"http://localhost:3000/signin",
       type:"POST",
       contentType:"application/json",
-      data: JSON.stringify(data);
+      data: JSON.stringify(data),
       success: function(data) {
+        console.log(data.token);
         this.setState({
-          authToken: data;
-        })
+          authToken: data.token
+        });
       },
       error: function(err) {
         console.log(err);
       }
-    })
+    });
   }
-
+  // May or may not need this method.
   userAuthToken (callback) {
     $.ajax({
       url:"http://localhost:3000/results",
@@ -55,10 +58,10 @@ const LoginForm = React.createClass({
       error: function(err) {
         console.log(err);
       }
-    })
+    });
   }
 
-  render: function() {
+  render() {
     return (
       <div>
         <form role="form">
@@ -71,6 +74,6 @@ const LoginForm = React.createClass({
     </div>
     );
   }
-});
+}
 
 export default LoginForm;

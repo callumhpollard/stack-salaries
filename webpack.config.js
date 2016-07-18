@@ -6,6 +6,7 @@ module.exports = {
       './client/src/components/login.jsx',
       './client/src/components/logo.jsx',
       './client/src/components/main.jsx',
+      './client/src/components/login-form.jsx',
       './client/src/components/results.jsx',
       './client/src/components/search.jsx',
       './client/src/index.js',
