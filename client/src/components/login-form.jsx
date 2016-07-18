@@ -1,13 +1,11 @@
 import React from 'react';
 
-const Cloud = React.createClass({
+const LoginForm = React.createClass({
   render: function() {
     return (
-      <div>
 
-      </div>
     );
   }
 });
 
-export default Cloud;
+export default LoginForm;

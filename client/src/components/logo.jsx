@@ -4,7 +4,7 @@ const Logo = React.createClass({
   render: function() {
     return(
       <div>
-        <h2>Stack Salaries</h2>
+        <div>Stack Salaries</div>
         <h3>Proudly Made at Hack Reactor</h3>
       </div>
     );

@@ -1,0 +1,137 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+@import url(https://fonts.googleapis.com/css?family=Arimo:400,400italic,700,700italic);
+@import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css");
+
+
+body {
+  font-family: 'Arimo', sans-serif;
+  background: url('stack_background3.png') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.container {
+  margin-top: 400px;
+}
+
+#app {
+  display: flex;
+  justify-content: center; /* horizontal centering */
+  align-items: center; /* vertical centering */
+  text-align: center;
+  color: #fff;
+  font-size: 1em;
+}
+
+
+#app h1 {
+  color: #fff;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 100px;
+  font-weight: bold;
+  letter-spacing: -1px;
+  line-height: 1;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#app p {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.navbar {
+  display: flex;
+  border: none;
+  background-color: transparent;
+  justify-content: flex-start;
+  margin-top: 50px;
+  margin-right: 50px;
+  flex-direction: row-reverse;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  color: #3998d7;
+}
+
+.btn-primary{
+  border: 1px solid #fff;
+  background-color: transparent;
+  margin-left: 10px;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+    color: #3998d7;
+    background-color: #fff;
+    border-color: #285e8e; /*set the color you want here*/
+}
+
+.flexcontainer {
+   display: -webkit-flex;
+   display: flex;
+   -webkit-flex-direction: row /* works with row or column */
+   flex-direction: row;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-justify-content: center;
+   justify-content: center;
+}
+
+.bigitem {
+   /* This will be twice as big as the small item. */
+   -webkit-flex: 2 0 0;
+   flex: 2 0 0;
+}
+.smallitem {
+   -webkit-flex: 1 0 0;
+   flex: 1 0 0;
+}
+
+.form-control {
+  max-width: 500px;
+}
+
+.input-group {
+  display: flex;
+  justify-content: center;
+}
+
+.city {
+  max-width: 300px;
+}
+
+.login {
+
+}
+
+.art {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+/*  display: flex;
+  flex-direction: row-reverse;*/
+}
+
+.art img {
+  max-width: 90%;
+}
+
+.bottom {
+  align-self: flex-end;
+}
+
+.feature {
+  font-size: 3em;
+}
+
+.login {
+  margin-left: 50px;
+}

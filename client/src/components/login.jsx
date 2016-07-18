@@ -1,10 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 const Login = React.createClass({
   render: function() {
     return(
       <div>
-        <button>Login</button>
+      <button className="btn btn-primary login"><Link to='/results'>Login</Link></button>
       </div>
     );
   }

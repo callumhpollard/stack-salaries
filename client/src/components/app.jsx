@@ -8,12 +8,21 @@ const App = React.createClass({
   render: function() {
     return (
       <div>
-        <Login/>
+      <div className="container">
         <div>
+          <nav className="navbar navbar-default navbar-fixed-top">
+             <Login/>
+          </nav>
           <Main/>
+
           <Search/>
           <Cloud/>
+
         </div>
+      </div>
+      <div className="art">
+             <img className="bottom" src="./blueprint3.png" />
+      </div>
       </div>
     );
   }
