@@ -5,7 +5,10 @@
   "main": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "open 'http://localhost:8080/webpack-dev-server/#/'; webpack-dev-server --content-base ./client/compiled/"
+    "convert": "webpack",
+    "dev": "open 'http://localhost:8080/webpack-dev-server/#/'; webpack-dev-server --content-base ./client/compiled/",
+    "live": "nodemon ./server/server.js",
+    "start": "npm run convert && npm run live"
   },
   "author": "",
   "license": "ISC",
