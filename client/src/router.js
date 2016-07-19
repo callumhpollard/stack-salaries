@@ -4,7 +4,8 @@ import { Router, Route, browserHistory, IndexRoute } from 'react-router';
 import MainLayout from './components/main-layout';
 import App from './components/app';
 import Stats from './components/stats';
-//import LoginPage from './components/loginpage';
+import LoginForm from './components/login-form';
+import SignupForm from './components/signup-form';
 
 export default (
   <Router history={browserHistory}>
@@ -20,6 +21,12 @@ export default (
       <Route path="login">
         <Route component={MainLayout}>
           <IndexRoute component={LoginForm} />
+        </Route>
+      </Route>
+
+      <Route path="signup">
+        <Route component={MainLayout}>
+          <IndexRoute component={SignupForm} />
         </Route>
       </Route>
 

@@ -66,6 +66,7 @@ app.get('/', function(req, res, next){
 });
 
 app.get('/login', function(req, res, next){
+
 });
 
 // Get all Stack Entries
