@@ -8,7 +8,7 @@ class LoginForm extends React.Component{
     super();
 
     this.state = {
-      user: "",
+      email: "",
       password: "",
       authToken: ""
     };
@@ -16,7 +16,7 @@ class LoginForm extends React.Component{
 
   changeUser(e) {
     this.setState({
-      user: e.target.value
+      email: e.target.value
     });
   }
 

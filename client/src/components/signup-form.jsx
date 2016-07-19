@@ -9,7 +9,7 @@ class SignForm extends React.Component{
     super();
 
     this.state = {
-      user: "",
+      name: "",
       password: "",
       email: "",
       authToken: ""
@@ -18,7 +18,7 @@ class SignForm extends React.Component{
 
   addUser(e) {
     this.setState({
-      user: e.target.value
+      name: e.target.value
     });
   }
 
@@ -39,7 +39,7 @@ class SignForm extends React.Component{
     e.preventDefault();
     var self = this;
 
-    var data = {user: this.state.user, email: this.state.email, password: this.state.password};
+    var data = {name: this.state.name, email: this.state.email, password: this.state.password};
 
     console.log(data);
     $.ajax({

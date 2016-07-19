@@ -8,45 +8,39 @@ class Search extends React.Component{
     super();
     this.state = {
       stack: "",
-      city: "",
-      state: "",
+      cityState: [],
       salary:[]
     };
   }
 
+
+  findCityState(e) {
+    this.state.cityState.push(e.target.value);
+  }
+
   findStack(e) {
     this.setState({
-      stack: e.target.value
+      stack:e.target.value
     });
   }
 
-  findCity(e) {
-    this.setState({
-      city: e.target.value
-    });
-  }
-
-  findState(e) {
-    this.setState({
-      state: e.target.value
-    });
-  }
 
   getDatafromServer(e) {
     e.preventDefault();
 
-    var data = {stack: this.state.stack, city: this.state.city, state: this.state.state};
+    this.state.cityState.split(",");
+    var data = {stack: this.state.stack, city: this.state.cityState[0], state: this.state.cityState[1]};
+
     var self = this;
-    // console.log(data);
+    console.log(data);
+
     $.ajax({
       url:"http://localhost:3000/stackdata",
-      type:"GET",
+      type:"POST",
       contentType:"application/json",
       data: JSON.stringify(data),
       success: function(data) {
-        self.setState({
-          salary: data
-        });
+        self.state.salary.push(data);
       },
       error: function(err) {
         console.log(err);
@@ -54,10 +48,11 @@ class Search extends React.Component{
     });
   }
 
+
   render() {
     return (
       <div>
-        <SeachInput getDatafromServer={this.getDatafromServer.bind(this)} findStack={this.findStack.user(this)} findCity={this.findCity.user(this)} findState={this.findState.user(this)}/>
+        <SearchInput getDatafromServer={this.getDatafromServer.bind(this)} findStack={this.findStack.bind(this)} findCityState={this.findCityState.bind(this)} />
       </div>
     );
   }

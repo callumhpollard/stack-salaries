@@ -56,7 +56,7 @@
 	__webpack_require__(232);
 	__webpack_require__(233);
 	__webpack_require__(223);
-	(function webpackMissingModule() { throw new Error("Cannot find module \"./client/src/components/search-input.jsx\""); }());
+	__webpack_require__(225);
 	module.exports = __webpack_require__(235);
 
 
@@ -25412,7 +25412,7 @@
 
 	var _jquery2 = _interopRequireDefault(_jquery);
 
-	var _searchInput = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./search-input\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+	var _searchInput = __webpack_require__(225);
 
 	var _searchInput2 = _interopRequireDefault(_searchInput);
 
@@ -25434,14 +25434,18 @@
 
 	    _this.state = {
 	      stack: "",
-	      city: "",
-	      state: "",
+	      cityState: [],
 	      salary: []
 	    };
 	    return _this;
 	  }
 
 	  _createClass(Search, [{
+	    key: 'findCityState',
+	    value: function findCityState(e) {
+	      this.state.cityState.push(e.target.value);
+	    }
+	  }, {
 	    key: 'findStack',
 	    value: function findStack(e) {
 	      this.setState({
@@ -25449,36 +25453,23 @@
 	      });
 	    }
 	  }, {
-	    key: 'findCity',
-	    value: function findCity(e) {
-	      this.setState({
-	        city: e.target.value
-	      });
-	    }
-	  }, {
-	    key: 'findState',
-	    value: function findState(e) {
-	      this.setState({
-	        state: e.target.value
-	      });
-	    }
-	  }, {
 	    key: 'getDatafromServer',
 	    value: function getDatafromServer(e) {
 	      e.preventDefault();
 
-	      var data = { stack: this.state.stack, city: this.state.city, state: this.state.state };
+	      this.state.cityState.split(",");
+	      var data = { stack: this.state.stack, city: this.state.cityState[0], state: this.state.cityState[1] };
+
 	      var self = this;
 	      console.log(data);
+
 	      _jquery2.default.ajax({
 	        url: "http://localhost:3000/stackdata",
-	        type: "GET",
+	        type: "POST",
 	        contentType: "application/json",
 	        data: JSON.stringify(data),
 	        success: function success(data) {
-	          self.setState({
-	            salary: data
-	          });
+	          self.state.salary.push(data);
 	        },
 	        error: function error(err) {
 	          console.log(err);
@@ -25491,7 +25482,7 @@
 	      return _react2.default.createElement(
 	        'div',
 	        null,
-	        _react2.default.createElement(SeachInput, { getDatafromServer: this.getDatafromServer.bind(this), findStack: this.findStack.user(this), findCity: this.findCity.user(this), findState: this.findState.user(this) })
+	        _react2.default.createElement(_searchInput2.default, { getDatafromServer: this.getDatafromServer.bind(this), findStack: this.findStack.bind(this), findCityState: this.findCityState.bind(this) })
 	      );
 	    }
 	  }]);
@@ -35324,7 +35315,43 @@
 
 
 /***/ },
-/* 225 */,
+/* 225 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var SearchInput = function SearchInput(props) {
+	  return _react2.default.createElement(
+	    "form",
+	    { className: "flexcontainer", onSubmit: props.getDatafromServer },
+	    _react2.default.createElement(
+	      "div",
+	      { className: "input-group" },
+	      _react2.default.createElement("input", { type: "text", className: "form-control", value: props.stack, onChange: props.findStack, placeholder: "Add your tech stack separated by commas" }),
+	      _react2.default.createElement("input", { type: "text", className: "city form-control", value: props.cityState, onChange: props.findCityState, placeholder: "New York, NY" }),
+	      _react2.default.createElement(
+	        "button",
+	        { className: "btn btn-primary" },
+	        _react2.default.createElement("span", { className: "glyphicon glyphicon-search" }),
+	        "Search"
+	      )
+	    )
+	  );
+	};
+
+	exports.default = SearchInput;
+
+/***/ },
 /* 226 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -35469,7 +35496,7 @@
 	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(LoginForm).call(this));
 
 	    _this.state = {
-	      user: "",
+	      email: "",
 	      password: "",
 	      authToken: ""
 	    };
@@ -35480,7 +35507,7 @@
 	    key: 'changeUser',
 	    value: function changeUser(e) {
 	      this.setState({
-	        user: e.target.value
+	        email: e.target.value
 	      });
 	    }
 	  }, {
@@ -35569,7 +35596,7 @@
 	    _react2.default.createElement(
 	      "form",
 	      { onSubmit: props.loginToServer },
-	      _react2.default.createElement("input", { type: "text", value: props.user, onChange: props.changeUser, className: "login-user", placeholder: "Username" }),
+	      _react2.default.createElement("input", { type: "email", value: props.email, onChange: props.changeUser, className: "login-user", placeholder: "email" }),
 	      _react2.default.createElement("input", { type: "password", value: props.password, onChange: props.changePassword, className: "login-password", placeholder: "Password" }),
 	      _react2.default.createElement(
 	        "button",
@@ -35623,7 +35650,7 @@
 	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(SignForm).call(this));
 
 	    _this.state = {
-	      user: "",
+	      name: "",
 	      password: "",
 	      email: "",
 	      authToken: ""
@@ -35635,7 +35662,7 @@
 	    key: 'addUser',
 	    value: function addUser(e) {
 	      this.setState({
-	        user: e.target.value
+	        name: e.target.value
 	      });
 	    }
 	  }, {
@@ -35658,7 +35685,7 @@
 	      e.preventDefault();
 	      var self = this;
 
-	      var data = { user: this.state.user, email: this.state.email, password: this.state.password };
+	      var data = { name: this.state.name, email: this.state.email, password: this.state.password };
 
 	      console.log(data);
 	      _jquery2.default.ajax({
@@ -35732,7 +35759,7 @@
 	    _react2.default.createElement(
 	      "form",
 	      { onSubmit: props.SignUpToServer },
-	      _react2.default.createElement("input", { type: "text", value: props.user, onChange: props.addUser, className: "signup-user", placeholder: "Username" }),
+	      _react2.default.createElement("input", { type: "name", value: props.user, onChange: props.addUser, className: "signup-user", placeholder: "Username" }),
 	      _react2.default.createElement("input", { type: "email", value: props.email, onChange: props.addEmail, className: "signup-email", placeholder: "Email" }),
 	      _react2.default.createElement("input", { type: "password", value: props.password, onChange: props.addPassword, className: "signup-password", placeholder: "Password" }),
 	      _react2.default.createElement(
