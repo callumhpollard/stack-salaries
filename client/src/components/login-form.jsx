@@ -29,8 +29,8 @@ class LoginForm extends React.Component{
   loginToServer(e) {
     e.preventDefault();
 
-    var data = {user: this.state.user, password: this.state.password};
-
+    var data = {email: this.state.email, password: this.state.password};
+    var self = this;
     console.log(data);
     $.ajax({
       url:"http://localhost:3000/signin",
@@ -39,8 +39,9 @@ class LoginForm extends React.Component{
       data: JSON.stringify(data),
       success: function(data) {
         console.log(data.token);
-        this.setState({
-          authToken: data.token
+        localStorage.setItem('token', data.token),
+        self.setState({
+          authToken: data.token,
         });
       },
       error: function(err) {
