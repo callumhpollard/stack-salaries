@@ -37,6 +37,7 @@ class SignForm extends React.Component{
 
   SignUpToServer(e) {
     e.preventDefault();
+    var self = this;
 
     var data = {user: this.state.user, email: this.state.email, password: this.state.password};
 
@@ -48,7 +49,8 @@ class SignForm extends React.Component{
       data: JSON.stringify(data),
       success: function(data) {
         console.log(data.token);
-        this.setState({
+        localStorage.setItem('token', data.token),
+        self.setState({
           authToken: data.token
         });
       },
