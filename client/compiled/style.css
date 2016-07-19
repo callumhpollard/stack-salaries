@@ -135,3 +135,11 @@ body {
 .login {
   margin-left: 50px;
 }
+
+input[type="text"] {
+  color: #000;
+}
+
+input[type="email"]{
+  color: #000;
+}

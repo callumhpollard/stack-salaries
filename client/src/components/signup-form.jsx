@@ -1,8 +1,9 @@
 import React from 'react';
 import $ from 'jquery';
-import LoginInput from './login-input';
+import SignupInput from './signup-input';
 
-class LoginForm extends React.Component{
+
+class SignForm extends React.Component{
   constructor() {
 
     super();
@@ -10,30 +11,38 @@ class LoginForm extends React.Component{
     this.state = {
       user: "",
       password: "",
+      email: "",
       authToken: ""
     };
   }
 
-  changeUser(e) {
+  addUser(e) {
     this.setState({
       user: e.target.value
     });
   }
 
-  changePassword(e) {
+  addPassword(e) {
     this.setState({
       password: e.target.value
     });
   }
 
-  loginToServer(e) {
+  addEmail(e) {
+    this.setState({
+      email: e.target.value
+    });
+  }
+
+
+  SignUpToServer(e) {
     e.preventDefault();
 
-    var data = {user: this.state.user, password: this.state.password};
+    var data = {user: this.state.user, email: this.state.email, password: this.state.password};
 
     console.log(data);
     $.ajax({
-      url:"http://localhost:3000/signin",
+      url:"http://localhost:3000/signup",
       type:"POST",
       contentType:"application/json",
       data: JSON.stringify(data),
@@ -67,10 +76,11 @@ class LoginForm extends React.Component{
   render() {
     return (
       <div>
-        <LoginInput loginToServer={this.loginToServer.bind(this)} changeUser={this.changeUser.bind(this)} changePassword={this.changePassword.bind(this)} />
+        <SignupInput SignUpToServer={this.SignUpToServer.bind(this)} addUser={this.addUser.bind(this)} addEmail={this.addEmail.bind(this)} addPassword={this.addPassword.bind(this)} />
       </div>
     );
   }
 }
 
-export default LoginForm;
+
+export default SignForm;
