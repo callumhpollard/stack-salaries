@@ -6,8 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "convert": "webpack",
+    "compile-server": "babel ./server/server.js --out-file ./server/server-c.js --presets=es2015,react --ignore=node_modules,compiled --source-maps inline",
     "dev": "open 'http://localhost:8080/webpack-dev-server/#/'; webpack-dev-server --content-base ./client/compiled/",
-    "live": "nodemon ./server/server.js",
+    "live": "nodemon ./server/server-c.js",
     "start": "npm run convert && npm run live"
   },
   "author": "",
