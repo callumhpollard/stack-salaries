@@ -1,21 +1,47 @@
 import React from 'react';
+import $ from 'jquery';
+import SearchInput from './search-input';
 
-const Search = React.createClass({
-  render: function() {
+class Search extends React.Component{
+
+  constructor() {
+    super();
+    this.state = {
+      stack: "",
+      city: "",
+      state: ""
+    };
+  }
+
+  getDatafromServer(e) {
+    e.preventDefault();
+
+    var data = {this.state.};
+    var self = this;
+    console.log(data);
+    $.ajax({
+      url:"http://localhost:3000/stackdata",
+      type:"GET",
+      contentType:"application/json",
+      data: JSON.stringify(data),
+      success: function(data) {
+        self.setState({
+
+        });
+      },
+      error: function(err) {
+        console.log(err);
+      }
+    });
+  }
+
+  render() {
     return (
       <div>
-        <form className="flexcontainer">
-        <div className="input-group">
-          <input type="text" className="form-control" placeholder="Add your tech stack separated by commas"/>
-          <input type="text" className="city form-control" placeholder="New York, NY"/>
-          <button className="btn btn-primary"><span className="glyphicon glyphicon-search"></span>  Search</button>
-        </div>
-
-
-        </form>
+        <SeachInput />
       </div>
     );
   }
-});
+};
 
 export default Search;

@@ -40,8 +40,7 @@ function generateToken(user){
 // Github auth will be added here as well
 var requireAuth = passport.authenticate('jwt', { session: false } );
 var requireSignIn = passport.authenticate('local', { session: false });
-var githubAuth = passport.authenticate('github', { session: true, successRedirect: '/', failureRedirect: '/login'});
-
+// var githubAuth = passport.authenticate('github', { session: false });
 
 // function ensureAuthenticated(req, res, next) {
 //   if (req.isAuthenticated()) {
@@ -52,8 +51,6 @@ var githubAuth = passport.authenticate('github', { session: true, successRedirec
 //   res.redirect('/')
 // }
 
-
-app.use(passport.initialize());
 
 
 // Allow all headers
@@ -69,6 +66,7 @@ app.get('/', function(req, res, next){
 });
 
 app.get('/login', function(req, res, next){
+
 });
 
 // Get all Stack Entries
@@ -78,17 +76,21 @@ app.get('/stackdata', function(req, res, next){
 
 // Add a Stack Entry
 app.post('/stackentry', function(req, res, next){
+
 });
 
-app.get('/auth/github', githubAuth, function(req, res, next){
-});
 
-app.get('/auth/github/callback', function(req, res) {
-    res.redirect("/dashboard");
-});
+// Github Oauth Disabled
+// app.get('/auth/github', githubAuth, function(req, res){
+// });
+
+// app.get('/auth/github/callback', githubAuth, function(req, res) {
+//     res.redirect('/users');
+// });
+
 
 // GET all users
-app.get('/users', requireAuth, function(req, res, next){
+app.get('/users', function(req, res, next){
   User.find({}, function(err, users){
     if(!err) {
       res.send(200, users);
@@ -163,6 +165,7 @@ app.post('/signup', function(req, res, next){
 app.get('/logout', logout(), function(req, res, next){
   res.redirect('/login');
 });
+
 
 var port = process.env.PORT || 3000;
 

@@ -2,7 +2,6 @@ import React from 'react';
 
 var LoginInput = (props) => (
 
-
   <div className="login-input">
     <form onSubmit={props.loginToServer} >
       <input type="text" value={props.user} onChange={props.changeUser} className="login-user" placeholder="Username" />
@@ -10,6 +9,7 @@ var LoginInput = (props) => (
     <button type="submit">Submit</button>
     </form>
   </div>
+  
 )
 
 export default LoginInput;
