@@ -40,7 +40,7 @@ function generateToken(user){
 // Github auth will be added here as well
 var requireAuth = passport.authenticate('jwt', { session: false } );
 var requireSignIn = passport.authenticate('local', { session: false });
-var githubAuth = passport.authenticate('github', { session: true, successRedirect: '/', failureRedirect: '/login'});
+var githubAuth = passport.authenticate('github', { session: false, successRedirect: '/', failureRedirect: '/login'});
 
 
 // function ensureAuthenticated(req, res, next) {

@@ -16,7 +16,6 @@ class Search extends React.Component{
   getDatafromServer(e) {
     e.preventDefault();
 
-    var data = {this.state.};
     var self = this;
     console.log(data);
     $.ajax({
@@ -38,7 +37,7 @@ class Search extends React.Component{
   render() {
     return (
       <div>
-        <SeachInput />
+        <SearchInput />
       </div>
     );
   }

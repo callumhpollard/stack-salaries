@@ -146,6 +146,10 @@ body {
   margin-left: 50px;
 }
 
+.signup-input {
+  color: #000;
+}
+
 input[type="text"] {
   color: #000;
 }
