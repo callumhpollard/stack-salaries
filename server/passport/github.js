@@ -44,4 +44,3 @@ passport.deserializeUser(function(obj, cb) {
 });
 
 passport.use(githubLogin);
-
