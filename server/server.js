@@ -42,6 +42,9 @@ var requireAuth = passport.authenticate('jwt', { session: false } );
 var requireSignIn = passport.authenticate('local', { session: false });
 // var githubAuth = passport.authenticate('github', { session: false });
 
+var githubAuth = passport.authenticate('github', { session: false, successRedirect: '/', failureRedirect: '/login'});
+
+
 // function ensureAuthenticated(req, res, next) {
 //   if (req.isAuthenticated()) {
 //     // req.user is available for use here

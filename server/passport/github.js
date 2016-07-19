@@ -43,7 +43,8 @@ var githubLogin = new GitHubStrategy({
     // return done(null, profile);
     //   }
 
-passport.use(githubLogin);
+
+// passport.use(githubLogin);
 
 
 //   function(accessToken, refreshToken, profile, cb) {
@@ -84,3 +85,5 @@ passport.use(githubLogin);
  //      return done(err, user);
  //    });
  //  }
+
+passport.use(githubLogin);

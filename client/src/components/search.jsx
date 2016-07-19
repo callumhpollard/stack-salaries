@@ -1,21 +1,61 @@
 import React from 'react';
+import $ from 'jquery';
+import SearchInput from './search-input';
 
-const Search = React.createClass({
-  render: function() {
+class Search extends React.Component{
+
+  constructor() {
+    super();
+    this.state = {
+      stack: "",
+      cityState: [],
+      salary:[]
+    };
+  }
+
+
+  findCityState(e) {
+    this.state.cityState.push(e.target.value);
+  }
+
+  findStack(e) {
+    this.setState({
+      stack:e.target.value
+    });
+  }
+
+
+  getDatafromServer(e) {
+    e.preventDefault();
+
+    this.state.cityState.split(",");
+    var data = {stack: this.state.stack, city: this.state.cityState[0], state: this.state.cityState[1]};
+
+    var self = this;
+    console.log(data);
+
+    $.ajax({
+      url:"http://localhost:3000/stackdata",
+      type:"POST",
+      contentType:"application/json",
+      data: JSON.stringify(data),
+      success: function(data) {
+        self.state.salary.push(data);
+      },
+      error: function(err) {
+        console.log(err);
+      }
+    });
+  }
+
+
+  render() {
     return (
       <div>
-        <form className="flexcontainer">
-        <div className="input-group">
-          <input type="text" className="form-control" placeholder="Add your tech stack separated by commas"/>
-          <input type="text" className="city form-control" placeholder="New York, NY"/>
-          <button className="btn btn-primary"><span className="glyphicon glyphicon-search"></span>Search</button>
-        </div>
-
-
-        </form>
+        <SearchInput getDatafromServer={this.getDatafromServer.bind(this)} findStack={this.findStack.bind(this)} findCityState={this.findCityState.bind(this)} />
       </div>
     );
   }
-});
+};
 
 export default Search;
