@@ -12,6 +12,7 @@ module.exports = {
       './client/src/components/signup-input.jsx',
       './client/src/components/results.jsx',
       './client/src/components/search.jsx',
+      './client/src/components/search-input.jsx',
       './client/src/index.js',
   ],
   output: {

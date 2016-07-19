@@ -10,9 +10,7 @@ const Stats = React.createClass({
     return (
       <div>
         <Logo/>
-        <nav className="navbar navbar-default navbar-fixed-top">
-          <Login/>
-        </nav>
+        <Login/>
         <div>
           <Results/>
           <Search/>
