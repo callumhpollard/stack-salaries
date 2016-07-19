@@ -8,14 +8,16 @@ class Search extends React.Component{
     super();
     this.state = {
       stack: "",
-      cityState: [],
+      cityState: "",
       salary:[]
     };
   }
 
 
   findCityState(e) {
-    this.state.cityState.push(e.target.value);
+    this.setState({
+      cityState:e.target.value
+    });
   }
 
   findStack(e) {
@@ -27,9 +29,8 @@ class Search extends React.Component{
 
   getDatafromServer(e) {
     e.preventDefault();
-
-    this.state.cityState.split(",");
-    var data = {stack: this.state.stack, city: this.state.cityState[0], state: this.state.cityState[1]};
+    this.state.cityState = this.state.cityState.split(", ");
+    var data = {stack: this.state.stack, city: this.state.cityState[0], state:this.state.cityState[1]};
 
     var self = this;
     console.log(data);

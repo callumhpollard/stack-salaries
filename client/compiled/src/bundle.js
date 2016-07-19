@@ -25434,7 +25434,7 @@
 
 	    _this.state = {
 	      stack: "",
-	      cityState: [],
+	      cityState: "",
 	      salary: []
 	    };
 	    return _this;
@@ -25443,7 +25443,9 @@
 	  _createClass(Search, [{
 	    key: 'findCityState',
 	    value: function findCityState(e) {
-	      this.state.cityState.push(e.target.value);
+	      this.setState({
+	        cityState: e.target.value
+	      });
 	    }
 	  }, {
 	    key: 'findStack',
@@ -25456,8 +25458,7 @@
 	    key: 'getDatafromServer',
 	    value: function getDatafromServer(e) {
 	      e.preventDefault();
-
-	      this.state.cityState.split(",");
+	      this.state.cityState = this.state.cityState.split(", ");
 	      var data = { stack: this.state.stack, city: this.state.cityState[0], state: this.state.cityState[1] };
 
 	      var self = this;
