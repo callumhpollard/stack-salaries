@@ -45,18 +45,19 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(1);
-	__webpack_require__(224);
-	__webpack_require__(225);
-	__webpack_require__(159);
 	__webpack_require__(226);
-	__webpack_require__(222);
 	__webpack_require__(227);
+	__webpack_require__(159);
+	__webpack_require__(228);
+	__webpack_require__(222);
 	__webpack_require__(229);
 	__webpack_require__(230);
 	__webpack_require__(231);
 	__webpack_require__(232);
+	__webpack_require__(233);
 	__webpack_require__(223);
-	module.exports = __webpack_require__(234);
+	(function webpackMissingModule() { throw new Error("Cannot find module \"./client/src/components/search-input.jsx\""); }());
+	module.exports = __webpack_require__(235);
 
 
 /***/ },
@@ -85,7 +86,7 @@
 
 	var _search2 = _interopRequireDefault(_search);
 
-	var _cloud = __webpack_require__(224);
+	var _cloud = __webpack_require__(226);
 
 	var _cloud2 = _interopRequireDefault(_cloud);
 
@@ -25395,155 +25396,6 @@
 /* 223 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _react = __webpack_require__(2);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	var Search = _react2.default.createClass({
-	  displayName: "Search",
-
-	  render: function render() {
-	    return _react2.default.createElement(
-	      "div",
-	      null,
-	      _react2.default.createElement(
-	        "form",
-	        { className: "flexcontainer" },
-	        _react2.default.createElement(
-	          "div",
-	          { className: "input-group" },
-	          _react2.default.createElement("input", { type: "text", className: "form-control", placeholder: "Add your tech stack separated by commas" }),
-	          _react2.default.createElement("input", { type: "text", className: "city form-control", placeholder: "New York, NY" }),
-	          _react2.default.createElement(
-	            "button",
-	            { className: "btn btn-primary" },
-	            _react2.default.createElement("span", { className: "glyphicon glyphicon-search" }),
-	            "  Search"
-	          )
-	        )
-	      )
-	    );
-	  }
-	});
-
-	exports.default = Search;
-
-/***/ },
-/* 224 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _react = __webpack_require__(2);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	var Cloud = _react2.default.createClass({
-	  displayName: 'Cloud',
-
-	  render: function render() {
-	    return _react2.default.createElement('div', null);
-	  }
-	});
-
-	exports.default = Cloud;
-
-/***/ },
-/* 225 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _react = __webpack_require__(2);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	var Footer = _react2.default.createClass({
-	  displayName: 'Footer',
-
-	  render: function render() {
-	    return _react2.default.createElement(
-	      'div',
-	      null,
-	      _react2.default.createElement(
-	        'h1',
-	        null,
-	        'About | Jobs | Onix | Contact'
-	      ),
-	      _react2.default.createElement(
-	        'h2',
-	        null,
-	        '2016 Stack Salaries'
-	      )
-	    );
-	  }
-	});
-
-	exports.default = Footer;
-
-/***/ },
-/* 226 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _react = __webpack_require__(2);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	var Logo = _react2.default.createClass({
-	  displayName: 'Logo',
-
-	  render: function render() {
-	    return _react2.default.createElement(
-	      'div',
-	      null,
-	      _react2.default.createElement(
-	        'div',
-	        null,
-	        'Stack Salaries'
-	      ),
-	      _react2.default.createElement(
-	        'h3',
-	        null,
-	        'Proudly Made at Hack Reactor'
-	      )
-	    );
-	  }
-	});
-
-	exports.default = Logo;
-
-/***/ },
-/* 227 */
-/***/ function(module, exports, __webpack_require__) {
-
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
@@ -25556,13 +25408,13 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _jquery = __webpack_require__(228);
+	var _jquery = __webpack_require__(224);
 
 	var _jquery2 = _interopRequireDefault(_jquery);
 
-	var _loginInput = __webpack_require__(229);
+	var _searchInput = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./search-input\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 
-	var _loginInput2 = _interopRequireDefault(_loginInput);
+	var _searchInput2 = _interopRequireDefault(_searchInput);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -25572,53 +25424,60 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var LoginForm = function (_React$Component) {
-	  _inherits(LoginForm, _React$Component);
+	var Search = function (_React$Component) {
+	  _inherits(Search, _React$Component);
 
-	  function LoginForm() {
-	    _classCallCheck(this, LoginForm);
+	  function Search() {
+	    _classCallCheck(this, Search);
 
-	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(LoginForm).call(this));
+	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Search).call(this));
 
 	    _this.state = {
-	      user: "",
-	      password: "",
-	      authToken: ""
+	      stack: "",
+	      city: "",
+	      state: "",
+	      salary: []
 	    };
 	    return _this;
 	  }
 
-	  _createClass(LoginForm, [{
-	    key: 'changeUser',
-	    value: function changeUser(e) {
+	  _createClass(Search, [{
+	    key: 'findStack',
+	    value: function findStack(e) {
 	      this.setState({
-	        user: e.target.value
+	        stack: e.target.value
 	      });
 	    }
 	  }, {
-	    key: 'changePassword',
-	    value: function changePassword(e) {
+	    key: 'findCity',
+	    value: function findCity(e) {
 	      this.setState({
-	        password: e.target.value
+	        city: e.target.value
 	      });
 	    }
 	  }, {
-	    key: 'loginToServer',
-	    value: function loginToServer(e) {
+	    key: 'findState',
+	    value: function findState(e) {
+	      this.setState({
+	        state: e.target.value
+	      });
+	    }
+	  }, {
+	    key: 'getDatafromServer',
+	    value: function getDatafromServer(e) {
 	      e.preventDefault();
 
-	      var data = { email: this.state.email, password: this.state.password };
+	      var data = { stack: this.state.stack, city: this.state.city, state: this.state.state };
 	      var self = this;
 	      console.log(data);
 	      _jquery2.default.ajax({
-	        url: "http://localhost:3000/signin",
-	        type: "POST",
+	        url: "http://localhost:3000/stackdata",
+	        type: "GET",
 	        contentType: "application/json",
 	        data: JSON.stringify(data),
 	        success: function success(data) {
-	          console.log(data.token);
-	          localStorage.setItem('token', data.token), self.setState({
-	            authToken: data.token
+	          self.setState({
+	            salary: data
 	          });
 	        },
 	        error: function error(err) {
@@ -25626,40 +25485,26 @@
 	        }
 	      });
 	    }
-	    // May or may not need this method.
-	    // userAuthToken (callback) {
-	    //   $.ajax({
-	    //     url:"http://localhost:3000/results",
-	    //     type:"GET",
-	    //     contentType:"application/json",
-	    //     beforeSend: function(xhr) {
-	    //       xhr.setRequestHeader("Authorization", 'Basic', btoa(this.state.authToken));
-	    //     },
-	    //     success: callback,
-	    //     error: function(err) {
-	    //       console.log(err);
-	    //     }
-	    //   });
-	    // }
-
 	  }, {
 	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
 	        'div',
 	        null,
-	        _react2.default.createElement(_loginInput2.default, { loginToServer: this.loginToServer.bind(this), changeUser: this.changeUser.bind(this), changePassword: this.changePassword.bind(this) })
+	        _react2.default.createElement(SeachInput, { getDatafromServer: this.getDatafromServer.bind(this), findStack: this.findStack.user(this), findCity: this.findCity.user(this), findState: this.findState.user(this) })
 	      );
 	    }
 	  }]);
 
-	  return LoginForm;
+	  return Search;
 	}(_react2.default.Component);
 
-	exports.default = LoginForm;
+	;
+
+	exports.default = Search;
 
 /***/ },
-/* 228 */
+/* 224 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -35479,7 +35324,230 @@
 
 
 /***/ },
+/* 225 */,
+/* 226 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var Cloud = _react2.default.createClass({
+	  displayName: 'Cloud',
+
+	  render: function render() {
+	    return _react2.default.createElement('div', null);
+	  }
+	});
+
+	exports.default = Cloud;
+
+/***/ },
+/* 227 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var Footer = _react2.default.createClass({
+	  displayName: 'Footer',
+
+	  render: function render() {
+	    return _react2.default.createElement(
+	      'div',
+	      null,
+	      _react2.default.createElement(
+	        'h1',
+	        null,
+	        'About | Jobs | Onix | Contact'
+	      ),
+	      _react2.default.createElement(
+	        'h2',
+	        null,
+	        '2016 Stack Salaries'
+	      )
+	    );
+	  }
+	});
+
+	exports.default = Footer;
+
+/***/ },
+/* 228 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var Logo = _react2.default.createClass({
+	  displayName: 'Logo',
+
+	  render: function render() {
+	    return _react2.default.createElement(
+	      'div',
+	      null,
+	      _react2.default.createElement(
+	        'div',
+	        null,
+	        'Stack Salaries'
+	      ),
+	      _react2.default.createElement(
+	        'h3',
+	        null,
+	        'Proudly Made at Hack Reactor'
+	      )
+	    );
+	  }
+	});
+
+	exports.default = Logo;
+
+/***/ },
 /* 229 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _jquery = __webpack_require__(224);
+
+	var _jquery2 = _interopRequireDefault(_jquery);
+
+	var _loginInput = __webpack_require__(230);
+
+	var _loginInput2 = _interopRequireDefault(_loginInput);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var LoginForm = function (_React$Component) {
+	  _inherits(LoginForm, _React$Component);
+
+	  function LoginForm() {
+	    _classCallCheck(this, LoginForm);
+
+	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(LoginForm).call(this));
+
+	    _this.state = {
+	      user: "",
+	      password: "",
+	      authToken: ""
+	    };
+	    return _this;
+	  }
+
+	  _createClass(LoginForm, [{
+	    key: 'changeUser',
+	    value: function changeUser(e) {
+	      this.setState({
+	        user: e.target.value
+	      });
+	    }
+	  }, {
+	    key: 'changePassword',
+	    value: function changePassword(e) {
+	      this.setState({
+	        password: e.target.value
+	      });
+	    }
+	  }, {
+	    key: 'loginToServer',
+	    value: function loginToServer(e) {
+	      e.preventDefault();
+
+	      var data = { email: this.state.email, password: this.state.password };
+	      var self = this;
+	      console.log(data);
+	      _jquery2.default.ajax({
+	        url: "http://localhost:3000/signin",
+	        type: "POST",
+	        contentType: "application/json",
+	        data: JSON.stringify(data),
+	        success: function success(data) {
+	          console.log(data.token);
+	          localStorage.setItem('token', data.token), self.setState({
+	            authToken: data.token
+	          });
+	        },
+	        error: function error(err) {
+	          console.log(err);
+	        }
+	      });
+	    }
+	    // May or may not need this method.
+	    // userAuthToken (callback) {
+	    //   $.ajax({
+	    //     url:"http://localhost:3000/results",
+	    //     type:"GET",
+	    //     contentType:"application/json",
+	    //     beforeSend: function(xhr) {
+	    //       xhr.setRequestHeader("Authorization", 'Basic', btoa(this.state.authToken));
+	    //     },
+	    //     success: callback,
+	    //     error: function(err) {
+	    //       console.log(err);
+	    //     }
+	    //   });
+	    // }
+
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(_loginInput2.default, { loginToServer: this.loginToServer.bind(this), changeUser: this.changeUser.bind(this), changePassword: this.changePassword.bind(this) })
+	      );
+	    }
+	  }]);
+
+	  return LoginForm;
+	}(_react2.default.Component);
+
+	exports.default = LoginForm;
+
+/***/ },
+/* 230 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -35515,7 +35583,7 @@
 	exports.default = LoginInput;
 
 /***/ },
-/* 230 */
+/* 231 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -35530,11 +35598,11 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _jquery = __webpack_require__(228);
+	var _jquery = __webpack_require__(224);
 
 	var _jquery2 = _interopRequireDefault(_jquery);
 
-	var _signupInput = __webpack_require__(231);
+	var _signupInput = __webpack_require__(232);
 
 	var _signupInput2 = _interopRequireDefault(_signupInput);
 
@@ -35600,7 +35668,7 @@
 	        data: JSON.stringify(data),
 	        success: function success(data) {
 	          console.log(data.token);
-	          self.setState({
+	          localStorage.setItem('token', data.token), self.setState({
 	            authToken: data.token
 	          });
 	        },
@@ -35642,7 +35710,7 @@
 	exports.default = SignForm;
 
 /***/ },
-/* 231 */
+/* 232 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -35679,7 +35747,7 @@
 	exports.default = SignupInput;
 
 /***/ },
-/* 232 */
+/* 233 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -35692,7 +35760,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _d = __webpack_require__(233);
+	var _d = __webpack_require__(234);
 
 	var _d2 = _interopRequireDefault(_d);
 
@@ -35940,7 +36008,7 @@
 	exports.default = Results;
 
 /***/ },
-/* 233 */
+/* 234 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// https://d3js.org Version 4.1.1. Copyright 2016 Mike Bostock.
@@ -52139,7 +52207,7 @@
 	}));
 
 /***/ },
-/* 234 */
+/* 235 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -52148,11 +52216,11 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactDom = __webpack_require__(235);
+	var _reactDom = __webpack_require__(236);
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _router = __webpack_require__(236);
+	var _router = __webpack_require__(237);
 
 	var _router2 = _interopRequireDefault(_router);
 
@@ -52161,7 +52229,7 @@
 	_reactDom2.default.render(_router2.default, document.getElementById('app'));
 
 /***/ },
-/* 235 */
+/* 236 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -52170,7 +52238,7 @@
 
 
 /***/ },
-/* 236 */
+/* 237 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -52185,7 +52253,7 @@
 
 	var _reactRouter = __webpack_require__(160);
 
-	var _mainLayout = __webpack_require__(237);
+	var _mainLayout = __webpack_require__(238);
 
 	var _mainLayout2 = _interopRequireDefault(_mainLayout);
 
@@ -52193,15 +52261,15 @@
 
 	var _app2 = _interopRequireDefault(_app);
 
-	var _stats = __webpack_require__(238);
+	var _stats = __webpack_require__(239);
 
 	var _stats2 = _interopRequireDefault(_stats);
 
-	var _loginForm = __webpack_require__(227);
+	var _loginForm = __webpack_require__(229);
 
 	var _loginForm2 = _interopRequireDefault(_loginForm);
 
-	var _signupForm = __webpack_require__(230);
+	var _signupForm = __webpack_require__(231);
 
 	var _signupForm2 = _interopRequireDefault(_signupForm);
 
@@ -52245,7 +52313,7 @@
 	);
 
 /***/ },
-/* 237 */
+/* 238 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -52279,7 +52347,7 @@
 	exports.default = MainLayout;
 
 /***/ },
-/* 238 */
+/* 239 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -52296,11 +52364,11 @@
 
 	var _login2 = _interopRequireDefault(_login);
 
-	var _logo = __webpack_require__(226);
+	var _logo = __webpack_require__(228);
 
 	var _logo2 = _interopRequireDefault(_logo);
 
-	var _results = __webpack_require__(232);
+	var _results = __webpack_require__(233);
 
 	var _results2 = _interopRequireDefault(_results);
 
@@ -52308,7 +52376,7 @@
 
 	var _search2 = _interopRequireDefault(_search);
 
-	var _footer = __webpack_require__(225);
+	var _footer = __webpack_require__(227);
 
 	var _footer2 = _interopRequireDefault(_footer);
 
