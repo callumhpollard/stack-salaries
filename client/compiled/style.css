@@ -139,3 +139,7 @@ body {
 input[type="text"] {
   color: #000;
 }
+
+input[type="email"]{
+  color: #000;
+}
