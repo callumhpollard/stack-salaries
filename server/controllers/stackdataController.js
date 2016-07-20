@@ -38,8 +38,8 @@ var calculateSalary = function(query, callback){
       salaries.push(s.salary);
     }
 
-    calcSalary.lowest = Math.min(...salaries);
-    calcSalary.highest = Math.max(...salaries);
+    calcSalary.lowest = Math.min(null, salaries);
+    calcSalary.highest = Math.max(null, salaries);
     calcSalary.average = salaries.reduce((a, b) => a + b)/salaries.length;
 
     callback(calcSalary);
