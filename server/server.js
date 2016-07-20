@@ -18,11 +18,12 @@ import React from 'react';
 import { renderToString } from 'react-dom/server'
 import { match, RouterContext } from 'react-router'
 var routes = require('./compiled/src/bundle').default;
+var SD = require('./controllers/stackdataController');
 
 var app = express();
 
 app.use(morgan('dev'));
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, '../client/compiled')));
 
@@ -55,37 +56,20 @@ app.all('*', function(req, res, next) { 
   next(); 
 });
 
-// Get all Stack Entries
-app.get('/stackdata', function(req, res, next){
-  // StackData.find({}, function(err, entries){
-  //   if(!err) {
-  //     res.send(200, entries);
-  //   } else {
-  //     throw err;
-  //   }
-  // });
+//Search for any field
+app.post('/search', function(req, res, next){
+  SD.querySalary(req.body, function(results){
+    res.json(results);
+  });
 })
 
 // Add a Stack Entry
 app.post('/stackentry', function(req, res, next){
-
+  SD.createSalary(req.body, function(result){
+    res.status(201);
+    res.json(result);
+  })
 });
-
-// app.get('/auth/github', githubAuth, function(req, res){
-// });
-
-// app.get('/auth/github/callback', githubAuth, function(req, res) {
-//     res.redirect('/dashboard');
-// });
-
-
-// app.get(['/dashboard'], function(req, res) {
-//   /* Use React Router */
-
-//   match({routes: Router, location: req.url}, function(error, redirectLocation, renderProps) {
-//     /* Send response */
-//   });
-// });
 
 // GET all users
 app.get('/users', function(req, res, next){
