@@ -5,8 +5,14 @@ import Results from './results';
 import Search from './search';
 import Footer from './footer';
 
-const Stats = React.createClass({
-  render: function() {
+class Stats extends React.Component {
+
+  componentDidMount(){
+    console.log("Whooohoo!");
+    console.log(this.props.location.state);
+  }
+
+  render() {
     return (
       <div>
         <Logo/>
@@ -18,7 +24,10 @@ const Stats = React.createClass({
         </div>
       </div>
     );
+
   }
-});
+
+}
+
 
 export default Stats;

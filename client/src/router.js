@@ -1,35 +1,32 @@
 import React from 'react';
-import { Router, Route, browserHistory, IndexRoute } from 'react-router';
+import { Route, browserHistory, IndexRoute } from 'react-router';
 
 import MainLayout from './components/main-layout';
 import App from './components/app';
 import Stats from './components/stats';
 import LoginForm from './components/login-form';
 import SignupForm from './components/signup-form';
+import Dashboard from './components/dashboard';
 
 export default (
-  <Router history={browserHistory}>
-    <Route component={MainLayout}>
-      <Route path="/" component={App} />
+  <Route path="/" component={MainLayout}>
+    <IndexRoute component={App} />
 
-      <Route path="results">
-        <Route component={MainLayout}>
-          <IndexRoute component={Stats} />
-        </Route>
-      </Route>
-
-      <Route path="login">
-        <Route component={MainLayout}>
-          <IndexRoute component={LoginForm} />
-        </Route>
-      </Route>
-
-      <Route path="signup">
-        <Route component={MainLayout}>
-          <IndexRoute component={SignupForm} />
-        </Route>
-      </Route>
-
+    <Route path="results">
+      <IndexRoute component={Stats} />
     </Route>
-  </Router>
+
+    <Route path="login">
+      <IndexRoute component={LoginForm} />
+    </Route>
+
+    <Route path="signup">
+      <IndexRoute component={SignupForm} />
+    </Route>
+
+    <Route path="dashboard">
+      <IndexRoute component={Dashboard} />
+    </Route>
+
+  </Route>
 );
