@@ -21,7 +21,6 @@ const App = React.createClass({
         </div>
       </div>
       <div className="art">
-             <img className="bottom" src="./blueprint3.png" />
       </div>
       </div>
     );
@@ -29,3 +28,6 @@ const App = React.createClass({
 });
 
 export default App;
+
+
+             // <img className="bottom" src="./blueprint3.png" />

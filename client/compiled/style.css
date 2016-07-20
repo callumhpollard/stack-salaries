@@ -147,3 +147,7 @@ input[type="text"] {
 input[type="email"]{
   color: #000;
 }
+
+.loginBox {
+  background-color: #fff;
+}

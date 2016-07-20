@@ -1,6 +1,7 @@
 import React from 'react';
 import d3 from 'd3';
-
+import { History } from 'react-router';
+import { Router } from 'react-router';
 
 
 var SetIntervalMixin = {
