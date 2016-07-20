@@ -1,4 +1,4 @@
-module.exports = {
+var clientConfig = {
   entry: [
       './client/src/components/app.jsx',
       './client/src/components/cloud.jsx',
@@ -8,6 +8,7 @@ module.exports = {
       './client/src/components/main.jsx',
       './client/src/components/login-form.jsx',
       './client/src/components/login-input.jsx',
+      './client/src/components/dashboard.jsx',
       './client/src/components/signup-form.jsx',
       './client/src/components/signup-input.jsx',
       './client/src/components/results.jsx',
@@ -38,3 +39,32 @@ module.exports = {
   }
 
 };
+
+var serverConfig = {
+  entry: [
+      './client/src/router.js',
+  ],
+  output: {
+    path: './server/compiled/src',
+    libraryTarget: 'commonjs2',
+    filename: 'bundle.js'
+  },
+  target: 'node',
+  module: {
+    loaders: [{
+      exclude: /node_modules/,
+      loader: 'babel',
+      query: {
+        presets: ['react', 'es2015', 'stage-1']
+      }
+    }]
+  },
+  resolve: {
+    extensions: ['', '.js', '.jsx']
+  }
+};
+
+module.exports = [
+  clientConfig,
+  serverConfig
+];

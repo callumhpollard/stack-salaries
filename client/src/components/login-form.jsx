@@ -1,6 +1,10 @@
 import React from 'react';
 import $ from 'jquery';
 import LoginInput from './login-input';
+import Login from './login';
+import { History } from 'react-router';
+import { Router } from 'react-router';
+
 
 class LoginForm extends React.Component{
   constructor() {
@@ -26,6 +30,10 @@ class LoginForm extends React.Component{
     });
   }
 
+  redirectToDashboard(dataToken){
+    this.props.history.pushState({token: dataToken}, '/results')
+  }
+
   loginToServer(e) {
     e.preventDefault();
 
@@ -43,6 +51,7 @@ class LoginForm extends React.Component{
         self.setState({
           authToken: data.token,
         });
+        self.redirectToDashboard(data.token);
       },
       error: function(err) {
         console.log(err);
@@ -68,7 +77,7 @@ class LoginForm extends React.Component{
   render() {
     return (
       <div>
-        <LoginInput loginToServer={this.loginToServer.bind(this)} changeUser={this.changeUser.bind(this)} changePassword={this.changePassword.bind(this)} />
+        <LoginInput history={this.props.history} loginToServer={this.loginToServer.bind(this)} changeUser={this.changeUser.bind(this)} changePassword={this.changePassword.bind(this)} />
       </div>
     );
   }

@@ -1,18 +1,23 @@
-var express = require('express');
-var bodyParser = require('body-parser');
-var morgan = require('morgan');
-var mongoose = require('mongoose');
-var User = require('./models/user');
-var path = require('path');
-var cors = require('cors');
-var bcrypt = require('bcrypt-nodejs');
-var jwt = require('jwt-simple');
-var secret = require('./secret');
-var passportAuth = require('./passport/passport');
-var localAuth = require('./passport/local');
-var githubAuth = require('./passport/github');
-var passport = require('passport');
-var logout = require('express-passport-logout');
+import express from 'express';
+import bodyParser from 'body-parser';
+import morgan from 'morgan';
+import mongoose from 'mongoose';
+import User from './models/user';
+import StackData from './models/stackdata';
+import path from 'path';
+import cors from 'cors';
+import bcrypt from 'bcrypt-nodejs';
+import jwt from 'jwt-simple';
+import secret from './secret';
+import passportAuth from './passport/passport';
+import localAuth from './passport/local';
+import github from './passport/github';
+import passport from 'passport';
+import logout from 'express-passport-logout';
+import React from 'react';
+import { renderToString } from 'react-dom/server'
+import { match, RouterContext } from 'react-router'
+var routes = require('./compiled/src/bundle').default;
 
 var app = express();
 
@@ -40,21 +45,7 @@ function generateToken(user){
 // Github auth will be added here as well
 var requireAuth = passport.authenticate('jwt', { session: false } );
 var requireSignIn = passport.authenticate('local', { session: false });
-// var githubAuth = passport.authenticate('github', { session: false });
-
 var githubAuth = passport.authenticate('github', { session: false, successRedirect: '/', failureRedirect: '/login'});
-
-
-// function ensureAuthenticated(req, res, next) {
-//   if (req.isAuthenticated()) {
-//     // req.user is available for use here
-//     return next(); }
-
-//   // denied. redirect to login
-//   res.redirect('/')
-// }
-
-
 
 // Allow all headers
 app.all('*', function(req, res, next) { 
@@ -64,17 +55,15 @@ app.all('*', function(req, res, next) { 
   next(); 
 });
 
-// Root Path
-app.get('/', function(req, res, next){
-});
-
-app.get('/login', function(req, res, next){
-
-});
-
 // Get all Stack Entries
 app.get('/stackdata', function(req, res, next){
-
+  // StackData.find({}, function(err, entries){
+  //   if(!err) {
+  //     res.send(200, entries);
+  //   } else {
+  //     throw err;
+  //   }
+  // });
 })
 
 // Add a Stack Entry
@@ -82,15 +71,21 @@ app.post('/stackentry', function(req, res, next){
 
 });
 
-
-// Github Oauth Disabled
 // app.get('/auth/github', githubAuth, function(req, res){
 // });
 
 // app.get('/auth/github/callback', githubAuth, function(req, res) {
-//     res.redirect('/users');
+//     res.redirect('/dashboard');
 // });
 
+
+// app.get(['/dashboard'], function(req, res) {
+//   /* Use React Router */
+
+//   match({routes: Router, location: req.url}, function(error, redirectLocation, renderProps) {
+//     /* Send response */
+//   });
+// });
 
 // GET all users
 app.get('/users', function(req, res, next){
@@ -169,6 +164,23 @@ app.get('/logout', logout(), function(req, res, next){
   res.redirect('/login');
 });
 
+// Root Path
+app.get('*', function(req, res, next) {
+  match({ routes, location: req.url }, (error, redirectLocation, renderProps) => {
+    if (error) {
+      res.status(500).send(error.message)
+    } else if (redirectLocation) {
+      res.redirect(302, redirectLocation.pathname + redirectLocation.search)
+    } else if (renderProps) {
+      // You can also check renderProps.components or renderProps.routes for
+      // your "not found" component or route respectively, and send a 404 as
+      // below, if you're using a catch-all route.
+      res.status(200).send(renderToString(<RouterContext {...renderProps} />))
+    } else {
+      res.status(404).send('Not found')
+    }
+  })
+});
 
 var port = process.env.PORT || 3000;
 

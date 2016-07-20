@@ -26,6 +26,9 @@ class Search extends React.Component{
     });
   }
 
+  redirectToResults(){
+    this.props.history.pushState(null, '/results')
+  }
 
   getDatafromServer(e) {
     e.preventDefault();
@@ -42,6 +45,7 @@ class Search extends React.Component{
       data: JSON.stringify(data),
       success: function(data) {
         self.state.salary.push(data);
+        self.redirectToResults();
       },
       error: function(err) {
         console.log(err);
