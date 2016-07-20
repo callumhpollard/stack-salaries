@@ -31,7 +31,7 @@ class LoginForm extends React.Component{
   }
 
   redirectToDashboard(dataToken){
-    this.props.history.pushState({token: dataToken}, '/results')
+    this.context.router.push({token: dataToken}, '/dashboard');
   }
 
   loginToServer(e) {
@@ -58,21 +58,7 @@ class LoginForm extends React.Component{
       }
     });
   }
-  // May or may not need this method.
-  // userAuthToken (callback) {
-  //   $.ajax({
-  //     url:"http://localhost:3000/results",
-  //     type:"GET",
-  //     contentType:"application/json",
-  //     beforeSend: function(xhr) {
-  //       xhr.setRequestHeader("Authorization", 'Basic', btoa(this.state.authToken));
-  //     },
-  //     success: callback,
-  //     error: function(err) {
-  //       console.log(err);
-  //     }
-  //   });
-  // }
+
 
   render() {
     return (
@@ -82,5 +68,9 @@ class LoginForm extends React.Component{
     );
   }
 }
+
+LoginForm.contextTypes= {
+  router: React.PropTypes.object.isRequired
+};
 
 export default LoginForm;

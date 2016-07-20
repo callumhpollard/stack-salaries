@@ -1,5 +1,7 @@
 import React from 'react';
 import $ from 'jquery';
+import { History } from 'react-router';
+import { Router } from 'react-router';
 import SignupInput from './signup-input';
 
 
@@ -34,6 +36,10 @@ class SignForm extends React.Component{
     });
   }
 
+ redirectToDashboard(dataToken){
+    this.context.router.push(null, '/results');
+  }
+
 
   SignUpToServer(e) {
     e.preventDefault();
@@ -53,27 +59,13 @@ class SignForm extends React.Component{
         self.setState({
           authToken: data.token
         });
+        self.redirectToDashboard();
       },
       error: function(err) {
         console.log(err);
       }
     });
   }
-  // May or may not need this method.
-  // userAuthToken (callback) {
-  //   $.ajax({
-  //     url:"http://localhost:3000/results",
-  //     type:"GET",
-  //     contentType:"application/json",
-  //     beforeSend: function(xhr) {
-  //       xhr.setRequestHeader("Authorization", 'Basic', btoa(this.state.authToken));
-  //     },
-  //     success: callback,
-  //     error: function(err) {
-  //       console.log(err);
-  //     }
-  //   });
-  // }
 
   render() {
     return (
@@ -84,5 +76,8 @@ class SignForm extends React.Component{
   }
 }
 
+SignForm.contextTypes= {
+  router: React.PropTypes.func.isRequired
+};
 
 export default SignForm;

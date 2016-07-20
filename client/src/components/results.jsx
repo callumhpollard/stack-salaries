@@ -16,6 +16,7 @@ var SetIntervalMixin = {
   }
 };
 
+
 var Rect = React.createClass({
     mixins: [SetIntervalMixin],
     getDefaultProps: function() {

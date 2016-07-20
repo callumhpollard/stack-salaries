@@ -18,10 +18,7 @@ import React from 'react';
 import { renderToString } from 'react-dom/server'
 import { match, RouterContext } from 'react-router'
 var routes = require('./compiled/src/bundle').default;
-<<<<<<< HEAD
-=======
 var SD = require('./controllers/stackdataController');
->>>>>>> 6aebe04cb250ae5d05e338c5dec0227519fccb98
 
 var app = express();
 
@@ -59,23 +56,11 @@ app.all('*', function(req, res, next) { 
   next(); 
 });
 
-<<<<<<< HEAD
-// Get all Stack Entries
-app.get('/stackdata', function(req, res, next){
-  // StackData.find({}, function(err, entries){
-  //   if(!err) {
-  //     res.send(200, entries);
-  //   } else {
-  //     throw err;
-  //   }
-  // });
-=======
 //Search for any field
 app.post('/search', function(req, res, next){
   SD.querySalary(req.body, function(results){
     res.json(results);
   });
->>>>>>> 6aebe04cb250ae5d05e338c5dec0227519fccb98
 })
 
 // Add a Stack Entry
@@ -86,27 +71,8 @@ app.post('/stackentry', function(req, res, next){
   })
 });
 
-<<<<<<< HEAD
-// app.get('/auth/github', githubAuth, function(req, res){
-// });
-
-// app.get('/auth/github/callback', githubAuth, function(req, res) {
-//     res.redirect('/dashboard');
-// });
-
-
-// app.get(['/dashboard'], function(req, res) {
-//   /* Use React Router */
-
-//   match({routes: Router, location: req.url}, function(error, redirectLocation, renderProps) {
-//     /* Send response */
-//   });
-// });
-
-=======
->>>>>>> 6aebe04cb250ae5d05e338c5dec0227519fccb98
 // GET all users
-app.get('/users', requireAuth, function(req, res, next){
+app.get('/users', function(req, res, next){
   User.find({}, function(err, users){
     if(!err) {
       res.send(200, users);

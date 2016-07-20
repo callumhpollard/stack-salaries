@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 var SearchInput = (props) => (
 
@@ -14,3 +15,5 @@ var SearchInput = (props) => (
 );
 
 export default SearchInput;
+
+
