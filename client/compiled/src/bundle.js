@@ -53,12 +53,12 @@
 	__webpack_require__(229);
 	__webpack_require__(230);
 	__webpack_require__(231);
-	__webpack_require__(233);
 	__webpack_require__(234);
 	__webpack_require__(235);
+	__webpack_require__(236);
 	__webpack_require__(223);
 	__webpack_require__(225);
-	module.exports = __webpack_require__(237);
+	module.exports = __webpack_require__(238);
 
 
 /***/ },
@@ -35680,6 +35680,10 @@
 
 	var _dashboardUserprofile2 = _interopRequireDefault(_dashboardUserprofile);
 
+	var _dashboardDatainput = __webpack_require__(233);
+
+	var _dashboardDatainput2 = _interopRequireDefault(_dashboardDatainput);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -35691,10 +35695,22 @@
 	var Dashboard = function (_React$Component) {
 	  _inherits(Dashboard, _React$Component);
 
-	  function Dashboard() {
+	  function Dashboard(props) {
 	    _classCallCheck(this, Dashboard);
 
-	    return _possibleConstructorReturn(this, Object.getPrototypeOf(Dashboard).apply(this, arguments));
+	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Dashboard).call(this));
+
+	    _this.state = {
+	      bio: 'Poop',
+	      state: '',
+	      city: '',
+	      salary: null,
+	      education: '',
+	      gender: '',
+	      experience: '',
+	      stack: []
+	    };
+	    return _this;
 	  }
 
 	  _createClass(Dashboard, [{
@@ -35714,12 +35730,12 @@
 	        _react2.default.createElement(
 	          'div',
 	          { className: 'col-md-4' },
-	          _react2.default.createElement(_dashboardUserprofile2.default, null)
+	          _react2.default.createElement(_dashboardUserprofile2.default, { username: this.state.bio, bio: this.state.bio })
 	        ),
 	        _react2.default.createElement(
 	          'div',
 	          { className: 'col-md-4' },
-	          _react2.default.createElement(_dashboardUserprofile2.default, null)
+	          _react2.default.createElement(_dashboardDatainput2.default, null)
 	        )
 	      );
 	    }
@@ -35751,13 +35767,63 @@
 	var Userprofile = function Userprofile(props) {
 	  return _react2.default.createElement(
 	    'div',
+	    { className: 'userprofile' },
+	    _react2.default.createElement(
+	      'p',
+	      null,
+	      ' USER PROFILE '
+	    ),
+	    _react2.default.createElement(
+	      'p',
+	      null,
+	      ' ',
+	      props.bio,
+	      ' '
+	    ),
+	    _react2.default.createElement(
+	      'p',
+	      null,
+	      ' Bio: ',
+	      props.bio,
+	      ' '
+	    )
+	  );
+	};
+
+	exports.default = Userprofile;
+
+/***/ },
+/* 233 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(160);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var DataInput = function DataInput(props) {
+	  return _react2.default.createElement(
+	    'div',
 	    { className: 'data-input' },
 	    _react2.default.createElement(
 	      'form',
 	      null,
-	      _react2.default.createElement('input', { type: 'name', value: props.user, onChange: props.addUser, className: 'signup-user', placeholder: 'Username' }),
-	      _react2.default.createElement('input', { type: 'email', value: props.email, onChange: props.addEmail, className: 'signup-email', placeholder: 'Email' }),
-	      _react2.default.createElement('input', { type: 'password', value: props.password, onChange: props.addPassword, className: 'signup-password', placeholder: 'Password' }),
+	      _react2.default.createElement('input', { type: 'city', value: props.city, onChange: props.addCity, className: 'city-input', placeholder: 'City' }),
+	      _react2.default.createElement('input', { type: 'state', value: props.state, onChange: props.addState, className: 'state-input', placeholder: 'State' }),
+	      _react2.default.createElement('input', { type: 'education', value: props.education, onChange: props.addEducation, className: 'education-input', placeholder: 'Education' }),
+	      _react2.default.createElement('input', { type: 'gender', value: props.gender, onChange: props.addGender, className: 'gender-input', placeholder: 'Gender' }),
+	      _react2.default.createElement('input', { type: 'experience', value: props.experience, onChange: props.addGender, className: 'experience-input', placeholder: 'Experience' }),
+	      _react2.default.createElement('input', { type: 'salary', value: props.salary, onChange: props.addSalary, className: 'salary-input', placeholder: 'Salary' }),
+	      _react2.default.createElement('input', { type: 'stack', value: props.stack, onChange: props.addStack, className: 'stack-input', placeholder: 'Stack' }),
 	      _react2.default.createElement(
 	        'button',
 	        { type: 'submit' },
@@ -35767,10 +35833,10 @@
 	  );
 	};
 
-	exports.default = Userprofile;
+	exports.default = DataInput;
 
 /***/ },
-/* 233 */
+/* 234 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -35791,7 +35857,7 @@
 
 	var _reactRouter = __webpack_require__(160);
 
-	var _signupInput = __webpack_require__(234);
+	var _signupInput = __webpack_require__(235);
 
 	var _signupInput2 = _interopRequireDefault(_signupInput);
 
@@ -35893,7 +35959,7 @@
 	exports.default = SignForm;
 
 /***/ },
-/* 234 */
+/* 235 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -35932,7 +35998,7 @@
 	exports.default = SignupInput;
 
 /***/ },
-/* 235 */
+/* 236 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -35945,7 +36011,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _d = __webpack_require__(236);
+	var _d = __webpack_require__(237);
 
 	var _d2 = _interopRequireDefault(_d);
 
@@ -36195,7 +36261,7 @@
 	exports.default = Results;
 
 /***/ },
-/* 236 */
+/* 237 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// https://d3js.org Version 4.1.1. Copyright 2016 Mike Bostock.
@@ -52394,7 +52460,7 @@
 	}));
 
 /***/ },
-/* 237 */
+/* 238 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -52403,13 +52469,13 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactDom = __webpack_require__(238);
+	var _reactDom = __webpack_require__(239);
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
 	var _reactRouter = __webpack_require__(160);
 
-	var _router = __webpack_require__(239);
+	var _router = __webpack_require__(240);
 
 	var _router2 = _interopRequireDefault(_router);
 
@@ -52422,7 +52488,7 @@
 	), document.getElementById('app'));
 
 /***/ },
-/* 238 */
+/* 239 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -52431,7 +52497,7 @@
 
 
 /***/ },
-/* 239 */
+/* 240 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -52446,7 +52512,7 @@
 
 	var _reactRouter = __webpack_require__(160);
 
-	var _mainLayout = __webpack_require__(240);
+	var _mainLayout = __webpack_require__(241);
 
 	var _mainLayout2 = _interopRequireDefault(_mainLayout);
 
@@ -52454,7 +52520,7 @@
 
 	var _app2 = _interopRequireDefault(_app);
 
-	var _stats = __webpack_require__(241);
+	var _stats = __webpack_require__(242);
 
 	var _stats2 = _interopRequireDefault(_stats);
 
@@ -52466,7 +52532,7 @@
 
 	var _loginForm2 = _interopRequireDefault(_loginForm);
 
-	var _signupForm = __webpack_require__(233);
+	var _signupForm = __webpack_require__(234);
 
 	var _signupForm2 = _interopRequireDefault(_signupForm);
 
@@ -52503,7 +52569,7 @@
 	);
 
 /***/ },
-/* 240 */
+/* 241 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -52537,7 +52603,7 @@
 	exports.default = MainLayout;
 
 /***/ },
-/* 241 */
+/* 242 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -52560,7 +52626,7 @@
 
 	var _logo2 = _interopRequireDefault(_logo);
 
-	var _results = __webpack_require__(235);
+	var _results = __webpack_require__(236);
 
 	var _results2 = _interopRequireDefault(_results);
 

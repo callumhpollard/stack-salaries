@@ -53801,6 +53801,10 @@ module.exports =
 
 	var _dashboardUserprofile2 = _interopRequireDefault(_dashboardUserprofile);
 
+	var _dashboardDatainput = __webpack_require__(275);
+
+	var _dashboardDatainput2 = _interopRequireDefault(_dashboardDatainput);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -53812,10 +53816,22 @@ module.exports =
 	var Dashboard = function (_React$Component) {
 	  _inherits(Dashboard, _React$Component);
 
-	  function Dashboard() {
+	  function Dashboard(props) {
 	    _classCallCheck(this, Dashboard);
 
-	    return _possibleConstructorReturn(this, Object.getPrototypeOf(Dashboard).apply(this, arguments));
+	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Dashboard).call(this));
+
+	    _this.state = {
+	      bio: 'Poop',
+	      state: '',
+	      city: '',
+	      salary: null,
+	      education: '',
+	      gender: '',
+	      experience: '',
+	      stack: []
+	    };
+	    return _this;
 	  }
 
 	  _createClass(Dashboard, [{
@@ -53835,12 +53851,12 @@ module.exports =
 	        _react2.default.createElement(
 	          'div',
 	          { className: 'col-md-4' },
-	          _react2.default.createElement(_dashboardUserprofile2.default, null)
+	          _react2.default.createElement(_dashboardUserprofile2.default, { username: this.state.bio, bio: this.state.bio })
 	        ),
 	        _react2.default.createElement(
 	          'div',
 	          { className: 'col-md-4' },
-	          _react2.default.createElement(_dashboardUserprofile2.default, null)
+	          _react2.default.createElement(_dashboardDatainput2.default, null)
 	        )
 	      );
 	    }
@@ -53872,13 +53888,63 @@ module.exports =
 	var Userprofile = function Userprofile(props) {
 	  return _react2.default.createElement(
 	    'div',
+	    { className: 'userprofile' },
+	    _react2.default.createElement(
+	      'p',
+	      null,
+	      ' USER PROFILE '
+	    ),
+	    _react2.default.createElement(
+	      'p',
+	      null,
+	      ' ',
+	      props.bio,
+	      ' '
+	    ),
+	    _react2.default.createElement(
+	      'p',
+	      null,
+	      ' Bio: ',
+	      props.bio,
+	      ' '
+	    )
+	  );
+	};
+
+	exports.default = Userprofile;
+
+/***/ },
+/* 275 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(158);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var DataInput = function DataInput(props) {
+	  return _react2.default.createElement(
+	    'div',
 	    { className: 'data-input' },
 	    _react2.default.createElement(
 	      'form',
 	      null,
-	      _react2.default.createElement('input', { type: 'name', value: props.user, onChange: props.addUser, className: 'signup-user', placeholder: 'Username' }),
-	      _react2.default.createElement('input', { type: 'email', value: props.email, onChange: props.addEmail, className: 'signup-email', placeholder: 'Email' }),
-	      _react2.default.createElement('input', { type: 'password', value: props.password, onChange: props.addPassword, className: 'signup-password', placeholder: 'Password' }),
+	      _react2.default.createElement('input', { type: 'city', value: props.city, onChange: props.addCity, className: 'city-input', placeholder: 'City' }),
+	      _react2.default.createElement('input', { type: 'state', value: props.state, onChange: props.addState, className: 'state-input', placeholder: 'State' }),
+	      _react2.default.createElement('input', { type: 'education', value: props.education, onChange: props.addEducation, className: 'education-input', placeholder: 'Education' }),
+	      _react2.default.createElement('input', { type: 'gender', value: props.gender, onChange: props.addGender, className: 'gender-input', placeholder: 'Gender' }),
+	      _react2.default.createElement('input', { type: 'experience', value: props.experience, onChange: props.addGender, className: 'experience-input', placeholder: 'Experience' }),
+	      _react2.default.createElement('input', { type: 'salary', value: props.salary, onChange: props.addSalary, className: 'salary-input', placeholder: 'Salary' }),
+	      _react2.default.createElement('input', { type: 'stack', value: props.stack, onChange: props.addStack, className: 'stack-input', placeholder: 'Stack' }),
 	      _react2.default.createElement(
 	        'button',
 	        { type: 'submit' },
@@ -53888,7 +53954,7 @@ module.exports =
 	  );
 	};
 
-	exports.default = Userprofile;
+	exports.default = DataInput;
 
 /***/ }
 /******/ ]);
