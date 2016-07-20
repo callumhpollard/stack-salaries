@@ -1,6 +1,6 @@
 var SD = require('../models/stackdata');
 
-var getQuery = (query, callback) =>{
+var getQuery = function(query, callback){
   var clear = {}
   for(var k in query){
     if(k === 'stack' && query[k]){
@@ -12,7 +12,7 @@ var getQuery = (query, callback) =>{
   callback(clear);
 }
 
-var getSalary = (query, callback) => {
+var getSalary = function(query, callback){
   getQuery(query, function(results){
     SD.find(results, {salary: 1, _id : 0}).exec(function(err, results){
       if(err) return handleError(err);
@@ -21,7 +21,7 @@ var getSalary = (query, callback) => {
   });
 };
 
-exports.createSalary = (data, callback) => {
+exports.createSalary = function(data, callback){
   var newSD = new SD (data);
   newSD.save(function(err){
     if(err) return handleError(err);
@@ -29,7 +29,7 @@ exports.createSalary = (data, callback) => {
   })
 };
 
-var calculateSalary = (query, callback) => {
+var calculateSalary = function(query, callback){
   getSalary(query, function(results){
     var salaries = [];
     var calcSalary = {};
@@ -46,7 +46,7 @@ var calculateSalary = (query, callback) => {
   });
 }
 
-exports.querySalary = (query, callback) => {
+exports.querySalary = function(query, callback){
   calculateSalary(query, function(result){
     var title = 'Salaries for';
     if (Array.isArray(query.stack)){

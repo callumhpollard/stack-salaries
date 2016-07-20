@@ -43,6 +43,10 @@ body {
   margin-bottom: 20px;
 }
 
+#app a {
+  text-decoration: none;
+}
+
 .navbar {
   display: flex;
   border: none;
@@ -140,14 +144,18 @@ body {
   color: #000;
 }
 
-input[type="text"] {
-  color: #000;
-}
-
-input[type="email"]{
-  color: #000;
-}
-
-.loginBox {
+.loginBox, .signup-input {
   background-color: #fff;
+  padding: 50px;
+  margin-top: 200px;
+  border-radius: 40px;
+}
+
+.loginBox input {
+  color: #3998d7;
+}
+
+.loginBox .btn-primary, .signup-input .btn-primary {
+  color: #fff;
+  background-color: #3998d7;
 }
