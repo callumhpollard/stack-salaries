@@ -9,6 +9,8 @@ var clientConfig = {
       './client/src/components/login-form.jsx',
       './client/src/components/login-input.jsx',
       './client/src/components/dashboard.jsx',
+      './client/src/components/dashboard-datainput.jsx',
+      './client/src/components/dashboard-userprofile.jsx',
       './client/src/components/signup-form.jsx',
       './client/src/components/signup-input.jsx',
       './client/src/components/results.jsx',

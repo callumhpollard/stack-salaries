@@ -4,13 +4,14 @@ import { Router } from 'react-router';
 import $ from 'jquery';
 import UserProfile from './dashboard-userprofile';
 import DataInput from './dashboard-datainput';
+import helpers from '../utils/helpers';
 
 class Dashboard extends React.Component {
 
   constructor (props){
     super();
     this.state = {
-      bio:'Poop',
+      bio:{},
       state:'',
       city: '',
       salary: null,
@@ -21,6 +22,13 @@ class Dashboard extends React.Component {
     };
   }
   componentDidMount(){
+
+    helpers.getGithubInfo(this.state.bios)
+      .then(function(data) {
+        this.setState({
+          bio:data.bio
+        });
+      }.bind(this));
   }
 
   render() {
@@ -37,5 +45,6 @@ class Dashboard extends React.Component {
     );
   }
 }
+
 
 export default Dashboard;
