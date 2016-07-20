@@ -18,11 +18,15 @@ import React from 'react';
 import { renderToString } from 'react-dom/server'
 import { match, RouterContext } from 'react-router'
 var routes = require('./compiled/src/bundle').default;
+<<<<<<< HEAD
+=======
+var SD = require('./controllers/stackdataController');
+>>>>>>> 6aebe04cb250ae5d05e338c5dec0227519fccb98
 
 var app = express();
 
 app.use(morgan('dev'));
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, '../client/compiled')));
 
@@ -55,6 +59,7 @@ app.all('*', function(req, res, next) { 
   next(); 
 });
 
+<<<<<<< HEAD
 // Get all Stack Entries
 app.get('/stackdata', function(req, res, next){
   // StackData.find({}, function(err, entries){
@@ -64,13 +69,24 @@ app.get('/stackdata', function(req, res, next){
   //     throw err;
   //   }
   // });
+=======
+//Search for any field
+app.post('/search', function(req, res, next){
+  SD.querySalary(req.body, function(results){
+    res.json(results);
+  });
+>>>>>>> 6aebe04cb250ae5d05e338c5dec0227519fccb98
 })
 
 // Add a Stack Entry
 app.post('/stackentry', function(req, res, next){
-
+  SD.createSalary(req.body, function(result){
+    res.status(201);
+    res.json(result);
+  })
 });
 
+<<<<<<< HEAD
 // app.get('/auth/github', githubAuth, function(req, res){
 // });
 
@@ -87,6 +103,8 @@ app.post('/stackentry', function(req, res, next){
 //   });
 // });
 
+=======
+>>>>>>> 6aebe04cb250ae5d05e338c5dec0227519fccb98
 // GET all users
 app.get('/users', requireAuth, function(req, res, next){
   User.find({}, function(err, users){
