@@ -166,6 +166,7 @@ var Results = React.createClass({
     },
 
     render: function() {
+      console.log(window.salary);
         return (
           <div>
             <div className="selection">

@@ -4,8 +4,13 @@ import Logo from './logo';
 import Results from './results';
 import Search from './search';
 import Footer from './footer';
+import { History } from 'react-router';
 
 class Stats extends React.Component {
+
+  constructor() {
+    super();
+  }
 
   componentDidMount(){
   }
@@ -16,7 +21,7 @@ class Stats extends React.Component {
         <Logo/>
         <Login/>
         <div>
-          <Results/>
+          <Results history={this.props.history}/>
           <Search/>
           <Footer/>
         </div>
