@@ -22,12 +22,7 @@ class Dashboard extends React.Component {
     };
   }
   componentDidMount(){
-<<<<<<< HEAD
-
-    console.log(this.props.location.state);
-=======
     // console.log(this.props.location.state);
->>>>>>> 5c6215621b03cbb0632b65186cc1fc6b19dfebb4
   }
 
   render() {
@@ -44,6 +39,5 @@ class Dashboard extends React.Component {
     );
   }
 }
-
 
 export default Dashboard;

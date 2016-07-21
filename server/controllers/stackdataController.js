@@ -42,13 +42,6 @@ var calculateSalary = function(query, callback){
 
       salaries.sort((a,b) => a - b, 0);
 
-<<<<<<< HEAD
-    salaries.sort((a,b) => a - b);
-
-    calcSalary.lowest = salaries[0];
-    calcSalary.highest = salaries[salaries.length - 1];
-    calcSalary.average = salaries.reduce((a, b) => a + b)/salaries.length;
-=======
       calcSalary.lowest = salaries[0];
       calcSalary.highest = salaries[salaries.length - 1];
       calcSalary.average = Math.ceil(salaries.reduce((a, b) => a + b)/salaries.length);
@@ -57,7 +50,6 @@ var calculateSalary = function(query, callback){
     } else {
       callback("No matching results");
     }
->>>>>>> 4bb18f8603293f2bcdc29db9247561a88fdd5717
 
   });
 }
@@ -68,7 +60,7 @@ exports.querySalary = function(query, callback){
     if (Array.isArray(query.stack)){
       for (var s of query.stack){
         title += ' ' + s;
-      }
+      };
     }
     if (!Array.isArray(query.stack)){
       title += ' ' + query.stack;
@@ -92,5 +84,4 @@ example query
   gender: String,
   experience: Number
 }
-
 */

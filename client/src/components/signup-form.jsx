@@ -37,15 +37,7 @@ class SignForm extends React.Component{
   }
 
  redirectToDashboard(dataToken){
-<<<<<<< HEAD
-    this.context.router.push(null, '/results');
-=======
     this.props.history.pushState({token: dataToken}, '/dashboard');
-<<<<<<< HEAD
-    // this.context.router.push(null, '/results');
->>>>>>> 4bb18f8603293f2bcdc29db9247561a88fdd5717
-=======
->>>>>>> 5c6215621b03cbb0632b65186cc1fc6b19dfebb4
   }
 
 
@@ -67,11 +59,7 @@ class SignForm extends React.Component{
         self.setState({
           authToken: data.token
         });
-<<<<<<< HEAD
-        self.redirectToDashboard();
-=======
         self.redirectToDashboard(data.token);
->>>>>>> 4bb18f8603293f2bcdc29db9247561a88fdd5717
       },
       error: function(err) {
         console.log(err);
