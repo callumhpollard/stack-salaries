@@ -5,7 +5,6 @@ import Login from './login';
 import { History } from 'react-router';
 import { Router } from 'react-router';
 
-
 class LoginForm extends React.Component{
   constructor() {
 
@@ -31,7 +30,8 @@ class LoginForm extends React.Component{
   }
 
   redirectToDashboard(dataToken){
-    this.context.router.push({token: dataToken}, '/dashboard');
+    // this.context.router.push({token: dataToken}, '/dashboard');
+    this.props.history.pushState(null, '/dashboard');
   }
 
   loginToServer(e) {

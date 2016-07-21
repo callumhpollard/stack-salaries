@@ -38,8 +38,10 @@ var calculateSalary = function(query, callback){
       salaries.push(s.salary);
     }
 
-    calcSalary.lowest = Math.min(null, salaries);
-    calcSalary.highest = Math.max(null, salaries);
+    salaries.sort((a,b) => a - b);
+
+    calcSalary.lowest = salaries[0];
+    calcSalary.highest = salaries[salaries.length - 1];
     calcSalary.average = salaries.reduce((a, b) => a + b)/salaries.length;
 
     callback(calcSalary);
@@ -52,7 +54,7 @@ exports.querySalary = function(query, callback){
     if (Array.isArray(query.stack)){
       for (var s of query.stack){
         title += ' ' + s;
-      };
+      }
     }
     if (!Array.isArray(query.stack)){
       title += ' ' + query.stack;

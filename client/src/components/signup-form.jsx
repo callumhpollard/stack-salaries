@@ -76,8 +76,4 @@ class SignForm extends React.Component{
   }
 }
 
-SignForm.contextTypes= {
-  router: React.PropTypes.func.isRequired
-};
-
 export default SignForm;

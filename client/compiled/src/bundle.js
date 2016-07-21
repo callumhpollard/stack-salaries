@@ -25460,36 +25460,43 @@
 	  }, {
 	    key: 'redirectToResults',
 	    value: function redirectToResults() {
-	      this.context.router.push({ salary: this.stack.salary }, '/results');
+	      this.props.history.pushState(null, '/dashboard');
+	      // this.props.history.pushstate({salary:this.stack.salary}, '/results');
+	      // this.context.router.push('/results');
+	      // this.context.router.push({salary:this.stack.salary}, '/results');
 	    }
 	  }, {
 	    key: 'getDatafromServer',
 	    value: function getDatafromServer(e) {
 	      e.preventDefault();
-	      console.log(this.state.stack[this.state.stack.length - 1]);
-	      // Remember to lowercase -- its only not in lowercase now because you input the data in as MEAN
-	      this.state.cityState = this.state.cityState.split(", ");
-	      var data = { stack: this.state.stack[this.state.stack.length - 1], city: this.state.cityState[0].toLowerCase(), state: this.state.cityState[1].toLowerCase() };
 
 	      var self = this;
-	      console.log(data);
 
-	      _jquery2.default.ajax({
-	        url: "http://localhost:3000/search",
-	        type: "POST",
-	        contentType: "application/json",
-	        data: JSON.stringify(data),
-	        success: function success(data) {
-	          self.setState({
-	            salary: data
-	          });
-	          console.log("SALARY " + self.state.salary.highest);
-	          self.redirectToResults();
-	        },
-	        error: function error(err) {
-	          console.log(err);
-	        }
-	      });
+	      // console.log(this.state.stack[this.state.stack.length - 1]);
+	      // Remember to lowercase -- its only not in lowercase now because you input the data in as MEAN
+
+	      // var split = this.state.cityState.split(", ");
+
+	      // this.state.cityState = split;
+
+	      // var data = {stack: this.state.stack[this.state.stack.length - 1], city: this.state.cityState[0].toLowerCase(), state:this.state.cityState[1].toLowerCase()};
+
+	      // $.ajax({
+	      //   url:"http://localhost:3000/search",
+	      //   type:"POST",
+	      //   contentType:"application/json",
+	      //   data: JSON.stringify(data),
+	      //   success: function(data) {
+	      //     self.setState({
+	      //       salary:data
+	      //     });
+	      //     console.log("Self is " + self);
+	      //   },
+	      //   error: function(err) {
+	      //     console.log(err);
+	      //   }
+	      // });
+	      self.redirectToResults();
 	    }
 	  }, {
 	    key: 'render',
@@ -25497,7 +25504,7 @@
 	      return _react2.default.createElement(
 	        'div',
 	        null,
-	        _react2.default.createElement(_searchInput2.default, { getDatafromServer: this.getDatafromServer.bind(this), findStack: this.findStack.bind(this), findCityState: this.findCityState.bind(this) })
+	        _react2.default.createElement(_searchInput2.default, { history: this.props.history, getDatafromServer: this.getDatafromServer.bind(this), findStack: this.findStack.bind(this), findCityState: this.findCityState.bind(this) })
 	      );
 	    }
 	  }]);
@@ -25506,10 +25513,6 @@
 	}(_react2.default.Component);
 
 	;
-
-	Search.contextTypes = {
-	  router: _react2.default.PropTypes.object.isRequired
-	};
 
 	exports.default = Search;
 
@@ -35547,7 +35550,8 @@
 	  }, {
 	    key: 'redirectToDashboard',
 	    value: function redirectToDashboard(dataToken) {
-	      this.context.router.push({ token: dataToken }, '/dashboard');
+	      // this.context.router.push({token: dataToken}, '/dashboard');
+	      this.props.history.pushState(null, '/dashboard');
 	    }
 	  }, {
 	    key: 'loginToServer',
@@ -35977,10 +35981,6 @@
 
 	  return SignForm;
 	}(_react2.default.Component);
-
-	SignForm.contextTypes = {
-	  router: _react2.default.PropTypes.func.isRequired
-	};
 
 	exports.default = SignForm;
 
@@ -52635,9 +52635,45 @@
 
 /***/ },
 /* 239 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(160);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var AdvanceSearchInput = function AdvanceSearchInput(props) {
+	  return _react2.default.createElement(
+	    'div',
+	    { className: 'signup-input' },
+	    _react2.default.createElement(
+	      'form',
+	      { onSubmit: props.GetAdvanceSearchData },
+	      _react2.default.createElement('input', { type: 'city', value: props.city, onChange: props.addCity, className: 'city-input', placeholder: 'City' }),
+	      _react2.default.createElement('input', { type: 'state', value: props.state, onChange: props.addState, className: 'state-input', placeholder: 'State' }),
+	      _react2.default.createElement('input', { type: 'education', value: props.education, onChange: props.addEducation, className: 'education-input', placeholder: 'Education' }),
+	      _react2.default.createElement('input', { type: 'gender', value: props.gender, onChange: props.addGender, className: 'gender-input', placeholder: 'Gender' }),
+	      _react2.default.createElement('input', { type: 'experience', value: props.experience, onChange: props.addExperience, className: 'experience-input', placeholder: 'Experience' }),
+	      _react2.default.createElement('input', { type: 'stack', value: props.stack, onChange: props.addStack, className: 'stack-input', placeholder: 'Stack' }),
+	      _react2.default.createElement(
+	        'button',
+	        { type: 'submit' },
+	        'Submit'
+	      )
+	    )
+	  );
+	};
+
+	exports.default = AdvanceSearchInput;
 
 /***/ },
 /* 240 */
