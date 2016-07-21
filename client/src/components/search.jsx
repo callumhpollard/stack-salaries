@@ -26,43 +26,45 @@ class Search extends React.Component{
   }
 
   redirectToResults(){
-    this.props.history.pushState(null, '/dashboard');
+    // this.props.history.pushState({salary:this.state.salary}, '/results');
     // this.props.history.pushstate({salary:this.stack.salary}, '/results');
     // this.context.router.push('/results');
-        // this.context.router.push({salary:this.stack.salary}, '/results');
+    this.context.router.push({salary:this.state.salary}, '/dashboard');
   }
 
   getDatafromServer(e) {
     e.preventDefault();
 
     var self = this;
+    var cityState = this.state.cityState;
+
+    console.log(cityState.split(", "));
 
     // console.log(this.state.stack[this.state.stack.length - 1]);
     // Remember to lowercase -- its only not in lowercase now because you input the data in as MEAN
 
     // var split = this.state.cityState.split(", ");
 
-    // this.state.cityState = split;
+    this.state.cityState = split;
 
-    // var data = {stack: this.state.stack[this.state.stack.length - 1], city: this.state.cityState[0].toLowerCase(), state:this.state.cityState[1].toLowerCase()};
+    var data = {stack: this.state.stack[this.state.stack.length - 1], city: this.state.cityState[0].toLowerCase(), state:this.state.cityState[1].toLowerCase()};
 
 
-    // $.ajax({
-    //   url:"http://localhost:3000/search",
-    //   type:"POST",
-    //   contentType:"application/json",
-    //   data: JSON.stringify(data),
-    //   success: function(data) {
-    //     self.setState({
-    //       salary:data
-    //     });
-    //     console.log("Self is " + self);
-    //   },
-    //   error: function(err) {
-    //     console.log(err);
-    //   }
-    // });
-    self.redirectToResults();
+    $.ajax({
+      url:"http://localhost:3000/search",
+      type:"POST",
+      contentType:"application/json",
+      data: JSON.stringify(data),
+      success: function(data) {
+        self.setState({
+          salary:data
+        });
+        self.redirectToResults();
+      },
+      error: function(err) {
+        console.log(err);
+      }
+    });
 
   }
 
@@ -75,5 +77,9 @@ class Search extends React.Component{
     );
   }
 };
+
+Search.contextTypes = {
+  router: React.PropTypes.object.isRequired
+}
 
 export default Search;

@@ -25173,7 +25173,7 @@ module.exports =
 	            _react2.default.createElement(_login2.default, null)
 	          ),
 	          _react2.default.createElement(_main2.default, null),
-	          _react2.default.createElement(_search2.default, null),
+	          _react2.default.createElement(_search2.default, { history: this.props.history }),
 	          _react2.default.createElement(_cloud2.default, null)
 	        )
 	      ),
