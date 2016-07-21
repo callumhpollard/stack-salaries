@@ -22,45 +22,8 @@ class Dashboard extends React.Component {
     };
   }
   componentDidMount(){
-<<<<<<< HEAD
     // console.log(this.props.location.state);
-=======
-<<<<<<< HEAD
-
-    console.log(this.props.location.state);
-=======
-    // console.log(this.props.location.state);
->>>>>>> 5c6215621b03cbb0632b65186cc1fc6b19dfebb4
->>>>>>> RoutesAndRedux
   }
-
-
-  StackEntry(e) {
-    e.preventDefault();
-    var self = this;
-
-    var data = {name: this.state.name, email: this.state.email, password: this.state.password};
-
-    console.log(data);
-    $.ajax({
-      url:"http://localhost:3000/signup",
-      type:"POST",
-      contentType:"application/json",
-      data: JSON.stringify(data),
-      success: function(data) {
-        console.log(data.token);
-        localStorage.setItem('token', data.token),
-        self.setState({
-          authToken: data.token
-        });
-        self.redirectToDashboard(data.token);
-      },
-      error: function(err) {
-        console.log(err);
-      }
-    });
-  }
-
 
   render() {
     return(
@@ -76,6 +39,5 @@ class Dashboard extends React.Component {
     );
   }
 }
-
 
 export default Dashboard;
