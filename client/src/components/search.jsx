@@ -28,6 +28,7 @@ class Search extends React.Component{
   }
 
   redirectToResults(){
+    window.salary = this.state.salary;
     this.props.history.pushState({salary:this.state.salary}, '/results');
   }
 
