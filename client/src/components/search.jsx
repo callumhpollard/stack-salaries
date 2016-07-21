@@ -1,63 +1,69 @@
 import React from 'react';
 import $ from 'jquery';
 import SearchInput from './search-input';
+import { History } from 'react-router';
+import { Router } from 'react-router';
 
 class Search extends React.Component{
 
   constructor() {
     super();
     this.state = {
-      stack: "",
+      stack: [],
       cityState: "",
-      salary:[]
+      salary: {}
     };
   }
 
-
   findCityState(e) {
     this.setState({
-      cityState:e.target.value
+      cityState: e.target.value
     });
   }
 
   findStack(e) {
     this.setState({
-      stack:e.target.value
-    });
+      stack: e.target.value
+    })
   }
 
   redirectToResults(){
-    this.props.history.pushState(null, '/results')
+    this.props.history.pushState({salary:this.state.salary}, '/results');
   }
 
   getDatafromServer(e) {
     e.preventDefault();
-    this.state.cityState = this.state.cityState.split(", ");
-    var data = {stack: this.state.stack, city: this.state.cityState[0], state:this.state.cityState[1]};
 
     var self = this;
-    console.log(data);
+    var cityState = this.state.cityState.split(", ");
+
+    // Remember to lowercase -- its only not in lowercase now because you input the data in as MEAN
+    var data = {stack: this.state.stack, city: cityState[0].toLowerCase(), state:cityState[1].toLowerCase()};
+
 
     $.ajax({
-      url:"http://localhost:3000/stackdata",
+      url:"http://localhost:3000/search",
       type:"POST",
       contentType:"application/json",
       data: JSON.stringify(data),
       success: function(data) {
-        self.state.salary.push(data);
+        self.setState({
+          salary: data
+        });
         self.redirectToResults();
       },
       error: function(err) {
         console.log(err);
       }
     });
+
   }
 
 
   render() {
     return (
       <div>
-        <SearchInput getDatafromServer={this.getDatafromServer.bind(this)} findStack={this.findStack.bind(this)} findCityState={this.findCityState.bind(this)} />
+        <SearchInput history={this.props.history} getDatafromServer={this.getDatafromServer.bind(this)} findStack={this.findStack.bind(this)} findCityState={this.findCityState.bind(this)} />
       </div>
     );
   }

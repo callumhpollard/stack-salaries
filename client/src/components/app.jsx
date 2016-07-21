@@ -4,8 +4,13 @@ import Main from './main';
 import Search from './search';
 import Cloud from './cloud';
 
-const App = React.createClass({
-  render: function() {
+class App extends React.Component {
+
+  constructor() {
+    super();
+  }
+
+  render() {
     return (
       <div>
       <div className="container">
@@ -15,7 +20,7 @@ const App = React.createClass({
           </nav>
           <Main/>
 
-          <Search/>
+          <Search history={this.props.history}/>
           <Cloud/>
 
         </div>
@@ -25,9 +30,7 @@ const App = React.createClass({
       </div>
     );
   }
-});
+
+}
 
 export default App;
-
-
-             // <img className="bottom" src="./blueprint3.png" />
