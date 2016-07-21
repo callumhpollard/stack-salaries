@@ -40,7 +40,7 @@ var calculateSalary = function(query, callback){
         salaries.push(s.salary);
       }
 
-      salaries.sort((a,b) => a - b);
+      salaries.sort((a,b) => a - b, 0);
 
       calcSalary.lowest = salaries[0];
       calcSalary.highest = salaries[salaries.length - 1];
