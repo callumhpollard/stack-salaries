@@ -25165,13 +25165,6 @@ module.exports =
 	var App = function (_React$Component) {
 	  _inherits(App, _React$Component);
 
-	  _createClass(App, [{
-	    key: 'getChildContext',
-	    value: function getChildContext() {
-	      return { name: 'Jim' };
-	    }
-	  }]);
-
 	  function App() {
 	    _classCallCheck(this, App);
 
@@ -25208,16 +25201,7 @@ module.exports =
 	  return App;
 	}(_react2.default.Component);
 
-	App.childContextTypes = {
-	  name: _react2.default.PropTypes.string.isRequired
-	};
-	// App.contextTypes = {
-	//   router: React.PropTypes.object.isRequired
-	// }
-
 	exports.default = App;
-
-	// <img className="bottom" src="./blueprint3.png" />
 
 /***/ },
 /* 222 */
@@ -25370,21 +25354,11 @@ module.exports =
 	      this.setState({
 	        stack: e.target.value
 	      });
-	      // this.state.stack.push(e.target.value);
 	    }
 	  }, {
 	    key: 'redirectToResults',
 	    value: function redirectToResults() {
-	      // this.props.history.pushState({salary:this.state.salary}, '/results');
-	      // this.props.history.pushstate({salary:this.stack.salary}, '/results');
-	      // this.context.router.push('/results');
-	      // console.log(this.props);
-	      // {salary:this.state.salary}
-	      // console.log(this.props.history);
-	      console.log(this.context);
 	      this.props.history.pushState({ salary: this.state.salary }, '/results');
-
-	      // this.context.router.push('/dashboard', {salary:this.state.salary});
 	    }
 	  }, {
 	    key: 'getDatafromServer',
@@ -25394,15 +25368,7 @@ module.exports =
 	      var self = this;
 	      var cityState = this.state.cityState.split(", ");
 
-	      // var split = cityState.split(", ");
-
-	      console.log(cityState);
-
-	      // console.log(this.state.stack[this.state.stack.length - 1]);
 	      // Remember to lowercase -- its only not in lowercase now because you input the data in as MEAN
-
-	      // this.state.cityState = split;
-
 	      var data = { stack: this.state.stack, city: cityState[0].toLowerCase(), state: cityState[1].toLowerCase() };
 
 	      _jquery2.default.ajax({
@@ -25436,10 +25402,6 @@ module.exports =
 	}(_react2.default.Component);
 
 	;
-
-	Search.contextTypes = {
-	  router: _react2.default.PropTypes.object.isRequired
-	};
 
 	exports.default = Search;
 
@@ -53892,7 +53854,6 @@ module.exports =
 	    key: 'componentDidMount',
 	    value: function componentDidMount() {
 	      console.log(this.props.location.state);
-	      // console.log(this.context.router);
 	    }
 	  }, {
 	    key: 'render',
@@ -53921,10 +53882,6 @@ module.exports =
 
 	  return Dashboard;
 	}(_react2.default.Component);
-
-	Dashboard.contextTypes = {
-	  router: _react2.default.PropTypes.object.isRequired
-	};
 
 	exports.default = Dashboard;
 
