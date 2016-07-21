@@ -72,7 +72,7 @@ app.post('/stackentry', function(req, res, next){
 });
 
 // GET all users
-app.get('/users', function(req, res, next){
+app.get('/users', requireAuth, function(req, res, next){
   User.find({}, function(err, users){
     if(!err) {
       res.send(200, users);

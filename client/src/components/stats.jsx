@@ -8,8 +8,6 @@ import Footer from './footer';
 class Stats extends React.Component {
 
   componentDidMount(){
-    console.log("Whooohoo!");
-    console.log(this.props.location.state);
   }
 
   render() {

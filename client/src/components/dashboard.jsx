@@ -23,7 +23,7 @@ class Dashboard extends React.Component {
   }
   componentDidMount(){
 
-
+    console.log(this.props.location.state);
   }
 
   render() {

@@ -31,20 +31,34 @@ exports.createSalary = function(data, callback){
 
 var calculateSalary = function(query, callback){
   getSalary(query, function(results){
-    var salaries = [];
-    var calcSalary = {};
 
-    for(var s of results){
-      salaries.push(s.salary);
-    }
+    if(results){
+      var salaries = [];
+      var calcSalary = {};
 
+      for(var s of results){
+        salaries.push(s.salary);
+      }
+
+      salaries.sort((a,b) => a - b);
+
+<<<<<<< HEAD
     salaries.sort((a,b) => a - b);
 
     calcSalary.lowest = salaries[0];
     calcSalary.highest = salaries[salaries.length - 1];
     calcSalary.average = salaries.reduce((a, b) => a + b)/salaries.length;
+=======
+      calcSalary.lowest = salaries[0];
+      calcSalary.highest = salaries[salaries.length - 1];
+      calcSalary.average = salaries.reduce((a, b) => a + b)/salaries.length;
 
-    callback(calcSalary);
+      callback(calcSalary);
+    } else {
+      callback("No matching results");
+    }
+>>>>>>> 4bb18f8603293f2bcdc29db9247561a88fdd5717
+
   });
 }
 

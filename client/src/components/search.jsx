@@ -1,8 +1,8 @@
 import React from 'react';
 import $ from 'jquery';
+import SearchInput from './search-input';
 import { History } from 'react-router';
 import { Router } from 'react-router';
-import SearchInput from './search-input';
 
 class Search extends React.Component{
 
@@ -17,37 +17,28 @@ class Search extends React.Component{
 
   findCityState(e) {
     this.setState({
-      cityState:e.target.value
+      cityState: e.target.value
     });
   }
 
   findStack(e) {
-    this.state.stack.push(e.target.value);
+    this.setState({
+      stack: e.target.value
+    })
   }
 
   redirectToResults(){
-    // this.props.history.pushState({salary:this.state.salary}, '/results');
-    // this.props.history.pushstate({salary:this.stack.salary}, '/results');
-    // this.context.router.push('/results');
-    this.context.router.push({salary:this.state.salary}, '/dashboard');
+    this.props.history.pushState({salary:this.state.salary}, '/results');
   }
 
   getDatafromServer(e) {
     e.preventDefault();
 
     var self = this;
-    var cityState = this.state.cityState;
+    var cityState = this.state.cityState.split(", ");
 
-    console.log(cityState.split(", "));
-
-    // console.log(this.state.stack[this.state.stack.length - 1]);
     // Remember to lowercase -- its only not in lowercase now because you input the data in as MEAN
-
-    // var split = this.state.cityState.split(", ");
-
-    this.state.cityState = split;
-
-    var data = {stack: this.state.stack[this.state.stack.length - 1], city: this.state.cityState[0].toLowerCase(), state:this.state.cityState[1].toLowerCase()};
+    var data = {stack: this.state.stack, city: cityState[0].toLowerCase(), state:cityState[1].toLowerCase()};
 
 
     $.ajax({
@@ -57,7 +48,7 @@ class Search extends React.Component{
       data: JSON.stringify(data),
       success: function(data) {
         self.setState({
-          salary:data
+          salary: data
         });
         self.redirectToResults();
       },
@@ -77,9 +68,5 @@ class Search extends React.Component{
     );
   }
 };
-
-Search.contextTypes = {
-  router: React.PropTypes.object.isRequired
-}
 
 export default Search;

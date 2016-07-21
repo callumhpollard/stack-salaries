@@ -4,7 +4,15 @@ import Main from './main';
 import Search from './search';
 import Cloud from './cloud';
 
+<<<<<<< HEAD
 class App extends React.Component{
+=======
+class App extends React.Component {
+
+  constructor() {
+    super();
+  }
+>>>>>>> 4bb18f8603293f2bcdc29db9247561a88fdd5717
 
   render() {
     return (
@@ -26,6 +34,7 @@ class App extends React.Component{
       </div>
     );
   }
+<<<<<<< HEAD
 
 }
 
@@ -34,6 +43,9 @@ App.contextTypes = {
 }
 
 export default App;
+=======
+>>>>>>> 4bb18f8603293f2bcdc29db9247561a88fdd5717
 
+}
 
-             // <img className="bottom" src="./blueprint3.png" />
+export default App;
