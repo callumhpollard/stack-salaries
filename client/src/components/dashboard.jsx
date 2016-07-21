@@ -22,9 +22,36 @@ class Dashboard extends React.Component {
     };
   }
   componentDidMount(){
-
     console.log(this.props.location.state);
   }
+
+
+  StackEntry(e) {
+    e.preventDefault();
+    var self = this;
+
+    var data = {name: this.state.name, email: this.state.email, password: this.state.password};
+
+    console.log(data);
+    $.ajax({
+      url:"http://localhost:3000/signup",
+      type:"POST",
+      contentType:"application/json",
+      data: JSON.stringify(data),
+      success: function(data) {
+        console.log(data.token);
+        localStorage.setItem('token', data.token),
+        self.setState({
+          authToken: data.token
+        });
+        self.redirectToDashboard(data.token);
+      },
+      error: function(err) {
+        console.log(err);
+      }
+    });
+  }
+
 
   render() {
     return(

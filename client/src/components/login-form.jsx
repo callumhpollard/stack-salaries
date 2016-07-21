@@ -31,12 +31,8 @@ class LoginForm extends React.Component{
 
   redirectToDashboard(dataToken){
     // this.context.router.push({token: dataToken}, '/dashboard');
-<<<<<<< HEAD
-    this.props.history.pushState(null, '/dashboard');
-=======
     console.log(this.props);
     this.props.history.pushState({token: dataToken}, '/dashboard');
->>>>>>> 4bb18f8603293f2bcdc29db9247561a88fdd5717
   }
 
   loginToServer(e) {

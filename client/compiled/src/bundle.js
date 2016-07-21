@@ -53,25 +53,12 @@
 	__webpack_require__(229);
 	__webpack_require__(230);
 	__webpack_require__(231);
-<<<<<<< HEAD
-	__webpack_require__(233);
-	__webpack_require__(232);
-	__webpack_require__(234);
-	__webpack_require__(235);
-	__webpack_require__(236);
-	__webpack_require__(238);
-	__webpack_require__(239);
-	__webpack_require__(223);
-	__webpack_require__(225);
-	module.exports = __webpack_require__(240);
-=======
 	__webpack_require__(234);
 	__webpack_require__(235);
 	__webpack_require__(223);
 	__webpack_require__(225);
 	__webpack_require__(236);
 	module.exports = __webpack_require__(238);
->>>>>>> 4bb18f8603293f2bcdc29db9247561a88fdd5717
 
 
 /***/ },
@@ -133,21 +120,6 @@
 	          'div',
 	          { className: 'container' },
 	          _react2.default.createElement(
-<<<<<<< HEAD
-	            'nav',
-	            { className: 'navbar navbar-default navbar-fixed-top' },
-	            _react2.default.createElement(_login2.default, null)
-	          ),
-	          _react2.default.createElement(_main2.default, null),
-	          _react2.default.createElement(_search2.default, { history: this.props.history }),
-	          _react2.default.createElement(_cloud2.default, null)
-	        )
-	      ),
-	      _react2.default.createElement('div', { className: 'art' })
-	    );
-	  }
-	});
-=======
 	            'div',
 	            null,
 	            _react2.default.createElement(
@@ -164,10 +136,13 @@
 	      );
 	    }
 	  }]);
->>>>>>> 4bb18f8603293f2bcdc29db9247561a88fdd5717
 
 	  return App;
 	}(_react2.default.Component);
+
+	App.contextTypes = {
+	  router: _react2.default.PropTypes.object.isRequired
+	};
 
 	exports.default = App;
 
@@ -25457,11 +25432,6 @@
 
 	var _jquery2 = _interopRequireDefault(_jquery);
 
-<<<<<<< HEAD
-	var _reactRouter = __webpack_require__(160);
-
-=======
->>>>>>> 4bb18f8603293f2bcdc29db9247561a88fdd5717
 	var _searchInput = __webpack_require__(225);
 
 	var _searchInput2 = _interopRequireDefault(_searchInput);
@@ -25502,19 +25472,14 @@
 	  }, {
 	    key: 'findStack',
 	    value: function findStack(e) {
-	      this.state.stack.push(e.target.value);
+	      this.setState({
+	        stack: e.target.value
+	      });
 	    }
 	  }, {
 	    key: 'redirectToResults',
 	    value: function redirectToResults() {
-<<<<<<< HEAD
-	      this.props.history.pushState(null, '/dashboard');
-	      // this.props.history.pushstate({salary:this.stack.salary}, '/results');
-	      // this.context.router.push('/results');
-	      // this.context.router.push({salary:this.stack.salary}, '/results');
-=======
 	      this.props.history.pushState({ salary: this.state.salary }, '/results');
->>>>>>> 4bb18f8603293f2bcdc29db9247561a88fdd5717
 	    }
 	  }, {
 	    key: 'getDatafromServer',
@@ -25522,34 +25487,6 @@
 	      e.preventDefault();
 
 	      var self = this;
-<<<<<<< HEAD
-
-	      // console.log(this.state.stack[this.state.stack.length - 1]);
-	      // Remember to lowercase -- its only not in lowercase now because you input the data in as MEAN
-
-	      // var split = this.state.cityState.split(", ");
-
-	      // this.state.cityState = split;
-
-	      // var data = {stack: this.state.stack[this.state.stack.length - 1], city: this.state.cityState[0].toLowerCase(), state:this.state.cityState[1].toLowerCase()};
-
-	      // $.ajax({
-	      //   url:"http://localhost:3000/search",
-	      //   type:"POST",
-	      //   contentType:"application/json",
-	      //   data: JSON.stringify(data),
-	      //   success: function(data) {
-	      //     self.setState({
-	      //       salary:data
-	      //     });
-	      //     console.log("Self is " + self);
-	      //   },
-	      //   error: function(err) {
-	      //     console.log(err);
-	      //   }
-	      // });
-	      self.redirectToResults();
-=======
 	      var cityState = this.state.cityState.split(", ");
 
 	      // Remember to lowercase -- its only not in lowercase now because you input the data in as MEAN
@@ -25570,7 +25507,6 @@
 	          console.log(err);
 	        }
 	      });
->>>>>>> 4bb18f8603293f2bcdc29db9247561a88fdd5717
 	    }
 	  }, {
 	    key: 'render',
@@ -35625,12 +35561,8 @@
 	    key: 'redirectToDashboard',
 	    value: function redirectToDashboard(dataToken) {
 	      // this.context.router.push({token: dataToken}, '/dashboard');
-<<<<<<< HEAD
-	      this.props.history.pushState(null, '/dashboard');
-=======
 	      console.log(this.props);
 	      this.props.history.pushState({ token: dataToken }, '/dashboard');
->>>>>>> 4bb18f8603293f2bcdc29db9247561a88fdd5717
 	    }
 	  }, {
 	    key: 'loginToServer',
@@ -35803,6 +35735,7 @@
 	  _createClass(Dashboard, [{
 	    key: 'componentDidMount',
 	    value: function componentDidMount() {
+
 	      console.log(this.props.location.state);
 	    }
 	  }, {
@@ -36021,12 +35954,8 @@
 	  }, {
 	    key: 'redirectToDashboard',
 	    value: function redirectToDashboard(dataToken) {
-<<<<<<< HEAD
-	      this.context.router.push(null, '/results');
-=======
 	      this.props.history.pushState({ token: dataToken }, '/dashboard');
 	      // this.context.router.push(null, '/results');
->>>>>>> 4bb18f8603293f2bcdc29db9247561a88fdd5717
 	    }
 	  }, {
 	    key: 'SignUpToServer',
@@ -36047,11 +35976,7 @@
 	          localStorage.setItem('token', data.token), self.setState({
 	            authToken: data.token
 	          });
-<<<<<<< HEAD
-	          self.redirectToDashboard();
-=======
 	          self.redirectToDashboard(data.token);
->>>>>>> 4bb18f8603293f2bcdc29db9247561a88fdd5717
 	        },
 	        error: function error(err) {
 	          console.log(err);
@@ -45939,217 +45864,17 @@
 
 	'use strict';
 
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
 	var _react = __webpack_require__(2);
 
 	var _react2 = _interopRequireDefault(_react);
 
-<<<<<<< HEAD
-	var _jquery = __webpack_require__(224);
-
-	var _jquery2 = _interopRequireDefault(_jquery);
-
-	var _reactRouter = __webpack_require__(160);
-
-	var _advanceSearchInput = __webpack_require__(239);
-
-	var _advanceSearchInput2 = _interopRequireDefault(_advanceSearchInput);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var AdvanceSearch = function (_React$Component) {
-	  _inherits(AdvanceSearch, _React$Component);
-
-	  function AdvanceSearch() {
-	    _classCallCheck(this, AdvanceSearch);
-
-	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(AdvanceSearch).call(this));
-
-	    _this.state = {
-	      stack: [],
-	      city: "",
-	      state: "",
-	      education: "",
-	      gender: "",
-	      experience: "",
-	      salary: {}
-	    };
-	    return _this;
-	  }
-
-	  _createClass(AdvanceSearch, [{
-	    key: 'findCity',
-	    value: function findCity(e) {
-	      this.setState({
-	        city: e.target.value
-	      });
-	    }
-	  }, {
-	    key: 'findState',
-	    value: function findState(e) {
-	      this.setState({
-	        state: e.target.value
-	      });
-	    }
-	  }, {
-	    key: 'findEducation',
-	    value: function findEducation(e) {
-	      this.setState({
-	        education: e.target.value
-	      });
-	    }
-	  }, {
-	    key: 'findGender',
-	    value: function findGender(e) {
-	      this.setState({
-	        gender: e.target.value
-	      });
-	    }
-	  }, {
-	    key: 'findExperience',
-	    value: function findExperience(e) {
-	      this.setState({
-	        experience: e.target.value
-	      });
-	    }
-	  }, {
-	    key: 'findStack',
-	    value: function findStack(e) {
-	      this.state.stack.push(e.target.value);
-	    }
-	  }, {
-	    key: 'redirectToResults',
-	    value: function redirectToResults() {
-	      this.context.router.push({ salary: this.stack.salary }, '/results');
-	    }
-	  }, {
-	    key: 'GetAdvanceSearchData',
-	    value: function GetAdvanceSearchData(e) {
-	      e.preventDefault();
-	      console.log(this.state.stack[this.state.stack.length - 1]);
-	      // Remember to lowercase -- its only not in lowercase now because you input the data in as MEAN
-	      this.state.cityState = this.state.cityState.split(", ");
-	      var data = { stack: this.state.stack[this.state.stack.length - 1], city: this.state.cityState[0].toLowerCase(), state: this.state.cityState[1].toLowerCase() };
-
-	      var self = this;
-	      console.log(data);
-
-	      _jquery2.default.ajax({
-	        url: "http://localhost:3000/search",
-	        type: "POST",
-	        contentType: "application/json",
-	        data: JSON.stringify(data),
-	        success: function success(data) {
-	          self.setState({
-	            salary: data
-	          });
-	          console.log("SALARY " + self.state.salary.highest);
-	          self.redirectToResults();
-	        },
-	        error: function error(err) {
-	          console.log(err);
-	        }
-	      });
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(
-	        'div',
-	        null,
-	        _react2.default.createElement(_advanceSearchInput2.default, { GetAdvanceSearchData: this.GetAdvanceSearchData.bind(this), findStack: this.findStack.bind(this), findCity: this.findCity.bind(this), findState: this.findState.bind(this), findEducation: this.findEducation.bind(this), findGender: this.findGender.bind(this), findExperience: this.findExperience.bind(this) })
-	      );
-	    }
-	  }]);
-
-	  return AdvanceSearch;
-	}(_react2.default.Component);
-
-	;
-
-	AdvanceSearch.contextTypes = {
-	  router: _react2.default.PropTypes.object.isRequired
-	};
-
-	exports.default = AdvanceSearch;
-
-/***/ },
-/* 239 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _react = __webpack_require__(2);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactRouter = __webpack_require__(160);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	var AdvanceSearchInput = function AdvanceSearchInput(props) {
-	  return _react2.default.createElement(
-	    'div',
-	    { className: 'signup-input' },
-	    _react2.default.createElement(
-	      'form',
-	      { onSubmit: props.GetAdvanceSearchData },
-	      _react2.default.createElement('input', { type: 'city', value: props.city, onChange: props.addCity, className: 'city-input', placeholder: 'City' }),
-	      _react2.default.createElement('input', { type: 'state', value: props.state, onChange: props.addState, className: 'state-input', placeholder: 'State' }),
-	      _react2.default.createElement('input', { type: 'education', value: props.education, onChange: props.addEducation, className: 'education-input', placeholder: 'Education' }),
-	      _react2.default.createElement('input', { type: 'gender', value: props.gender, onChange: props.addGender, className: 'gender-input', placeholder: 'Gender' }),
-	      _react2.default.createElement('input', { type: 'experience', value: props.experience, onChange: props.addExperience, className: 'experience-input', placeholder: 'Experience' }),
-	      _react2.default.createElement('input', { type: 'stack', value: props.stack, onChange: props.addStack, className: 'stack-input', placeholder: 'Stack' }),
-	      _react2.default.createElement(
-	        'button',
-	        { type: 'submit' },
-	        'Submit'
-	      )
-	    )
-	  );
-	};
-
-	exports.default = AdvanceSearchInput;
-
-/***/ },
-/* 240 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _react = __webpack_require__(2);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactDom = __webpack_require__(241);
-=======
 	var _reactDom = __webpack_require__(239);
->>>>>>> 4bb18f8603293f2bcdc29db9247561a88fdd5717
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
 	var _reactRouter = __webpack_require__(160);
 
-<<<<<<< HEAD
-	var _router = __webpack_require__(242);
-=======
 	var _router = __webpack_require__(240);
->>>>>>> 4bb18f8603293f2bcdc29db9247561a88fdd5717
 
 	var _router2 = _interopRequireDefault(_router);
 
@@ -46162,11 +45887,7 @@
 	), document.getElementById('app'));
 
 /***/ },
-<<<<<<< HEAD
-/* 241 */
-=======
 /* 239 */
->>>>>>> 4bb18f8603293f2bcdc29db9247561a88fdd5717
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -46175,11 +45896,7 @@
 
 
 /***/ },
-<<<<<<< HEAD
-/* 242 */
-=======
 /* 240 */
->>>>>>> 4bb18f8603293f2bcdc29db9247561a88fdd5717
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -46194,11 +45911,7 @@
 
 	var _reactRouter = __webpack_require__(160);
 
-<<<<<<< HEAD
-	var _mainLayout = __webpack_require__(243);
-=======
 	var _mainLayout = __webpack_require__(241);
->>>>>>> 4bb18f8603293f2bcdc29db9247561a88fdd5717
 
 	var _mainLayout2 = _interopRequireDefault(_mainLayout);
 
@@ -46206,11 +45919,7 @@
 
 	var _app2 = _interopRequireDefault(_app);
 
-<<<<<<< HEAD
-	var _stats = __webpack_require__(244);
-=======
 	var _stats = __webpack_require__(242);
->>>>>>> 4bb18f8603293f2bcdc29db9247561a88fdd5717
 
 	var _stats2 = _interopRequireDefault(_stats);
 
@@ -46230,11 +45939,7 @@
 
 	var _dashboard2 = _interopRequireDefault(_dashboard);
 
-<<<<<<< HEAD
-	var _advanceSearch = __webpack_require__(238);
-=======
 	var _advanceSearch = __webpack_require__(243);
->>>>>>> 4bb18f8603293f2bcdc29db9247561a88fdd5717
 
 	var _advanceSearch2 = _interopRequireDefault(_advanceSearch);
 
@@ -46272,11 +45977,7 @@
 	);
 
 /***/ },
-<<<<<<< HEAD
-/* 243 */
-=======
 /* 241 */
->>>>>>> 4bb18f8603293f2bcdc29db9247561a88fdd5717
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -46310,11 +46011,7 @@
 	exports.default = MainLayout;
 
 /***/ },
-<<<<<<< HEAD
-/* 244 */
-=======
 /* 242 */
->>>>>>> 4bb18f8603293f2bcdc29db9247561a88fdd5717
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
