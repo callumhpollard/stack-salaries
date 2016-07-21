@@ -2,6 +2,7 @@ import React from 'react';
 import $ from 'jquery';
 var xml2js = require('xml2js');
 var parser = new xml2js.Parser();
+import JobsList from './jobs-list';
 
 class Jobs extends React.Component {
 
@@ -9,11 +10,12 @@ class Jobs extends React.Component {
     super();
 
     this.state = {
-      jobs: []
+      jobs: [],
+      serialized: []
     };
   }
 
-  componentDidMount(){
+  componentWillMount(){
     this.getJobs();
   }
 
@@ -23,7 +25,7 @@ class Jobs extends React.Component {
     var self = this;
 
     // Replace that random hex bug
-    var data = this.state.jobs.replace("\ufeff", "");
+    var data = this.state.serialized.replace("\ufeff", "");
 
     // Parse the serialized XML string and assign it to the jobs state
     parser.parseString(data, function (err, result) {
@@ -56,7 +58,7 @@ class Jobs extends React.Component {
 
         // Set the jobs array to the serialized data
          self.setState({
-          jobs: serializedData
+          serialized: serializedData
         });
 
         // Call the parser so we can parse the string
@@ -75,6 +77,7 @@ class Jobs extends React.Component {
     return (
       <div>
         <h1>Jobs</h1>
+          <JobsList jobs={this.state.jobs}/>
       </div>
     );
   }
