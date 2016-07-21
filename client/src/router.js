@@ -9,6 +9,8 @@ import LoginForm from './components/login-form';
 import SignupForm from './components/signup-form';
 import Dashboard from './components/dashboard';
 import AdvanceSearch from './components/advance-search';
+import Jobs from './components/jobs';
+
 
 export default (
   <Route path="/" component={MainLayout}>
@@ -32,6 +34,10 @@ export default (
 
      <Route path="advance-search">
       <IndexRoute component={AdvanceSearch} />
+    </Route>
+
+     <Route path="jobs">
+      <IndexRoute component={Jobs} />
     </Route>
 
   </Route>
