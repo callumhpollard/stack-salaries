@@ -40,7 +40,7 @@ var calculateSalary = function(query, callback){
         salaries.push(s.salary);
       }
 
-      salaries.sort((a,b) => a - b);
+      salaries.sort((a,b) => a - b, 0);
 
 <<<<<<< HEAD
     salaries.sort((a,b) => a - b);
@@ -51,7 +51,7 @@ var calculateSalary = function(query, callback){
 =======
       calcSalary.lowest = salaries[0];
       calcSalary.highest = salaries[salaries.length - 1];
-      calcSalary.average = salaries.reduce((a, b) => a + b)/salaries.length;
+      calcSalary.average = Math.ceil(salaries.reduce((a, b) => a + b)/salaries.length);
 
       callback(calcSalary);
     } else {

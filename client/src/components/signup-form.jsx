@@ -41,8 +41,11 @@ class SignForm extends React.Component{
     this.context.router.push(null, '/results');
 =======
     this.props.history.pushState({token: dataToken}, '/dashboard');
+<<<<<<< HEAD
     // this.context.router.push(null, '/results');
 >>>>>>> 4bb18f8603293f2bcdc29db9247561a88fdd5717
+=======
+>>>>>>> 5c6215621b03cbb0632b65186cc1fc6b19dfebb4
   }
 
 
@@ -52,14 +55,14 @@ class SignForm extends React.Component{
 
     var data = {name: this.state.name, email: this.state.email, password: this.state.password};
 
-    console.log(data);
+    // console.log(data);
     $.ajax({
       url:"http://localhost:3000/signup",
       type:"POST",
       contentType:"application/json",
       data: JSON.stringify(data),
       success: function(data) {
-        console.log(data.token);
+        // console.log(data.token);
         localStorage.setItem('token', data.token),
         self.setState({
           authToken: data.token

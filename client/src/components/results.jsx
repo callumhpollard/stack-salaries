@@ -146,28 +146,6 @@ var Axis = React.createClass({
   }
 });
 
-var fakeData = [
-  {x: 'a', y: 65000},
-  {x: 'b', y: 106000},
-  {x: 'c', y: 180000}
-];
-
-var fakeInfo = {
-  stack: 'React',
-  location: 'New York, NY'
-}
-
-var fakeData2 = [
-  {x: 'a', y: 30000},
-  {x: 'b', y: 69696},
-  {x: 'c', y: 106000}
-];
-
-var fakeInfo2 = {
-  stack: 'Backbone',
-  location: 'Sadsville, OK'
-}
-
 var changeDataTrue = true;
 
 var Results = React.createClass({
@@ -180,26 +158,20 @@ var Results = React.createClass({
 
     getInitialState: function() {
         return {
-          data: fakeData,
-          info: fakeInfo
+          data: [
+            {x: 'a', y: window.salary.lowest},
+            {x: 'b', y: window.salary.average},
+            {x: 'c', y: window.salary.highest}
+          ]
         }
     },
 
-    changeData: function(){
-      if(changeDataTrue){
-        this.setState({data:fakeData2, info:fakeInfo2})
-        changeDataTrue = false;
-      } else {
-        this.setState({data:fakeData, info:fakeInfo})
-        changeDataTrue = true;
-      }
-    },
-
     render: function() {
+      console.log(window.salary);
         return (
           <div>
             <div className="selection">
-              <h3>Salary Stats for {this.state.info.stack} in {this.state.info.location}</h3>
+              <h3>{window.salary.label}</h3>
             </div>
             <hr/>
             <Chart width={this.props.width}
@@ -208,7 +180,6 @@ var Results = React.createClass({
                           width={this.props.width}
                           height={this.props.height} />
             </Chart>
-            <button className="btn btn-primary" onClick={this.changeData}><span className="glyphicon glyphicon-search"></span></button>
           </div>
         );
     }

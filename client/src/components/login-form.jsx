@@ -32,11 +32,15 @@ class LoginForm extends React.Component{
   redirectToDashboard(dataToken){
     // this.context.router.push({token: dataToken}, '/dashboard');
 <<<<<<< HEAD
+<<<<<<< HEAD
     this.props.history.pushState(null, '/dashboard');
 =======
     console.log(this.props);
     this.props.history.pushState({token: dataToken}, '/dashboard');
 >>>>>>> 4bb18f8603293f2bcdc29db9247561a88fdd5717
+=======
+    this.props.history.pushState({token: dataToken}, '/jobs');
+>>>>>>> 5c6215621b03cbb0632b65186cc1fc6b19dfebb4
   }
 
   loginToServer(e) {
@@ -44,14 +48,13 @@ class LoginForm extends React.Component{
 
     var data = {email: this.state.email, password: this.state.password};
     var self = this;
-    console.log(data);
     $.ajax({
       url:"http://localhost:3000/signin",
       type:"POST",
       contentType:"application/json",
       data: JSON.stringify(data),
       success: function(data) {
-        console.log(data.token);
+        // console.log(data.token);
         localStorage.setItem('token', data.token),
         self.setState({
           authToken: data.token,
