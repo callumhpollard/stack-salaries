@@ -64,63 +64,39 @@ module.exports =
 
 	var _reactRouter = __webpack_require__(158);
 
-	var _mainLayout = __webpack_require__(221);
+	var _mainLayout = __webpack_require__(220);
 
 	var _mainLayout2 = _interopRequireDefault(_mainLayout);
 
-	var _app = __webpack_require__(222);
+	var _app = __webpack_require__(221);
 
 	var _app2 = _interopRequireDefault(_app);
 
-	var _stats = __webpack_require__(229);
+	var _stats = __webpack_require__(253);
 
 	var _stats2 = _interopRequireDefault(_stats);
 
-	var _search = __webpack_require__(225);
+	var _search = __webpack_require__(224);
 
 	var _search2 = _interopRequireDefault(_search);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-	var _loginForm = __webpack_require__(269);
+	var _loginForm = __webpack_require__(258);
 
 	var _loginForm2 = _interopRequireDefault(_loginForm);
 
-	var _signupForm = __webpack_require__(271);
+	var _signupForm = __webpack_require__(260);
 
 	var _signupForm2 = _interopRequireDefault(_signupForm);
 
-	var _dashboard = __webpack_require__(273);
+	var _dashboard = __webpack_require__(262);
 
 	var _dashboard2 = _interopRequireDefault(_dashboard);
 
-	var _advanceSearch = __webpack_require__(276);
-=======
-	var _loginForm = __webpack_require__(233);
-=======
-	var _loginForm = __webpack_require__(234);
->>>>>>> 5c6215621b03cbb0632b65186cc1fc6b19dfebb4
-
-	var _loginForm2 = _interopRequireDefault(_loginForm);
-
-	var _signupForm = __webpack_require__(236);
-
-	var _signupForm2 = _interopRequireDefault(_signupForm);
-
-	var _dashboard = __webpack_require__(238);
-
-	var _dashboard2 = _interopRequireDefault(_dashboard);
-
-<<<<<<< HEAD
-	var _advanceSearch = __webpack_require__(240);
->>>>>>> 4bb18f8603293f2bcdc29db9247561a88fdd5717
-=======
-	var _advanceSearch = __webpack_require__(241);
->>>>>>> 5c6215621b03cbb0632b65186cc1fc6b19dfebb4
+	var _advanceSearch = __webpack_require__(265);
 
 	var _advanceSearch2 = _interopRequireDefault(_advanceSearch);
 
-	var _jobs = __webpack_require__(242);
+	var _jobs = __webpack_require__(267);
 
 	var _jobs2 = _interopRequireDefault(_jobs);
 
@@ -19644,81 +19620,81 @@ module.exports =
 
 	var _Router3 = _interopRequireDefault(_Router2);
 
-	var _Link2 = __webpack_require__(198);
+	var _Link2 = __webpack_require__(197);
 
 	var _Link3 = _interopRequireDefault(_Link2);
 
-	var _IndexLink2 = __webpack_require__(199);
+	var _IndexLink2 = __webpack_require__(198);
 
 	var _IndexLink3 = _interopRequireDefault(_IndexLink2);
 
-	var _withRouter2 = __webpack_require__(200);
+	var _withRouter2 = __webpack_require__(199);
 
 	var _withRouter3 = _interopRequireDefault(_withRouter2);
 
-	var _IndexRedirect2 = __webpack_require__(202);
+	var _IndexRedirect2 = __webpack_require__(201);
 
 	var _IndexRedirect3 = _interopRequireDefault(_IndexRedirect2);
 
-	var _IndexRoute2 = __webpack_require__(204);
+	var _IndexRoute2 = __webpack_require__(203);
 
 	var _IndexRoute3 = _interopRequireDefault(_IndexRoute2);
 
-	var _Redirect2 = __webpack_require__(203);
+	var _Redirect2 = __webpack_require__(202);
 
 	var _Redirect3 = _interopRequireDefault(_Redirect2);
 
-	var _Route2 = __webpack_require__(205);
+	var _Route2 = __webpack_require__(204);
 
 	var _Route3 = _interopRequireDefault(_Route2);
 
-	var _History2 = __webpack_require__(206);
+	var _History2 = __webpack_require__(205);
 
 	var _History3 = _interopRequireDefault(_History2);
 
-	var _Lifecycle2 = __webpack_require__(207);
+	var _Lifecycle2 = __webpack_require__(206);
 
 	var _Lifecycle3 = _interopRequireDefault(_Lifecycle2);
 
-	var _RouteContext2 = __webpack_require__(208);
+	var _RouteContext2 = __webpack_require__(207);
 
 	var _RouteContext3 = _interopRequireDefault(_RouteContext2);
 
-	var _useRoutes2 = __webpack_require__(209);
+	var _useRoutes2 = __webpack_require__(208);
 
 	var _useRoutes3 = _interopRequireDefault(_useRoutes2);
 
-	var _RouterContext2 = __webpack_require__(195);
+	var _RouterContext2 = __webpack_require__(194);
 
 	var _RouterContext3 = _interopRequireDefault(_RouterContext2);
 
-	var _RoutingContext2 = __webpack_require__(210);
+	var _RoutingContext2 = __webpack_require__(209);
 
 	var _RoutingContext3 = _interopRequireDefault(_RoutingContext2);
 
 	var _PropTypes3 = _interopRequireDefault(_PropTypes2);
 
-	var _match2 = __webpack_require__(211);
+	var _match2 = __webpack_require__(210);
 
 	var _match3 = _interopRequireDefault(_match2);
 
-	var _useRouterHistory2 = __webpack_require__(215);
+	var _useRouterHistory2 = __webpack_require__(214);
 
 	var _useRouterHistory3 = _interopRequireDefault(_useRouterHistory2);
 
-	var _applyRouterMiddleware2 = __webpack_require__(216);
+	var _applyRouterMiddleware2 = __webpack_require__(215);
 
 	var _applyRouterMiddleware3 = _interopRequireDefault(_applyRouterMiddleware2);
 
-	var _browserHistory2 = __webpack_require__(217);
+	var _browserHistory2 = __webpack_require__(216);
 
 	var _browserHistory3 = _interopRequireDefault(_browserHistory2);
 
-	var _hashHistory2 = __webpack_require__(220);
+	var _hashHistory2 = __webpack_require__(219);
 
 	var _hashHistory3 = _interopRequireDefault(_hashHistory2);
 
-	var _createMemoryHistory2 = __webpack_require__(212);
+	var _createMemoryHistory2 = __webpack_require__(211);
 
 	var _createMemoryHistory3 = _interopRequireDefault(_createMemoryHistory2);
 
@@ -20479,7 +20455,7 @@ module.exports =
 
 	var _createHashHistory2 = _interopRequireDefault(_createHashHistory);
 
-	var _useQueries = __webpack_require__(184);
+	var _useQueries = __webpack_require__(183);
 
 	var _useQueries2 = _interopRequireDefault(_useQueries);
 
@@ -20491,19 +20467,19 @@ module.exports =
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _createTransitionManager = __webpack_require__(187);
+	var _createTransitionManager = __webpack_require__(186);
 
 	var _createTransitionManager2 = _interopRequireDefault(_createTransitionManager);
 
 	var _InternalPropTypes = __webpack_require__(164);
 
-	var _RouterContext = __webpack_require__(195);
+	var _RouterContext = __webpack_require__(194);
 
 	var _RouterContext2 = _interopRequireDefault(_RouterContext);
 
 	var _RouteUtils = __webpack_require__(159);
 
-	var _RouterUtils = __webpack_require__(197);
+	var _RouterUtils = __webpack_require__(196);
 
 	var _routerWarning = __webpack_require__(162);
 
@@ -20545,10 +20521,6 @@ module.exports =
 	    createElement: func,
 	    onError: func,
 	    onUpdate: func,
-
-	    // Deprecated:
-	    parseQueryString: func,
-	    stringifyQuery: func,
 
 	    // PRIVATE: For client-side rehydration of server match.
 	    matchContext: object
@@ -20706,7 +20678,7 @@ module.exports =
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _warning = __webpack_require__(169);
+	var _warning = __webpack_require__(163);
 
 	var _warning2 = _interopRequireDefault(_warning);
 
@@ -20714,17 +20686,17 @@ module.exports =
 
 	var _invariant2 = _interopRequireDefault(_invariant);
 
-	var _Actions = __webpack_require__(170);
+	var _Actions = __webpack_require__(169);
 
-	var _PathUtils = __webpack_require__(171);
+	var _PathUtils = __webpack_require__(170);
 
-	var _ExecutionEnvironment = __webpack_require__(172);
+	var _ExecutionEnvironment = __webpack_require__(171);
 
-	var _DOMUtils = __webpack_require__(173);
+	var _DOMUtils = __webpack_require__(172);
 
-	var _DOMStateStorage = __webpack_require__(174);
+	var _DOMStateStorage = __webpack_require__(173);
 
-	var _createDOMHistory = __webpack_require__(175);
+	var _createDOMHistory = __webpack_require__(174);
 
 	var _createDOMHistory2 = _interopRequireDefault(_createDOMHistory);
 
@@ -20950,74 +20922,6 @@ module.exports =
 /***/ function(module, exports) {
 
 	/**
-	 * Copyright 2014-2015, Facebook, Inc.
-	 * All rights reserved.
-	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
-	 */
-
-	'use strict';
-
-	/**
-	 * Similar to invariant but only logs a warning if the condition is not met.
-	 * This can be used to log issues in development environments in critical
-	 * paths. Removing the logging code for production environments will keep the
-	 * same logic and follow the same code paths.
-	 */
-
-	var __DEV__ = process.env.NODE_ENV !== 'production';
-
-	var warning = function() {};
-
-	if (__DEV__) {
-	  warning = function(condition, format, args) {
-	    var len = arguments.length;
-	    args = new Array(len > 2 ? len - 2 : 0);
-	    for (var key = 2; key < len; key++) {
-	      args[key - 2] = arguments[key];
-	    }
-	    if (format === undefined) {
-	      throw new Error(
-	        '`warning(condition, format, ...args)` requires a warning ' +
-	        'message argument'
-	      );
-	    }
-
-	    if (format.length < 10 || (/^[s\W]*$/).test(format)) {
-	      throw new Error(
-	        'The warning format should be able to uniquely identify this ' +
-	        'warning. Please, use a more descriptive format than: ' + format
-	      );
-	    }
-
-	    if (!condition) {
-	      var argIndex = 0;
-	      var message = 'Warning: ' +
-	        format.replace(/%s/g, function() {
-	          return args[argIndex++];
-	        });
-	      if (typeof console !== 'undefined') {
-	        console.error(message);
-	      }
-	      try {
-	        // This error was thrown as a convenience so that you can use this stack
-	        // to find the callsite that caused this warning to fire.
-	        throw new Error(message);
-	      } catch(x) {}
-	    }
-	  };
-	}
-
-	module.exports = warning;
-
-
-/***/ },
-/* 170 */
-/***/ function(module, exports) {
-
-	/**
 	 * Indicates that navigation was caused by a call to history.push.
 	 */
 	'use strict';
@@ -21050,7 +20954,7 @@ module.exports =
 	};
 
 /***/ },
-/* 171 */
+/* 170 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21061,7 +20965,7 @@ module.exports =
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _warning = __webpack_require__(169);
+	var _warning = __webpack_require__(163);
 
 	var _warning2 = _interopRequireDefault(_warning);
 
@@ -21102,7 +21006,7 @@ module.exports =
 	}
 
 /***/ },
-/* 172 */
+/* 171 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -21112,7 +21016,7 @@ module.exports =
 	exports.canUseDOM = canUseDOM;
 
 /***/ },
-/* 173 */
+/* 172 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -21192,7 +21096,7 @@ module.exports =
 	}
 
 /***/ },
-/* 174 */
+/* 173 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*eslint-disable no-empty */
@@ -21204,7 +21108,7 @@ module.exports =
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _warning = __webpack_require__(169);
+	var _warning = __webpack_require__(163);
 
 	var _warning2 = _interopRequireDefault(_warning);
 
@@ -21270,7 +21174,7 @@ module.exports =
 	}
 
 /***/ },
-/* 175 */
+/* 174 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21285,11 +21189,11 @@ module.exports =
 
 	var _invariant2 = _interopRequireDefault(_invariant);
 
-	var _ExecutionEnvironment = __webpack_require__(172);
+	var _ExecutionEnvironment = __webpack_require__(171);
 
-	var _DOMUtils = __webpack_require__(173);
+	var _DOMUtils = __webpack_require__(172);
 
-	var _createHistory = __webpack_require__(176);
+	var _createHistory = __webpack_require__(175);
 
 	var _createHistory2 = _interopRequireDefault(_createHistory);
 
@@ -21315,7 +21219,7 @@ module.exports =
 	module.exports = exports['default'];
 
 /***/ },
-/* 176 */
+/* 175 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21326,29 +21230,29 @@ module.exports =
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _warning = __webpack_require__(169);
+	var _warning = __webpack_require__(163);
 
 	var _warning2 = _interopRequireDefault(_warning);
 
-	var _deepEqual = __webpack_require__(177);
+	var _deepEqual = __webpack_require__(176);
 
 	var _deepEqual2 = _interopRequireDefault(_deepEqual);
 
-	var _PathUtils = __webpack_require__(171);
+	var _PathUtils = __webpack_require__(170);
 
-	var _AsyncUtils = __webpack_require__(180);
+	var _AsyncUtils = __webpack_require__(179);
 
-	var _Actions = __webpack_require__(170);
+	var _Actions = __webpack_require__(169);
 
-	var _createLocation2 = __webpack_require__(181);
+	var _createLocation2 = __webpack_require__(180);
 
 	var _createLocation3 = _interopRequireDefault(_createLocation2);
 
-	var _runTransitionHook = __webpack_require__(182);
+	var _runTransitionHook = __webpack_require__(181);
 
 	var _runTransitionHook2 = _interopRequireDefault(_runTransitionHook);
 
-	var _deprecate = __webpack_require__(183);
+	var _deprecate = __webpack_require__(182);
 
 	var _deprecate2 = _interopRequireDefault(_deprecate);
 
@@ -21608,12 +21512,12 @@ module.exports =
 	module.exports = exports['default'];
 
 /***/ },
-/* 177 */
+/* 176 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var pSlice = Array.prototype.slice;
-	var objectKeys = __webpack_require__(178);
-	var isArguments = __webpack_require__(179);
+	var objectKeys = __webpack_require__(177);
+	var isArguments = __webpack_require__(178);
 
 	var deepEqual = module.exports = function (actual, expected, opts) {
 	  if (!opts) opts = {};
@@ -21708,7 +21612,7 @@ module.exports =
 
 
 /***/ },
-/* 178 */
+/* 177 */
 /***/ function(module, exports) {
 
 	exports = module.exports = typeof Object.keys === 'function'
@@ -21723,7 +21627,7 @@ module.exports =
 
 
 /***/ },
-/* 179 */
+/* 178 */
 /***/ function(module, exports) {
 
 	var supportsArgumentsClass = (function(){
@@ -21749,7 +21653,7 @@ module.exports =
 
 
 /***/ },
-/* 180 */
+/* 179 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -21812,7 +21716,7 @@ module.exports =
 	}
 
 /***/ },
-/* 181 */
+/* 180 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21823,13 +21727,13 @@ module.exports =
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _warning = __webpack_require__(169);
+	var _warning = __webpack_require__(163);
 
 	var _warning2 = _interopRequireDefault(_warning);
 
-	var _Actions = __webpack_require__(170);
+	var _Actions = __webpack_require__(169);
 
-	var _PathUtils = __webpack_require__(171);
+	var _PathUtils = __webpack_require__(170);
 
 	function createLocation() {
 	  var location = arguments.length <= 0 || arguments[0] === undefined ? '/' : arguments[0];
@@ -21868,7 +21772,7 @@ module.exports =
 	module.exports = exports['default'];
 
 /***/ },
-/* 182 */
+/* 181 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21877,7 +21781,7 @@ module.exports =
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _warning = __webpack_require__(169);
+	var _warning = __webpack_require__(163);
 
 	var _warning2 = _interopRequireDefault(_warning);
 
@@ -21897,7 +21801,7 @@ module.exports =
 	module.exports = exports['default'];
 
 /***/ },
-/* 183 */
+/* 182 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21906,7 +21810,7 @@ module.exports =
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _warning = __webpack_require__(169);
+	var _warning = __webpack_require__(163);
 
 	var _warning2 = _interopRequireDefault(_warning);
 
@@ -21921,7 +21825,7 @@ module.exports =
 	module.exports = exports['default'];
 
 /***/ },
-/* 184 */
+/* 183 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21932,19 +21836,19 @@ module.exports =
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _warning = __webpack_require__(169);
+	var _warning = __webpack_require__(163);
 
 	var _warning2 = _interopRequireDefault(_warning);
 
-	var _queryString = __webpack_require__(185);
+	var _queryString = __webpack_require__(184);
 
-	var _runTransitionHook = __webpack_require__(182);
+	var _runTransitionHook = __webpack_require__(181);
 
 	var _runTransitionHook2 = _interopRequireDefault(_runTransitionHook);
 
-	var _PathUtils = __webpack_require__(171);
+	var _PathUtils = __webpack_require__(170);
 
-	var _deprecate = __webpack_require__(183);
+	var _deprecate = __webpack_require__(182);
 
 	var _deprecate2 = _interopRequireDefault(_deprecate);
 
@@ -22102,11 +22006,11 @@ module.exports =
 	module.exports = exports['default'];
 
 /***/ },
-/* 185 */
+/* 184 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-	var strictUriEncode = __webpack_require__(186);
+	var strictUriEncode = __webpack_require__(185);
 
 	exports.extract = function (str) {
 		return str.split('?')[1] || '';
@@ -22174,7 +22078,7 @@ module.exports =
 
 
 /***/ },
-/* 186 */
+/* 185 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -22186,7 +22090,7 @@ module.exports =
 
 
 /***/ },
-/* 187 */
+/* 186 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -22201,23 +22105,23 @@ module.exports =
 
 	var _routerWarning2 = _interopRequireDefault(_routerWarning);
 
-	var _Actions = __webpack_require__(170);
+	var _Actions = __webpack_require__(169);
 
-	var _computeChangedRoutes2 = __webpack_require__(188);
+	var _computeChangedRoutes2 = __webpack_require__(187);
 
 	var _computeChangedRoutes3 = _interopRequireDefault(_computeChangedRoutes2);
 
-	var _TransitionUtils = __webpack_require__(189);
+	var _TransitionUtils = __webpack_require__(188);
 
-	var _isActive2 = __webpack_require__(191);
+	var _isActive2 = __webpack_require__(190);
 
 	var _isActive3 = _interopRequireDefault(_isActive2);
 
-	var _getComponents = __webpack_require__(192);
+	var _getComponents = __webpack_require__(191);
 
 	var _getComponents2 = _interopRequireDefault(_getComponents);
 
-	var _matchRoutes = __webpack_require__(194);
+	var _matchRoutes = __webpack_require__(193);
 
 	var _matchRoutes2 = _interopRequireDefault(_matchRoutes);
 
@@ -22282,7 +22186,7 @@ module.exports =
 	    var enterRoutes = _computeChangedRoutes.enterRoutes;
 
 
-	    (0, _TransitionUtils.runLeaveHooks)(leaveRoutes, state);
+	    (0, _TransitionUtils.runLeaveHooks)(leaveRoutes);
 
 	    // Tear down confirmation hooks for left routes
 	    leaveRoutes.filter(function (route) {
@@ -22498,7 +22402,7 @@ module.exports =
 	module.exports = exports['default'];
 
 /***/ },
-/* 188 */
+/* 187 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -22580,7 +22484,7 @@ module.exports =
 	module.exports = exports['default'];
 
 /***/ },
-/* 189 */
+/* 188 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -22590,7 +22494,7 @@ module.exports =
 	exports.runChangeHooks = runChangeHooks;
 	exports.runLeaveHooks = runLeaveHooks;
 
-	var _AsyncUtils = __webpack_require__(190);
+	var _AsyncUtils = __webpack_require__(189);
 
 	var _routerWarning = __webpack_require__(162);
 
@@ -22657,8 +22561,8 @@ module.exports =
 	      if (error || redirectInfo) {
 	        done(error, redirectInfo); // No need to continue.
 	      } else {
-	        next();
-	      }
+	          next();
+	        }
 	    });
 	  }, callback);
 	}
@@ -22700,14 +22604,14 @@ module.exports =
 	/**
 	 * Runs all onLeave hooks in the given array of routes in order.
 	 */
-	function runLeaveHooks(routes, prevState) {
+	function runLeaveHooks(routes) {
 	  for (var i = 0, len = routes.length; i < len; ++i) {
-	    if (routes[i].onLeave) routes[i].onLeave.call(routes[i], prevState);
+	    if (routes[i].onLeave) routes[i].onLeave.call(routes[i]);
 	  }
 	}
 
 /***/ },
-/* 190 */
+/* 189 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -22800,7 +22704,7 @@ module.exports =
 	}
 
 /***/ },
-/* 191 */
+/* 190 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -22957,16 +22861,16 @@ module.exports =
 	module.exports = exports['default'];
 
 /***/ },
-/* 192 */
+/* 191 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	exports.__esModule = true;
 
-	var _AsyncUtils = __webpack_require__(190);
+	var _AsyncUtils = __webpack_require__(189);
 
-	var _makeStateWithLocation = __webpack_require__(193);
+	var _makeStateWithLocation = __webpack_require__(192);
 
 	var _makeStateWithLocation2 = _interopRequireDefault(_makeStateWithLocation);
 
@@ -23008,7 +22912,7 @@ module.exports =
 	module.exports = exports['default'];
 
 /***/ },
-/* 193 */
+/* 192 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -23062,7 +22966,7 @@ module.exports =
 	module.exports = exports['default'];
 
 /***/ },
-/* 194 */
+/* 193 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -23075,9 +22979,9 @@ module.exports =
 
 	exports.default = matchRoutes;
 
-	var _AsyncUtils = __webpack_require__(190);
+	var _AsyncUtils = __webpack_require__(189);
 
-	var _makeStateWithLocation = __webpack_require__(193);
+	var _makeStateWithLocation = __webpack_require__(192);
 
 	var _makeStateWithLocation2 = _interopRequireDefault(_makeStateWithLocation);
 
@@ -23318,7 +23222,7 @@ module.exports =
 	module.exports = exports['default'];
 
 /***/ },
-/* 195 */
+/* 194 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -23341,7 +23245,7 @@ module.exports =
 
 	var _deprecateObjectProperties2 = _interopRequireDefault(_deprecateObjectProperties);
 
-	var _getRouteParams = __webpack_require__(196);
+	var _getRouteParams = __webpack_require__(195);
 
 	var _getRouteParams2 = _interopRequireDefault(_getRouteParams);
 
@@ -23479,7 +23383,7 @@ module.exports =
 	module.exports = exports['default'];
 
 /***/ },
-/* 196 */
+/* 195 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -23510,7 +23414,7 @@ module.exports =
 	module.exports = exports['default'];
 
 /***/ },
-/* 197 */
+/* 196 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -23547,7 +23451,7 @@ module.exports =
 	}
 
 /***/ },
-/* 198 */
+/* 197 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -23654,29 +23558,37 @@ module.exports =
 	    };
 	  },
 	  handleClick: function handleClick(event) {
+	    !this.context.router ? process.env.NODE_ENV !== 'production' ? (0, _invariant2.default)(false, '<Link>s rendered outside of a router context cannot handle clicks.') : (0, _invariant2.default)(false) : void 0;
+
+	    var allowTransition = true;
+
 	    if (this.props.onClick) this.props.onClick(event);
-
-	    if (event.defaultPrevented) return;
-
-	    !this.context.router ? process.env.NODE_ENV !== 'production' ? (0, _invariant2.default)(false, '<Link>s rendered outside of a router context cannot navigate.') : (0, _invariant2.default)(false) : void 0;
 
 	    if (isModifiedEvent(event) || !isLeftClickEvent(event)) return;
 
-	    // If target prop is set (e.g. to "_blank"), let browser handle link.
+	    if (event.defaultPrevented === true) allowTransition = false;
+
+	    // If target prop is set (e.g. to "_blank") let browser handle link.
 	    /* istanbul ignore if: untestable with Karma */
-	    if (this.props.target) return;
+	    if (this.props.target) {
+	      if (!allowTransition) event.preventDefault();
+
+	      return;
+	    }
 
 	    event.preventDefault();
 
-	    var _props = this.props;
-	    var to = _props.to;
-	    var query = _props.query;
-	    var hash = _props.hash;
-	    var state = _props.state;
+	    if (allowTransition) {
+	      var _props = this.props;
+	      var to = _props.to;
+	      var query = _props.query;
+	      var hash = _props.hash;
+	      var state = _props.state;
 
-	    var location = createLocationDescriptor(to, { query: query, hash: hash, state: state });
+	      var location = createLocationDescriptor(to, { query: query, hash: hash, state: state });
 
-	    this.context.router.push(location);
+	      this.context.router.push(location);
+	    }
 	  },
 	  render: function render() {
 	    var _props2 = this.props;
@@ -23723,7 +23635,7 @@ module.exports =
 	module.exports = exports['default'];
 
 /***/ },
-/* 199 */
+/* 198 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -23736,7 +23648,7 @@ module.exports =
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Link = __webpack_require__(198);
+	var _Link = __webpack_require__(197);
 
 	var _Link2 = _interopRequireDefault(_Link);
 
@@ -23756,7 +23668,7 @@ module.exports =
 	module.exports = exports['default'];
 
 /***/ },
-/* 200 */
+/* 199 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -23771,7 +23683,7 @@ module.exports =
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _hoistNonReactStatics = __webpack_require__(201);
+	var _hoistNonReactStatics = __webpack_require__(200);
 
 	var _hoistNonReactStatics2 = _interopRequireDefault(_hoistNonReactStatics);
 
@@ -23801,7 +23713,7 @@ module.exports =
 	module.exports = exports['default'];
 
 /***/ },
-/* 201 */
+/* 200 */
 /***/ function(module, exports) {
 
 	/**
@@ -23857,7 +23769,7 @@ module.exports =
 
 
 /***/ },
-/* 202 */
+/* 201 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -23876,7 +23788,7 @@ module.exports =
 
 	var _invariant2 = _interopRequireDefault(_invariant);
 
-	var _Redirect = __webpack_require__(203);
+	var _Redirect = __webpack_require__(202);
 
 	var _Redirect2 = _interopRequireDefault(_Redirect);
 
@@ -23925,7 +23837,7 @@ module.exports =
 	module.exports = exports['default'];
 
 /***/ },
-/* 203 */
+/* 202 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -24032,7 +23944,7 @@ module.exports =
 	module.exports = exports['default'];
 
 /***/ },
-/* 204 */
+/* 203 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -24097,7 +24009,7 @@ module.exports =
 	module.exports = exports['default'];
 
 /***/ },
-/* 205 */
+/* 204 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -24159,7 +24071,7 @@ module.exports =
 	module.exports = exports['default'];
 
 /***/ },
-/* 206 */
+/* 205 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -24193,7 +24105,7 @@ module.exports =
 	module.exports = exports['default'];
 
 /***/ },
-/* 207 */
+/* 206 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -24266,7 +24178,7 @@ module.exports =
 	module.exports = exports['default'];
 
 /***/ },
-/* 208 */
+/* 207 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -24316,7 +24228,7 @@ module.exports =
 	module.exports = exports['default'];
 
 /***/ },
-/* 209 */
+/* 208 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -24325,11 +24237,11 @@ module.exports =
 
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-	var _useQueries = __webpack_require__(184);
+	var _useQueries = __webpack_require__(183);
 
 	var _useQueries2 = _interopRequireDefault(_useQueries);
 
-	var _createTransitionManager = __webpack_require__(187);
+	var _createTransitionManager = __webpack_require__(186);
 
 	var _createTransitionManager2 = _interopRequireDefault(_createTransitionManager);
 
@@ -24372,7 +24284,7 @@ module.exports =
 	module.exports = exports['default'];
 
 /***/ },
-/* 210 */
+/* 209 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -24383,7 +24295,7 @@ module.exports =
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _RouterContext = __webpack_require__(195);
+	var _RouterContext = __webpack_require__(194);
 
 	var _RouterContext2 = _interopRequireDefault(_RouterContext);
 
@@ -24407,7 +24319,7 @@ module.exports =
 	module.exports = exports['default'];
 
 /***/ },
-/* 211 */
+/* 210 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -24420,17 +24332,17 @@ module.exports =
 
 	var _invariant2 = _interopRequireDefault(_invariant);
 
-	var _createMemoryHistory = __webpack_require__(212);
+	var _createMemoryHistory = __webpack_require__(211);
 
 	var _createMemoryHistory2 = _interopRequireDefault(_createMemoryHistory);
 
-	var _createTransitionManager = __webpack_require__(187);
+	var _createTransitionManager = __webpack_require__(186);
 
 	var _createTransitionManager2 = _interopRequireDefault(_createTransitionManager);
 
 	var _RouteUtils = __webpack_require__(159);
 
-	var _RouterUtils = __webpack_require__(197);
+	var _RouterUtils = __webpack_require__(196);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -24493,7 +24405,7 @@ module.exports =
 	module.exports = exports['default'];
 
 /***/ },
-/* 212 */
+/* 211 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -24501,15 +24413,15 @@ module.exports =
 	exports.__esModule = true;
 	exports.default = createMemoryHistory;
 
-	var _useQueries = __webpack_require__(184);
+	var _useQueries = __webpack_require__(183);
 
 	var _useQueries2 = _interopRequireDefault(_useQueries);
 
-	var _useBasename = __webpack_require__(213);
+	var _useBasename = __webpack_require__(212);
 
 	var _useBasename2 = _interopRequireDefault(_useBasename);
 
-	var _createMemoryHistory = __webpack_require__(214);
+	var _createMemoryHistory = __webpack_require__(213);
 
 	var _createMemoryHistory2 = _interopRequireDefault(_createMemoryHistory);
 
@@ -24530,7 +24442,7 @@ module.exports =
 	module.exports = exports['default'];
 
 /***/ },
-/* 213 */
+/* 212 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -24541,19 +24453,19 @@ module.exports =
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _warning = __webpack_require__(169);
+	var _warning = __webpack_require__(163);
 
 	var _warning2 = _interopRequireDefault(_warning);
 
-	var _ExecutionEnvironment = __webpack_require__(172);
+	var _ExecutionEnvironment = __webpack_require__(171);
 
-	var _PathUtils = __webpack_require__(171);
+	var _PathUtils = __webpack_require__(170);
 
-	var _runTransitionHook = __webpack_require__(182);
+	var _runTransitionHook = __webpack_require__(181);
 
 	var _runTransitionHook2 = _interopRequireDefault(_runTransitionHook);
 
-	var _deprecate = __webpack_require__(183);
+	var _deprecate = __webpack_require__(182);
 
 	var _deprecate2 = _interopRequireDefault(_deprecate);
 
@@ -24693,7 +24605,7 @@ module.exports =
 	module.exports = exports['default'];
 
 /***/ },
-/* 214 */
+/* 213 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -24704,7 +24616,7 @@ module.exports =
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _warning = __webpack_require__(169);
+	var _warning = __webpack_require__(163);
 
 	var _warning2 = _interopRequireDefault(_warning);
 
@@ -24712,11 +24624,11 @@ module.exports =
 
 	var _invariant2 = _interopRequireDefault(_invariant);
 
-	var _PathUtils = __webpack_require__(171);
+	var _PathUtils = __webpack_require__(170);
 
-	var _Actions = __webpack_require__(170);
+	var _Actions = __webpack_require__(169);
 
-	var _createHistory = __webpack_require__(176);
+	var _createHistory = __webpack_require__(175);
 
 	var _createHistory2 = _interopRequireDefault(_createHistory);
 
@@ -24852,7 +24764,7 @@ module.exports =
 	module.exports = exports['default'];
 
 /***/ },
-/* 215 */
+/* 214 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -24860,11 +24772,11 @@ module.exports =
 	exports.__esModule = true;
 	exports.default = useRouterHistory;
 
-	var _useQueries = __webpack_require__(184);
+	var _useQueries = __webpack_require__(183);
 
 	var _useQueries2 = _interopRequireDefault(_useQueries);
 
-	var _useBasename = __webpack_require__(213);
+	var _useBasename = __webpack_require__(212);
 
 	var _useBasename2 = _interopRequireDefault(_useBasename);
 
@@ -24880,7 +24792,7 @@ module.exports =
 	module.exports = exports['default'];
 
 /***/ },
-/* 216 */
+/* 215 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -24893,7 +24805,7 @@ module.exports =
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _RouterContext = __webpack_require__(195);
+	var _RouterContext = __webpack_require__(194);
 
 	var _RouterContext2 = _interopRequireDefault(_RouterContext);
 
@@ -24935,18 +24847,18 @@ module.exports =
 	module.exports = exports['default'];
 
 /***/ },
-/* 217 */
+/* 216 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	exports.__esModule = true;
 
-	var _createBrowserHistory = __webpack_require__(218);
+	var _createBrowserHistory = __webpack_require__(217);
 
 	var _createBrowserHistory2 = _interopRequireDefault(_createBrowserHistory);
 
-	var _createRouterHistory = __webpack_require__(219);
+	var _createRouterHistory = __webpack_require__(218);
 
 	var _createRouterHistory2 = _interopRequireDefault(_createRouterHistory);
 
@@ -24956,7 +24868,7 @@ module.exports =
 	module.exports = exports['default'];
 
 /***/ },
-/* 218 */
+/* 217 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -24971,17 +24883,17 @@ module.exports =
 
 	var _invariant2 = _interopRequireDefault(_invariant);
 
-	var _Actions = __webpack_require__(170);
+	var _Actions = __webpack_require__(169);
 
-	var _PathUtils = __webpack_require__(171);
+	var _PathUtils = __webpack_require__(170);
 
-	var _ExecutionEnvironment = __webpack_require__(172);
+	var _ExecutionEnvironment = __webpack_require__(171);
 
-	var _DOMUtils = __webpack_require__(173);
+	var _DOMUtils = __webpack_require__(172);
 
-	var _DOMStateStorage = __webpack_require__(174);
+	var _DOMStateStorage = __webpack_require__(173);
 
-	var _createDOMHistory = __webpack_require__(175);
+	var _createDOMHistory = __webpack_require__(174);
 
 	var _createDOMHistory2 = _interopRequireDefault(_createDOMHistory);
 
@@ -25141,7 +25053,7 @@ module.exports =
 	module.exports = exports['default'];
 
 /***/ },
-/* 219 */
+/* 218 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25154,7 +25066,7 @@ module.exports =
 	  return history;
 	};
 
-	var _useRouterHistory = __webpack_require__(215);
+	var _useRouterHistory = __webpack_require__(214);
 
 	var _useRouterHistory2 = _interopRequireDefault(_useRouterHistory);
 
@@ -25165,7 +25077,7 @@ module.exports =
 	module.exports = exports['default'];
 
 /***/ },
-/* 220 */
+/* 219 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25176,7 +25088,7 @@ module.exports =
 
 	var _createHashHistory2 = _interopRequireDefault(_createHashHistory);
 
-	var _createRouterHistory = __webpack_require__(219);
+	var _createRouterHistory = __webpack_require__(218);
 
 	var _createRouterHistory2 = _interopRequireDefault(_createRouterHistory);
 
@@ -25186,7 +25098,7 @@ module.exports =
 	module.exports = exports['default'];
 
 /***/ },
-/* 221 */
+/* 220 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25220,7 +25132,7 @@ module.exports =
 	exports.default = MainLayout;
 
 /***/ },
-/* 222 */
+/* 221 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25235,19 +25147,19 @@ module.exports =
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _login = __webpack_require__(223);
+	var _login = __webpack_require__(222);
 
 	var _login2 = _interopRequireDefault(_login);
 
-	var _main = __webpack_require__(224);
+	var _main = __webpack_require__(223);
 
 	var _main2 = _interopRequireDefault(_main);
 
-	var _search = __webpack_require__(225);
+	var _search = __webpack_require__(224);
 
 	var _search2 = _interopRequireDefault(_search);
 
-	var _cloud = __webpack_require__(228);
+	var _cloud = __webpack_require__(252);
 
 	var _cloud2 = _interopRequireDefault(_cloud);
 
@@ -25278,21 +25190,6 @@ module.exports =
 	          'div',
 	          { className: 'container' },
 	          _react2.default.createElement(
-<<<<<<< HEAD
-	            'nav',
-	            { className: 'navbar navbar-default navbar-fixed-top' },
-	            _react2.default.createElement(_login2.default, null)
-	          ),
-	          _react2.default.createElement(_main2.default, null),
-	          _react2.default.createElement(_search2.default, { history: this.props.history }),
-	          _react2.default.createElement(_cloud2.default, null)
-	        )
-	      ),
-	      _react2.default.createElement('div', { className: 'art' })
-	    );
-	  }
-	});
-=======
 	            'div',
 	            null,
 	            _react2.default.createElement(
@@ -25309,15 +25206,18 @@ module.exports =
 	      );
 	    }
 	  }]);
->>>>>>> 4bb18f8603293f2bcdc29db9247561a88fdd5717
 
 	  return App;
 	}(_react2.default.Component);
 
+	App.contextTypes = {
+	  router: _react2.default.PropTypes.object.isRequired
+	};
+
 	exports.default = App;
 
 /***/ },
-/* 223 */
+/* 222 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25366,7 +25266,7 @@ module.exports =
 	exports.default = Login;
 
 /***/ },
-/* 224 */
+/* 223 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -25405,7 +25305,7 @@ module.exports =
 	exports.default = Main;
 
 /***/ },
-/* 225 */
+/* 224 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25420,24 +25320,21 @@ module.exports =
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _jquery = __webpack_require__(226);
+	var _jquery = __webpack_require__(225);
 
 	var _jquery2 = _interopRequireDefault(_jquery);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-	var _reactRouter = __webpack_require__(158);
-
-=======
->>>>>>> 4bb18f8603293f2bcdc29db9247561a88fdd5717
 	var _searchInput = __webpack_require__(226);
-=======
-	var _searchInput = __webpack_require__(227);
->>>>>>> 5c6215621b03cbb0632b65186cc1fc6b19dfebb4
 
 	var _searchInput2 = _interopRequireDefault(_searchInput);
 
 	var _reactRouter = __webpack_require__(158);
+
+	var _reactRedux = __webpack_require__(227);
+
+	var _redux = __webpack_require__(234);
+
+	var _actionCreator = __webpack_require__(251);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -25446,6 +25343,8 @@ module.exports =
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	// containers are glorfied components - containers have access to redux
 
 	var Search = function (_React$Component) {
 	  _inherits(Search, _React$Component);
@@ -25473,23 +25372,25 @@ module.exports =
 	  }, {
 	    key: 'findStack',
 	    value: function findStack(e) {
-	      this.state.stack.push(e.target.value);
+	      this.setState({
+	        stack: e.target.value
+	      });
 	    }
 	  }, {
 	    key: 'redirectToResults',
 	    value: function redirectToResults() {
-<<<<<<< HEAD
-<<<<<<< HEAD
-	      this.props.history.pushState(null, '/dashboard');
-	      // this.props.history.pushstate({salary:this.stack.salary}, '/results');
-	      // this.context.router.push('/results');
-	      // this.context.router.push({salary:this.stack.salary}, '/results');
-=======
-=======
 	      window.salary = this.state.salary;
->>>>>>> 5c6215621b03cbb0632b65186cc1fc6b19dfebb4
-	      this.props.history.pushState({ salary: this.state.salary }, '/results');
->>>>>>> 4bb18f8603293f2bcdc29db9247561a88fdd5717
+	      this.props.history.pushState(null, '/results');
+	      // {salary:this.state.salary}
+	    }
+	  }, {
+	    key: 'componentWillMount',
+	    value: function componentWillMount() {
+	      var data = { stack: this.state.stack, city: cityState[0].toLowerCase(), state: cityState[1].toLowerCase() };
+	      var self = this;
+	      this.getDatafromServer(data, function (salary) {
+	        context.props.setSearch(salary);
+	      });
 	    }
 	  }, {
 	    key: 'getDatafromServer',
@@ -25497,34 +25398,6 @@ module.exports =
 	      e.preventDefault();
 
 	      var self = this;
-<<<<<<< HEAD
-
-	      // console.log(this.state.stack[this.state.stack.length - 1]);
-	      // Remember to lowercase -- its only not in lowercase now because you input the data in as MEAN
-
-	      // var split = this.state.cityState.split(", ");
-
-	      // this.state.cityState = split;
-
-	      // var data = {stack: this.state.stack[this.state.stack.length - 1], city: this.state.cityState[0].toLowerCase(), state:this.state.cityState[1].toLowerCase()};
-
-	      // $.ajax({
-	      //   url:"http://localhost:3000/search",
-	      //   type:"POST",
-	      //   contentType:"application/json",
-	      //   data: JSON.stringify(data),
-	      //   success: function(data) {
-	      //     self.setState({
-	      //       salary:data
-	      //     });
-	      //     console.log("Self is " + self);
-	      //   },
-	      //   error: function(err) {
-	      //     console.log(err);
-	      //   }
-	      // });
-	      self.redirectToResults();
-=======
 	      var cityState = this.state.cityState.split(", ");
 
 	      // Remember to lowercase -- its only not in lowercase now because you input the data in as MEAN
@@ -25545,7 +25418,6 @@ module.exports =
 	          console.log(err);
 	        }
 	      });
->>>>>>> 4bb18f8603293f2bcdc29db9247561a88fdd5717
 	    }
 	  }, {
 	    key: 'render',
@@ -25563,10 +25435,22 @@ module.exports =
 
 	;
 
-	exports.default = Search;
+	function mapStateToProps(state) {
+	  return {
+	    stack: state.stack,
+	    cityState: state.cityState,
+	    salary: state.salary
+	  };
+	}
+
+	function mapDispatchToProps(dispatch) {
+	  return (0, _redux.bindActionCreators)({ setSearch: _actionCreator.setSearch }, dispatch);
+	}
+
+	exports.default = (0, _reactRedux.connect)(mapDispatchToProps, mapStateToProps)(Search);
 
 /***/ },
-/* 226 */
+/* 225 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -35386,7 +35270,7 @@ module.exports =
 
 
 /***/ },
-/* 227 */
+/* 226 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -35425,7 +35309,1622 @@ module.exports =
 	exports.default = SearchInput;
 
 /***/ },
+/* 227 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	exports.__esModule = true;
+	exports.connect = exports.Provider = undefined;
+
+	var _Provider = __webpack_require__(228);
+
+	var _Provider2 = _interopRequireDefault(_Provider);
+
+	var _connect = __webpack_require__(231);
+
+	var _connect2 = _interopRequireDefault(_connect);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+	exports.Provider = _Provider2["default"];
+	exports.connect = _connect2["default"];
+
+/***/ },
 /* 228 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	exports.__esModule = true;
+	exports["default"] = undefined;
+
+	var _react = __webpack_require__(2);
+
+	var _storeShape = __webpack_require__(229);
+
+	var _storeShape2 = _interopRequireDefault(_storeShape);
+
+	var _warning = __webpack_require__(230);
+
+	var _warning2 = _interopRequireDefault(_warning);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var didWarnAboutReceivingStore = false;
+	function warnAboutReceivingStore() {
+	  if (didWarnAboutReceivingStore) {
+	    return;
+	  }
+	  didWarnAboutReceivingStore = true;
+
+	  (0, _warning2["default"])('<Provider> does not support changing `store` on the fly. ' + 'It is most likely that you see this error because you updated to ' + 'Redux 2.x and React Redux 2.x which no longer hot reload reducers ' + 'automatically. See https://github.com/reactjs/react-redux/releases/' + 'tag/v2.0.0 for the migration instructions.');
+	}
+
+	var Provider = function (_Component) {
+	  _inherits(Provider, _Component);
+
+	  Provider.prototype.getChildContext = function getChildContext() {
+	    return { store: this.store };
+	  };
+
+	  function Provider(props, context) {
+	    _classCallCheck(this, Provider);
+
+	    var _this = _possibleConstructorReturn(this, _Component.call(this, props, context));
+
+	    _this.store = props.store;
+	    return _this;
+	  }
+
+	  Provider.prototype.render = function render() {
+	    var children = this.props.children;
+
+	    return _react.Children.only(children);
+	  };
+
+	  return Provider;
+	}(_react.Component);
+
+	exports["default"] = Provider;
+
+	if (process.env.NODE_ENV !== 'production') {
+	  Provider.prototype.componentWillReceiveProps = function (nextProps) {
+	    var store = this.store;
+	    var nextStore = nextProps.store;
+
+	    if (store !== nextStore) {
+	      warnAboutReceivingStore();
+	    }
+	  };
+	}
+
+	Provider.propTypes = {
+	  store: _storeShape2["default"].isRequired,
+	  children: _react.PropTypes.element.isRequired
+	};
+	Provider.childContextTypes = {
+	  store: _storeShape2["default"].isRequired
+	};
+
+/***/ },
+/* 229 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	exports.__esModule = true;
+
+	var _react = __webpack_require__(2);
+
+	exports["default"] = _react.PropTypes.shape({
+	  subscribe: _react.PropTypes.func.isRequired,
+	  dispatch: _react.PropTypes.func.isRequired,
+	  getState: _react.PropTypes.func.isRequired
+	});
+
+/***/ },
+/* 230 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	exports.__esModule = true;
+	exports["default"] = warning;
+	/**
+	 * Prints a warning in the console if it exists.
+	 *
+	 * @param {String} message The warning message.
+	 * @returns {void}
+	 */
+	function warning(message) {
+	  /* eslint-disable no-console */
+	  if (typeof console !== 'undefined' && typeof console.error === 'function') {
+	    console.error(message);
+	  }
+	  /* eslint-enable no-console */
+	  try {
+	    // This error was thrown as a convenience so that you can use this stack
+	    // to find the callsite that caused this warning to fire.
+	    throw new Error(message);
+	    /* eslint-disable no-empty */
+	  } catch (e) {}
+	  /* eslint-enable no-empty */
+	}
+
+/***/ },
+/* 231 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+	exports.__esModule = true;
+	exports["default"] = connect;
+
+	var _react = __webpack_require__(2);
+
+	var _storeShape = __webpack_require__(229);
+
+	var _storeShape2 = _interopRequireDefault(_storeShape);
+
+	var _shallowEqual = __webpack_require__(232);
+
+	var _shallowEqual2 = _interopRequireDefault(_shallowEqual);
+
+	var _wrapActionCreators = __webpack_require__(233);
+
+	var _wrapActionCreators2 = _interopRequireDefault(_wrapActionCreators);
+
+	var _warning = __webpack_require__(230);
+
+	var _warning2 = _interopRequireDefault(_warning);
+
+	var _isPlainObject = __webpack_require__(247);
+
+	var _isPlainObject2 = _interopRequireDefault(_isPlainObject);
+
+	var _hoistNonReactStatics = __webpack_require__(200);
+
+	var _hoistNonReactStatics2 = _interopRequireDefault(_hoistNonReactStatics);
+
+	var _invariant = __webpack_require__(166);
+
+	var _invariant2 = _interopRequireDefault(_invariant);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var defaultMapStateToProps = function defaultMapStateToProps(state) {
+	  return {};
+	}; // eslint-disable-line no-unused-vars
+	var defaultMapDispatchToProps = function defaultMapDispatchToProps(dispatch) {
+	  return { dispatch: dispatch };
+	};
+	var defaultMergeProps = function defaultMergeProps(stateProps, dispatchProps, parentProps) {
+	  return _extends({}, parentProps, stateProps, dispatchProps);
+	};
+
+	function getDisplayName(WrappedComponent) {
+	  return WrappedComponent.displayName || WrappedComponent.name || 'Component';
+	}
+
+	var errorObject = { value: null };
+	function tryCatch(fn, ctx) {
+	  try {
+	    return fn.apply(ctx);
+	  } catch (e) {
+	    errorObject.value = e;
+	    return errorObject;
+	  }
+	}
+
+	// Helps track hot reloading.
+	var nextVersion = 0;
+
+	function connect(mapStateToProps, mapDispatchToProps, mergeProps) {
+	  var options = arguments.length <= 3 || arguments[3] === undefined ? {} : arguments[3];
+
+	  var shouldSubscribe = Boolean(mapStateToProps);
+	  var mapState = mapStateToProps || defaultMapStateToProps;
+
+	  var mapDispatch = undefined;
+	  if (typeof mapDispatchToProps === 'function') {
+	    mapDispatch = mapDispatchToProps;
+	  } else if (!mapDispatchToProps) {
+	    mapDispatch = defaultMapDispatchToProps;
+	  } else {
+	    mapDispatch = (0, _wrapActionCreators2["default"])(mapDispatchToProps);
+	  }
+
+	  var finalMergeProps = mergeProps || defaultMergeProps;
+	  var _options$pure = options.pure;
+	  var pure = _options$pure === undefined ? true : _options$pure;
+	  var _options$withRef = options.withRef;
+	  var withRef = _options$withRef === undefined ? false : _options$withRef;
+
+	  var checkMergedEquals = pure && finalMergeProps !== defaultMergeProps;
+
+	  // Helps track hot reloading.
+	  var version = nextVersion++;
+
+	  return function wrapWithConnect(WrappedComponent) {
+	    var connectDisplayName = 'Connect(' + getDisplayName(WrappedComponent) + ')';
+
+	    function checkStateShape(props, methodName) {
+	      if (!(0, _isPlainObject2["default"])(props)) {
+	        (0, _warning2["default"])(methodName + '() in ' + connectDisplayName + ' must return a plain object. ' + ('Instead received ' + props + '.'));
+	      }
+	    }
+
+	    function computeMergedProps(stateProps, dispatchProps, parentProps) {
+	      var mergedProps = finalMergeProps(stateProps, dispatchProps, parentProps);
+	      if (process.env.NODE_ENV !== 'production') {
+	        checkStateShape(mergedProps, 'mergeProps');
+	      }
+	      return mergedProps;
+	    }
+
+	    var Connect = function (_Component) {
+	      _inherits(Connect, _Component);
+
+	      Connect.prototype.shouldComponentUpdate = function shouldComponentUpdate() {
+	        return !pure || this.haveOwnPropsChanged || this.hasStoreStateChanged;
+	      };
+
+	      function Connect(props, context) {
+	        _classCallCheck(this, Connect);
+
+	        var _this = _possibleConstructorReturn(this, _Component.call(this, props, context));
+
+	        _this.version = version;
+	        _this.store = props.store || context.store;
+
+	        (0, _invariant2["default"])(_this.store, 'Could not find "store" in either the context or ' + ('props of "' + connectDisplayName + '". ') + 'Either wrap the root component in a <Provider>, ' + ('or explicitly pass "store" as a prop to "' + connectDisplayName + '".'));
+
+	        var storeState = _this.store.getState();
+	        _this.state = { storeState: storeState };
+	        _this.clearCache();
+	        return _this;
+	      }
+
+	      Connect.prototype.computeStateProps = function computeStateProps(store, props) {
+	        if (!this.finalMapStateToProps) {
+	          return this.configureFinalMapState(store, props);
+	        }
+
+	        var state = store.getState();
+	        var stateProps = this.doStatePropsDependOnOwnProps ? this.finalMapStateToProps(state, props) : this.finalMapStateToProps(state);
+
+	        if (process.env.NODE_ENV !== 'production') {
+	          checkStateShape(stateProps, 'mapStateToProps');
+	        }
+	        return stateProps;
+	      };
+
+	      Connect.prototype.configureFinalMapState = function configureFinalMapState(store, props) {
+	        var mappedState = mapState(store.getState(), props);
+	        var isFactory = typeof mappedState === 'function';
+
+	        this.finalMapStateToProps = isFactory ? mappedState : mapState;
+	        this.doStatePropsDependOnOwnProps = this.finalMapStateToProps.length !== 1;
+
+	        if (isFactory) {
+	          return this.computeStateProps(store, props);
+	        }
+
+	        if (process.env.NODE_ENV !== 'production') {
+	          checkStateShape(mappedState, 'mapStateToProps');
+	        }
+	        return mappedState;
+	      };
+
+	      Connect.prototype.computeDispatchProps = function computeDispatchProps(store, props) {
+	        if (!this.finalMapDispatchToProps) {
+	          return this.configureFinalMapDispatch(store, props);
+	        }
+
+	        var dispatch = store.dispatch;
+
+	        var dispatchProps = this.doDispatchPropsDependOnOwnProps ? this.finalMapDispatchToProps(dispatch, props) : this.finalMapDispatchToProps(dispatch);
+
+	        if (process.env.NODE_ENV !== 'production') {
+	          checkStateShape(dispatchProps, 'mapDispatchToProps');
+	        }
+	        return dispatchProps;
+	      };
+
+	      Connect.prototype.configureFinalMapDispatch = function configureFinalMapDispatch(store, props) {
+	        var mappedDispatch = mapDispatch(store.dispatch, props);
+	        var isFactory = typeof mappedDispatch === 'function';
+
+	        this.finalMapDispatchToProps = isFactory ? mappedDispatch : mapDispatch;
+	        this.doDispatchPropsDependOnOwnProps = this.finalMapDispatchToProps.length !== 1;
+
+	        if (isFactory) {
+	          return this.computeDispatchProps(store, props);
+	        }
+
+	        if (process.env.NODE_ENV !== 'production') {
+	          checkStateShape(mappedDispatch, 'mapDispatchToProps');
+	        }
+	        return mappedDispatch;
+	      };
+
+	      Connect.prototype.updateStatePropsIfNeeded = function updateStatePropsIfNeeded() {
+	        var nextStateProps = this.computeStateProps(this.store, this.props);
+	        if (this.stateProps && (0, _shallowEqual2["default"])(nextStateProps, this.stateProps)) {
+	          return false;
+	        }
+
+	        this.stateProps = nextStateProps;
+	        return true;
+	      };
+
+	      Connect.prototype.updateDispatchPropsIfNeeded = function updateDispatchPropsIfNeeded() {
+	        var nextDispatchProps = this.computeDispatchProps(this.store, this.props);
+	        if (this.dispatchProps && (0, _shallowEqual2["default"])(nextDispatchProps, this.dispatchProps)) {
+	          return false;
+	        }
+
+	        this.dispatchProps = nextDispatchProps;
+	        return true;
+	      };
+
+	      Connect.prototype.updateMergedPropsIfNeeded = function updateMergedPropsIfNeeded() {
+	        var nextMergedProps = computeMergedProps(this.stateProps, this.dispatchProps, this.props);
+	        if (this.mergedProps && checkMergedEquals && (0, _shallowEqual2["default"])(nextMergedProps, this.mergedProps)) {
+	          return false;
+	        }
+
+	        this.mergedProps = nextMergedProps;
+	        return true;
+	      };
+
+	      Connect.prototype.isSubscribed = function isSubscribed() {
+	        return typeof this.unsubscribe === 'function';
+	      };
+
+	      Connect.prototype.trySubscribe = function trySubscribe() {
+	        if (shouldSubscribe && !this.unsubscribe) {
+	          this.unsubscribe = this.store.subscribe(this.handleChange.bind(this));
+	          this.handleChange();
+	        }
+	      };
+
+	      Connect.prototype.tryUnsubscribe = function tryUnsubscribe() {
+	        if (this.unsubscribe) {
+	          this.unsubscribe();
+	          this.unsubscribe = null;
+	        }
+	      };
+
+	      Connect.prototype.componentDidMount = function componentDidMount() {
+	        this.trySubscribe();
+	      };
+
+	      Connect.prototype.componentWillReceiveProps = function componentWillReceiveProps(nextProps) {
+	        if (!pure || !(0, _shallowEqual2["default"])(nextProps, this.props)) {
+	          this.haveOwnPropsChanged = true;
+	        }
+	      };
+
+	      Connect.prototype.componentWillUnmount = function componentWillUnmount() {
+	        this.tryUnsubscribe();
+	        this.clearCache();
+	      };
+
+	      Connect.prototype.clearCache = function clearCache() {
+	        this.dispatchProps = null;
+	        this.stateProps = null;
+	        this.mergedProps = null;
+	        this.haveOwnPropsChanged = true;
+	        this.hasStoreStateChanged = true;
+	        this.haveStatePropsBeenPrecalculated = false;
+	        this.statePropsPrecalculationError = null;
+	        this.renderedElement = null;
+	        this.finalMapDispatchToProps = null;
+	        this.finalMapStateToProps = null;
+	      };
+
+	      Connect.prototype.handleChange = function handleChange() {
+	        if (!this.unsubscribe) {
+	          return;
+	        }
+
+	        var storeState = this.store.getState();
+	        var prevStoreState = this.state.storeState;
+	        if (pure && prevStoreState === storeState) {
+	          return;
+	        }
+
+	        if (pure && !this.doStatePropsDependOnOwnProps) {
+	          var haveStatePropsChanged = tryCatch(this.updateStatePropsIfNeeded, this);
+	          if (!haveStatePropsChanged) {
+	            return;
+	          }
+	          if (haveStatePropsChanged === errorObject) {
+	            this.statePropsPrecalculationError = errorObject.value;
+	          }
+	          this.haveStatePropsBeenPrecalculated = true;
+	        }
+
+	        this.hasStoreStateChanged = true;
+	        this.setState({ storeState: storeState });
+	      };
+
+	      Connect.prototype.getWrappedInstance = function getWrappedInstance() {
+	        (0, _invariant2["default"])(withRef, 'To access the wrapped instance, you need to specify ' + '{ withRef: true } as the fourth argument of the connect() call.');
+
+	        return this.refs.wrappedInstance;
+	      };
+
+	      Connect.prototype.render = function render() {
+	        var haveOwnPropsChanged = this.haveOwnPropsChanged;
+	        var hasStoreStateChanged = this.hasStoreStateChanged;
+	        var haveStatePropsBeenPrecalculated = this.haveStatePropsBeenPrecalculated;
+	        var statePropsPrecalculationError = this.statePropsPrecalculationError;
+	        var renderedElement = this.renderedElement;
+
+	        this.haveOwnPropsChanged = false;
+	        this.hasStoreStateChanged = false;
+	        this.haveStatePropsBeenPrecalculated = false;
+	        this.statePropsPrecalculationError = null;
+
+	        if (statePropsPrecalculationError) {
+	          throw statePropsPrecalculationError;
+	        }
+
+	        var shouldUpdateStateProps = true;
+	        var shouldUpdateDispatchProps = true;
+	        if (pure && renderedElement) {
+	          shouldUpdateStateProps = hasStoreStateChanged || haveOwnPropsChanged && this.doStatePropsDependOnOwnProps;
+	          shouldUpdateDispatchProps = haveOwnPropsChanged && this.doDispatchPropsDependOnOwnProps;
+	        }
+
+	        var haveStatePropsChanged = false;
+	        var haveDispatchPropsChanged = false;
+	        if (haveStatePropsBeenPrecalculated) {
+	          haveStatePropsChanged = true;
+	        } else if (shouldUpdateStateProps) {
+	          haveStatePropsChanged = this.updateStatePropsIfNeeded();
+	        }
+	        if (shouldUpdateDispatchProps) {
+	          haveDispatchPropsChanged = this.updateDispatchPropsIfNeeded();
+	        }
+
+	        var haveMergedPropsChanged = true;
+	        if (haveStatePropsChanged || haveDispatchPropsChanged || haveOwnPropsChanged) {
+	          haveMergedPropsChanged = this.updateMergedPropsIfNeeded();
+	        } else {
+	          haveMergedPropsChanged = false;
+	        }
+
+	        if (!haveMergedPropsChanged && renderedElement) {
+	          return renderedElement;
+	        }
+
+	        if (withRef) {
+	          this.renderedElement = (0, _react.createElement)(WrappedComponent, _extends({}, this.mergedProps, {
+	            ref: 'wrappedInstance'
+	          }));
+	        } else {
+	          this.renderedElement = (0, _react.createElement)(WrappedComponent, this.mergedProps);
+	        }
+
+	        return this.renderedElement;
+	      };
+
+	      return Connect;
+	    }(_react.Component);
+
+	    Connect.displayName = connectDisplayName;
+	    Connect.WrappedComponent = WrappedComponent;
+	    Connect.contextTypes = {
+	      store: _storeShape2["default"]
+	    };
+	    Connect.propTypes = {
+	      store: _storeShape2["default"]
+	    };
+
+	    if (process.env.NODE_ENV !== 'production') {
+	      Connect.prototype.componentWillUpdate = function componentWillUpdate() {
+	        if (this.version === version) {
+	          return;
+	        }
+
+	        // We are hot reloading!
+	        this.version = version;
+	        this.trySubscribe();
+	        this.clearCache();
+	      };
+	    }
+
+	    return (0, _hoistNonReactStatics2["default"])(Connect, WrappedComponent);
+	  };
+	}
+
+/***/ },
+/* 232 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	exports.__esModule = true;
+	exports["default"] = shallowEqual;
+	function shallowEqual(objA, objB) {
+	  if (objA === objB) {
+	    return true;
+	  }
+
+	  var keysA = Object.keys(objA);
+	  var keysB = Object.keys(objB);
+
+	  if (keysA.length !== keysB.length) {
+	    return false;
+	  }
+
+	  // Test for A's keys different from B.
+	  var hasOwn = Object.prototype.hasOwnProperty;
+	  for (var i = 0; i < keysA.length; i++) {
+	    if (!hasOwn.call(objB, keysA[i]) || objA[keysA[i]] !== objB[keysA[i]]) {
+	      return false;
+	    }
+	  }
+
+	  return true;
+	}
+
+/***/ },
+/* 233 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	exports.__esModule = true;
+	exports["default"] = wrapActionCreators;
+
+	var _redux = __webpack_require__(234);
+
+	function wrapActionCreators(actionCreators) {
+	  return function (dispatch) {
+	    return (0, _redux.bindActionCreators)(actionCreators, dispatch);
+	  };
+	}
+
+/***/ },
+/* 234 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	exports.__esModule = true;
+	exports.compose = exports.applyMiddleware = exports.bindActionCreators = exports.combineReducers = exports.createStore = undefined;
+
+	var _createStore = __webpack_require__(235);
+
+	var _createStore2 = _interopRequireDefault(_createStore);
+
+	var _combineReducers = __webpack_require__(242);
+
+	var _combineReducers2 = _interopRequireDefault(_combineReducers);
+
+	var _bindActionCreators = __webpack_require__(244);
+
+	var _bindActionCreators2 = _interopRequireDefault(_bindActionCreators);
+
+	var _applyMiddleware = __webpack_require__(245);
+
+	var _applyMiddleware2 = _interopRequireDefault(_applyMiddleware);
+
+	var _compose = __webpack_require__(246);
+
+	var _compose2 = _interopRequireDefault(_compose);
+
+	var _warning = __webpack_require__(243);
+
+	var _warning2 = _interopRequireDefault(_warning);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+	/*
+	* This is a dummy function to check if the function name has been altered by minification.
+	* If the function has been minified and NODE_ENV !== 'production', warn the user.
+	*/
+	function isCrushed() {}
+
+	if (process.env.NODE_ENV !== 'production' && typeof isCrushed.name === 'string' && isCrushed.name !== 'isCrushed') {
+	  (0, _warning2["default"])('You are currently using minified code outside of NODE_ENV === \'production\'. ' + 'This means that you are running a slower development build of Redux. ' + 'You can use loose-envify (https://github.com/zertosh/loose-envify) for browserify ' + 'or DefinePlugin for webpack (http://stackoverflow.com/questions/30030031) ' + 'to ensure you have the correct code for your production build.');
+	}
+
+	exports.createStore = _createStore2["default"];
+	exports.combineReducers = _combineReducers2["default"];
+	exports.bindActionCreators = _bindActionCreators2["default"];
+	exports.applyMiddleware = _applyMiddleware2["default"];
+	exports.compose = _compose2["default"];
+
+/***/ },
+/* 235 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	exports.__esModule = true;
+	exports.ActionTypes = undefined;
+	exports["default"] = createStore;
+
+	var _isPlainObject = __webpack_require__(236);
+
+	var _isPlainObject2 = _interopRequireDefault(_isPlainObject);
+
+	var _symbolObservable = __webpack_require__(240);
+
+	var _symbolObservable2 = _interopRequireDefault(_symbolObservable);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+	/**
+	 * These are private action types reserved by Redux.
+	 * For any unknown actions, you must return the current state.
+	 * If the current state is undefined, you must return the initial state.
+	 * Do not reference these action types directly in your code.
+	 */
+	var ActionTypes = exports.ActionTypes = {
+	  INIT: '@@redux/INIT'
+	};
+
+	/**
+	 * Creates a Redux store that holds the state tree.
+	 * The only way to change the data in the store is to call `dispatch()` on it.
+	 *
+	 * There should only be a single store in your app. To specify how different
+	 * parts of the state tree respond to actions, you may combine several reducers
+	 * into a single reducer function by using `combineReducers`.
+	 *
+	 * @param {Function} reducer A function that returns the next state tree, given
+	 * the current state tree and the action to handle.
+	 *
+	 * @param {any} [initialState] The initial state. You may optionally specify it
+	 * to hydrate the state from the server in universal apps, or to restore a
+	 * previously serialized user session.
+	 * If you use `combineReducers` to produce the root reducer function, this must be
+	 * an object with the same shape as `combineReducers` keys.
+	 *
+	 * @param {Function} enhancer The store enhancer. You may optionally specify it
+	 * to enhance the store with third-party capabilities such as middleware,
+	 * time travel, persistence, etc. The only store enhancer that ships with Redux
+	 * is `applyMiddleware()`.
+	 *
+	 * @returns {Store} A Redux store that lets you read the state, dispatch actions
+	 * and subscribe to changes.
+	 */
+	function createStore(reducer, initialState, enhancer) {
+	  var _ref2;
+
+	  if (typeof initialState === 'function' && typeof enhancer === 'undefined') {
+	    enhancer = initialState;
+	    initialState = undefined;
+	  }
+
+	  if (typeof enhancer !== 'undefined') {
+	    if (typeof enhancer !== 'function') {
+	      throw new Error('Expected the enhancer to be a function.');
+	    }
+
+	    return enhancer(createStore)(reducer, initialState);
+	  }
+
+	  if (typeof reducer !== 'function') {
+	    throw new Error('Expected the reducer to be a function.');
+	  }
+
+	  var currentReducer = reducer;
+	  var currentState = initialState;
+	  var currentListeners = [];
+	  var nextListeners = currentListeners;
+	  var isDispatching = false;
+
+	  function ensureCanMutateNextListeners() {
+	    if (nextListeners === currentListeners) {
+	      nextListeners = currentListeners.slice();
+	    }
+	  }
+
+	  /**
+	   * Reads the state tree managed by the store.
+	   *
+	   * @returns {any} The current state tree of your application.
+	   */
+	  function getState() {
+	    return currentState;
+	  }
+
+	  /**
+	   * Adds a change listener. It will be called any time an action is dispatched,
+	   * and some part of the state tree may potentially have changed. You may then
+	   * call `getState()` to read the current state tree inside the callback.
+	   *
+	   * You may call `dispatch()` from a change listener, with the following
+	   * caveats:
+	   *
+	   * 1. The subscriptions are snapshotted just before every `dispatch()` call.
+	   * If you subscribe or unsubscribe while the listeners are being invoked, this
+	   * will not have any effect on the `dispatch()` that is currently in progress.
+	   * However, the next `dispatch()` call, whether nested or not, will use a more
+	   * recent snapshot of the subscription list.
+	   *
+	   * 2. The listener should not expect to see all state changes, as the state
+	   * might have been updated multiple times during a nested `dispatch()` before
+	   * the listener is called. It is, however, guaranteed that all subscribers
+	   * registered before the `dispatch()` started will be called with the latest
+	   * state by the time it exits.
+	   *
+	   * @param {Function} listener A callback to be invoked on every dispatch.
+	   * @returns {Function} A function to remove this change listener.
+	   */
+	  function subscribe(listener) {
+	    if (typeof listener !== 'function') {
+	      throw new Error('Expected listener to be a function.');
+	    }
+
+	    var isSubscribed = true;
+
+	    ensureCanMutateNextListeners();
+	    nextListeners.push(listener);
+
+	    return function unsubscribe() {
+	      if (!isSubscribed) {
+	        return;
+	      }
+
+	      isSubscribed = false;
+
+	      ensureCanMutateNextListeners();
+	      var index = nextListeners.indexOf(listener);
+	      nextListeners.splice(index, 1);
+	    };
+	  }
+
+	  /**
+	   * Dispatches an action. It is the only way to trigger a state change.
+	   *
+	   * The `reducer` function, used to create the store, will be called with the
+	   * current state tree and the given `action`. Its return value will
+	   * be considered the **next** state of the tree, and the change listeners
+	   * will be notified.
+	   *
+	   * The base implementation only supports plain object actions. If you want to
+	   * dispatch a Promise, an Observable, a thunk, or something else, you need to
+	   * wrap your store creating function into the corresponding middleware. For
+	   * example, see the documentation for the `redux-thunk` package. Even the
+	   * middleware will eventually dispatch plain object actions using this method.
+	   *
+	   * @param {Object} action A plain object representing “what changed”. It is
+	   * a good idea to keep actions serializable so you can record and replay user
+	   * sessions, or use the time travelling `redux-devtools`. An action must have
+	   * a `type` property which may not be `undefined`. It is a good idea to use
+	   * string constants for action types.
+	   *
+	   * @returns {Object} For convenience, the same action object you dispatched.
+	   *
+	   * Note that, if you use a custom middleware, it may wrap `dispatch()` to
+	   * return something else (for example, a Promise you can await).
+	   */
+	  function dispatch(action) {
+	    if (!(0, _isPlainObject2["default"])(action)) {
+	      throw new Error('Actions must be plain objects. ' + 'Use custom middleware for async actions.');
+	    }
+
+	    if (typeof action.type === 'undefined') {
+	      throw new Error('Actions may not have an undefined "type" property. ' + 'Have you misspelled a constant?');
+	    }
+
+	    if (isDispatching) {
+	      throw new Error('Reducers may not dispatch actions.');
+	    }
+
+	    try {
+	      isDispatching = true;
+	      currentState = currentReducer(currentState, action);
+	    } finally {
+	      isDispatching = false;
+	    }
+
+	    var listeners = currentListeners = nextListeners;
+	    for (var i = 0; i < listeners.length; i++) {
+	      listeners[i]();
+	    }
+
+	    return action;
+	  }
+
+	  /**
+	   * Replaces the reducer currently used by the store to calculate the state.
+	   *
+	   * You might need this if your app implements code splitting and you want to
+	   * load some of the reducers dynamically. You might also need this if you
+	   * implement a hot reloading mechanism for Redux.
+	   *
+	   * @param {Function} nextReducer The reducer for the store to use instead.
+	   * @returns {void}
+	   */
+	  function replaceReducer(nextReducer) {
+	    if (typeof nextReducer !== 'function') {
+	      throw new Error('Expected the nextReducer to be a function.');
+	    }
+
+	    currentReducer = nextReducer;
+	    dispatch({ type: ActionTypes.INIT });
+	  }
+
+	  /**
+	   * Interoperability point for observable/reactive libraries.
+	   * @returns {observable} A minimal observable of state changes.
+	   * For more information, see the observable proposal:
+	   * https://github.com/zenparsing/es-observable
+	   */
+	  function observable() {
+	    var _ref;
+
+	    var outerSubscribe = subscribe;
+	    return _ref = {
+	      /**
+	       * The minimal observable subscription method.
+	       * @param {Object} observer Any object that can be used as an observer.
+	       * The observer object should have a `next` method.
+	       * @returns {subscription} An object with an `unsubscribe` method that can
+	       * be used to unsubscribe the observable from the store, and prevent further
+	       * emission of values from the observable.
+	       */
+
+	      subscribe: function subscribe(observer) {
+	        if (typeof observer !== 'object') {
+	          throw new TypeError('Expected the observer to be an object.');
+	        }
+
+	        function observeState() {
+	          if (observer.next) {
+	            observer.next(getState());
+	          }
+	        }
+
+	        observeState();
+	        var unsubscribe = outerSubscribe(observeState);
+	        return { unsubscribe: unsubscribe };
+	      }
+	    }, _ref[_symbolObservable2["default"]] = function () {
+	      return this;
+	    }, _ref;
+	  }
+
+	  // When a store is created, an "INIT" action is dispatched so that every
+	  // reducer returns their initial state. This effectively populates
+	  // the initial state tree.
+	  dispatch({ type: ActionTypes.INIT });
+
+	  return _ref2 = {
+	    dispatch: dispatch,
+	    subscribe: subscribe,
+	    getState: getState,
+	    replaceReducer: replaceReducer
+	  }, _ref2[_symbolObservable2["default"]] = observable, _ref2;
+	}
+
+/***/ },
+/* 236 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var getPrototype = __webpack_require__(237),
+	    isHostObject = __webpack_require__(238),
+	    isObjectLike = __webpack_require__(239);
+
+	/** `Object#toString` result references. */
+	var objectTag = '[object Object]';
+
+	/** Used for built-in method references. */
+	var objectProto = Object.prototype;
+
+	/** Used to resolve the decompiled source of functions. */
+	var funcToString = Function.prototype.toString;
+
+	/** Used to check objects for own properties. */
+	var hasOwnProperty = objectProto.hasOwnProperty;
+
+	/** Used to infer the `Object` constructor. */
+	var objectCtorString = funcToString.call(Object);
+
+	/**
+	 * Used to resolve the
+	 * [`toStringTag`](http://ecma-international.org/ecma-262/6.0/#sec-object.prototype.tostring)
+	 * of values.
+	 */
+	var objectToString = objectProto.toString;
+
+	/**
+	 * Checks if `value` is a plain object, that is, an object created by the
+	 * `Object` constructor or one with a `[[Prototype]]` of `null`.
+	 *
+	 * @static
+	 * @memberOf _
+	 * @since 0.8.0
+	 * @category Lang
+	 * @param {*} value The value to check.
+	 * @returns {boolean} Returns `true` if `value` is a plain object,
+	 *  else `false`.
+	 * @example
+	 *
+	 * function Foo() {
+	 *   this.a = 1;
+	 * }
+	 *
+	 * _.isPlainObject(new Foo);
+	 * // => false
+	 *
+	 * _.isPlainObject([1, 2, 3]);
+	 * // => false
+	 *
+	 * _.isPlainObject({ 'x': 0, 'y': 0 });
+	 * // => true
+	 *
+	 * _.isPlainObject(Object.create(null));
+	 * // => true
+	 */
+	function isPlainObject(value) {
+	  if (!isObjectLike(value) ||
+	      objectToString.call(value) != objectTag || isHostObject(value)) {
+	    return false;
+	  }
+	  var proto = getPrototype(value);
+	  if (proto === null) {
+	    return true;
+	  }
+	  var Ctor = hasOwnProperty.call(proto, 'constructor') && proto.constructor;
+	  return (typeof Ctor == 'function' &&
+	    Ctor instanceof Ctor && funcToString.call(Ctor) == objectCtorString);
+	}
+
+	module.exports = isPlainObject;
+
+
+/***/ },
+/* 237 */
+/***/ function(module, exports) {
+
+	/* Built-in method references for those with the same name as other `lodash` methods. */
+	var nativeGetPrototype = Object.getPrototypeOf;
+
+	/**
+	 * Gets the `[[Prototype]]` of `value`.
+	 *
+	 * @private
+	 * @param {*} value The value to query.
+	 * @returns {null|Object} Returns the `[[Prototype]]`.
+	 */
+	function getPrototype(value) {
+	  return nativeGetPrototype(Object(value));
+	}
+
+	module.exports = getPrototype;
+
+
+/***/ },
+/* 238 */
+/***/ function(module, exports) {
+
+	/**
+	 * Checks if `value` is a host object in IE < 9.
+	 *
+	 * @private
+	 * @param {*} value The value to check.
+	 * @returns {boolean} Returns `true` if `value` is a host object, else `false`.
+	 */
+	function isHostObject(value) {
+	  // Many host objects are `Object` objects that can coerce to strings
+	  // despite having improperly defined `toString` methods.
+	  var result = false;
+	  if (value != null && typeof value.toString != 'function') {
+	    try {
+	      result = !!(value + '');
+	    } catch (e) {}
+	  }
+	  return result;
+	}
+
+	module.exports = isHostObject;
+
+
+/***/ },
+/* 239 */
+/***/ function(module, exports) {
+
+	/**
+	 * Checks if `value` is object-like. A value is object-like if it's not `null`
+	 * and has a `typeof` result of "object".
+	 *
+	 * @static
+	 * @memberOf _
+	 * @since 4.0.0
+	 * @category Lang
+	 * @param {*} value The value to check.
+	 * @returns {boolean} Returns `true` if `value` is object-like, else `false`.
+	 * @example
+	 *
+	 * _.isObjectLike({});
+	 * // => true
+	 *
+	 * _.isObjectLike([1, 2, 3]);
+	 * // => true
+	 *
+	 * _.isObjectLike(_.noop);
+	 * // => false
+	 *
+	 * _.isObjectLike(null);
+	 * // => false
+	 */
+	function isObjectLike(value) {
+	  return !!value && typeof value == 'object';
+	}
+
+	module.exports = isObjectLike;
+
+
+/***/ },
+/* 240 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* global window */
+	'use strict';
+
+	module.exports = __webpack_require__(241)(global || window || this);
+
+
+/***/ },
+/* 241 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	module.exports = function symbolObservablePonyfill(root) {
+		var result;
+		var Symbol = root.Symbol;
+
+		if (typeof Symbol === 'function') {
+			if (Symbol.observable) {
+				result = Symbol.observable;
+			} else {
+				result = Symbol('observable');
+				Symbol.observable = result;
+			}
+		} else {
+			result = '@@observable';
+		}
+
+		return result;
+	};
+
+
+/***/ },
+/* 242 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	exports.__esModule = true;
+	exports["default"] = combineReducers;
+
+	var _createStore = __webpack_require__(235);
+
+	var _isPlainObject = __webpack_require__(236);
+
+	var _isPlainObject2 = _interopRequireDefault(_isPlainObject);
+
+	var _warning = __webpack_require__(243);
+
+	var _warning2 = _interopRequireDefault(_warning);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+	function getUndefinedStateErrorMessage(key, action) {
+	  var actionType = action && action.type;
+	  var actionName = actionType && '"' + actionType.toString() + '"' || 'an action';
+
+	  return 'Given action ' + actionName + ', reducer "' + key + '" returned undefined. ' + 'To ignore an action, you must explicitly return the previous state.';
+	}
+
+	function getUnexpectedStateShapeWarningMessage(inputState, reducers, action) {
+	  var reducerKeys = Object.keys(reducers);
+	  var argumentName = action && action.type === _createStore.ActionTypes.INIT ? 'initialState argument passed to createStore' : 'previous state received by the reducer';
+
+	  if (reducerKeys.length === 0) {
+	    return 'Store does not have a valid reducer. Make sure the argument passed ' + 'to combineReducers is an object whose values are reducers.';
+	  }
+
+	  if (!(0, _isPlainObject2["default"])(inputState)) {
+	    return 'The ' + argumentName + ' has unexpected type of "' + {}.toString.call(inputState).match(/\s([a-z|A-Z]+)/)[1] + '". Expected argument to be an object with the following ' + ('keys: "' + reducerKeys.join('", "') + '"');
+	  }
+
+	  var unexpectedKeys = Object.keys(inputState).filter(function (key) {
+	    return !reducers.hasOwnProperty(key);
+	  });
+
+	  if (unexpectedKeys.length > 0) {
+	    return 'Unexpected ' + (unexpectedKeys.length > 1 ? 'keys' : 'key') + ' ' + ('"' + unexpectedKeys.join('", "') + '" found in ' + argumentName + '. ') + 'Expected to find one of the known reducer keys instead: ' + ('"' + reducerKeys.join('", "') + '". Unexpected keys will be ignored.');
+	  }
+	}
+
+	function assertReducerSanity(reducers) {
+	  Object.keys(reducers).forEach(function (key) {
+	    var reducer = reducers[key];
+	    var initialState = reducer(undefined, { type: _createStore.ActionTypes.INIT });
+
+	    if (typeof initialState === 'undefined') {
+	      throw new Error('Reducer "' + key + '" returned undefined during initialization. ' + 'If the state passed to the reducer is undefined, you must ' + 'explicitly return the initial state. The initial state may ' + 'not be undefined.');
+	    }
+
+	    var type = '@@redux/PROBE_UNKNOWN_ACTION_' + Math.random().toString(36).substring(7).split('').join('.');
+	    if (typeof reducer(undefined, { type: type }) === 'undefined') {
+	      throw new Error('Reducer "' + key + '" returned undefined when probed with a random type. ' + ('Don\'t try to handle ' + _createStore.ActionTypes.INIT + ' or other actions in "redux/*" ') + 'namespace. They are considered private. Instead, you must return the ' + 'current state for any unknown actions, unless it is undefined, ' + 'in which case you must return the initial state, regardless of the ' + 'action type. The initial state may not be undefined.');
+	    }
+	  });
+	}
+
+	/**
+	 * Turns an object whose values are different reducer functions, into a single
+	 * reducer function. It will call every child reducer, and gather their results
+	 * into a single state object, whose keys correspond to the keys of the passed
+	 * reducer functions.
+	 *
+	 * @param {Object} reducers An object whose values correspond to different
+	 * reducer functions that need to be combined into one. One handy way to obtain
+	 * it is to use ES6 `import * as reducers` syntax. The reducers may never return
+	 * undefined for any action. Instead, they should return their initial state
+	 * if the state passed to them was undefined, and the current state for any
+	 * unrecognized action.
+	 *
+	 * @returns {Function} A reducer function that invokes every reducer inside the
+	 * passed object, and builds a state object with the same shape.
+	 */
+	function combineReducers(reducers) {
+	  var reducerKeys = Object.keys(reducers);
+	  var finalReducers = {};
+	  for (var i = 0; i < reducerKeys.length; i++) {
+	    var key = reducerKeys[i];
+	    if (typeof reducers[key] === 'function') {
+	      finalReducers[key] = reducers[key];
+	    }
+	  }
+	  var finalReducerKeys = Object.keys(finalReducers);
+
+	  var sanityError;
+	  try {
+	    assertReducerSanity(finalReducers);
+	  } catch (e) {
+	    sanityError = e;
+	  }
+
+	  return function combination() {
+	    var state = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
+	    var action = arguments[1];
+
+	    if (sanityError) {
+	      throw sanityError;
+	    }
+
+	    if (process.env.NODE_ENV !== 'production') {
+	      var warningMessage = getUnexpectedStateShapeWarningMessage(state, finalReducers, action);
+	      if (warningMessage) {
+	        (0, _warning2["default"])(warningMessage);
+	      }
+	    }
+
+	    var hasChanged = false;
+	    var nextState = {};
+	    for (var i = 0; i < finalReducerKeys.length; i++) {
+	      var key = finalReducerKeys[i];
+	      var reducer = finalReducers[key];
+	      var previousStateForKey = state[key];
+	      var nextStateForKey = reducer(previousStateForKey, action);
+	      if (typeof nextStateForKey === 'undefined') {
+	        var errorMessage = getUndefinedStateErrorMessage(key, action);
+	        throw new Error(errorMessage);
+	      }
+	      nextState[key] = nextStateForKey;
+	      hasChanged = hasChanged || nextStateForKey !== previousStateForKey;
+	    }
+	    return hasChanged ? nextState : state;
+	  };
+	}
+
+/***/ },
+/* 243 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	exports.__esModule = true;
+	exports["default"] = warning;
+	/**
+	 * Prints a warning in the console if it exists.
+	 *
+	 * @param {String} message The warning message.
+	 * @returns {void}
+	 */
+	function warning(message) {
+	  /* eslint-disable no-console */
+	  if (typeof console !== 'undefined' && typeof console.error === 'function') {
+	    console.error(message);
+	  }
+	  /* eslint-enable no-console */
+	  try {
+	    // This error was thrown as a convenience so that if you enable
+	    // "break on all exceptions" in your console,
+	    // it would pause the execution at this line.
+	    throw new Error(message);
+	    /* eslint-disable no-empty */
+	  } catch (e) {}
+	  /* eslint-enable no-empty */
+	}
+
+/***/ },
+/* 244 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	exports.__esModule = true;
+	exports["default"] = bindActionCreators;
+	function bindActionCreator(actionCreator, dispatch) {
+	  return function () {
+	    return dispatch(actionCreator.apply(undefined, arguments));
+	  };
+	}
+
+	/**
+	 * Turns an object whose values are action creators, into an object with the
+	 * same keys, but with every function wrapped into a `dispatch` call so they
+	 * may be invoked directly. This is just a convenience method, as you can call
+	 * `store.dispatch(MyActionCreators.doSomething())` yourself just fine.
+	 *
+	 * For convenience, you can also pass a single function as the first argument,
+	 * and get a function in return.
+	 *
+	 * @param {Function|Object} actionCreators An object whose values are action
+	 * creator functions. One handy way to obtain it is to use ES6 `import * as`
+	 * syntax. You may also pass a single function.
+	 *
+	 * @param {Function} dispatch The `dispatch` function available on your Redux
+	 * store.
+	 *
+	 * @returns {Function|Object} The object mimicking the original object, but with
+	 * every action creator wrapped into the `dispatch` call. If you passed a
+	 * function as `actionCreators`, the return value will also be a single
+	 * function.
+	 */
+	function bindActionCreators(actionCreators, dispatch) {
+	  if (typeof actionCreators === 'function') {
+	    return bindActionCreator(actionCreators, dispatch);
+	  }
+
+	  if (typeof actionCreators !== 'object' || actionCreators === null) {
+	    throw new Error('bindActionCreators expected an object or a function, instead received ' + (actionCreators === null ? 'null' : typeof actionCreators) + '. ' + 'Did you write "import ActionCreators from" instead of "import * as ActionCreators from"?');
+	  }
+
+	  var keys = Object.keys(actionCreators);
+	  var boundActionCreators = {};
+	  for (var i = 0; i < keys.length; i++) {
+	    var key = keys[i];
+	    var actionCreator = actionCreators[key];
+	    if (typeof actionCreator === 'function') {
+	      boundActionCreators[key] = bindActionCreator(actionCreator, dispatch);
+	    }
+	  }
+	  return boundActionCreators;
+	}
+
+/***/ },
+/* 245 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	exports.__esModule = true;
+
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+	exports["default"] = applyMiddleware;
+
+	var _compose = __webpack_require__(246);
+
+	var _compose2 = _interopRequireDefault(_compose);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+	/**
+	 * Creates a store enhancer that applies middleware to the dispatch method
+	 * of the Redux store. This is handy for a variety of tasks, such as expressing
+	 * asynchronous actions in a concise manner, or logging every action payload.
+	 *
+	 * See `redux-thunk` package as an example of the Redux middleware.
+	 *
+	 * Because middleware is potentially asynchronous, this should be the first
+	 * store enhancer in the composition chain.
+	 *
+	 * Note that each middleware will be given the `dispatch` and `getState` functions
+	 * as named arguments.
+	 *
+	 * @param {...Function} middlewares The middleware chain to be applied.
+	 * @returns {Function} A store enhancer applying the middleware.
+	 */
+	function applyMiddleware() {
+	  for (var _len = arguments.length, middlewares = Array(_len), _key = 0; _key < _len; _key++) {
+	    middlewares[_key] = arguments[_key];
+	  }
+
+	  return function (createStore) {
+	    return function (reducer, initialState, enhancer) {
+	      var store = createStore(reducer, initialState, enhancer);
+	      var _dispatch = store.dispatch;
+	      var chain = [];
+
+	      var middlewareAPI = {
+	        getState: store.getState,
+	        dispatch: function dispatch(action) {
+	          return _dispatch(action);
+	        }
+	      };
+	      chain = middlewares.map(function (middleware) {
+	        return middleware(middlewareAPI);
+	      });
+	      _dispatch = _compose2["default"].apply(undefined, chain)(store.dispatch);
+
+	      return _extends({}, store, {
+	        dispatch: _dispatch
+	      });
+	    };
+	  };
+	}
+
+/***/ },
+/* 246 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	exports.__esModule = true;
+	exports["default"] = compose;
+	/**
+	 * Composes single-argument functions from right to left. The rightmost
+	 * function can take multiple arguments as it provides the signature for
+	 * the resulting composite function.
+	 *
+	 * @param {...Function} funcs The functions to compose.
+	 * @returns {Function} A function obtained by composing the argument functions
+	 * from right to left. For example, compose(f, g, h) is identical to doing
+	 * (...args) => f(g(h(...args))).
+	 */
+
+	function compose() {
+	  for (var _len = arguments.length, funcs = Array(_len), _key = 0; _key < _len; _key++) {
+	    funcs[_key] = arguments[_key];
+	  }
+
+	  if (funcs.length === 0) {
+	    return function (arg) {
+	      return arg;
+	    };
+	  } else {
+	    var _ret = function () {
+	      var last = funcs[funcs.length - 1];
+	      var rest = funcs.slice(0, -1);
+	      return {
+	        v: function v() {
+	          return rest.reduceRight(function (composed, f) {
+	            return f(composed);
+	          }, last.apply(undefined, arguments));
+	        }
+	      };
+	    }();
+
+	    if (typeof _ret === "object") return _ret.v;
+	  }
+	}
+
+/***/ },
+/* 247 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var getPrototype = __webpack_require__(248),
+	    isHostObject = __webpack_require__(249),
+	    isObjectLike = __webpack_require__(250);
+
+	/** `Object#toString` result references. */
+	var objectTag = '[object Object]';
+
+	/** Used for built-in method references. */
+	var objectProto = Object.prototype;
+
+	/** Used to resolve the decompiled source of functions. */
+	var funcToString = Function.prototype.toString;
+
+	/** Used to check objects for own properties. */
+	var hasOwnProperty = objectProto.hasOwnProperty;
+
+	/** Used to infer the `Object` constructor. */
+	var objectCtorString = funcToString.call(Object);
+
+	/**
+	 * Used to resolve the
+	 * [`toStringTag`](http://ecma-international.org/ecma-262/6.0/#sec-object.prototype.tostring)
+	 * of values.
+	 */
+	var objectToString = objectProto.toString;
+
+	/**
+	 * Checks if `value` is a plain object, that is, an object created by the
+	 * `Object` constructor or one with a `[[Prototype]]` of `null`.
+	 *
+	 * @static
+	 * @memberOf _
+	 * @since 0.8.0
+	 * @category Lang
+	 * @param {*} value The value to check.
+	 * @returns {boolean} Returns `true` if `value` is a plain object,
+	 *  else `false`.
+	 * @example
+	 *
+	 * function Foo() {
+	 *   this.a = 1;
+	 * }
+	 *
+	 * _.isPlainObject(new Foo);
+	 * // => false
+	 *
+	 * _.isPlainObject([1, 2, 3]);
+	 * // => false
+	 *
+	 * _.isPlainObject({ 'x': 0, 'y': 0 });
+	 * // => true
+	 *
+	 * _.isPlainObject(Object.create(null));
+	 * // => true
+	 */
+	function isPlainObject(value) {
+	  if (!isObjectLike(value) ||
+	      objectToString.call(value) != objectTag || isHostObject(value)) {
+	    return false;
+	  }
+	  var proto = getPrototype(value);
+	  if (proto === null) {
+	    return true;
+	  }
+	  var Ctor = hasOwnProperty.call(proto, 'constructor') && proto.constructor;
+	  return (typeof Ctor == 'function' &&
+	    Ctor instanceof Ctor && funcToString.call(Ctor) == objectCtorString);
+	}
+
+	module.exports = isPlainObject;
+
+
+/***/ },
+/* 248 */
+/***/ function(module, exports) {
+
+	/* Built-in method references for those with the same name as other `lodash` methods. */
+	var nativeGetPrototype = Object.getPrototypeOf;
+
+	/**
+	 * Gets the `[[Prototype]]` of `value`.
+	 *
+	 * @private
+	 * @param {*} value The value to query.
+	 * @returns {null|Object} Returns the `[[Prototype]]`.
+	 */
+	function getPrototype(value) {
+	  return nativeGetPrototype(Object(value));
+	}
+
+	module.exports = getPrototype;
+
+
+/***/ },
+/* 249 */
+/***/ function(module, exports) {
+
+	/**
+	 * Checks if `value` is a host object in IE < 9.
+	 *
+	 * @private
+	 * @param {*} value The value to check.
+	 * @returns {boolean} Returns `true` if `value` is a host object, else `false`.
+	 */
+	function isHostObject(value) {
+	  // Many host objects are `Object` objects that can coerce to strings
+	  // despite having improperly defined `toString` methods.
+	  var result = false;
+	  if (value != null && typeof value.toString != 'function') {
+	    try {
+	      result = !!(value + '');
+	    } catch (e) {}
+	  }
+	  return result;
+	}
+
+	module.exports = isHostObject;
+
+
+/***/ },
+/* 250 */
+/***/ function(module, exports) {
+
+	/**
+	 * Checks if `value` is object-like. A value is object-like if it's not `null`
+	 * and has a `typeof` result of "object".
+	 *
+	 * @static
+	 * @memberOf _
+	 * @since 4.0.0
+	 * @category Lang
+	 * @param {*} value The value to check.
+	 * @returns {boolean} Returns `true` if `value` is object-like, else `false`.
+	 * @example
+	 *
+	 * _.isObjectLike({});
+	 * // => true
+	 *
+	 * _.isObjectLike([1, 2, 3]);
+	 * // => true
+	 *
+	 * _.isObjectLike(_.noop);
+	 * // => false
+	 *
+	 * _.isObjectLike(null);
+	 * // => false
+	 */
+	function isObjectLike(value) {
+	  return !!value && typeof value == 'object';
+	}
+
+	module.exports = isObjectLike;
+
+
+/***/ },
+/* 251 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.setSearch = setSearch;
+	// if i click on a button lets call the action action
+	// its creates an action (an object that has a type and a payload)
+	// actions get sent to the reducer --> reducer accepts anything the actions give it
+
+	var SET_SEARCH = exports.SET_SEARCH = 'SET_SEARCH';
+
+	function setSearch(searchInput) {
+	  console.log("Search Obj", searchInput);
+	  return {
+	    type: SET_SEARCH,
+	    payload: searchInput
+	  };
+	}
+
+/***/ },
+/* 252 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -35451,7 +36950,7 @@ module.exports =
 	exports.default = Cloud;
 
 /***/ },
-/* 229 */
+/* 253 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -35466,31 +36965,23 @@ module.exports =
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _login = __webpack_require__(223);
+	var _login = __webpack_require__(222);
 
 	var _login2 = _interopRequireDefault(_login);
 
-	var _logo = __webpack_require__(230);
+	var _logo = __webpack_require__(254);
 
 	var _logo2 = _interopRequireDefault(_logo);
 
-	var _results = __webpack_require__(231);
+	var _results = __webpack_require__(255);
 
 	var _results2 = _interopRequireDefault(_results);
 
-	var _search = __webpack_require__(225);
+	var _search = __webpack_require__(224);
 
 	var _search2 = _interopRequireDefault(_search);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-	var _footer = __webpack_require__(268);
-=======
-	var _footer = __webpack_require__(232);
->>>>>>> 4bb18f8603293f2bcdc29db9247561a88fdd5717
-=======
-	var _footer = __webpack_require__(233);
->>>>>>> 5c6215621b03cbb0632b65186cc1fc6b19dfebb4
+	var _footer = __webpack_require__(257);
 
 	var _footer2 = _interopRequireDefault(_footer);
 
@@ -35541,7 +37032,7 @@ module.exports =
 	exports.default = Stats;
 
 /***/ },
-/* 230 */
+/* 254 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -35580,7 +37071,7 @@ module.exports =
 	exports.default = Logo;
 
 /***/ },
-/* 231 */
+/* 255 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -35593,11 +37084,17 @@ module.exports =
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _d = __webpack_require__(232);
+	var _d = __webpack_require__(256);
 
 	var _d2 = _interopRequireDefault(_d);
 
 	var _reactRouter = __webpack_require__(158);
+
+	var _reactRedux = __webpack_require__(227);
+
+	var _redux = __webpack_require__(234);
+
+	var _actionCreator = __webpack_require__(251);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -35763,18 +37260,6 @@ module.exports =
 	  }
 	});
 
-	// var fakeData = [
-	//   {x: 'a', y: 65000},
-	//   {x: 'b', y: 106000},
-	//   {x: 'c', y: 180000}
-	// ];
-
-	// var fakeInfo = {
-	//   stack: 'React',
-	//   location: 'New York, NY'
-	// }
-
-
 	var changeDataTrue = true;
 
 	var Results = _react2.default.createClass({
@@ -35791,17 +37276,6 @@ module.exports =
 	    return {
 	      data: [{ x: 'a', y: window.salary.lowest }, { x: 'b', y: window.salary.average }, { x: 'c', y: window.salary.highest }]
 	    };
-	  },
-
-	  changeData: function changeData() {
-	    // if(changeDataTrue){
-	    //   this.setState({data:fakeData2, info:fakeInfo2})
-	    //   changeDataTrue = false;
-	    // } else {
-	    //   this.setState({data:fakeData, info:fakeInfo})
-	    //   changeDataTrue = true;
-	    // }
-	    console.log(window.salary);
 	  },
 
 	  render: function render() {
@@ -35826,451 +37300,27 @@ module.exports =
 	        _react2.default.createElement(Bar, { data: this.state.data,
 	          width: this.props.width,
 	          height: this.props.height })
-	      ),
-	      _react2.default.createElement(
-	        'button',
-	        { className: 'btn btn-primary', onClick: this.changeData },
-	        _react2.default.createElement('span', { className: 'glyphicon glyphicon-search' })
 	      )
 	    );
 	  }
 	});
 
-	exports.default = Results;
+	function mapStateToProps(state) {
+	  return {
+	    stack: state.stack,
+	    cityState: state.cityState,
+	    salary: state.salary
+	  };
+	}
+
+	function mapDispatchToProps(dispatch) {
+	  return (0, _redux.bindActionCreators)({ setSearch: _actionCreator.setSearch }, dispatch);
+	}
+
+	exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(Results);
 
 /***/ },
-<<<<<<< HEAD
-/* 231 */
-<<<<<<< HEAD
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, '__esModule', { value: true });
-
-	var d3Array = __webpack_require__(232);
-	var d3Collection = __webpack_require__(233);
-	var d3Random = __webpack_require__(234);
-	var d3Ease = __webpack_require__(235);
-	var d3Polygon = __webpack_require__(236);
-	var d3Path = __webpack_require__(237);
-	var d3Quadtree = __webpack_require__(238);
-	var d3Queue = __webpack_require__(239);
-	var d3Shape = __webpack_require__(240);
-	var d3Color = __webpack_require__(241);
-	var d3Interpolate = __webpack_require__(242);
-	var d3Dispatch = __webpack_require__(243);
-	var d3Dsv = __webpack_require__(244);
-	var d3Request = __webpack_require__(245);
-	var d3Timer = __webpack_require__(252);
-	var d3Time = __webpack_require__(253);
-	var d3Format = __webpack_require__(254);
-	var d3TimeFormat = __webpack_require__(255);
-	var d3Scale = __webpack_require__(256);
-	var d3Selection = __webpack_require__(257);
-	var d3Transition = __webpack_require__(258);
-	var d3Axis = __webpack_require__(259);
-	var d3Hierarchy = __webpack_require__(260);
-	var d3Force = __webpack_require__(261);
-	var d3Drag = __webpack_require__(262);
-	var d3Voronoi = __webpack_require__(263);
-	var d3Zoom = __webpack_require__(264);
-	var d3Brush = __webpack_require__(265);
-	var d3Chord = __webpack_require__(266);
-	var d3Geo = __webpack_require__(267);
-
-	var version = "4.1.1";
-
-	exports.version = version;
-	exports.bisect = d3Array.bisect;
-	exports.bisectRight = d3Array.bisectRight;
-	exports.bisectLeft = d3Array.bisectLeft;
-	exports.ascending = d3Array.ascending;
-	exports.bisector = d3Array.bisector;
-	exports.descending = d3Array.descending;
-	exports.deviation = d3Array.deviation;
-	exports.extent = d3Array.extent;
-	exports.histogram = d3Array.histogram;
-	exports.thresholdFreedmanDiaconis = d3Array.thresholdFreedmanDiaconis;
-	exports.thresholdScott = d3Array.thresholdScott;
-	exports.thresholdSturges = d3Array.thresholdSturges;
-	exports.max = d3Array.max;
-	exports.mean = d3Array.mean;
-	exports.median = d3Array.median;
-	exports.merge = d3Array.merge;
-	exports.min = d3Array.min;
-	exports.pairs = d3Array.pairs;
-	exports.permute = d3Array.permute;
-	exports.quantile = d3Array.quantile;
-	exports.range = d3Array.range;
-	exports.scan = d3Array.scan;
-	exports.shuffle = d3Array.shuffle;
-	exports.sum = d3Array.sum;
-	exports.ticks = d3Array.ticks;
-	exports.tickStep = d3Array.tickStep;
-	exports.transpose = d3Array.transpose;
-	exports.variance = d3Array.variance;
-	exports.zip = d3Array.zip;
-	exports.entries = d3Collection.entries;
-	exports.keys = d3Collection.keys;
-	exports.values = d3Collection.values;
-	exports.map = d3Collection.map;
-	exports.set = d3Collection.set;
-	exports.nest = d3Collection.nest;
-	exports.randomUniform = d3Random.randomUniform;
-	exports.randomNormal = d3Random.randomNormal;
-	exports.randomLogNormal = d3Random.randomLogNormal;
-	exports.randomBates = d3Random.randomBates;
-	exports.randomIrwinHall = d3Random.randomIrwinHall;
-	exports.randomExponential = d3Random.randomExponential;
-	exports.easeLinear = d3Ease.easeLinear;
-	exports.easeQuad = d3Ease.easeQuad;
-	exports.easeQuadIn = d3Ease.easeQuadIn;
-	exports.easeQuadOut = d3Ease.easeQuadOut;
-	exports.easeQuadInOut = d3Ease.easeQuadInOut;
-	exports.easeCubic = d3Ease.easeCubic;
-	exports.easeCubicIn = d3Ease.easeCubicIn;
-	exports.easeCubicOut = d3Ease.easeCubicOut;
-	exports.easeCubicInOut = d3Ease.easeCubicInOut;
-	exports.easePoly = d3Ease.easePoly;
-	exports.easePolyIn = d3Ease.easePolyIn;
-	exports.easePolyOut = d3Ease.easePolyOut;
-	exports.easePolyInOut = d3Ease.easePolyInOut;
-	exports.easeSin = d3Ease.easeSin;
-	exports.easeSinIn = d3Ease.easeSinIn;
-	exports.easeSinOut = d3Ease.easeSinOut;
-	exports.easeSinInOut = d3Ease.easeSinInOut;
-	exports.easeExp = d3Ease.easeExp;
-	exports.easeExpIn = d3Ease.easeExpIn;
-	exports.easeExpOut = d3Ease.easeExpOut;
-	exports.easeExpInOut = d3Ease.easeExpInOut;
-	exports.easeCircle = d3Ease.easeCircle;
-	exports.easeCircleIn = d3Ease.easeCircleIn;
-	exports.easeCircleOut = d3Ease.easeCircleOut;
-	exports.easeCircleInOut = d3Ease.easeCircleInOut;
-	exports.easeBounce = d3Ease.easeBounce;
-	exports.easeBounceIn = d3Ease.easeBounceIn;
-	exports.easeBounceOut = d3Ease.easeBounceOut;
-	exports.easeBounceInOut = d3Ease.easeBounceInOut;
-	exports.easeBack = d3Ease.easeBack;
-	exports.easeBackIn = d3Ease.easeBackIn;
-	exports.easeBackOut = d3Ease.easeBackOut;
-	exports.easeBackInOut = d3Ease.easeBackInOut;
-	exports.easeElastic = d3Ease.easeElastic;
-	exports.easeElasticIn = d3Ease.easeElasticIn;
-	exports.easeElasticOut = d3Ease.easeElasticOut;
-	exports.easeElasticInOut = d3Ease.easeElasticInOut;
-	exports.polygonArea = d3Polygon.polygonArea;
-	exports.polygonCentroid = d3Polygon.polygonCentroid;
-	exports.polygonHull = d3Polygon.polygonHull;
-	exports.polygonContains = d3Polygon.polygonContains;
-	exports.polygonLength = d3Polygon.polygonLength;
-	exports.path = d3Path.path;
-	exports.quadtree = d3Quadtree.quadtree;
-	exports.queue = d3Queue.queue;
-	exports.arc = d3Shape.arc;
-	exports.area = d3Shape.area;
-	exports.line = d3Shape.line;
-	exports.pie = d3Shape.pie;
-	exports.radialArea = d3Shape.radialArea;
-	exports.radialLine = d3Shape.radialLine;
-	exports.symbol = d3Shape.symbol;
-	exports.symbols = d3Shape.symbols;
-	exports.symbolCircle = d3Shape.symbolCircle;
-	exports.symbolCross = d3Shape.symbolCross;
-	exports.symbolDiamond = d3Shape.symbolDiamond;
-	exports.symbolSquare = d3Shape.symbolSquare;
-	exports.symbolStar = d3Shape.symbolStar;
-	exports.symbolTriangle = d3Shape.symbolTriangle;
-	exports.symbolWye = d3Shape.symbolWye;
-	exports.curveBasisClosed = d3Shape.curveBasisClosed;
-	exports.curveBasisOpen = d3Shape.curveBasisOpen;
-	exports.curveBasis = d3Shape.curveBasis;
-	exports.curveBundle = d3Shape.curveBundle;
-	exports.curveCardinalClosed = d3Shape.curveCardinalClosed;
-	exports.curveCardinalOpen = d3Shape.curveCardinalOpen;
-	exports.curveCardinal = d3Shape.curveCardinal;
-	exports.curveCatmullRomClosed = d3Shape.curveCatmullRomClosed;
-	exports.curveCatmullRomOpen = d3Shape.curveCatmullRomOpen;
-	exports.curveCatmullRom = d3Shape.curveCatmullRom;
-	exports.curveLinearClosed = d3Shape.curveLinearClosed;
-	exports.curveLinear = d3Shape.curveLinear;
-	exports.curveMonotoneX = d3Shape.curveMonotoneX;
-	exports.curveMonotoneY = d3Shape.curveMonotoneY;
-	exports.curveNatural = d3Shape.curveNatural;
-	exports.curveStep = d3Shape.curveStep;
-	exports.curveStepAfter = d3Shape.curveStepAfter;
-	exports.curveStepBefore = d3Shape.curveStepBefore;
-	exports.stack = d3Shape.stack;
-	exports.stackOffsetExpand = d3Shape.stackOffsetExpand;
-	exports.stackOffsetNone = d3Shape.stackOffsetNone;
-	exports.stackOffsetSilhouette = d3Shape.stackOffsetSilhouette;
-	exports.stackOffsetWiggle = d3Shape.stackOffsetWiggle;
-	exports.stackOrderAscending = d3Shape.stackOrderAscending;
-	exports.stackOrderDescending = d3Shape.stackOrderDescending;
-	exports.stackOrderInsideOut = d3Shape.stackOrderInsideOut;
-	exports.stackOrderNone = d3Shape.stackOrderNone;
-	exports.stackOrderReverse = d3Shape.stackOrderReverse;
-	exports.color = d3Color.color;
-	exports.rgb = d3Color.rgb;
-	exports.hsl = d3Color.hsl;
-	exports.lab = d3Color.lab;
-	exports.hcl = d3Color.hcl;
-	exports.cubehelix = d3Color.cubehelix;
-	exports.interpolate = d3Interpolate.interpolate;
-	exports.interpolateArray = d3Interpolate.interpolateArray;
-	exports.interpolateDate = d3Interpolate.interpolateDate;
-	exports.interpolateNumber = d3Interpolate.interpolateNumber;
-	exports.interpolateObject = d3Interpolate.interpolateObject;
-	exports.interpolateRound = d3Interpolate.interpolateRound;
-	exports.interpolateString = d3Interpolate.interpolateString;
-	exports.interpolateTransformCss = d3Interpolate.interpolateTransformCss;
-	exports.interpolateTransformSvg = d3Interpolate.interpolateTransformSvg;
-	exports.interpolateZoom = d3Interpolate.interpolateZoom;
-	exports.interpolateRgb = d3Interpolate.interpolateRgb;
-	exports.interpolateRgbBasis = d3Interpolate.interpolateRgbBasis;
-	exports.interpolateRgbBasisClosed = d3Interpolate.interpolateRgbBasisClosed;
-	exports.interpolateHsl = d3Interpolate.interpolateHsl;
-	exports.interpolateHslLong = d3Interpolate.interpolateHslLong;
-	exports.interpolateLab = d3Interpolate.interpolateLab;
-	exports.interpolateHcl = d3Interpolate.interpolateHcl;
-	exports.interpolateHclLong = d3Interpolate.interpolateHclLong;
-	exports.interpolateCubehelix = d3Interpolate.interpolateCubehelix;
-	exports.interpolateCubehelixLong = d3Interpolate.interpolateCubehelixLong;
-	exports.interpolateBasis = d3Interpolate.interpolateBasis;
-	exports.interpolateBasisClosed = d3Interpolate.interpolateBasisClosed;
-	exports.quantize = d3Interpolate.quantize;
-	exports.dispatch = d3Dispatch.dispatch;
-	exports.dsvFormat = d3Dsv.dsvFormat;
-	exports.csvParse = d3Dsv.csvParse;
-	exports.csvParseRows = d3Dsv.csvParseRows;
-	exports.csvFormat = d3Dsv.csvFormat;
-	exports.csvFormatRows = d3Dsv.csvFormatRows;
-	exports.tsvParse = d3Dsv.tsvParse;
-	exports.tsvParseRows = d3Dsv.tsvParseRows;
-	exports.tsvFormat = d3Dsv.tsvFormat;
-	exports.tsvFormatRows = d3Dsv.tsvFormatRows;
-	exports.request = d3Request.request;
-	exports.html = d3Request.html;
-	exports.json = d3Request.json;
-	exports.text = d3Request.text;
-	exports.xml = d3Request.xml;
-	exports.csv = d3Request.csv;
-	exports.tsv = d3Request.tsv;
-	exports.now = d3Timer.now;
-	exports.timer = d3Timer.timer;
-	exports.timerFlush = d3Timer.timerFlush;
-	exports.timeout = d3Timer.timeout;
-	exports.interval = d3Timer.interval;
-	exports.timeInterval = d3Time.timeInterval;
-	exports.timeMillisecond = d3Time.timeMillisecond;
-	exports.timeMilliseconds = d3Time.timeMilliseconds;
-	exports.timeSecond = d3Time.timeSecond;
-	exports.timeSeconds = d3Time.timeSeconds;
-	exports.timeMinute = d3Time.timeMinute;
-	exports.timeMinutes = d3Time.timeMinutes;
-	exports.timeHour = d3Time.timeHour;
-	exports.timeHours = d3Time.timeHours;
-	exports.timeDay = d3Time.timeDay;
-	exports.timeDays = d3Time.timeDays;
-	exports.timeWeek = d3Time.timeWeek;
-	exports.timeWeeks = d3Time.timeWeeks;
-	exports.timeSunday = d3Time.timeSunday;
-	exports.timeSundays = d3Time.timeSundays;
-	exports.timeMonday = d3Time.timeMonday;
-	exports.timeMondays = d3Time.timeMondays;
-	exports.timeTuesday = d3Time.timeTuesday;
-	exports.timeTuesdays = d3Time.timeTuesdays;
-	exports.timeWednesday = d3Time.timeWednesday;
-	exports.timeWednesdays = d3Time.timeWednesdays;
-	exports.timeThursday = d3Time.timeThursday;
-	exports.timeThursdays = d3Time.timeThursdays;
-	exports.timeFriday = d3Time.timeFriday;
-	exports.timeFridays = d3Time.timeFridays;
-	exports.timeSaturday = d3Time.timeSaturday;
-	exports.timeSaturdays = d3Time.timeSaturdays;
-	exports.timeMonth = d3Time.timeMonth;
-	exports.timeMonths = d3Time.timeMonths;
-	exports.timeYear = d3Time.timeYear;
-	exports.timeYears = d3Time.timeYears;
-	exports.utcMillisecond = d3Time.utcMillisecond;
-	exports.utcMilliseconds = d3Time.utcMilliseconds;
-	exports.utcSecond = d3Time.utcSecond;
-	exports.utcSeconds = d3Time.utcSeconds;
-	exports.utcMinute = d3Time.utcMinute;
-	exports.utcMinutes = d3Time.utcMinutes;
-	exports.utcHour = d3Time.utcHour;
-	exports.utcHours = d3Time.utcHours;
-	exports.utcDay = d3Time.utcDay;
-	exports.utcDays = d3Time.utcDays;
-	exports.utcWeek = d3Time.utcWeek;
-	exports.utcWeeks = d3Time.utcWeeks;
-	exports.utcSunday = d3Time.utcSunday;
-	exports.utcSundays = d3Time.utcSundays;
-	exports.utcMonday = d3Time.utcMonday;
-	exports.utcMondays = d3Time.utcMondays;
-	exports.utcTuesday = d3Time.utcTuesday;
-	exports.utcTuesdays = d3Time.utcTuesdays;
-	exports.utcWednesday = d3Time.utcWednesday;
-	exports.utcWednesdays = d3Time.utcWednesdays;
-	exports.utcThursday = d3Time.utcThursday;
-	exports.utcThursdays = d3Time.utcThursdays;
-	exports.utcFriday = d3Time.utcFriday;
-	exports.utcFridays = d3Time.utcFridays;
-	exports.utcSaturday = d3Time.utcSaturday;
-	exports.utcSaturdays = d3Time.utcSaturdays;
-	exports.utcMonth = d3Time.utcMonth;
-	exports.utcMonths = d3Time.utcMonths;
-	exports.utcYear = d3Time.utcYear;
-	exports.utcYears = d3Time.utcYears;
-	exports.format = d3Format.format;
-	exports.formatPrefix = d3Format.formatPrefix;
-	exports.formatLocale = d3Format.formatLocale;
-	exports.formatDefaultLocale = d3Format.formatDefaultLocale;
-	exports.formatSpecifier = d3Format.formatSpecifier;
-	exports.precisionFixed = d3Format.precisionFixed;
-	exports.precisionPrefix = d3Format.precisionPrefix;
-	exports.precisionRound = d3Format.precisionRound;
-	exports.timeFormat = d3TimeFormat.timeFormat;
-	exports.timeParse = d3TimeFormat.timeParse;
-	exports.utcFormat = d3TimeFormat.utcFormat;
-	exports.utcParse = d3TimeFormat.utcParse;
-	exports.isoFormat = d3TimeFormat.isoFormat;
-	exports.isoParse = d3TimeFormat.isoParse;
-	exports.timeFormatLocale = d3TimeFormat.timeFormatLocale;
-	exports.timeFormatDefaultLocale = d3TimeFormat.timeFormatDefaultLocale;
-	exports.scaleBand = d3Scale.scaleBand;
-	exports.scalePoint = d3Scale.scalePoint;
-	exports.scaleIdentity = d3Scale.scaleIdentity;
-	exports.scaleLinear = d3Scale.scaleLinear;
-	exports.scaleLog = d3Scale.scaleLog;
-	exports.scaleOrdinal = d3Scale.scaleOrdinal;
-	exports.scaleImplicit = d3Scale.scaleImplicit;
-	exports.scalePow = d3Scale.scalePow;
-	exports.scaleSqrt = d3Scale.scaleSqrt;
-	exports.scaleQuantile = d3Scale.scaleQuantile;
-	exports.scaleQuantize = d3Scale.scaleQuantize;
-	exports.scaleThreshold = d3Scale.scaleThreshold;
-	exports.scaleTime = d3Scale.scaleTime;
-	exports.scaleUtc = d3Scale.scaleUtc;
-	exports.schemeCategory10 = d3Scale.schemeCategory10;
-	exports.schemeCategory20b = d3Scale.schemeCategory20b;
-	exports.schemeCategory20c = d3Scale.schemeCategory20c;
-	exports.schemeCategory20 = d3Scale.schemeCategory20;
-	exports.scaleSequential = d3Scale.scaleSequential;
-	exports.interpolateCubehelixDefault = d3Scale.interpolateCubehelixDefault;
-	exports.interpolateRainbow = d3Scale.interpolateRainbow;
-	exports.interpolateWarm = d3Scale.interpolateWarm;
-	exports.interpolateCool = d3Scale.interpolateCool;
-	exports.interpolateViridis = d3Scale.interpolateViridis;
-	exports.interpolateMagma = d3Scale.interpolateMagma;
-	exports.interpolateInferno = d3Scale.interpolateInferno;
-	exports.interpolatePlasma = d3Scale.interpolatePlasma;
-	exports.creator = d3Selection.creator;
-	exports.customEvent = d3Selection.customEvent;
-	Object.defineProperty(exports, "event", {get: function() { return d3Selection.event; }});
-	exports.local = d3Selection.local;
-	exports.matcher = d3Selection.matcher;
-	exports.mouse = d3Selection.mouse;
-	exports.namespace = d3Selection.namespace;
-	exports.namespaces = d3Selection.namespaces;
-	exports.select = d3Selection.select;
-	exports.selectAll = d3Selection.selectAll;
-	exports.selection = d3Selection.selection;
-	exports.selector = d3Selection.selector;
-	exports.selectorAll = d3Selection.selectorAll;
-	exports.touch = d3Selection.touch;
-	exports.touches = d3Selection.touches;
-	exports.window = d3Selection.window;
-	exports.active = d3Transition.active;
-	exports.interrupt = d3Transition.interrupt;
-	exports.transition = d3Transition.transition;
-	exports.axisTop = d3Axis.axisTop;
-	exports.axisRight = d3Axis.axisRight;
-	exports.axisBottom = d3Axis.axisBottom;
-	exports.axisLeft = d3Axis.axisLeft;
-	exports.cluster = d3Hierarchy.cluster;
-	exports.hierarchy = d3Hierarchy.hierarchy;
-	exports.pack = d3Hierarchy.pack;
-	exports.packSiblings = d3Hierarchy.packSiblings;
-	exports.packEnclose = d3Hierarchy.packEnclose;
-	exports.partition = d3Hierarchy.partition;
-	exports.stratify = d3Hierarchy.stratify;
-	exports.tree = d3Hierarchy.tree;
-	exports.treemap = d3Hierarchy.treemap;
-	exports.treemapBinary = d3Hierarchy.treemapBinary;
-	exports.treemapDice = d3Hierarchy.treemapDice;
-	exports.treemapSlice = d3Hierarchy.treemapSlice;
-	exports.treemapSliceDice = d3Hierarchy.treemapSliceDice;
-	exports.treemapSquarify = d3Hierarchy.treemapSquarify;
-	exports.treemapResquarify = d3Hierarchy.treemapResquarify;
-	exports.forceCenter = d3Force.forceCenter;
-	exports.forceCollide = d3Force.forceCollide;
-	exports.forceLink = d3Force.forceLink;
-	exports.forceManyBody = d3Force.forceManyBody;
-	exports.forceSimulation = d3Force.forceSimulation;
-	exports.forceX = d3Force.forceX;
-	exports.forceY = d3Force.forceY;
-	exports.drag = d3Drag.drag;
-	exports.dragDisable = d3Drag.dragDisable;
-	exports.dragEnable = d3Drag.dragEnable;
-	exports.voronoi = d3Voronoi.voronoi;
-	exports.zoom = d3Zoom.zoom;
-	exports.zoomIdentity = d3Zoom.zoomIdentity;
-	exports.zoomTransform = d3Zoom.zoomTransform;
-	exports.brush = d3Brush.brush;
-	exports.brushX = d3Brush.brushX;
-	exports.brushY = d3Brush.brushY;
-	exports.brushSelection = d3Brush.brushSelection;
-	exports.chord = d3Chord.chord;
-	exports.ribbon = d3Chord.ribbon;
-	exports.geoAlbers = d3Geo.geoAlbers;
-	exports.geoAlbersUsa = d3Geo.geoAlbersUsa;
-	exports.geoArea = d3Geo.geoArea;
-	exports.geoAzimuthalEqualArea = d3Geo.geoAzimuthalEqualArea;
-	exports.geoAzimuthalEqualAreaRaw = d3Geo.geoAzimuthalEqualAreaRaw;
-	exports.geoAzimuthalEquidistant = d3Geo.geoAzimuthalEquidistant;
-	exports.geoAzimuthalEquidistantRaw = d3Geo.geoAzimuthalEquidistantRaw;
-	exports.geoBounds = d3Geo.geoBounds;
-	exports.geoCentroid = d3Geo.geoCentroid;
-	exports.geoCircle = d3Geo.geoCircle;
-	exports.geoClipExtent = d3Geo.geoClipExtent;
-	exports.geoConicConformal = d3Geo.geoConicConformal;
-	exports.geoConicConformalRaw = d3Geo.geoConicConformalRaw;
-	exports.geoConicEqualArea = d3Geo.geoConicEqualArea;
-	exports.geoConicEqualAreaRaw = d3Geo.geoConicEqualAreaRaw;
-	exports.geoConicEquidistant = d3Geo.geoConicEquidistant;
-	exports.geoConicEquidistantRaw = d3Geo.geoConicEquidistantRaw;
-	exports.geoDistance = d3Geo.geoDistance;
-	exports.geoEquirectangular = d3Geo.geoEquirectangular;
-	exports.geoEquirectangularRaw = d3Geo.geoEquirectangularRaw;
-	exports.geoGnomonic = d3Geo.geoGnomonic;
-	exports.geoGnomonicRaw = d3Geo.geoGnomonicRaw;
-	exports.geoGraticule = d3Geo.geoGraticule;
-	exports.geoInterpolate = d3Geo.geoInterpolate;
-	exports.geoLength = d3Geo.geoLength;
-	exports.geoMercator = d3Geo.geoMercator;
-	exports.geoMercatorRaw = d3Geo.geoMercatorRaw;
-	exports.geoOrthographic = d3Geo.geoOrthographic;
-	exports.geoOrthographicRaw = d3Geo.geoOrthographicRaw;
-	exports.geoPath = d3Geo.geoPath;
-	exports.geoProjection = d3Geo.geoProjection;
-	exports.geoProjectionMutator = d3Geo.geoProjectionMutator;
-	exports.geoRotation = d3Geo.geoRotation;
-	exports.geoStereographic = d3Geo.geoStereographic;
-	exports.geoStereographicRaw = d3Geo.geoStereographicRaw;
-	exports.geoStream = d3Geo.geoStream;
-	exports.geoTransform = d3Geo.geoTransform;
-	exports.geoTransverseMercator = d3Geo.geoTransverseMercator;
-	exports.geoTransverseMercatorRaw = d3Geo.geoTransverseMercatorRaw;
-
-/***/ },
-/* 232 */
-=======
->>>>>>> 4bb18f8603293f2bcdc29db9247561a88fdd5717
-=======
-/* 232 */
->>>>>>> 5c6215621b03cbb0632b65186cc1fc6b19dfebb4
+/* 256 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;!function() {
@@ -36586,71 +37636,9 @@ module.exports =
 	  function d3_Map() {
 	    this._ = Object.create(null);
 	  }
-<<<<<<< HEAD
-
-	  function zip() {
-	    return transpose(arguments);
-	  }
-
-	  exports.bisect = bisectRight;
-	  exports.bisectRight = bisectRight;
-	  exports.bisectLeft = bisectLeft;
-	  exports.ascending = ascending;
-	  exports.bisector = bisector;
-	  exports.descending = descending;
-	  exports.deviation = deviation;
-	  exports.extent = extent;
-	  exports.histogram = histogram;
-	  exports.thresholdFreedmanDiaconis = freedmanDiaconis;
-	  exports.thresholdScott = scott;
-	  exports.thresholdSturges = sturges;
-	  exports.max = max;
-	  exports.mean = mean;
-	  exports.median = median;
-	  exports.merge = merge;
-	  exports.min = min;
-	  exports.pairs = pairs;
-	  exports.permute = permute;
-	  exports.quantile = quantile;
-	  exports.range = range;
-	  exports.scan = scan;
-	  exports.shuffle = shuffle;
-	  exports.sum = sum;
-	  exports.ticks = ticks;
-	  exports.tickStep = tickStep;
-	  exports.transpose = transpose;
-	  exports.variance = variance;
-	  exports.zip = zip;
-
-	  Object.defineProperty(exports, '__esModule', { value: true });
-
-	}));
-
-/***/ },
-/* 233 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// https://d3js.org/d3-collection/ Version 1.0.0. Copyright 2016 Mike Bostock.
-	(function (global, factory) {
-	   true ? factory(exports) :
-	  typeof define === 'function' && define.amd ? define(['exports'], factory) :
-	  (factory((global.d3 = global.d3 || {})));
-	}(this, function (exports) { 'use strict';
-
-	  var prefix = "$";
-
-	  function Map() {}
-
-	  Map.prototype = map.prototype = {
-	    constructor: Map,
-	    has: function(key) {
-	      return (prefix + key) in this;
-	    },
-=======
 	  var d3_map_proto = "__proto__", d3_map_zero = "\x00";
 	  d3_class(d3_Map, {
 	    has: d3_map_has,
->>>>>>> 4bb18f8603293f2bcdc29db9247561a88fdd5717
 	    get: function(key) {
 	      return this._[d3_map_escape(key)];
 	    },
@@ -36860,44 +37848,10 @@ module.exports =
 	  function d3_eventPreventDefault() {
 	    d3.event.preventDefault();
 	  }
-<<<<<<< HEAD
-
-	  exports.nest = nest;
-	  exports.set = set;
-	  exports.map = map;
-	  exports.keys = keys;
-	  exports.values = values;
-	  exports.entries = entries;
-
-	  Object.defineProperty(exports, '__esModule', { value: true });
-
-	}));
-
-/***/ },
-/* 234 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// https://d3js.org/d3-random/ Version 1.0.0. Copyright 2016 Mike Bostock.
-	(function (global, factory) {
-	   true ? factory(exports) :
-	  typeof define === 'function' && define.amd ? define(['exports'], factory) :
-	  (factory((global.d3 = global.d3 || {})));
-	}(this, function (exports) { 'use strict';
-
-	  function uniform(min, max) {
-	    min = min == null ? 0 : +min;
-	    max = max == null ? 1 : +max;
-	    if (arguments.length === 1) max = min, min = 0;
-	    else max -= min;
-	    return function() {
-	      return Math.random() * max + min;
-	    };
-=======
 	  function d3_eventSource() {
 	    var e = d3.event, s;
 	    while (s = e.sourceEvent) e = s;
 	    return e;
->>>>>>> 4bb18f8603293f2bcdc29db9247561a88fdd5717
 	  }
 	  function d3_eventDispatch(target) {
 	    var dispatch = new d3_dispatch(), i = 0, n = arguments.length;
@@ -37046,36 +38000,8 @@ module.exports =
 	    }
 	    return value == null ? name.local ? attrNullNS : attrNull : typeof value === "function" ? name.local ? attrFunctionNS : attrFunction : name.local ? attrConstantNS : attrConstant;
 	  }
-<<<<<<< HEAD
-
-	  exports.randomUniform = uniform;
-	  exports.randomNormal = normal;
-	  exports.randomLogNormal = logNormal;
-	  exports.randomBates = bates;
-	  exports.randomIrwinHall = irwinHall;
-	  exports.randomExponential = exponential;
-
-	  Object.defineProperty(exports, '__esModule', { value: true });
-
-	}));
-
-/***/ },
-/* 235 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// https://d3js.org/d3-ease/ Version 1.0.0. Copyright 2016 Mike Bostock.
-	(function (global, factory) {
-	   true ? factory(exports) :
-	  typeof define === 'function' && define.amd ? define(['exports'], factory) :
-	  (factory((global.d3 = global.d3 || {})));
-	}(this, function (exports) { 'use strict';
-
-	  function linear(t) {
-	    return +t;
-=======
 	  function d3_collapse(s) {
 	    return s.trim().replace(/\s+/g, " ");
->>>>>>> 4bb18f8603293f2bcdc29db9247561a88fdd5717
 	  }
 	  d3_selectionPrototype.classed = function(name, value) {
 	    if (arguments.length < 2) {
@@ -37161,85 +38087,11 @@ module.exports =
 	      for (value in name) this.each(d3_selection_property(value, name[value]));
 	      return this;
 	    }
-<<<<<<< HEAD
-
-	    elasticInOut.amplitude = function(a) { return custom(a, p * tau); };
-	    elasticInOut.period = function(p) { return custom(a, p); };
-
-	    return elasticInOut;
-	  })(amplitude, period);
-
-	  exports.easeLinear = linear;
-	  exports.easeQuad = quadInOut;
-	  exports.easeQuadIn = quadIn;
-	  exports.easeQuadOut = quadOut;
-	  exports.easeQuadInOut = quadInOut;
-	  exports.easeCubic = cubicInOut;
-	  exports.easeCubicIn = cubicIn;
-	  exports.easeCubicOut = cubicOut;
-	  exports.easeCubicInOut = cubicInOut;
-	  exports.easePoly = polyInOut;
-	  exports.easePolyIn = polyIn;
-	  exports.easePolyOut = polyOut;
-	  exports.easePolyInOut = polyInOut;
-	  exports.easeSin = sinInOut;
-	  exports.easeSinIn = sinIn;
-	  exports.easeSinOut = sinOut;
-	  exports.easeSinInOut = sinInOut;
-	  exports.easeExp = expInOut;
-	  exports.easeExpIn = expIn;
-	  exports.easeExpOut = expOut;
-	  exports.easeExpInOut = expInOut;
-	  exports.easeCircle = circleInOut;
-	  exports.easeCircleIn = circleIn;
-	  exports.easeCircleOut = circleOut;
-	  exports.easeCircleInOut = circleInOut;
-	  exports.easeBounce = bounceOut;
-	  exports.easeBounceIn = bounceIn;
-	  exports.easeBounceOut = bounceOut;
-	  exports.easeBounceInOut = bounceInOut;
-	  exports.easeBack = backInOut;
-	  exports.easeBackIn = backIn;
-	  exports.easeBackOut = backOut;
-	  exports.easeBackInOut = backInOut;
-	  exports.easeElastic = elasticOut;
-	  exports.easeElasticIn = elasticIn;
-	  exports.easeElasticOut = elasticOut;
-	  exports.easeElasticInOut = elasticInOut;
-
-	  Object.defineProperty(exports, '__esModule', { value: true });
-
-	}));
-
-/***/ },
-/* 236 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// https://d3js.org/d3-polygon/ Version 1.0.0. Copyright 2016 Mike Bostock.
-	(function (global, factory) {
-	   true ? factory(exports) :
-	  typeof define === 'function' && define.amd ? define(['exports'], factory) :
-	  (factory((global.d3 = global.d3 || {})));
-	}(this, function (exports) { 'use strict';
-
-	  function area(polygon) {
-	    var i = -1,
-	        n = polygon.length,
-	        a,
-	        b = polygon[n - 1],
-	        area = 0;
-
-	    while (++i < n) {
-	      a = b;
-	      b = polygon[i];
-	      area += a[1] * b[0] - a[0] * b[1];
-=======
 	    return this.each(d3_selection_property(name, value));
 	  };
 	  function d3_selection_property(name, value) {
 	    function propertyNull() {
 	      delete this[name];
->>>>>>> 4bb18f8603293f2bcdc29db9247561a88fdd5717
 	    }
 	    function propertyConstant() {
 	      this[name] = value;
@@ -37284,43 +38136,7 @@ module.exports =
 	    function createNS() {
 	      return this.ownerDocument.createElementNS(name.space, name.local);
 	    }
-<<<<<<< HEAD
-
-	    return perimeter;
-	  }
-
-	  exports.polygonArea = area;
-	  exports.polygonCentroid = centroid;
-	  exports.polygonHull = hull;
-	  exports.polygonContains = contains;
-	  exports.polygonLength = length;
-
-	  Object.defineProperty(exports, '__esModule', { value: true });
-
-	}));
-
-/***/ },
-/* 237 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// https://d3js.org/d3-path/ Version 1.0.0. Copyright 2016 Mike Bostock.
-	(function (global, factory) {
-	   true ? factory(exports) :
-	  typeof define === 'function' && define.amd ? define(['exports'], factory) :
-	  (factory((global.d3 = global.d3 || {})));
-	}(this, function (exports) { 'use strict';
-
-	  var pi = Math.PI;
-	  var tau = 2 * pi;
-	  var epsilon = 1e-6;
-	  var tauEpsilon = tau - epsilon;
-	  function Path() {
-	    this._x0 = this._y0 = // start of current subpath
-	    this._x1 = this._y1 = null; // end of current subpath
-	    this._ = [];
-=======
 	    return typeof name === "function" ? name : (name = d3.ns.qualify(name)).local ? createNS : create;
->>>>>>> 4bb18f8603293f2bcdc29db9247561a88fdd5717
 	  }
 	  d3_selectionPrototype.insert = function(name, before) {
 	    name = d3_selection_creator(name);
@@ -37345,136 +38161,7 @@ module.exports =
 	          value[i] = node.__data__;
 	        }
 	      }
-<<<<<<< HEAD
-	    },
-	    rect: function(x, y, w, h) {
-	      this._.push("M", this._x0 = this._x1 = +x, ",", this._y0 = this._y1 = +y, "h", +w, "v", +h, "h", -w, "Z");
-	    },
-	    toString: function() {
-	      return this._.join("");
-	    }
-	  };
-
-	  exports.path = path;
-
-	  Object.defineProperty(exports, '__esModule', { value: true });
-
-	}));
-
-/***/ },
-/* 238 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// https://d3js.org/d3-quadtree/ Version 1.0.0. Copyright 2016 Mike Bostock.
-	(function (global, factory) {
-	   true ? factory(exports) :
-	  typeof define === 'function' && define.amd ? define(['exports'], factory) :
-	  (factory((global.d3 = global.d3 || {})));
-	}(this, function (exports) { 'use strict';
-
-	  function tree_add(d) {
-	    var x = +this._x.call(null, d),
-	        y = +this._y.call(null, d);
-	    return add(this.cover(x, y), x, y, d);
-	  }
-
-	  function add(tree, x, y, d) {
-	    if (isNaN(x) || isNaN(y)) return tree; // ignore invalid points
-
-	    var parent,
-	        node = tree._root,
-	        leaf = {data: d},
-	        x0 = tree._x0,
-	        y0 = tree._y0,
-	        x1 = tree._x1,
-	        y1 = tree._y1,
-	        xm,
-	        ym,
-	        xp,
-	        yp,
-	        right,
-	        bottom,
-	        i,
-	        j;
-
-	    // If the tree is empty, initialize the root as a leaf.
-	    if (!node) return tree._root = leaf, tree;
-
-	    // Find the existing leaf for the new point, or add it.
-	    while (node.length) {
-	      if (right = x >= (xm = (x0 + x1) / 2)) x0 = xm; else x1 = xm;
-	      if (bottom = y >= (ym = (y0 + y1) / 2)) y0 = ym; else y1 = ym;
-	      if (parent = node, !(node = node[i = bottom << 1 | right])) return parent[i] = leaf, tree;
-	    }
-
-	    // Is the new point is exactly coincident with the existing point?
-	    xp = +tree._x.call(null, node.data);
-	    yp = +tree._y.call(null, node.data);
-	    if (x === xp && y === yp) return leaf.next = node, parent ? parent[i] = leaf : tree._root = leaf, tree;
-
-	    // Otherwise, split the leaf node until the old and new point are separated.
-	    do {
-	      parent = parent ? parent[i] = new Array(4) : tree._root = new Array(4);
-	      if (right = x >= (xm = (x0 + x1) / 2)) x0 = xm; else x1 = xm;
-	      if (bottom = y >= (ym = (y0 + y1) / 2)) y0 = ym; else y1 = ym;
-	    } while ((i = bottom << 1 | right) === (j = (yp >= ym) << 1 | (xp >= xm)));
-	    return parent[j] = node, parent[i] = leaf, tree;
-	  }
-
-	  function addAll(data) {
-	    var d, i, n = data.length,
-	        x,
-	        y,
-	        xz = new Array(n),
-	        yz = new Array(n),
-	        x0 = Infinity,
-	        y0 = Infinity,
-	        x1 = -Infinity,
-	        y1 = -Infinity;
-
-	    // Compute the points and their extent.
-	    for (i = 0; i < n; ++i) {
-	      if (isNaN(x = +this._x.call(null, d = data[i])) || isNaN(y = +this._y.call(null, d))) continue;
-	      xz[i] = x;
-	      yz[i] = y;
-	      if (x < x0) x0 = x;
-	      if (x > x1) x1 = x;
-	      if (y < y0) y0 = y;
-	      if (y > y1) y1 = y;
-	    }
-
-	    // If there were no (valid) points, inherit the existing extent.
-	    if (x1 < x0) x0 = this._x0, x1 = this._x1;
-	    if (y1 < y0) y0 = this._y0, y1 = this._y1;
-
-	    // Expand the tree to cover the new points.
-	    this.cover(x0, y0).cover(x1, y1);
-
-	    // Add the new points.
-	    for (i = 0; i < n; ++i) {
-	      add(this, xz[i], yz[i], data[i]);
-	    }
-
-	    return this;
-	  }
-
-	  function tree_cover(x, y) {
-	    if (isNaN(x = +x) || isNaN(y = +y)) return this; // ignore invalid points
-
-	    var x0 = this._x0,
-	        y0 = this._y0,
-	        x1 = this._x1,
-	        y1 = this._y1;
-
-	    // If the quadtree has no extent, initialize them.
-	    // Integer extent are necessary so that if we later double the extent,
-	    // the existing quadrant boundaries don’t change due to floating point error!
-	    if (isNaN(x0)) {
-	      x1 = (x0 = Math.floor(x)) + 1;
-	      y1 = (y0 = Math.floor(y)) + 1;
-=======
 	      return value;
->>>>>>> 4bb18f8603293f2bcdc29db9247561a88fdd5717
 	    }
 	    function bind(group, groupData) {
 	      var i, n = group.length, m = groupData.length, n0 = Math.min(n, m), updateNodes = new Array(m), enterNodes = new Array(m), exitNodes = new Array(n), node, nodeData;
@@ -37776,91 +38463,9 @@ module.exports =
 	    if (d3_event_dragSelect == null) {
 	      d3_event_dragSelect = "onselectstart" in node ? false : d3_vendorSymbol(node.style, "userSelect");
 	    }
-<<<<<<< HEAD
-
-	    return copy;
-	  };
-
-	  treeProto.add = tree_add;
-	  treeProto.addAll = addAll;
-	  treeProto.cover = tree_cover;
-	  treeProto.data = tree_data;
-	  treeProto.extent = tree_extent;
-	  treeProto.find = tree_find;
-	  treeProto.remove = tree_remove;
-	  treeProto.removeAll = removeAll;
-	  treeProto.root = tree_root;
-	  treeProto.size = tree_size;
-	  treeProto.visit = tree_visit;
-	  treeProto.visitAfter = tree_visitAfter;
-	  treeProto.x = tree_x;
-	  treeProto.y = tree_y;
-
-	  exports.quadtree = quadtree;
-
-	  Object.defineProperty(exports, '__esModule', { value: true });
-
-	}));
-
-/***/ },
-/* 239 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// https://d3js.org/d3-queue/ Version 3.0.1. Copyright 2016 Mike Bostock.
-	(function (global, factory) {
-	   true ? factory(exports) :
-	  typeof define === 'function' && define.amd ? define(['exports'], factory) :
-	  (factory((global.d3 = global.d3 || {})));
-	}(this, function (exports) { 'use strict';
-
-	  var slice = [].slice;
-
-	  var noabort = {};
-
-	  function Queue(size) {
-	    if (!(size >= 1)) throw new Error;
-	    this._size = size;
-	    this._call =
-	    this._error = null;
-	    this._tasks = [];
-	    this._data = [];
-	    this._waiting =
-	    this._active =
-	    this._ended =
-	    this._start = 0; // inside a synchronous task callback?
-	  }
-
-	  Queue.prototype = queue.prototype = {
-	    constructor: Queue,
-	    defer: function(callback) {
-	      if (typeof callback !== "function" || this._call) throw new Error;
-	      if (this._error != null) return this;
-	      var t = slice.call(arguments, 1);
-	      t.push(callback);
-	      ++this._waiting, this._tasks.push(t);
-	      poke(this);
-	      return this;
-	    },
-	    abort: function() {
-	      if (this._error == null) abort(this, new Error("abort"));
-	      return this;
-	    },
-	    await: function(callback) {
-	      if (typeof callback !== "function" || this._call) throw new Error;
-	      this._call = function(error, results) { callback.apply(null, [error].concat(results)); };
-	      maybeNotify(this);
-	      return this;
-	    },
-	    awaitAll: function(callback) {
-	      if (typeof callback !== "function" || this._call) throw new Error;
-	      this._call = callback;
-	      maybeNotify(this);
-	      return this;
-=======
 	    if (d3_event_dragSelect) {
 	      var style = d3_documentElement(node).style, select = style[d3_event_dragSelect];
 	      style[d3_event_dragSelect] = "none";
->>>>>>> 4bb18f8603293f2bcdc29db9247561a88fdd5717
 	    }
 	    return function(suppressClick) {
 	      w.on(name, null);
@@ -37985,33 +38590,8 @@ module.exports =
 	  function d3_cross2d(a, b, c) {
 	    return (b[0] - a[0]) * (c[1] - a[1]) - (b[1] - a[1]) * (c[0] - a[0]);
 	  }
-<<<<<<< HEAD
-
-	  exports.queue = queue;
-
-	  Object.defineProperty(exports, '__esModule', { value: true });
-
-	}));
-
-/***/ },
-/* 240 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// https://d3js.org/d3-shape/ Version 1.0.0. Copyright 2016 Mike Bostock.
-	(function (global, factory) {
-	   true ? factory(exports, __webpack_require__(237)) :
-	  typeof define === 'function' && define.amd ? define(['exports', 'd3-path'], factory) :
-	  (factory((global.d3 = global.d3 || {}),global.d3));
-	}(this, function (exports,d3Path) { 'use strict';
-
-	  function constant(x) {
-	    return function constant() {
-	      return x;
-	    };
-=======
 	  function d3_acos(x) {
 	    return x > 1 ? 0 : x < -1 ? π : Math.acos(x);
->>>>>>> 4bb18f8603293f2bcdc29db9247561a88fdd5717
 	  }
 	  function d3_asin(x) {
 	    return x > 1 ? halfπ : x < -1 ? -halfπ : Math.asin(x);
@@ -40101,316 +40681,6 @@ module.exports =
 	        var point = rotate(λ, φ);
 	        if (pointVisible(λ = point[0], φ = point[1])) listener.point(λ, φ);
 	      }
-<<<<<<< HEAD
-	      s0[j - 1][1] += s0[j - 1][0] = y;
-	      if (s1) y -= s2 / s1;
-	    }
-	    s0[j - 1][1] += s0[j - 1][0] = y;
-	    none(series, order);
-	  }
-
-	  function ascending(series) {
-	    var sums = series.map(sum);
-	    return none$1(series).sort(function(a, b) { return sums[a] - sums[b]; });
-	  }
-
-	  function sum(series) {
-	    var s = 0, i = -1, n = series.length, v;
-	    while (++i < n) if (v = +series[i][1]) s += v;
-	    return s;
-	  }
-
-	  function descending$1(series) {
-	    return ascending(series).reverse();
-	  }
-
-	  function insideOut(series) {
-	    var n = series.length,
-	        i,
-	        j,
-	        sums = series.map(sum),
-	        order = none$1(series).sort(function(a, b) { return sums[b] - sums[a]; }),
-	        top = 0,
-	        bottom = 0,
-	        tops = [],
-	        bottoms = [];
-
-	    for (i = 0; i < n; ++i) {
-	      j = order[i];
-	      if (top < bottom) {
-	        top += sums[j];
-	        tops.push(j);
-	      } else {
-	        bottom += sums[j];
-	        bottoms.push(j);
-	      }
-	    }
-
-	    return bottoms.reverse().concat(tops);
-	  }
-
-	  function reverse(series) {
-	    return none$1(series).reverse();
-	  }
-
-	  exports.arc = arc;
-	  exports.area = area;
-	  exports.line = line;
-	  exports.pie = pie;
-	  exports.radialArea = radialArea;
-	  exports.radialLine = radialLine$1;
-	  exports.symbol = symbol;
-	  exports.symbols = symbols;
-	  exports.symbolCircle = circle;
-	  exports.symbolCross = cross;
-	  exports.symbolDiamond = diamond;
-	  exports.symbolSquare = square;
-	  exports.symbolStar = star;
-	  exports.symbolTriangle = triangle;
-	  exports.symbolWye = wye;
-	  exports.curveBasisClosed = basisClosed;
-	  exports.curveBasisOpen = basisOpen;
-	  exports.curveBasis = basis;
-	  exports.curveBundle = bundle;
-	  exports.curveCardinalClosed = cardinalClosed;
-	  exports.curveCardinalOpen = cardinalOpen;
-	  exports.curveCardinal = cardinal;
-	  exports.curveCatmullRomClosed = catmullRomClosed;
-	  exports.curveCatmullRomOpen = catmullRomOpen;
-	  exports.curveCatmullRom = catmullRom;
-	  exports.curveLinearClosed = linearClosed;
-	  exports.curveLinear = curveLinear;
-	  exports.curveMonotoneX = monotoneX;
-	  exports.curveMonotoneY = monotoneY;
-	  exports.curveNatural = natural;
-	  exports.curveStep = step;
-	  exports.curveStepAfter = stepAfter;
-	  exports.curveStepBefore = stepBefore;
-	  exports.stack = stack;
-	  exports.stackOffsetExpand = expand;
-	  exports.stackOffsetNone = none;
-	  exports.stackOffsetSilhouette = silhouette;
-	  exports.stackOffsetWiggle = wiggle;
-	  exports.stackOrderAscending = ascending;
-	  exports.stackOrderDescending = descending$1;
-	  exports.stackOrderInsideOut = insideOut;
-	  exports.stackOrderNone = none$1;
-	  exports.stackOrderReverse = reverse;
-
-	  Object.defineProperty(exports, '__esModule', { value: true });
-
-	}));
-
-/***/ },
-/* 241 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// https://d3js.org/d3-color/ Version 1.0.0. Copyright 2016 Mike Bostock.
-	(function (global, factory) {
-	   true ? factory(exports) :
-	  typeof define === 'function' && define.amd ? define(['exports'], factory) :
-	  (factory((global.d3 = global.d3 || {})));
-	}(this, function (exports) { 'use strict';
-
-	  function define(constructor, factory, prototype) {
-	    constructor.prototype = factory.prototype = prototype;
-	    prototype.constructor = constructor;
-	  }
-
-	  function extend(parent, definition) {
-	    var prototype = Object.create(parent.prototype);
-	    for (var key in definition) prototype[key] = definition[key];
-	    return prototype;
-	  }
-
-	  function Color() {}
-
-	  var darker = 0.7;
-	  var brighter = 1 / darker;
-
-	  var reHex3 = /^#([0-9a-f]{3})$/;
-	  var reHex6 = /^#([0-9a-f]{6})$/;
-	  var reRgbInteger = /^rgb\(\s*([-+]?\d+)\s*,\s*([-+]?\d+)\s*,\s*([-+]?\d+)\s*\)$/;
-	  var reRgbPercent = /^rgb\(\s*([-+]?\d+(?:\.\d+)?)%\s*,\s*([-+]?\d+(?:\.\d+)?)%\s*,\s*([-+]?\d+(?:\.\d+)?)%\s*\)$/;
-	  var reRgbaInteger = /^rgba\(\s*([-+]?\d+)\s*,\s*([-+]?\d+)\s*,\s*([-+]?\d+)\s*,\s*([-+]?\d+(?:\.\d+)?)\s*\)$/;
-	  var reRgbaPercent = /^rgba\(\s*([-+]?\d+(?:\.\d+)?)%\s*,\s*([-+]?\d+(?:\.\d+)?)%\s*,\s*([-+]?\d+(?:\.\d+)?)%\s*,\s*([-+]?\d+(?:\.\d+)?)\s*\)$/;
-	  var reHslPercent = /^hsl\(\s*([-+]?\d+(?:\.\d+)?)\s*,\s*([-+]?\d+(?:\.\d+)?)%\s*,\s*([-+]?\d+(?:\.\d+)?)%\s*\)$/;
-	  var reHslaPercent = /^hsla\(\s*([-+]?\d+(?:\.\d+)?)\s*,\s*([-+]?\d+(?:\.\d+)?)%\s*,\s*([-+]?\d+(?:\.\d+)?)%\s*,\s*([-+]?\d+(?:\.\d+)?)\s*\)$/;
-	  var named = {
-	    aliceblue: 0xf0f8ff,
-	    antiquewhite: 0xfaebd7,
-	    aqua: 0x00ffff,
-	    aquamarine: 0x7fffd4,
-	    azure: 0xf0ffff,
-	    beige: 0xf5f5dc,
-	    bisque: 0xffe4c4,
-	    black: 0x000000,
-	    blanchedalmond: 0xffebcd,
-	    blue: 0x0000ff,
-	    blueviolet: 0x8a2be2,
-	    brown: 0xa52a2a,
-	    burlywood: 0xdeb887,
-	    cadetblue: 0x5f9ea0,
-	    chartreuse: 0x7fff00,
-	    chocolate: 0xd2691e,
-	    coral: 0xff7f50,
-	    cornflowerblue: 0x6495ed,
-	    cornsilk: 0xfff8dc,
-	    crimson: 0xdc143c,
-	    cyan: 0x00ffff,
-	    darkblue: 0x00008b,
-	    darkcyan: 0x008b8b,
-	    darkgoldenrod: 0xb8860b,
-	    darkgray: 0xa9a9a9,
-	    darkgreen: 0x006400,
-	    darkgrey: 0xa9a9a9,
-	    darkkhaki: 0xbdb76b,
-	    darkmagenta: 0x8b008b,
-	    darkolivegreen: 0x556b2f,
-	    darkorange: 0xff8c00,
-	    darkorchid: 0x9932cc,
-	    darkred: 0x8b0000,
-	    darksalmon: 0xe9967a,
-	    darkseagreen: 0x8fbc8f,
-	    darkslateblue: 0x483d8b,
-	    darkslategray: 0x2f4f4f,
-	    darkslategrey: 0x2f4f4f,
-	    darkturquoise: 0x00ced1,
-	    darkviolet: 0x9400d3,
-	    deeppink: 0xff1493,
-	    deepskyblue: 0x00bfff,
-	    dimgray: 0x696969,
-	    dimgrey: 0x696969,
-	    dodgerblue: 0x1e90ff,
-	    firebrick: 0xb22222,
-	    floralwhite: 0xfffaf0,
-	    forestgreen: 0x228b22,
-	    fuchsia: 0xff00ff,
-	    gainsboro: 0xdcdcdc,
-	    ghostwhite: 0xf8f8ff,
-	    gold: 0xffd700,
-	    goldenrod: 0xdaa520,
-	    gray: 0x808080,
-	    green: 0x008000,
-	    greenyellow: 0xadff2f,
-	    grey: 0x808080,
-	    honeydew: 0xf0fff0,
-	    hotpink: 0xff69b4,
-	    indianred: 0xcd5c5c,
-	    indigo: 0x4b0082,
-	    ivory: 0xfffff0,
-	    khaki: 0xf0e68c,
-	    lavender: 0xe6e6fa,
-	    lavenderblush: 0xfff0f5,
-	    lawngreen: 0x7cfc00,
-	    lemonchiffon: 0xfffacd,
-	    lightblue: 0xadd8e6,
-	    lightcoral: 0xf08080,
-	    lightcyan: 0xe0ffff,
-	    lightgoldenrodyellow: 0xfafad2,
-	    lightgray: 0xd3d3d3,
-	    lightgreen: 0x90ee90,
-	    lightgrey: 0xd3d3d3,
-	    lightpink: 0xffb6c1,
-	    lightsalmon: 0xffa07a,
-	    lightseagreen: 0x20b2aa,
-	    lightskyblue: 0x87cefa,
-	    lightslategray: 0x778899,
-	    lightslategrey: 0x778899,
-	    lightsteelblue: 0xb0c4de,
-	    lightyellow: 0xffffe0,
-	    lime: 0x00ff00,
-	    limegreen: 0x32cd32,
-	    linen: 0xfaf0e6,
-	    magenta: 0xff00ff,
-	    maroon: 0x800000,
-	    mediumaquamarine: 0x66cdaa,
-	    mediumblue: 0x0000cd,
-	    mediumorchid: 0xba55d3,
-	    mediumpurple: 0x9370db,
-	    mediumseagreen: 0x3cb371,
-	    mediumslateblue: 0x7b68ee,
-	    mediumspringgreen: 0x00fa9a,
-	    mediumturquoise: 0x48d1cc,
-	    mediumvioletred: 0xc71585,
-	    midnightblue: 0x191970,
-	    mintcream: 0xf5fffa,
-	    mistyrose: 0xffe4e1,
-	    moccasin: 0xffe4b5,
-	    navajowhite: 0xffdead,
-	    navy: 0x000080,
-	    oldlace: 0xfdf5e6,
-	    olive: 0x808000,
-	    olivedrab: 0x6b8e23,
-	    orange: 0xffa500,
-	    orangered: 0xff4500,
-	    orchid: 0xda70d6,
-	    palegoldenrod: 0xeee8aa,
-	    palegreen: 0x98fb98,
-	    paleturquoise: 0xafeeee,
-	    palevioletred: 0xdb7093,
-	    papayawhip: 0xffefd5,
-	    peachpuff: 0xffdab9,
-	    peru: 0xcd853f,
-	    pink: 0xffc0cb,
-	    plum: 0xdda0dd,
-	    powderblue: 0xb0e0e6,
-	    purple: 0x800080,
-	    rebeccapurple: 0x663399,
-	    red: 0xff0000,
-	    rosybrown: 0xbc8f8f,
-	    royalblue: 0x4169e1,
-	    saddlebrown: 0x8b4513,
-	    salmon: 0xfa8072,
-	    sandybrown: 0xf4a460,
-	    seagreen: 0x2e8b57,
-	    seashell: 0xfff5ee,
-	    sienna: 0xa0522d,
-	    silver: 0xc0c0c0,
-	    skyblue: 0x87ceeb,
-	    slateblue: 0x6a5acd,
-	    slategray: 0x708090,
-	    slategrey: 0x708090,
-	    snow: 0xfffafa,
-	    springgreen: 0x00ff7f,
-	    steelblue: 0x4682b4,
-	    tan: 0xd2b48c,
-	    teal: 0x008080,
-	    thistle: 0xd8bfd8,
-	    tomato: 0xff6347,
-	    turquoise: 0x40e0d0,
-	    violet: 0xee82ee,
-	    wheat: 0xf5deb3,
-	    white: 0xffffff,
-	    whitesmoke: 0xf5f5f5,
-	    yellow: 0xffff00,
-	    yellowgreen: 0x9acd32
-	  };
-
-	  define(Color, color, {
-	    displayable: function() {
-	      return this.rgb().displayable();
-	    },
-	    toString: function() {
-	      return this.rgb() + "";
-	    }
-	  });
-
-	  function color(format) {
-	    var m;
-	    format = (format + "").trim().toLowerCase();
-	    return (m = reHex3.exec(format)) ? (m = parseInt(m[1], 16), new Rgb((m >> 8 & 0xf) | (m >> 4 & 0x0f0), (m >> 4 & 0xf) | (m & 0xf0), ((m & 0xf) << 4) | (m & 0xf), 1)) // #f00
-	        : (m = reHex6.exec(format)) ? rgbn(parseInt(m[1], 16)) // #ff0000
-	        : (m = reRgbInteger.exec(format)) ? new Rgb(m[1], m[2], m[3], 1) // rgb(255, 0, 0)
-	        : (m = reRgbPercent.exec(format)) ? new Rgb(m[1] * 255 / 100, m[2] * 255 / 100, m[3] * 255 / 100, 1) // rgb(100%, 0%, 0%)
-	        : (m = reRgbaInteger.exec(format)) ? rgba(m[1], m[2], m[3], m[4]) // rgba(255, 0, 0, 1)
-	        : (m = reRgbaPercent.exec(format)) ? rgba(m[1] * 255 / 100, m[2] * 255 / 100, m[3] * 255 / 100, m[4]) // rgb(100%, 0%, 0%, 1)
-	        : (m = reHslPercent.exec(format)) ? hsla(m[1], m[2] / 100, m[3] / 100, 1) // hsl(120, 50%, 50%)
-	        : (m = reHslaPercent.exec(format)) ? hsla(m[1], m[2] / 100, m[3] / 100, m[4]) // hsla(120, 50%, 50%, 1)
-	        : named.hasOwnProperty(format) ? rgbn(named[format])
-	        : format === "transparent" ? new Rgb(NaN, NaN, NaN, 0)
-	        : null;
-=======
 	      function pointLine(λ, φ) {
 	        var point = rotate(λ, φ);
 	        line.point(point[0], point[1]);
@@ -40458,7 +40728,6 @@ module.exports =
 	      }
 	      return clip;
 	    };
->>>>>>> 4bb18f8603293f2bcdc29db9247561a88fdd5717
 	  }
 	  function d3_geo_clipSegmentLength1(segment) {
 	    return segment.length > 1;
@@ -40678,97 +40947,6 @@ module.exports =
 	      if (φ < -r) code |= 4; else if (φ > r) code |= 8;
 	      return code;
 	    }
-<<<<<<< HEAD
-	  }));
-
-	  exports.color = color;
-	  exports.rgb = rgb;
-	  exports.hsl = hsl;
-	  exports.lab = lab;
-	  exports.hcl = hcl;
-	  exports.cubehelix = cubehelix;
-
-	  Object.defineProperty(exports, '__esModule', { value: true });
-
-	}));
-
-/***/ },
-/* 242 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// https://d3js.org/d3-interpolate/ Version 1.1.0. Copyright 2016 Mike Bostock.
-	(function (global, factory) {
-	   true ? factory(exports, __webpack_require__(241)) :
-	  typeof define === 'function' && define.amd ? define(['exports', 'd3-color'], factory) :
-	  (factory((global.d3 = global.d3 || {}),global.d3));
-	}(this, function (exports,d3Color) { 'use strict';
-
-	  function basis(t1, v0, v1, v2, v3) {
-	    var t2 = t1 * t1, t3 = t2 * t1;
-	    return ((1 - 3 * t1 + 3 * t2 - t3) * v0
-	        + (4 - 6 * t2 + 3 * t3) * v1
-	        + (1 + 3 * t1 + 3 * t2 - 3 * t3) * v2
-	        + t3 * v3) / 6;
-	  }
-
-	  function basis$1(values) {
-	    var n = values.length - 1;
-	    return function(t) {
-	      var i = t <= 0 ? (t = 0) : t >= 1 ? (t = 1, n - 1) : Math.floor(t * n),
-	          v1 = values[i],
-	          v2 = values[i + 1],
-	          v0 = i > 0 ? values[i - 1] : 2 * v1 - v2,
-	          v3 = i < n - 1 ? values[i + 2] : 2 * v2 - v1;
-	      return basis((t - i / n) * n, v0, v1, v2, v3);
-	    };
-	  }
-
-	  function basisClosed(values) {
-	    var n = values.length;
-	    return function(t) {
-	      var i = Math.floor(((t %= 1) < 0 ? ++t : t) * n),
-	          v0 = values[(i + n - 1) % n],
-	          v1 = values[i % n],
-	          v2 = values[(i + 1) % n],
-	          v3 = values[(i + 2) % n];
-	      return basis((t - i / n) * n, v0, v1, v2, v3);
-	    };
-	  }
-
-	  function constant(x) {
-	    return function() {
-	      return x;
-	    };
-	  }
-
-	  function linear(a, d) {
-	    return function(t) {
-	      return a + t * d;
-	    };
-	  }
-
-	  function exponential(a, b, y) {
-	    return a = Math.pow(a, y), b = Math.pow(b, y) - a, y = 1 / y, function(t) {
-	      return Math.pow(a + t * b, y);
-	    };
-	  }
-
-	  function hue(a, b) {
-	    var d = b - a;
-	    return d ? linear(a, d > 180 || d < -180 ? d - 360 * Math.round(d / 360) : d) : constant(isNaN(a) ? b : a);
-	  }
-
-	  function gamma(y) {
-	    return (y = +y) === 1 ? nogamma : function(a, b) {
-	      return b - a ? exponential(a, b, y) : constant(isNaN(a) ? b : a);
-	    };
-	  }
-
-	  function nogamma(a, b) {
-	    var d = b - a;
-	    return d ? linear(a, d) : constant(isNaN(a) ? b : a);
-=======
->>>>>>> 4bb18f8603293f2bcdc29db9247561a88fdd5717
 	  }
 	  function d3_geom_clipLine(x0, y0, x1, y1) {
 	    return function(line) {
@@ -40840,6200 +41018,6 @@ module.exports =
 	        return clipExtent;
 	      }
 	    };
-<<<<<<< HEAD
-	  }
-
-	  function one(b) {
-	    return function(t) {
-	      return b(t) + "";
-	    };
-	  }
-
-	  function string(a, b) {
-	    var bi = reA.lastIndex = reB.lastIndex = 0, // scan index for next number in b
-	        am, // current match in a
-	        bm, // current match in b
-	        bs, // string preceding current number in b, if any
-	        i = -1, // index in s
-	        s = [], // string constants and placeholders
-	        q = []; // number interpolators
-
-	    // Coerce inputs to strings.
-	    a = a + "", b = b + "";
-
-	    // Interpolate pairs of numbers in a & b.
-	    while ((am = reA.exec(a))
-	        && (bm = reB.exec(b))) {
-	      if ((bs = bm.index) > bi) { // a string precedes the next number in b
-	        bs = b.slice(bi, bs);
-	        if (s[i]) s[i] += bs; // coalesce with previous string
-	        else s[++i] = bs;
-	      }
-	      if ((am = am[0]) === (bm = bm[0])) { // numbers in a & b match
-	        if (s[i]) s[i] += bm; // coalesce with previous string
-	        else s[++i] = bm;
-	      } else { // interpolate non-matching numbers
-	        s[++i] = null;
-	        q.push({i: i, x: number(am, bm)});
-	      }
-	      bi = reB.lastIndex;
-	    }
-
-	    // Add remains of b.
-	    if (bi < b.length) {
-	      bs = b.slice(bi);
-	      if (s[i]) s[i] += bs; // coalesce with previous string
-	      else s[++i] = bs;
-	    }
-
-	    // Special optimization for only a single match.
-	    // Otherwise, interpolate each of the numbers and rejoin the string.
-	    return s.length < 2 ? (q[0]
-	        ? one(q[0].x)
-	        : zero(b))
-	        : (b = q.length, function(t) {
-	            for (var i = 0, o; i < b; ++i) s[(o = q[i]).i] = o.x(t);
-	            return s.join("");
-	          });
-	  }
-
-	  function value(a, b) {
-	    var t = typeof b, c;
-	    return b == null || t === "boolean" ? constant(b)
-	        : (t === "number" ? number
-	        : t === "string" ? ((c = d3Color.color(b)) ? (b = c, rgb$1) : string)
-	        : b instanceof d3Color.color ? rgb$1
-	        : b instanceof Date ? date
-	        : Array.isArray(b) ? array
-	        : isNaN(b) ? object
-	        : number)(a, b);
-	  }
-
-	  function round(a, b) {
-	    return a = +a, b -= a, function(t) {
-	      return Math.round(a + b * t);
-	    };
-	  }
-
-	  var degrees = 180 / Math.PI;
-
-	  var identity = {
-	    translateX: 0,
-	    translateY: 0,
-	    rotate: 0,
-	    skewX: 0,
-	    scaleX: 1,
-	    scaleY: 1
-	  };
-
-	  function decompose(a, b, c, d, e, f) {
-	    var scaleX, scaleY, skewX;
-	    if (scaleX = Math.sqrt(a * a + b * b)) a /= scaleX, b /= scaleX;
-	    if (skewX = a * c + b * d) c -= a * skewX, d -= b * skewX;
-	    if (scaleY = Math.sqrt(c * c + d * d)) c /= scaleY, d /= scaleY, skewX /= scaleY;
-	    if (a * d < b * c) a = -a, b = -b, skewX = -skewX, scaleX = -scaleX;
-	    return {
-	      translateX: e,
-	      translateY: f,
-	      rotate: Math.atan2(b, a) * degrees,
-	      skewX: Math.atan(skewX) * degrees,
-	      scaleX: scaleX,
-	      scaleY: scaleY
-	    };
-	  }
-
-	  var cssNode;
-	  var cssRoot;
-	  var cssView;
-	  var svgNode;
-	  function parseCss(value) {
-	    if (value === "none") return identity;
-	    if (!cssNode) cssNode = document.createElement("DIV"), cssRoot = document.documentElement, cssView = document.defaultView;
-	    cssNode.style.transform = value;
-	    value = cssView.getComputedStyle(cssRoot.appendChild(cssNode), null).getPropertyValue("transform");
-	    cssRoot.removeChild(cssNode);
-	    value = value.slice(7, -1).split(",");
-	    return decompose(+value[0], +value[1], +value[2], +value[3], +value[4], +value[5]);
-	  }
-
-	  function parseSvg(value) {
-	    if (value == null) return identity;
-	    if (!svgNode) svgNode = document.createElementNS("http://www.w3.org/2000/svg", "g");
-	    svgNode.setAttribute("transform", value);
-	    if (!(value = svgNode.transform.baseVal.consolidate())) return identity;
-	    value = value.matrix;
-	    return decompose(value.a, value.b, value.c, value.d, value.e, value.f);
-	  }
-
-	  function interpolateTransform(parse, pxComma, pxParen, degParen) {
-
-	    function pop(s) {
-	      return s.length ? s.pop() + " " : "";
-	    }
-
-	    function translate(xa, ya, xb, yb, s, q) {
-	      if (xa !== xb || ya !== yb) {
-	        var i = s.push("translate(", null, pxComma, null, pxParen);
-	        q.push({i: i - 4, x: number(xa, xb)}, {i: i - 2, x: number(ya, yb)});
-	      } else if (xb || yb) {
-	        s.push("translate(" + xb + pxComma + yb + pxParen);
-	      }
-	    }
-
-	    function rotate(a, b, s, q) {
-	      if (a !== b) {
-	        if (a - b > 180) b += 360; else if (b - a > 180) a += 360; // shortest path
-	        q.push({i: s.push(pop(s) + "rotate(", null, degParen) - 2, x: number(a, b)});
-	      } else if (b) {
-	        s.push(pop(s) + "rotate(" + b + degParen);
-	      }
-	    }
-
-	    function skewX(a, b, s, q) {
-	      if (a !== b) {
-	        q.push({i: s.push(pop(s) + "skewX(", null, degParen) - 2, x: number(a, b)});
-	      } else if (b) {
-	        s.push(pop(s) + "skewX(" + b + degParen);
-	      }
-	    }
-
-	    function scale(xa, ya, xb, yb, s, q) {
-	      if (xa !== xb || ya !== yb) {
-	        var i = s.push(pop(s) + "scale(", null, ",", null, ")");
-	        q.push({i: i - 4, x: number(xa, xb)}, {i: i - 2, x: number(ya, yb)});
-	      } else if (xb !== 1 || yb !== 1) {
-	        s.push(pop(s) + "scale(" + xb + "," + yb + ")");
-	      }
-	    }
-
-	    return function(a, b) {
-	      var s = [], // string constants and placeholders
-	          q = []; // number interpolators
-	      a = parse(a), b = parse(b);
-	      translate(a.translateX, a.translateY, b.translateX, b.translateY, s, q);
-	      rotate(a.rotate, b.rotate, s, q);
-	      skewX(a.skewX, b.skewX, s, q);
-	      scale(a.scaleX, a.scaleY, b.scaleX, b.scaleY, s, q);
-	      a = b = null; // gc
-	      return function(t) {
-	        var i = -1, n = q.length, o;
-	        while (++i < n) s[(o = q[i]).i] = o.x(t);
-	        return s.join("");
-	      };
-	    };
-	  }
-
-	  var interpolateTransformCss = interpolateTransform(parseCss, "px, ", "px)", "deg)");
-	  var interpolateTransformSvg = interpolateTransform(parseSvg, ", ", ")", ")");
-
-	  var rho = Math.SQRT2;
-	  var rho2 = 2;
-	  var rho4 = 4;
-	  var epsilon2 = 1e-12;
-	  function cosh(x) {
-	    return ((x = Math.exp(x)) + 1 / x) / 2;
-	  }
-
-	  function sinh(x) {
-	    return ((x = Math.exp(x)) - 1 / x) / 2;
-	  }
-
-	  function tanh(x) {
-	    return ((x = Math.exp(2 * x)) - 1) / (x + 1);
-	  }
-
-	  // p0 = [ux0, uy0, w0]
-	  // p1 = [ux1, uy1, w1]
-	  function zoom(p0, p1) {
-	    var ux0 = p0[0], uy0 = p0[1], w0 = p0[2],
-	        ux1 = p1[0], uy1 = p1[1], w1 = p1[2],
-	        dx = ux1 - ux0,
-	        dy = uy1 - uy0,
-	        d2 = dx * dx + dy * dy,
-	        i,
-	        S;
-
-	    // Special case for u0 ≅ u1.
-	    if (d2 < epsilon2) {
-	      S = Math.log(w1 / w0) / rho;
-	      i = function(t) {
-	        return [
-	          ux0 + t * dx,
-	          uy0 + t * dy,
-	          w0 * Math.exp(rho * t * S)
-	        ];
-	      }
-	    }
-
-	    // General case.
-	    else {
-	      var d1 = Math.sqrt(d2),
-	          b0 = (w1 * w1 - w0 * w0 + rho4 * d2) / (2 * w0 * rho2 * d1),
-	          b1 = (w1 * w1 - w0 * w0 - rho4 * d2) / (2 * w1 * rho2 * d1),
-	          r0 = Math.log(Math.sqrt(b0 * b0 + 1) - b0),
-	          r1 = Math.log(Math.sqrt(b1 * b1 + 1) - b1);
-	      S = (r1 - r0) / rho;
-	      i = function(t) {
-	        var s = t * S,
-	            coshr0 = cosh(r0),
-	            u = w0 / (rho2 * d1) * (coshr0 * tanh(rho * s + r0) - sinh(r0));
-	        return [
-	          ux0 + u * dx,
-	          uy0 + u * dy,
-	          w0 * coshr0 / cosh(rho * s + r0)
-	        ];
-	      }
-	    }
-
-	    i.duration = S * 1000;
-
-	    return i;
-	  }
-
-	  function hsl$1(hue) {
-	    return function(start, end) {
-	      var h = hue((start = d3Color.hsl(start)).h, (end = d3Color.hsl(end)).h),
-	          s = nogamma(start.s, end.s),
-	          l = nogamma(start.l, end.l),
-	          opacity = nogamma(start.opacity, end.opacity);
-	      return function(t) {
-	        start.h = h(t);
-	        start.s = s(t);
-	        start.l = l(t);
-	        start.opacity = opacity(t);
-	        return start + "";
-	      };
-	    }
-	  }
-
-	  var hsl$2 = hsl$1(hue);
-	  var hslLong = hsl$1(nogamma);
-
-	  function lab$1(start, end) {
-	    var l = nogamma((start = d3Color.lab(start)).l, (end = d3Color.lab(end)).l),
-	        a = nogamma(start.a, end.a),
-	        b = nogamma(start.b, end.b),
-	        opacity = nogamma(start.opacity, end.opacity);
-	    return function(t) {
-	      start.l = l(t);
-	      start.a = a(t);
-	      start.b = b(t);
-	      start.opacity = opacity(t);
-	      return start + "";
-	    };
-	  }
-
-	  function hcl$1(hue) {
-	    return function(start, end) {
-	      var h = hue((start = d3Color.hcl(start)).h, (end = d3Color.hcl(end)).h),
-	          c = nogamma(start.c, end.c),
-	          l = nogamma(start.l, end.l),
-	          opacity = nogamma(start.opacity, end.opacity);
-	      return function(t) {
-	        start.h = h(t);
-	        start.c = c(t);
-	        start.l = l(t);
-	        start.opacity = opacity(t);
-	        return start + "";
-	      };
-	    }
-	  }
-
-	  var hcl$2 = hcl$1(hue);
-	  var hclLong = hcl$1(nogamma);
-
-	  function cubehelix$1(hue) {
-	    return (function cubehelixGamma(y) {
-	      y = +y;
-
-	      function cubehelix(start, end) {
-	        var h = hue((start = d3Color.cubehelix(start)).h, (end = d3Color.cubehelix(end)).h),
-	            s = nogamma(start.s, end.s),
-	            l = nogamma(start.l, end.l),
-	            opacity = nogamma(start.opacity, end.opacity);
-	        return function(t) {
-	          start.h = h(t);
-	          start.s = s(t);
-	          start.l = l(Math.pow(t, y));
-	          start.opacity = opacity(t);
-	          return start + "";
-	        };
-	      }
-
-	      cubehelix.gamma = cubehelixGamma;
-
-	      return cubehelix;
-	    })(1);
-	  }
-
-	  var cubehelix$2 = cubehelix$1(hue);
-	  var cubehelixLong = cubehelix$1(nogamma);
-
-	  function quantize(interpolator, n) {
-	    var samples = new Array(n);
-	    for (var i = 0; i < n; ++i) samples[i] = interpolator(i / (n - 1));
-	    return samples;
-	  }
-
-	  exports.interpolate = value;
-	  exports.interpolateArray = array;
-	  exports.interpolateBasis = basis$1;
-	  exports.interpolateBasisClosed = basisClosed;
-	  exports.interpolateDate = date;
-	  exports.interpolateNumber = number;
-	  exports.interpolateObject = object;
-	  exports.interpolateRound = round;
-	  exports.interpolateString = string;
-	  exports.interpolateTransformCss = interpolateTransformCss;
-	  exports.interpolateTransformSvg = interpolateTransformSvg;
-	  exports.interpolateZoom = zoom;
-	  exports.interpolateRgb = rgb$1;
-	  exports.interpolateRgbBasis = rgbBasis;
-	  exports.interpolateRgbBasisClosed = rgbBasisClosed;
-	  exports.interpolateHsl = hsl$2;
-	  exports.interpolateHslLong = hslLong;
-	  exports.interpolateLab = lab$1;
-	  exports.interpolateHcl = hcl$2;
-	  exports.interpolateHclLong = hclLong;
-	  exports.interpolateCubehelix = cubehelix$2;
-	  exports.interpolateCubehelixLong = cubehelixLong;
-	  exports.quantize = quantize;
-
-	  Object.defineProperty(exports, '__esModule', { value: true });
-
-	}));
-
-/***/ },
-/* 243 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// https://d3js.org/d3-dispatch/ Version 1.0.0. Copyright 2016 Mike Bostock.
-	(function (global, factory) {
-	   true ? factory(exports) :
-	  typeof define === 'function' && define.amd ? define(['exports'], factory) :
-	  (factory((global.d3 = global.d3 || {})));
-	}(this, function (exports) { 'use strict';
-
-	  var noop = {value: function() {}};
-
-	  function dispatch() {
-	    for (var i = 0, n = arguments.length, _ = {}, t; i < n; ++i) {
-	      if (!(t = arguments[i] + "") || (t in _)) throw new Error("illegal type: " + t);
-	      _[t] = [];
-	    }
-	    return new Dispatch(_);
-	  }
-
-	  function Dispatch(_) {
-	    this._ = _;
-	  }
-
-	  function parseTypenames(typenames, types) {
-	    return typenames.trim().split(/^|\s+/).map(function(t) {
-	      var name = "", i = t.indexOf(".");
-	      if (i >= 0) name = t.slice(i + 1), t = t.slice(0, i);
-	      if (t && !types.hasOwnProperty(t)) throw new Error("unknown type: " + t);
-	      return {type: t, name: name};
-	    });
-	  }
-
-	  Dispatch.prototype = dispatch.prototype = {
-	    constructor: Dispatch,
-	    on: function(typename, callback) {
-	      var _ = this._,
-	          T = parseTypenames(typename + "", _),
-	          t,
-	          i = -1,
-	          n = T.length;
-
-	      // If no callback was specified, return the callback of the given type and name.
-	      if (arguments.length < 2) {
-	        while (++i < n) if ((t = (typename = T[i]).type) && (t = get(_[t], typename.name))) return t;
-	        return;
-	      }
-
-	      // If a type was specified, set the callback for the given type and name.
-	      // Otherwise, if a null callback was specified, remove callbacks of the given name.
-	      if (callback != null && typeof callback !== "function") throw new Error("invalid callback: " + callback);
-	      while (++i < n) {
-	        if (t = (typename = T[i]).type) _[t] = set(_[t], typename.name, callback);
-	        else if (callback == null) for (t in _) _[t] = set(_[t], typename.name, null);
-	      }
-
-	      return this;
-	    },
-	    copy: function() {
-	      var copy = {}, _ = this._;
-	      for (var t in _) copy[t] = _[t].slice();
-	      return new Dispatch(copy);
-	    },
-	    call: function(type, that) {
-	      if ((n = arguments.length - 2) > 0) for (var args = new Array(n), i = 0, n, t; i < n; ++i) args[i] = arguments[i + 2];
-	      if (!this._.hasOwnProperty(type)) throw new Error("unknown type: " + type);
-	      for (t = this._[type], i = 0, n = t.length; i < n; ++i) t[i].value.apply(that, args);
-	    },
-	    apply: function(type, that, args) {
-	      if (!this._.hasOwnProperty(type)) throw new Error("unknown type: " + type);
-	      for (var t = this._[type], i = 0, n = t.length; i < n; ++i) t[i].value.apply(that, args);
-	    }
-	  };
-
-	  function get(type, name) {
-	    for (var i = 0, n = type.length, c; i < n; ++i) {
-	      if ((c = type[i]).name === name) {
-	        return c.value;
-	      }
-	    }
-	  }
-
-	  function set(type, name, callback) {
-	    for (var i = 0, n = type.length; i < n; ++i) {
-	      if (type[i].name === name) {
-	        type[i] = noop, type = type.slice(0, i).concat(type.slice(i + 1));
-	        break;
-	      }
-	    }
-	    if (callback != null) type.push({name: name, value: callback});
-	    return type;
-	  }
-
-	  exports.dispatch = dispatch;
-
-	  Object.defineProperty(exports, '__esModule', { value: true });
-
-	}));
-
-/***/ },
-/* 244 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// https://d3js.org/d3-dsv/ Version 1.0.0. Copyright 2016 Mike Bostock.
-	(function (global, factory) {
-	   true ? factory(exports) :
-	  typeof define === 'function' && define.amd ? define(['exports'], factory) :
-	  (factory((global.d3 = global.d3 || {})));
-	}(this, function (exports) { 'use strict';
-
-	  function objectConverter(columns) {
-	    return new Function("d", "return {" + columns.map(function(name, i) {
-	      return JSON.stringify(name) + ": d[" + i + "]";
-	    }).join(",") + "}");
-	  }
-
-	  function customConverter(columns, f) {
-	    var object = objectConverter(columns);
-	    return function(row, i) {
-	      return f(object(row), i, columns);
-	    };
-	  }
-
-	  // Compute unique columns in order of discovery.
-	  function inferColumns(rows) {
-	    var columnSet = Object.create(null),
-	        columns = [];
-
-	    rows.forEach(function(row) {
-	      for (var column in row) {
-	        if (!(column in columnSet)) {
-	          columns.push(columnSet[column] = column);
-	        }
-	      }
-	    });
-
-	    return columns;
-	  }
-
-	  function dsv(delimiter) {
-	    var reFormat = new RegExp("[\"" + delimiter + "\n]"),
-	        delimiterCode = delimiter.charCodeAt(0);
-
-	    function parse(text, f) {
-	      var convert, columns, rows = parseRows(text, function(row, i) {
-	        if (convert) return convert(row, i - 1);
-	        columns = row, convert = f ? customConverter(row, f) : objectConverter(row);
-	      });
-	      rows.columns = columns;
-	      return rows;
-	    }
-
-	    function parseRows(text, f) {
-	      var EOL = {}, // sentinel value for end-of-line
-	          EOF = {}, // sentinel value for end-of-file
-	          rows = [], // output rows
-	          N = text.length,
-	          I = 0, // current character index
-	          n = 0, // the current line number
-	          t, // the current token
-	          eol; // is the current token followed by EOL?
-
-	      function token() {
-	        if (I >= N) return EOF; // special case: end of file
-	        if (eol) return eol = false, EOL; // special case: end of line
-
-	        // special case: quotes
-	        var j = I, c;
-	        if (text.charCodeAt(j) === 34) {
-	          var i = j;
-	          while (i++ < N) {
-	            if (text.charCodeAt(i) === 34) {
-	              if (text.charCodeAt(i + 1) !== 34) break;
-	              ++i;
-	            }
-	          }
-	          I = i + 2;
-	          c = text.charCodeAt(i + 1);
-	          if (c === 13) {
-	            eol = true;
-	            if (text.charCodeAt(i + 2) === 10) ++I;
-	          } else if (c === 10) {
-	            eol = true;
-	          }
-	          return text.slice(j + 1, i).replace(/""/g, "\"");
-	        }
-
-	        // common case: find next delimiter or newline
-	        while (I < N) {
-	          var k = 1;
-	          c = text.charCodeAt(I++);
-	          if (c === 10) eol = true; // \n
-	          else if (c === 13) { eol = true; if (text.charCodeAt(I) === 10) ++I, ++k; } // \r|\r\n
-	          else if (c !== delimiterCode) continue;
-	          return text.slice(j, I - k);
-	        }
-
-	        // special case: last token before EOF
-	        return text.slice(j);
-	      }
-
-	      while ((t = token()) !== EOF) {
-	        var a = [];
-	        while (t !== EOL && t !== EOF) {
-	          a.push(t);
-	          t = token();
-	        }
-	        if (f && (a = f(a, n++)) == null) continue;
-	        rows.push(a);
-	      }
-
-	      return rows;
-	    }
-
-	    function format(rows, columns) {
-	      if (columns == null) columns = inferColumns(rows);
-	      return [columns.map(formatValue).join(delimiter)].concat(rows.map(function(row) {
-	        return columns.map(function(column) {
-	          return formatValue(row[column]);
-	        }).join(delimiter);
-	      })).join("\n");
-	    }
-
-	    function formatRows(rows) {
-	      return rows.map(formatRow).join("\n");
-	    }
-
-	    function formatRow(row) {
-	      return row.map(formatValue).join(delimiter);
-	    }
-
-	    function formatValue(text) {
-	      return text == null ? ""
-	          : reFormat.test(text += "") ? "\"" + text.replace(/\"/g, "\"\"") + "\""
-	          : text;
-	    }
-
-	    return {
-	      parse: parse,
-	      parseRows: parseRows,
-	      format: format,
-	      formatRows: formatRows
-	    };
-	  }
-
-	  var csv = dsv(",");
-
-	  var csvParse = csv.parse;
-	  var csvParseRows = csv.parseRows;
-	  var csvFormat = csv.format;
-	  var csvFormatRows = csv.formatRows;
-
-	  var tsv = dsv("\t");
-
-	  var tsvParse = tsv.parse;
-	  var tsvParseRows = tsv.parseRows;
-	  var tsvFormat = tsv.format;
-	  var tsvFormatRows = tsv.formatRows;
-
-	  exports.dsvFormat = dsv;
-	  exports.csvParse = csvParse;
-	  exports.csvParseRows = csvParseRows;
-	  exports.csvFormat = csvFormat;
-	  exports.csvFormatRows = csvFormatRows;
-	  exports.tsvParse = tsvParse;
-	  exports.tsvParseRows = tsvParseRows;
-	  exports.tsvFormat = tsvFormat;
-	  exports.tsvFormatRows = tsvFormatRows;
-
-	  Object.defineProperty(exports, '__esModule', { value: true });
-
-	}));
-
-/***/ },
-/* 245 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var XMLHttpRequest = __webpack_require__(246).XMLHttpRequest;
-
-	Object.defineProperty(exports, '__esModule', { value: true });
-
-	var d3Collection = __webpack_require__(233);
-	var d3Dispatch = __webpack_require__(243);
-	var d3Dsv = __webpack_require__(244);
-
-	function request(url, callback) {
-	  var request,
-	      event = d3Dispatch.dispatch("beforesend", "progress", "load", "error"),
-	      mimeType,
-	      headers = d3Collection.map(),
-	      xhr = new XMLHttpRequest,
-	      user = null,
-	      password = null,
-	      response,
-	      responseType,
-	      timeout = 0;
-
-	  // If IE does not support CORS, use XDomainRequest.
-	  if (typeof XDomainRequest !== "undefined"
-	      && !("withCredentials" in xhr)
-	      && /^(http(s)?:)?\/\//.test(url)) xhr = new XDomainRequest;
-
-	  "onload" in xhr
-	      ? xhr.onload = xhr.onerror = xhr.ontimeout = respond
-	      : xhr.onreadystatechange = function(o) { xhr.readyState > 3 && respond(o); };
-
-	  function respond(o) {
-	    var status = xhr.status, result;
-	    if (!status && hasResponse(xhr)
-	        || status >= 200 && status < 300
-	        || status === 304) {
-	      if (response) {
-	        try {
-	          result = response.call(request, xhr);
-	        } catch (e) {
-	          event.call("error", request, e);
-	          return;
-	        }
-	      } else {
-	        result = xhr;
-	      }
-	      event.call("load", request, result);
-	    } else {
-	      event.call("error", request, o);
-	    }
-	  }
-
-	  xhr.onprogress = function(e) {
-	    event.call("progress", request, e);
-	  };
-
-	  request = {
-	    header: function(name, value) {
-	      name = (name + "").toLowerCase();
-	      if (arguments.length < 2) return headers.get(name);
-	      if (value == null) headers.remove(name);
-	      else headers.set(name, value + "");
-	      return request;
-	    },
-
-	    // If mimeType is non-null and no Accept header is set, a default is used.
-	    mimeType: function(value) {
-	      if (!arguments.length) return mimeType;
-	      mimeType = value == null ? null : value + "";
-	      return request;
-	    },
-
-	    // Specifies what type the response value should take;
-	    // for instance, arraybuffer, blob, document, or text.
-	    responseType: function(value) {
-	      if (!arguments.length) return responseType;
-	      responseType = value;
-	      return request;
-	    },
-
-	    timeout: function(value) {
-	      if (!arguments.length) return timeout;
-	      timeout = +value;
-	      return request;
-	    },
-
-	    user: function(value) {
-	      return arguments.length < 1 ? user : (user = value == null ? null : value + "", request);
-	    },
-
-	    password: function(value) {
-	      return arguments.length < 1 ? password : (password = value == null ? null : value + "", request);
-	    },
-
-	    // Specify how to convert the response content to a specific type;
-	    // changes the callback value on "load" events.
-	    response: function(value) {
-	      response = value;
-	      return request;
-	    },
-
-	    // Alias for send("GET", …).
-	    get: function(data, callback) {
-	      return request.send("GET", data, callback);
-	    },
-
-	    // Alias for send("POST", …).
-	    post: function(data, callback) {
-	      return request.send("POST", data, callback);
-	    },
-
-	    // If callback is non-null, it will be used for error and load events.
-	    send: function(method, data, callback) {
-	      xhr.open(method, url, true, user, password);
-	      if (mimeType != null && !headers.has("accept")) headers.set("accept", mimeType + ",*/*");
-	      if (xhr.setRequestHeader) headers.each(function(value, name) { xhr.setRequestHeader(name, value); });
-	      if (mimeType != null && xhr.overrideMimeType) xhr.overrideMimeType(mimeType);
-	      if (responseType != null) xhr.responseType = responseType;
-	      if (timeout > 0) xhr.timeout = timeout;
-	      if (callback == null && typeof data === "function") callback = data, data = null;
-	      if (callback != null && callback.length === 1) callback = fixCallback(callback);
-	      if (callback != null) request.on("error", callback).on("load", function(xhr) { callback(null, xhr); });
-	      event.call("beforesend", request, xhr);
-	      xhr.send(data == null ? null : data);
-	      return request;
-	    },
-
-	    abort: function() {
-	      xhr.abort();
-	      return request;
-	    },
-
-	    on: function() {
-	      var value = event.on.apply(event, arguments);
-	      return value === event ? request : value;
-	    }
-	  };
-
-	  if (callback != null) {
-	    if (typeof callback !== "function") throw new Error("invalid callback: " + callback);
-	    return request.get(callback);
-	  }
-
-	  return request;
-	}
-
-	function fixCallback(callback) {
-	  return function(error, xhr) {
-	    callback(error == null ? xhr : null);
-	  };
-	}
-
-	function hasResponse(xhr) {
-	  var type = xhr.responseType;
-	  return type && type !== "text"
-	      ? xhr.response // null on error
-	      : xhr.responseText; // "" on error
-	}
-
-	function type(defaultMimeType, response) {
-	  return function(url, callback) {
-	    var r = request(url).mimeType(defaultMimeType).response(response);
-	    if (callback != null) {
-	      if (typeof callback !== "function") throw new Error("invalid callback: " + callback);
-	      return r.get(callback);
-	    }
-	    return r;
-	  };
-	}
-
-	var html = type("text/html", function(xhr) {
-	  return document.createRange().createContextualFragment(xhr.responseText);
-	});
-
-	var json = type("application/json", function(xhr) {
-	  return JSON.parse(xhr.responseText);
-	});
-
-	var text = type("text/plain", function(xhr) {
-	  return xhr.responseText;
-	});
-
-	var xml = type("application/xml", function(xhr) {
-	  var xml = xhr.responseXML;
-	  if (!xml) throw new Error("parse error");
-	  return xml;
-	});
-
-	function dsv(defaultMimeType, parse) {
-	  return function(url, row, callback) {
-	    if (arguments.length < 3) callback = row, row = null;
-	    var r = request(url).mimeType(defaultMimeType);
-	    r.row = function(_) { return arguments.length ? r.response(responseOf(parse, row = _)) : row; };
-	    r.row(row);
-	    return callback ? r.get(callback) : r;
-	  };
-	}
-
-	function responseOf(parse, row) {
-	  return function(request) {
-	    return parse(request.responseText, row);
-	  };
-	}
-
-	var csv = dsv("text/csv", d3Dsv.csvParse);
-
-	var tsv = dsv("text/tab-separated-values", d3Dsv.tsvParse);
-
-	exports.request = request;
-	exports.html = html;
-	exports.json = json;
-	exports.text = text;
-	exports.xml = xml;
-	exports.csv = csv;
-	exports.tsv = tsv;
-
-/***/ },
-/* 246 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/**
-	 * Wrapper for built-in http.js to emulate the browser XMLHttpRequest object.
-	 *
-	 * This can be used with JS designed for browsers to improve reuse of code and
-	 * allow the use of existing libraries.
-	 *
-	 * Usage: include("XMLHttpRequest.js") and use XMLHttpRequest per W3C specs.
-	 *
-	 * @author Dan DeFelippi <dan@driverdan.com>
-	 * @contributor David Ellis <d.f.ellis@ieee.org>
-	 * @license MIT
-	 */
-
-	var Url = __webpack_require__(247);
-	var spawn = __webpack_require__(248).spawn;
-	var fs = __webpack_require__(249);
-
-	exports.XMLHttpRequest = function() {
-	  "use strict";
-
-	  /**
-	   * Private variables
-	   */
-	  var self = this;
-	  var http = __webpack_require__(250);
-	  var https = __webpack_require__(251);
-
-	  // Holds http.js objects
-	  var request;
-	  var response;
-
-	  // Request settings
-	  var settings = {};
-
-	  // Disable header blacklist.
-	  // Not part of XHR specs.
-	  var disableHeaderCheck = false;
-
-	  // Set some default headers
-	  var defaultHeaders = {
-	    "User-Agent": "node-XMLHttpRequest",
-	    "Accept": "*/*",
-	  };
-
-	  var headers = {};
-	  var headersCase = {};
-
-	  // These headers are not user setable.
-	  // The following are allowed but banned in the spec:
-	  // * user-agent
-	  var forbiddenRequestHeaders = [
-	    "accept-charset",
-	    "accept-encoding",
-	    "access-control-request-headers",
-	    "access-control-request-method",
-	    "connection",
-	    "content-length",
-	    "content-transfer-encoding",
-	    "cookie",
-	    "cookie2",
-	    "date",
-	    "expect",
-	    "host",
-	    "keep-alive",
-	    "origin",
-	    "referer",
-	    "te",
-	    "trailer",
-	    "transfer-encoding",
-	    "upgrade",
-	    "via"
-	  ];
-
-	  // These request methods are not allowed
-	  var forbiddenRequestMethods = [
-	    "TRACE",
-	    "TRACK",
-	    "CONNECT"
-	  ];
-
-	  // Send flag
-	  var sendFlag = false;
-	  // Error flag, used when errors occur or abort is called
-	  var errorFlag = false;
-
-	  // Event listeners
-	  var listeners = {};
-
-	  /**
-	   * Constants
-	   */
-
-	  this.UNSENT = 0;
-	  this.OPENED = 1;
-	  this.HEADERS_RECEIVED = 2;
-	  this.LOADING = 3;
-	  this.DONE = 4;
-
-	  /**
-	   * Public vars
-	   */
-
-	  // Current state
-	  this.readyState = this.UNSENT;
-
-	  // default ready state change handler in case one is not set or is set late
-	  this.onreadystatechange = null;
-
-	  // Result & response
-	  this.responseText = "";
-	  this.responseXML = "";
-	  this.status = null;
-	  this.statusText = null;
-	  
-	  // Whether cross-site Access-Control requests should be made using
-	  // credentials such as cookies or authorization headers
-	  this.withCredentials = false;
-
-	  /**
-	   * Private methods
-	   */
-
-	  /**
-	   * Check if the specified header is allowed.
-	   *
-	   * @param string header Header to validate
-	   * @return boolean False if not allowed, otherwise true
-	   */
-	  var isAllowedHttpHeader = function(header) {
-	    return disableHeaderCheck || (header && forbiddenRequestHeaders.indexOf(header.toLowerCase()) === -1);
-	  };
-
-	  /**
-	   * Check if the specified method is allowed.
-	   *
-	   * @param string method Request method to validate
-	   * @return boolean False if not allowed, otherwise true
-	   */
-	  var isAllowedHttpMethod = function(method) {
-	    return (method && forbiddenRequestMethods.indexOf(method) === -1);
-	  };
-
-	  /**
-	   * Public methods
-	   */
-
-	  /**
-	   * Open the connection. Currently supports local server requests.
-	   *
-	   * @param string method Connection method (eg GET, POST)
-	   * @param string url URL for the connection.
-	   * @param boolean async Asynchronous connection. Default is true.
-	   * @param string user Username for basic authentication (optional)
-	   * @param string password Password for basic authentication (optional)
-	   */
-	  this.open = function(method, url, async, user, password) {
-	    this.abort();
-	    errorFlag = false;
-
-	    // Check for valid request method
-	    if (!isAllowedHttpMethod(method)) {
-	      throw new Error("SecurityError: Request method not allowed");
-	    }
-
-	    settings = {
-	      "method": method,
-	      "url": url.toString(),
-	      "async": (typeof async !== "boolean" ? true : async),
-	      "user": user || null,
-	      "password": password || null
-	    };
-
-	    setState(this.OPENED);
-	  };
-
-	  /**
-	   * Disables or enables isAllowedHttpHeader() check the request. Enabled by default.
-	   * This does not conform to the W3C spec.
-	   *
-	   * @param boolean state Enable or disable header checking.
-	   */
-	  this.setDisableHeaderCheck = function(state) {
-	    disableHeaderCheck = state;
-	  };
-
-	  /**
-	   * Sets a header for the request or appends the value if one is already set.
-	   *
-	   * @param string header Header name
-	   * @param string value Header value
-	   */
-	  this.setRequestHeader = function(header, value) {
-	    if (this.readyState !== this.OPENED) {
-	      throw new Error("INVALID_STATE_ERR: setRequestHeader can only be called when state is OPEN");
-	    }
-	    if (!isAllowedHttpHeader(header)) {
-	      console.warn("Refused to set unsafe header \"" + header + "\"");
-	      return;
-	    }
-	    if (sendFlag) {
-	      throw new Error("INVALID_STATE_ERR: send flag is true");
-	    }
-	    header = headersCase[header.toLowerCase()] || header;
-	    headersCase[header.toLowerCase()] = header;
-	    headers[header] = headers[header] ? headers[header] + ', ' + value : value;
-	  };
-
-	  /**
-	   * Gets a header from the server response.
-	   *
-	   * @param string header Name of header to get.
-	   * @return string Text of the header or null if it doesn't exist.
-	   */
-	  this.getResponseHeader = function(header) {
-	    if (typeof header === "string"
-	      && this.readyState > this.OPENED
-	      && response
-	      && response.headers
-	      && response.headers[header.toLowerCase()]
-	      && !errorFlag
-	    ) {
-	      return response.headers[header.toLowerCase()];
-	    }
-
-	    return null;
-	  };
-
-	  /**
-	   * Gets all the response headers.
-	   *
-	   * @return string A string with all response headers separated by CR+LF
-	   */
-	  this.getAllResponseHeaders = function() {
-	    if (this.readyState < this.HEADERS_RECEIVED || errorFlag) {
-	      return "";
-	    }
-	    var result = "";
-
-	    for (var i in response.headers) {
-	      // Cookie headers are excluded
-	      if (i !== "set-cookie" && i !== "set-cookie2") {
-	        result += i + ": " + response.headers[i] + "\r\n";
-	      }
-	    }
-	    return result.substr(0, result.length - 2);
-	  };
-
-	  /**
-	   * Gets a request header
-	   *
-	   * @param string name Name of header to get
-	   * @return string Returns the request header or empty string if not set
-	   */
-	  this.getRequestHeader = function(name) {
-	    if (typeof name === "string" && headersCase[name.toLowerCase()]) {
-	      return headers[headersCase[name.toLowerCase()]];
-	    }
-
-	    return "";
-	  };
-
-	  /**
-	   * Sends the request to the server.
-	   *
-	   * @param string data Optional data to send as request body.
-	   */
-	  this.send = function(data) {
-	    if (this.readyState !== this.OPENED) {
-	      throw new Error("INVALID_STATE_ERR: connection must be opened before send() is called");
-	    }
-
-	    if (sendFlag) {
-	      throw new Error("INVALID_STATE_ERR: send has already been called");
-	    }
-
-	    var ssl = false, local = false;
-	    var url = Url.parse(settings.url);
-	    var host;
-	    // Determine the server
-	    switch (url.protocol) {
-	      case "https:":
-	        ssl = true;
-	        // SSL & non-SSL both need host, no break here.
-	      case "http:":
-	        host = url.hostname;
-	        break;
-
-	      case "file:":
-	        local = true;
-	        break;
-
-	      case undefined:
-	      case null:
-	      case "":
-	        host = "localhost";
-	        break;
-
-	      default:
-	        throw new Error("Protocol not supported.");
-	    }
-
-	    // Load files off the local filesystem (file://)
-	    if (local) {
-	      if (settings.method !== "GET") {
-	        throw new Error("XMLHttpRequest: Only GET method is supported");
-	      }
-
-	      if (settings.async) {
-	        fs.readFile(url.pathname, "utf8", function(error, data) {
-	          if (error) {
-	            self.handleError(error);
-	          } else {
-	            self.status = 200;
-	            self.responseText = data;
-	            setState(self.DONE);
-	          }
-	        });
-	      } else {
-	        try {
-	          this.responseText = fs.readFileSync(url.pathname, "utf8");
-	          this.status = 200;
-	          setState(self.DONE);
-	        } catch(e) {
-	          this.handleError(e);
-	        }
-	      }
-
-	      return;
-	    }
-
-	    // Default to port 80. If accessing localhost on another port be sure
-	    // to use http://localhost:port/path
-	    var port = url.port || (ssl ? 443 : 80);
-	    // Add query string if one is used
-	    var uri = url.pathname + (url.search ? url.search : "");
-
-	    // Set the defaults if they haven't been set
-	    for (var name in defaultHeaders) {
-	      if (!headersCase[name.toLowerCase()]) {
-	        headers[name] = defaultHeaders[name];
-	      }
-	    }
-
-	    // Set the Host header or the server may reject the request
-	    headers.Host = host;
-	    if (!((ssl && port === 443) || port === 80)) {
-	      headers.Host += ":" + url.port;
-	    }
-
-	    // Set Basic Auth if necessary
-	    if (settings.user) {
-	      if (typeof settings.password === "undefined") {
-	        settings.password = "";
-	      }
-	      var authBuf = new Buffer(settings.user + ":" + settings.password);
-	      headers.Authorization = "Basic " + authBuf.toString("base64");
-	    }
-
-	    // Set content length header
-	    if (settings.method === "GET" || settings.method === "HEAD") {
-	      data = null;
-	    } else if (data) {
-	      headers["Content-Length"] = Buffer.isBuffer(data) ? data.length : Buffer.byteLength(data);
-
-	      if (!headers["Content-Type"]) {
-	        headers["Content-Type"] = "text/plain;charset=UTF-8";
-	      }
-	    } else if (settings.method === "POST") {
-	      // For a post with no data set Content-Length: 0.
-	      // This is required by buggy servers that don't meet the specs.
-	      headers["Content-Length"] = 0;
-	    }
-
-	    var options = {
-	      host: host,
-	      port: port,
-	      path: uri,
-	      method: settings.method,
-	      headers: headers,
-	      agent: false,
-	      withCredentials: self.withCredentials
-	    };
-
-	    // Reset error flag
-	    errorFlag = false;
-
-	    // Handle async requests
-	    if (settings.async) {
-	      // Use the proper protocol
-	      var doRequest = ssl ? https.request : http.request;
-
-	      // Request is being sent, set send flag
-	      sendFlag = true;
-
-	      // As per spec, this is called here for historical reasons.
-	      self.dispatchEvent("readystatechange");
-
-	      // Handler for the response
-	      var responseHandler = function responseHandler(resp) {
-	        // Set response var to the response we got back
-	        // This is so it remains accessable outside this scope
-	        response = resp;
-	        // Check for redirect
-	        // @TODO Prevent looped redirects
-	        if (response.statusCode === 301 || response.statusCode === 302 || response.statusCode === 303 || response.statusCode === 307) {
-	          // Change URL to the redirect location
-	          settings.url = response.headers.location;
-	          var url = Url.parse(settings.url);
-	          // Set host var in case it's used later
-	          host = url.hostname;
-	          // Options for the new request
-	          var newOptions = {
-	            hostname: url.hostname,
-	            port: url.port,
-	            path: url.path,
-	            method: response.statusCode === 303 ? "GET" : settings.method,
-	            headers: headers,
-	            withCredentials: self.withCredentials
-	          };
-
-	          // Issue the new request
-	          request = doRequest(newOptions, responseHandler).on("error", errorHandler);
-	          request.end();
-	          // @TODO Check if an XHR event needs to be fired here
-	          return;
-	        }
-
-	        response.setEncoding("utf8");
-
-	        setState(self.HEADERS_RECEIVED);
-	        self.status = response.statusCode;
-
-	        response.on("data", function(chunk) {
-	          // Make sure there's some data
-	          if (chunk) {
-	            self.responseText += chunk;
-	          }
-	          // Don't emit state changes if the connection has been aborted.
-	          if (sendFlag) {
-	            setState(self.LOADING);
-	          }
-	        });
-
-	        response.on("end", function() {
-	          if (sendFlag) {
-	            // Discard the end event if the connection has been aborted
-	            setState(self.DONE);
-	            sendFlag = false;
-	          }
-	        });
-
-	        response.on("error", function(error) {
-	          self.handleError(error);
-	        });
-	      };
-
-	      // Error handler for the request
-	      var errorHandler = function errorHandler(error) {
-	        self.handleError(error);
-	      };
-
-	      // Create the request
-	      request = doRequest(options, responseHandler).on("error", errorHandler);
-
-	      // Node 0.4 and later won't accept empty data. Make sure it's needed.
-	      if (data) {
-	        request.write(data);
-	      }
-
-	      request.end();
-
-	      self.dispatchEvent("loadstart");
-	    } else { // Synchronous
-	      // Create a temporary file for communication with the other Node process
-	      var contentFile = ".node-xmlhttprequest-content-" + process.pid;
-	      var syncFile = ".node-xmlhttprequest-sync-" + process.pid;
-	      fs.writeFileSync(syncFile, "", "utf8");
-	      // The async request the other Node process executes
-	      var execString = "var http = require('http'), https = require('https'), fs = require('fs');"
-	        + "var doRequest = http" + (ssl ? "s" : "") + ".request;"
-	        + "var options = " + JSON.stringify(options) + ";"
-	        + "var responseText = '';"
-	        + "var req = doRequest(options, function(response) {"
-	        + "response.setEncoding('utf8');"
-	        + "response.on('data', function(chunk) {"
-	        + "  responseText += chunk;"
-	        + "});"
-	        + "response.on('end', function() {"
-	        + "fs.writeFileSync('" + contentFile + "', JSON.stringify({err: null, data: {statusCode: response.statusCode, headers: response.headers, text: responseText}}), 'utf8');"
-	        + "fs.unlinkSync('" + syncFile + "');"
-	        + "});"
-	        + "response.on('error', function(error) {"
-	        + "fs.writeFileSync('" + contentFile + "', JSON.stringify({err: error}), 'utf8');"
-	        + "fs.unlinkSync('" + syncFile + "');"
-	        + "});"
-	        + "}).on('error', function(error) {"
-	        + "fs.writeFileSync('" + contentFile + "', JSON.stringify({err: error}), 'utf8');"
-	        + "fs.unlinkSync('" + syncFile + "');"
-	        + "});"
-	        + (data ? "req.write('" + JSON.stringify(data).slice(1,-1).replace(/'/g, "\\'") + "');":"")
-	        + "req.end();";
-	      // Start the other Node Process, executing this string
-	      var syncProc = spawn(process.argv[0], ["-e", execString]);
-	      while(fs.existsSync(syncFile)) {
-	        // Wait while the sync file is empty
-	      }
-	      var resp = JSON.parse(fs.readFileSync(contentFile, 'utf8'));
-	      // Kill the child process once the file has data
-	      syncProc.stdin.end();
-	      // Remove the temporary file
-	      fs.unlinkSync(contentFile);
-
-	      if (resp.err) {
-	        self.handleError(resp.err);
-	      } else {
-	        response = resp.data;
-	        self.status = resp.data.statusCode;
-	        self.responseText = resp.data.text;
-	        setState(self.DONE);
-	      }
-	    }
-	  };
-
-	  /**
-	   * Called when an error is encountered to deal with it.
-	   */
-	  this.handleError = function(error) {
-	    this.status = 0;
-	    this.statusText = error;
-	    this.responseText = error.stack;
-	    errorFlag = true;
-	    setState(this.DONE);
-	    this.dispatchEvent('error');
-	  };
-
-	  /**
-	   * Aborts a request.
-	   */
-	  this.abort = function() {
-	    if (request) {
-	      request.abort();
-	      request = null;
-	    }
-
-	    headers = defaultHeaders;
-	    this.status = 0;
-	    this.responseText = "";
-	    this.responseXML = "";
-
-	    errorFlag = true;
-
-	    if (this.readyState !== this.UNSENT
-	        && (this.readyState !== this.OPENED || sendFlag)
-	        && this.readyState !== this.DONE) {
-	      sendFlag = false;
-	      setState(this.DONE);
-	    }
-	    this.readyState = this.UNSENT;
-	    this.dispatchEvent('abort');
-	  };
-
-	  /**
-	   * Adds an event listener. Preferred method of binding to events.
-	   */
-	  this.addEventListener = function(event, callback) {
-	    if (!(event in listeners)) {
-	      listeners[event] = [];
-	    }
-	    // Currently allows duplicate callbacks. Should it?
-	    listeners[event].push(callback);
-	  };
-
-	  /**
-	   * Remove an event callback that has already been bound.
-	   * Only works on the matching funciton, cannot be a copy.
-	   */
-	  this.removeEventListener = function(event, callback) {
-	    if (event in listeners) {
-	      // Filter will return a new array with the callback removed
-	      listeners[event] = listeners[event].filter(function(ev) {
-	        return ev !== callback;
-	      });
-	    }
-	  };
-
-	  /**
-	   * Dispatch any events, including both "on" methods and events attached using addEventListener.
-	   */
-	  this.dispatchEvent = function(event) {
-	    if (typeof self["on" + event] === "function") {
-	      self["on" + event]();
-	    }
-	    if (event in listeners) {
-	      for (var i = 0, len = listeners[event].length; i < len; i++) {
-	        listeners[event][i].call(self);
-	      }
-	    }
-	  };
-
-	  /**
-	   * Changes readyState and calls onreadystatechange.
-	   *
-	   * @param int state New state
-	   */
-	  var setState = function(state) {
-	    if (state == self.LOADING || self.readyState !== state) {
-	      self.readyState = state;
-
-	      if (settings.async || self.readyState < self.OPENED || self.readyState === self.DONE) {
-	        self.dispatchEvent("readystatechange");
-	      }
-
-	      if (self.readyState === self.DONE && !errorFlag) {
-	        self.dispatchEvent("load");
-	        // @TODO figure out InspectorInstrumentation::didLoadXHR(cookie)
-	        self.dispatchEvent("loadend");
-	      }
-	    }
-	  };
-	};
-
-
-/***/ },
-/* 247 */
-/***/ function(module, exports) {
-
-	module.exports = require("url");
-
-/***/ },
-/* 248 */
-/***/ function(module, exports) {
-
-	module.exports = require("child_process");
-
-/***/ },
-/* 249 */
-/***/ function(module, exports) {
-
-	module.exports = require("fs");
-
-/***/ },
-/* 250 */
-/***/ function(module, exports) {
-
-	module.exports = require("http");
-
-/***/ },
-/* 251 */
-/***/ function(module, exports) {
-
-	module.exports = require("https");
-
-/***/ },
-/* 252 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// https://d3js.org/d3-timer/ Version 1.0.1. Copyright 2016 Mike Bostock.
-	(function (global, factory) {
-	   true ? factory(exports) :
-	  typeof define === 'function' && define.amd ? define(['exports'], factory) :
-	  (factory((global.d3 = global.d3 || {})));
-	}(this, function (exports) { 'use strict';
-
-	  var frame = 0;
-	  var timeout = 0;
-	  var interval = 0;
-	  var pokeDelay = 1000;
-	  var taskHead;
-	  var taskTail;
-	  var clockLast = 0;
-	  var clockNow = 0;
-	  var clockSkew = 0;
-	  var clock = typeof performance === "object" && performance.now ? performance : Date;
-	  var setFrame = typeof requestAnimationFrame === "function"
-	          ? (clock === Date ? function(f) { requestAnimationFrame(function() { f(clock.now()); }); } : requestAnimationFrame)
-	          : function(f) { setTimeout(f, 17); };
-	  function now() {
-	    return clockNow || (setFrame(clearNow), clockNow = clock.now() + clockSkew);
-	  }
-
-	  function clearNow() {
-	    clockNow = 0;
-	  }
-
-	  function Timer() {
-	    this._call =
-	    this._time =
-	    this._next = null;
-	  }
-
-	  Timer.prototype = timer.prototype = {
-	    constructor: Timer,
-	    restart: function(callback, delay, time) {
-	      if (typeof callback !== "function") throw new TypeError("callback is not a function");
-	      time = (time == null ? now() : +time) + (delay == null ? 0 : +delay);
-	      if (!this._next && taskTail !== this) {
-	        if (taskTail) taskTail._next = this;
-	        else taskHead = this;
-	        taskTail = this;
-	      }
-	      this._call = callback;
-	      this._time = time;
-	      sleep();
-	    },
-	    stop: function() {
-	      if (this._call) {
-	        this._call = null;
-	        this._time = Infinity;
-	        sleep();
-	      }
-	    }
-	  };
-
-	  function timer(callback, delay, time) {
-	    var t = new Timer;
-	    t.restart(callback, delay, time);
-	    return t;
-	  }
-
-	  function timerFlush() {
-	    now(); // Get the current time, if not already set.
-	    ++frame; // Pretend we’ve set an alarm, if we haven’t already.
-	    var t = taskHead, e;
-	    while (t) {
-	      if ((e = clockNow - t._time) >= 0) t._call.call(null, e);
-	      t = t._next;
-	    }
-	    --frame;
-	  }
-
-	  function wake(time) {
-	    clockNow = (clockLast = time || clock.now()) + clockSkew;
-	    frame = timeout = 0;
-	    try {
-	      timerFlush();
-	    } finally {
-	      frame = 0;
-	      nap();
-	      clockNow = 0;
-	    }
-	  }
-
-	  function poke() {
-	    var now = clock.now(), delay = now - clockLast;
-	    if (delay > pokeDelay) clockSkew -= delay, clockLast = now;
-	  }
-
-	  function nap() {
-	    var t0, t1 = taskHead, t2, time = Infinity;
-	    while (t1) {
-	      if (t1._call) {
-	        if (time > t1._time) time = t1._time;
-	        t0 = t1, t1 = t1._next;
-	      } else {
-	        t2 = t1._next, t1._next = null;
-	        t1 = t0 ? t0._next = t2 : taskHead = t2;
-	      }
-	    }
-	    taskTail = t0;
-	    sleep(time);
-	  }
-
-	  function sleep(time) {
-	    if (frame) return; // Soonest alarm already set, or will be.
-	    if (timeout) timeout = clearTimeout(timeout);
-	    var delay = time - clockNow;
-	    if (delay > 24) {
-	      if (time < Infinity) timeout = setTimeout(wake, delay);
-	      if (interval) interval = clearInterval(interval);
-	    } else {
-	      if (!interval) interval = setInterval(poke, pokeDelay);
-	      frame = 1, setFrame(wake);
-	    }
-	  }
-
-	  function timeout$1(callback, delay, time) {
-	    var t = new Timer;
-	    delay = delay == null ? 0 : +delay;
-	    t.restart(function(elapsed) {
-	      t.stop();
-	      callback(elapsed + delay);
-	    }, delay, time);
-	    return t;
-	  }
-
-	  function interval$1(callback, delay, time) {
-	    var t = new Timer, total = delay;
-	    if (delay == null) return t.restart(callback, delay, time), t;
-	    delay = +delay, time = time == null ? now() : +time;
-	    t.restart(function tick(elapsed) {
-	      elapsed += total;
-	      t.restart(tick, total += delay, time);
-	      callback(elapsed);
-	    }, delay, time);
-	    return t;
-	  }
-
-	  exports.now = now;
-	  exports.timer = timer;
-	  exports.timerFlush = timerFlush;
-	  exports.timeout = timeout$1;
-	  exports.interval = interval$1;
-
-	  Object.defineProperty(exports, '__esModule', { value: true });
-
-	}));
-
-/***/ },
-/* 253 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// https://d3js.org/d3-time/ Version 1.0.0. Copyright 2016 Mike Bostock.
-	(function (global, factory) {
-	   true ? factory(exports) :
-	  typeof define === 'function' && define.amd ? define(['exports'], factory) :
-	  (factory((global.d3 = global.d3 || {})));
-	}(this, function (exports) { 'use strict';
-
-	  var t0 = new Date;
-	  var t1 = new Date;
-	  function newInterval(floori, offseti, count, field) {
-
-	    function interval(date) {
-	      return floori(date = new Date(+date)), date;
-	    }
-
-	    interval.floor = interval;
-
-	    interval.ceil = function(date) {
-	      return floori(date = new Date(date - 1)), offseti(date, 1), floori(date), date;
-	    };
-
-	    interval.round = function(date) {
-	      var d0 = interval(date),
-	          d1 = interval.ceil(date);
-	      return date - d0 < d1 - date ? d0 : d1;
-	    };
-
-	    interval.offset = function(date, step) {
-	      return offseti(date = new Date(+date), step == null ? 1 : Math.floor(step)), date;
-	    };
-
-	    interval.range = function(start, stop, step) {
-	      var range = [];
-	      start = interval.ceil(start);
-	      step = step == null ? 1 : Math.floor(step);
-	      if (!(start < stop) || !(step > 0)) return range; // also handles Invalid Date
-	      do range.push(new Date(+start)); while (offseti(start, step), floori(start), start < stop)
-	      return range;
-	    };
-
-	    interval.filter = function(test) {
-	      return newInterval(function(date) {
-	        while (floori(date), !test(date)) date.setTime(date - 1);
-	      }, function(date, step) {
-	        while (--step >= 0) while (offseti(date, 1), !test(date));
-	      });
-	    };
-
-	    if (count) {
-	      interval.count = function(start, end) {
-	        t0.setTime(+start), t1.setTime(+end);
-	        floori(t0), floori(t1);
-	        return Math.floor(count(t0, t1));
-	      };
-
-	      interval.every = function(step) {
-	        step = Math.floor(step);
-	        return !isFinite(step) || !(step > 0) ? null
-	            : !(step > 1) ? interval
-	            : interval.filter(field
-	                ? function(d) { return field(d) % step === 0; }
-	                : function(d) { return interval.count(0, d) % step === 0; });
-	      };
-	    }
-
-	    return interval;
-	  }
-
-	  var millisecond = newInterval(function() {
-	    // noop
-	  }, function(date, step) {
-	    date.setTime(+date + step);
-	  }, function(start, end) {
-	    return end - start;
-	  });
-
-	  // An optimized implementation for this simple case.
-	  millisecond.every = function(k) {
-	    k = Math.floor(k);
-	    if (!isFinite(k) || !(k > 0)) return null;
-	    if (!(k > 1)) return millisecond;
-	    return newInterval(function(date) {
-	      date.setTime(Math.floor(date / k) * k);
-	    }, function(date, step) {
-	      date.setTime(+date + step * k);
-	    }, function(start, end) {
-	      return (end - start) / k;
-	    });
-	  };
-
-	  var milliseconds = millisecond.range;
-
-	  var durationSecond = 1e3;
-	  var durationMinute = 6e4;
-	  var durationHour = 36e5;
-	  var durationDay = 864e5;
-	  var durationWeek = 6048e5;
-
-	  var second = newInterval(function(date) {
-	    date.setTime(Math.floor(date / durationSecond) * durationSecond);
-	  }, function(date, step) {
-	    date.setTime(+date + step * durationSecond);
-	  }, function(start, end) {
-	    return (end - start) / durationSecond;
-	  }, function(date) {
-	    return date.getUTCSeconds();
-	  });
-
-	  var seconds = second.range;
-
-	  var minute = newInterval(function(date) {
-	    date.setTime(Math.floor(date / durationMinute) * durationMinute);
-	  }, function(date, step) {
-	    date.setTime(+date + step * durationMinute);
-	  }, function(start, end) {
-	    return (end - start) / durationMinute;
-	  }, function(date) {
-	    return date.getMinutes();
-	  });
-
-	  var minutes = minute.range;
-
-	  var hour = newInterval(function(date) {
-	    var offset = date.getTimezoneOffset() * durationMinute % durationHour;
-	    if (offset < 0) offset += durationHour;
-	    date.setTime(Math.floor((+date - offset) / durationHour) * durationHour + offset);
-	  }, function(date, step) {
-	    date.setTime(+date + step * durationHour);
-	  }, function(start, end) {
-	    return (end - start) / durationHour;
-	  }, function(date) {
-	    return date.getHours();
-	  });
-
-	  var hours = hour.range;
-
-	  var day = newInterval(function(date) {
-	    date.setHours(0, 0, 0, 0);
-	  }, function(date, step) {
-	    date.setDate(date.getDate() + step);
-	  }, function(start, end) {
-	    return (end - start - (end.getTimezoneOffset() - start.getTimezoneOffset()) * durationMinute) / durationDay;
-	  }, function(date) {
-	    return date.getDate() - 1;
-	  });
-
-	  var days = day.range;
-
-	  function weekday(i) {
-	    return newInterval(function(date) {
-	      date.setDate(date.getDate() - (date.getDay() + 7 - i) % 7);
-	      date.setHours(0, 0, 0, 0);
-	    }, function(date, step) {
-	      date.setDate(date.getDate() + step * 7);
-	    }, function(start, end) {
-	      return (end - start - (end.getTimezoneOffset() - start.getTimezoneOffset()) * durationMinute) / durationWeek;
-	    });
-	  }
-
-	  var sunday = weekday(0);
-	  var monday = weekday(1);
-	  var tuesday = weekday(2);
-	  var wednesday = weekday(3);
-	  var thursday = weekday(4);
-	  var friday = weekday(5);
-	  var saturday = weekday(6);
-
-	  var sundays = sunday.range;
-	  var mondays = monday.range;
-	  var tuesdays = tuesday.range;
-	  var wednesdays = wednesday.range;
-	  var thursdays = thursday.range;
-	  var fridays = friday.range;
-	  var saturdays = saturday.range;
-
-	  var month = newInterval(function(date) {
-	    date.setDate(1);
-	    date.setHours(0, 0, 0, 0);
-	  }, function(date, step) {
-	    date.setMonth(date.getMonth() + step);
-	  }, function(start, end) {
-	    return end.getMonth() - start.getMonth() + (end.getFullYear() - start.getFullYear()) * 12;
-	  }, function(date) {
-	    return date.getMonth();
-	  });
-
-	  var months = month.range;
-
-	  var year = newInterval(function(date) {
-	    date.setMonth(0, 1);
-	    date.setHours(0, 0, 0, 0);
-	  }, function(date, step) {
-	    date.setFullYear(date.getFullYear() + step);
-	  }, function(start, end) {
-	    return end.getFullYear() - start.getFullYear();
-	  }, function(date) {
-	    return date.getFullYear();
-	  });
-
-	  // An optimized implementation for this simple case.
-	  year.every = function(k) {
-	    return !isFinite(k = Math.floor(k)) || !(k > 0) ? null : newInterval(function(date) {
-	      date.setFullYear(Math.floor(date.getFullYear() / k) * k);
-	      date.setMonth(0, 1);
-	      date.setHours(0, 0, 0, 0);
-	    }, function(date, step) {
-	      date.setFullYear(date.getFullYear() + step * k);
-	    });
-	  };
-
-	  var years = year.range;
-
-	  var utcMinute = newInterval(function(date) {
-	    date.setUTCSeconds(0, 0);
-	  }, function(date, step) {
-	    date.setTime(+date + step * durationMinute);
-	  }, function(start, end) {
-	    return (end - start) / durationMinute;
-	  }, function(date) {
-	    return date.getUTCMinutes();
-	  });
-
-	  var utcMinutes = utcMinute.range;
-
-	  var utcHour = newInterval(function(date) {
-	    date.setUTCMinutes(0, 0, 0);
-	  }, function(date, step) {
-	    date.setTime(+date + step * durationHour);
-	  }, function(start, end) {
-	    return (end - start) / durationHour;
-	  }, function(date) {
-	    return date.getUTCHours();
-	  });
-
-	  var utcHours = utcHour.range;
-
-	  var utcDay = newInterval(function(date) {
-	    date.setUTCHours(0, 0, 0, 0);
-	  }, function(date, step) {
-	    date.setUTCDate(date.getUTCDate() + step);
-	  }, function(start, end) {
-	    return (end - start) / durationDay;
-	  }, function(date) {
-	    return date.getUTCDate() - 1;
-	  });
-
-	  var utcDays = utcDay.range;
-
-	  function utcWeekday(i) {
-	    return newInterval(function(date) {
-	      date.setUTCDate(date.getUTCDate() - (date.getUTCDay() + 7 - i) % 7);
-	      date.setUTCHours(0, 0, 0, 0);
-	    }, function(date, step) {
-	      date.setUTCDate(date.getUTCDate() + step * 7);
-	    }, function(start, end) {
-	      return (end - start) / durationWeek;
-	    });
-	  }
-
-	  var utcSunday = utcWeekday(0);
-	  var utcMonday = utcWeekday(1);
-	  var utcTuesday = utcWeekday(2);
-	  var utcWednesday = utcWeekday(3);
-	  var utcThursday = utcWeekday(4);
-	  var utcFriday = utcWeekday(5);
-	  var utcSaturday = utcWeekday(6);
-
-	  var utcSundays = utcSunday.range;
-	  var utcMondays = utcMonday.range;
-	  var utcTuesdays = utcTuesday.range;
-	  var utcWednesdays = utcWednesday.range;
-	  var utcThursdays = utcThursday.range;
-	  var utcFridays = utcFriday.range;
-	  var utcSaturdays = utcSaturday.range;
-
-	  var utcMonth = newInterval(function(date) {
-	    date.setUTCDate(1);
-	    date.setUTCHours(0, 0, 0, 0);
-	  }, function(date, step) {
-	    date.setUTCMonth(date.getUTCMonth() + step);
-	  }, function(start, end) {
-	    return end.getUTCMonth() - start.getUTCMonth() + (end.getUTCFullYear() - start.getUTCFullYear()) * 12;
-	  }, function(date) {
-	    return date.getUTCMonth();
-	  });
-
-	  var utcMonths = utcMonth.range;
-
-	  var utcYear = newInterval(function(date) {
-	    date.setUTCMonth(0, 1);
-	    date.setUTCHours(0, 0, 0, 0);
-	  }, function(date, step) {
-	    date.setUTCFullYear(date.getUTCFullYear() + step);
-	  }, function(start, end) {
-	    return end.getUTCFullYear() - start.getUTCFullYear();
-	  }, function(date) {
-	    return date.getUTCFullYear();
-	  });
-
-	  // An optimized implementation for this simple case.
-	  utcYear.every = function(k) {
-	    return !isFinite(k = Math.floor(k)) || !(k > 0) ? null : newInterval(function(date) {
-	      date.setUTCFullYear(Math.floor(date.getUTCFullYear() / k) * k);
-	      date.setUTCMonth(0, 1);
-	      date.setUTCHours(0, 0, 0, 0);
-	    }, function(date, step) {
-	      date.setUTCFullYear(date.getUTCFullYear() + step * k);
-	    });
-	  };
-
-	  var utcYears = utcYear.range;
-
-	  exports.timeInterval = newInterval;
-	  exports.timeMillisecond = millisecond;
-	  exports.timeMilliseconds = milliseconds;
-	  exports.utcMillisecond = millisecond;
-	  exports.utcMilliseconds = milliseconds;
-	  exports.timeSecond = second;
-	  exports.timeSeconds = seconds;
-	  exports.utcSecond = second;
-	  exports.utcSeconds = seconds;
-	  exports.timeMinute = minute;
-	  exports.timeMinutes = minutes;
-	  exports.timeHour = hour;
-	  exports.timeHours = hours;
-	  exports.timeDay = day;
-	  exports.timeDays = days;
-	  exports.timeWeek = sunday;
-	  exports.timeWeeks = sundays;
-	  exports.timeSunday = sunday;
-	  exports.timeSundays = sundays;
-	  exports.timeMonday = monday;
-	  exports.timeMondays = mondays;
-	  exports.timeTuesday = tuesday;
-	  exports.timeTuesdays = tuesdays;
-	  exports.timeWednesday = wednesday;
-	  exports.timeWednesdays = wednesdays;
-	  exports.timeThursday = thursday;
-	  exports.timeThursdays = thursdays;
-	  exports.timeFriday = friday;
-	  exports.timeFridays = fridays;
-	  exports.timeSaturday = saturday;
-	  exports.timeSaturdays = saturdays;
-	  exports.timeMonth = month;
-	  exports.timeMonths = months;
-	  exports.timeYear = year;
-	  exports.timeYears = years;
-	  exports.utcMinute = utcMinute;
-	  exports.utcMinutes = utcMinutes;
-	  exports.utcHour = utcHour;
-	  exports.utcHours = utcHours;
-	  exports.utcDay = utcDay;
-	  exports.utcDays = utcDays;
-	  exports.utcWeek = utcSunday;
-	  exports.utcWeeks = utcSundays;
-	  exports.utcSunday = utcSunday;
-	  exports.utcSundays = utcSundays;
-	  exports.utcMonday = utcMonday;
-	  exports.utcMondays = utcMondays;
-	  exports.utcTuesday = utcTuesday;
-	  exports.utcTuesdays = utcTuesdays;
-	  exports.utcWednesday = utcWednesday;
-	  exports.utcWednesdays = utcWednesdays;
-	  exports.utcThursday = utcThursday;
-	  exports.utcThursdays = utcThursdays;
-	  exports.utcFriday = utcFriday;
-	  exports.utcFridays = utcFridays;
-	  exports.utcSaturday = utcSaturday;
-	  exports.utcSaturdays = utcSaturdays;
-	  exports.utcMonth = utcMonth;
-	  exports.utcMonths = utcMonths;
-	  exports.utcYear = utcYear;
-	  exports.utcYears = utcYears;
-
-	  Object.defineProperty(exports, '__esModule', { value: true });
-
-	}));
-
-/***/ },
-/* 254 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// https://d3js.org/d3-format/ Version 1.0.0. Copyright 2016 Mike Bostock.
-	(function (global, factory) {
-	   true ? factory(exports) :
-	  typeof define === 'function' && define.amd ? define(['exports'], factory) :
-	  (factory((global.d3 = global.d3 || {})));
-	}(this, function (exports) { 'use strict';
-
-	  // Computes the decimal coefficient and exponent of the specified number x with
-	  // significant digits p, where x is positive and p is in [1, 21] or undefined.
-	  // For example, formatDecimal(1.23) returns ["123", 0].
-	  function formatDecimal(x, p) {
-	    if ((i = (x = p ? x.toExponential(p - 1) : x.toExponential()).indexOf("e")) < 0) return null; // NaN, ±Infinity
-	    var i, coefficient = x.slice(0, i);
-
-	    // The string returned by toExponential either has the form \d\.\d+e[-+]\d+
-	    // (e.g., 1.2e+3) or the form \de[-+]\d+ (e.g., 1e+3).
-	    return [
-	      coefficient.length > 1 ? coefficient[0] + coefficient.slice(2) : coefficient,
-	      +x.slice(i + 1)
-	    ];
-	  }
-
-	  function exponent(x) {
-	    return x = formatDecimal(Math.abs(x)), x ? x[1] : NaN;
-	  }
-
-	  function formatGroup(grouping, thousands) {
-	    return function(value, width) {
-	      var i = value.length,
-	          t = [],
-	          j = 0,
-	          g = grouping[0],
-	          length = 0;
-
-	      while (i > 0 && g > 0) {
-	        if (length + g + 1 > width) g = Math.max(1, width - length);
-	        t.push(value.substring(i -= g, i + g));
-	        if ((length += g + 1) > width) break;
-	        g = grouping[j = (j + 1) % grouping.length];
-	      }
-
-	      return t.reverse().join(thousands);
-	    };
-	  }
-
-	  function formatDefault(x, p) {
-	    x = x.toPrecision(p);
-
-	    out: for (var n = x.length, i = 1, i0 = -1, i1; i < n; ++i) {
-	      switch (x[i]) {
-	        case ".": i0 = i1 = i; break;
-	        case "0": if (i0 === 0) i0 = i; i1 = i; break;
-	        case "e": break out;
-	        default: if (i0 > 0) i0 = 0; break;
-	      }
-	    }
-
-	    return i0 > 0 ? x.slice(0, i0) + x.slice(i1 + 1) : x;
-	  }
-
-	  var prefixExponent;
-
-	  function formatPrefixAuto(x, p) {
-	    var d = formatDecimal(x, p);
-	    if (!d) return x + "";
-	    var coefficient = d[0],
-	        exponent = d[1],
-	        i = exponent - (prefixExponent = Math.max(-8, Math.min(8, Math.floor(exponent / 3))) * 3) + 1,
-	        n = coefficient.length;
-	    return i === n ? coefficient
-	        : i > n ? coefficient + new Array(i - n + 1).join("0")
-	        : i > 0 ? coefficient.slice(0, i) + "." + coefficient.slice(i)
-	        : "0." + new Array(1 - i).join("0") + formatDecimal(x, Math.max(0, p + i - 1))[0]; // less than 1y!
-	  }
-
-	  function formatRounded(x, p) {
-	    var d = formatDecimal(x, p);
-	    if (!d) return x + "";
-	    var coefficient = d[0],
-	        exponent = d[1];
-	    return exponent < 0 ? "0." + new Array(-exponent).join("0") + coefficient
-	        : coefficient.length > exponent + 1 ? coefficient.slice(0, exponent + 1) + "." + coefficient.slice(exponent + 1)
-	        : coefficient + new Array(exponent - coefficient.length + 2).join("0");
-	  }
-
-	  var formatTypes = {
-	    "": formatDefault,
-	    "%": function(x, p) { return (x * 100).toFixed(p); },
-	    "b": function(x) { return Math.round(x).toString(2); },
-	    "c": function(x) { return x + ""; },
-	    "d": function(x) { return Math.round(x).toString(10); },
-	    "e": function(x, p) { return x.toExponential(p); },
-	    "f": function(x, p) { return x.toFixed(p); },
-	    "g": function(x, p) { return x.toPrecision(p); },
-	    "o": function(x) { return Math.round(x).toString(8); },
-	    "p": function(x, p) { return formatRounded(x * 100, p); },
-	    "r": formatRounded,
-	    "s": formatPrefixAuto,
-	    "X": function(x) { return Math.round(x).toString(16).toUpperCase(); },
-	    "x": function(x) { return Math.round(x).toString(16); }
-	  };
-
-	  // [[fill]align][sign][symbol][0][width][,][.precision][type]
-	  var re = /^(?:(.)?([<>=^]))?([+\-\( ])?([$#])?(0)?(\d+)?(,)?(\.\d+)?([a-z%])?$/i;
-
-	  function formatSpecifier(specifier) {
-	    return new FormatSpecifier(specifier);
-	  }
-
-	  function FormatSpecifier(specifier) {
-	    if (!(match = re.exec(specifier))) throw new Error("invalid format: " + specifier);
-
-	    var match,
-	        fill = match[1] || " ",
-	        align = match[2] || ">",
-	        sign = match[3] || "-",
-	        symbol = match[4] || "",
-	        zero = !!match[5],
-	        width = match[6] && +match[6],
-	        comma = !!match[7],
-	        precision = match[8] && +match[8].slice(1),
-	        type = match[9] || "";
-
-	    // The "n" type is an alias for ",g".
-	    if (type === "n") comma = true, type = "g";
-
-	    // Map invalid types to the default format.
-	    else if (!formatTypes[type]) type = "";
-
-	    // If zero fill is specified, padding goes after sign and before digits.
-	    if (zero || (fill === "0" && align === "=")) zero = true, fill = "0", align = "=";
-
-	    this.fill = fill;
-	    this.align = align;
-	    this.sign = sign;
-	    this.symbol = symbol;
-	    this.zero = zero;
-	    this.width = width;
-	    this.comma = comma;
-	    this.precision = precision;
-	    this.type = type;
-	  }
-
-	  FormatSpecifier.prototype.toString = function() {
-	    return this.fill
-	        + this.align
-	        + this.sign
-	        + this.symbol
-	        + (this.zero ? "0" : "")
-	        + (this.width == null ? "" : Math.max(1, this.width | 0))
-	        + (this.comma ? "," : "")
-	        + (this.precision == null ? "" : "." + Math.max(0, this.precision | 0))
-	        + this.type;
-	  };
-
-	  var prefixes = ["y","z","a","f","p","n","µ","m","","k","M","G","T","P","E","Z","Y"];
-
-	  function identity(x) {
-	    return x;
-	  }
-
-	  function formatLocale(locale) {
-	    var group = locale.grouping && locale.thousands ? formatGroup(locale.grouping, locale.thousands) : identity,
-	        currency = locale.currency,
-	        decimal = locale.decimal;
-
-	    function newFormat(specifier) {
-	      specifier = formatSpecifier(specifier);
-
-	      var fill = specifier.fill,
-	          align = specifier.align,
-	          sign = specifier.sign,
-	          symbol = specifier.symbol,
-	          zero = specifier.zero,
-	          width = specifier.width,
-	          comma = specifier.comma,
-	          precision = specifier.precision,
-	          type = specifier.type;
-
-	      // Compute the prefix and suffix.
-	      // For SI-prefix, the suffix is lazily computed.
-	      var prefix = symbol === "$" ? currency[0] : symbol === "#" && /[boxX]/.test(type) ? "0" + type.toLowerCase() : "",
-	          suffix = symbol === "$" ? currency[1] : /[%p]/.test(type) ? "%" : "";
-
-	      // What format function should we use?
-	      // Is this an integer type?
-	      // Can this type generate exponential notation?
-	      var formatType = formatTypes[type],
-	          maybeSuffix = !type || /[defgprs%]/.test(type);
-
-	      // Set the default precision if not specified,
-	      // or clamp the specified precision to the supported range.
-	      // For significant precision, it must be in [1, 21].
-	      // For fixed precision, it must be in [0, 20].
-	      precision = precision == null ? (type ? 6 : 12)
-	          : /[gprs]/.test(type) ? Math.max(1, Math.min(21, precision))
-	          : Math.max(0, Math.min(20, precision));
-
-	      function format(value) {
-	        var valuePrefix = prefix,
-	            valueSuffix = suffix,
-	            i, n, c;
-
-	        if (type === "c") {
-	          valueSuffix = formatType(value) + valueSuffix;
-	          value = "";
-	        } else {
-	          value = +value;
-
-	          // Convert negative to positive, and compute the prefix.
-	          // Note that -0 is not less than 0, but 1 / -0 is!
-	          var valueNegative = (value < 0 || 1 / value < 0) && (value *= -1, true);
-
-	          // Perform the initial formatting.
-	          value = formatType(value, precision);
-
-	          // If the original value was negative, it may be rounded to zero during
-	          // formatting; treat this as (positive) zero.
-	          if (valueNegative) {
-	            i = -1, n = value.length;
-	            valueNegative = false;
-	            while (++i < n) {
-	              if (c = value.charCodeAt(i), (48 < c && c < 58)
-	                  || (type === "x" && 96 < c && c < 103)
-	                  || (type === "X" && 64 < c && c < 71)) {
-	                valueNegative = true;
-	                break;
-	              }
-	            }
-	          }
-
-	          // Compute the prefix and suffix.
-	          valuePrefix = (valueNegative ? (sign === "(" ? sign : "-") : sign === "-" || sign === "(" ? "" : sign) + valuePrefix;
-	          valueSuffix = valueSuffix + (type === "s" ? prefixes[8 + prefixExponent / 3] : "") + (valueNegative && sign === "(" ? ")" : "");
-
-	          // Break the formatted value into the integer “value” part that can be
-	          // grouped, and fractional or exponential “suffix” part that is not.
-	          if (maybeSuffix) {
-	            i = -1, n = value.length;
-	            while (++i < n) {
-	              if (c = value.charCodeAt(i), 48 > c || c > 57) {
-	                valueSuffix = (c === 46 ? decimal + value.slice(i + 1) : value.slice(i)) + valueSuffix;
-	                value = value.slice(0, i);
-	                break;
-	              }
-	            }
-	          }
-	        }
-
-	        // If the fill character is not "0", grouping is applied before padding.
-	        if (comma && !zero) value = group(value, Infinity);
-
-	        // Compute the padding.
-	        var length = valuePrefix.length + value.length + valueSuffix.length,
-	            padding = length < width ? new Array(width - length + 1).join(fill) : "";
-
-	        // If the fill character is "0", grouping is applied after padding.
-	        if (comma && zero) value = group(padding + value, padding.length ? width - valueSuffix.length : Infinity), padding = "";
-
-	        // Reconstruct the final output based on the desired alignment.
-	        switch (align) {
-	          case "<": return valuePrefix + value + valueSuffix + padding;
-	          case "=": return valuePrefix + padding + value + valueSuffix;
-	          case "^": return padding.slice(0, length = padding.length >> 1) + valuePrefix + value + valueSuffix + padding.slice(length);
-	        }
-	        return padding + valuePrefix + value + valueSuffix;
-	      }
-
-	      format.toString = function() {
-	        return specifier + "";
-	      };
-
-	      return format;
-	    }
-
-	    function formatPrefix(specifier, value) {
-	      var f = newFormat((specifier = formatSpecifier(specifier), specifier.type = "f", specifier)),
-	          e = Math.max(-8, Math.min(8, Math.floor(exponent(value) / 3))) * 3,
-	          k = Math.pow(10, -e),
-	          prefix = prefixes[8 + e / 3];
-	      return function(value) {
-	        return f(k * value) + prefix;
-	      };
-	    }
-
-	    return {
-	      format: newFormat,
-	      formatPrefix: formatPrefix
-	    };
-	  }
-
-	  var locale;
-	  exports.format;
-	  exports.formatPrefix;
-
-	  defaultLocale({
-	    decimal: ".",
-	    thousands: ",",
-	    grouping: [3],
-	    currency: ["$", ""]
-	  });
-
-	  function defaultLocale(definition) {
-	    locale = formatLocale(definition);
-	    exports.format = locale.format;
-	    exports.formatPrefix = locale.formatPrefix;
-	    return locale;
-	  }
-
-	  function precisionFixed(step) {
-	    return Math.max(0, -exponent(Math.abs(step)));
-	  }
-
-	  function precisionPrefix(step, value) {
-	    return Math.max(0, Math.max(-8, Math.min(8, Math.floor(exponent(value) / 3))) * 3 - exponent(Math.abs(step)));
-	  }
-
-	  function precisionRound(step, max) {
-	    step = Math.abs(step), max = Math.abs(max) - step;
-	    return Math.max(0, exponent(max) - exponent(step)) + 1;
-	  }
-
-	  exports.formatDefaultLocale = defaultLocale;
-	  exports.formatLocale = formatLocale;
-	  exports.formatSpecifier = formatSpecifier;
-	  exports.precisionFixed = precisionFixed;
-	  exports.precisionPrefix = precisionPrefix;
-	  exports.precisionRound = precisionRound;
-
-	  Object.defineProperty(exports, '__esModule', { value: true });
-
-	}));
-
-/***/ },
-/* 255 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// https://d3js.org/d3-time-format/ Version 2.0.0. Copyright 2016 Mike Bostock.
-	(function (global, factory) {
-	   true ? factory(exports, __webpack_require__(253)) :
-	  typeof define === 'function' && define.amd ? define(['exports', 'd3-time'], factory) :
-	  (factory((global.d3 = global.d3 || {}),global.d3));
-	}(this, function (exports,d3Time) { 'use strict';
-
-	  function localDate(d) {
-	    if (0 <= d.y && d.y < 100) {
-	      var date = new Date(-1, d.m, d.d, d.H, d.M, d.S, d.L);
-	      date.setFullYear(d.y);
-	      return date;
-	    }
-	    return new Date(d.y, d.m, d.d, d.H, d.M, d.S, d.L);
-	  }
-
-	  function utcDate(d) {
-	    if (0 <= d.y && d.y < 100) {
-	      var date = new Date(Date.UTC(-1, d.m, d.d, d.H, d.M, d.S, d.L));
-	      date.setUTCFullYear(d.y);
-	      return date;
-	    }
-	    return new Date(Date.UTC(d.y, d.m, d.d, d.H, d.M, d.S, d.L));
-	  }
-
-	  function newYear(y) {
-	    return {y: y, m: 0, d: 1, H: 0, M: 0, S: 0, L: 0};
-	  }
-
-	  function formatLocale(locale) {
-	    var locale_dateTime = locale.dateTime,
-	        locale_date = locale.date,
-	        locale_time = locale.time,
-	        locale_periods = locale.periods,
-	        locale_weekdays = locale.days,
-	        locale_shortWeekdays = locale.shortDays,
-	        locale_months = locale.months,
-	        locale_shortMonths = locale.shortMonths;
-
-	    var periodRe = formatRe(locale_periods),
-	        periodLookup = formatLookup(locale_periods),
-	        weekdayRe = formatRe(locale_weekdays),
-	        weekdayLookup = formatLookup(locale_weekdays),
-	        shortWeekdayRe = formatRe(locale_shortWeekdays),
-	        shortWeekdayLookup = formatLookup(locale_shortWeekdays),
-	        monthRe = formatRe(locale_months),
-	        monthLookup = formatLookup(locale_months),
-	        shortMonthRe = formatRe(locale_shortMonths),
-	        shortMonthLookup = formatLookup(locale_shortMonths);
-
-	    var formats = {
-	      "a": formatShortWeekday,
-	      "A": formatWeekday,
-	      "b": formatShortMonth,
-	      "B": formatMonth,
-	      "c": null,
-	      "d": formatDayOfMonth,
-	      "e": formatDayOfMonth,
-	      "H": formatHour24,
-	      "I": formatHour12,
-	      "j": formatDayOfYear,
-	      "L": formatMilliseconds,
-	      "m": formatMonthNumber,
-	      "M": formatMinutes,
-	      "p": formatPeriod,
-	      "S": formatSeconds,
-	      "U": formatWeekNumberSunday,
-	      "w": formatWeekdayNumber,
-	      "W": formatWeekNumberMonday,
-	      "x": null,
-	      "X": null,
-	      "y": formatYear,
-	      "Y": formatFullYear,
-	      "Z": formatZone,
-	      "%": formatLiteralPercent
-	    };
-
-	    var utcFormats = {
-	      "a": formatUTCShortWeekday,
-	      "A": formatUTCWeekday,
-	      "b": formatUTCShortMonth,
-	      "B": formatUTCMonth,
-	      "c": null,
-	      "d": formatUTCDayOfMonth,
-	      "e": formatUTCDayOfMonth,
-	      "H": formatUTCHour24,
-	      "I": formatUTCHour12,
-	      "j": formatUTCDayOfYear,
-	      "L": formatUTCMilliseconds,
-	      "m": formatUTCMonthNumber,
-	      "M": formatUTCMinutes,
-	      "p": formatUTCPeriod,
-	      "S": formatUTCSeconds,
-	      "U": formatUTCWeekNumberSunday,
-	      "w": formatUTCWeekdayNumber,
-	      "W": formatUTCWeekNumberMonday,
-	      "x": null,
-	      "X": null,
-	      "y": formatUTCYear,
-	      "Y": formatUTCFullYear,
-	      "Z": formatUTCZone,
-	      "%": formatLiteralPercent
-	    };
-
-	    var parses = {
-	      "a": parseShortWeekday,
-	      "A": parseWeekday,
-	      "b": parseShortMonth,
-	      "B": parseMonth,
-	      "c": parseLocaleDateTime,
-	      "d": parseDayOfMonth,
-	      "e": parseDayOfMonth,
-	      "H": parseHour24,
-	      "I": parseHour24,
-	      "j": parseDayOfYear,
-	      "L": parseMilliseconds,
-	      "m": parseMonthNumber,
-	      "M": parseMinutes,
-	      "p": parsePeriod,
-	      "S": parseSeconds,
-	      "U": parseWeekNumberSunday,
-	      "w": parseWeekdayNumber,
-	      "W": parseWeekNumberMonday,
-	      "x": parseLocaleDate,
-	      "X": parseLocaleTime,
-	      "y": parseYear,
-	      "Y": parseFullYear,
-	      "Z": parseZone,
-	      "%": parseLiteralPercent
-	    };
-
-	    // These recursive directive definitions must be deferred.
-	    formats.x = newFormat(locale_date, formats);
-	    formats.X = newFormat(locale_time, formats);
-	    formats.c = newFormat(locale_dateTime, formats);
-	    utcFormats.x = newFormat(locale_date, utcFormats);
-	    utcFormats.X = newFormat(locale_time, utcFormats);
-	    utcFormats.c = newFormat(locale_dateTime, utcFormats);
-
-	    function newFormat(specifier, formats) {
-	      return function(date) {
-	        var string = [],
-	            i = -1,
-	            j = 0,
-	            n = specifier.length,
-	            c,
-	            pad,
-	            format;
-
-	        if (!(date instanceof Date)) date = new Date(+date);
-
-	        while (++i < n) {
-	          if (specifier.charCodeAt(i) === 37) {
-	            string.push(specifier.slice(j, i));
-	            if ((pad = pads[c = specifier.charAt(++i)]) != null) c = specifier.charAt(++i);
-	            else pad = c === "e" ? " " : "0";
-	            if (format = formats[c]) c = format(date, pad);
-	            string.push(c);
-	            j = i + 1;
-	          }
-	        }
-
-	        string.push(specifier.slice(j, i));
-	        return string.join("");
-	      };
-	    }
-
-	    function newParse(specifier, newDate) {
-	      return function(string) {
-	        var d = newYear(1900),
-	            i = parseSpecifier(d, specifier, string += "", 0);
-	        if (i != string.length) return null;
-
-	        // The am-pm flag is 0 for AM, and 1 for PM.
-	        if ("p" in d) d.H = d.H % 12 + d.p * 12;
-
-	        // Convert day-of-week and week-of-year to day-of-year.
-	        if ("W" in d || "U" in d) {
-	          if (!("w" in d)) d.w = "W" in d ? 1 : 0;
-	          var day = "Z" in d ? utcDate(newYear(d.y)).getUTCDay() : newDate(newYear(d.y)).getDay();
-	          d.m = 0;
-	          d.d = "W" in d ? (d.w + 6) % 7 + d.W * 7 - (day + 5) % 7 : d.w + d.U * 7 - (day + 6) % 7;
-	        }
-
-	        // If a time zone is specified, all fields are interpreted as UTC and then
-	        // offset according to the specified time zone.
-	        if ("Z" in d) {
-	          d.H += d.Z / 100 | 0;
-	          d.M += d.Z % 100;
-	          return utcDate(d);
-	        }
-
-	        // Otherwise, all fields are in local time.
-	        return newDate(d);
-	      };
-	    }
-
-	    function parseSpecifier(d, specifier, string, j) {
-	      var i = 0,
-	          n = specifier.length,
-	          m = string.length,
-	          c,
-	          parse;
-
-	      while (i < n) {
-	        if (j >= m) return -1;
-	        c = specifier.charCodeAt(i++);
-	        if (c === 37) {
-	          c = specifier.charAt(i++);
-	          parse = parses[c in pads ? specifier.charAt(i++) : c];
-	          if (!parse || ((j = parse(d, string, j)) < 0)) return -1;
-	        } else if (c != string.charCodeAt(j++)) {
-	          return -1;
-	        }
-	      }
-
-	      return j;
-	    }
-
-	    function parsePeriod(d, string, i) {
-	      var n = periodRe.exec(string.slice(i));
-	      return n ? (d.p = periodLookup[n[0].toLowerCase()], i + n[0].length) : -1;
-	    }
-
-	    function parseShortWeekday(d, string, i) {
-	      var n = shortWeekdayRe.exec(string.slice(i));
-	      return n ? (d.w = shortWeekdayLookup[n[0].toLowerCase()], i + n[0].length) : -1;
-	    }
-
-	    function parseWeekday(d, string, i) {
-	      var n = weekdayRe.exec(string.slice(i));
-	      return n ? (d.w = weekdayLookup[n[0].toLowerCase()], i + n[0].length) : -1;
-	    }
-
-	    function parseShortMonth(d, string, i) {
-	      var n = shortMonthRe.exec(string.slice(i));
-	      return n ? (d.m = shortMonthLookup[n[0].toLowerCase()], i + n[0].length) : -1;
-	    }
-
-	    function parseMonth(d, string, i) {
-	      var n = monthRe.exec(string.slice(i));
-	      return n ? (d.m = monthLookup[n[0].toLowerCase()], i + n[0].length) : -1;
-	    }
-
-	    function parseLocaleDateTime(d, string, i) {
-	      return parseSpecifier(d, locale_dateTime, string, i);
-	    }
-
-	    function parseLocaleDate(d, string, i) {
-	      return parseSpecifier(d, locale_date, string, i);
-	    }
-
-	    function parseLocaleTime(d, string, i) {
-	      return parseSpecifier(d, locale_time, string, i);
-	    }
-
-	    function formatShortWeekday(d) {
-	      return locale_shortWeekdays[d.getDay()];
-	    }
-
-	    function formatWeekday(d) {
-	      return locale_weekdays[d.getDay()];
-	    }
-
-	    function formatShortMonth(d) {
-	      return locale_shortMonths[d.getMonth()];
-	    }
-
-	    function formatMonth(d) {
-	      return locale_months[d.getMonth()];
-	    }
-
-	    function formatPeriod(d) {
-	      return locale_periods[+(d.getHours() >= 12)];
-	    }
-
-	    function formatUTCShortWeekday(d) {
-	      return locale_shortWeekdays[d.getUTCDay()];
-	    }
-
-	    function formatUTCWeekday(d) {
-	      return locale_weekdays[d.getUTCDay()];
-	    }
-
-	    function formatUTCShortMonth(d) {
-	      return locale_shortMonths[d.getUTCMonth()];
-	    }
-
-	    function formatUTCMonth(d) {
-	      return locale_months[d.getUTCMonth()];
-	    }
-
-	    function formatUTCPeriod(d) {
-	      return locale_periods[+(d.getUTCHours() >= 12)];
-	    }
-
-	    return {
-	      format: function(specifier) {
-	        var f = newFormat(specifier += "", formats);
-	        f.toString = function() { return specifier; };
-	        return f;
-	      },
-	      parse: function(specifier) {
-	        var p = newParse(specifier += "", localDate);
-	        p.toString = function() { return specifier; };
-	        return p;
-	      },
-	      utcFormat: function(specifier) {
-	        var f = newFormat(specifier += "", utcFormats);
-	        f.toString = function() { return specifier; };
-	        return f;
-	      },
-	      utcParse: function(specifier) {
-	        var p = newParse(specifier, utcDate);
-	        p.toString = function() { return specifier; };
-	        return p;
-	      }
-	    };
-	  }
-
-	  var pads = {"-": "", "_": " ", "0": "0"};
-	  var numberRe = /^\s*\d+/;
-	  var percentRe = /^%/;
-	  var requoteRe = /[\\\^\$\*\+\?\|\[\]\(\)\.\{\}]/g;
-	  function pad(value, fill, width) {
-	    var sign = value < 0 ? "-" : "",
-	        string = (sign ? -value : value) + "",
-	        length = string.length;
-	    return sign + (length < width ? new Array(width - length + 1).join(fill) + string : string);
-	  }
-
-	  function requote(s) {
-	    return s.replace(requoteRe, "\\$&");
-	  }
-
-	  function formatRe(names) {
-	    return new RegExp("^(?:" + names.map(requote).join("|") + ")", "i");
-	  }
-
-	  function formatLookup(names) {
-	    var map = {}, i = -1, n = names.length;
-	    while (++i < n) map[names[i].toLowerCase()] = i;
-	    return map;
-	  }
-
-	  function parseWeekdayNumber(d, string, i) {
-	    var n = numberRe.exec(string.slice(i, i + 1));
-	    return n ? (d.w = +n[0], i + n[0].length) : -1;
-	  }
-
-	  function parseWeekNumberSunday(d, string, i) {
-	    var n = numberRe.exec(string.slice(i));
-	    return n ? (d.U = +n[0], i + n[0].length) : -1;
-	  }
-
-	  function parseWeekNumberMonday(d, string, i) {
-	    var n = numberRe.exec(string.slice(i));
-	    return n ? (d.W = +n[0], i + n[0].length) : -1;
-	  }
-
-	  function parseFullYear(d, string, i) {
-	    var n = numberRe.exec(string.slice(i, i + 4));
-	    return n ? (d.y = +n[0], i + n[0].length) : -1;
-	  }
-
-	  function parseYear(d, string, i) {
-	    var n = numberRe.exec(string.slice(i, i + 2));
-	    return n ? (d.y = +n[0] + (+n[0] > 68 ? 1900 : 2000), i + n[0].length) : -1;
-	  }
-
-	  function parseZone(d, string, i) {
-	    var n = /^(Z)|([+-]\d\d)(?:\:?(\d\d))?/.exec(string.slice(i, i + 6));
-	    return n ? (d.Z = n[1] ? 0 : -(n[2] + (n[3] || "00")), i + n[0].length) : -1;
-	  }
-
-	  function parseMonthNumber(d, string, i) {
-	    var n = numberRe.exec(string.slice(i, i + 2));
-	    return n ? (d.m = n[0] - 1, i + n[0].length) : -1;
-	  }
-
-	  function parseDayOfMonth(d, string, i) {
-	    var n = numberRe.exec(string.slice(i, i + 2));
-	    return n ? (d.d = +n[0], i + n[0].length) : -1;
-	  }
-
-	  function parseDayOfYear(d, string, i) {
-	    var n = numberRe.exec(string.slice(i, i + 3));
-	    return n ? (d.m = 0, d.d = +n[0], i + n[0].length) : -1;
-	  }
-
-	  function parseHour24(d, string, i) {
-	    var n = numberRe.exec(string.slice(i, i + 2));
-	    return n ? (d.H = +n[0], i + n[0].length) : -1;
-	  }
-
-	  function parseMinutes(d, string, i) {
-	    var n = numberRe.exec(string.slice(i, i + 2));
-	    return n ? (d.M = +n[0], i + n[0].length) : -1;
-	  }
-
-	  function parseSeconds(d, string, i) {
-	    var n = numberRe.exec(string.slice(i, i + 2));
-	    return n ? (d.S = +n[0], i + n[0].length) : -1;
-	  }
-
-	  function parseMilliseconds(d, string, i) {
-	    var n = numberRe.exec(string.slice(i, i + 3));
-	    return n ? (d.L = +n[0], i + n[0].length) : -1;
-	  }
-
-	  function parseLiteralPercent(d, string, i) {
-	    var n = percentRe.exec(string.slice(i, i + 1));
-	    return n ? i + n[0].length : -1;
-	  }
-
-	  function formatDayOfMonth(d, p) {
-	    return pad(d.getDate(), p, 2);
-	  }
-
-	  function formatHour24(d, p) {
-	    return pad(d.getHours(), p, 2);
-	  }
-
-	  function formatHour12(d, p) {
-	    return pad(d.getHours() % 12 || 12, p, 2);
-	  }
-
-	  function formatDayOfYear(d, p) {
-	    return pad(1 + d3Time.timeDay.count(d3Time.timeYear(d), d), p, 3);
-	  }
-
-	  function formatMilliseconds(d, p) {
-	    return pad(d.getMilliseconds(), p, 3);
-	  }
-
-	  function formatMonthNumber(d, p) {
-	    return pad(d.getMonth() + 1, p, 2);
-	  }
-
-	  function formatMinutes(d, p) {
-	    return pad(d.getMinutes(), p, 2);
-	  }
-
-	  function formatSeconds(d, p) {
-	    return pad(d.getSeconds(), p, 2);
-	  }
-
-	  function formatWeekNumberSunday(d, p) {
-	    return pad(d3Time.timeSunday.count(d3Time.timeYear(d), d), p, 2);
-	  }
-
-	  function formatWeekdayNumber(d) {
-	    return d.getDay();
-	  }
-
-	  function formatWeekNumberMonday(d, p) {
-	    return pad(d3Time.timeMonday.count(d3Time.timeYear(d), d), p, 2);
-	  }
-
-	  function formatYear(d, p) {
-	    return pad(d.getFullYear() % 100, p, 2);
-	  }
-
-	  function formatFullYear(d, p) {
-	    return pad(d.getFullYear() % 10000, p, 4);
-	  }
-
-	  function formatZone(d) {
-	    var z = d.getTimezoneOffset();
-	    return (z > 0 ? "-" : (z *= -1, "+"))
-	        + pad(z / 60 | 0, "0", 2)
-	        + pad(z % 60, "0", 2);
-	  }
-
-	  function formatUTCDayOfMonth(d, p) {
-	    return pad(d.getUTCDate(), p, 2);
-	  }
-
-	  function formatUTCHour24(d, p) {
-	    return pad(d.getUTCHours(), p, 2);
-	  }
-
-	  function formatUTCHour12(d, p) {
-	    return pad(d.getUTCHours() % 12 || 12, p, 2);
-	  }
-
-	  function formatUTCDayOfYear(d, p) {
-	    return pad(1 + d3Time.utcDay.count(d3Time.utcYear(d), d), p, 3);
-	  }
-
-	  function formatUTCMilliseconds(d, p) {
-	    return pad(d.getUTCMilliseconds(), p, 3);
-	  }
-
-	  function formatUTCMonthNumber(d, p) {
-	    return pad(d.getUTCMonth() + 1, p, 2);
-	  }
-
-	  function formatUTCMinutes(d, p) {
-	    return pad(d.getUTCMinutes(), p, 2);
-	  }
-
-	  function formatUTCSeconds(d, p) {
-	    return pad(d.getUTCSeconds(), p, 2);
-	  }
-
-	  function formatUTCWeekNumberSunday(d, p) {
-	    return pad(d3Time.utcSunday.count(d3Time.utcYear(d), d), p, 2);
-	  }
-
-	  function formatUTCWeekdayNumber(d) {
-	    return d.getUTCDay();
-	  }
-
-	  function formatUTCWeekNumberMonday(d, p) {
-	    return pad(d3Time.utcMonday.count(d3Time.utcYear(d), d), p, 2);
-	  }
-
-	  function formatUTCYear(d, p) {
-	    return pad(d.getUTCFullYear() % 100, p, 2);
-	  }
-
-	  function formatUTCFullYear(d, p) {
-	    return pad(d.getUTCFullYear() % 10000, p, 4);
-	  }
-
-	  function formatUTCZone() {
-	    return "+0000";
-	  }
-
-	  function formatLiteralPercent() {
-	    return "%";
-	  }
-
-	  var locale;
-	  exports.timeFormat;
-	  exports.timeParse;
-	  exports.utcFormat;
-	  exports.utcParse;
-
-	  defaultLocale({
-	    dateTime: "%x, %X",
-	    date: "%-m/%-d/%Y",
-	    time: "%-I:%M:%S %p",
-	    periods: ["AM", "PM"],
-	    days: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-	    shortDays: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
-	    months: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
-	    shortMonths: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
-	  });
-
-	  function defaultLocale(definition) {
-	    locale = formatLocale(definition);
-	    exports.timeFormat = locale.format;
-	    exports.timeParse = locale.parse;
-	    exports.utcFormat = locale.utcFormat;
-	    exports.utcParse = locale.utcParse;
-	    return locale;
-	  }
-
-	  var isoSpecifier = "%Y-%m-%dT%H:%M:%S.%LZ";
-
-	  function formatIsoNative(date) {
-	    return date.toISOString();
-	  }
-
-	  var formatIso = Date.prototype.toISOString
-	      ? formatIsoNative
-	      : exports.utcFormat(isoSpecifier);
-
-	  function parseIsoNative(string) {
-	    var date = new Date(string);
-	    return isNaN(date) ? null : date;
-	  }
-
-	  var parseIso = +new Date("2000-01-01T00:00:00.000Z")
-	      ? parseIsoNative
-	      : exports.utcParse(isoSpecifier);
-
-	  exports.timeFormatDefaultLocale = defaultLocale;
-	  exports.timeFormatLocale = formatLocale;
-	  exports.isoFormat = formatIso;
-	  exports.isoParse = parseIso;
-
-	  Object.defineProperty(exports, '__esModule', { value: true });
-
-	}));
-
-/***/ },
-/* 256 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// https://d3js.org/d3-scale/ Version 1.0.1. Copyright 2016 Mike Bostock.
-	(function (global, factory) {
-	   true ? factory(exports, __webpack_require__(232), __webpack_require__(233), __webpack_require__(242), __webpack_require__(254), __webpack_require__(253), __webpack_require__(255), __webpack_require__(241)) :
-	  typeof define === 'function' && define.amd ? define(['exports', 'd3-array', 'd3-collection', 'd3-interpolate', 'd3-format', 'd3-time', 'd3-time-format', 'd3-color'], factory) :
-	  (factory((global.d3 = global.d3 || {}),global.d3,global.d3,global.d3,global.d3,global.d3,global.d3,global.d3));
-	}(this, function (exports,d3Array,d3Collection,d3Interpolate,d3Format,d3Time,d3TimeFormat,d3Color) { 'use strict';
-
-	  var array = Array.prototype;
-
-	  var map$1 = array.map;
-	  var slice = array.slice;
-
-	  var implicit = {name: "implicit"};
-
-	  function ordinal(range) {
-	    var index = d3Collection.map(),
-	        domain = [],
-	        unknown = implicit;
-
-	    range = range == null ? [] : slice.call(range);
-
-	    function scale(d) {
-	      var key = d + "", i = index.get(key);
-	      if (!i) {
-	        if (unknown !== implicit) return unknown;
-	        index.set(key, i = domain.push(d));
-	      }
-	      return range[(i - 1) % range.length];
-	    }
-
-	    scale.domain = function(_) {
-	      if (!arguments.length) return domain.slice();
-	      domain = [], index = d3Collection.map();
-	      var i = -1, n = _.length, d, key;
-	      while (++i < n) if (!index.has(key = (d = _[i]) + "")) index.set(key, domain.push(d));
-	      return scale;
-	    };
-
-	    scale.range = function(_) {
-	      return arguments.length ? (range = slice.call(_), scale) : range.slice();
-	    };
-
-	    scale.unknown = function(_) {
-	      return arguments.length ? (unknown = _, scale) : unknown;
-	    };
-
-	    scale.copy = function() {
-	      return ordinal()
-	          .domain(domain)
-	          .range(range)
-	          .unknown(unknown);
-	    };
-
-	    return scale;
-	  }
-
-	  function band() {
-	    var scale = ordinal().unknown(undefined),
-	        domain = scale.domain,
-	        ordinalRange = scale.range,
-	        range = [0, 1],
-	        step,
-	        bandwidth,
-	        round = false,
-	        paddingInner = 0,
-	        paddingOuter = 0,
-	        align = 0.5;
-
-	    delete scale.unknown;
-
-	    function rescale() {
-	      var n = domain().length,
-	          reverse = range[1] < range[0],
-	          start = range[reverse - 0],
-	          stop = range[1 - reverse];
-	      step = (stop - start) / Math.max(1, n - paddingInner + paddingOuter * 2);
-	      if (round) step = Math.floor(step);
-	      start += (stop - start - step * (n - paddingInner)) * align;
-	      bandwidth = step * (1 - paddingInner);
-	      if (round) start = Math.round(start), bandwidth = Math.round(bandwidth);
-	      var values = d3Array.range(n).map(function(i) { return start + step * i; });
-	      return ordinalRange(reverse ? values.reverse() : values);
-	    }
-
-	    scale.domain = function(_) {
-	      return arguments.length ? (domain(_), rescale()) : domain();
-	    };
-
-	    scale.range = function(_) {
-	      return arguments.length ? (range = [+_[0], +_[1]], rescale()) : range.slice();
-	    };
-
-	    scale.rangeRound = function(_) {
-	      return range = [+_[0], +_[1]], round = true, rescale();
-	    };
-
-	    scale.bandwidth = function() {
-	      return bandwidth;
-	    };
-
-	    scale.step = function() {
-	      return step;
-	    };
-
-	    scale.round = function(_) {
-	      return arguments.length ? (round = !!_, rescale()) : round;
-	    };
-
-	    scale.padding = function(_) {
-	      return arguments.length ? (paddingInner = paddingOuter = Math.max(0, Math.min(1, _)), rescale()) : paddingInner;
-	    };
-
-	    scale.paddingInner = function(_) {
-	      return arguments.length ? (paddingInner = Math.max(0, Math.min(1, _)), rescale()) : paddingInner;
-	    };
-
-	    scale.paddingOuter = function(_) {
-	      return arguments.length ? (paddingOuter = Math.max(0, Math.min(1, _)), rescale()) : paddingOuter;
-	    };
-
-	    scale.align = function(_) {
-	      return arguments.length ? (align = Math.max(0, Math.min(1, _)), rescale()) : align;
-	    };
-
-	    scale.copy = function() {
-	      return band()
-	          .domain(domain())
-	          .range(range)
-	          .round(round)
-	          .paddingInner(paddingInner)
-	          .paddingOuter(paddingOuter)
-	          .align(align);
-	    };
-
-	    return rescale();
-	  }
-
-	  function pointish(scale) {
-	    var copy = scale.copy;
-
-	    scale.padding = scale.paddingOuter;
-	    delete scale.paddingInner;
-	    delete scale.paddingOuter;
-
-	    scale.copy = function() {
-	      return pointish(copy());
-	    };
-
-	    return scale;
-	  }
-
-	  function point() {
-	    return pointish(band().paddingInner(1));
-	  }
-
-	  function constant(x) {
-	    return function() {
-	      return x;
-	    };
-	  }
-
-	  function number(x) {
-	    return +x;
-	  }
-
-	  var unit = [0, 1];
-
-	  function deinterpolate(a, b) {
-	    return (b -= (a = +a))
-	        ? function(x) { return (x - a) / b; }
-	        : constant(b);
-	  }
-
-	  function deinterpolateClamp(deinterpolate) {
-	    return function(a, b) {
-	      var d = deinterpolate(a = +a, b = +b);
-	      return function(x) { return x <= a ? 0 : x >= b ? 1 : d(x); };
-	    };
-	  }
-
-	  function reinterpolateClamp(reinterpolate) {
-	    return function(a, b) {
-	      var r = reinterpolate(a = +a, b = +b);
-	      return function(t) { return t <= 0 ? a : t >= 1 ? b : r(t); };
-	    };
-	  }
-
-	  function bimap(domain, range, deinterpolate, reinterpolate) {
-	    var d0 = domain[0], d1 = domain[1], r0 = range[0], r1 = range[1];
-	    if (d1 < d0) d0 = deinterpolate(d1, d0), r0 = reinterpolate(r1, r0);
-	    else d0 = deinterpolate(d0, d1), r0 = reinterpolate(r0, r1);
-	    return function(x) { return r0(d0(x)); };
-	  }
-
-	  function polymap(domain, range, deinterpolate, reinterpolate) {
-	    var j = Math.min(domain.length, range.length) - 1,
-	        d = new Array(j),
-	        r = new Array(j),
-	        i = -1;
-
-	    // Reverse descending domains.
-	    if (domain[j] < domain[0]) {
-	      domain = domain.slice().reverse();
-	      range = range.slice().reverse();
-	    }
-
-	    while (++i < j) {
-	      d[i] = deinterpolate(domain[i], domain[i + 1]);
-	      r[i] = reinterpolate(range[i], range[i + 1]);
-	    }
-
-	    return function(x) {
-	      var i = d3Array.bisect(domain, x, 1, j) - 1;
-	      return r[i](d[i](x));
-	    };
-	  }
-
-	  function copy(source, target) {
-	    return target
-	        .domain(source.domain())
-	        .range(source.range())
-	        .interpolate(source.interpolate())
-	        .clamp(source.clamp());
-	  }
-
-	  // deinterpolate(a, b)(x) takes a domain value x in [a,b] and returns the corresponding parameter t in [0,1].
-	  // reinterpolate(a, b)(t) takes a parameter t in [0,1] and returns the corresponding domain value x in [a,b].
-	  function continuous(deinterpolate$$, reinterpolate) {
-	    var domain = unit,
-	        range = unit,
-	        interpolate = d3Interpolate.interpolate,
-	        clamp = false,
-	        piecewise,
-	        output,
-	        input;
-
-	    function rescale() {
-	      piecewise = Math.min(domain.length, range.length) > 2 ? polymap : bimap;
-	      output = input = null;
-	      return scale;
-	    }
-
-	    function scale(x) {
-	      return (output || (output = piecewise(domain, range, clamp ? deinterpolateClamp(deinterpolate$$) : deinterpolate$$, interpolate)))(+x);
-	    }
-
-	    scale.invert = function(y) {
-	      return (input || (input = piecewise(range, domain, deinterpolate, clamp ? reinterpolateClamp(reinterpolate) : reinterpolate)))(+y);
-	    };
-
-	    scale.domain = function(_) {
-	      return arguments.length ? (domain = map$1.call(_, number), rescale()) : domain.slice();
-	    };
-
-	    scale.range = function(_) {
-	      return arguments.length ? (range = slice.call(_), rescale()) : range.slice();
-	    };
-
-	    scale.rangeRound = function(_) {
-	      return range = slice.call(_), interpolate = d3Interpolate.interpolateRound, rescale();
-	    };
-
-	    scale.clamp = function(_) {
-	      return arguments.length ? (clamp = !!_, rescale()) : clamp;
-	    };
-
-	    scale.interpolate = function(_) {
-	      return arguments.length ? (interpolate = _, rescale()) : interpolate;
-	    };
-
-	    return rescale();
-	  }
-
-	  function tickFormat(domain, count, specifier) {
-	    var start = domain[0],
-	        stop = domain[domain.length - 1],
-	        step = d3Array.tickStep(start, stop, count == null ? 10 : count),
-	        precision;
-	    specifier = d3Format.formatSpecifier(specifier == null ? ",f" : specifier);
-	    switch (specifier.type) {
-	      case "s": {
-	        var value = Math.max(Math.abs(start), Math.abs(stop));
-	        if (specifier.precision == null && !isNaN(precision = d3Format.precisionPrefix(step, value))) specifier.precision = precision;
-	        return d3Format.formatPrefix(specifier, value);
-	      }
-	      case "":
-	      case "e":
-	      case "g":
-	      case "p":
-	      case "r": {
-	        if (specifier.precision == null && !isNaN(precision = d3Format.precisionRound(step, Math.max(Math.abs(start), Math.abs(stop))))) specifier.precision = precision - (specifier.type === "e");
-	        break;
-	      }
-	      case "f":
-	      case "%": {
-	        if (specifier.precision == null && !isNaN(precision = d3Format.precisionFixed(step))) specifier.precision = precision - (specifier.type === "%") * 2;
-	        break;
-	      }
-	    }
-	    return d3Format.format(specifier);
-	  }
-
-	  function linearish(scale) {
-	    var domain = scale.domain;
-
-	    scale.ticks = function(count) {
-	      var d = domain();
-	      return d3Array.ticks(d[0], d[d.length - 1], count == null ? 10 : count);
-	    };
-
-	    scale.tickFormat = function(count, specifier) {
-	      return tickFormat(domain(), count, specifier);
-	    };
-
-	    scale.nice = function(count) {
-	      var d = domain(),
-	          i = d.length - 1,
-	          n = count == null ? 10 : count,
-	          start = d[0],
-	          stop = d[i],
-	          step = d3Array.tickStep(start, stop, n);
-
-	      if (step) {
-	        step = d3Array.tickStep(Math.floor(start / step) * step, Math.ceil(stop / step) * step, n);
-	        d[0] = Math.floor(start / step) * step;
-	        d[i] = Math.ceil(stop / step) * step;
-	        domain(d);
-	      }
-
-	      return scale;
-	    };
-
-	    return scale;
-	  }
-
-	  function linear() {
-	    var scale = continuous(deinterpolate, d3Interpolate.interpolateNumber);
-
-	    scale.copy = function() {
-	      return copy(scale, linear());
-	    };
-
-	    return linearish(scale);
-	  }
-
-	  function identity() {
-	    var domain = [0, 1];
-
-	    function scale(x) {
-	      return +x;
-	    }
-
-	    scale.invert = scale;
-
-	    scale.domain = scale.range = function(_) {
-	      return arguments.length ? (domain = map$1.call(_, number), scale) : domain.slice();
-	    };
-
-	    scale.copy = function() {
-	      return identity().domain(domain);
-	    };
-
-	    return linearish(scale);
-	  }
-
-	  function nice(domain, interval) {
-	    domain = domain.slice();
-
-	    var i0 = 0,
-	        i1 = domain.length - 1,
-	        x0 = domain[i0],
-	        x1 = domain[i1],
-	        t;
-
-	    if (x1 < x0) {
-	      t = i0, i0 = i1, i1 = t;
-	      t = x0, x0 = x1, x1 = t;
-	    }
-
-	    domain[i0] = interval.floor(x0);
-	    domain[i1] = interval.ceil(x1);
-	    return domain;
-	  }
-
-	  function deinterpolate$1(a, b) {
-	    return (b = Math.log(b / a))
-	        ? function(x) { return Math.log(x / a) / b; }
-	        : constant(b);
-	  }
-
-	  function reinterpolate(a, b) {
-	    return a < 0
-	        ? function(t) { return -Math.pow(-b, t) * Math.pow(-a, 1 - t); }
-	        : function(t) { return Math.pow(b, t) * Math.pow(a, 1 - t); };
-	  }
-
-	  function pow10(x) {
-	    return isFinite(x) ? +("1e" + x) : x < 0 ? 0 : x;
-	  }
-
-	  function powp(base) {
-	    return base === 10 ? pow10
-	        : base === Math.E ? Math.exp
-	        : function(x) { return Math.pow(base, x); };
-	  }
-
-	  function logp(base) {
-	    return base === Math.E ? Math.log
-	        : base === 10 && Math.log10
-	        || base === 2 && Math.log2
-	        || (base = Math.log(base), function(x) { return Math.log(x) / base; });
-	  }
-
-	  function reflect(f) {
-	    return function(x) {
-	      return -f(-x);
-	    };
-	  }
-
-	  function log() {
-	    var scale = continuous(deinterpolate$1, reinterpolate).domain([1, 10]),
-	        domain = scale.domain,
-	        base = 10,
-	        logs = logp(10),
-	        pows = powp(10);
-
-	    function rescale() {
-	      logs = logp(base), pows = powp(base);
-	      if (domain()[0] < 0) logs = reflect(logs), pows = reflect(pows);
-	      return scale;
-	    }
-
-	    scale.base = function(_) {
-	      return arguments.length ? (base = +_, rescale()) : base;
-	    };
-
-	    scale.domain = function(_) {
-	      return arguments.length ? (domain(_), rescale()) : domain();
-	    };
-
-	    scale.ticks = function(count) {
-	      var d = domain(),
-	          u = d[0],
-	          v = d[d.length - 1],
-	          r;
-
-	      if (r = v < u) i = u, u = v, v = i;
-
-	      var i = logs(u),
-	          j = logs(v),
-	          p,
-	          k,
-	          t,
-	          n = count == null ? 10 : +count,
-	          z = [];
-
-	      if (!(base % 1) && j - i < n) {
-	        i = Math.round(i) - 1, j = Math.round(j) + 1;
-	        if (u > 0) for (; i < j; ++i) {
-	          for (k = 1, p = pows(i); k < base; ++k) {
-	            t = p * k;
-	            if (t < u) continue;
-	            if (t > v) break;
-	            z.push(t);
-	          }
-	        } else for (; i < j; ++i) {
-	          for (k = base - 1, p = pows(i); k >= 1; --k) {
-	            t = p * k;
-	            if (t < u) continue;
-	            if (t > v) break;
-	            z.push(t);
-	          }
-	        }
-	      } else {
-	        z = d3Array.ticks(i, j, Math.min(j - i, n)).map(pows);
-	      }
-
-	      return r ? z.reverse() : z;
-	    };
-
-	    scale.tickFormat = function(count, specifier) {
-	      if (specifier == null) specifier = base === 10 ? ".0e" : ",";
-	      if (typeof specifier !== "function") specifier = d3Format.format(specifier);
-	      if (count === Infinity) return specifier;
-	      if (count == null) count = 10;
-	      var k = Math.max(1, base * count / scale.ticks().length); // TODO fast estimate?
-	      return function(d) {
-	        var i = d / pows(Math.round(logs(d)));
-	        if (i * base < base - 0.5) i *= base;
-	        return i <= k ? specifier(d) : "";
-	      };
-	    };
-
-	    scale.nice = function() {
-	      return domain(nice(domain(), {
-	        floor: function(x) { return pows(Math.floor(logs(x))); },
-	        ceil: function(x) { return pows(Math.ceil(logs(x))); }
-	      }));
-	    };
-
-	    scale.copy = function() {
-	      return copy(scale, log().base(base));
-	    };
-
-	    return scale;
-	  }
-
-	  function raise(x, exponent) {
-	    return x < 0 ? -Math.pow(-x, exponent) : Math.pow(x, exponent);
-	  }
-
-	  function pow() {
-	    var exponent = 1,
-	        scale = continuous(deinterpolate, reinterpolate),
-	        domain = scale.domain;
-
-	    function deinterpolate(a, b) {
-	      return (b = raise(b, exponent) - (a = raise(a, exponent)))
-	          ? function(x) { return (raise(x, exponent) - a) / b; }
-	          : constant(b);
-	    }
-
-	    function reinterpolate(a, b) {
-	      b = raise(b, exponent) - (a = raise(a, exponent));
-	      return function(t) { return raise(a + b * t, 1 / exponent); };
-	    }
-
-	    scale.exponent = function(_) {
-	      return arguments.length ? (exponent = +_, domain(domain())) : exponent;
-	    };
-
-	    scale.copy = function() {
-	      return copy(scale, pow().exponent(exponent));
-	    };
-
-	    return linearish(scale);
-	  }
-
-	  function sqrt() {
-	    return pow().exponent(0.5);
-	  }
-
-	  function quantile$1() {
-	    var domain = [],
-	        range = [],
-	        thresholds = [];
-
-	    function rescale() {
-	      var i = 0, n = Math.max(1, range.length);
-	      thresholds = new Array(n - 1);
-	      while (++i < n) thresholds[i - 1] = d3Array.quantile(domain, i / n);
-	      return scale;
-	    }
-
-	    function scale(x) {
-	      if (!isNaN(x = +x)) return range[d3Array.bisect(thresholds, x)];
-	    }
-
-	    scale.invertExtent = function(y) {
-	      var i = range.indexOf(y);
-	      return i < 0 ? [NaN, NaN] : [
-	        i > 0 ? thresholds[i - 1] : domain[0],
-	        i < thresholds.length ? thresholds[i] : domain[domain.length - 1]
-	      ];
-	    };
-
-	    scale.domain = function(_) {
-	      if (!arguments.length) return domain.slice();
-	      domain = [];
-	      for (var i = 0, n = _.length, d; i < n; ++i) if (d = _[i], d != null && !isNaN(d = +d)) domain.push(d);
-	      domain.sort(d3Array.ascending);
-	      return rescale();
-	    };
-
-	    scale.range = function(_) {
-	      return arguments.length ? (range = slice.call(_), rescale()) : range.slice();
-	    };
-
-	    scale.quantiles = function() {
-	      return thresholds.slice();
-	    };
-
-	    scale.copy = function() {
-	      return quantile$1()
-	          .domain(domain)
-	          .range(range);
-	    };
-
-	    return scale;
-	  }
-
-	  function quantize() {
-	    var x0 = 0,
-	        x1 = 1,
-	        n = 1,
-	        domain = [0.5],
-	        range = [0, 1];
-
-	    function scale(x) {
-	      if (x <= x) return range[d3Array.bisect(domain, x, 0, n)];
-	    }
-
-	    function rescale() {
-	      var i = -1;
-	      domain = new Array(n);
-	      while (++i < n) domain[i] = ((i + 1) * x1 - (i - n) * x0) / (n + 1);
-	      return scale;
-	    }
-
-	    scale.domain = function(_) {
-	      return arguments.length ? (x0 = +_[0], x1 = +_[1], rescale()) : [x0, x1];
-	    };
-
-	    scale.range = function(_) {
-	      return arguments.length ? (n = (range = slice.call(_)).length - 1, rescale()) : range.slice();
-	    };
-
-	    scale.invertExtent = function(y) {
-	      var i = range.indexOf(y);
-	      return i < 0 ? [NaN, NaN]
-	          : i < 1 ? [x0, domain[0]]
-	          : i >= n ? [domain[n - 1], x1]
-	          : [domain[i - 1], domain[i]];
-	    };
-
-	    scale.copy = function() {
-	      return quantize()
-	          .domain([x0, x1])
-	          .range(range);
-	    };
-
-	    return linearish(scale);
-	  }
-
-	  function threshold() {
-	    var domain = [0.5],
-	        range = [0, 1],
-	        n = 1;
-
-	    function scale(x) {
-	      if (x <= x) return range[d3Array.bisect(domain, x, 0, n)];
-	    }
-
-	    scale.domain = function(_) {
-	      return arguments.length ? (domain = slice.call(_), n = Math.min(domain.length, range.length - 1), scale) : domain.slice();
-	    };
-
-	    scale.range = function(_) {
-	      return arguments.length ? (range = slice.call(_), n = Math.min(domain.length, range.length - 1), scale) : range.slice();
-	    };
-
-	    scale.invertExtent = function(y) {
-	      var i = range.indexOf(y);
-	      return [domain[i - 1], domain[i]];
-	    };
-
-	    scale.copy = function() {
-	      return threshold()
-	          .domain(domain)
-	          .range(range);
-	    };
-
-	    return scale;
-	  }
-
-	  var durationSecond = 1000;
-	  var durationMinute = durationSecond * 60;
-	  var durationHour = durationMinute * 60;
-	  var durationDay = durationHour * 24;
-	  var durationWeek = durationDay * 7;
-	  var durationMonth = durationDay * 30;
-	  var durationYear = durationDay * 365;
-	  function date(t) {
-	    return new Date(t);
-	  }
-
-	  function number$1(t) {
-	    return t instanceof Date ? +t : +new Date(+t);
-	  }
-
-	  function calendar(year, month, week, day, hour, minute, second, millisecond, format) {
-	    var scale = continuous(deinterpolate, d3Interpolate.interpolateNumber),
-	        invert = scale.invert,
-	        domain = scale.domain;
-
-	    var formatMillisecond = format(".%L"),
-	        formatSecond = format(":%S"),
-	        formatMinute = format("%I:%M"),
-	        formatHour = format("%I %p"),
-	        formatDay = format("%a %d"),
-	        formatWeek = format("%b %d"),
-	        formatMonth = format("%B"),
-	        formatYear = format("%Y");
-
-	    var tickIntervals = [
-	      [second,  1,      durationSecond],
-	      [second,  5,  5 * durationSecond],
-	      [second, 15, 15 * durationSecond],
-	      [second, 30, 30 * durationSecond],
-	      [minute,  1,      durationMinute],
-	      [minute,  5,  5 * durationMinute],
-	      [minute, 15, 15 * durationMinute],
-	      [minute, 30, 30 * durationMinute],
-	      [  hour,  1,      durationHour  ],
-	      [  hour,  3,  3 * durationHour  ],
-	      [  hour,  6,  6 * durationHour  ],
-	      [  hour, 12, 12 * durationHour  ],
-	      [   day,  1,      durationDay   ],
-	      [   day,  2,  2 * durationDay   ],
-	      [  week,  1,      durationWeek  ],
-	      [ month,  1,      durationMonth ],
-	      [ month,  3,  3 * durationMonth ],
-	      [  year,  1,      durationYear  ]
-	    ];
-
-	    function tickFormat(date) {
-	      return (second(date) < date ? formatMillisecond
-	          : minute(date) < date ? formatSecond
-	          : hour(date) < date ? formatMinute
-	          : day(date) < date ? formatHour
-	          : month(date) < date ? (week(date) < date ? formatDay : formatWeek)
-	          : year(date) < date ? formatMonth
-	          : formatYear)(date);
-	    }
-
-	    function tickInterval(interval, start, stop, step) {
-	      if (interval == null) interval = 10;
-
-	      // If a desired tick count is specified, pick a reasonable tick interval
-	      // based on the extent of the domain and a rough estimate of tick size.
-	      // Otherwise, assume interval is already a time interval and use it.
-	      if (typeof interval === "number") {
-	        var target = Math.abs(stop - start) / interval,
-	            i = d3Array.bisector(function(i) { return i[2]; }).right(tickIntervals, target);
-	        if (i === tickIntervals.length) {
-	          step = d3Array.tickStep(start / durationYear, stop / durationYear, interval);
-	          interval = year;
-	        } else if (i) {
-	          i = tickIntervals[target / tickIntervals[i - 1][2] < tickIntervals[i][2] / target ? i - 1 : i];
-	          step = i[1];
-	          interval = i[0];
-	        } else {
-	          step = d3Array.tickStep(start, stop, interval);
-	          interval = millisecond;
-	        }
-	      }
-
-	      return step == null ? interval : interval.every(step);
-	    }
-
-	    scale.invert = function(y) {
-	      return new Date(invert(y));
-	    };
-
-	    scale.domain = function(_) {
-	      return arguments.length ? domain(map$1.call(_, number$1)) : domain().map(date);
-	    };
-
-	    scale.ticks = function(interval, step) {
-	      var d = domain(),
-	          t0 = d[0],
-	          t1 = d[d.length - 1],
-	          r = t1 < t0,
-	          t;
-	      if (r) t = t0, t0 = t1, t1 = t;
-	      t = tickInterval(interval, t0, t1, step);
-	      t = t ? t.range(t0, t1 + 1) : []; // inclusive stop
-	      return r ? t.reverse() : t;
-	    };
-
-	    scale.tickFormat = function(count, specifier) {
-	      return specifier == null ? tickFormat : format(specifier);
-	    };
-
-	    scale.nice = function(interval, step) {
-	      var d = domain();
-	      return (interval = tickInterval(interval, d[0], d[d.length - 1], step))
-	          ? domain(nice(d, interval))
-	          : scale;
-	    };
-
-	    scale.copy = function() {
-	      return copy(scale, calendar(year, month, week, day, hour, minute, second, millisecond, format));
-	    };
-
-	    return scale;
-	  }
-
-	  function time() {
-	    return calendar(d3Time.timeYear, d3Time.timeMonth, d3Time.timeWeek, d3Time.timeDay, d3Time.timeHour, d3Time.timeMinute, d3Time.timeSecond, d3Time.timeMillisecond, d3TimeFormat.timeFormat).domain([new Date(2000, 0, 1), new Date(2000, 0, 2)]);
-	  }
-
-	  function utcTime() {
-	    return calendar(d3Time.utcYear, d3Time.utcMonth, d3Time.utcWeek, d3Time.utcDay, d3Time.utcHour, d3Time.utcMinute, d3Time.utcSecond, d3Time.utcMillisecond, d3TimeFormat.utcFormat).domain([Date.UTC(2000, 0, 1), Date.UTC(2000, 0, 2)]);
-	  }
-
-	  function colors(s) {
-	    return s.match(/.{6}/g).map(function(x) {
-	      return "#" + x;
-	    });
-	  }
-
-	  var category10 = colors("1f77b4ff7f0e2ca02cd627289467bd8c564be377c27f7f7fbcbd2217becf");
-
-	  var category20b = colors("393b795254a36b6ecf9c9ede6379398ca252b5cf6bcedb9c8c6d31bd9e39e7ba52e7cb94843c39ad494ad6616be7969c7b4173a55194ce6dbdde9ed6");
-
-	  var category20c = colors("3182bd6baed69ecae1c6dbefe6550dfd8d3cfdae6bfdd0a231a35474c476a1d99bc7e9c0756bb19e9ac8bcbddcdadaeb636363969696bdbdbdd9d9d9");
-
-	  var category20 = colors("1f77b4aec7e8ff7f0effbb782ca02c98df8ad62728ff98969467bdc5b0d58c564bc49c94e377c2f7b6d27f7f7fc7c7c7bcbd22dbdb8d17becf9edae5");
-
-	  var cubehelix$1 = d3Interpolate.interpolateCubehelixLong(d3Color.cubehelix(300, 0.5, 0.0), d3Color.cubehelix(-240, 0.5, 1.0));
-
-	  var warm = d3Interpolate.interpolateCubehelixLong(d3Color.cubehelix(-100, 0.75, 0.35), d3Color.cubehelix(80, 1.50, 0.8));
-
-	  var cool = d3Interpolate.interpolateCubehelixLong(d3Color.cubehelix(260, 0.75, 0.35), d3Color.cubehelix(80, 1.50, 0.8));
-
-	  var rainbow = d3Color.cubehelix();
-
-	  function rainbow$1(t) {
-	    if (t < 0 || t > 1) t -= Math.floor(t);
-	    var ts = Math.abs(t - 0.5);
-	    rainbow.h = 360 * t - 100;
-	    rainbow.s = 1.5 - 1.5 * ts;
-	    rainbow.l = 0.8 - 0.9 * ts;
-	    return rainbow + "";
-	  }
-
-	  function ramp(range) {
-	    var n = range.length;
-	    return function(t) {
-	      return range[Math.max(0, Math.min(n - 1, Math.floor(t * n)))];
-	    };
-	  }
-
-	  var viridis = ramp(colors("44015444025645045745055946075a46085c460a5d460b5e470d60470e6147106347116447136548146748166848176948186a481a6c481b6d481c6e481d6f481f70482071482173482374482475482576482677482878482979472a7a472c7a472d7b472e7c472f7d46307e46327e46337f463480453581453781453882443983443a83443b84433d84433e85423f854240864241864142874144874045884046883f47883f48893e49893e4a893e4c8a3d4d8a3d4e8a3c4f8a3c508b3b518b3b528b3a538b3a548c39558c39568c38588c38598c375a8c375b8d365c8d365d8d355e8d355f8d34608d34618d33628d33638d32648e32658e31668e31678e31688e30698e306a8e2f6b8e2f6c8e2e6d8e2e6e8e2e6f8e2d708e2d718e2c718e2c728e2c738e2b748e2b758e2a768e2a778e2a788e29798e297a8e297b8e287c8e287d8e277e8e277f8e27808e26818e26828e26828e25838e25848e25858e24868e24878e23888e23898e238a8d228b8d228c8d228d8d218e8d218f8d21908d21918c20928c20928c20938c1f948c1f958b1f968b1f978b1f988b1f998a1f9a8a1e9b8a1e9c891e9d891f9e891f9f881fa0881fa1881fa1871fa28720a38620a48621a58521a68522a78522a88423a98324aa8325ab8225ac8226ad8127ad8128ae8029af7f2ab07f2cb17e2db27d2eb37c2fb47c31b57b32b67a34b67935b77937b87838b9773aba763bbb753dbc743fbc7340bd7242be7144bf7046c06f48c16e4ac16d4cc26c4ec36b50c46a52c56954c56856c66758c7655ac8645cc8635ec96260ca6063cb5f65cb5e67cc5c69cd5b6ccd5a6ece5870cf5773d05675d05477d1537ad1517cd2507fd34e81d34d84d44b86d54989d5488bd6468ed64590d74393d74195d84098d83e9bd93c9dd93ba0da39a2da37a5db36a8db34aadc32addc30b0dd2fb2dd2db5de2bb8de29bade28bddf26c0df25c2df23c5e021c8e020cae11fcde11dd0e11cd2e21bd5e21ad8e219dae319dde318dfe318e2e418e5e419e7e419eae51aece51befe51cf1e51df4e61ef6e620f8e621fbe723fde725"));
-
-	  var magma = ramp(colors("00000401000501010601010802010902020b02020d03030f03031204041405041606051806051a07061c08071e0907200a08220b09240c09260d0a290e0b2b100b2d110c2f120d31130d34140e36150e38160f3b180f3d19103f1a10421c10441d11471e114920114b21114e22115024125325125527125829115a2a115c2c115f2d11612f116331116533106734106936106b38106c390f6e3b0f703d0f713f0f72400f74420f75440f764510774710784910784a10794c117a4e117b4f127b51127c52137c54137d56147d57157e59157e5a167e5c167f5d177f5f187f601880621980641a80651a80671b80681c816a1c816b1d816d1d816e1e81701f81721f817320817521817621817822817922827b23827c23827e24828025828125818326818426818627818827818928818b29818c29818e2a81902a81912b81932b80942c80962c80982d80992d809b2e7f9c2e7f9e2f7fa02f7fa1307ea3307ea5317ea6317da8327daa337dab337cad347cae347bb0357bb2357bb3367ab5367ab73779b83779ba3878bc3978bd3977bf3a77c03a76c23b75c43c75c53c74c73d73c83e73ca3e72cc3f71cd4071cf4070d0416fd2426fd3436ed5446dd6456cd8456cd9466bdb476adc4869de4968df4a68e04c67e24d66e34e65e44f64e55064e75263e85362e95462ea5661eb5760ec5860ed5a5fee5b5eef5d5ef05f5ef1605df2625df2645cf3655cf4675cf4695cf56b5cf66c5cf66e5cf7705cf7725cf8745cf8765cf9785df9795df97b5dfa7d5efa7f5efa815ffb835ffb8560fb8761fc8961fc8a62fc8c63fc8e64fc9065fd9266fd9467fd9668fd9869fd9a6afd9b6bfe9d6cfe9f6dfea16efea36ffea571fea772fea973feaa74feac76feae77feb078feb27afeb47bfeb67cfeb77efeb97ffebb81febd82febf84fec185fec287fec488fec68afec88cfeca8dfecc8ffecd90fecf92fed194fed395fed597fed799fed89afdda9cfddc9efddea0fde0a1fde2a3fde3a5fde5a7fde7a9fde9aafdebacfcecaefceeb0fcf0b2fcf2b4fcf4b6fcf6b8fcf7b9fcf9bbfcfbbdfcfdbf"));
-
-	  var inferno = ramp(colors("00000401000501010601010802010a02020c02020e03021004031204031405041706041907051b08051d09061f0a07220b07240c08260d08290e092b10092d110a30120a32140b34150b37160b39180c3c190c3e1b0c411c0c431e0c451f0c48210c4a230c4c240c4f260c51280b53290b552b0b572d0b592f0a5b310a5c320a5e340a5f3609613809623909633b09643d09653e0966400a67420a68440a68450a69470b6a490b6a4a0c6b4c0c6b4d0d6c4f0d6c510e6c520e6d540f6d550f6d57106e59106e5a116e5c126e5d126e5f136e61136e62146e64156e65156e67166e69166e6a176e6c186e6d186e6f196e71196e721a6e741a6e751b6e771c6d781c6d7a1d6d7c1d6d7d1e6d7f1e6c801f6c82206c84206b85216b87216b88226a8a226a8c23698d23698f24699025689225689326679526679727669827669a28659b29649d29649f2a63a02a63a22b62a32c61a52c60a62d60a82e5fa92e5eab2f5ead305dae305cb0315bb1325ab3325ab43359b63458b73557b93556ba3655bc3754bd3853bf3952c03a51c13a50c33b4fc43c4ec63d4dc73e4cc83f4bca404acb4149cc4248ce4347cf4446d04545d24644d34743d44842d54a41d74b3fd84c3ed94d3dda4e3cdb503bdd513ade5238df5337e05536e15635e25734e35933e45a31e55c30e65d2fe75e2ee8602de9612bea632aeb6429eb6628ec6726ed6925ee6a24ef6c23ef6e21f06f20f1711ff1731df2741cf3761bf37819f47918f57b17f57d15f67e14f68013f78212f78410f8850ff8870ef8890cf98b0bf98c0af98e09fa9008fa9207fa9407fb9606fb9706fb9906fb9b06fb9d07fc9f07fca108fca309fca50afca60cfca80dfcaa0ffcac11fcae12fcb014fcb216fcb418fbb61afbb81dfbba1ffbbc21fbbe23fac026fac228fac42afac62df9c72ff9c932f9cb35f8cd37f8cf3af7d13df7d340f6d543f6d746f5d949f5db4cf4dd4ff4df53f4e156f3e35af3e55df2e661f2e865f2ea69f1ec6df1ed71f1ef75f1f179f2f27df2f482f3f586f3f68af4f88ef5f992f6fa96f8fb9af9fc9dfafda1fcffa4"));
-
-	  var plasma = ramp(colors("0d088710078813078916078a19068c1b068d1d068e20068f2206902406912605912805922a05932c05942e05952f059631059733059735049837049938049a3a049a3c049b3e049c3f049c41049d43039e44039e46039f48039f4903a04b03a14c02a14e02a25002a25102a35302a35502a45601a45801a45901a55b01a55c01a65e01a66001a66100a76300a76400a76600a76700a86900a86a00a86c00a86e00a86f00a87100a87201a87401a87501a87701a87801a87a02a87b02a87d03a87e03a88004a88104a78305a78405a78606a68707a68808a68a09a58b0aa58d0ba58e0ca48f0da4910ea3920fa39410a29511a19613a19814a099159f9a169f9c179e9d189d9e199da01a9ca11b9ba21d9aa31e9aa51f99a62098a72197a82296aa2395ab2494ac2694ad2793ae2892b02991b12a90b22b8fb32c8eb42e8db52f8cb6308bb7318ab83289ba3388bb3488bc3587bd3786be3885bf3984c03a83c13b82c23c81c33d80c43e7fc5407ec6417dc7427cc8437bc9447aca457acb4679cc4778cc4977cd4a76ce4b75cf4c74d04d73d14e72d24f71d35171d45270d5536fd5546ed6556dd7566cd8576bd9586ada5a6ada5b69db5c68dc5d67dd5e66de5f65de6164df6263e06363e16462e26561e26660e3685fe4695ee56a5de56b5de66c5ce76e5be76f5ae87059e97158e97257ea7457eb7556eb7655ec7754ed7953ed7a52ee7b51ef7c51ef7e50f07f4ff0804ef1814df1834cf2844bf3854bf3874af48849f48948f58b47f58c46f68d45f68f44f79044f79143f79342f89441f89540f9973ff9983ef99a3efa9b3dfa9c3cfa9e3bfb9f3afba139fba238fca338fca537fca636fca835fca934fdab33fdac33fdae32fdaf31fdb130fdb22ffdb42ffdb52efeb72dfeb82cfeba2cfebb2bfebd2afebe2afec029fdc229fdc328fdc527fdc627fdc827fdca26fdcb26fccd25fcce25fcd025fcd225fbd324fbd524fbd724fad824fada24f9dc24f9dd25f8df25f8e125f7e225f7e425f6e626f6e826f5e926f5eb27f4ed27f3ee27f3f027f2f227f1f426f1f525f0f724f0f921"));
-
-	  function sequential(interpolator) {
-	    var x0 = 0,
-	        x1 = 1,
-	        clamp = false;
-
-	    function scale(x) {
-	      var t = (x - x0) / (x1 - x0);
-	      return interpolator(clamp ? Math.max(0, Math.min(1, t)) : t);
-	    }
-
-	    scale.domain = function(_) {
-	      return arguments.length ? (x0 = +_[0], x1 = +_[1], scale) : [x0, x1];
-	    };
-
-	    scale.clamp = function(_) {
-	      return arguments.length ? (clamp = !!_, scale) : clamp;
-	    };
-
-	    scale.interpolator = function(_) {
-	      return arguments.length ? (interpolator = _, scale) : interpolator;
-	    };
-
-	    scale.copy = function() {
-	      return sequential(interpolator).domain([x0, x1]).clamp(clamp);
-	    };
-
-	    return linearish(scale);
-	  }
-
-	  exports.scaleBand = band;
-	  exports.scalePoint = point;
-	  exports.scaleIdentity = identity;
-	  exports.scaleLinear = linear;
-	  exports.scaleLog = log;
-	  exports.scaleOrdinal = ordinal;
-	  exports.scaleImplicit = implicit;
-	  exports.scalePow = pow;
-	  exports.scaleSqrt = sqrt;
-	  exports.scaleQuantile = quantile$1;
-	  exports.scaleQuantize = quantize;
-	  exports.scaleThreshold = threshold;
-	  exports.scaleTime = time;
-	  exports.scaleUtc = utcTime;
-	  exports.schemeCategory10 = category10;
-	  exports.schemeCategory20b = category20b;
-	  exports.schemeCategory20c = category20c;
-	  exports.schemeCategory20 = category20;
-	  exports.interpolateCubehelixDefault = cubehelix$1;
-	  exports.interpolateRainbow = rainbow$1;
-	  exports.interpolateWarm = warm;
-	  exports.interpolateCool = cool;
-	  exports.interpolateViridis = viridis;
-	  exports.interpolateMagma = magma;
-	  exports.interpolateInferno = inferno;
-	  exports.interpolatePlasma = plasma;
-	  exports.scaleSequential = sequential;
-
-	  Object.defineProperty(exports, '__esModule', { value: true });
-
-	}));
-
-/***/ },
-/* 257 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// https://d3js.org/d3-selection/ Version 1.0.0. Copyright 2016 Mike Bostock.
-	(function (global, factory) {
-	   true ? factory(exports) :
-	  typeof define === 'function' && define.amd ? define(['exports'], factory) :
-	  (factory((global.d3 = global.d3 || {})));
-	}(this, function (exports) { 'use strict';
-
-	  var xhtml = "http://www.w3.org/1999/xhtml";
-
-	  var namespaces = {
-	    svg: "http://www.w3.org/2000/svg",
-	    xhtml: xhtml,
-	    xlink: "http://www.w3.org/1999/xlink",
-	    xml: "http://www.w3.org/XML/1998/namespace",
-	    xmlns: "http://www.w3.org/2000/xmlns/"
-	  };
-
-	  function namespace(name) {
-	    var prefix = name += "", i = prefix.indexOf(":");
-	    if (i >= 0 && (prefix = name.slice(0, i)) !== "xmlns") name = name.slice(i + 1);
-	    return namespaces.hasOwnProperty(prefix) ? {space: namespaces[prefix], local: name} : name;
-	  }
-
-	  function creatorInherit(name) {
-	    return function() {
-	      var document = this.ownerDocument,
-	          uri = this.namespaceURI;
-	      return uri === xhtml && document.documentElement.namespaceURI === xhtml
-	          ? document.createElement(name)
-	          : document.createElementNS(uri, name);
-	    };
-	  }
-
-	  function creatorFixed(fullname) {
-	    return function() {
-	      return this.ownerDocument.createElementNS(fullname.space, fullname.local);
-	    };
-	  }
-
-	  function creator(name) {
-	    var fullname = namespace(name);
-	    return (fullname.local
-	        ? creatorFixed
-	        : creatorInherit)(fullname);
-	  }
-
-	  var nextId = 0;
-
-	  function local() {
-	    return new Local;
-	  }
-
-	  function Local() {
-	    this._ = "@" + (++nextId).toString(36);
-	  }
-
-	  Local.prototype = local.prototype = {
-	    constructor: Local,
-	    get: function(node) {
-	      var id = this._;
-	      while (!(id in node)) if (!(node = node.parentNode)) return;
-	      return node[id];
-	    },
-	    set: function(node, value) {
-	      return node[this._] = value;
-	    },
-	    remove: function(node) {
-	      return this._ in node && delete node[this._];
-	    },
-	    toString: function() {
-	      return this._;
-	    }
-	  };
-
-	  var matcher = function(selector) {
-	    return function() {
-	      return this.matches(selector);
-	    };
-	  };
-
-	  if (typeof document !== "undefined") {
-	    var element = document.documentElement;
-	    if (!element.matches) {
-	      var vendorMatches = element.webkitMatchesSelector
-	          || element.msMatchesSelector
-	          || element.mozMatchesSelector
-	          || element.oMatchesSelector;
-	      matcher = function(selector) {
-	        return function() {
-	          return vendorMatches.call(this, selector);
-	        };
-	      };
-	    }
-	  }
-
-	  var matcher$1 = matcher;
-
-	  var filterEvents = {};
-
-	  exports.event = null;
-
-	  if (typeof document !== "undefined") {
-	    var element$1 = document.documentElement;
-	    if (!("onmouseenter" in element$1)) {
-	      filterEvents = {mouseenter: "mouseover", mouseleave: "mouseout"};
-	    }
-	  }
-
-	  function filterContextListener(listener, index, group) {
-	    listener = contextListener(listener, index, group);
-	    return function(event) {
-	      var related = event.relatedTarget;
-	      if (!related || (related !== this && !(related.compareDocumentPosition(this) & 8))) {
-	        listener.call(this, event);
-	      }
-	    };
-	  }
-
-	  function contextListener(listener, index, group) {
-	    return function(event1) {
-	      var event0 = exports.event; // Events can be reentrant (e.g., focus).
-	      exports.event = event1;
-	      try {
-	        listener.call(this, this.__data__, index, group);
-	      } finally {
-	        exports.event = event0;
-	      }
-	    };
-	  }
-
-	  function parseTypenames(typenames) {
-	    return typenames.trim().split(/^|\s+/).map(function(t) {
-	      var name = "", i = t.indexOf(".");
-	      if (i >= 0) name = t.slice(i + 1), t = t.slice(0, i);
-	      return {type: t, name: name};
-	    });
-	  }
-
-	  function onRemove(typename) {
-	    return function() {
-	      var on = this.__on;
-	      if (!on) return;
-	      for (var j = 0, i = -1, m = on.length, o; j < m; ++j) {
-	        if (o = on[j], (!typename.type || o.type === typename.type) && o.name === typename.name) {
-	          this.removeEventListener(o.type, o.listener, o.capture);
-	        } else {
-	          on[++i] = o;
-	        }
-	      }
-	      if (++i) on.length = i;
-	      else delete this.__on;
-	    };
-	  }
-
-	  function onAdd(typename, value, capture) {
-	    var wrap = filterEvents.hasOwnProperty(typename.type) ? filterContextListener : contextListener;
-	    return function(d, i, group) {
-	      var on = this.__on, o, listener = wrap(value, i, group);
-	      if (on) for (var j = 0, m = on.length; j < m; ++j) {
-	        if ((o = on[j]).type === typename.type && o.name === typename.name) {
-	          this.removeEventListener(o.type, o.listener, o.capture);
-	          this.addEventListener(o.type, o.listener = listener, o.capture = capture);
-	          o.value = value;
-	          return;
-	        }
-	      }
-	      this.addEventListener(typename.type, listener, capture);
-	      o = {type: typename.type, name: typename.name, value: value, listener: listener, capture: capture};
-	      if (!on) this.__on = [o];
-	      else on.push(o);
-	    };
-	  }
-
-	  function selection_on(typename, value, capture) {
-	    var typenames = parseTypenames(typename + ""), i, n = typenames.length, t;
-
-	    if (arguments.length < 2) {
-	      var on = this.node().__on;
-	      if (on) for (var j = 0, m = on.length, o; j < m; ++j) {
-	        for (i = 0, o = on[j]; i < n; ++i) {
-	          if ((t = typenames[i]).type === o.type && t.name === o.name) {
-	            return o.value;
-	          }
-	        }
-	      }
-	      return;
-	    }
-
-	    on = value ? onAdd : onRemove;
-	    if (capture == null) capture = false;
-	    for (i = 0; i < n; ++i) this.each(on(typenames[i], value, capture));
-	    return this;
-	  }
-
-	  function customEvent(event1, listener, that, args) {
-	    var event0 = exports.event;
-	    event1.sourceEvent = exports.event;
-	    exports.event = event1;
-	    try {
-	      return listener.apply(that, args);
-	    } finally {
-	      exports.event = event0;
-	    }
-	  }
-
-	  function sourceEvent() {
-	    var current = exports.event, source;
-	    while (source = current.sourceEvent) current = source;
-	    return current;
-	  }
-
-	  function point(node, event) {
-	    var svg = node.ownerSVGElement || node;
-
-	    if (svg.createSVGPoint) {
-	      var point = svg.createSVGPoint();
-	      point.x = event.clientX, point.y = event.clientY;
-	      point = point.matrixTransform(node.getScreenCTM().inverse());
-	      return [point.x, point.y];
-	    }
-
-	    var rect = node.getBoundingClientRect();
-	    return [event.clientX - rect.left - node.clientLeft, event.clientY - rect.top - node.clientTop];
-	  }
-
-	  function mouse(node) {
-	    var event = sourceEvent();
-	    if (event.changedTouches) event = event.changedTouches[0];
-	    return point(node, event);
-	  }
-
-	  function none() {}
-
-	  function selector(selector) {
-	    return selector == null ? none : function() {
-	      return this.querySelector(selector);
-	    };
-	  }
-
-	  function selection_select(select) {
-	    if (typeof select !== "function") select = selector(select);
-
-	    for (var groups = this._groups, m = groups.length, subgroups = new Array(m), j = 0; j < m; ++j) {
-	      for (var group = groups[j], n = group.length, subgroup = subgroups[j] = new Array(n), node, subnode, i = 0; i < n; ++i) {
-	        if ((node = group[i]) && (subnode = select.call(node, node.__data__, i, group))) {
-	          if ("__data__" in node) subnode.__data__ = node.__data__;
-	          subgroup[i] = subnode;
-	        }
-	      }
-	    }
-
-	    return new Selection(subgroups, this._parents);
-	  }
-
-	  function empty() {
-	    return [];
-	  }
-
-	  function selectorAll(selector) {
-	    return selector == null ? empty : function() {
-	      return this.querySelectorAll(selector);
-	    };
-	  }
-
-	  function selection_selectAll(select) {
-	    if (typeof select !== "function") select = selectorAll(select);
-
-	    for (var groups = this._groups, m = groups.length, subgroups = [], parents = [], j = 0; j < m; ++j) {
-	      for (var group = groups[j], n = group.length, node, i = 0; i < n; ++i) {
-	        if (node = group[i]) {
-	          subgroups.push(select.call(node, node.__data__, i, group));
-	          parents.push(node);
-	        }
-	      }
-	    }
-
-	    return new Selection(subgroups, parents);
-	  }
-
-	  function selection_filter(match) {
-	    if (typeof match !== "function") match = matcher$1(match);
-
-	    for (var groups = this._groups, m = groups.length, subgroups = new Array(m), j = 0; j < m; ++j) {
-	      for (var group = groups[j], n = group.length, subgroup = subgroups[j] = [], node, i = 0; i < n; ++i) {
-	        if ((node = group[i]) && match.call(node, node.__data__, i, group)) {
-	          subgroup.push(node);
-	        }
-	      }
-	    }
-
-	    return new Selection(subgroups, this._parents);
-	  }
-
-	  function sparse(update) {
-	    return new Array(update.length);
-	  }
-
-	  function selection_enter() {
-	    return new Selection(this._enter || this._groups.map(sparse), this._parents);
-	  }
-
-	  function EnterNode(parent, datum) {
-	    this.ownerDocument = parent.ownerDocument;
-	    this.namespaceURI = parent.namespaceURI;
-	    this._next = null;
-	    this._parent = parent;
-	    this.__data__ = datum;
-	  }
-
-	  EnterNode.prototype = {
-	    constructor: EnterNode,
-	    appendChild: function(child) { return this._parent.insertBefore(child, this._next); },
-	    insertBefore: function(child, next) { return this._parent.insertBefore(child, next); },
-	    querySelector: function(selector) { return this._parent.querySelector(selector); },
-	    querySelectorAll: function(selector) { return this._parent.querySelectorAll(selector); }
-	  };
-
-	  function constant(x) {
-	    return function() {
-	      return x;
-	    };
-	  }
-
-	  var keyPrefix = "$"; // Protect against keys like “__proto__”.
-
-	  function bindIndex(parent, group, enter, update, exit, data) {
-	    var i = 0,
-	        node,
-	        groupLength = group.length,
-	        dataLength = data.length;
-
-	    // Put any non-null nodes that fit into update.
-	    // Put any null nodes into enter.
-	    // Put any remaining data into enter.
-	    for (; i < dataLength; ++i) {
-	      if (node = group[i]) {
-	        node.__data__ = data[i];
-	        update[i] = node;
-	      } else {
-	        enter[i] = new EnterNode(parent, data[i]);
-	      }
-	    }
-
-	    // Put any non-null nodes that don’t fit into exit.
-	    for (; i < groupLength; ++i) {
-	      if (node = group[i]) {
-	        exit[i] = node;
-	      }
-	    }
-	  }
-
-	  function bindKey(parent, group, enter, update, exit, data, key) {
-	    var i,
-	        node,
-	        nodeByKeyValue = {},
-	        groupLength = group.length,
-	        dataLength = data.length,
-	        keyValues = new Array(groupLength),
-	        keyValue;
-
-	    // Compute the key for each node.
-	    // If multiple nodes have the same key, the duplicates are added to exit.
-	    for (i = 0; i < groupLength; ++i) {
-	      if (node = group[i]) {
-	        keyValues[i] = keyValue = keyPrefix + key.call(node, node.__data__, i, group);
-	        if (keyValue in nodeByKeyValue) {
-	          exit[i] = node;
-	        } else {
-	          nodeByKeyValue[keyValue] = node;
-	        }
-	      }
-	    }
-
-	    // Compute the key for each datum.
-	    // If there a node associated with this key, join and add it to update.
-	    // If there is not (or the key is a duplicate), add it to enter.
-	    for (i = 0; i < dataLength; ++i) {
-	      keyValue = keyPrefix + key.call(parent, data[i], i, data);
-	      if (node = nodeByKeyValue[keyValue]) {
-	        update[i] = node;
-	        node.__data__ = data[i];
-	        nodeByKeyValue[keyValue] = null;
-	      } else {
-	        enter[i] = new EnterNode(parent, data[i]);
-	      }
-	    }
-
-	    // Add any remaining nodes that were not bound to data to exit.
-	    for (i = 0; i < groupLength; ++i) {
-	      if ((node = group[i]) && (nodeByKeyValue[keyValues[i]] === node)) {
-	        exit[i] = node;
-	      }
-	    }
-	  }
-
-	  function selection_data(value, key) {
-	    if (!value) {
-	      data = new Array(this.size()), j = -1;
-	      this.each(function(d) { data[++j] = d; });
-	      return data;
-	    }
-
-	    var bind = key ? bindKey : bindIndex,
-	        parents = this._parents,
-	        groups = this._groups;
-
-	    if (typeof value !== "function") value = constant(value);
-
-	    for (var m = groups.length, update = new Array(m), enter = new Array(m), exit = new Array(m), j = 0; j < m; ++j) {
-	      var parent = parents[j],
-	          group = groups[j],
-	          groupLength = group.length,
-	          data = value.call(parent, parent && parent.__data__, j, parents),
-	          dataLength = data.length,
-	          enterGroup = enter[j] = new Array(dataLength),
-	          updateGroup = update[j] = new Array(dataLength),
-	          exitGroup = exit[j] = new Array(groupLength);
-
-	      bind(parent, group, enterGroup, updateGroup, exitGroup, data, key);
-
-	      // Now connect the enter nodes to their following update node, such that
-	      // appendChild can insert the materialized enter node before this node,
-	      // rather than at the end of the parent node.
-	      for (var i0 = 0, i1 = 0, previous, next; i0 < dataLength; ++i0) {
-	        if (previous = enterGroup[i0]) {
-	          if (i0 >= i1) i1 = i0 + 1;
-	          while (!(next = updateGroup[i1]) && ++i1 < dataLength);
-	          previous._next = next || null;
-	        }
-	      }
-	    }
-
-	    update = new Selection(update, parents);
-	    update._enter = enter;
-	    update._exit = exit;
-	    return update;
-	  }
-
-	  function selection_exit() {
-	    return new Selection(this._exit || this._groups.map(sparse), this._parents);
-	  }
-
-	  function selection_merge(selection) {
-
-	    for (var groups0 = this._groups, groups1 = selection._groups, m0 = groups0.length, m1 = groups1.length, m = Math.min(m0, m1), merges = new Array(m0), j = 0; j < m; ++j) {
-	      for (var group0 = groups0[j], group1 = groups1[j], n = group0.length, merge = merges[j] = new Array(n), node, i = 0; i < n; ++i) {
-	        if (node = group0[i] || group1[i]) {
-	          merge[i] = node;
-	        }
-	      }
-	    }
-
-	    for (; j < m0; ++j) {
-	      merges[j] = groups0[j];
-	    }
-
-	    return new Selection(merges, this._parents);
-	  }
-
-	  function selection_order() {
-
-	    for (var groups = this._groups, j = -1, m = groups.length; ++j < m;) {
-	      for (var group = groups[j], i = group.length - 1, next = group[i], node; --i >= 0;) {
-	        if (node = group[i]) {
-	          if (next && next !== node.nextSibling) next.parentNode.insertBefore(node, next);
-	          next = node;
-	        }
-	      }
-	    }
-
-	    return this;
-	  }
-
-	  function selection_sort(compare) {
-	    if (!compare) compare = ascending;
-
-	    function compareNode(a, b) {
-	      return a && b ? compare(a.__data__, b.__data__) : !a - !b;
-	    }
-
-	    for (var groups = this._groups, m = groups.length, sortgroups = new Array(m), j = 0; j < m; ++j) {
-	      for (var group = groups[j], n = group.length, sortgroup = sortgroups[j] = new Array(n), node, i = 0; i < n; ++i) {
-	        if (node = group[i]) {
-	          sortgroup[i] = node;
-	        }
-	      }
-	      sortgroup.sort(compareNode);
-	    }
-
-	    return new Selection(sortgroups, this._parents).order();
-	  }
-
-	  function ascending(a, b) {
-	    return a < b ? -1 : a > b ? 1 : a >= b ? 0 : NaN;
-	  }
-
-	  function selection_call() {
-	    var callback = arguments[0];
-	    arguments[0] = this;
-	    callback.apply(null, arguments);
-	    return this;
-	  }
-
-	  function selection_nodes() {
-	    var nodes = new Array(this.size()), i = -1;
-	    this.each(function() { nodes[++i] = this; });
-	    return nodes;
-	  }
-
-	  function selection_node() {
-
-	    for (var groups = this._groups, j = 0, m = groups.length; j < m; ++j) {
-	      for (var group = groups[j], i = 0, n = group.length; i < n; ++i) {
-	        var node = group[i];
-	        if (node) return node;
-	      }
-	    }
-
-	    return null;
-	  }
-
-	  function selection_size() {
-	    var size = 0;
-	    this.each(function() { ++size; });
-	    return size;
-	  }
-
-	  function selection_empty() {
-	    return !this.node();
-	  }
-
-	  function selection_each(callback) {
-
-	    for (var groups = this._groups, j = 0, m = groups.length; j < m; ++j) {
-	      for (var group = groups[j], i = 0, n = group.length, node; i < n; ++i) {
-	        if (node = group[i]) callback.call(node, node.__data__, i, group);
-	      }
-	    }
-
-	    return this;
-	  }
-
-	  function attrRemove(name) {
-	    return function() {
-	      this.removeAttribute(name);
-	    };
-	  }
-
-	  function attrRemoveNS(fullname) {
-	    return function() {
-	      this.removeAttributeNS(fullname.space, fullname.local);
-	    };
-	  }
-
-	  function attrConstant(name, value) {
-	    return function() {
-	      this.setAttribute(name, value);
-	    };
-	  }
-
-	  function attrConstantNS(fullname, value) {
-	    return function() {
-	      this.setAttributeNS(fullname.space, fullname.local, value);
-	    };
-	  }
-
-	  function attrFunction(name, value) {
-	    return function() {
-	      var v = value.apply(this, arguments);
-	      if (v == null) this.removeAttribute(name);
-	      else this.setAttribute(name, v);
-	    };
-	  }
-
-	  function attrFunctionNS(fullname, value) {
-	    return function() {
-	      var v = value.apply(this, arguments);
-	      if (v == null) this.removeAttributeNS(fullname.space, fullname.local);
-	      else this.setAttributeNS(fullname.space, fullname.local, v);
-	    };
-	  }
-
-	  function selection_attr(name, value) {
-	    var fullname = namespace(name);
-
-	    if (arguments.length < 2) {
-	      var node = this.node();
-	      return fullname.local
-	          ? node.getAttributeNS(fullname.space, fullname.local)
-	          : node.getAttribute(fullname);
-	    }
-
-	    return this.each((value == null
-	        ? (fullname.local ? attrRemoveNS : attrRemove) : (typeof value === "function"
-	        ? (fullname.local ? attrFunctionNS : attrFunction)
-	        : (fullname.local ? attrConstantNS : attrConstant)))(fullname, value));
-	  }
-
-	  function defaultView(node) {
-	    return (node.ownerDocument && node.ownerDocument.defaultView) // node is a Node
-	        || (node.document && node) // node is a Window
-	        || node.defaultView; // node is a Document
-	  }
-
-	  function styleRemove(name) {
-	    return function() {
-	      this.style.removeProperty(name);
-	    };
-	  }
-
-	  function styleConstant(name, value, priority) {
-	    return function() {
-	      this.style.setProperty(name, value, priority);
-	    };
-	  }
-
-	  function styleFunction(name, value, priority) {
-	    return function() {
-	      var v = value.apply(this, arguments);
-	      if (v == null) this.style.removeProperty(name);
-	      else this.style.setProperty(name, v, priority);
-	    };
-	  }
-
-	  function selection_style(name, value, priority) {
-	    var node;
-	    return arguments.length > 1
-	        ? this.each((value == null
-	              ? styleRemove : typeof value === "function"
-	              ? styleFunction
-	              : styleConstant)(name, value, priority == null ? "" : priority))
-	        : defaultView(node = this.node())
-	            .getComputedStyle(node, null)
-	            .getPropertyValue(name);
-	  }
-
-	  function propertyRemove(name) {
-	    return function() {
-	      delete this[name];
-	    };
-	  }
-
-	  function propertyConstant(name, value) {
-	    return function() {
-	      this[name] = value;
-	    };
-	  }
-
-	  function propertyFunction(name, value) {
-	    return function() {
-	      var v = value.apply(this, arguments);
-	      if (v == null) delete this[name];
-	      else this[name] = v;
-	    };
-	  }
-
-	  function selection_property(name, value) {
-	    return arguments.length > 1
-	        ? this.each((value == null
-	            ? propertyRemove : typeof value === "function"
-	            ? propertyFunction
-	            : propertyConstant)(name, value))
-	        : this.node()[name];
-	  }
-
-	  function classArray(string) {
-	    return string.trim().split(/^|\s+/);
-	  }
-
-	  function classList(node) {
-	    return node.classList || new ClassList(node);
-	  }
-
-	  function ClassList(node) {
-	    this._node = node;
-	    this._names = classArray(node.getAttribute("class") || "");
-	  }
-
-	  ClassList.prototype = {
-	    add: function(name) {
-	      var i = this._names.indexOf(name);
-	      if (i < 0) {
-	        this._names.push(name);
-	        this._node.setAttribute("class", this._names.join(" "));
-	      }
-	    },
-	    remove: function(name) {
-	      var i = this._names.indexOf(name);
-	      if (i >= 0) {
-	        this._names.splice(i, 1);
-	        this._node.setAttribute("class", this._names.join(" "));
-	      }
-	    },
-	    contains: function(name) {
-	      return this._names.indexOf(name) >= 0;
-	    }
-	  };
-
-	  function classedAdd(node, names) {
-	    var list = classList(node), i = -1, n = names.length;
-	    while (++i < n) list.add(names[i]);
-	  }
-
-	  function classedRemove(node, names) {
-	    var list = classList(node), i = -1, n = names.length;
-	    while (++i < n) list.remove(names[i]);
-	  }
-
-	  function classedTrue(names) {
-	    return function() {
-	      classedAdd(this, names);
-	    };
-	  }
-
-	  function classedFalse(names) {
-	    return function() {
-	      classedRemove(this, names);
-	    };
-	  }
-
-	  function classedFunction(names, value) {
-	    return function() {
-	      (value.apply(this, arguments) ? classedAdd : classedRemove)(this, names);
-	    };
-	  }
-
-	  function selection_classed(name, value) {
-	    var names = classArray(name + "");
-
-	    if (arguments.length < 2) {
-	      var list = classList(this.node()), i = -1, n = names.length;
-	      while (++i < n) if (!list.contains(names[i])) return false;
-	      return true;
-	    }
-
-	    return this.each((typeof value === "function"
-	        ? classedFunction : value
-	        ? classedTrue
-	        : classedFalse)(names, value));
-	  }
-
-	  function textRemove() {
-	    this.textContent = "";
-	  }
-
-	  function textConstant(value) {
-	    return function() {
-	      this.textContent = value;
-	    };
-	  }
-
-	  function textFunction(value) {
-	    return function() {
-	      var v = value.apply(this, arguments);
-	      this.textContent = v == null ? "" : v;
-	    };
-	  }
-
-	  function selection_text(value) {
-	    return arguments.length
-	        ? this.each(value == null
-	            ? textRemove : (typeof value === "function"
-	            ? textFunction
-	            : textConstant)(value))
-	        : this.node().textContent;
-	  }
-
-	  function htmlRemove() {
-	    this.innerHTML = "";
-	  }
-
-	  function htmlConstant(value) {
-	    return function() {
-	      this.innerHTML = value;
-	    };
-	  }
-
-	  function htmlFunction(value) {
-	    return function() {
-	      var v = value.apply(this, arguments);
-	      this.innerHTML = v == null ? "" : v;
-	    };
-	  }
-
-	  function selection_html(value) {
-	    return arguments.length
-	        ? this.each(value == null
-	            ? htmlRemove : (typeof value === "function"
-	            ? htmlFunction
-	            : htmlConstant)(value))
-	        : this.node().innerHTML;
-	  }
-
-	  function raise() {
-	    if (this.nextSibling) this.parentNode.appendChild(this);
-	  }
-
-	  function selection_raise() {
-	    return this.each(raise);
-	  }
-
-	  function lower() {
-	    if (this.previousSibling) this.parentNode.insertBefore(this, this.parentNode.firstChild);
-	  }
-
-	  function selection_lower() {
-	    return this.each(lower);
-	  }
-
-	  function selection_append(name) {
-	    var create = typeof name === "function" ? name : creator(name);
-	    return this.select(function() {
-	      return this.appendChild(create.apply(this, arguments));
-	    });
-	  }
-
-	  function constantNull() {
-	    return null;
-	  }
-
-	  function selection_insert(name, before) {
-	    var create = typeof name === "function" ? name : creator(name),
-	        select = before == null ? constantNull : typeof before === "function" ? before : selector(before);
-	    return this.select(function() {
-	      return this.insertBefore(create.apply(this, arguments), select.apply(this, arguments) || null);
-	    });
-	  }
-
-	  function remove() {
-	    var parent = this.parentNode;
-	    if (parent) parent.removeChild(this);
-	  }
-
-	  function selection_remove() {
-	    return this.each(remove);
-	  }
-
-	  function selection_datum(value) {
-	    return arguments.length
-	        ? this.property("__data__", value)
-	        : this.node().__data__;
-	  }
-
-	  function dispatchEvent(node, type, params) {
-	    var window = defaultView(node),
-	        event = window.CustomEvent;
-
-	    if (event) {
-	      event = new event(type, params);
-	    } else {
-	      event = window.document.createEvent("Event");
-	      if (params) event.initEvent(type, params.bubbles, params.cancelable), event.detail = params.detail;
-	      else event.initEvent(type, false, false);
-	    }
-
-	    node.dispatchEvent(event);
-	  }
-
-	  function dispatchConstant(type, params) {
-	    return function() {
-	      return dispatchEvent(this, type, params);
-	    };
-	  }
-
-	  function dispatchFunction(type, params) {
-	    return function() {
-	      return dispatchEvent(this, type, params.apply(this, arguments));
-	    };
-	  }
-
-	  function selection_dispatch(type, params) {
-	    return this.each((typeof params === "function"
-	        ? dispatchFunction
-	        : dispatchConstant)(type, params));
-	  }
-
-	  var root = [null];
-
-	  function Selection(groups, parents) {
-	    this._groups = groups;
-	    this._parents = parents;
-	  }
-
-	  function selection() {
-	    return new Selection([[document.documentElement]], root);
-	  }
-
-	  Selection.prototype = selection.prototype = {
-	    constructor: Selection,
-	    select: selection_select,
-	    selectAll: selection_selectAll,
-	    filter: selection_filter,
-	    data: selection_data,
-	    enter: selection_enter,
-	    exit: selection_exit,
-	    merge: selection_merge,
-	    order: selection_order,
-	    sort: selection_sort,
-	    call: selection_call,
-	    nodes: selection_nodes,
-	    node: selection_node,
-	    size: selection_size,
-	    empty: selection_empty,
-	    each: selection_each,
-	    attr: selection_attr,
-	    style: selection_style,
-	    property: selection_property,
-	    classed: selection_classed,
-	    text: selection_text,
-	    html: selection_html,
-	    raise: selection_raise,
-	    lower: selection_lower,
-	    append: selection_append,
-	    insert: selection_insert,
-	    remove: selection_remove,
-	    datum: selection_datum,
-	    on: selection_on,
-	    dispatch: selection_dispatch
-	  };
-
-	  function select(selector) {
-	    return typeof selector === "string"
-	        ? new Selection([[document.querySelector(selector)]], [document.documentElement])
-	        : new Selection([[selector]], root);
-	  }
-
-	  function selectAll(selector) {
-	    return typeof selector === "string"
-	        ? new Selection([document.querySelectorAll(selector)], [document.documentElement])
-	        : new Selection([selector == null ? [] : selector], root);
-	  }
-
-	  function touch(node, touches, identifier) {
-	    if (arguments.length < 3) identifier = touches, touches = sourceEvent().changedTouches;
-
-	    for (var i = 0, n = touches ? touches.length : 0, touch; i < n; ++i) {
-	      if ((touch = touches[i]).identifier === identifier) {
-	        return point(node, touch);
-	      }
-	    }
-
-	    return null;
-	  }
-
-	  function touches(node, touches) {
-	    if (touches == null) touches = sourceEvent().touches;
-
-	    for (var i = 0, n = touches ? touches.length : 0, points = new Array(n); i < n; ++i) {
-	      points[i] = point(node, touches[i]);
-	    }
-
-	    return points;
-	  }
-
-	  exports.creator = creator;
-	  exports.local = local;
-	  exports.matcher = matcher$1;
-	  exports.mouse = mouse;
-	  exports.namespace = namespace;
-	  exports.namespaces = namespaces;
-	  exports.select = select;
-	  exports.selectAll = selectAll;
-	  exports.selection = selection;
-	  exports.selector = selector;
-	  exports.selectorAll = selectorAll;
-	  exports.touch = touch;
-	  exports.touches = touches;
-	  exports.window = defaultView;
-	  exports.customEvent = customEvent;
-
-	  Object.defineProperty(exports, '__esModule', { value: true });
-
-	}));
-
-/***/ },
-/* 258 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// https://d3js.org/d3-transition/ Version 1.0.0. Copyright 2016 Mike Bostock.
-	(function (global, factory) {
-	   true ? factory(exports, __webpack_require__(257), __webpack_require__(243), __webpack_require__(252), __webpack_require__(242), __webpack_require__(241), __webpack_require__(235)) :
-	  typeof define === 'function' && define.amd ? define(['exports', 'd3-selection', 'd3-dispatch', 'd3-timer', 'd3-interpolate', 'd3-color', 'd3-ease'], factory) :
-	  (factory((global.d3 = global.d3 || {}),global.d3,global.d3,global.d3,global.d3,global.d3,global.d3));
-	}(this, function (exports,d3Selection,d3Dispatch,d3Timer,d3Interpolate,d3Color,d3Ease) { 'use strict';
-
-	  var emptyOn = d3Dispatch.dispatch("start", "end", "interrupt");
-	  var emptyTween = [];
-
-	  var CREATED = 0;
-	  var SCHEDULED = 1;
-	  var STARTING = 2;
-	  var STARTED = 3;
-	  var ENDING = 4;
-	  var ENDED = 5;
-
-	  function schedule(node, name, id, index, group, timing) {
-	    var schedules = node.__transition;
-	    if (!schedules) node.__transition = {};
-	    else if (id in schedules) return;
-	    create(node, id, {
-	      name: name,
-	      index: index, // For context during callback.
-	      group: group, // For context during callback.
-	      on: emptyOn,
-	      tween: emptyTween,
-	      time: timing.time,
-	      delay: timing.delay,
-	      duration: timing.duration,
-	      ease: timing.ease,
-	      timer: null,
-	      state: CREATED
-	    });
-	  }
-
-	  function init(node, id) {
-	    var schedule = node.__transition;
-	    if (!schedule || !(schedule = schedule[id]) || schedule.state > CREATED) throw new Error("too late");
-	    return schedule;
-	  }
-
-	  function set(node, id) {
-	    var schedule = node.__transition;
-	    if (!schedule || !(schedule = schedule[id]) || schedule.state > STARTING) throw new Error("too late");
-	    return schedule;
-	  }
-
-	  function get(node, id) {
-	    var schedule = node.__transition;
-	    if (!schedule || !(schedule = schedule[id])) throw new Error("too late");
-	    return schedule;
-	  }
-
-	  function create(node, id, self) {
-	    var schedules = node.__transition,
-	        tween;
-
-	    // Initialize the self timer when the transition is created.
-	    // Note the actual delay is not known until the first callback!
-	    schedules[id] = self;
-	    self.timer = d3Timer.timer(schedule, 0, self.time);
-
-	    // If the delay is greater than this first sleep, sleep some more;
-	    // otherwise, start immediately.
-	    function schedule(elapsed) {
-	      self.state = SCHEDULED;
-	      if (self.delay <= elapsed) start(elapsed - self.delay);
-	      else self.timer.restart(start, self.delay, self.time);
-	    }
-
-	    function start(elapsed) {
-	      var i, j, n, o;
-
-	      for (i in schedules) {
-	        o = schedules[i];
-	        if (o.name !== self.name) continue;
-
-	        // Interrupt the active transition, if any.
-	        // Dispatch the interrupt event.
-	        if (o.state === STARTED) {
-	          o.state = ENDED;
-	          o.timer.stop();
-	          o.on.call("interrupt", node, node.__data__, o.index, o.group);
-	          delete schedules[i];
-	        }
-
-	        // Cancel any pre-empted transitions. No interrupt event is dispatched
-	        // because the cancelled transitions never started. Note that this also
-	        // removes this transition from the pending list!
-	        else if (+i < id) {
-	          o.state = ENDED;
-	          o.timer.stop();
-	          delete schedules[i];
-	        }
-	      }
-
-	      // Defer the first tick to end of the current frame; see mbostock/d3#1576.
-	      // Note the transition may be canceled after start and before the first tick!
-	      // Note this must be scheduled before the start event; see d3/d3-transition#16!
-	      // Assuming this is successful, subsequent callbacks go straight to tick.
-	      d3Timer.timeout(function() {
-	        if (self.state === STARTED) {
-	          self.timer.restart(tick, self.delay, self.time);
-	          tick(elapsed);
-	        }
-	      });
-
-	      // Dispatch the start event.
-	      // Note this must be done before the tween are initialized.
-	      self.state = STARTING;
-	      self.on.call("start", node, node.__data__, self.index, self.group);
-	      if (self.state !== STARTING) return; // interrupted
-	      self.state = STARTED;
-
-	      // Initialize the tween, deleting null tween.
-	      tween = new Array(n = self.tween.length);
-	      for (i = 0, j = -1; i < n; ++i) {
-	        if (o = self.tween[i].value.call(node, node.__data__, self.index, self.group)) {
-	          tween[++j] = o;
-	        }
-	      }
-	      tween.length = j + 1;
-	    }
-
-	    function tick(elapsed) {
-	      var t = elapsed < self.duration ? self.ease.call(null, elapsed / self.duration) : (self.state = ENDING, 1),
-	          i = -1,
-	          n = tween.length;
-
-	      while (++i < n) {
-	        tween[i].call(null, t);
-	      }
-
-	      // Dispatch the end event.
-	      if (self.state === ENDING) {
-	        self.state = ENDED;
-	        self.timer.stop();
-	        self.on.call("end", node, node.__data__, self.index, self.group);
-	        for (i in schedules) if (+i !== id) return void delete schedules[id];
-	        delete node.__transition;
-	      }
-	    }
-	  }
-
-	  function interrupt(node, name) {
-	    var schedules = node.__transition,
-	        schedule,
-	        active,
-	        empty = true,
-	        i;
-
-	    if (!schedules) return;
-
-	    name = name == null ? null : name + "";
-
-	    for (i in schedules) {
-	      if ((schedule = schedules[i]).name !== name) { empty = false; continue; }
-	      active = schedule.state === STARTED;
-	      schedule.state = ENDED;
-	      schedule.timer.stop();
-	      if (active) schedule.on.call("interrupt", node, node.__data__, schedule.index, schedule.group);
-	      delete schedules[i];
-	    }
-
-	    if (empty) delete node.__transition;
-	  }
-
-	  function selection_interrupt(name) {
-	    return this.each(function() {
-	      interrupt(this, name);
-	    });
-	  }
-
-	  function tweenRemove(id, name) {
-	    var tween0, tween1;
-	    return function() {
-	      var schedule = set(this, id),
-	          tween = schedule.tween;
-
-	      // If this node shared tween with the previous node,
-	      // just assign the updated shared tween and we’re done!
-	      // Otherwise, copy-on-write.
-	      if (tween !== tween0) {
-	        tween1 = tween0 = tween;
-	        for (var i = 0, n = tween1.length; i < n; ++i) {
-	          if (tween1[i].name === name) {
-	            tween1 = tween1.slice();
-	            tween1.splice(i, 1);
-	            break;
-	          }
-	        }
-	      }
-
-	      schedule.tween = tween1;
-	    };
-	  }
-
-	  function tweenFunction(id, name, value) {
-	    var tween0, tween1;
-	    if (typeof value !== "function") throw new Error;
-	    return function() {
-	      var schedule = set(this, id),
-	          tween = schedule.tween;
-
-	      // If this node shared tween with the previous node,
-	      // just assign the updated shared tween and we’re done!
-	      // Otherwise, copy-on-write.
-	      if (tween !== tween0) {
-	        tween1 = (tween0 = tween).slice();
-	        for (var t = {name: name, value: value}, i = 0, n = tween1.length; i < n; ++i) {
-	          if (tween1[i].name === name) {
-	            tween1[i] = t;
-	            break;
-	          }
-	        }
-	        if (i === n) tween1.push(t);
-	      }
-
-	      schedule.tween = tween1;
-	    };
-	  }
-
-	  function transition_tween(name, value) {
-	    var id = this._id;
-
-	    name += "";
-
-	    if (arguments.length < 2) {
-	      var tween = get(this.node(), id).tween;
-	      for (var i = 0, n = tween.length, t; i < n; ++i) {
-	        if ((t = tween[i]).name === name) {
-	          return t.value;
-	        }
-	      }
-	      return null;
-	    }
-
-	    return this.each((value == null ? tweenRemove : tweenFunction)(id, name, value));
-	  }
-
-	  function tweenValue(transition, name, value) {
-	    var id = transition._id;
-
-	    transition.each(function() {
-	      var schedule = set(this, id);
-	      (schedule.value || (schedule.value = {}))[name] = value.apply(this, arguments);
-	    });
-
-	    return function(node) {
-	      return get(node, id).value[name];
-	    };
-	  }
-
-	  function interpolate(a, b) {
-	    var c;
-	    return (typeof b === "number" ? d3Interpolate.interpolateNumber
-	        : b instanceof d3Color.color ? d3Interpolate.interpolateRgb
-	        : (c = d3Color.color(b)) ? (b = c, d3Interpolate.interpolateRgb)
-	        : d3Interpolate.interpolateString)(a, b);
-	  }
-
-	  function attrRemove(name) {
-	    return function() {
-	      this.removeAttribute(name);
-	    };
-	  }
-
-	  function attrRemoveNS(fullname) {
-	    return function() {
-	      this.removeAttributeNS(fullname.space, fullname.local);
-	    };
-	  }
-
-	  function attrConstant(name, interpolate, value1) {
-	    var value00,
-	        interpolate0;
-	    return function() {
-	      var value0 = this.getAttribute(name);
-	      return value0 === value1 ? null
-	          : value0 === value00 ? interpolate0
-	          : interpolate0 = interpolate(value00 = value0, value1);
-	    };
-	  }
-
-	  function attrConstantNS(fullname, interpolate, value1) {
-	    var value00,
-	        interpolate0;
-	    return function() {
-	      var value0 = this.getAttributeNS(fullname.space, fullname.local);
-	      return value0 === value1 ? null
-	          : value0 === value00 ? interpolate0
-	          : interpolate0 = interpolate(value00 = value0, value1);
-	    };
-	  }
-
-	  function attrFunction(name, interpolate, value) {
-	    var value00,
-	        value10,
-	        interpolate0;
-	    return function() {
-	      var value0, value1 = value(this);
-	      if (value1 == null) return void this.removeAttribute(name);
-	      value0 = this.getAttribute(name);
-	      return value0 === value1 ? null
-	          : value0 === value00 && value1 === value10 ? interpolate0
-	          : interpolate0 = interpolate(value00 = value0, value10 = value1);
-	    };
-	  }
-
-	  function attrFunctionNS(fullname, interpolate, value) {
-	    var value00,
-	        value10,
-	        interpolate0;
-	    return function() {
-	      var value0, value1 = value(this);
-	      if (value1 == null) return void this.removeAttributeNS(fullname.space, fullname.local);
-	      value0 = this.getAttributeNS(fullname.space, fullname.local);
-	      return value0 === value1 ? null
-	          : value0 === value00 && value1 === value10 ? interpolate0
-	          : interpolate0 = interpolate(value00 = value0, value10 = value1);
-	    };
-	  }
-
-	  function transition_attr(name, value) {
-	    var fullname = d3Selection.namespace(name), i = fullname === "transform" ? d3Interpolate.interpolateTransformSvg : interpolate;
-	    return this.attrTween(name, typeof value === "function"
-	        ? (fullname.local ? attrFunctionNS : attrFunction)(fullname, i, tweenValue(this, "attr." + name, value))
-	        : value == null ? (fullname.local ? attrRemoveNS : attrRemove)(fullname)
-	        : (fullname.local ? attrConstantNS : attrConstant)(fullname, i, value));
-	  }
-
-	  function attrTweenNS(fullname, value) {
-	    function tween() {
-	      var node = this, i = value.apply(node, arguments);
-	      return i && function(t) {
-	        node.setAttributeNS(fullname.space, fullname.local, i(t));
-	      };
-	    }
-	    tween._value = value;
-	    return tween;
-	  }
-
-	  function attrTween(name, value) {
-	    function tween() {
-	      var node = this, i = value.apply(node, arguments);
-	      return i && function(t) {
-	        node.setAttribute(name, i(t));
-	      };
-	    }
-	    tween._value = value;
-	    return tween;
-	  }
-
-	  function transition_attrTween(name, value) {
-	    var key = "attr." + name;
-	    if (arguments.length < 2) return (key = this.tween(key)) && key._value;
-	    if (value == null) return this.tween(key, null);
-	    if (typeof value !== "function") throw new Error;
-	    var fullname = d3Selection.namespace(name);
-	    return this.tween(key, (fullname.local ? attrTweenNS : attrTween)(fullname, value));
-	  }
-
-	  function delayFunction(id, value) {
-	    return function() {
-	      init(this, id).delay = +value.apply(this, arguments);
-	    };
-	  }
-
-	  function delayConstant(id, value) {
-	    return value = +value, function() {
-	      init(this, id).delay = value;
-	    };
-	  }
-
-	  function transition_delay(value) {
-	    var id = this._id;
-
-	    return arguments.length
-	        ? this.each((typeof value === "function"
-	            ? delayFunction
-	            : delayConstant)(id, value))
-	        : get(this.node(), id).delay;
-	  }
-
-	  function durationFunction(id, value) {
-	    return function() {
-	      set(this, id).duration = +value.apply(this, arguments);
-	    };
-	  }
-
-	  function durationConstant(id, value) {
-	    return value = +value, function() {
-	      set(this, id).duration = value;
-	    };
-	  }
-
-	  function transition_duration(value) {
-	    var id = this._id;
-
-	    return arguments.length
-	        ? this.each((typeof value === "function"
-	            ? durationFunction
-	            : durationConstant)(id, value))
-	        : get(this.node(), id).duration;
-	  }
-
-	  function easeConstant(id, value) {
-	    if (typeof value !== "function") throw new Error;
-	    return function() {
-	      set(this, id).ease = value;
-	    };
-	  }
-
-	  function transition_ease(value) {
-	    var id = this._id;
-
-	    return arguments.length
-	        ? this.each(easeConstant(id, value))
-	        : get(this.node(), id).ease;
-	  }
-
-	  function transition_filter(match) {
-	    if (typeof match !== "function") match = d3Selection.matcher(match);
-
-	    for (var groups = this._groups, m = groups.length, subgroups = new Array(m), j = 0; j < m; ++j) {
-	      for (var group = groups[j], n = group.length, subgroup = subgroups[j] = [], node, i = 0; i < n; ++i) {
-	        if ((node = group[i]) && match.call(node, node.__data__, i, group)) {
-	          subgroup.push(node);
-	        }
-	      }
-	    }
-
-	    return new Transition(subgroups, this._parents, this._name, this._id);
-	  }
-
-	  function transition_merge(transition) {
-	    if (transition._id !== this._id) throw new Error;
-
-	    for (var groups0 = this._groups, groups1 = transition._groups, m0 = groups0.length, m1 = groups1.length, m = Math.min(m0, m1), merges = new Array(m0), j = 0; j < m; ++j) {
-	      for (var group0 = groups0[j], group1 = groups1[j], n = group0.length, merge = merges[j] = new Array(n), node, i = 0; i < n; ++i) {
-	        if (node = group0[i] || group1[i]) {
-	          merge[i] = node;
-	        }
-	      }
-	    }
-
-	    for (; j < m0; ++j) {
-	      merges[j] = groups0[j];
-	    }
-
-	    return new Transition(merges, this._parents, this._name, this._id);
-	  }
-
-	  function start(name) {
-	    return (name + "").trim().split(/^|\s+/).every(function(t) {
-	      var i = t.indexOf(".");
-	      if (i >= 0) t = t.slice(0, i);
-	      return !t || t === "start";
-	    });
-	  }
-
-	  function onFunction(id, name, listener) {
-	    var on0, on1, sit = start(name) ? init : set;
-	    return function() {
-	      var schedule = sit(this, id),
-	          on = schedule.on;
-
-	      // If this node shared a dispatch with the previous node,
-	      // just assign the updated shared dispatch and we’re done!
-	      // Otherwise, copy-on-write.
-	      if (on !== on0) (on1 = (on0 = on).copy()).on(name, listener);
-
-	      schedule.on = on1;
-	    };
-	  }
-
-	  function transition_on(name, listener) {
-	    var id = this._id;
-
-	    return arguments.length < 2
-	        ? get(this.node(), id).on.on(name)
-	        : this.each(onFunction(id, name, listener));
-	  }
-
-	  function removeFunction(id) {
-	    return function() {
-	      var parent = this.parentNode;
-	      for (var i in this.__transition) if (+i !== id) return;
-	      if (parent) parent.removeChild(this);
-	    };
-	  }
-
-	  function transition_remove() {
-	    return this.on("end.remove", removeFunction(this._id));
-	  }
-
-	  function transition_select(select) {
-	    var name = this._name,
-	        id = this._id;
-
-	    if (typeof select !== "function") select = d3Selection.selector(select);
-
-	    for (var groups = this._groups, m = groups.length, subgroups = new Array(m), j = 0; j < m; ++j) {
-	      for (var group = groups[j], n = group.length, subgroup = subgroups[j] = new Array(n), node, subnode, i = 0; i < n; ++i) {
-	        if ((node = group[i]) && (subnode = select.call(node, node.__data__, i, group))) {
-	          if ("__data__" in node) subnode.__data__ = node.__data__;
-	          subgroup[i] = subnode;
-	          schedule(subgroup[i], name, id, i, subgroup, get(node, id));
-	        }
-	      }
-	    }
-
-	    return new Transition(subgroups, this._parents, name, id);
-	  }
-
-	  function transition_selectAll(select) {
-	    var name = this._name,
-	        id = this._id;
-
-	    if (typeof select !== "function") select = d3Selection.selectorAll(select);
-
-	    for (var groups = this._groups, m = groups.length, subgroups = [], parents = [], j = 0; j < m; ++j) {
-	      for (var group = groups[j], n = group.length, node, i = 0; i < n; ++i) {
-	        if (node = group[i]) {
-	          for (var children = select.call(node, node.__data__, i, group), child, inherit = get(node, id), k = 0, l = children.length; k < l; ++k) {
-	            if (child = children[k]) {
-	              schedule(child, name, id, k, children, inherit);
-	            }
-	          }
-	          subgroups.push(children);
-	          parents.push(node);
-	        }
-	      }
-	    }
-
-	    return new Transition(subgroups, parents, name, id);
-	  }
-
-	  var Selection = d3Selection.selection.prototype.constructor;
-
-	  function transition_selection() {
-	    return new Selection(this._groups, this._parents);
-	  }
-
-	  function styleRemove(name, interpolate) {
-	    var value00,
-	        value10,
-	        interpolate0;
-	    return function() {
-	      var style = d3Selection.window(this).getComputedStyle(this, null),
-	          value0 = style.getPropertyValue(name),
-	          value1 = (this.style.removeProperty(name), style.getPropertyValue(name));
-	      return value0 === value1 ? null
-	          : value0 === value00 && value1 === value10 ? interpolate0
-	          : interpolate0 = interpolate(value00 = value0, value10 = value1);
-	    };
-	  }
-
-	  function styleRemoveEnd(name) {
-	    return function() {
-	      this.style.removeProperty(name);
-	    };
-	  }
-
-	  function styleConstant(name, interpolate, value1) {
-	    var value00,
-	        interpolate0;
-	    return function() {
-	      var value0 = d3Selection.window(this).getComputedStyle(this, null).getPropertyValue(name);
-	      return value0 === value1 ? null
-	          : value0 === value00 ? interpolate0
-	          : interpolate0 = interpolate(value00 = value0, value1);
-	    };
-	  }
-
-	  function styleFunction(name, interpolate, value) {
-	    var value00,
-	        value10,
-	        interpolate0;
-	    return function() {
-	      var style = d3Selection.window(this).getComputedStyle(this, null),
-	          value0 = style.getPropertyValue(name),
-	          value1 = value(this);
-	      if (value1 == null) value1 = (this.style.removeProperty(name), style.getPropertyValue(name));
-	      return value0 === value1 ? null
-	          : value0 === value00 && value1 === value10 ? interpolate0
-	          : interpolate0 = interpolate(value00 = value0, value10 = value1);
-	    };
-	  }
-
-	  function transition_style(name, value, priority) {
-	    var i = (name += "") === "transform" ? d3Interpolate.interpolateTransformCss : interpolate;
-	    return value == null ? this
-	            .styleTween(name, styleRemove(name, i))
-	            .on("end.style." + name, styleRemoveEnd(name))
-	        : this.styleTween(name, typeof value === "function"
-	            ? styleFunction(name, i, tweenValue(this, "style." + name, value))
-	            : styleConstant(name, i, value), priority);
-	  }
-
-	  function styleTween(name, value, priority) {
-	    function tween() {
-	      var node = this, i = value.apply(node, arguments);
-	      return i && function(t) {
-	        node.style.setProperty(name, i(t), priority);
-	      };
-	    }
-	    tween._value = value;
-	    return tween;
-	  }
-
-	  function transition_styleTween(name, value, priority) {
-	    var key = "style." + (name += "");
-	    if (arguments.length < 2) return (key = this.tween(key)) && key._value;
-	    if (value == null) return this.tween(key, null);
-	    if (typeof value !== "function") throw new Error;
-	    return this.tween(key, styleTween(name, value, priority == null ? "" : priority));
-	  }
-
-	  function textConstant(value) {
-	    return function() {
-	      this.textContent = value;
-	    };
-	  }
-
-	  function textFunction(value) {
-	    return function() {
-	      var value1 = value(this);
-	      this.textContent = value1 == null ? "" : value1;
-	    };
-	  }
-
-	  function transition_text(value) {
-	    return this.tween("text", typeof value === "function"
-	        ? textFunction(tweenValue(this, "text", value))
-	        : textConstant(value == null ? "" : value + ""));
-	  }
-
-	  function transition_transition() {
-	    var name = this._name,
-	        id0 = this._id,
-	        id1 = newId();
-
-	    for (var groups = this._groups, m = groups.length, j = 0; j < m; ++j) {
-	      for (var group = groups[j], n = group.length, node, i = 0; i < n; ++i) {
-	        if (node = group[i]) {
-	          var inherit = get(node, id0);
-	          schedule(node, name, id1, i, group, {
-	            time: inherit.time + inherit.delay + inherit.duration,
-	            delay: 0,
-	            duration: inherit.duration,
-	            ease: inherit.ease
-	          });
-	        }
-	      }
-	    }
-
-	    return new Transition(groups, this._parents, name, id1);
-	  }
-
-	  var id = 0;
-
-	  function Transition(groups, parents, name, id) {
-	    this._groups = groups;
-	    this._parents = parents;
-	    this._name = name;
-	    this._id = id;
-	  }
-
-	  function transition(name) {
-	    return d3Selection.selection().transition(name);
-	  }
-
-	  function newId() {
-	    return ++id;
-	  }
-
-	  var selection_prototype = d3Selection.selection.prototype;
-
-	  Transition.prototype = transition.prototype = {
-	    constructor: Transition,
-	    select: transition_select,
-	    selectAll: transition_selectAll,
-	    filter: transition_filter,
-	    merge: transition_merge,
-	    selection: transition_selection,
-	    transition: transition_transition,
-	    call: selection_prototype.call,
-	    nodes: selection_prototype.nodes,
-	    node: selection_prototype.node,
-	    size: selection_prototype.size,
-	    empty: selection_prototype.empty,
-	    each: selection_prototype.each,
-	    on: transition_on,
-	    attr: transition_attr,
-	    attrTween: transition_attrTween,
-	    style: transition_style,
-	    styleTween: transition_styleTween,
-	    text: transition_text,
-	    remove: transition_remove,
-	    tween: transition_tween,
-	    delay: transition_delay,
-	    duration: transition_duration,
-	    ease: transition_ease
-	  };
-
-	  var defaultTiming = {
-	    time: null, // Set on use.
-	    delay: 0,
-	    duration: 250,
-	    ease: d3Ease.easeCubicInOut
-	  };
-
-	  function inherit(node, id) {
-	    var timing;
-	    while (!(timing = node.__transition) || !(timing = timing[id])) {
-	      if (!(node = node.parentNode)) {
-	        return defaultTiming.time = d3Timer.now(), defaultTiming;
-	      }
-	    }
-	    return timing;
-	  }
-
-	  function selection_transition(name) {
-	    var id,
-	        timing;
-
-	    if (name instanceof Transition) {
-	      id = name._id, name = name._name;
-	    } else {
-	      id = newId(), (timing = defaultTiming).time = d3Timer.now(), name = name == null ? null : name + "";
-	    }
-
-	    for (var groups = this._groups, m = groups.length, j = 0; j < m; ++j) {
-	      for (var group = groups[j], n = group.length, node, i = 0; i < n; ++i) {
-	        if (node = group[i]) {
-	          schedule(node, name, id, i, group, timing || inherit(node, id));
-	        }
-	      }
-	    }
-
-	    return new Transition(groups, this._parents, name, id);
-	  }
-
-	  d3Selection.selection.prototype.interrupt = selection_interrupt;
-	  d3Selection.selection.prototype.transition = selection_transition;
-
-	  var root = [null];
-
-	  function active(node, name) {
-	    var schedules = node.__transition,
-	        schedule,
-	        i;
-
-	    if (schedules) {
-	      name = name == null ? null : name + "";
-	      for (i in schedules) {
-	        if ((schedule = schedules[i]).state > SCHEDULED && schedule.name === name) {
-	          return new Transition([[node]], root, name, +i);
-	        }
-	      }
-	    }
-
-	    return null;
-	  }
-
-	  exports.transition = transition;
-	  exports.active = active;
-	  exports.interrupt = interrupt;
-
-	  Object.defineProperty(exports, '__esModule', { value: true });
-
-	}));
-
-/***/ },
-/* 259 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// https://d3js.org/d3-axis/ Version 1.0.0. Copyright 2016 Mike Bostock.
-	(function (global, factory) {
-	   true ? factory(exports) :
-	  typeof define === 'function' && define.amd ? define(['exports'], factory) :
-	  (factory((global.d3 = global.d3 || {})));
-	}(this, function (exports) { 'use strict';
-
-	  var slice = Array.prototype.slice;
-
-	  function identity(x) {
-	    return x;
-	  }
-
-	  var top = 1;
-	  var right = 2;
-	  var bottom = 3;
-	  var left = 4;
-	  var epsilon = 1e-6;
-	  function translateX(scale0, scale1, d) {
-	    var x = scale0(d);
-	    return "translate(" + (isFinite(x) ? x : scale1(d)) + ",0)";
-	  }
-
-	  function translateY(scale0, scale1, d) {
-	    var y = scale0(d);
-	    return "translate(0," + (isFinite(y) ? y : scale1(d)) + ")";
-	  }
-
-	  function center(scale) {
-	    var width = scale.bandwidth() / 2;
-	    return function(d) {
-	      return scale(d) + width;
-	    };
-	  }
-
-	  function entering() {
-	    return !this.__axis;
-	  }
-
-	  function axis(orient, scale) {
-	    var tickArguments = [],
-	        tickValues = null,
-	        tickFormat = null,
-	        tickSizeInner = 6,
-	        tickSizeOuter = 6,
-	        tickPadding = 3;
-
-	    function axis(context) {
-	      var values = tickValues == null ? (scale.ticks ? scale.ticks.apply(scale, tickArguments) : scale.domain()) : tickValues,
-	          format = tickFormat == null ? (scale.tickFormat ? scale.tickFormat.apply(scale, tickArguments) : identity) : tickFormat,
-	          spacing = Math.max(tickSizeInner, 0) + tickPadding,
-	          transform = orient === top || orient === bottom ? translateX : translateY,
-	          range = scale.range(),
-	          range0 = range[0] + 0.5,
-	          range1 = range[range.length - 1] + 0.5,
-	          position = (scale.bandwidth ? center : identity)(scale.copy()),
-	          selection = context.selection ? context.selection() : context,
-	          path = selection.selectAll(".domain").data([null]),
-	          tick = selection.selectAll(".tick").data(values, scale).order(),
-	          tickExit = tick.exit(),
-	          tickEnter = tick.enter().append("g").attr("class", "tick"),
-	          line = tick.select("line"),
-	          text = tick.select("text"),
-	          k = orient === top || orient === left ? -1 : 1,
-	          x, y = orient === left || orient === right ? (x = "x", "y") : (x = "y", "x");
-
-	      path = path.merge(path.enter().insert("path", ".tick")
-	          .attr("class", "domain")
-	          .attr("stroke", "#000"));
-
-	      tick = tick.merge(tickEnter);
-
-	      line = line.merge(tickEnter.append("line")
-	          .attr("stroke", "#000")
-	          .attr(x + "2", k * tickSizeInner)
-	          .attr(y + "1", 0.5)
-	          .attr(y + "2", 0.5));
-
-	      text = text.merge(tickEnter.append("text")
-	          .attr("fill", "#000")
-	          .attr(x, k * spacing)
-	          .attr(y, 0.5)
-	          .attr("dy", orient === top ? "0em" : orient === bottom ? ".71em" : ".32em"));
-
-	      if (context !== selection) {
-	        path = path.transition(context);
-	        tick = tick.transition(context);
-	        line = line.transition(context);
-	        text = text.transition(context);
-
-	        tickExit = tickExit.transition(context)
-	            .attr("opacity", epsilon)
-	            .attr("transform", function(d) { return transform(position, this.parentNode.__axis || position, d); });
-
-	        tickEnter
-	            .attr("opacity", epsilon)
-	            .attr("transform", function(d) { return transform(this.parentNode.__axis || position, position, d); });
-	      }
-
-	      tickExit.remove();
-
-	      path
-	          .attr("d", orient === left || orient == right
-	              ? "M" + k * tickSizeOuter + "," + range0 + "H0.5V" + range1 + "H" + k * tickSizeOuter
-	              : "M" + range0 + "," + k * tickSizeOuter + "V0.5H" + range1 + "V" + k * tickSizeOuter);
-
-	      tick
-	          .attr("opacity", 1)
-	          .attr("transform", function(d) { return transform(position, position, d); });
-
-	      line
-	          .attr(x + "2", k * tickSizeInner);
-
-	      text
-	          .attr(x, k * spacing)
-	          .text(format);
-
-	      selection.filter(entering)
-	          .attr("fill", "none")
-	          .attr("font-size", 10)
-	          .attr("font-family", "sans-serif")
-	          .attr("text-anchor", orient === right ? "start" : orient === left ? "end" : "middle");
-
-	      selection
-	          .each(function() { this.__axis = position; });
-	    }
-
-	    axis.scale = function(_) {
-	      return arguments.length ? (scale = _, axis) : scale;
-	    };
-
-	    axis.ticks = function() {
-	      return tickArguments = slice.call(arguments), axis;
-	    };
-
-	    axis.tickArguments = function(_) {
-	      return arguments.length ? (tickArguments = _ == null ? [] : slice.call(_), axis) : tickArguments.slice();
-	    };
-
-	    axis.tickValues = function(_) {
-	      return arguments.length ? (tickValues = _ == null ? null : slice.call(_), axis) : tickValues && tickValues.slice();
-	    };
-
-	    axis.tickFormat = function(_) {
-	      return arguments.length ? (tickFormat = _, axis) : tickFormat;
-	    };
-
-	    axis.tickSize = function(_) {
-	      return arguments.length ? (tickSizeInner = tickSizeOuter = +_, axis) : tickSizeInner;
-	    };
-
-	    axis.tickSizeInner = function(_) {
-	      return arguments.length ? (tickSizeInner = +_, axis) : tickSizeInner;
-	    };
-
-	    axis.tickSizeOuter = function(_) {
-	      return arguments.length ? (tickSizeOuter = +_, axis) : tickSizeOuter;
-	    };
-
-	    axis.tickPadding = function(_) {
-	      return arguments.length ? (tickPadding = +_, axis) : tickPadding;
-	    };
-
-	    return axis;
-	  }
-
-	  function axisTop(scale) {
-	    return axis(top, scale);
-	  }
-
-	  function axisRight(scale) {
-	    return axis(right, scale);
-	  }
-
-	  function axisBottom(scale) {
-	    return axis(bottom, scale);
-	  }
-
-	  function axisLeft(scale) {
-	    return axis(left, scale);
-	  }
-
-	  exports.axisTop = axisTop;
-	  exports.axisRight = axisRight;
-	  exports.axisBottom = axisBottom;
-	  exports.axisLeft = axisLeft;
-
-	  Object.defineProperty(exports, '__esModule', { value: true });
-
-	}));
-
-/***/ },
-/* 260 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// https://d3js.org/d3-hierarchy/ Version 1.0.0. Copyright 2016 Mike Bostock.
-	(function (global, factory) {
-	   true ? factory(exports) :
-	  typeof define === 'function' && define.amd ? define(['exports'], factory) :
-	  (factory((global.d3 = global.d3 || {})));
-	}(this, function (exports) { 'use strict';
-
-	  function defaultSeparation(a, b) {
-	    return a.parent === b.parent ? 1 : 2;
-	  }
-
-	  function meanX(children) {
-	    return children.reduce(meanXReduce, 0) / children.length;
-	  }
-
-	  function meanXReduce(x, c) {
-	    return x + c.x;
-	  }
-
-	  function maxY(children) {
-	    return 1 + children.reduce(maxYReduce, 0);
-	  }
-
-	  function maxYReduce(y, c) {
-	    return Math.max(y, c.y);
-	  }
-
-	  function leafLeft(node) {
-	    var children;
-	    while (children = node.children) node = children[0];
-	    return node;
-	  }
-
-	  function leafRight(node) {
-	    var children;
-	    while (children = node.children) node = children[children.length - 1];
-	    return node;
-	  }
-
-	  function cluster() {
-	    var separation = defaultSeparation,
-	        dx = 1,
-	        dy = 1,
-	        nodeSize = false;
-
-	    function cluster(root) {
-	      var previousNode,
-	          x = 0;
-
-	      // First walk, computing the initial x & y values.
-	      root.eachAfter(function(node) {
-	        var children = node.children;
-	        if (children) {
-	          node.x = meanX(children);
-	          node.y = maxY(children);
-	        } else {
-	          node.x = previousNode ? x += separation(node, previousNode) : 0;
-	          node.y = 0;
-	          previousNode = node;
-	        }
-	      });
-
-	      var left = leafLeft(root),
-	          right = leafRight(root),
-	          x0 = left.x - separation(left, right) / 2,
-	          x1 = right.x + separation(right, left) / 2;
-
-	      // Second walk, normalizing x & y to the desired size.
-	      return root.eachAfter(nodeSize ? function(node) {
-	        node.x = (node.x - root.x) * dx;
-	        node.y = (root.y - node.y) * dy;
-	      } : function(node) {
-	        node.x = (node.x - x0) / (x1 - x0) * dx;
-	        node.y = (1 - (root.y ? node.y / root.y : 1)) * dy;
-	      });
-	    }
-
-	    cluster.separation = function(x) {
-	      return arguments.length ? (separation = x, cluster) : separation;
-	    };
-
-	    cluster.size = function(x) {
-	      return arguments.length ? (nodeSize = false, dx = +x[0], dy = +x[1], cluster) : (nodeSize ? null : [dx, dy]);
-	    };
-
-	    cluster.nodeSize = function(x) {
-	      return arguments.length ? (nodeSize = true, dx = +x[0], dy = +x[1], cluster) : (nodeSize ? [dx, dy] : null);
-	    };
-
-	    return cluster;
-	  }
-
-	  function node_each(callback) {
-	    var node = this, current, next = [node], children, i, n;
-	    do {
-	      current = next.reverse(), next = [];
-	      while (node = current.pop()) {
-	        callback(node), children = node.children;
-	        if (children) for (i = 0, n = children.length; i < n; ++i) {
-	          next.push(children[i]);
-	        }
-	      }
-	    } while (next.length);
-	    return this;
-	  }
-
-	  function node_eachBefore(callback) {
-	    var node = this, nodes = [node], children, i;
-	    while (node = nodes.pop()) {
-	      callback(node), children = node.children;
-	      if (children) for (i = children.length - 1; i >= 0; --i) {
-	        nodes.push(children[i]);
-	      }
-	    }
-	    return this;
-	  }
-
-	  function node_eachAfter(callback) {
-	    var node = this, nodes = [node], next = [], children, i, n;
-	    while (node = nodes.pop()) {
-	      next.push(node), children = node.children;
-	      if (children) for (i = 0, n = children.length; i < n; ++i) {
-	        nodes.push(children[i]);
-	      }
-	    }
-	    while (node = next.pop()) {
-	      callback(node);
-	    }
-	    return this;
-	  }
-
-	  function node_sum(value) {
-	    return this.eachAfter(function(node) {
-	      var sum = +value(node.data) || 0,
-	          children = node.children,
-	          i = children && children.length;
-	      while (--i >= 0) sum += children[i].value;
-	      node.value = sum;
-	    });
-	  }
-
-	  function node_sort(compare) {
-	    return this.eachBefore(function(node) {
-	      if (node.children) {
-	        node.children.sort(compare);
-	      }
-	    });
-	  }
-
-	  function node_path(end) {
-	    var start = this,
-	        ancestor = leastCommonAncestor(start, end),
-	        nodes = [start];
-	    while (start !== ancestor) {
-	      start = start.parent;
-	      nodes.push(start);
-	    }
-	    var k = nodes.length;
-	    while (end !== ancestor) {
-	      nodes.splice(k, 0, end);
-	      end = end.parent;
-	    }
-	    return nodes;
-	  }
-
-	  function leastCommonAncestor(a, b) {
-	    if (a === b) return a;
-	    var aNodes = a.ancestors(),
-	        bNodes = b.ancestors(),
-	        c = null;
-	    a = aNodes.pop();
-	    b = bNodes.pop();
-	    while (a === b) {
-	      c = a;
-	      a = aNodes.pop();
-	      b = bNodes.pop();
-	    }
-	    return c;
-	  }
-
-	  function node_ancestors() {
-	    var node = this, nodes = [node];
-	    while (node = node.parent) {
-	      nodes.push(node);
-	    }
-	    return nodes;
-	  }
-
-	  function node_descendants() {
-	    var nodes = [];
-	    this.each(function(node) {
-	      nodes.push(node);
-	    });
-	    return nodes;
-	  }
-
-	  function node_leaves() {
-	    var leaves = [];
-	    this.eachBefore(function(node) {
-	      if (!node.children) {
-	        leaves.push(node);
-	      }
-	    });
-	    return leaves;
-	  }
-
-	  function node_links() {
-	    var root = this, links = [];
-	    root.each(function(node) {
-	      if (node !== root) { // Don’t include the root’s parent, if any.
-	        links.push({source: node.parent, target: node});
-	      }
-	    });
-	    return links;
-	  }
-
-	  function hierarchy(data, children) {
-	    var root = new Node(data),
-	        valued = +data.value && (root.value = data.value),
-	        node,
-	        nodes = [root],
-	        child,
-	        childs,
-	        i,
-	        n;
-
-	    if (children == null) children = defaultChildren;
-
-	    while (node = nodes.pop()) {
-	      if (valued) node.value = +node.data.value;
-	      if ((childs = children(node.data)) && (n = childs.length)) {
-	        node.children = new Array(n);
-	        for (i = n - 1; i >= 0; --i) {
-	          nodes.push(child = node.children[i] = new Node(childs[i]));
-	          child.parent = node;
-	          child.depth = node.depth + 1;
-	        }
-	      }
-	    }
-
-	    return root.eachBefore(computeHeight);
-	  }
-
-	  function node_copy() {
-	    return hierarchy(this).eachBefore(copyData);
-	  }
-
-	  function defaultChildren(d) {
-	    return d.children;
-	  }
-
-	  function copyData(node) {
-	    node.data = node.data.data;
-	  }
-
-	  function computeHeight(node) {
-	    var height = 0;
-	    do node.height = height;
-	    while ((node = node.parent) && (node.height < ++height));
-	  }
-
-	  function Node(data) {
-	    this.data = data;
-	    this.depth =
-	    this.height = 0;
-	    this.parent = null;
-	  }
-
-	  Node.prototype = hierarchy.prototype = {
-	    constructor: Node,
-	    each: node_each,
-	    eachAfter: node_eachAfter,
-	    eachBefore: node_eachBefore,
-	    sum: node_sum,
-	    sort: node_sort,
-	    path: node_path,
-	    ancestors: node_ancestors,
-	    descendants: node_descendants,
-	    leaves: node_leaves,
-	    links: node_links,
-	    copy: node_copy
-	  };
-
-	  function Node$2(value) {
-	    this._ = value;
-	    this.next = null;
-	  }
-
-	  function shuffle(array) {
-	    var i,
-	        n = (array = array.slice()).length,
-	        head = null,
-	        node = head;
-
-	    while (n) {
-	      var next = new Node$2(array[n - 1]);
-	      if (node) node = node.next = next;
-	      else node = head = next;
-	      array[i] = array[--n];
-	    }
-
-	    return {
-	      head: head,
-	      tail: node
-	    };
-	  }
-
-	  function enclose(circles) {
-	    return encloseN(shuffle(circles), []);
-	  }
-
-	  function encloses(a, b) {
-	    var dx = b.x - a.x,
-	        dy = b.y - a.y,
-	        dr = a.r - b.r;
-	    return dr * dr + 1e-6 > dx * dx + dy * dy;
-	  }
-
-	  // Returns the smallest circle that contains circles L and intersects circles B.
-	  function encloseN(L, B) {
-	    var circle,
-	        l0 = null,
-	        l1 = L.head,
-	        l2,
-	        p1;
-
-	    switch (B.length) {
-	      case 1: circle = enclose1(B[0]); break;
-	      case 2: circle = enclose2(B[0], B[1]); break;
-	      case 3: circle = enclose3(B[0], B[1], B[2]); break;
-	    }
-
-	    while (l1) {
-	      p1 = l1._, l2 = l1.next;
-	      if (!circle || !encloses(circle, p1)) {
-
-	        // Temporarily truncate L before l1.
-	        if (l0) L.tail = l0, l0.next = null;
-	        else L.head = L.tail = null;
-
-	        B.push(p1);
-	        circle = encloseN(L, B); // Note: reorders L!
-	        B.pop();
-
-	        // Move l1 to the front of L and reconnect the truncated list L.
-	        if (L.head) l1.next = L.head, L.head = l1;
-	        else l1.next = null, L.head = L.tail = l1;
-	        l0 = L.tail, l0.next = l2;
-
-	      } else {
-	        l0 = l1;
-=======
 	    return clipExtent.extent([ [ 0, 0 ], [ 960, 500 ] ]);
 	  };
 	  function d3_geo_clipExtent(x0, y0, x1, y1) {
@@ -47092,7 +41076,6 @@ module.exports =
 	        } else {
 	          listener.point(to[0], to[1]);
 	        }
->>>>>>> 4bb18f8603293f2bcdc29db9247561a88fdd5717
 	      }
 	      function pointVisible(x, y) {
 	        return x0 <= x && x <= x1 && y0 <= y && y <= y1;
@@ -47624,66 +41607,6 @@ module.exports =
 	    polygonEnd: function() {
 	      this.stream.polygonEnd();
 	    }
-<<<<<<< HEAD
-
-	    resquarify.ratio = function(x) {
-	      return custom((x = +x) > 1 ? x : 1);
-	    };
-
-	    return resquarify;
-	  })(phi);
-
-	  exports.cluster = cluster;
-	  exports.hierarchy = hierarchy;
-	  exports.pack = index;
-	  exports.packSiblings = siblings;
-	  exports.packEnclose = enclose;
-	  exports.partition = partition;
-	  exports.stratify = stratify;
-	  exports.tree = tree;
-	  exports.treemap = index$1;
-	  exports.treemapBinary = binary;
-	  exports.treemapDice = treemapDice;
-	  exports.treemapSlice = treemapSlice;
-	  exports.treemapSliceDice = sliceDice;
-	  exports.treemapSquarify = squarify;
-	  exports.treemapResquarify = resquarify;
-
-	  Object.defineProperty(exports, '__esModule', { value: true });
-
-	}));
-
-/***/ },
-/* 261 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// https://d3js.org/d3-force/ Version 1.0.0. Copyright 2016 Mike Bostock.
-	(function (global, factory) {
-	   true ? factory(exports, __webpack_require__(238), __webpack_require__(233), __webpack_require__(243), __webpack_require__(252)) :
-	  typeof define === 'function' && define.amd ? define(['exports', 'd3-quadtree', 'd3-collection', 'd3-dispatch', 'd3-timer'], factory) :
-	  (factory((global.d3 = global.d3 || {}),global.d3,global.d3,global.d3,global.d3));
-	}(this, function (exports,d3Quadtree,d3Collection,d3Dispatch,d3Timer) { 'use strict';
-
-	  function center(x, y) {
-	    var nodes;
-
-	    if (x == null) x = 0;
-	    if (y == null) y = 0;
-
-	    function force() {
-	      var i,
-	          n = nodes.length,
-	          node,
-	          sx = 0,
-	          sy = 0;
-
-	      for (i = 0; i < n; ++i) {
-	        node = nodes[i], sx += node.x, sy += node.y;
-	      }
-
-	      for (sx = sx / n - x, sy = sy / n - y, i = 0; i < n; ++i) {
-	        node = nodes[i], node.x -= sx, node.y -= sy;
-=======
 	  };
 	  function d3_geo_transformPoint(stream, point) {
 	    return {
@@ -47702,7 +41625,6 @@ module.exports =
 	      },
 	      polygonEnd: function() {
 	        stream.polygonEnd();
->>>>>>> 4bb18f8603293f2bcdc29db9247561a88fdd5717
 	      }
 	    };
 	  }
@@ -48163,34 +42085,6 @@ module.exports =
 	    };
 	    return m.clipExtent(null);
 	  }
-<<<<<<< HEAD
-
-	  exports.forceCenter = center;
-	  exports.forceCollide = collide;
-	  exports.forceLink = link;
-	  exports.forceManyBody = manyBody;
-	  exports.forceSimulation = simulation;
-	  exports.forceX = x$2;
-	  exports.forceY = y$2;
-
-	  Object.defineProperty(exports, '__esModule', { value: true });
-
-	}));
-
-/***/ },
-/* 262 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// https://d3js.org/d3-drag/ Version 1.0.0. Copyright 2016 Mike Bostock.
-	(function (global, factory) {
-	   true ? factory(exports, __webpack_require__(243), __webpack_require__(257)) :
-	  typeof define === 'function' && define.amd ? define(['exports', 'd3-dispatch', 'd3-selection'], factory) :
-	  (factory((global.d3 = global.d3 || {}),global.d3,global.d3));
-	}(this, function (exports,d3Dispatch,d3Selection) { 'use strict';
-
-	  function nopropagation() {
-	    d3Selection.event.stopImmediatePropagation();
-=======
 	  (d3.geo.mercator = function() {
 	    return d3_geo_mercatorProjection(d3_geo_mercator);
 	  }).raw = d3_geo_mercator;
@@ -48228,7 +42122,6 @@ module.exports =
 	  d3.geom = {};
 	  function d3_geom_pointX(d) {
 	    return d[0];
->>>>>>> 4bb18f8603293f2bcdc29db9247561a88fdd5717
 	  }
 	  function d3_geom_pointY(d) {
 	    return d[1];
@@ -48632,32 +42525,6 @@ module.exports =
 	    edge.b = vb;
 	    return true;
 	  }
-<<<<<<< HEAD
-
-	  exports.drag = drag;
-	  exports.dragDisable = nodrag;
-	  exports.dragEnable = yesdrag;
-
-	  Object.defineProperty(exports, '__esModule', { value: true });
-
-	}));
-
-/***/ },
-/* 263 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// https://d3js.org/d3-voronoi/ Version 1.0.1. Copyright 2016 Mike Bostock.
-	(function (global, factory) {
-	   true ? factory(exports) :
-	  typeof define === 'function' && define.amd ? define(['exports'], factory) :
-	  (factory((global.d3 = global.d3 || {})));
-	}(this, function (exports) { 'use strict';
-
-	  function constant(x) {
-	    return function() {
-	      return x;
-	    };
-=======
 	  function d3_geom_voronoiEdge(lSite, rSite) {
 	    this.l = lSite;
 	    this.r = rSite;
@@ -48671,7 +42538,6 @@ module.exports =
 	    d3_geom_voronoiCells[lSite.i].edges.push(new d3_geom_voronoiHalfEdge(edge, lSite, rSite));
 	    d3_geom_voronoiCells[rSite.i].edges.push(new d3_geom_voronoiHalfEdge(edge, rSite, lSite));
 	    return edge;
->>>>>>> 4bb18f8603293f2bcdc29db9247561a88fdd5717
 	  }
 	  function d3_geom_voronoiCreateBorderEdge(lSite, va, vb) {
 	    var edge = new d3_geom_voronoiEdge(lSite, null);
@@ -48998,81 +42864,6 @@ module.exports =
 	      return voronoi.clipExtent(_ && [ [ 0, 0 ], _ ]);
 	    };
 	    return voronoi;
-<<<<<<< HEAD
-	  }
-
-	  exports.voronoi = voronoi;
-
-	  Object.defineProperty(exports, '__esModule', { value: true });
-
-	}));
-
-/***/ },
-/* 264 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// https://d3js.org/d3-zoom/ Version 1.0.2. Copyright 2016 Mike Bostock.
-	(function (global, factory) {
-	   true ? factory(exports, __webpack_require__(243), __webpack_require__(262), __webpack_require__(242), __webpack_require__(257), __webpack_require__(258)) :
-	  typeof define === 'function' && define.amd ? define(['exports', 'd3-dispatch', 'd3-drag', 'd3-interpolate', 'd3-selection', 'd3-transition'], factory) :
-	  (factory((global.d3 = global.d3 || {}),global.d3,global.d3,global.d3,global.d3,global.d3));
-	}(this, function (exports,d3Dispatch,d3Drag,d3Interpolate,d3Selection,d3Transition) { 'use strict';
-
-	  function constant(x) {
-	    return function() {
-	      return x;
-	    };
-	  }
-
-	  function ZoomEvent(target, type, transform) {
-	    this.target = target;
-	    this.type = type;
-	    this.transform = transform;
-	  }
-
-	  function Transform(k, x, y) {
-	    this.k = k;
-	    this.x = x;
-	    this.y = y;
-	  }
-
-	  Transform.prototype = {
-	    constructor: Transform,
-	    scale: function(k) {
-	      return k === 1 ? this : new Transform(this.k * k, this.x, this.y);
-	    },
-	    translate: function(x, y) {
-	      return x === 0 & y === 0 ? this : new Transform(this.k, this.x + this.k * x, this.y + this.k * y);
-	    },
-	    apply: function(point) {
-	      return [point[0] * this.k + this.x, point[1] * this.k + this.y];
-	    },
-	    applyX: function(x) {
-	      return x * this.k + this.x;
-	    },
-	    applyY: function(y) {
-	      return y * this.k + this.y;
-	    },
-	    invert: function(location) {
-	      return [(location[0] - this.x) / this.k, (location[1] - this.y) / this.k];
-	    },
-	    invertX: function(x) {
-	      return (x - this.x) / this.k;
-	    },
-	    invertY: function(y) {
-	      return (y - this.y) / this.k;
-	    },
-	    rescaleX: function(x) {
-	      return x.copy().domain(x.range().map(this.invertX, this).map(x.invert, x));
-	    },
-	    rescaleY: function(y) {
-	      return y.copy().domain(y.range().map(this.invertY, this).map(y.invert, y));
-	    },
-	    toString: function() {
-	      return "translate(" + this.x + "," + this.y + ") scale(" + this.k + ")";
-	    }
-=======
->>>>>>> 4bb18f8603293f2bcdc29db9247561a88fdd5717
 	  };
 	  var d3_geom_voronoiClipExtent = [ [ -1e6, -1e6 ], [ 1e6, 1e6 ] ];
 	  function d3_geom_voronoiTriangleArea(a, b, c) {
@@ -49390,35 +43181,9 @@ module.exports =
 	      return 1 - f(1 - t);
 	    };
 	  }
-<<<<<<< HEAD
-
-	  exports.zoom = zoom;
-	  exports.zoomTransform = transform;
-	  exports.zoomIdentity = identity;
-
-	  Object.defineProperty(exports, '__esModule', { value: true });
-
-	}));
-
-/***/ },
-/* 265 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// https://d3js.org/d3-brush/ Version 1.0.1. Copyright 2016 Mike Bostock.
-	(function (global, factory) {
-	   true ? factory(exports, __webpack_require__(243), __webpack_require__(262), __webpack_require__(242), __webpack_require__(257), __webpack_require__(258)) :
-	  typeof define === 'function' && define.amd ? define(['exports', 'd3-dispatch', 'd3-drag', 'd3-interpolate', 'd3-selection', 'd3-transition'], factory) :
-	  (factory((global.d3 = global.d3 || {}),global.d3,global.d3,global.d3,global.d3,global.d3));
-	}(this, function (exports,d3Dispatch,d3Drag,d3Interpolate,d3Selection,d3Transition) { 'use strict';
-
-	  function constant(x) {
-	    return function() {
-	      return x;
-=======
 	  function d3_ease_reflect(f) {
 	    return function(t) {
 	      return .5 * (t < .5 ? f(2 * t) : 2 - f(2 - 2 * t));
->>>>>>> 4bb18f8603293f2bcdc29db9247561a88fdd5717
 	    };
 	  }
 	  function d3_ease_quad(t) {
@@ -49631,49 +43396,12 @@ module.exports =
 	      return Math.max(0, Math.min(1, (x - a) / b));
 	    };
 	  }
-<<<<<<< HEAD
-
-	  exports.brush = brush;
-	  exports.brushX = brushX;
-	  exports.brushY = brushY;
-	  exports.brushSelection = brushSelection;
-
-	  Object.defineProperty(exports, '__esModule', { value: true });
-
-	}));
-
-/***/ },
-/* 266 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// https://d3js.org/d3-chord/ Version 1.0.0. Copyright 2016 Mike Bostock.
-	(function (global, factory) {
-	   true ? factory(exports, __webpack_require__(232), __webpack_require__(237)) :
-	  typeof define === 'function' && define.amd ? define(['exports', 'd3-array', 'd3-path'], factory) :
-	  (factory((global.d3 = global.d3 || {}),global.d3,global.d3));
-	}(this, function (exports,d3Array,d3Path) { 'use strict';
-
-	  var cos = Math.cos;
-	  var sin = Math.sin;
-	  var pi = Math.PI;
-	  var halfPi = pi / 2;
-	  var tau = pi * 2;
-	  var max = Math.max;
-
-	  function compareValue(compare) {
-	    return function(a, b) {
-	      return compare(
-	        a.source.value + a.target.value,
-	        b.source.value + b.target.value
-	      );
-=======
 	  d3.layout = {};
 	  d3.layout.bundle = function() {
 	    return function(links) {
 	      var paths = [], i = -1, n = links.length;
 	      while (++i < n) paths.push(d3_layout_bundlePath(links[i]));
 	      return paths;
->>>>>>> 4bb18f8603293f2bcdc29db9247561a88fdd5717
 	    };
 	  };
 	  function d3_layout_bundlePath(link) {
@@ -50271,59 +43999,6 @@ module.exports =
 	      padAngle = _;
 	      return pie;
 	    };
-<<<<<<< HEAD
-
-	    return ribbon;
-	  }
-
-	  exports.chord = chord;
-	  exports.ribbon = ribbon;
-
-	  Object.defineProperty(exports, '__esModule', { value: true });
-
-	}));
-
-/***/ },
-/* 267 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// https://d3js.org/d3-geo/ Version 1.1.1. Copyright 2016 Mike Bostock.
-	(function (global, factory) {
-	   true ? factory(exports, __webpack_require__(232)) :
-	  typeof define === 'function' && define.amd ? define(['exports', 'd3-array'], factory) :
-	  (factory((global.d3 = global.d3 || {}),global.d3));
-	}(this, function (exports,d3Array) { 'use strict';
-
-	  // Adds floating point numbers with twice the normal precision.
-	  // Reference: J. R. Shewchuk, Adaptive Precision Floating-Point Arithmetic and
-	  // Fast Robust Geometric Predicates, Discrete & Computational Geometry 18(3)
-	  // 305–363 (1997).
-	  // Code adapted from GeographicLib by Charles F. F. Karney,
-	  // http://geographiclib.sourceforge.net/
-
-	  function adder() {
-	    return new Adder;
-	  }
-
-	  function Adder() {
-	    this.reset();
-	  }
-
-	  Adder.prototype = {
-	    constructor: Adder,
-	    reset: function() {
-	      this.s = // rounded value
-	      this.t = 0; // exact error
-	    },
-	    add: function(y) {
-	      add(temp, y, this.t);
-	      add(this, temp.s, this.s);
-	      if (this.s) this.t += temp.t;
-	      else this.s = temp.t;
-	    },
-	    valueOf: function() {
-	      return this.s;
-=======
 	    return pie;
 	  };
 	  var d3_layout_pieSortByValue = {};
@@ -50351,7 +44026,6 @@ module.exports =
 	        }
 	      }
 	      return data;
->>>>>>> 4bb18f8603293f2bcdc29db9247561a88fdd5717
 	    }
 	    stack.values = function(x) {
 	      if (!arguments.length) return values;
@@ -53205,15 +46879,7 @@ module.exports =
 	}();
 
 /***/ },
-<<<<<<< HEAD
-<<<<<<< HEAD
-/* 268 */
-=======
-/* 232 */
->>>>>>> 4bb18f8603293f2bcdc29db9247561a88fdd5717
-=======
-/* 233 */
->>>>>>> 5c6215621b03cbb0632b65186cc1fc6b19dfebb4
+/* 257 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -53252,15 +46918,7 @@ module.exports =
 	exports.default = Footer;
 
 /***/ },
-<<<<<<< HEAD
-<<<<<<< HEAD
-/* 269 */
-=======
-/* 233 */
->>>>>>> 4bb18f8603293f2bcdc29db9247561a88fdd5717
-=======
-/* 234 */
->>>>>>> 5c6215621b03cbb0632b65186cc1fc6b19dfebb4
+/* 258 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -53275,23 +46933,15 @@ module.exports =
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _jquery = __webpack_require__(226);
+	var _jquery = __webpack_require__(225);
 
 	var _jquery2 = _interopRequireDefault(_jquery);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-	var _loginInput = __webpack_require__(270);
-=======
-	var _loginInput = __webpack_require__(234);
->>>>>>> 4bb18f8603293f2bcdc29db9247561a88fdd5717
-=======
-	var _loginInput = __webpack_require__(235);
->>>>>>> 5c6215621b03cbb0632b65186cc1fc6b19dfebb4
+	var _loginInput = __webpack_require__(259);
 
 	var _loginInput2 = _interopRequireDefault(_loginInput);
 
-	var _login = __webpack_require__(223);
+	var _login = __webpack_require__(222);
 
 	var _login2 = _interopRequireDefault(_login);
 
@@ -53339,16 +46989,7 @@ module.exports =
 	    key: 'redirectToDashboard',
 	    value: function redirectToDashboard(dataToken) {
 	      // this.context.router.push({token: dataToken}, '/dashboard');
-<<<<<<< HEAD
-<<<<<<< HEAD
-	      this.props.history.pushState(null, '/dashboard');
-=======
-	      console.log(this.props);
-	      this.props.history.pushState({ token: dataToken }, '/dashboard');
->>>>>>> 4bb18f8603293f2bcdc29db9247561a88fdd5717
-=======
 	      this.props.history.pushState({ token: dataToken }, '/jobs');
->>>>>>> 5c6215621b03cbb0632b65186cc1fc6b19dfebb4
 	    }
 	  }, {
 	    key: 'loginToServer',
@@ -53395,15 +47036,7 @@ module.exports =
 	exports.default = LoginForm;
 
 /***/ },
-<<<<<<< HEAD
-<<<<<<< HEAD
-/* 270 */
-=======
-/* 234 */
->>>>>>> 4bb18f8603293f2bcdc29db9247561a88fdd5717
-=======
-/* 235 */
->>>>>>> 5c6215621b03cbb0632b65186cc1fc6b19dfebb4
+/* 259 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -53467,15 +47100,7 @@ module.exports =
 	exports.default = LoginInput;
 
 /***/ },
-<<<<<<< HEAD
-<<<<<<< HEAD
-/* 271 */
-=======
-/* 235 */
->>>>>>> 4bb18f8603293f2bcdc29db9247561a88fdd5717
-=======
-/* 236 */
->>>>>>> 5c6215621b03cbb0632b65186cc1fc6b19dfebb4
+/* 260 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -53490,21 +47115,13 @@ module.exports =
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _jquery = __webpack_require__(226);
+	var _jquery = __webpack_require__(225);
 
 	var _jquery2 = _interopRequireDefault(_jquery);
 
 	var _reactRouter = __webpack_require__(158);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-	var _signupInput = __webpack_require__(272);
-=======
-	var _signupInput = __webpack_require__(236);
->>>>>>> 4bb18f8603293f2bcdc29db9247561a88fdd5717
-=======
-	var _signupInput = __webpack_require__(237);
->>>>>>> 5c6215621b03cbb0632b65186cc1fc6b19dfebb4
+	var _signupInput = __webpack_require__(261);
 
 	var _signupInput2 = _interopRequireDefault(_signupInput);
 
@@ -53557,12 +47174,7 @@ module.exports =
 	  }, {
 	    key: 'redirectToDashboard',
 	    value: function redirectToDashboard(dataToken) {
-<<<<<<< HEAD
-	      this.context.router.push(null, '/results');
-=======
 	      this.props.history.pushState({ token: dataToken }, '/dashboard');
-	      // this.context.router.push(null, '/results');
->>>>>>> 4bb18f8603293f2bcdc29db9247561a88fdd5717
 	    }
 	  }, {
 	    key: 'SignUpToServer',
@@ -53583,11 +47195,7 @@ module.exports =
 	          localStorage.setItem('token', data.token), self.setState({
 	            authToken: data.token
 	          });
-<<<<<<< HEAD
-	          self.redirectToDashboard();
-=======
 	          self.redirectToDashboard(data.token);
->>>>>>> 4bb18f8603293f2bcdc29db9247561a88fdd5717
 	        },
 	        error: function error(err) {
 	          console.log(err);
@@ -53611,15 +47219,7 @@ module.exports =
 	exports.default = SignForm;
 
 /***/ },
-<<<<<<< HEAD
-<<<<<<< HEAD
-/* 272 */
-=======
-/* 236 */
->>>>>>> 4bb18f8603293f2bcdc29db9247561a88fdd5717
-=======
-/* 237 */
->>>>>>> 5c6215621b03cbb0632b65186cc1fc6b19dfebb4
+/* 261 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -53656,15 +47256,7 @@ module.exports =
 	exports.default = SignupInput;
 
 /***/ },
-<<<<<<< HEAD
-<<<<<<< HEAD
-/* 273 */
-=======
-/* 237 */
->>>>>>> 4bb18f8603293f2bcdc29db9247561a88fdd5717
-=======
-/* 238 */
->>>>>>> 5c6215621b03cbb0632b65186cc1fc6b19dfebb4
+/* 262 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -53681,31 +47273,15 @@ module.exports =
 
 	var _reactRouter = __webpack_require__(158);
 
-	var _jquery = __webpack_require__(226);
+	var _jquery = __webpack_require__(225);
 
 	var _jquery2 = _interopRequireDefault(_jquery);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-	var _dashboardUserprofile = __webpack_require__(274);
+	var _dashboardUserprofile = __webpack_require__(263);
 
 	var _dashboardUserprofile2 = _interopRequireDefault(_dashboardUserprofile);
 
-	var _dashboardDatainput = __webpack_require__(275);
-=======
-	var _dashboardUserprofile = __webpack_require__(238);
-
-	var _dashboardUserprofile2 = _interopRequireDefault(_dashboardUserprofile);
-
-	var _dashboardDatainput = __webpack_require__(239);
->>>>>>> 4bb18f8603293f2bcdc29db9247561a88fdd5717
-=======
-	var _dashboardUserprofile = __webpack_require__(239);
-
-	var _dashboardUserprofile2 = _interopRequireDefault(_dashboardUserprofile);
-
-	var _dashboardDatainput = __webpack_require__(240);
->>>>>>> 5c6215621b03cbb0632b65186cc1fc6b19dfebb4
+	var _dashboardDatainput = __webpack_require__(264);
 
 	var _dashboardDatainput2 = _interopRequireDefault(_dashboardDatainput);
 
@@ -53774,15 +47350,7 @@ module.exports =
 	exports.default = Dashboard;
 
 /***/ },
-<<<<<<< HEAD
-<<<<<<< HEAD
-/* 274 */
-=======
-/* 238 */
->>>>>>> 4bb18f8603293f2bcdc29db9247561a88fdd5717
-=======
-/* 239 */
->>>>>>> 5c6215621b03cbb0632b65186cc1fc6b19dfebb4
+/* 263 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -53850,15 +47418,7 @@ module.exports =
 	exports.default = Userprofile;
 
 /***/ },
-<<<<<<< HEAD
-<<<<<<< HEAD
-/* 275 */
-=======
-/* 239 */
->>>>>>> 4bb18f8603293f2bcdc29db9247561a88fdd5717
-=======
-/* 240 */
->>>>>>> 5c6215621b03cbb0632b65186cc1fc6b19dfebb4
+/* 264 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -53901,15 +47461,7 @@ module.exports =
 	exports.default = DataInput;
 
 /***/ },
-<<<<<<< HEAD
-<<<<<<< HEAD
-/* 276 */
-=======
-/* 240 */
->>>>>>> 4bb18f8603293f2bcdc29db9247561a88fdd5717
-=======
-/* 241 */
->>>>>>> 5c6215621b03cbb0632b65186cc1fc6b19dfebb4
+/* 265 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -53924,21 +47476,13 @@ module.exports =
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _jquery = __webpack_require__(226);
+	var _jquery = __webpack_require__(225);
 
 	var _jquery2 = _interopRequireDefault(_jquery);
 
 	var _reactRouter = __webpack_require__(158);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-	var _advanceSearchInput = __webpack_require__(277);
-=======
-	var _advanceSearchInput = __webpack_require__(241);
->>>>>>> 4bb18f8603293f2bcdc29db9247561a88fdd5717
-=======
-	var _advanceSearchInput = __webpack_require__(242);
->>>>>>> 5c6215621b03cbb0632b65186cc1fc6b19dfebb4
+	var _advanceSearchInput = __webpack_require__(266);
 
 	var _advanceSearchInput2 = _interopRequireDefault(_advanceSearchInput);
 
@@ -54067,15 +47611,7 @@ module.exports =
 	exports.default = AdvanceSearch;
 
 /***/ },
-<<<<<<< HEAD
-<<<<<<< HEAD
-/* 277 */
-=======
-/* 241 */
->>>>>>> 4bb18f8603293f2bcdc29db9247561a88fdd5717
-=======
-/* 242 */
->>>>>>> 5c6215621b03cbb0632b65186cc1fc6b19dfebb4
+/* 266 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -54117,7 +47653,7 @@ module.exports =
 	exports.default = AdvanceSearchInput;
 
 /***/ },
-/* 242 */
+/* 267 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -54144,7 +47680,7 @@ module.exports =
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var xml2js = __webpack_require__(243);
+	var xml2js = __webpack_require__(268);
 	var parser = new xml2js.Parser();
 
 	var Jobs = function (_React$Component) {
@@ -54241,7 +47777,7 @@ module.exports =
 	exports.default = Jobs;
 
 /***/ },
-/* 243 */
+/* 268 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// Generated by CoffeeScript 1.10.0
@@ -54252,17 +47788,17 @@ module.exports =
 	    hasProp = {}.hasOwnProperty,
 	    bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
 
-	  sax = __webpack_require__(244);
+	  sax = __webpack_require__(269);
 
-	  events = __webpack_require__(247);
+	  events = __webpack_require__(272);
 
-	  builder = __webpack_require__(248);
+	  builder = __webpack_require__(273);
 
-	  bom = __webpack_require__(390);
+	  bom = __webpack_require__(415);
 
-	  processors = __webpack_require__(391);
+	  processors = __webpack_require__(416);
 
-	  setImmediate = __webpack_require__(392).setImmediate;
+	  setImmediate = __webpack_require__(417).setImmediate;
 
 	  isEmpty = function(thing) {
 	    return typeof thing === "object" && (thing != null) && Object.keys(thing).length === 0;
@@ -54790,7 +48326,7 @@ module.exports =
 
 
 /***/ },
-/* 244 */
+/* 269 */
 /***/ function(module, exports, __webpack_require__) {
 
 	;(function (sax) { // wrapper for non-node envs
@@ -54955,7 +48491,7 @@ module.exports =
 
 	  var Stream
 	  try {
-	    Stream = __webpack_require__(245).Stream
+	    Stream = __webpack_require__(270).Stream
 	  } catch (ex) {
 	    Stream = function () {}
 	  }
@@ -55025,7 +48561,7 @@ module.exports =
 	      typeof Buffer.isBuffer === 'function' &&
 	      Buffer.isBuffer(data)) {
 	      if (!this._decoder) {
-	        var SD = __webpack_require__(246).StringDecoder
+	        var SD = __webpack_require__(271).StringDecoder
 	        this._decoder = new SD('utf8')
 	      }
 	      data = this._decoder.write(data)
@@ -56372,34 +49908,34 @@ module.exports =
 
 
 /***/ },
-/* 245 */
+/* 270 */
 /***/ function(module, exports) {
 
 	module.exports = require("stream");
 
 /***/ },
-/* 246 */
+/* 271 */
 /***/ function(module, exports) {
 
 	module.exports = require("string_decoder");
 
 /***/ },
-/* 247 */
+/* 272 */
 /***/ function(module, exports) {
 
 	module.exports = require("events");
 
 /***/ },
-/* 248 */
+/* 273 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// Generated by CoffeeScript 1.9.1
 	(function() {
 	  var XMLBuilder, assign;
 
-	  assign = __webpack_require__(249);
+	  assign = __webpack_require__(274);
 
-	  XMLBuilder = __webpack_require__(280);
+	  XMLBuilder = __webpack_require__(305);
 
 	  module.exports.create = function(name, xmldec, doctype, options) {
 	    options = assign({}, xmldec, doctype, options);
@@ -56410,15 +49946,15 @@ module.exports =
 
 
 /***/ },
-/* 249 */
+/* 274 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var assignValue = __webpack_require__(250),
-	    copyObject = __webpack_require__(252),
-	    createAssigner = __webpack_require__(253),
-	    isArrayLike = __webpack_require__(255),
-	    isPrototype = __webpack_require__(269),
-	    keys = __webpack_require__(270);
+	var assignValue = __webpack_require__(275),
+	    copyObject = __webpack_require__(277),
+	    createAssigner = __webpack_require__(278),
+	    isArrayLike = __webpack_require__(280),
+	    isPrototype = __webpack_require__(294),
+	    keys = __webpack_require__(295);
 
 	/** Used for built-in method references. */
 	var objectProto = Object.prototype;
@@ -56480,10 +50016,10 @@ module.exports =
 
 
 /***/ },
-/* 250 */
+/* 275 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var eq = __webpack_require__(251);
+	var eq = __webpack_require__(276);
 
 	/** Used for built-in method references. */
 	var objectProto = Object.prototype;
@@ -56513,7 +50049,7 @@ module.exports =
 
 
 /***/ },
-/* 251 */
+/* 276 */
 /***/ function(module, exports) {
 
 	/**
@@ -56556,10 +50092,10 @@ module.exports =
 
 
 /***/ },
-/* 252 */
+/* 277 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var assignValue = __webpack_require__(250);
+	var assignValue = __webpack_require__(275);
 
 	/**
 	 * Copies properties of `source` to `object`.
@@ -56593,11 +50129,11 @@ module.exports =
 
 
 /***/ },
-/* 253 */
+/* 278 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var isIterateeCall = __webpack_require__(254),
-	    rest = __webpack_require__(262);
+	var isIterateeCall = __webpack_require__(279),
+	    rest = __webpack_require__(287);
 
 	/**
 	 * Creates a function like `_.assign`.
@@ -56636,13 +50172,13 @@ module.exports =
 
 
 /***/ },
-/* 254 */
+/* 279 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var eq = __webpack_require__(251),
-	    isArrayLike = __webpack_require__(255),
-	    isIndex = __webpack_require__(261),
-	    isObject = __webpack_require__(259);
+	var eq = __webpack_require__(276),
+	    isArrayLike = __webpack_require__(280),
+	    isIndex = __webpack_require__(286),
+	    isObject = __webpack_require__(284);
 
 	/**
 	 * Checks if the given arguments are from an iteratee call.
@@ -56672,12 +50208,12 @@ module.exports =
 
 
 /***/ },
-/* 255 */
+/* 280 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var getLength = __webpack_require__(256),
-	    isFunction = __webpack_require__(258),
-	    isLength = __webpack_require__(260);
+	var getLength = __webpack_require__(281),
+	    isFunction = __webpack_require__(283),
+	    isLength = __webpack_require__(285);
 
 	/**
 	 * Checks if `value` is array-like. A value is considered array-like if it's
@@ -56712,10 +50248,10 @@ module.exports =
 
 
 /***/ },
-/* 256 */
+/* 281 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var baseProperty = __webpack_require__(257);
+	var baseProperty = __webpack_require__(282);
 
 	/**
 	 * Gets the "length" property value of `object`.
@@ -56734,7 +50270,7 @@ module.exports =
 
 
 /***/ },
-/* 257 */
+/* 282 */
 /***/ function(module, exports) {
 
 	/**
@@ -56754,10 +50290,10 @@ module.exports =
 
 
 /***/ },
-/* 258 */
+/* 283 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var isObject = __webpack_require__(259);
+	var isObject = __webpack_require__(284);
 
 	/** `Object#toString` result references. */
 	var funcTag = '[object Function]',
@@ -56803,7 +50339,7 @@ module.exports =
 
 
 /***/ },
-/* 259 */
+/* 284 */
 /***/ function(module, exports) {
 
 	/**
@@ -56840,7 +50376,7 @@ module.exports =
 
 
 /***/ },
-/* 260 */
+/* 285 */
 /***/ function(module, exports) {
 
 	/** Used as references for various `Number` constants. */
@@ -56882,7 +50418,7 @@ module.exports =
 
 
 /***/ },
-/* 261 */
+/* 286 */
 /***/ function(module, exports) {
 
 	/** Used as references for various `Number` constants. */
@@ -56910,11 +50446,11 @@ module.exports =
 
 
 /***/ },
-/* 262 */
+/* 287 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var apply = __webpack_require__(263),
-	    toInteger = __webpack_require__(264);
+	var apply = __webpack_require__(288),
+	    toInteger = __webpack_require__(289);
 
 	/** Used as the `TypeError` message for "Functions" methods. */
 	var FUNC_ERROR_TEXT = 'Expected a function';
@@ -56980,7 +50516,7 @@ module.exports =
 
 
 /***/ },
-/* 263 */
+/* 288 */
 /***/ function(module, exports) {
 
 	/**
@@ -57008,10 +50544,10 @@ module.exports =
 
 
 /***/ },
-/* 264 */
+/* 289 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var toFinite = __webpack_require__(265);
+	var toFinite = __webpack_require__(290);
 
 	/**
 	 * Converts `value` to an integer.
@@ -57050,10 +50586,10 @@ module.exports =
 
 
 /***/ },
-/* 265 */
+/* 290 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var toNumber = __webpack_require__(266);
+	var toNumber = __webpack_require__(291);
 
 	/** Used as references for various `Number` constants. */
 	var INFINITY = 1 / 0,
@@ -57098,12 +50634,12 @@ module.exports =
 
 
 /***/ },
-/* 266 */
+/* 291 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var isFunction = __webpack_require__(258),
-	    isObject = __webpack_require__(259),
-	    isSymbol = __webpack_require__(267);
+	var isFunction = __webpack_require__(283),
+	    isObject = __webpack_require__(284),
+	    isSymbol = __webpack_require__(292);
 
 	/** Used as references for various `Number` constants. */
 	var NAN = 0 / 0;
@@ -57171,10 +50707,10 @@ module.exports =
 
 
 /***/ },
-/* 267 */
+/* 292 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var isObjectLike = __webpack_require__(268);
+	var isObjectLike = __webpack_require__(293);
 
 	/** `Object#toString` result references. */
 	var symbolTag = '[object Symbol]';
@@ -57216,7 +50752,7 @@ module.exports =
 
 
 /***/ },
-/* 268 */
+/* 293 */
 /***/ function(module, exports) {
 
 	/**
@@ -57251,7 +50787,7 @@ module.exports =
 
 
 /***/ },
-/* 269 */
+/* 294 */
 /***/ function(module, exports) {
 
 	/** Used for built-in method references. */
@@ -57275,15 +50811,15 @@ module.exports =
 
 
 /***/ },
-/* 270 */
+/* 295 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var baseHas = __webpack_require__(271),
-	    baseKeys = __webpack_require__(273),
-	    indexKeys = __webpack_require__(274),
-	    isArrayLike = __webpack_require__(255),
-	    isIndex = __webpack_require__(261),
-	    isPrototype = __webpack_require__(269);
+	var baseHas = __webpack_require__(296),
+	    baseKeys = __webpack_require__(298),
+	    indexKeys = __webpack_require__(299),
+	    isArrayLike = __webpack_require__(280),
+	    isIndex = __webpack_require__(286),
+	    isPrototype = __webpack_require__(294);
 
 	/**
 	 * Creates an array of the own enumerable property names of `object`.
@@ -57337,10 +50873,10 @@ module.exports =
 
 
 /***/ },
-/* 271 */
+/* 296 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var getPrototype = __webpack_require__(272);
+	var getPrototype = __webpack_require__(297);
 
 	/** Used for built-in method references. */
 	var objectProto = Object.prototype;
@@ -57369,7 +50905,7 @@ module.exports =
 
 
 /***/ },
-/* 272 */
+/* 297 */
 /***/ function(module, exports) {
 
 	/* Built-in method references for those with the same name as other `lodash` methods. */
@@ -57390,7 +50926,7 @@ module.exports =
 
 
 /***/ },
-/* 273 */
+/* 298 */
 /***/ function(module, exports) {
 
 	/* Built-in method references for those with the same name as other `lodash` methods. */
@@ -57412,14 +50948,14 @@ module.exports =
 
 
 /***/ },
-/* 274 */
+/* 299 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var baseTimes = __webpack_require__(275),
-	    isArguments = __webpack_require__(276),
-	    isArray = __webpack_require__(278),
-	    isLength = __webpack_require__(260),
-	    isString = __webpack_require__(279);
+	var baseTimes = __webpack_require__(300),
+	    isArguments = __webpack_require__(301),
+	    isArray = __webpack_require__(303),
+	    isLength = __webpack_require__(285),
+	    isString = __webpack_require__(304);
 
 	/**
 	 * Creates an array of index keys for `object` values of arrays,
@@ -57442,7 +50978,7 @@ module.exports =
 
 
 /***/ },
-/* 275 */
+/* 300 */
 /***/ function(module, exports) {
 
 	/**
@@ -57468,10 +51004,10 @@ module.exports =
 
 
 /***/ },
-/* 276 */
+/* 301 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var isArrayLikeObject = __webpack_require__(277);
+	var isArrayLikeObject = __webpack_require__(302);
 
 	/** `Object#toString` result references. */
 	var argsTag = '[object Arguments]';
@@ -57520,11 +51056,11 @@ module.exports =
 
 
 /***/ },
-/* 277 */
+/* 302 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var isArrayLike = __webpack_require__(255),
-	    isObjectLike = __webpack_require__(268);
+	var isArrayLike = __webpack_require__(280),
+	    isObjectLike = __webpack_require__(293);
 
 	/**
 	 * This method is like `_.isArrayLike` except that it also checks if `value`
@@ -57559,7 +51095,7 @@ module.exports =
 
 
 /***/ },
-/* 278 */
+/* 303 */
 /***/ function(module, exports) {
 
 	/**
@@ -57593,11 +51129,11 @@ module.exports =
 
 
 /***/ },
-/* 279 */
+/* 304 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var isArray = __webpack_require__(278),
-	    isObjectLike = __webpack_require__(268);
+	var isArray = __webpack_require__(303),
+	    isObjectLike = __webpack_require__(293);
 
 	/** `Object#toString` result references. */
 	var stringTag = '[object String]';
@@ -57639,20 +51175,20 @@ module.exports =
 
 
 /***/ },
-/* 280 */
+/* 305 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// Generated by CoffeeScript 1.9.1
 	(function() {
 	  var XMLBuilder, XMLDeclaration, XMLDocType, XMLElement, XMLStringifier;
 
-	  XMLStringifier = __webpack_require__(281);
+	  XMLStringifier = __webpack_require__(306);
 
-	  XMLDeclaration = __webpack_require__(282);
+	  XMLDeclaration = __webpack_require__(307);
 
-	  XMLDocType = __webpack_require__(383);
+	  XMLDocType = __webpack_require__(408);
 
-	  XMLElement = __webpack_require__(306);
+	  XMLElement = __webpack_require__(331);
 
 	  module.exports = XMLBuilder = (function() {
 	    function XMLBuilder(name, options) {
@@ -57714,7 +51250,7 @@ module.exports =
 
 
 /***/ },
-/* 281 */
+/* 306 */
 /***/ function(module, exports) {
 
 	// Generated by CoffeeScript 1.9.1
@@ -57890,7 +51426,7 @@ module.exports =
 
 
 /***/ },
-/* 282 */
+/* 307 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// Generated by CoffeeScript 1.9.1
@@ -57899,11 +51435,11 @@ module.exports =
 	    extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
 	    hasProp = {}.hasOwnProperty;
 
-	  create = __webpack_require__(283);
+	  create = __webpack_require__(308);
 
-	  isObject = __webpack_require__(259);
+	  isObject = __webpack_require__(284);
 
-	  XMLNode = __webpack_require__(286);
+	  XMLNode = __webpack_require__(311);
 
 	  module.exports = XMLDeclaration = (function(superClass) {
 	    extend(XMLDeclaration, superClass);
@@ -57961,11 +51497,11 @@ module.exports =
 
 
 /***/ },
-/* 283 */
+/* 308 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var baseAssign = __webpack_require__(284),
-	    baseCreate = __webpack_require__(285);
+	var baseAssign = __webpack_require__(309),
+	    baseCreate = __webpack_require__(310);
 
 	/**
 	 * Creates an object that inherits from the `prototype` object. If a
@@ -58010,11 +51546,11 @@ module.exports =
 
 
 /***/ },
-/* 284 */
+/* 309 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var copyObject = __webpack_require__(252),
-	    keys = __webpack_require__(270);
+	var copyObject = __webpack_require__(277),
+	    keys = __webpack_require__(295);
 
 	/**
 	 * The base implementation of `_.assign` without support for multiple sources
@@ -58033,10 +51569,10 @@ module.exports =
 
 
 /***/ },
-/* 285 */
+/* 310 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var isObject = __webpack_require__(259);
+	var isObject = __webpack_require__(284);
 
 	/** Built-in value references. */
 	var objectCreate = Object.create;
@@ -58057,7 +51593,7 @@ module.exports =
 
 
 /***/ },
-/* 286 */
+/* 311 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// Generated by CoffeeScript 1.9.1
@@ -58065,11 +51601,11 @@ module.exports =
 	  var XMLCData, XMLComment, XMLDeclaration, XMLDocType, XMLElement, XMLNode, XMLRaw, XMLText, isEmpty, isFunction, isObject,
 	    hasProp = {}.hasOwnProperty;
 
-	  isObject = __webpack_require__(259);
+	  isObject = __webpack_require__(284);
 
-	  isFunction = __webpack_require__(258);
+	  isFunction = __webpack_require__(283);
 
-	  isEmpty = __webpack_require__(287);
+	  isEmpty = __webpack_require__(312);
 
 	  XMLElement = null;
 
@@ -58091,13 +51627,13 @@ module.exports =
 	      this.options = this.parent.options;
 	      this.stringify = this.parent.stringify;
 	      if (XMLElement === null) {
-	        XMLElement = __webpack_require__(306);
-	        XMLCData = __webpack_require__(381);
-	        XMLComment = __webpack_require__(382);
-	        XMLDeclaration = __webpack_require__(282);
-	        XMLDocType = __webpack_require__(383);
-	        XMLRaw = __webpack_require__(388);
-	        XMLText = __webpack_require__(389);
+	        XMLElement = __webpack_require__(331);
+	        XMLCData = __webpack_require__(406);
+	        XMLComment = __webpack_require__(407);
+	        XMLDeclaration = __webpack_require__(307);
+	        XMLDocType = __webpack_require__(408);
+	        XMLRaw = __webpack_require__(413);
+	        XMLText = __webpack_require__(414);
 	      }
 	    }
 
@@ -58394,18 +51930,18 @@ module.exports =
 
 
 /***/ },
-/* 287 */
+/* 312 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var getTag = __webpack_require__(288),
-	    isArguments = __webpack_require__(276),
-	    isArray = __webpack_require__(278),
-	    isArrayLike = __webpack_require__(255),
-	    isBuffer = __webpack_require__(303),
-	    isFunction = __webpack_require__(258),
-	    isObjectLike = __webpack_require__(268),
-	    isString = __webpack_require__(279),
-	    keys = __webpack_require__(270);
+	var getTag = __webpack_require__(313),
+	    isArguments = __webpack_require__(301),
+	    isArray = __webpack_require__(303),
+	    isArrayLike = __webpack_require__(280),
+	    isBuffer = __webpack_require__(328),
+	    isFunction = __webpack_require__(283),
+	    isObjectLike = __webpack_require__(293),
+	    isString = __webpack_require__(304),
+	    keys = __webpack_require__(295);
 
 	/** `Object#toString` result references. */
 	var mapTag = '[object Map]',
@@ -58480,15 +52016,15 @@ module.exports =
 
 
 /***/ },
-/* 288 */
+/* 313 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var DataView = __webpack_require__(289),
-	    Map = __webpack_require__(299),
-	    Promise = __webpack_require__(300),
-	    Set = __webpack_require__(301),
-	    WeakMap = __webpack_require__(302),
-	    toSource = __webpack_require__(297);
+	var DataView = __webpack_require__(314),
+	    Map = __webpack_require__(324),
+	    Promise = __webpack_require__(325),
+	    Set = __webpack_require__(326),
+	    WeakMap = __webpack_require__(327),
+	    toSource = __webpack_require__(322);
 
 	/** `Object#toString` result references. */
 	var mapTag = '[object Map]',
@@ -58556,11 +52092,11 @@ module.exports =
 
 
 /***/ },
-/* 289 */
+/* 314 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var getNative = __webpack_require__(290),
-	    root = __webpack_require__(295);
+	var getNative = __webpack_require__(315),
+	    root = __webpack_require__(320);
 
 	/* Built-in method references that are verified to be native. */
 	var DataView = getNative(root, 'DataView');
@@ -58569,11 +52105,11 @@ module.exports =
 
 
 /***/ },
-/* 290 */
+/* 315 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var baseIsNative = __webpack_require__(291),
-	    getValue = __webpack_require__(298);
+	var baseIsNative = __webpack_require__(316),
+	    getValue = __webpack_require__(323);
 
 	/**
 	 * Gets the native function at `key` of `object`.
@@ -58592,14 +52128,14 @@ module.exports =
 
 
 /***/ },
-/* 291 */
+/* 316 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var isFunction = __webpack_require__(258),
-	    isHostObject = __webpack_require__(292),
-	    isMasked = __webpack_require__(293),
-	    isObject = __webpack_require__(259),
-	    toSource = __webpack_require__(297);
+	var isFunction = __webpack_require__(283),
+	    isHostObject = __webpack_require__(317),
+	    isMasked = __webpack_require__(318),
+	    isObject = __webpack_require__(284),
+	    toSource = __webpack_require__(322);
 
 	/**
 	 * Used to match `RegExp`
@@ -58645,7 +52181,7 @@ module.exports =
 
 
 /***/ },
-/* 292 */
+/* 317 */
 /***/ function(module, exports) {
 
 	/**
@@ -58671,10 +52207,10 @@ module.exports =
 
 
 /***/ },
-/* 293 */
+/* 318 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var coreJsData = __webpack_require__(294);
+	var coreJsData = __webpack_require__(319);
 
 	/** Used to detect methods masquerading as native. */
 	var maskSrcKey = (function() {
@@ -58697,10 +52233,10 @@ module.exports =
 
 
 /***/ },
-/* 294 */
+/* 319 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var root = __webpack_require__(295);
+	var root = __webpack_require__(320);
 
 	/** Used to detect overreaching core-js shims. */
 	var coreJsData = root['__core-js_shared__'];
@@ -58709,10 +52245,10 @@ module.exports =
 
 
 /***/ },
-/* 295 */
+/* 320 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var checkGlobal = __webpack_require__(296);
+	var checkGlobal = __webpack_require__(321);
 
 	/** Detect free variable `global` from Node.js. */
 	var freeGlobal = checkGlobal(typeof global == 'object' && global);
@@ -58730,7 +52266,7 @@ module.exports =
 
 
 /***/ },
-/* 296 */
+/* 321 */
 /***/ function(module, exports) {
 
 	/**
@@ -58748,7 +52284,7 @@ module.exports =
 
 
 /***/ },
-/* 297 */
+/* 322 */
 /***/ function(module, exports) {
 
 	/** Used to resolve the decompiled source of functions. */
@@ -58777,7 +52313,7 @@ module.exports =
 
 
 /***/ },
-/* 298 */
+/* 323 */
 /***/ function(module, exports) {
 
 	/**
@@ -58796,11 +52332,11 @@ module.exports =
 
 
 /***/ },
-/* 299 */
+/* 324 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var getNative = __webpack_require__(290),
-	    root = __webpack_require__(295);
+	var getNative = __webpack_require__(315),
+	    root = __webpack_require__(320);
 
 	/* Built-in method references that are verified to be native. */
 	var Map = getNative(root, 'Map');
@@ -58809,11 +52345,11 @@ module.exports =
 
 
 /***/ },
-/* 300 */
+/* 325 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var getNative = __webpack_require__(290),
-	    root = __webpack_require__(295);
+	var getNative = __webpack_require__(315),
+	    root = __webpack_require__(320);
 
 	/* Built-in method references that are verified to be native. */
 	var Promise = getNative(root, 'Promise');
@@ -58822,11 +52358,11 @@ module.exports =
 
 
 /***/ },
-/* 301 */
+/* 326 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var getNative = __webpack_require__(290),
-	    root = __webpack_require__(295);
+	var getNative = __webpack_require__(315),
+	    root = __webpack_require__(320);
 
 	/* Built-in method references that are verified to be native. */
 	var Set = getNative(root, 'Set');
@@ -58835,11 +52371,11 @@ module.exports =
 
 
 /***/ },
-/* 302 */
+/* 327 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var getNative = __webpack_require__(290),
-	    root = __webpack_require__(295);
+	var getNative = __webpack_require__(315),
+	    root = __webpack_require__(320);
 
 	/* Built-in method references that are verified to be native. */
 	var WeakMap = getNative(root, 'WeakMap');
@@ -58848,11 +52384,11 @@ module.exports =
 
 
 /***/ },
-/* 303 */
+/* 328 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(module) {var root = __webpack_require__(295),
-	    stubFalse = __webpack_require__(305);
+	/* WEBPACK VAR INJECTION */(function(module) {var root = __webpack_require__(320),
+	    stubFalse = __webpack_require__(330);
 
 	/** Detect free variable `exports`. */
 	var freeExports = typeof exports == 'object' && exports;
@@ -58889,10 +52425,10 @@ module.exports =
 
 	module.exports = isBuffer;
 
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(304)(module)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(329)(module)))
 
 /***/ },
-/* 304 */
+/* 329 */
 /***/ function(module, exports) {
 
 	module.exports = function(module) {
@@ -58908,7 +52444,7 @@ module.exports =
 
 
 /***/ },
-/* 305 */
+/* 330 */
 /***/ function(module, exports) {
 
 	/**
@@ -58932,7 +52468,7 @@ module.exports =
 
 
 /***/ },
-/* 306 */
+/* 331 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// Generated by CoffeeScript 1.9.1
@@ -58941,19 +52477,19 @@ module.exports =
 	    extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
 	    hasProp = {}.hasOwnProperty;
 
-	  create = __webpack_require__(283);
+	  create = __webpack_require__(308);
 
-	  isObject = __webpack_require__(259);
+	  isObject = __webpack_require__(284);
 
-	  isFunction = __webpack_require__(258);
+	  isFunction = __webpack_require__(283);
 
-	  every = __webpack_require__(307);
+	  every = __webpack_require__(332);
 
-	  XMLNode = __webpack_require__(286);
+	  XMLNode = __webpack_require__(311);
 
-	  XMLAttribute = __webpack_require__(379);
+	  XMLAttribute = __webpack_require__(404);
 
-	  XMLProcessingInstruction = __webpack_require__(380);
+	  XMLProcessingInstruction = __webpack_require__(405);
 
 	  module.exports = XMLElement = (function(superClass) {
 	    extend(XMLElement, superClass);
@@ -59150,14 +52686,14 @@ module.exports =
 
 
 /***/ },
-/* 307 */
+/* 332 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var arrayEvery = __webpack_require__(308),
-	    baseEvery = __webpack_require__(309),
-	    baseIteratee = __webpack_require__(315),
-	    isArray = __webpack_require__(278),
-	    isIterateeCall = __webpack_require__(254);
+	var arrayEvery = __webpack_require__(333),
+	    baseEvery = __webpack_require__(334),
+	    baseIteratee = __webpack_require__(340),
+	    isArray = __webpack_require__(303),
+	    isIterateeCall = __webpack_require__(279);
 
 	/**
 	 * Checks if `predicate` returns truthy for **all** elements of `collection`.
@@ -59208,7 +52744,7 @@ module.exports =
 
 
 /***/ },
-/* 308 */
+/* 333 */
 /***/ function(module, exports) {
 
 	/**
@@ -59237,10 +52773,10 @@ module.exports =
 
 
 /***/ },
-/* 309 */
+/* 334 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var baseEach = __webpack_require__(310);
+	var baseEach = __webpack_require__(335);
 
 	/**
 	 * The base implementation of `_.every` without support for iteratee shorthands.
@@ -59264,11 +52800,11 @@ module.exports =
 
 
 /***/ },
-/* 310 */
+/* 335 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var baseForOwn = __webpack_require__(311),
-	    createBaseEach = __webpack_require__(314);
+	var baseForOwn = __webpack_require__(336),
+	    createBaseEach = __webpack_require__(339);
 
 	/**
 	 * The base implementation of `_.forEach` without support for iteratee shorthands.
@@ -59284,11 +52820,11 @@ module.exports =
 
 
 /***/ },
-/* 311 */
+/* 336 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var baseFor = __webpack_require__(312),
-	    keys = __webpack_require__(270);
+	var baseFor = __webpack_require__(337),
+	    keys = __webpack_require__(295);
 
 	/**
 	 * The base implementation of `_.forOwn` without support for iteratee shorthands.
@@ -59306,10 +52842,10 @@ module.exports =
 
 
 /***/ },
-/* 312 */
+/* 337 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var createBaseFor = __webpack_require__(313);
+	var createBaseFor = __webpack_require__(338);
 
 	/**
 	 * The base implementation of `baseForOwn` which iterates over `object`
@@ -59328,7 +52864,7 @@ module.exports =
 
 
 /***/ },
-/* 313 */
+/* 338 */
 /***/ function(module, exports) {
 
 	/**
@@ -59359,10 +52895,10 @@ module.exports =
 
 
 /***/ },
-/* 314 */
+/* 339 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var isArrayLike = __webpack_require__(255);
+	var isArrayLike = __webpack_require__(280);
 
 	/**
 	 * Creates a `baseEach` or `baseEachRight` function.
@@ -59397,14 +52933,14 @@ module.exports =
 
 
 /***/ },
-/* 315 */
+/* 340 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var baseMatches = __webpack_require__(316),
-	    baseMatchesProperty = __webpack_require__(363),
-	    identity = __webpack_require__(376),
-	    isArray = __webpack_require__(278),
-	    property = __webpack_require__(377);
+	var baseMatches = __webpack_require__(341),
+	    baseMatchesProperty = __webpack_require__(388),
+	    identity = __webpack_require__(401),
+	    isArray = __webpack_require__(303),
+	    property = __webpack_require__(402);
 
 	/**
 	 * The base implementation of `_.iteratee`.
@@ -59434,12 +52970,12 @@ module.exports =
 
 
 /***/ },
-/* 316 */
+/* 341 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var baseIsMatch = __webpack_require__(317),
-	    getMatchData = __webpack_require__(360),
-	    matchesStrictComparable = __webpack_require__(362);
+	var baseIsMatch = __webpack_require__(342),
+	    getMatchData = __webpack_require__(385),
+	    matchesStrictComparable = __webpack_require__(387);
 
 	/**
 	 * The base implementation of `_.matches` which doesn't clone `source`.
@@ -59462,11 +52998,11 @@ module.exports =
 
 
 /***/ },
-/* 317 */
+/* 342 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var Stack = __webpack_require__(318),
-	    baseIsEqual = __webpack_require__(346);
+	var Stack = __webpack_require__(343),
+	    baseIsEqual = __webpack_require__(371);
 
 	/** Used to compose bitmasks for comparison styles. */
 	var UNORDERED_COMPARE_FLAG = 1,
@@ -59530,15 +53066,15 @@ module.exports =
 
 
 /***/ },
-/* 318 */
+/* 343 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var ListCache = __webpack_require__(319),
-	    stackClear = __webpack_require__(326),
-	    stackDelete = __webpack_require__(327),
-	    stackGet = __webpack_require__(328),
-	    stackHas = __webpack_require__(329),
-	    stackSet = __webpack_require__(330);
+	var ListCache = __webpack_require__(344),
+	    stackClear = __webpack_require__(351),
+	    stackDelete = __webpack_require__(352),
+	    stackGet = __webpack_require__(353),
+	    stackHas = __webpack_require__(354),
+	    stackSet = __webpack_require__(355);
 
 	/**
 	 * Creates a stack cache object to store key-value pairs.
@@ -59562,14 +53098,14 @@ module.exports =
 
 
 /***/ },
-/* 319 */
+/* 344 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var listCacheClear = __webpack_require__(320),
-	    listCacheDelete = __webpack_require__(321),
-	    listCacheGet = __webpack_require__(323),
-	    listCacheHas = __webpack_require__(324),
-	    listCacheSet = __webpack_require__(325);
+	var listCacheClear = __webpack_require__(345),
+	    listCacheDelete = __webpack_require__(346),
+	    listCacheGet = __webpack_require__(348),
+	    listCacheHas = __webpack_require__(349),
+	    listCacheSet = __webpack_require__(350);
 
 	/**
 	 * Creates an list cache object.
@@ -59600,7 +53136,7 @@ module.exports =
 
 
 /***/ },
-/* 320 */
+/* 345 */
 /***/ function(module, exports) {
 
 	/**
@@ -59618,10 +53154,10 @@ module.exports =
 
 
 /***/ },
-/* 321 */
+/* 346 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var assocIndexOf = __webpack_require__(322);
+	var assocIndexOf = __webpack_require__(347);
 
 	/** Used for built-in method references. */
 	var arrayProto = Array.prototype;
@@ -59658,10 +53194,10 @@ module.exports =
 
 
 /***/ },
-/* 322 */
+/* 347 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var eq = __webpack_require__(251);
+	var eq = __webpack_require__(276);
 
 	/**
 	 * Gets the index at which the `key` is found in `array` of key-value pairs.
@@ -59685,10 +53221,10 @@ module.exports =
 
 
 /***/ },
-/* 323 */
+/* 348 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var assocIndexOf = __webpack_require__(322);
+	var assocIndexOf = __webpack_require__(347);
 
 	/**
 	 * Gets the list cache value for `key`.
@@ -59710,10 +53246,10 @@ module.exports =
 
 
 /***/ },
-/* 324 */
+/* 349 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var assocIndexOf = __webpack_require__(322);
+	var assocIndexOf = __webpack_require__(347);
 
 	/**
 	 * Checks if a list cache value for `key` exists.
@@ -59732,10 +53268,10 @@ module.exports =
 
 
 /***/ },
-/* 325 */
+/* 350 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var assocIndexOf = __webpack_require__(322);
+	var assocIndexOf = __webpack_require__(347);
 
 	/**
 	 * Sets the list cache `key` to `value`.
@@ -59763,10 +53299,10 @@ module.exports =
 
 
 /***/ },
-/* 326 */
+/* 351 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var ListCache = __webpack_require__(319);
+	var ListCache = __webpack_require__(344);
 
 	/**
 	 * Removes all key-value entries from the stack.
@@ -59783,7 +53319,7 @@ module.exports =
 
 
 /***/ },
-/* 327 */
+/* 352 */
 /***/ function(module, exports) {
 
 	/**
@@ -59803,7 +53339,7 @@ module.exports =
 
 
 /***/ },
-/* 328 */
+/* 353 */
 /***/ function(module, exports) {
 
 	/**
@@ -59823,7 +53359,7 @@ module.exports =
 
 
 /***/ },
-/* 329 */
+/* 354 */
 /***/ function(module, exports) {
 
 	/**
@@ -59843,11 +53379,11 @@ module.exports =
 
 
 /***/ },
-/* 330 */
+/* 355 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var ListCache = __webpack_require__(319),
-	    MapCache = __webpack_require__(331);
+	var ListCache = __webpack_require__(344),
+	    MapCache = __webpack_require__(356);
 
 	/** Used as the size to enable large array optimizations. */
 	var LARGE_ARRAY_SIZE = 200;
@@ -59875,14 +53411,14 @@ module.exports =
 
 
 /***/ },
-/* 331 */
+/* 356 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var mapCacheClear = __webpack_require__(332),
-	    mapCacheDelete = __webpack_require__(340),
-	    mapCacheGet = __webpack_require__(343),
-	    mapCacheHas = __webpack_require__(344),
-	    mapCacheSet = __webpack_require__(345);
+	var mapCacheClear = __webpack_require__(357),
+	    mapCacheDelete = __webpack_require__(365),
+	    mapCacheGet = __webpack_require__(368),
+	    mapCacheHas = __webpack_require__(369),
+	    mapCacheSet = __webpack_require__(370);
 
 	/**
 	 * Creates a map cache object to store key-value pairs.
@@ -59913,12 +53449,12 @@ module.exports =
 
 
 /***/ },
-/* 332 */
+/* 357 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var Hash = __webpack_require__(333),
-	    ListCache = __webpack_require__(319),
-	    Map = __webpack_require__(299);
+	var Hash = __webpack_require__(358),
+	    ListCache = __webpack_require__(344),
+	    Map = __webpack_require__(324);
 
 	/**
 	 * Removes all key-value entries from the map.
@@ -59939,14 +53475,14 @@ module.exports =
 
 
 /***/ },
-/* 333 */
+/* 358 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var hashClear = __webpack_require__(334),
-	    hashDelete = __webpack_require__(336),
-	    hashGet = __webpack_require__(337),
-	    hashHas = __webpack_require__(338),
-	    hashSet = __webpack_require__(339);
+	var hashClear = __webpack_require__(359),
+	    hashDelete = __webpack_require__(361),
+	    hashGet = __webpack_require__(362),
+	    hashHas = __webpack_require__(363),
+	    hashSet = __webpack_require__(364);
 
 	/**
 	 * Creates a hash object.
@@ -59977,10 +53513,10 @@ module.exports =
 
 
 /***/ },
-/* 334 */
+/* 359 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var nativeCreate = __webpack_require__(335);
+	var nativeCreate = __webpack_require__(360);
 
 	/**
 	 * Removes all key-value entries from the hash.
@@ -59997,10 +53533,10 @@ module.exports =
 
 
 /***/ },
-/* 335 */
+/* 360 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var getNative = __webpack_require__(290);
+	var getNative = __webpack_require__(315);
 
 	/* Built-in method references that are verified to be native. */
 	var nativeCreate = getNative(Object, 'create');
@@ -60009,7 +53545,7 @@ module.exports =
 
 
 /***/ },
-/* 336 */
+/* 361 */
 /***/ function(module, exports) {
 
 	/**
@@ -60030,10 +53566,10 @@ module.exports =
 
 
 /***/ },
-/* 337 */
+/* 362 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var nativeCreate = __webpack_require__(335);
+	var nativeCreate = __webpack_require__(360);
 
 	/** Used to stand-in for `undefined` hash values. */
 	var HASH_UNDEFINED = '__lodash_hash_undefined__';
@@ -60066,10 +53602,10 @@ module.exports =
 
 
 /***/ },
-/* 338 */
+/* 363 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var nativeCreate = __webpack_require__(335);
+	var nativeCreate = __webpack_require__(360);
 
 	/** Used for built-in method references. */
 	var objectProto = Object.prototype;
@@ -60095,10 +53631,10 @@ module.exports =
 
 
 /***/ },
-/* 339 */
+/* 364 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var nativeCreate = __webpack_require__(335);
+	var nativeCreate = __webpack_require__(360);
 
 	/** Used to stand-in for `undefined` hash values. */
 	var HASH_UNDEFINED = '__lodash_hash_undefined__';
@@ -60123,10 +53659,10 @@ module.exports =
 
 
 /***/ },
-/* 340 */
+/* 365 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var getMapData = __webpack_require__(341);
+	var getMapData = __webpack_require__(366);
 
 	/**
 	 * Removes `key` and its value from the map.
@@ -60145,10 +53681,10 @@ module.exports =
 
 
 /***/ },
-/* 341 */
+/* 366 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var isKeyable = __webpack_require__(342);
+	var isKeyable = __webpack_require__(367);
 
 	/**
 	 * Gets the data for `map`.
@@ -60169,7 +53705,7 @@ module.exports =
 
 
 /***/ },
-/* 342 */
+/* 367 */
 /***/ function(module, exports) {
 
 	/**
@@ -60190,10 +53726,10 @@ module.exports =
 
 
 /***/ },
-/* 343 */
+/* 368 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var getMapData = __webpack_require__(341);
+	var getMapData = __webpack_require__(366);
 
 	/**
 	 * Gets the map value for `key`.
@@ -60212,10 +53748,10 @@ module.exports =
 
 
 /***/ },
-/* 344 */
+/* 369 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var getMapData = __webpack_require__(341);
+	var getMapData = __webpack_require__(366);
 
 	/**
 	 * Checks if a map value for `key` exists.
@@ -60234,10 +53770,10 @@ module.exports =
 
 
 /***/ },
-/* 345 */
+/* 370 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var getMapData = __webpack_require__(341);
+	var getMapData = __webpack_require__(366);
 
 	/**
 	 * Sets the map `key` to `value`.
@@ -60258,12 +53794,12 @@ module.exports =
 
 
 /***/ },
-/* 346 */
+/* 371 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var baseIsEqualDeep = __webpack_require__(347),
-	    isObject = __webpack_require__(259),
-	    isObjectLike = __webpack_require__(268);
+	var baseIsEqualDeep = __webpack_require__(372),
+	    isObject = __webpack_require__(284),
+	    isObjectLike = __webpack_require__(293);
 
 	/**
 	 * The base implementation of `_.isEqual` which supports partial comparisons
@@ -60294,17 +53830,17 @@ module.exports =
 
 
 /***/ },
-/* 347 */
+/* 372 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var Stack = __webpack_require__(318),
-	    equalArrays = __webpack_require__(348),
-	    equalByTag = __webpack_require__(353),
-	    equalObjects = __webpack_require__(358),
-	    getTag = __webpack_require__(288),
-	    isArray = __webpack_require__(278),
-	    isHostObject = __webpack_require__(292),
-	    isTypedArray = __webpack_require__(359);
+	var Stack = __webpack_require__(343),
+	    equalArrays = __webpack_require__(373),
+	    equalByTag = __webpack_require__(378),
+	    equalObjects = __webpack_require__(383),
+	    getTag = __webpack_require__(313),
+	    isArray = __webpack_require__(303),
+	    isHostObject = __webpack_require__(317),
+	    isTypedArray = __webpack_require__(384);
 
 	/** Used to compose bitmasks for comparison styles. */
 	var PARTIAL_COMPARE_FLAG = 2;
@@ -60382,11 +53918,11 @@ module.exports =
 
 
 /***/ },
-/* 348 */
+/* 373 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var SetCache = __webpack_require__(349),
-	    arraySome = __webpack_require__(352);
+	var SetCache = __webpack_require__(374),
+	    arraySome = __webpack_require__(377);
 
 	/** Used to compose bitmasks for comparison styles. */
 	var UNORDERED_COMPARE_FLAG = 1,
@@ -60469,12 +54005,12 @@ module.exports =
 
 
 /***/ },
-/* 349 */
+/* 374 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var MapCache = __webpack_require__(331),
-	    setCacheAdd = __webpack_require__(350),
-	    setCacheHas = __webpack_require__(351);
+	var MapCache = __webpack_require__(356),
+	    setCacheAdd = __webpack_require__(375),
+	    setCacheHas = __webpack_require__(376);
 
 	/**
 	 *
@@ -60502,7 +54038,7 @@ module.exports =
 
 
 /***/ },
-/* 350 */
+/* 375 */
 /***/ function(module, exports) {
 
 	/** Used to stand-in for `undefined` hash values. */
@@ -60527,7 +54063,7 @@ module.exports =
 
 
 /***/ },
-/* 351 */
+/* 376 */
 /***/ function(module, exports) {
 
 	/**
@@ -60547,7 +54083,7 @@ module.exports =
 
 
 /***/ },
-/* 352 */
+/* 377 */
 /***/ function(module, exports) {
 
 	/**
@@ -60576,14 +54112,14 @@ module.exports =
 
 
 /***/ },
-/* 353 */
+/* 378 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var Symbol = __webpack_require__(354),
-	    Uint8Array = __webpack_require__(355),
-	    equalArrays = __webpack_require__(348),
-	    mapToArray = __webpack_require__(356),
-	    setToArray = __webpack_require__(357);
+	var Symbol = __webpack_require__(379),
+	    Uint8Array = __webpack_require__(380),
+	    equalArrays = __webpack_require__(373),
+	    mapToArray = __webpack_require__(381),
+	    setToArray = __webpack_require__(382);
 
 	/** Used to compose bitmasks for comparison styles. */
 	var UNORDERED_COMPARE_FLAG = 1,
@@ -60696,10 +54232,10 @@ module.exports =
 
 
 /***/ },
-/* 354 */
+/* 379 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var root = __webpack_require__(295);
+	var root = __webpack_require__(320);
 
 	/** Built-in value references. */
 	var Symbol = root.Symbol;
@@ -60708,10 +54244,10 @@ module.exports =
 
 
 /***/ },
-/* 355 */
+/* 380 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var root = __webpack_require__(295);
+	var root = __webpack_require__(320);
 
 	/** Built-in value references. */
 	var Uint8Array = root.Uint8Array;
@@ -60720,7 +54256,7 @@ module.exports =
 
 
 /***/ },
-/* 356 */
+/* 381 */
 /***/ function(module, exports) {
 
 	/**
@@ -60744,7 +54280,7 @@ module.exports =
 
 
 /***/ },
-/* 357 */
+/* 382 */
 /***/ function(module, exports) {
 
 	/**
@@ -60768,11 +54304,11 @@ module.exports =
 
 
 /***/ },
-/* 358 */
+/* 383 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var baseHas = __webpack_require__(271),
-	    keys = __webpack_require__(270);
+	var baseHas = __webpack_require__(296),
+	    keys = __webpack_require__(295);
 
 	/** Used to compose bitmasks for comparison styles. */
 	var PARTIAL_COMPARE_FLAG = 2;
@@ -60857,11 +54393,11 @@ module.exports =
 
 
 /***/ },
-/* 359 */
+/* 384 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var isLength = __webpack_require__(260),
-	    isObjectLike = __webpack_require__(268);
+	var isLength = __webpack_require__(285),
+	    isObjectLike = __webpack_require__(293);
 
 	/** `Object#toString` result references. */
 	var argsTag = '[object Arguments]',
@@ -60943,11 +54479,11 @@ module.exports =
 
 
 /***/ },
-/* 360 */
+/* 385 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var isStrictComparable = __webpack_require__(361),
-	    keys = __webpack_require__(270);
+	var isStrictComparable = __webpack_require__(386),
+	    keys = __webpack_require__(295);
 
 	/**
 	 * Gets the property names, values, and compare flags of `object`.
@@ -60973,10 +54509,10 @@ module.exports =
 
 
 /***/ },
-/* 361 */
+/* 386 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var isObject = __webpack_require__(259);
+	var isObject = __webpack_require__(284);
 
 	/**
 	 * Checks if `value` is suitable for strict equality comparisons, i.e. `===`.
@@ -60994,7 +54530,7 @@ module.exports =
 
 
 /***/ },
-/* 362 */
+/* 387 */
 /***/ function(module, exports) {
 
 	/**
@@ -61020,16 +54556,16 @@ module.exports =
 
 
 /***/ },
-/* 363 */
+/* 388 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var baseIsEqual = __webpack_require__(346),
-	    get = __webpack_require__(364),
-	    hasIn = __webpack_require__(373),
-	    isKey = __webpack_require__(371),
-	    isStrictComparable = __webpack_require__(361),
-	    matchesStrictComparable = __webpack_require__(362),
-	    toKey = __webpack_require__(372);
+	var baseIsEqual = __webpack_require__(371),
+	    get = __webpack_require__(389),
+	    hasIn = __webpack_require__(398),
+	    isKey = __webpack_require__(396),
+	    isStrictComparable = __webpack_require__(386),
+	    matchesStrictComparable = __webpack_require__(387),
+	    toKey = __webpack_require__(397);
 
 	/** Used to compose bitmasks for comparison styles. */
 	var UNORDERED_COMPARE_FLAG = 1,
@@ -61059,10 +54595,10 @@ module.exports =
 
 
 /***/ },
-/* 364 */
+/* 389 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var baseGet = __webpack_require__(365);
+	var baseGet = __webpack_require__(390);
 
 	/**
 	 * Gets the value at `path` of `object`. If the resolved value is
@@ -61098,12 +54634,12 @@ module.exports =
 
 
 /***/ },
-/* 365 */
+/* 390 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var castPath = __webpack_require__(366),
-	    isKey = __webpack_require__(371),
-	    toKey = __webpack_require__(372);
+	var castPath = __webpack_require__(391),
+	    isKey = __webpack_require__(396),
+	    toKey = __webpack_require__(397);
 
 	/**
 	 * The base implementation of `_.get` without support for default values.
@@ -61129,11 +54665,11 @@ module.exports =
 
 
 /***/ },
-/* 366 */
+/* 391 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var isArray = __webpack_require__(278),
-	    stringToPath = __webpack_require__(367);
+	var isArray = __webpack_require__(303),
+	    stringToPath = __webpack_require__(392);
 
 	/**
 	 * Casts `value` to a path array if it's not one.
@@ -61150,11 +54686,11 @@ module.exports =
 
 
 /***/ },
-/* 367 */
+/* 392 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var memoize = __webpack_require__(368),
-	    toString = __webpack_require__(369);
+	var memoize = __webpack_require__(393),
+	    toString = __webpack_require__(394);
 
 	/** Used to match property names within property paths. */
 	var rePropName = /[^.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(\.|\[\])(?:\4|$))/g;
@@ -61181,10 +54717,10 @@ module.exports =
 
 
 /***/ },
-/* 368 */
+/* 393 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var MapCache = __webpack_require__(331);
+	var MapCache = __webpack_require__(356);
 
 	/** Used as the `TypeError` message for "Functions" methods. */
 	var FUNC_ERROR_TEXT = 'Expected a function';
@@ -61260,10 +54796,10 @@ module.exports =
 
 
 /***/ },
-/* 369 */
+/* 394 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var baseToString = __webpack_require__(370);
+	var baseToString = __webpack_require__(395);
 
 	/**
 	 * Converts `value` to a string. An empty string is returned for `null`
@@ -61294,11 +54830,11 @@ module.exports =
 
 
 /***/ },
-/* 370 */
+/* 395 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var Symbol = __webpack_require__(354),
-	    isSymbol = __webpack_require__(267);
+	var Symbol = __webpack_require__(379),
+	    isSymbol = __webpack_require__(292);
 
 	/** Used as references for various `Number` constants. */
 	var INFINITY = 1 / 0;
@@ -61331,11 +54867,11 @@ module.exports =
 
 
 /***/ },
-/* 371 */
+/* 396 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var isArray = __webpack_require__(278),
-	    isSymbol = __webpack_require__(267);
+	var isArray = __webpack_require__(303),
+	    isSymbol = __webpack_require__(292);
 
 	/** Used to match property names within property paths. */
 	var reIsDeepProp = /\.|\[(?:[^[\]]*|(["'])(?:(?!\1)[^\\]|\\.)*?\1)\]/,
@@ -61366,10 +54902,10 @@ module.exports =
 
 
 /***/ },
-/* 372 */
+/* 397 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var isSymbol = __webpack_require__(267);
+	var isSymbol = __webpack_require__(292);
 
 	/** Used as references for various `Number` constants. */
 	var INFINITY = 1 / 0;
@@ -61393,11 +54929,11 @@ module.exports =
 
 
 /***/ },
-/* 373 */
+/* 398 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var baseHasIn = __webpack_require__(374),
-	    hasPath = __webpack_require__(375);
+	var baseHasIn = __webpack_require__(399),
+	    hasPath = __webpack_require__(400);
 
 	/**
 	 * Checks if `path` is a direct or inherited property of `object`.
@@ -61433,7 +54969,7 @@ module.exports =
 
 
 /***/ },
-/* 374 */
+/* 399 */
 /***/ function(module, exports) {
 
 	/**
@@ -61452,17 +54988,17 @@ module.exports =
 
 
 /***/ },
-/* 375 */
+/* 400 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var castPath = __webpack_require__(366),
-	    isArguments = __webpack_require__(276),
-	    isArray = __webpack_require__(278),
-	    isIndex = __webpack_require__(261),
-	    isKey = __webpack_require__(371),
-	    isLength = __webpack_require__(260),
-	    isString = __webpack_require__(279),
-	    toKey = __webpack_require__(372);
+	var castPath = __webpack_require__(391),
+	    isArguments = __webpack_require__(301),
+	    isArray = __webpack_require__(303),
+	    isIndex = __webpack_require__(286),
+	    isKey = __webpack_require__(396),
+	    isLength = __webpack_require__(285),
+	    isString = __webpack_require__(304),
+	    toKey = __webpack_require__(397);
 
 	/**
 	 * Checks if `path` exists on `object`.
@@ -61499,7 +55035,7 @@ module.exports =
 
 
 /***/ },
-/* 376 */
+/* 401 */
 /***/ function(module, exports) {
 
 	/**
@@ -61526,13 +55062,13 @@ module.exports =
 
 
 /***/ },
-/* 377 */
+/* 402 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var baseProperty = __webpack_require__(257),
-	    basePropertyDeep = __webpack_require__(378),
-	    isKey = __webpack_require__(371),
-	    toKey = __webpack_require__(372);
+	var baseProperty = __webpack_require__(282),
+	    basePropertyDeep = __webpack_require__(403),
+	    isKey = __webpack_require__(396),
+	    toKey = __webpack_require__(397);
 
 	/**
 	 * Creates a function that returns the value at `path` of a given object.
@@ -61564,10 +55100,10 @@ module.exports =
 
 
 /***/ },
-/* 378 */
+/* 403 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var baseGet = __webpack_require__(365);
+	var baseGet = __webpack_require__(390);
 
 	/**
 	 * A specialized version of `baseProperty` which supports deep paths.
@@ -61586,14 +55122,14 @@ module.exports =
 
 
 /***/ },
-/* 379 */
+/* 404 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// Generated by CoffeeScript 1.9.1
 	(function() {
 	  var XMLAttribute, create;
 
-	  create = __webpack_require__(283);
+	  create = __webpack_require__(308);
 
 	  module.exports = XMLAttribute = (function() {
 	    function XMLAttribute(parent, name, value) {
@@ -61624,14 +55160,14 @@ module.exports =
 
 
 /***/ },
-/* 380 */
+/* 405 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// Generated by CoffeeScript 1.9.1
 	(function() {
 	  var XMLProcessingInstruction, create;
 
-	  create = __webpack_require__(283);
+	  create = __webpack_require__(308);
 
 	  module.exports = XMLProcessingInstruction = (function() {
 	    function XMLProcessingInstruction(parent, target, value) {
@@ -61681,7 +55217,7 @@ module.exports =
 
 
 /***/ },
-/* 381 */
+/* 406 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// Generated by CoffeeScript 1.9.1
@@ -61690,9 +55226,9 @@ module.exports =
 	    extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
 	    hasProp = {}.hasOwnProperty;
 
-	  create = __webpack_require__(283);
+	  create = __webpack_require__(308);
 
-	  XMLNode = __webpack_require__(286);
+	  XMLNode = __webpack_require__(311);
 
 	  module.exports = XMLCData = (function(superClass) {
 	    extend(XMLCData, superClass);
@@ -61736,7 +55272,7 @@ module.exports =
 
 
 /***/ },
-/* 382 */
+/* 407 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// Generated by CoffeeScript 1.9.1
@@ -61745,9 +55281,9 @@ module.exports =
 	    extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
 	    hasProp = {}.hasOwnProperty;
 
-	  create = __webpack_require__(283);
+	  create = __webpack_require__(308);
 
-	  XMLNode = __webpack_require__(286);
+	  XMLNode = __webpack_require__(311);
 
 	  module.exports = XMLComment = (function(superClass) {
 	    extend(XMLComment, superClass);
@@ -61791,30 +55327,30 @@ module.exports =
 
 
 /***/ },
-/* 383 */
+/* 408 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// Generated by CoffeeScript 1.9.1
 	(function() {
 	  var XMLCData, XMLComment, XMLDTDAttList, XMLDTDElement, XMLDTDEntity, XMLDTDNotation, XMLDocType, XMLProcessingInstruction, create, isObject;
 
-	  create = __webpack_require__(283);
+	  create = __webpack_require__(308);
 
-	  isObject = __webpack_require__(259);
+	  isObject = __webpack_require__(284);
 
-	  XMLCData = __webpack_require__(381);
+	  XMLCData = __webpack_require__(406);
 
-	  XMLComment = __webpack_require__(382);
+	  XMLComment = __webpack_require__(407);
 
-	  XMLDTDAttList = __webpack_require__(384);
+	  XMLDTDAttList = __webpack_require__(409);
 
-	  XMLDTDEntity = __webpack_require__(385);
+	  XMLDTDEntity = __webpack_require__(410);
 
-	  XMLDTDElement = __webpack_require__(386);
+	  XMLDTDElement = __webpack_require__(411);
 
-	  XMLDTDNotation = __webpack_require__(387);
+	  XMLDTDNotation = __webpack_require__(412);
 
-	  XMLProcessingInstruction = __webpack_require__(380);
+	  XMLProcessingInstruction = __webpack_require__(405);
 
 	  module.exports = XMLDocType = (function() {
 	    function XMLDocType(parent, pubID, sysID) {
@@ -61985,14 +55521,14 @@ module.exports =
 
 
 /***/ },
-/* 384 */
+/* 409 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// Generated by CoffeeScript 1.9.1
 	(function() {
 	  var XMLDTDAttList, create;
 
-	  create = __webpack_require__(283);
+	  create = __webpack_require__(308);
 
 	  module.exports = XMLDTDAttList = (function() {
 	    function XMLDTDAttList(parent, elementName, attributeName, attributeType, defaultValueType, defaultValue) {
@@ -62059,16 +55595,16 @@ module.exports =
 
 
 /***/ },
-/* 385 */
+/* 410 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// Generated by CoffeeScript 1.9.1
 	(function() {
 	  var XMLDTDEntity, create, isObject;
 
-	  create = __webpack_require__(283);
+	  create = __webpack_require__(308);
 
-	  isObject = __webpack_require__(259);
+	  isObject = __webpack_require__(284);
 
 	  module.exports = XMLDTDEntity = (function() {
 	    function XMLDTDEntity(parent, pe, name, value) {
@@ -62149,14 +55685,14 @@ module.exports =
 
 
 /***/ },
-/* 386 */
+/* 411 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// Generated by CoffeeScript 1.9.1
 	(function() {
 	  var XMLDTDElement, create;
 
-	  create = __webpack_require__(283);
+	  create = __webpack_require__(308);
 
 	  module.exports = XMLDTDElement = (function() {
 	    function XMLDTDElement(parent, name, value) {
@@ -62201,14 +55737,14 @@ module.exports =
 
 
 /***/ },
-/* 387 */
+/* 412 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// Generated by CoffeeScript 1.9.1
 	(function() {
 	  var XMLDTDNotation, create;
 
-	  create = __webpack_require__(283);
+	  create = __webpack_require__(308);
 
 	  module.exports = XMLDTDNotation = (function() {
 	    function XMLDTDNotation(parent, name, value) {
@@ -62263,7 +55799,7 @@ module.exports =
 
 
 /***/ },
-/* 388 */
+/* 413 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// Generated by CoffeeScript 1.9.1
@@ -62272,9 +55808,9 @@ module.exports =
 	    extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
 	    hasProp = {}.hasOwnProperty;
 
-	  create = __webpack_require__(283);
+	  create = __webpack_require__(308);
 
-	  XMLNode = __webpack_require__(286);
+	  XMLNode = __webpack_require__(311);
 
 	  module.exports = XMLRaw = (function(superClass) {
 	    extend(XMLRaw, superClass);
@@ -62318,7 +55854,7 @@ module.exports =
 
 
 /***/ },
-/* 389 */
+/* 414 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// Generated by CoffeeScript 1.9.1
@@ -62327,9 +55863,9 @@ module.exports =
 	    extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
 	    hasProp = {}.hasOwnProperty;
 
-	  create = __webpack_require__(283);
+	  create = __webpack_require__(308);
 
-	  XMLNode = __webpack_require__(286);
+	  XMLNode = __webpack_require__(311);
 
 	  module.exports = XMLText = (function(superClass) {
 	    extend(XMLText, superClass);
@@ -62373,7 +55909,7 @@ module.exports =
 
 
 /***/ },
-/* 390 */
+/* 415 */
 /***/ function(module, exports) {
 
 	// Generated by CoffeeScript 1.10.0
@@ -62391,7 +55927,7 @@ module.exports =
 
 
 /***/ },
-/* 391 */
+/* 416 */
 /***/ function(module, exports) {
 
 	// Generated by CoffeeScript 1.10.0
@@ -62431,7 +55967,7 @@ module.exports =
 
 
 /***/ },
-/* 392 */
+/* 417 */
 /***/ function(module, exports) {
 
 	module.exports = require("timers");

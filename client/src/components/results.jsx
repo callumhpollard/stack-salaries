@@ -2,6 +2,9 @@ import React from 'react';
 import d3 from 'd3';
 import { History } from 'react-router';
 import { Router } from 'react-router';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { setSearch } from '../actions/actionCreator';
 
 
 var SetIntervalMixin = {
@@ -185,4 +188,16 @@ var Results = React.createClass({
     }
 });
 
-export default Results;
+ function mapStateToProps(state) {
+    return {
+      stack: state.stack,
+      cityState: state.cityState,
+      salary: state.salary
+    }
+  }
+
+  function mapDispatchToProps(dispatch) {
+    return bindActionCreators({setSearch: setSearch}, dispatch);
+  }
+
+export default connect(mapStateToProps, mapDispatchToProps) (Results);

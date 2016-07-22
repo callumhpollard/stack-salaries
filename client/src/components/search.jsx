@@ -3,7 +3,11 @@ import $ from 'jquery';
 import SearchInput from './search-input';
 import { History } from 'react-router';
 import { Router } from 'react-router';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { setSearch } from '../actions/actionCreator';
 
+// containers are glorfied components - containers have access to redux
 class Search extends React.Component{
 
   constructor() {
@@ -24,12 +28,21 @@ class Search extends React.Component{
   findStack(e) {
     this.setState({
       stack: e.target.value
-    })
+    });
   }
 
   redirectToResults(){
     window.salary = this.state.salary;
-    this.props.history.pushState({salary:this.state.salary}, '/results');
+    this.props.history.pushState(null, '/results');
+    // {salary:this.state.salary}
+  }
+
+  componentWillMount () {
+    var data = {stack: this.state.stack, city: cityState[0].toLowerCase(), state:cityState[1].toLowerCase()};
+    var self = this;
+    this.getDatafromServer(data, function(salary)  {
+      context.props.setSearch(salary);
+    });
   }
 
   getDatafromServer(e) {
@@ -60,7 +73,6 @@ class Search extends React.Component{
 
   }
 
-
   render() {
     return (
       <div>
@@ -70,4 +82,17 @@ class Search extends React.Component{
   }
 };
 
-export default Search;
+  function mapStateToProps(state) {
+    return {
+      stack: state.stack,
+      cityState: state.cityState,
+      salary: state.salary
+    }
+  }
+
+
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({setSearch: setSearch}, dispatch);
+}
+
+export default connect(mapDispatchToProps, mapStateToProps) (Search);
