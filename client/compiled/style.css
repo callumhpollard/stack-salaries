@@ -154,8 +154,20 @@ svg {
   color: #16a085;
 }
 
+.footer {
+  background-color: #2c3e50;
+  display: flex;
+  margin: 0 -15px 0 -15px;
+  min-height: 250px;
+}
+
 .footer p {
-  color: #3998d7;
+  color: #fff;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
 }
 
 .results .navbar-fixed-top {

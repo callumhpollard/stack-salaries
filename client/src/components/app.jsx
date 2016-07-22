@@ -18,6 +18,7 @@ class App extends React.Component {
       <div id="main" className="front">
         <div>
           <nav className="navbar navbar-default navbar-fixed-top">
+            <Login />
           </nav>
           <Main/>
 

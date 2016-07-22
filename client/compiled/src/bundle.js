@@ -127,7 +127,11 @@
 	          _react2.default.createElement(
 	            'div',
 	            null,
-	            _react2.default.createElement('nav', { className: 'navbar navbar-default navbar-fixed-top' }),
+	            _react2.default.createElement(
+	              'nav',
+	              { className: 'navbar navbar-default navbar-fixed-top' },
+	              _react2.default.createElement(_login2.default, null)
+	            ),
 	            _react2.default.createElement(_main2.default, null),
 	            _react2.default.createElement(_search2.default, { history: this.props.history }),
 	            _react2.default.createElement(_cloud2.default, null)
@@ -35435,14 +35439,37 @@
 	      "div",
 	      { className: "footer text-center" },
 	      _react2.default.createElement(
-	        "p",
-	        null,
-	        "About | Jobs | Onix | Contact"
-	      ),
-	      _react2.default.createElement(
-	        "p",
-	        null,
-	        "2016 Stack Salaries"
+	        "div",
+	        { className: "row" },
+	        _react2.default.createElement(
+	          "ul",
+	          { className: "list-inline" },
+	          _react2.default.createElement(
+	            "li",
+	            null,
+	            "About"
+	          ),
+	          _react2.default.createElement(
+	            "li",
+	            null,
+	            "Jobs"
+	          ),
+	          _react2.default.createElement(
+	            "li",
+	            null,
+	            "Team Onix"
+	          ),
+	          _react2.default.createElement(
+	            "li",
+	            null,
+	            "Contact"
+	          )
+	        ),
+	        _react2.default.createElement(
+	          "p",
+	          null,
+	          "2016 Stack Salaries"
+	        )
 	      )
 	    );
 	  }
@@ -36144,6 +36171,7 @@
 	        url: "http://api.indeed.com/ads/apisearch",
 	        type: "GET",
 	        contentType: "application/xml",
+	        headers: { 'Access-Control-Allow-Origin': '*' },
 	        data: query,
 	        success: function success(results) {
 	          // If successful, serialize the XML result
