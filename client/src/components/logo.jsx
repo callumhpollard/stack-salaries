@@ -13,6 +13,8 @@ const Logo = React.createClass({
 
         <div className="right">
           <button className="btn btn-primary login"><Link to='/login'>Dashboard</Link></button>
+          <button className="btn btn-primary login"><Link to='/jobs'>Jobs</Link></button>
+
         </div>
       </div>
     </div>
