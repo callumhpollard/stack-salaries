@@ -46,8 +46,6 @@ class Jobs extends React.Component {
     // Our query parameters
     var query = {publisher: "5453642953934453", q: "javascript", l: "Austin, TX", v: 2}
 
-
-
     // GET request to fetch the jobs
     $.ajax({
       url:"http://api.indeed.com/ads/apisearch",

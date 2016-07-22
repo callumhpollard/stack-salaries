@@ -35459,6 +35459,15 @@ module.exports =
 	              { to: '/login' },
 	              'Dashboard'
 	            )
+	          ),
+	          _react2.default.createElement(
+	            'button',
+	            { className: 'btn btn-primary login' },
+	            _react2.default.createElement(
+	              _reactRouter.Link,
+	              { to: '/jobs' },
+	              'Jobs'
+	            )
 	          )
 	        )
 	      )
