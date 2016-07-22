@@ -96,6 +96,8 @@
 
 	var _cloud2 = _interopRequireDefault(_cloud);
 
+	var _reactRouter = __webpack_require__(160);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -121,15 +123,11 @@
 	        null,
 	        _react2.default.createElement(
 	          'div',
-	          { className: 'container' },
+	          { id: 'main', className: 'front' },
 	          _react2.default.createElement(
 	            'div',
 	            null,
-	            _react2.default.createElement(
-	              'nav',
-	              { className: 'navbar navbar-default navbar-fixed-top' },
-	              _react2.default.createElement(_login2.default, null)
-	            ),
+	            _react2.default.createElement('nav', { className: 'navbar navbar-default navbar-fixed-top' }),
 	            _react2.default.createElement(_main2.default, null),
 	            _react2.default.createElement(_search2.default, { history: this.props.history }),
 	            _react2.default.createElement(_cloud2.default, null)
@@ -144,6 +142,8 @@
 	}(_react2.default.Component);
 
 	exports.default = App;
+
+	// <button className="btn btn-primary login"><Link to='/jobs'>Jobs</Link></button>
 
 /***/ },
 /* 2 */
@@ -35415,7 +35415,7 @@
 /* 227 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -35428,21 +35428,21 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var Footer = _react2.default.createClass({
-	  displayName: 'Footer',
+	  displayName: "Footer",
 
 	  render: function render() {
 	    return _react2.default.createElement(
-	      'div',
-	      null,
+	      "div",
+	      { className: "footer text-center" },
 	      _react2.default.createElement(
-	        'h1',
+	        "p",
 	        null,
-	        'About | Jobs | Onix | Contact'
+	        "About | Jobs | Onix | Contact"
 	      ),
 	      _react2.default.createElement(
-	        'h2',
+	        "p",
 	        null,
-	        '2016 Stack Salaries'
+	        "2016 Stack Salaries"
 	      )
 	    );
 	  }
@@ -35464,6 +35464,8 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _reactRouter = __webpack_require__(160);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var Logo = _react2.default.createClass({
@@ -35475,13 +35477,33 @@
 	      null,
 	      _react2.default.createElement(
 	        'div',
-	        null,
-	        'Stack Salaries'
-	      ),
-	      _react2.default.createElement(
-	        'h3',
-	        null,
-	        'Proudly Made at Hack Reactor'
+	        { className: 'row logo-headline' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'left' },
+	          _react2.default.createElement(
+	            _reactRouter.Link,
+	            { to: '/' },
+	            _react2.default.createElement(
+	              'h3',
+	              { className: 'text-left' },
+	              'STACK SALARIES'
+	            )
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'right' },
+	          _react2.default.createElement(
+	            'button',
+	            { className: 'btn btn-primary login' },
+	            _react2.default.createElement(
+	              _reactRouter.Link,
+	              { to: '/login' },
+	              'Dashboard'
+	            )
+	          )
+	        )
 	      )
 	    );
 	  }
@@ -36146,13 +36168,12 @@
 	    value: function render() {
 	      return _react2.default.createElement(
 	        'div',
-	        null,
+	        { className: 'row' },
 	        _react2.default.createElement(
-	          'h1',
-	          null,
-	          'Jobs'
-	        ),
-	        _react2.default.createElement(_jobsList2.default, { jobs: this.state.jobs })
+	          'div',
+	          { id: 'jobs' },
+	          _react2.default.createElement(_jobsList2.default, { jobs: this.state.jobs })
+	        )
 	      );
 	    }
 	  }]);
@@ -36183,15 +36204,18 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var JobsList = function JobsList(props) {
-	  return _react2.default.createElement(
-	    'div',
-	    null,
-	    props.jobs.jobs.map(function (job) {
-	      return _react2.default.createElement(_jobsItem2.default, { job: job });
-	    })
-	  );
+	  if (props.jobs) {
+	    return _react2.default.createElement(
+	      'div',
+	      null,
+	      props.jobs.map(function (job) {
+	        return _react2.default.createElement(_jobsItem2.default, { job: job });
+	      })
+	    );
+	  } else {
+	    return _react2.default.createElement('div', null);
+	  }
 	};
-
 	exports.default = JobsList;
 
 /***/ },
@@ -36211,11 +36235,53 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var JobsItem = function JobsItem(props) {
-
 	  return _react2.default.createElement(
 	    "div",
-	    { className: "item" },
-	    _react2.default.createElement("p", null)
+	    { className: "col-md-4" },
+	    _react2.default.createElement(
+	      "div",
+	      { className: "panel panel-default" },
+	      _react2.default.createElement(
+	        "div",
+	        { className: "panel-heading" },
+	        _react2.default.createElement(
+	          "div",
+	          { className: "panel-title text-center" },
+	          props.job.jobtitle[0]
+	        ),
+	        _react2.default.createElement(
+	          "div",
+	          { className: "text-center" },
+	          "@ ",
+	          props.job.company[0]
+	        )
+	      ),
+	      _react2.default.createElement(
+	        "div",
+	        { className: "panel-body" },
+	        _react2.default.createElement(
+	          "p",
+	          null,
+	          props.job.snippet[0]
+	        ),
+	        _react2.default.createElement(
+	          "p",
+	          { className: "text-center" },
+	          _react2.default.createElement(
+	            "a",
+	            { href: props.job.url },
+	            "Click to Read More"
+	          )
+	        )
+	      ),
+	      _react2.default.createElement(
+	        "div",
+	        { className: "panel-footer text-center" },
+	        _react2.default.createElement("span", { className: "glyphicon glyphicon-time" }),
+	        " ",
+	        props.job.date
+	      )
+	    )
 	  );
 	};
 	exports.default = JobsItem;
@@ -49055,7 +49121,8 @@
 	      height: height,
 	      y: y,
 	      width: this.props.width,
-	      x: this.props.x
+	      x: this.props.x,
+	      fill: '#f39c12'
 	    });
 	  }
 	});
@@ -49104,8 +49171,8 @@
 	          { y: y + 37, x: x + 77,
 	            textAnchor: 'middle',
 	            fontFamily: 'Helvetica Neue',
-	            fontSize: '30',
-	            fill: 'white'
+	            fontSize: '20',
+	            fill: '#f39c12'
 	          },
 	          '$' + point
 	        ),
@@ -49114,8 +49181,8 @@
 	          { y: 580, x: x + 77,
 	            textAnchor: 'middle',
 	            fontFamily: 'Helvetica Neue',
-	            fontSize: '30',
-	            fill: 'white'
+	            fontSize: '20',
+	            fill: '#3998d7'
 	          },
 	          salaryRange[i]
 	        )
@@ -49170,7 +49237,6 @@
 	  },
 
 	  render: function render() {
-	    console.log(window.salary);
 	    return _react2.default.createElement(
 	      'div',
 	      null,
@@ -49179,7 +49245,7 @@
 	        { className: 'selection' },
 	        _react2.default.createElement(
 	          'h3',
-	          null,
+	          { className: 'text-center' },
 	          window.salary.label
 	        )
 	      ),
@@ -58954,6 +59020,10 @@
 
 	var _footer2 = _interopRequireDefault(_footer);
 
+	var _jobs = __webpack_require__(236);
+
+	var _jobs2 = _interopRequireDefault(_jobs);
+
 	var _reactRouter = __webpack_require__(160);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -58981,13 +59051,30 @@
 	    value: function render() {
 	      return _react2.default.createElement(
 	        'div',
-	        null,
-	        _react2.default.createElement(_logo2.default, null),
-	        _react2.default.createElement(_login2.default, null),
+	        { className: 'container results' },
+	        _react2.default.createElement(
+	          'nav',
+	          { id: 'resultNav', className: 'navbar navbar-default navbar-fixed-top' },
+	          _react2.default.createElement(_logo2.default, null)
+	        ),
 	        _react2.default.createElement(
 	          'div',
 	          null,
-	          _react2.default.createElement(_results2.default, { history: this.props.history }),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'd3' },
+	            _react2.default.createElement(_results2.default, { history: this.props.history })
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            null,
+	            _react2.default.createElement(
+	              'p',
+	              { className: 'lead text-center' },
+	              'Related Jobs in Your Area'
+	            ),
+	            _react2.default.createElement(_jobs2.default, null)
+	          ),
 	          _react2.default.createElement(_search2.default, null),
 	          _react2.default.createElement(_footer2.default, null)
 	        )

@@ -75,9 +75,10 @@ class Jobs extends React.Component {
 
   render() {
     return (
-      <div>
-        <h1>Jobs</h1>
-          <JobsList jobs={this.state.jobs}/>
+      <div className="row">
+          <div id="jobs">
+            <JobsList jobs={this.state.jobs}/>
+          </div>
       </div>
     );
   }
