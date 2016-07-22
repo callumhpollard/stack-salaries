@@ -9,6 +9,6 @@ export function setSearch(searchInput) {
   console.log("Search Obj", searchInput);
   return {
     type: SET_SEARCH,
-    payload: searchInput.salary
+    payload: searchInput.data
   };
 }

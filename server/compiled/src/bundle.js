@@ -25411,6 +25411,7 @@ module.exports =
 	          self.setState({
 	            salary: data
 	          });
+
 	          self.redirectToResults();
 	        },
 	        error: function error(err) {
@@ -25436,9 +25437,9 @@ module.exports =
 
 	function mapStateToProps(state) {
 	  return {
-	    stack: state.stack,
-	    cityState: state.cityState,
-	    salary: state.salary
+	    // stack: state.stack,
+	    // cityState: state.cityState,
+	    setSearch: state.salary
 	  };
 	}
 
@@ -36918,7 +36919,7 @@ module.exports =
 	  console.log("Search Obj", searchInput);
 	  return {
 	    type: SET_SEARCH,
-	    payload: searchInput.salary
+	    payload: searchInput.data
 	  };
 	}
 
@@ -37094,6 +37095,10 @@ module.exports =
 	var _redux = __webpack_require__(234);
 
 	var _actionCreator = __webpack_require__(251);
+
+	var _search = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"../search\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+
+	var _search2 = _interopRequireDefault(_search);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -37274,8 +37279,12 @@ module.exports =
 
 	  getInitialState: function getInitialState(props) {
 	    return {
-	      data: [{ x: 'a', y: this.props.salary.lowest }, { x: 'b', y: window.salary.average }, { x: 'c', y: window.salary.highest }]
+	      data: [{ x: 'a', y: this.props.setSearch.lowest }, { x: 'b', y: window.salary.average }, { x: 'c', y: window.salary.highest }]
 	    };
+	  },
+
+	  renderSalary: function renderSalary() {
+	    return this.props.salary;
 	  },
 
 	  render: function render() {
@@ -37307,15 +37316,15 @@ module.exports =
 
 	function mapStateToProps(state) {
 	  return {
-	    salary: state.salary
+	    setSearch: state.salary
 	  };
 	}
 
-	function mapDispatchToProps(dispatch) {
-	  return (0, _redux.bindActionCreators)({ setSearch: _actionCreator.setSearch }, dispatch);
-	}
-
-	exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(Results);
+	//  function mapDispatchToProps(dispatch) {
+	//    return bindActionCreators({setSearch: setSearch}, dispatch);
+	//  }
+	// connect(mapStateToProps, mapDispatchToProps) (
+	exports.default = (0, _reactRedux.connect)(mapStateToProps)(Results);
 
 /***/ },
 /* 256 */

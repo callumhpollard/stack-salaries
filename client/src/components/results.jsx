@@ -5,7 +5,7 @@ import { Router } from 'react-router';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { setSearch } from '../actions/actionCreator';
-
+import searchSalary from '../search';
 
 // this.props.salary
 var SetIntervalMixin = {
@@ -163,11 +163,15 @@ var Results = React.createClass({
     getInitialState: function(props) {
         return {
           data: [
-            {x: 'a', y: this.props.salary.lowest},
+            {x: 'a', y: this.props.setSearch.lowest},
             {x: 'b', y: window.salary.average},
             {x: 'c', y: window.salary.highest}
           ]
         }
+    },
+
+    renderSalary: function () {
+      return this.props.salary;
     },
 
     render: function() {
@@ -191,12 +195,12 @@ var Results = React.createClass({
 
  function mapStateToProps(state) {
     return {
-      salary: state.salary
+      setSearch: state.salary
     }
   }
 
-  function mapDispatchToProps(dispatch) {
-    return bindActionCreators({setSearch: setSearch}, dispatch);
-  }
-
-export default connect(mapStateToProps, mapDispatchToProps) (Results);
+ //  function mapDispatchToProps(dispatch) {
+ //    return bindActionCreators({setSearch: setSearch}, dispatch);
+ //  }
+// connect(mapStateToProps, mapDispatchToProps) (
+export default connect(mapStateToProps)(Results);

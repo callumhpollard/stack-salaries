@@ -65,6 +65,7 @@ class Search extends React.Component{
         self.setState({
           salary: data
         });
+
         self.redirectToResults();
       },
       error: function(err) {
@@ -85,9 +86,9 @@ class Search extends React.Component{
 
   function mapStateToProps(state) {
     return {
-      stack: state.stack,
-      cityState: state.cityState,
-      salary: state.salary
+      // stack: state.stack,
+      // cityState: state.cityState,
+      setSearch : state.salary
     }
   }
 
