@@ -25379,19 +25379,18 @@ module.exports =
 	  }, {
 	    key: 'redirectToResults',
 	    value: function redirectToResults() {
-	      window.salary = this.state.salary;
+	      // window.salary = this.state.salary;
+	      // var data = {stack: this.state.stack, city: cityState[0].toLowerCase(), state:cityState[1].toLowerCase()};
+	      this.props.setSearch(this.state.salary);
 	      this.props.history.pushState(null, '/results');
+	      // window.location.hash = string
+	      // #/key
 	      // {salary:this.state.salary}
+	      console.log(this.state.salary);
 	    }
 	  }, {
 	    key: 'componentWillMount',
-	    value: function componentWillMount() {
-	      var data = { stack: this.state.stack, city: cityState[0].toLowerCase(), state: cityState[1].toLowerCase() };
-	      var self = this;
-	      this.getDatafromServer(data, function (salary) {
-	        context.props.setSearch(salary);
-	      });
-	    }
+	    value: function componentWillMount() {}
 	  }, {
 	    key: 'getDatafromServer',
 	    value: function getDatafromServer(e) {
@@ -25447,7 +25446,7 @@ module.exports =
 	  return (0, _redux.bindActionCreators)({ setSearch: _actionCreator.setSearch }, dispatch);
 	}
 
-	exports.default = (0, _reactRedux.connect)(mapDispatchToProps, mapStateToProps)(Search);
+	exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(Search);
 
 /***/ },
 /* 225 */
@@ -36919,7 +36918,7 @@ module.exports =
 	  console.log("Search Obj", searchInput);
 	  return {
 	    type: SET_SEARCH,
-	    payload: searchInput
+	    payload: searchInput.salary
 	  };
 	}
 
@@ -37098,6 +37097,7 @@ module.exports =
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+	// this.props.salary
 	var SetIntervalMixin = {
 	  componentWillMount: function componentWillMount() {
 	    this.intervals = [];
@@ -37272,9 +37272,9 @@ module.exports =
 	    };
 	  },
 
-	  getInitialState: function getInitialState() {
+	  getInitialState: function getInitialState(props) {
 	    return {
-	      data: [{ x: 'a', y: window.salary.lowest }, { x: 'b', y: window.salary.average }, { x: 'c', y: window.salary.highest }]
+	      data: [{ x: 'a', y: this.props.salary.lowest }, { x: 'b', y: window.salary.average }, { x: 'c', y: window.salary.highest }]
 	    };
 	  },
 
@@ -37307,8 +37307,6 @@ module.exports =
 
 	function mapStateToProps(state) {
 	  return {
-	    stack: state.stack,
-	    cityState: state.cityState,
 	    salary: state.salary
 	  };
 	}

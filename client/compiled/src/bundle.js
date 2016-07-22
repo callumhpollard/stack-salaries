@@ -25487,19 +25487,18 @@
 	  }, {
 	    key: 'redirectToResults',
 	    value: function redirectToResults() {
-	      window.salary = this.state.salary;
+	      // window.salary = this.state.salary;
+	      // var data = {stack: this.state.stack, city: cityState[0].toLowerCase(), state:cityState[1].toLowerCase()};
+	      this.props.setSearch(this.state.salary);
 	      this.props.history.pushState(null, '/results');
+	      // window.location.hash = string
+	      // #/key
 	      // {salary:this.state.salary}
+	      console.log(this.state.salary);
 	    }
 	  }, {
 	    key: 'componentWillMount',
-	    value: function componentWillMount() {
-	      var data = { stack: this.state.stack, city: cityState[0].toLowerCase(), state: cityState[1].toLowerCase() };
-	      var self = this;
-	      this.getDatafromServer(data, function (salary) {
-	        context.props.setSearch(salary);
-	      });
-	    }
+	    value: function componentWillMount() {}
 	  }, {
 	    key: 'getDatafromServer',
 	    value: function getDatafromServer(e) {
@@ -25555,7 +25554,7 @@
 	  return (0, _redux.bindActionCreators)({ setSearch: _actionCreator.setSearch }, dispatch);
 	}
 
-	exports.default = (0, _reactRedux.connect)(mapDispatchToProps, mapStateToProps)(Search);
+	exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(Search);
 
 /***/ },
 /* 224 */
@@ -37032,7 +37031,7 @@
 	  console.log("Search Obj", searchInput);
 	  return {
 	    type: SET_SEARCH,
-	    payload: searchInput
+	    payload: searchInput.salary
 	  };
 	}
 
@@ -37711,6 +37710,7 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+	// this.props.salary
 	var SetIntervalMixin = {
 	  componentWillMount: function componentWillMount() {
 	    this.intervals = [];
@@ -37885,9 +37885,9 @@
 	    };
 	  },
 
-	  getInitialState: function getInitialState() {
+	  getInitialState: function getInitialState(props) {
 	    return {
-	      data: [{ x: 'a', y: window.salary.lowest }, { x: 'b', y: window.salary.average }, { x: 'c', y: window.salary.highest }]
+	      data: [{ x: 'a', y: this.props.salary.lowest }, { x: 'b', y: window.salary.average }, { x: 'c', y: window.salary.highest }]
 	    };
 	  },
 
@@ -37920,8 +37920,6 @@
 
 	function mapStateToProps(state) {
 	  return {
-	    stack: state.stack,
-	    cityState: state.cityState,
 	    salary: state.salary
 	  };
 	}
@@ -47517,11 +47515,23 @@
 
 	var _combine2 = _interopRequireDefault(_combine);
 
+	var _reduxLogger = __webpack_require__(440);
+
+	var _reduxLogger2 = _interopRequireDefault(_reduxLogger);
+
+	var _reduxThunk = __webpack_require__(441);
+
+	var _reduxThunk2 = _interopRequireDefault(_reduxThunk);
+
+	var _redux = __webpack_require__(233);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var createStores = (0, _redux.applyMiddleware)(_reduxThunk2.default, _reduxLogger2.default)(_redux.createStore);
 
 	_reactDom2.default.render(_react2.default.createElement(
 	  _reactRedux.Provider,
-	  { store: _combine2.default },
+	  { store: createStores(_combine2.default) },
 	  _react2.default.createElement(
 	    _reactRouter.Router,
 	    { history: _reactRouter.browserHistory },
@@ -60714,6 +60724,10 @@
 
 	'use strict';
 
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
 	var _redux = __webpack_require__(233);
 
 	var _redux2 = _interopRequireDefault(_redux);
@@ -60722,21 +60736,16 @@
 
 	var _searchReducer2 = _interopRequireDefault(_searchReducer);
 
-	var _reduxLogger = __webpack_require__(440);
-
-	var _reduxLogger2 = _interopRequireDefault(_reduxLogger);
-
-	var _reduxThunk = __webpack_require__(441);
-
-	var _reduxThunk2 = _interopRequireDefault(_reduxThunk);
-
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var rootReducer = (0, _redux.combineReducers)({
 	  search: _searchReducer2.default
 	});
 
-	module.exports = _redux2.default.applyMiddleware(_reduxThunk2.default)(_redux2.default.createStore)(rootReducer);
+	// module.exports = Redux.applyMiddleware(thunk)(logger)(Redux.createStore)(rootReducer);
+	// Reducer is a window - it will become what the state will become
+
+	exports.default = rootReducer;
 
 /***/ },
 /* 439 */
@@ -60748,7 +60757,10 @@
 	  value: true
 	});
 
-	exports.default = function (state, action) {
+	exports.default = function () {
+	  var state = arguments.length <= 0 || arguments[0] === undefined ? null : arguments[0];
+	  var action = arguments[1];
+
 	  var newState = Object.assign({}, state);
 	  switch (action.type) {
 	    case _actionCreator.SET_SEARCH:

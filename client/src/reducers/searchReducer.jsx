@@ -1,6 +1,6 @@
 import { SET_SEARCH } from '../actions/actionCreator';
 
-export default function(state, action){
+export default function(state=null, action){
   var newState = Object.assign({}, state);
   switch (action.type) {
     case SET_SEARCH:

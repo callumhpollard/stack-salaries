@@ -7,6 +7,7 @@ import { bindActionCreators } from 'redux';
 import { setSearch } from '../actions/actionCreator';
 
 
+// this.props.salary
 var SetIntervalMixin = {
   componentWillMount: function() {
     this.intervals = [];
@@ -159,10 +160,10 @@ var Results = React.createClass({
         }
     },
 
-    getInitialState: function() {
+    getInitialState: function(props) {
         return {
           data: [
-            {x: 'a', y: window.salary.lowest},
+            {x: 'a', y: this.props.salary.lowest},
             {x: 'b', y: window.salary.average},
             {x: 'c', y: window.salary.highest}
           ]
@@ -190,8 +191,6 @@ var Results = React.createClass({
 
  function mapStateToProps(state) {
     return {
-      stack: state.stack,
-      cityState: state.cityState,
       salary: state.salary
     }
   }

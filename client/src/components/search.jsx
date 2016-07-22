@@ -32,17 +32,18 @@ class Search extends React.Component{
   }
 
   redirectToResults(){
-    window.salary = this.state.salary;
+    // window.salary = this.state.salary;
+    // var data = {stack: this.state.stack, city: cityState[0].toLowerCase(), state:cityState[1].toLowerCase()};
+    this.props.setSearch(this.state.salary);
     this.props.history.pushState(null, '/results');
+    // window.location.hash = string
+    // #/key
     // {salary:this.state.salary}
+    console.log(this.state.salary);
   }
 
   componentWillMount () {
-    var data = {stack: this.state.stack, city: cityState[0].toLowerCase(), state:cityState[1].toLowerCase()};
-    var self = this;
-    this.getDatafromServer(data, function(salary)  {
-      context.props.setSearch(salary);
-    });
+
   }
 
   getDatafromServer(e) {
@@ -95,4 +96,4 @@ function mapDispatchToProps(dispatch) {
   return bindActionCreators({setSearch: setSearch}, dispatch);
 }
 
-export default connect(mapDispatchToProps, mapStateToProps) (Search);
+export default connect(mapStateToProps, mapDispatchToProps) (Search);
