@@ -60,7 +60,6 @@ var Rect = React.createClass({
                 y={y}
                 width={this.props.width}
                 x={this.props.x}
-                fill="#f39c12"
           >
           </rect>
         );
@@ -101,7 +100,7 @@ var Bar = React.createClass({
           x = xScale(i);
 
       return (
-        <g key={i} >
+        <g key={i} id={'bar' + i}>
         <Rect height={height}
               width={width}
               x={x}
@@ -111,13 +110,11 @@ var Bar = React.createClass({
         textAnchor='middle'
         fontFamily='Helvetica Neue'
         fontSize="20"
-        fill="#f39c12"
         >{'$' + point}</text>
         <text y={580} x={x + 77}
         textAnchor='middle'
         fontFamily='Helvetica Neue'
         fontSize="20"
-        fill="#3998d7"
         >{salaryRange[i]}</text>
         </g>
       )

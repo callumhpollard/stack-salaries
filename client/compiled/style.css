@@ -213,3 +213,15 @@ svg {
     background-color: #fff;
     border-color: #285e8e; /*set the color you want here*/
 }
+
+#bar0 rect{
+  fill: #f39c12;
+}
+
+#bar1 rect{
+  fill: #30A2E6;
+}
+
+#bar2 rect{
+  fill: #E60900;
+}
