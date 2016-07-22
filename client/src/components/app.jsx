@@ -3,6 +3,8 @@ import Login from './login';
 import Main from './main';
 import Search from './search';
 import Cloud from './cloud';
+import { Link } from 'react-router';
+
 
 class App extends React.Component {
 
@@ -13,15 +15,16 @@ class App extends React.Component {
   render() {
     return (
       <div>
-      <div className="container">
+      <div id="main" className="front">
         <div>
           <nav className="navbar navbar-default navbar-fixed-top">
-             <Login/>
+            <Login />
           </nav>
           <Main/>
 
           <Search history={this.props.history}/>
           <Cloud/>
+
 
         </div>
       </div>
@@ -34,3 +37,5 @@ class App extends React.Component {
 }
 
 export default App;
+
+          // <button className="btn btn-primary login"><Link to='/jobs'>Jobs</Link></button>

@@ -60,6 +60,7 @@ var Rect = React.createClass({
                 y={y}
                 width={this.props.width}
                 x={this.props.x}
+                fill="#f39c12"
           >
           </rect>
         );
@@ -109,14 +110,14 @@ var Bar = React.createClass({
         <text y={y + 37} x={x + 77}
         textAnchor='middle'
         fontFamily='Helvetica Neue'
-        fontSize="30"
-        fill="white"
+        fontSize="20"
+        fill="#f39c12"
         >{'$' + point}</text>
         <text y={580} x={x + 77}
         textAnchor='middle'
         fontFamily='Helvetica Neue'
-        fontSize="30"
-        fill="white"
+        fontSize="20"
+        fill="#3998d7"
         >{salaryRange[i]}</text>
         </g>
       )
@@ -166,11 +167,10 @@ var Results = React.createClass({
     },
 
     render: function() {
-      console.log(window.salary);
         return (
           <div>
             <div className="selection">
-              <h3>{window.salary.label}</h3>
+              <h3 className="text-center">{window.salary.label}</h3>
             </div>
             <hr/>
             <Chart width={this.props.width}

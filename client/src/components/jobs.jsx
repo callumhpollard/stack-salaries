@@ -46,11 +46,14 @@ class Jobs extends React.Component {
     // Our query parameters
     var query = {publisher: "5453642953934453", q: "javascript", l: "Austin, TX", v: 2}
 
+
+
     // GET request to fetch the jobs
     $.ajax({
       url:"http://api.indeed.com/ads/apisearch",
       type:"GET",
       contentType:"application/xml",
+      headers: { 'Access-Control-Allow-Origin': '*' },
       data: query,
       success: function(results) {
         // If successful, serialize the XML result
@@ -75,9 +78,10 @@ class Jobs extends React.Component {
 
   render() {
     return (
-      <div>
-        <h1>Jobs</h1>
-          <JobsList jobs={this.state.jobs}/>
+      <div className="row">
+          <div id="jobs">
+            <JobsList jobs={this.state.jobs}/>
+          </div>
       </div>
     );
   }
