@@ -80,19 +80,19 @@ module.exports =
 
 	var _search2 = _interopRequireDefault(_search);
 
-	var _loginForm = __webpack_require__(411);
+	var _loginForm = __webpack_require__(413);
 
 	var _loginForm2 = _interopRequireDefault(_loginForm);
 
-	var _signupForm = __webpack_require__(413);
+	var _signupForm = __webpack_require__(416);
 
 	var _signupForm2 = _interopRequireDefault(_signupForm);
 
-	var _dashboard = __webpack_require__(415);
+	var _dashboard = __webpack_require__(418);
 
 	var _dashboard2 = _interopRequireDefault(_dashboard);
 
-	var _advanceSearch = __webpack_require__(418);
+	var _advanceSearch = __webpack_require__(411);
 
 	var _advanceSearch2 = _interopRequireDefault(_advanceSearch);
 
@@ -25273,6 +25273,15 @@ module.exports =
 	          { to: '/dashboard' },
 	          'Dashboard'
 	        )
+	      ),
+	      _react2.default.createElement(
+	        'button',
+	        { className: 'btn btn-primary login' },
+	        _react2.default.createElement(
+	          _reactRouter.Link,
+	          { to: '/advance-search' },
+	          'Advance Search'
+	        )
 	      )
 	    );
 	  }
@@ -25400,7 +25409,9 @@ module.exports =
 	      // var data = {stack: this.state.stack, city: cityState[0].toLowerCase(), state:cityState[1].toLowerCase()};
 	      // var self = this;
 	      this.props.setSearch(this.state.salary);
-	      this.props.history.pushState(null, '/results');
+	      // this.props.history.pushState(null, '/results');
+	      this.context.router.push('/results');
+
 	      // window.location.hash = string
 	      // #/key
 	      // {salary:this.state.salary}
@@ -25415,7 +25426,8 @@ module.exports =
 	      var cityState = this.state.cityState.split(", ");
 
 	      // Remember to lowercase -- its only not in lowercase now because you input the data in as MEAN
-	      var data = { stack: this.state.stack, city: cityState[0].toLowerCase(), state: cityState[1].toLowerCase() };
+	      // .toLowerCase()
+	      var data = { stack: this.state.stack, city: cityState[0], state: cityState[1] };
 
 	      _jquery2.default.ajax({
 	        url: "http://localhost:3000/search",
@@ -25449,6 +25461,10 @@ module.exports =
 	}(_react2.default.Component);
 
 	;
+
+	Search.contextTypes = {
+	  router: _react2.default.PropTypes.object.isRequired
+	};
 
 	function mapStateToProps(state) {
 	  return {
@@ -36924,8 +36940,9 @@ module.exports =
 	  value: true
 	});
 	exports.setSearch = setSearch;
+	exports.setUserInfo = setUserInfo;
 	var SET_SEARCH = exports.SET_SEARCH = 'SET_SEARCH';
-	var SET_NAME = exports.SET_NAME = 'SET_NAME';
+	var SET_USERINFO = exports.SET_USERINFO = 'SET_USERINFO';
 
 	function setSearch(searchInput) {
 	  // console.log("Search Obj", searchInput);
@@ -36936,12 +36953,12 @@ module.exports =
 	  // console.log("OUR ACTION ", JSON.stringify(results));
 	}
 
-	// export function setName()  {
-	//   return {
-	//     type: SET_NAME,
-	//     payload:
-	//   };
-	// }
+	function setUserInfo(userData) {
+	  return {
+	    type: SET_USERINFO,
+	    payload: userData
+	  };
+	}
 
 /***/ },
 /* 252 */
@@ -37008,6 +37025,10 @@ module.exports =
 	var _jobs = __webpack_require__(258);
 
 	var _jobs2 = _interopRequireDefault(_jobs);
+
+	var _advanceSearch = __webpack_require__(411);
+
+	var _advanceSearch2 = _interopRequireDefault(_advanceSearch);
 
 	var _reactRouter = __webpack_require__(158);
 
@@ -37182,7 +37203,6 @@ module.exports =
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	// this.props.salary
 	var SetIntervalMixin = {
 	  componentWillMount: function componentWillMount() {
 	    this.intervals = [];
@@ -37361,28 +37381,6 @@ module.exports =
 	    };
 	    return _this;
 	  }
-
-	  // getDefaultProps: function() {
-	  //     return {
-	  //       width: 500,
-	  //       height: 500
-	  //     }
-	  // },
-
-	  // getInitialState: function(props) {
-	  //     console.log("THIS IS STORE " + JSON.stringify(this.props.salary));
-	  //     return {
-	  //       data: [
-	  //         {x: 'a', y: window.salary.average},
-	  //         {x: 'b', y: window.salary.average},
-	  //         {x: 'c', y: window.salary.highest}
-	  //       ]
-	  //     }
-	  // },
-
-	  // renderSalary: function () {
-	  //   return this.props.salary;
-	  // },
 
 	  _createClass(Results, [{
 	    key: 'render',
@@ -47208,7 +47206,7 @@ module.exports =
 	      'div',
 	      null,
 	      props.jobs.map(function (job) {
-	        return _react2.default.createElement(_jobsItem2.default, { job: job });
+	        return _react2.default.createElement(_jobsItem2.default, { key: job.jobkey, job: job });
 	      })
 	    );
 	  } else {
@@ -47236,7 +47234,7 @@ module.exports =
 	var JobsItem = function JobsItem(props) {
 	  return _react2.default.createElement(
 	    "div",
-	    { className: "col-md-4" },
+	    { className: "col-md-4", key: props.job.jobkey },
 	    _react2.default.createElement(
 	      "div",
 	      { className: "panel panel-default" },
@@ -55501,7 +55499,244 @@ module.exports =
 
 	var _jquery2 = _interopRequireDefault(_jquery);
 
-	var _loginInput = __webpack_require__(412);
+	var _reactRouter = __webpack_require__(158);
+
+	var _advanceSearchInput = __webpack_require__(412);
+
+	var _advanceSearchInput2 = _interopRequireDefault(_advanceSearchInput);
+
+	var _reactRedux = __webpack_require__(227);
+
+	var _redux = __webpack_require__(234);
+
+	var _actionCreator = __webpack_require__(251);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var AdvanceSearch = function (_React$Component) {
+	  _inherits(AdvanceSearch, _React$Component);
+
+	  function AdvanceSearch() {
+	    _classCallCheck(this, AdvanceSearch);
+
+	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(AdvanceSearch).call(this));
+
+	    _this.state = {
+	      stack: [],
+	      city: "",
+	      state: "",
+	      education: "",
+	      gender: "",
+	      experience: "",
+	      salary: {}
+	    };
+	    return _this;
+	  }
+
+	  _createClass(AdvanceSearch, [{
+	    key: 'findCity',
+	    value: function findCity(e) {
+	      this.setState({
+	        city: e.target.value
+	      });
+	    }
+	  }, {
+	    key: 'findState',
+	    value: function findState(e) {
+	      this.setState({
+	        state: e.target.value
+	      });
+	    }
+	  }, {
+	    key: 'findEducation',
+	    value: function findEducation(e) {
+	      this.setState({
+	        education: e.target.value
+	      });
+	    }
+	  }, {
+	    key: 'findGender',
+	    value: function findGender(e) {
+	      this.setState({
+	        gender: e.target.value
+	      });
+	    }
+	  }, {
+	    key: 'findExperience',
+	    value: function findExperience(e) {
+	      this.setState({
+	        experience: e.target.value
+	      });
+	    }
+	  }, {
+	    key: 'findStack',
+	    value: function findStack(e) {
+	      this.state.stack.push(e.target.value);
+	    }
+	  }, {
+	    key: 'redirectToResults',
+	    value: function redirectToResults() {
+	      // window.salary = this.state.salary;
+	      // var data = {stack: this.state.stack, city: cityState[0].toLowerCase(), state:cityState[1].toLowerCase()};
+	      // var self = this;
+	      console.log(this.state.salary);
+	      this.props.setSearch(this.state.salary);
+	      // this.props.history.pushState(null, '/results');
+	      this.context.router.push('/results');
+
+	      // window.location.hash = string
+	      // #/key
+	      // {salary:this.state.salary}
+	      // console.log(this.state.salary);
+	    }
+	  }, {
+	    key: 'GetAdvanceSearchData',
+	    value: function GetAdvanceSearchData(e) {
+	      var _data;
+
+	      e.preventDefault();
+
+	      var self = this;
+	      var cityState = this.state.cityState.split(", ");
+
+	      // Remember to lowercase -- its only not in lowercase now because you input the data in as MEAN
+	      // .toLowerCase()
+
+	      var data = (_data = { stack: this.state.stack, city: cityState[0], state: cityState[1], education: this.state.education }, _defineProperty(_data, 'education', this.state.education), _defineProperty(_data, 'gender', this.state.gender), _defineProperty(_data, 'experience', this.state.experience), _data);
+
+	      _jquery2.default.ajax({
+	        url: "http://localhost:3000/search",
+	        type: "POST",
+	        contentType: "application/json",
+	        data: JSON.stringify(data),
+	        success: function success(data) {
+	          self.setState({
+	            salary: data
+	          });
+
+	          self.redirectToResults(data);
+	        },
+	        error: function error(err) {
+	          console.log(err);
+	        }
+	      });
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'dashboard row' },
+	          _react2.default.createElement(
+	            'h1',
+	            null,
+	            'Advance Search'
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'col-md-4' },
+	            _react2.default.createElement(_advanceSearchInput2.default, { GetAdvanceSearchData: this.GetAdvanceSearchData.bind(this), findStack: this.findStack.bind(this), findCity: this.findCity.bind(this), findState: this.findState.bind(this), findEducation: this.findEducation.bind(this), findGender: this.findGender.bind(this), findExperience: this.findExperience.bind(this) })
+	          )
+	        )
+	      );
+	    }
+	  }]);
+
+	  return AdvanceSearch;
+	}(_react2.default.Component);
+
+	;
+
+	// AdvanceSearch.contextTypes= {
+	//   router: React.PropTypes.object.isRequired
+	// };
+
+	function mapStateToProps(state) {
+	  return {
+	    salary: state.salary
+	  };
+	}
+
+	function mapDispatchToProps(dispatch) {
+	  return (0, _redux.bindActionCreators)({ setSearch: _actionCreator.setSearch }, dispatch);
+	}
+
+	exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(AdvanceSearch);
+
+/***/ },
+/* 412 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(158);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var AdvanceSearchInput = function AdvanceSearchInput(props) {
+	  return _react2.default.createElement(
+	    'div',
+	    { className: 'signup-input' },
+	    _react2.default.createElement(
+	      'form',
+	      { onSubmit: props.GetAdvanceSearchData },
+	      _react2.default.createElement('input', { type: 'city', value: props.city, onChange: props.addCity, className: 'city-input', placeholder: 'City' }),
+	      _react2.default.createElement('input', { type: 'state', value: props.state, onChange: props.addState, className: 'state-input', placeholder: 'State' }),
+	      _react2.default.createElement('input', { type: 'education', value: props.education, onChange: props.addEducation, className: 'education-input', placeholder: 'Education' }),
+	      _react2.default.createElement('input', { type: 'gender', value: props.gender, onChange: props.addGender, className: 'gender-input', placeholder: 'Gender' }),
+	      _react2.default.createElement('input', { type: 'experience', value: props.experience, onChange: props.addExperience, className: 'experience-input', placeholder: 'Experience' }),
+	      _react2.default.createElement('input', { type: 'stack', value: props.stack, onChange: props.addStack, className: 'stack-input', placeholder: 'Stack' }),
+	      _react2.default.createElement(
+	        'button',
+	        { type: 'submit' },
+	        'Submit'
+	      )
+	    )
+	  );
+	};
+
+	exports.default = AdvanceSearchInput;
+
+/***/ },
+/* 413 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _jquery = __webpack_require__(225);
+
+	var _jquery2 = _interopRequireDefault(_jquery);
+
+	var _loginInput = __webpack_require__(414);
 
 	var _loginInput2 = _interopRequireDefault(_loginInput);
 
@@ -55510,6 +55745,14 @@ module.exports =
 	var _login2 = _interopRequireDefault(_login);
 
 	var _reactRouter = __webpack_require__(158);
+
+	var _advanceSearch = __webpack_require__(411);
+
+	var _advanceSearch2 = _interopRequireDefault(_advanceSearch);
+
+	var _flash = __webpack_require__(415);
+
+	var _flash2 = _interopRequireDefault(_flash);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -55530,7 +55773,10 @@ module.exports =
 	    _this.state = {
 	      email: "",
 	      password: "",
-	      authToken: ""
+	      authToken: null,
+	      hasError: false,
+	      errorType: "",
+	      errorMessage: ""
 	    };
 	    return _this;
 	  }
@@ -55553,7 +55799,18 @@ module.exports =
 	    key: 'redirectToDashboard',
 	    value: function redirectToDashboard(dataToken) {
 	      // this.context.router.push({token: dataToken}, '/dashboard');
-	      this.props.history.pushState({ token: dataToken }, '/jobs');
+	      if (dataToken) {
+	        this.context.router.push('/dashboard');
+	        // this.context.router.push('/advance-search');
+	      } else {
+	        this.setState({
+	          hasError: true,
+	          errorType: "alert alert-danger",
+	          merrorMessage: "Please check your email and password and try again!"
+	        });
+	        this.context.router.push('/login');
+	      }
+	      // this.props.history.pushState({token: dataToken}, '/jobs');
 	    }
 	  }, {
 	    key: 'loginToServer',
@@ -55585,6 +55842,7 @@ module.exports =
 	      return _react2.default.createElement(
 	        'div',
 	        null,
+	        this.state.hasError ? _react2.default.createElement(_flash2.default, { type: this.state.errorType, message: this.state.errorMessage }) : null,
 	        _react2.default.createElement(_loginInput2.default, { history: this.props.history, loginToServer: this.loginToServer.bind(this), changeUser: this.changeUser.bind(this), changePassword: this.changePassword.bind(this) })
 	      );
 	    }
@@ -55600,7 +55858,7 @@ module.exports =
 	exports.default = LoginForm;
 
 /***/ },
-/* 412 */
+/* 414 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -55664,7 +55922,63 @@ module.exports =
 	exports.default = LoginInput;
 
 /***/ },
-/* 413 */
+/* 415 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Flash = function (_React$Component) {
+	  _inherits(Flash, _React$Component);
+
+	  function Flash(props) {
+	    _classCallCheck(this, Flash);
+
+	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Flash).call(this, props));
+
+	    _this.state = {
+	      type: "",
+	      message: ""
+	    };
+	    return _this;
+	  }
+
+	  _createClass(Flash, [{
+	    key: "render",
+	    value: function render() {
+	      console.log(this.props);
+	      return _react2.default.createElement("div", null);
+	    }
+	  }]);
+
+	  return Flash;
+	}(_react2.default.Component);
+
+	exports.default = Flash;
+
+	// <div className={this.state.type}>
+	//           <p>{this.state.message}</p>
+	//         </div>
+
+/***/ },
+/* 416 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -55685,7 +55999,7 @@ module.exports =
 
 	var _reactRouter = __webpack_require__(158);
 
-	var _signupInput = __webpack_require__(414);
+	var _signupInput = __webpack_require__(417);
 
 	var _signupInput2 = _interopRequireDefault(_signupInput);
 
@@ -55783,7 +56097,7 @@ module.exports =
 	exports.default = SignForm;
 
 /***/ },
-/* 414 */
+/* 417 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -55820,7 +56134,7 @@ module.exports =
 	exports.default = SignupInput;
 
 /***/ },
-/* 415 */
+/* 418 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -55841,11 +56155,7 @@ module.exports =
 
 	var _jquery2 = _interopRequireDefault(_jquery);
 
-	var _dashboardUserprofile = __webpack_require__(416);
-
-	var _dashboardUserprofile2 = _interopRequireDefault(_dashboardUserprofile);
-
-	var _dashboardDatainput = __webpack_require__(417);
+	var _dashboardDatainput = __webpack_require__(419);
 
 	var _dashboardDatainput2 = _interopRequireDefault(_dashboardDatainput);
 
@@ -55872,7 +56182,6 @@ module.exports =
 	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Dashboard).call(this, props));
 
 	    _this.state = {
-	      bio: {},
 	      state: '',
 	      city: '',
 	      salary: null,
@@ -55883,17 +56192,38 @@ module.exports =
 	    };
 	    return _this;
 	  }
-	  // componentDidMount(){
-	  //   // console.log(this.props.location.state);
-	  //   console.log(this.props.salary);
-	  // }
-
+	  // enter in data, then receive a view of data and make the input disappear area.
+	  // displays current users data
+	  // add a button that ask if the user wants to input more data
 
 	  _createClass(Dashboard, [{
-	    key: 'renderName',
-	    value: function renderName() {
-	      console.log("I AM THE NAME," + JSON.stringify(this.props.name));
-	      return this.props.name.name;
+	    key: 'inputData',
+	    value: function inputData(e) {
+	      e.preventDefault();
+
+	      var self = this;
+	      var cityState = this.state.cityState.split(", ");
+
+	      // Remember to lowercase -- its only not in lowercase now because you input the data in as MEAN
+	      // .toLowerCase()
+	      var data = { stack: this.state.stack, city: cityState[0], state: cityState[1] };
+
+	      _jquery2.default.ajax({
+	        url: "http://localhost:3000/search",
+	        type: "POST",
+	        contentType: "application/json",
+	        data: JSON.stringify(data),
+	        success: function success(data) {
+	          self.setState({
+	            salary: data
+	          });
+
+	          self.redirectToResults(data);
+	        },
+	        error: function error(err) {
+	          console.log(err);
+	        }
+	      });
 	    }
 	  }, {
 	    key: 'render',
@@ -55906,16 +56236,7 @@ module.exports =
 	          null,
 	          'Welcome to the Dashboard'
 	        ),
-	        _react2.default.createElement(
-	          'h2',
-	          null,
-	          this.renderName()
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'col-md-4' },
-	          _react2.default.createElement(_dashboardUserprofile2.default, { username: this.state.bio, bio: this.state.bio })
-	        ),
+	        _react2.default.createElement('div', { className: 'col-md-4' }),
 	        _react2.default.createElement(
 	          'div',
 	          { className: 'col-md-4' },
@@ -55931,88 +56252,22 @@ module.exports =
 	function mapStateToProps(state) {
 	  return {
 	    salary: state.salary,
-	    name: state.name
+	    state: state.state,
+	    city: state.city,
+	    education: state.education,
+	    experience: state.experience,
+	    stack: state.stack
 	  };
 	}
 
 	function mapDispatchToProps(dispatch) {
-	  return (0, _redux.bindActionCreators)({ setSearch: _actionCreator.setSearch }, dispatch);
+	  return (0, _redux.bindActionCreators)({ setUserInfo: _actionCreator.setUserInfo }, dispatch);
 	}
 
 	exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(Dashboard);
 
-	// export default Dashboard;
-
 /***/ },
-/* 416 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _react = __webpack_require__(2);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactRouter = __webpack_require__(158);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	var Userprofile = function Userprofile(props) {
-	  return _react2.default.createElement(
-	    'div',
-	    { className: 'userprofile' },
-	    _react2.default.createElement(
-	      'p',
-	      null,
-	      ' USER PROFILE '
-	    ),
-	    props.bio.avatar_url && _react2.default.createElement(
-	      'li',
-	      { className: 'list-group-item' },
-	      ' ',
-	      _react2.default.createElement('img', { src: props.bio.avatar_url, className: 'img-rounded img-responsive' })
-	    ),
-	    props.bio.name && _react2.default.createElement(
-	      'li',
-	      { className: 'list-group-item' },
-	      'Name: ',
-	      props.bio.name
-	    ),
-	    props.bio.login && _react2.default.createElement(
-	      'li',
-	      { className: 'list-group-item' },
-	      'Username: ',
-	      props.bio.login
-	    ),
-	    props.bio.email && _react2.default.createElement(
-	      'li',
-	      { className: 'list-group-item' },
-	      'Email: ',
-	      props.bio.email
-	    ),
-	    props.bio.location && _react2.default.createElement(
-	      'li',
-	      { className: 'list-group-item' },
-	      'Location: ',
-	      props.bio.location
-	    ),
-	    props.bio.company && _react2.default.createElement(
-	      'li',
-	      { className: 'list-group-item' },
-	      'Company: ',
-	      props.bio.company
-	    )
-	  );
-	};
-
-	exports.default = Userprofile;
-
-/***/ },
-/* 417 */
+/* 419 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -56053,198 +56308,6 @@ module.exports =
 	};
 
 	exports.default = DataInput;
-
-/***/ },
-/* 418 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(2);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _jquery = __webpack_require__(225);
-
-	var _jquery2 = _interopRequireDefault(_jquery);
-
-	var _reactRouter = __webpack_require__(158);
-
-	var _advanceSearchInput = __webpack_require__(419);
-
-	var _advanceSearchInput2 = _interopRequireDefault(_advanceSearchInput);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var AdvanceSearch = function (_React$Component) {
-	  _inherits(AdvanceSearch, _React$Component);
-
-	  function AdvanceSearch() {
-	    _classCallCheck(this, AdvanceSearch);
-
-	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(AdvanceSearch).call(this));
-
-	    _this.state = {
-	      stack: [],
-	      city: "",
-	      state: "",
-	      education: "",
-	      gender: "",
-	      experience: "",
-	      salary: {}
-	    };
-	    return _this;
-	  }
-
-	  _createClass(AdvanceSearch, [{
-	    key: 'findCity',
-	    value: function findCity(e) {
-	      this.setState({
-	        city: e.target.value
-	      });
-	    }
-	  }, {
-	    key: 'findState',
-	    value: function findState(e) {
-	      this.setState({
-	        state: e.target.value
-	      });
-	    }
-	  }, {
-	    key: 'findEducation',
-	    value: function findEducation(e) {
-	      this.setState({
-	        education: e.target.value
-	      });
-	    }
-	  }, {
-	    key: 'findGender',
-	    value: function findGender(e) {
-	      this.setState({
-	        gender: e.target.value
-	      });
-	    }
-	  }, {
-	    key: 'findExperience',
-	    value: function findExperience(e) {
-	      this.setState({
-	        experience: e.target.value
-	      });
-	    }
-	  }, {
-	    key: 'findStack',
-	    value: function findStack(e) {
-	      this.state.stack.push(e.target.value);
-	    }
-	  }, {
-	    key: 'redirectToResults',
-	    value: function redirectToResults() {
-	      this.context.router.push({ salary: this.stack.salary }, '/results');
-	    }
-	  }, {
-	    key: 'GetAdvanceSearchData',
-	    value: function GetAdvanceSearchData(e) {
-	      e.preventDefault();
-	      console.log(this.state.stack[this.state.stack.length - 1]);
-	      // Remember to lowercase -- its only not in lowercase now because you input the data in as MEAN
-	      this.state.cityState = this.state.cityState.split(", ");
-	      var data = { stack: this.state.stack[this.state.stack.length - 1], city: this.state.cityState[0].toLowerCase(), state: this.state.cityState[1].toLowerCase() };
-
-	      var self = this;
-	      console.log(data);
-
-	      _jquery2.default.ajax({
-	        url: "http://localhost:3000/search",
-	        type: "POST",
-	        contentType: "application/json",
-	        data: JSON.stringify(data),
-	        success: function success(data) {
-	          self.setState({
-	            salary: data
-	          });
-	          console.log("SALARY " + self.state.salary.highest);
-	          self.redirectToResults();
-	        },
-	        error: function error(err) {
-	          console.log(err);
-	        }
-	      });
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(
-	        'div',
-	        null,
-	        _react2.default.createElement(_advanceSearchInput2.default, { GetAdvanceSearchData: this.GetAdvanceSearchData.bind(this), findStack: this.findStack.bind(this), findCity: this.findCity.bind(this), findState: this.findState.bind(this), findEducation: this.findEducation.bind(this), findGender: this.findGender.bind(this), findExperience: this.findExperience.bind(this) })
-	      );
-	    }
-	  }]);
-
-	  return AdvanceSearch;
-	}(_react2.default.Component);
-
-	;
-
-	AdvanceSearch.contextTypes = {
-	  router: _react2.default.PropTypes.object.isRequired
-	};
-
-	exports.default = AdvanceSearch;
-
-/***/ },
-/* 419 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _react = __webpack_require__(2);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactRouter = __webpack_require__(158);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	var AdvanceSearchInput = function AdvanceSearchInput(props) {
-	  return _react2.default.createElement(
-	    'div',
-	    { className: 'signup-input' },
-	    _react2.default.createElement(
-	      'form',
-	      { onSubmit: props.GetAdvanceSearchData },
-	      _react2.default.createElement('input', { type: 'city', value: props.city, onChange: props.addCity, className: 'city-input', placeholder: 'City' }),
-	      _react2.default.createElement('input', { type: 'state', value: props.state, onChange: props.addState, className: 'state-input', placeholder: 'State' }),
-	      _react2.default.createElement('input', { type: 'education', value: props.education, onChange: props.addEducation, className: 'education-input', placeholder: 'Education' }),
-	      _react2.default.createElement('input', { type: 'gender', value: props.gender, onChange: props.addGender, className: 'gender-input', placeholder: 'Gender' }),
-	      _react2.default.createElement('input', { type: 'experience', value: props.experience, onChange: props.addExperience, className: 'experience-input', placeholder: 'Experience' }),
-	      _react2.default.createElement('input', { type: 'stack', value: props.stack, onChange: props.addStack, className: 'stack-input', placeholder: 'Stack' }),
-	      _react2.default.createElement(
-	        'button',
-	        { type: 'submit' },
-	        'Submit'
-	      )
-	    )
-	  );
-	};
-
-	exports.default = AdvanceSearchInput;
 
 /***/ }
 /******/ ]);

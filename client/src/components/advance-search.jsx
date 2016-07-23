@@ -3,6 +3,10 @@ import $ from 'jquery';
 import { History } from 'react-router';
 import { Router } from 'react-router';
 import AdvanceSearchInput from './advance-searchInput';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { setSearch } from '../actions/actionCreator';
+
 
 class AdvanceSearch extends React.Component{
 
@@ -54,18 +58,30 @@ class AdvanceSearch extends React.Component{
   }
 
   redirectToResults(){
-    this.context.router.push({salary:this.stack.salary}, '/results');
+    // window.salary = this.state.salary;
+    // var data = {stack: this.state.stack, city: cityState[0].toLowerCase(), state:cityState[1].toLowerCase()};
+    // var self = this;
+    console.log(this.state.salary);
+    this.props.setSearch(this.state.salary);
+    // this.props.history.pushState(null, '/results');
+    this.context.router.push('/results');
+
+    // window.location.hash = string
+    // #/key
+    // {salary:this.state.salary}
+    // console.log(this.state.salary);
   }
 
   GetAdvanceSearchData(e) {
     e.preventDefault();
-    console.log(this.state.stack[this.state.stack.length - 1]);
-    // Remember to lowercase -- its only not in lowercase now because you input the data in as MEAN
-    this.state.cityState = this.state.cityState.split(", ");
-    var data = {stack: this.state.stack[this.state.stack.length - 1], city: this.state.cityState[0].toLowerCase(), state:this.state.cityState[1].toLowerCase()};
 
     var self = this;
-    console.log(data);
+    var cityState = this.state.cityState.split(", ");
+
+    // Remember to lowercase -- its only not in lowercase now because you input the data in as MEAN
+    // .toLowerCase()
+
+    var data = {stack: this.state.stack, city: cityState[0], state:cityState[1], education: this.state.education, education:this.state.education, gender:this.state.gender, experience:this.state.experience};
 
     $.ajax({
       url:"http://localhost:3000/search",
@@ -74,28 +90,46 @@ class AdvanceSearch extends React.Component{
       data: JSON.stringify(data),
       success: function(data) {
         self.setState({
-          salary:data
+          salary: data
         });
-        console.log("SALARY " + self.state.salary.highest);
-        self.redirectToResults();
+
+        self.redirectToResults(data);
       },
       error: function(err) {
         console.log(err);
       }
     });
+
   }
+
 
   render() {
     return (
       <div>
-        <AdvanceSearchInput GetAdvanceSearchData={this.GetAdvanceSearchData.bind(this)} findStack={this.findStack.bind(this)} findCity={this.findCity.bind(this)} findState={this.findState.bind(this)} findEducation={this.findEducation.bind(this)} findGender={this.findGender.bind(this)} findExperience={this.findExperience.bind(this)} />
+        <div className="dashboard row">
+          <h1>Advance Search</h1>
+          <div className="col-md-4">
+            <AdvanceSearchInput GetAdvanceSearchData={this.GetAdvanceSearchData.bind(this)} findStack={this.findStack.bind(this)} findCity={this.findCity.bind(this)} findState={this.findState.bind(this)} findEducation={this.findEducation.bind(this)} findGender={this.findGender.bind(this)} findExperience={this.findExperience.bind(this)} />
+          </div>
+        </div>
       </div>
     );
   }
 };
 
-AdvanceSearch.contextTypes= {
-  router: React.PropTypes.object.isRequired
-};
+// AdvanceSearch.contextTypes= {
+//   router: React.PropTypes.object.isRequired
+// };
 
-export default AdvanceSearch;
+
+  function mapStateToProps(state) {
+    return {
+      salary : state.salary
+    }
+  }
+
+  function mapDispatchToProps(dispatch) {
+    return bindActionCreators({setSearch: setSearch}, dispatch);
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(AdvanceSearch);

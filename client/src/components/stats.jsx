@@ -5,6 +5,7 @@ import Results from './results';
 import Search from './search';
 import Footer from './footer';
 import Jobs from './jobs';
+import AdvanceSearch from './advance-search';
 import { History } from 'react-router';
 
 class Stats extends React.Component {

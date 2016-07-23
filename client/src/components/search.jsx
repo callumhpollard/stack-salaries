@@ -37,7 +37,9 @@ class Search extends React.Component{
     // var data = {stack: this.state.stack, city: cityState[0].toLowerCase(), state:cityState[1].toLowerCase()};
     // var self = this;
     this.props.setSearch(this.state.salary);
-    this.props.history.pushState(null, '/results');
+    // this.props.history.pushState(null, '/results');
+    this.context.router.push('/results');
+
     // window.location.hash = string
     // #/key
     // {salary:this.state.salary}
@@ -52,7 +54,8 @@ class Search extends React.Component{
     var cityState = this.state.cityState.split(", ");
 
     // Remember to lowercase -- its only not in lowercase now because you input the data in as MEAN
-    var data = {stack: this.state.stack, city: cityState[0].toLowerCase(), state:cityState[1].toLowerCase()};
+    // .toLowerCase()
+    var data = {stack: this.state.stack, city: cityState[0], state:cityState[1]};
 
     $.ajax({
       url:"http://localhost:3000/search",
@@ -80,6 +83,10 @@ class Search extends React.Component{
       </div>
     );
   }
+};
+
+Search.contextTypes = {
+  router: React.PropTypes.object.isRequired
 };
 
   function mapStateToProps(state) {

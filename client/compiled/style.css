@@ -2,8 +2,6 @@
 @import url(https://fonts.googleapis.com/css?family=Arimo:400,400italic,700,700italic);
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url('../fonts/glyphicons-halflings-regular.eot');
-  src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
 }
 
 body {
@@ -224,4 +222,8 @@ svg {
 
 #bar2 rect{
   fill: #E60900;
+}
+
+.hide {
+  display: none;
 }

@@ -57,23 +57,23 @@ app.all('*', function(req, res, next) { 
 });
 
 //Search for any field
-app.post('/search', function(req, res, next){
-  SD.querySalary(req.body, function(results){
+app.post('/search', function(req, res, next) {
+  SD.querySalary(req.body, function(results) {
     res.json(results);
   });
-})
+});
 
 // Add a Stack Entry
-app.post('/stackentry', function(req, res, next){
-  SD.createSalary(req.body, function(result){
+app.post('/stackentry', function(req, res, next) {
+  SD.createSalary(req.body, function(result) {
     res.status(201);
     res.json(result);
-  })
+  });
 });
 
 // GET all users
-app.get('/users', requireAuth, function(req, res, next){
-  User.find({}, function(err, users){
+app.get('/users', requireAuth, function(req, res, next) {
+  User.find({}, function(err, users) {
     if(!err) {
       res.send(200, users);
     } else {
@@ -82,13 +82,13 @@ app.get('/users', requireAuth, function(req, res, next){
   });
 });
 
-app.get('/users/:id', function(req, res, next){
+app.get('/users/:id', function(req, res, next) {
   var id = req.params.id;
 
   // A friendly error to display if no user matches the id
   var err = "No such user with the given id";
 
-   User.findOne({ id: id}, function(err, existingUser){
+   User.findOne({ id: id}, function(err, existingUser) {
     if(err) {
       res.send(err);
     } else {
@@ -99,13 +99,13 @@ app.get('/users/:id', function(req, res, next){
 
 // The middleware will verify credentials
 // If successful, hand a token
-app.post('/signin', requireSignIn, function(req, res, next){
+app.post('/signin', requireSignIn, function(req, res, next) {
   var userToken = generateToken(req.user);
 
   res.send({token: userToken });
 });
 
-app.post('/signup', function(req, res, next){
+app.post('/signup', function(req, res, next) {
   var name = req.body.name;
   var email = req.body.email;
   var password = req.body.password;
@@ -116,7 +116,7 @@ app.post('/signup', function(req, res, next){
   }
 
   // Check email already exists
-  User.findOne({ email: email}, function(err, existingUser){
+  User.findOne({ email: email}, function(err, existingUser) {
 
     if(err) { return next(err); }
 

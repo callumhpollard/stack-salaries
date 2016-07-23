@@ -5,7 +5,6 @@ import Search from './search';
 import Cloud from './cloud';
 import { Link } from 'react-router';
 
-
 class App extends React.Component {
 
   constructor() {

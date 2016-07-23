@@ -1,7 +1,5 @@
-
-
 export const SET_SEARCH = 'SET_SEARCH';
-export const SET_NAME = 'SET_NAME';
+export const SET_USERINFO = 'SET_USERINFO';
 
 
 export function setSearch(searchInput) {
@@ -13,9 +11,9 @@ export function setSearch(searchInput) {
   // console.log("OUR ACTION ", JSON.stringify(results));
 }
 
-// export function setName()  {
-//   return {
-//     type: SET_NAME,
-//     payload:
-//   };
-// }
+export function setUserInfo(userData)  {
+  return {
+    type: SET_USERINFO,
+    payload: userData
+  };
+}

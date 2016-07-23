@@ -7,7 +7,7 @@ import search from './search';
 import { bindActionCreators } from 'redux';
 import { setSearch } from '../actions/actionCreator';
 
-// this.props.salary
+
 var SetIntervalMixin = {
   componentWillMount: function() {
     this.intervals = [];
@@ -164,28 +164,6 @@ class Results extends React.Component {
             ]
       }
     }
-
-    // getDefaultProps: function() {
-    //     return {
-    //       width: 500,
-    //       height: 500
-    //     }
-    // },
-
-    // getInitialState: function(props) {
-    //     console.log("THIS IS STORE " + JSON.stringify(this.props.salary));
-    //     return {
-    //       data: [
-    //         {x: 'a', y: window.salary.average},
-    //         {x: 'b', y: window.salary.average},
-    //         {x: 'c', y: window.salary.highest}
-    //       ]
-    //     }
-    // },
-
-    // renderSalary: function () {
-    //   return this.props.salary;
-    // },
 
     render() {
 
