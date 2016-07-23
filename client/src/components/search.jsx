@@ -6,7 +6,7 @@ import { Router } from 'react-router';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { setSearch } from '../actions/actionCreator';
-import results from './results';
+// import Results from './results';
 
 // containers are glorfied components - containers have access to redux
 class Search extends React.Component{
@@ -33,11 +33,13 @@ class Search extends React.Component{
   }
 
   redirectToResults(salaryresults){
-    window.salary = this.state.salary;
+    // window.salary = this.state.salary;
     // var data = {stack: this.state.stack, city: cityState[0].toLowerCase(), state:cityState[1].toLowerCase()};
-    var self = this;
-    self.props.setSearch(salaryresults);
-    self.props.history.pushState(null, '/results');
+    // var self = this;
+    this.props.setSearch(this.state.salary);
+    // this.props.history.pushState(null, '/results');
+    this.context.router.push('/results');
+
     // window.location.hash = string
     // #/key
     // {salary:this.state.salary}
@@ -52,8 +54,8 @@ class Search extends React.Component{
     var cityState = this.state.cityState.split(", ");
 
     // Remember to lowercase -- its only not in lowercase now because you input the data in as MEAN
-    var data = {stack: this.state.stack, city: cityState[0].toLowerCase(), state:cityState[1].toLowerCase()};
-
+    // .toLowerCase()
+    var data = {stack: this.state.stack, city: cityState[0], state:cityState[1]};
 
     $.ajax({
       url:"http://localhost:3000/search",
@@ -83,6 +85,10 @@ class Search extends React.Component{
   }
 };
 
+Search.contextTypes = {
+  router: React.PropTypes.object.isRequired
+};
+
   function mapStateToProps(state) {
     return {
       // stack: state.stack,
@@ -96,4 +102,4 @@ function mapDispatchToProps(dispatch) {
   return bindActionCreators({setSearch: setSearch}, dispatch);
 }
 
-export default connect(mapStateToProps, mapDispatchToProps) (Search);
+export default connect(mapStateToProps, mapDispatchToProps)(Search);

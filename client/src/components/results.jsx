@@ -7,11 +7,11 @@ import search from './search';
 import { bindActionCreators } from 'redux';
 import { setSearch } from '../actions/actionCreator';
 
-// this.props.salary
+
 var SetIntervalMixin = {
   componentWillMount: function() {
     this.intervals = [];
-    console.log("COMPONENT " + JSON.stringify(this.props));
+    // console.log("COMPONENT " + JSON.stringify(this.props));
   },
   setInterval: function() {
     this.intervals.push(setInterval.apply(null, arguments));
@@ -153,53 +153,31 @@ var changeDataTrue = true;
 
 class Results extends React.Component {
     constructor(props){
+      super(props);
       this.state = {
         width: 500,
         height: 500,
         data: [
-              {x: 'a', y: window.salary.lowest},
-              {x: 'b', y: window.salary.average},
-              {x: 'c', y: window.salary.highest}
+              {x: 'a', y: this.props.salary.lowest},
+              {x: 'b', y: this.props.salary.average},
+              {x: 'c', y: this.props.salary.highest}
             ]
       }
-  }
-
     }
-    // getDefaultProps: function() {
-    //     return {
-    //       width: 500,
-    //       height: 500
-    //     }
-    // },
 
-    // getInitialState: function(props) {
-    //     console.log("THIS IS STORE " + JSON.stringify(this.props.salary));
-    //     return {
-    //       data: [
-    //         {x: 'a', y: window.salary.average},
-    //         {x: 'b', y: window.salary.average},
-    //         {x: 'c', y: window.salary.highest}
-    //       ]
-    //     }
-    // },
-
-    // renderSalary: function () {
-    //   return this.props.salary;
-    // },
-
-    render: function() {
+    render() {
 
         return (
           <div>
             <div className="selection">
-              <h3 className="text-center">{window.salary.label}</h3>
+              <h3 className="text-center">{this.props.salary.label}</h3>
             </div>
             <hr/>
-            <Chart width={this.props.width}
-                   height={this.props.height}>
+            <Chart width={this.state.width}
+                   height={this.state.height}>
               <Bar data={this.state.data}
-                          width={this.props.width}
-                          height={this.props.height} />
+                          width={this.state.width}
+                          height={this.state.height} />
             </Chart>
           </div>
         );

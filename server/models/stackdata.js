@@ -12,4 +12,4 @@ var stackdataSchema = mongoose.Schema({
 
 var StackData = mongoose.model('StackData', stackdataSchema);
 
-module.exports = StackData
+module.exports = StackData;

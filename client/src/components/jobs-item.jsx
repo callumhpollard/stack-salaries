@@ -2,7 +2,7 @@ import React from 'react';
 
 var JobsItem = (props) => {
   return(
-    <div className="col-md-4">
+    <div className="col-md-4" key={props.job.jobkey}>
       <div className="panel panel-default">
         <div className="panel-heading">
           <div className="panel-title text-center">{props.job.jobtitle[0]}</div>

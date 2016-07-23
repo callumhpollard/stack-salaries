@@ -4,6 +4,8 @@ import LoginInput from './login-input';
 import Login from './login';
 import { History } from 'react-router';
 import { Router } from 'react-router';
+import AdvanceSearch from './advance-search';
+import Flash from './flash';
 
 class LoginForm extends React.Component{
   constructor() {
@@ -13,7 +15,10 @@ class LoginForm extends React.Component{
     this.state = {
       email: "",
       password: "",
-      authToken: ""
+      authToken: null,
+      hasError: false,
+      errorType: "",
+      errorMessage: ""
     };
   }
 
@@ -29,26 +34,22 @@ class LoginForm extends React.Component{
     });
   }
 
-  redirectToDashboard(dataToken){
+  redirectToDashboard(err){
     // this.context.router.push({token: dataToken}, '/dashboard');
-<<<<<<< HEAD
-<<<<<<< HEAD
-    this.props.history.pushState({token: dataToken}, '/jobs');
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-    this.props.history.pushState(null, '/dashboard');
-=======
-    console.log(this.props);
-    this.props.history.pushState({token: dataToken}, '/dashboard');
->>>>>>> 4bb18f8603293f2bcdc29db9247561a88fdd5717
-=======
-    this.props.history.pushState({token: dataToken}, '/jobs');
->>>>>>> 5c6215621b03cbb0632b65186cc1fc6b19dfebb4
->>>>>>> RoutesAndRedux
-=======
-    this.props.history.pushState({token: dataToken}, '/jobs');
->>>>>>> RoutesAndRedux
+
+    if(!err){
+      this.context.router.push('/dashboard');
+      // this.context.router.push('/advance-search');
+    } else {
+       this.setState({
+          hasError: true,
+          errorType: "alert alert-danger",
+          errorMessage: "Please check your email and password and try again!"
+        });
+       console.log(this.state);
+      // this.context.router.push('/login');
+    }
+    // this.props.history.pushState({token: dataToken}, '/jobs');
   }
 
   loginToServer(e) {
@@ -67,18 +68,27 @@ class LoginForm extends React.Component{
         self.setState({
           authToken: data.token,
         });
-        self.redirectToDashboard(data.token);
+        console.log(data.token);
+        self.redirectToDashboard();
       },
       error: function(err) {
-        console.log(err);
+        self.redirectToDashboard("meow");
       }
     });
   }
 
 
   render() {
+     var toggle = "";
+     if(this.state.hasError){
+        toggle = "hide";
+     }
+
     return (
       <div>
+        <div className={toggle}>
+          <Flash type={this.state.errorType} message={this.state.errorMessage} />
+        </div>
         <LoginInput history={this.props.history} loginToServer={this.loginToServer.bind(this)} changeUser={this.changeUser.bind(this)} changePassword={this.changePassword.bind(this)} />
       </div>
     );

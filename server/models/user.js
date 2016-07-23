@@ -5,7 +5,8 @@ var userSchema = new mongoose.Schema({
   name: String,
   email: {type: String, unique: true, lowercase: true},
   password: String,
-  githubId: Number
+  githubId: Number,
+  userData: []
 });
 
 // Presave hook to run before saving a user

@@ -5,7 +5,7 @@ var JobsList = (props) => {
   if(props.jobs){
     return (
       <div>
-          {props.jobs.map((job) => <JobsItem job={job} />)}
+          {props.jobs.map((job) => <JobsItem key={job.jobkey} job={job} />)}
       </div>
     )
   } else {
