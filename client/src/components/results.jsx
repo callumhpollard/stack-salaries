@@ -2,11 +2,16 @@ import React from 'react';
 import d3 from 'd3';
 import { History } from 'react-router';
 import { Router } from 'react-router';
+import { connect } from 'react-redux';
+import search from './search';
+import { bindActionCreators } from 'redux';
+import { setSearch } from '../actions/actionCreator';
 
-
+// this.props.salary
 var SetIntervalMixin = {
   componentWillMount: function() {
     this.intervals = [];
+    console.log("COMPONENT " + JSON.stringify(this.props));
   },
   setInterval: function() {
     this.intervals.push(setInterval.apply(null, arguments));
@@ -146,25 +151,44 @@ var Axis = React.createClass({
 
 var changeDataTrue = true;
 
-var Results = React.createClass({
-    getDefaultProps: function() {
-        return {
-          width: 500,
-          height: 500
-        }
-    },
+class Results extends React.Component {
+    constructor(props){
+      this.state = {
+        width: 500,
+        height: 500,
+        data: [
+              {x: 'a', y: window.salary.lowest},
+              {x: 'b', y: window.salary.average},
+              {x: 'c', y: window.salary.highest}
+            ]
+      }
+  }
 
-    getInitialState: function() {
-        return {
-          data: [
-            {x: 'a', y: window.salary.lowest},
-            {x: 'b', y: window.salary.average},
-            {x: 'c', y: window.salary.highest}
-          ]
-        }
-    },
+    }
+    // getDefaultProps: function() {
+    //     return {
+    //       width: 500,
+    //       height: 500
+    //     }
+    // },
+
+    // getInitialState: function(props) {
+    //     console.log("THIS IS STORE " + JSON.stringify(this.props.salary));
+    //     return {
+    //       data: [
+    //         {x: 'a', y: window.salary.average},
+    //         {x: 'b', y: window.salary.average},
+    //         {x: 'c', y: window.salary.highest}
+    //       ]
+    //     }
+    // },
+
+    // renderSalary: function () {
+    //   return this.props.salary;
+    // },
 
     render: function() {
+
         return (
           <div>
             <div className="selection">
@@ -180,6 +204,18 @@ var Results = React.createClass({
           </div>
         );
     }
-});
+};
 
-export default Results;
+ function mapStateToProps(state) {
+    return {
+      salary: state.salary
+    }
+  }
+
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({setSearch: setSearch}, dispatch);
+}
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(Results);
+// export default Results;

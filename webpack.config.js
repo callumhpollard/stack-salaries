@@ -17,6 +17,9 @@ var clientConfig = {
       './client/src/components/jobs-list.jsx',
       './client/src/components/jobs-item.jsx',
       './client/src/components/results.jsx',
+      './client/src/actions/actionCreator.jsx',
+      './client/src/reducers/combine.jsx',
+      './client/src/reducers/searchReducer.jsx',
       './client/src/index.js',
   ],
   output: {
@@ -28,7 +31,8 @@ var clientConfig = {
       exclude: /node_modules/,
       loader: 'babel',
       query: {
-        presets: ['react', 'es2015', 'stage-1']
+        presets: ['react', 'es2015', 'stage-1'],
+        plugins: ['transform-decorators-legacy']
       }
     }]
   },
