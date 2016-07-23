@@ -151,24 +151,37 @@ var Axis = React.createClass({
 
 var changeDataTrue = true;
 
-var Results = React.createClass({
-    getDefaultProps: function() {
-        return {
-          width: 500,
-          height: 500
-        }
-    },
+class Results extends React.Component {
+    constructor(props){
+      this.state = {
+        width: 500,
+        height: 500,
+        data: [
+              {x: 'a', y: window.salary.lowest},
+              {x: 'b', y: window.salary.average},
+              {x: 'c', y: window.salary.highest}
+            ]
+      }
+  }
 
-    getInitialState: function(props) {
-        console.log("THIS IS STORE " + JSON.stringify(this.props.salary));
-        return {
-          data: [
-            {x: 'a', y: window.salary.average},
-            {x: 'b', y: window.salary.average},
-            {x: 'c', y: window.salary.highest}
-          ]
-        }
-    },
+    }
+    // getDefaultProps: function() {
+    //     return {
+    //       width: 500,
+    //       height: 500
+    //     }
+    // },
+
+    // getInitialState: function(props) {
+    //     console.log("THIS IS STORE " + JSON.stringify(this.props.salary));
+    //     return {
+    //       data: [
+    //         {x: 'a', y: window.salary.average},
+    //         {x: 'b', y: window.salary.average},
+    //         {x: 'c', y: window.salary.highest}
+    //       ]
+    //     }
+    // },
 
     // renderSalary: function () {
     //   return this.props.salary;
@@ -191,7 +204,7 @@ var Results = React.createClass({
           </div>
         );
     }
-});
+};
 
  function mapStateToProps(state) {
     return {
