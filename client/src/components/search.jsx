@@ -6,6 +6,7 @@ import { Router } from 'react-router';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { setSearch } from '../actions/actionCreator';
+import results from './results';
 
 // containers are glorfied components - containers have access to redux
 class Search extends React.Component{
@@ -31,20 +32,18 @@ class Search extends React.Component{
     });
   }
 
-  redirectToResults(){
-    // window.salary = this.state.salary;
+  redirectToResults(salaryresults){
+    window.salary = this.state.salary;
     // var data = {stack: this.state.stack, city: cityState[0].toLowerCase(), state:cityState[1].toLowerCase()};
-    this.props.setSearch(this.state.salary);
-    this.props.history.pushState(null, '/results');
+    var self = this;
+    self.props.setSearch(salaryresults);
+    self.props.history.pushState(null, '/results');
     // window.location.hash = string
     // #/key
     // {salary:this.state.salary}
-    console.log(this.state.salary);
+    // console.log(this.state.salary);
   }
 
-  componentWillMount () {
-
-  }
 
   getDatafromServer(e) {
     e.preventDefault();
@@ -66,7 +65,7 @@ class Search extends React.Component{
           salary: data
         });
 
-        self.redirectToResults();
+        self.redirectToResults(data);
       },
       error: function(err) {
         console.log(err);
@@ -88,7 +87,7 @@ class Search extends React.Component{
     return {
       // stack: state.stack,
       // cityState: state.cityState,
-      setSearch : state.salary
+      salary : state.salary
     }
   }
 

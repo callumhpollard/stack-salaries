@@ -72,7 +72,7 @@ module.exports =
 
 	var _app2 = _interopRequireDefault(_app);
 
-	var _stats = __webpack_require__(253);
+	var _stats = __webpack_require__(255);
 
 	var _stats2 = _interopRequireDefault(_stats);
 
@@ -95,6 +95,10 @@ module.exports =
 	var _advanceSearch = __webpack_require__(265);
 
 	var _advanceSearch2 = _interopRequireDefault(_advanceSearch);
+
+	var _results = __webpack_require__(252);
+
+	var _results2 = _interopRequireDefault(_results);
 
 	var _jobs = __webpack_require__(267);
 
@@ -25159,7 +25163,7 @@ module.exports =
 
 	var _search2 = _interopRequireDefault(_search);
 
-	var _cloud = __webpack_require__(252);
+	var _cloud = __webpack_require__(254);
 
 	var _cloud2 = _interopRequireDefault(_cloud);
 
@@ -25336,6 +25340,10 @@ module.exports =
 
 	var _actionCreator = __webpack_require__(251);
 
+	var _results = __webpack_require__(252);
+
+	var _results2 = _interopRequireDefault(_results);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -25378,19 +25386,17 @@ module.exports =
 	    }
 	  }, {
 	    key: 'redirectToResults',
-	    value: function redirectToResults() {
-	      // window.salary = this.state.salary;
+	    value: function redirectToResults(salaryresults) {
+	      window.salary = this.state.salary;
 	      // var data = {stack: this.state.stack, city: cityState[0].toLowerCase(), state:cityState[1].toLowerCase()};
-	      this.props.setSearch(this.state.salary);
-	      this.props.history.pushState(null, '/results');
+	      var self = this;
+	      self.props.setSearch(salaryresults);
+	      self.props.history.pushState(null, '/results');
 	      // window.location.hash = string
 	      // #/key
 	      // {salary:this.state.salary}
-	      console.log(this.state.salary);
+	      // console.log(this.state.salary);
 	    }
-	  }, {
-	    key: 'componentWillMount',
-	    value: function componentWillMount() {}
 	  }, {
 	    key: 'getDatafromServer',
 	    value: function getDatafromServer(e) {
@@ -25412,7 +25418,7 @@ module.exports =
 	            salary: data
 	          });
 
-	          self.redirectToResults();
+	          self.redirectToResults(data);
 	        },
 	        error: function error(err) {
 	          console.log(err);
@@ -25439,7 +25445,7 @@ module.exports =
 	  return {
 	    // stack: state.stack,
 	    // cityState: state.cityState,
-	    setSearch: state.salary
+	    salary: state.salary
 	  };
 	}
 
@@ -36909,18 +36915,16 @@ module.exports =
 	  value: true
 	});
 	exports.setSearch = setSearch;
-	// if i click on a button lets call the action action
-	// its creates an action (an object that has a type and a payload)
-	// actions get sent to the reducer --> reducer accepts anything the actions give it
-
 	var SET_SEARCH = exports.SET_SEARCH = 'SET_SEARCH';
 
 	function setSearch(searchInput) {
 	  console.log("Search Obj", searchInput);
-	  return {
+	  var results = {
 	    type: SET_SEARCH,
-	    payload: searchInput.data
+	    payload: searchInput
 	  };
+	  console.log("OUR ACTION ", JSON.stringify(results));
+	  return results;
 	}
 
 /***/ },
@@ -36937,154 +36941,7 @@ module.exports =
 
 	var _react2 = _interopRequireDefault(_react);
 
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	var Cloud = _react2.default.createClass({
-	  displayName: 'Cloud',
-
-	  render: function render() {
-	    return _react2.default.createElement('div', null);
-	  }
-	});
-
-	exports.default = Cloud;
-
-/***/ },
-/* 253 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(2);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _login = __webpack_require__(222);
-
-	var _login2 = _interopRequireDefault(_login);
-
-	var _logo = __webpack_require__(254);
-
-	var _logo2 = _interopRequireDefault(_logo);
-
-	var _results = __webpack_require__(255);
-
-	var _results2 = _interopRequireDefault(_results);
-
-	var _search = __webpack_require__(224);
-
-	var _search2 = _interopRequireDefault(_search);
-
-	var _footer = __webpack_require__(257);
-
-	var _footer2 = _interopRequireDefault(_footer);
-
-	var _reactRouter = __webpack_require__(158);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var Stats = function (_React$Component) {
-	  _inherits(Stats, _React$Component);
-
-	  function Stats() {
-	    _classCallCheck(this, Stats);
-
-	    return _possibleConstructorReturn(this, Object.getPrototypeOf(Stats).call(this));
-	  }
-
-	  _createClass(Stats, [{
-	    key: 'componentDidMount',
-	    value: function componentDidMount() {}
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(
-	        'div',
-	        null,
-	        _react2.default.createElement(_logo2.default, null),
-	        _react2.default.createElement(_login2.default, null),
-	        _react2.default.createElement(
-	          'div',
-	          null,
-	          _react2.default.createElement(_results2.default, { history: this.props.history }),
-	          _react2.default.createElement(_search2.default, null),
-	          _react2.default.createElement(_footer2.default, null)
-	        )
-	      );
-	    }
-	  }]);
-
-	  return Stats;
-	}(_react2.default.Component);
-
-	exports.default = Stats;
-
-/***/ },
-/* 254 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _react = __webpack_require__(2);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	var Logo = _react2.default.createClass({
-	  displayName: 'Logo',
-
-	  render: function render() {
-	    return _react2.default.createElement(
-	      'div',
-	      null,
-	      _react2.default.createElement(
-	        'div',
-	        null,
-	        'Stack Salaries'
-	      ),
-	      _react2.default.createElement(
-	        'h3',
-	        null,
-	        'Proudly Made at Hack Reactor'
-	      )
-	    );
-	  }
-	});
-
-	exports.default = Logo;
-
-/***/ },
-/* 255 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _react = __webpack_require__(2);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _d = __webpack_require__(256);
+	var _d = __webpack_require__(253);
 
 	var _d2 = _interopRequireDefault(_d);
 
@@ -37092,13 +36949,13 @@ module.exports =
 
 	var _reactRedux = __webpack_require__(227);
 
+	var _search = __webpack_require__(224);
+
+	var _search2 = _interopRequireDefault(_search);
+
 	var _redux = __webpack_require__(234);
 
 	var _actionCreator = __webpack_require__(251);
-
-	var _search = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"../search\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
-
-	var _search2 = _interopRequireDefault(_search);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -37106,6 +36963,7 @@ module.exports =
 	var SetIntervalMixin = {
 	  componentWillMount: function componentWillMount() {
 	    this.intervals = [];
+	    console.log("COMPONENT " + JSON.stringify(this.props));
 	  },
 	  setInterval: function (_setInterval) {
 	    function setInterval() {
@@ -37278,17 +37136,18 @@ module.exports =
 	  },
 
 	  getInitialState: function getInitialState(props) {
+	    console.log("THIS IS STORE " + JSON.stringify(this.props.salary));
 	    return {
-	      data: [{ x: 'a', y: this.props.setSearch.lowest }, { x: 'b', y: window.salary.average }, { x: 'c', y: window.salary.highest }]
+	      data: [{ x: 'a', y: window.salary.average }, { x: 'b', y: window.salary.average }, { x: 'c', y: window.salary.highest }]
 	    };
 	  },
 
-	  renderSalary: function renderSalary() {
-	    return this.props.salary;
-	  },
+	  // renderSalary: function () {
+	  //   return this.props.salary;
+	  // },
 
 	  render: function render() {
-	    console.log(window.salary);
+	    // console.log(window.salary);
 	    return _react2.default.createElement(
 	      'div',
 	      null,
@@ -37316,18 +37175,19 @@ module.exports =
 
 	function mapStateToProps(state) {
 	  return {
-	    setSearch: state.salary
+	    salary: state.salary
 	  };
 	}
 
-	//  function mapDispatchToProps(dispatch) {
-	//    return bindActionCreators({setSearch: setSearch}, dispatch);
-	//  }
-	// connect(mapStateToProps, mapDispatchToProps) (
-	exports.default = (0, _reactRedux.connect)(mapStateToProps)(Results);
+	function mapDispatchToProps(dispatch) {
+	  return (0, _redux.bindActionCreators)({ setSearch: _actionCreator.setSearch }, dispatch);
+	}
+
+	exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(Results);
+	// export default Results;
 
 /***/ },
-/* 256 */
+/* 253 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;!function() {
@@ -46886,7 +46746,7 @@ module.exports =
 	}();
 
 /***/ },
-/* 257 */
+/* 254 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -46901,30 +46761,139 @@ module.exports =
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var Footer = _react2.default.createClass({
-	  displayName: 'Footer',
+	var Cloud = _react2.default.createClass({
+	  displayName: 'Cloud',
+
+	  render: function render() {
+	    return _react2.default.createElement('div', null);
+	  }
+	});
+
+	exports.default = Cloud;
+
+/***/ },
+/* 255 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _login = __webpack_require__(222);
+
+	var _login2 = _interopRequireDefault(_login);
+
+	var _logo = __webpack_require__(256);
+
+	var _logo2 = _interopRequireDefault(_logo);
+
+	var _results = __webpack_require__(252);
+
+	var _results2 = _interopRequireDefault(_results);
+
+	var _search = __webpack_require__(224);
+
+	var _search2 = _interopRequireDefault(_search);
+
+	var _footer = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./footer\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+
+	var _footer2 = _interopRequireDefault(_footer);
+
+	var _reactRouter = __webpack_require__(158);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Stats = function (_React$Component) {
+	  _inherits(Stats, _React$Component);
+
+	  function Stats() {
+	    _classCallCheck(this, Stats);
+
+	    return _possibleConstructorReturn(this, Object.getPrototypeOf(Stats).call(this));
+	  }
+
+	  _createClass(Stats, [{
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {}
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(_logo2.default, null),
+	        _react2.default.createElement(_login2.default, null),
+	        _react2.default.createElement(
+	          'div',
+	          null,
+	          _react2.default.createElement(_results2.default, { history: this.props.history }),
+	          _react2.default.createElement(_search2.default, null),
+	          _react2.default.createElement(_footer2.default, null)
+	        )
+	      );
+	    }
+	  }]);
+
+	  return Stats;
+	}(_react2.default.Component);
+
+	exports.default = Stats;
+
+/***/ },
+/* 256 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var Logo = _react2.default.createClass({
+	  displayName: 'Logo',
 
 	  render: function render() {
 	    return _react2.default.createElement(
 	      'div',
 	      null,
 	      _react2.default.createElement(
-	        'h1',
+	        'div',
 	        null,
-	        'About | Jobs | Onix | Contact'
+	        'Stack Salaries'
 	      ),
 	      _react2.default.createElement(
-	        'h2',
+	        'h3',
 	        null,
-	        '2016 Stack Salaries'
+	        'Proudly Made at Hack Reactor'
 	      )
 	    );
 	  }
 	});
 
-	exports.default = Footer;
+	exports.default = Logo;
 
 /***/ },
+/* 257 */,
 /* 258 */
 /***/ function(module, exports, __webpack_require__) {
 

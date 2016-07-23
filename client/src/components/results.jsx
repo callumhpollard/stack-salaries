@@ -3,14 +3,15 @@ import d3 from 'd3';
 import { History } from 'react-router';
 import { Router } from 'react-router';
 import { connect } from 'react-redux';
+import search from './search';
 import { bindActionCreators } from 'redux';
 import { setSearch } from '../actions/actionCreator';
-import searchSalary from '../search';
 
 // this.props.salary
 var SetIntervalMixin = {
   componentWillMount: function() {
     this.intervals = [];
+    console.log("COMPONENT " + JSON.stringify(this.props));
   },
   setInterval: function() {
     this.intervals.push(setInterval.apply(null, arguments));
@@ -161,21 +162,22 @@ var Results = React.createClass({
     },
 
     getInitialState: function(props) {
+        console.log("THIS IS STORE " + JSON.stringify(this.props.salary));
         return {
           data: [
-            {x: 'a', y: this.props.setSearch.lowest},
+            {x: 'a', y: window.salary.average},
             {x: 'b', y: window.salary.average},
             {x: 'c', y: window.salary.highest}
           ]
         }
     },
 
-    renderSalary: function () {
-      return this.props.salary;
-    },
+    // renderSalary: function () {
+    //   return this.props.salary;
+    // },
 
     render: function() {
-      console.log(window.salary);
+      // console.log(window.salary);
         return (
           <div>
             <div className="selection">
@@ -195,12 +197,14 @@ var Results = React.createClass({
 
  function mapStateToProps(state) {
     return {
-      setSearch: state.salary
+      salary: state.salary
     }
   }
 
- //  function mapDispatchToProps(dispatch) {
- //    return bindActionCreators({setSearch: setSearch}, dispatch);
- //  }
-// connect(mapStateToProps, mapDispatchToProps) (
-export default connect(mapStateToProps)(Results);
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({setSearch: setSearch}, dispatch);
+}
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(Results);
+// export default Results;

@@ -14,6 +14,9 @@ var clientConfig = {
       './client/src/components/search.jsx',
       './client/src/components/search-input.jsx',
       './client/src/components/results.jsx',
+      './client/src/actions/actionCreator.jsx',
+      './client/src/reducers/combine.jsx',
+      './client/src/reducers/searchReducer.jsx',
       './client/src/index.js',
   ],
   output: {
