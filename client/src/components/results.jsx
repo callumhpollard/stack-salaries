@@ -101,7 +101,7 @@ var Bar = React.createClass({
           x = xScale(i);
 
       return (
-        <g key={i} >
+        <g key={i} id={'bar' + i}>
         <Rect height={height}
               width={width}
               x={x}
@@ -110,14 +110,12 @@ var Bar = React.createClass({
         <text y={y + 37} x={x + 77}
         textAnchor='middle'
         fontFamily='Helvetica Neue'
-        fontSize="30"
-        fill="white"
+        fontSize="20"
         >{'$' + point}</text>
         <text y={580} x={x + 77}
         textAnchor='middle'
         fontFamily='Helvetica Neue'
-        fontSize="30"
-        fill="white"
+        fontSize="20"
         >{salaryRange[i]}</text>
         </g>
       )
@@ -167,11 +165,10 @@ var Results = React.createClass({
     },
 
     render: function() {
-      console.log(window.salary);
         return (
           <div>
             <div className="selection">
-              <h3>{window.salary.label}</h3>
+              <h3 className="text-center">{window.salary.label}</h3>
             </div>
             <hr/>
             <Chart width={this.props.width}
