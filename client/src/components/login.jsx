@@ -7,6 +7,7 @@ const Login = React.createClass({
       <div>
       <button className="btn btn-primary login"><Link to='/login'>Login</Link></button>
       <button className="btn btn-primary login"><Link to='/signup'>Sign Up</Link></button>
+      <button className="btn btn-primary login"><Link to='/dashboard'>Dashboard</Link></button>
       </div>
     );
   }

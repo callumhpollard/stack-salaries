@@ -1,6 +1,6 @@
 import { SET_SEARCH } from '../actions/actionCreator';
 
-export default function(state=null, action) {
+export default function(state = null, action) {
   // var newState = Object.assign({}, state);
   // newState(
   console.log("THIS IS THE ACTION TYPE " + action.type);

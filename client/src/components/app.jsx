@@ -6,11 +6,6 @@ import Cloud from './cloud';
 import { Link } from 'react-router';
 
 
-
-<<<<<<< HEAD
-=======
-
->>>>>>> RoutesAndRedux
 class App extends React.Component {
 
   constructor() {
@@ -47,11 +42,5 @@ App.contextTypes = {
   router: React.PropTypes.object.isRequired
 }
 
-<<<<<<< HEAD
-export default App;
-
-          // <button className="btn btn-primary login"><Link to='/jobs'>Jobs</Link></button>
-=======
 
 export default App;
->>>>>>> RoutesAndRedux
