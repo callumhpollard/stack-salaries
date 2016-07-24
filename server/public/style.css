@@ -86,6 +86,11 @@ body {
   justify-content: center;
 }
 
+.loginbox {
+  background-color: #fff;
+  width: 500px;
+}
+
 .item {
   display: flex;
   border-bottom: 1px solid #3e424a;
@@ -282,76 +287,3 @@ svg {
 }
 
 
-/* Login Styles */
-
-.loginbox {
-  background-color: #fff;
-  width: 500px;
-  padding: 50px;
-  margin-top: 150px;
-  border-radius: 20px;
-}
-
-.loginbox a {
-  color: #1abc9c;
-  text-decoration: none;
-  font-size: 40px;
-  font-weight: bold;
-  letter-spacing: -1px;
-  line-height: 1;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.loginbox .form-control {
-  color: #16a085;
-  border-color: inherit;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-
-.loginbox .form-control:focus {
-  border-color: inherit;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-
-.loginbox .input-group {
-  background-color:#ecf0f1 !important;
-  border:none !important;
-  box-shadow:none !important;
-  outline: 0 !important;
-  -webkit-appearance:none;
-  box-shadow: none;
-  -moz-box-shadow: none;
-  -webkit-box-shadow: none;
-}
-.loginbox .glyphicon {
-  color: #1abc9c;
-  margin: 7px;
-}
-
-.loginbox .form-control {
-  background-color: #ecf0f1;
-  border: none;
-}
-
-.loginbox .btn-primary {
-  width: 100%;
-  height: 35px;
-  background-color: #1abc9c;
-  border: none;
-  border-radius: 20px;
-  margin-top: 10px;
-  margin-left: 0px;
-}
-
-.gray {
-  background-color: #ecf0f1;
-  padding: 2px;
-  border-radius: 20px;
-}
-
-.root {
-  margin-bottom: 20px;
-}

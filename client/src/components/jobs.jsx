@@ -6,13 +6,12 @@ import JobsList from './jobs-list';
 import { connect } from 'react-redux';
 import search from './search';
 import { bindActionCreators } from 'redux';
-import { setSearch } from '../actions/actionCreator';
-
+import { setSearch, setCityState } from '../actions/actionCreator';
 
 class Jobs extends React.Component {
 
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
       jobs: [],
@@ -28,11 +27,11 @@ class Jobs extends React.Component {
 
   var self = this;
 
-
-  console.log(this.props.salary.label);
   // Our query parameters
-  var query = {publisher: "5453642953934453", format:"json", q: "javascript", l: "Austin, TX", v: 2}
+  var query = {publisher: "5453642953934453", format:"json", q: "javascript", l: `${this.props.cityState.cityForJob}, ${this.props.cityState.stateForJob}`, v: 2}
 
+
+  console.log(query);
     $.ajax({
       data: query,
       dataType: 'jsonp',
@@ -68,12 +67,12 @@ class Jobs extends React.Component {
 
 function mapStateToProps(state) {
   return {
-    salary: state.salary
+    cityState: state.cityState
   }
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({setSearch: setSearch}, dispatch);
+  return bindActionCreators({setSearch: setSearch, setCityState:setCityState}, dispatch);
 }
 
 

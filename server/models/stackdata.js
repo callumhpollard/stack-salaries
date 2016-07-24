@@ -7,9 +7,13 @@ var stackdataSchema = mongoose.Schema({
   stack: Array,
   education: String,
   gender: String,
-  experience: Number
+  experience: Number,
+  user_id: Number
 });
 
 var StackData = mongoose.model('StackData', stackdataSchema);
 
 module.exports = StackData;
+
+
+// Find any stackData where user_id = 1

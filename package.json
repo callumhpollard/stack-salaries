@@ -10,7 +10,8 @@
     "compile-server": "babel ./server/server.js --out-file ./server/server-c.js --presets=es2015,react --ignore=node_modules,compiled --source-maps inline",
     "dev": "open 'http://localhost:8080/webpack-dev-server/#/'; webpack-dev-server --content-base ./client/compiled/",
     "live": "nodemon ./server/server-c.js",
-    "start": "npm run compile-server && npm run convert && npm run live"
+    "start": "npm run compile-server && npm run convert && npm run live",
+    "quick": "npm run convert && npm run live"
   },
   "author": "",
   "license": "ISC",
@@ -42,6 +43,7 @@
     "jwt-simple": "^0.5.0",
     "lodash": "^3.10.1",
     "mongoose": "^4.5.3",
+    "mongoose-sequence": "^3.0.2",
     "morgan": "^1.7.0",
     "node-notifier": "^4.2.1",
     "nodemon": "^1.9.2",

@@ -5,7 +5,8 @@ import { History } from 'react-router';
 import { Router } from 'react-router';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { setSearch } from '../actions/actionCreator';
+import { setSearch, setCityState } from '../actions/actionCreator';
+
 // import Results from './results';
 
 // containers are glorfied components - containers have access to redux
@@ -16,7 +17,7 @@ class Search extends React.Component{
     this.state = {
       stack: [],
       cityState: "",
-      salary: {}
+      salary: {},
     };
   }
 
@@ -36,14 +37,11 @@ class Search extends React.Component{
     // window.salary = this.state.salary;
     // var data = {stack: this.state.stack, city: cityState[0].toLowerCase(), state:cityState[1].toLowerCase()};
     // var self = this;
+    var cityState = this.state.cityState.split(", ");
     this.props.setSearch(this.state.salary);
+    this.props.setCityState({cityForJob: cityState[0], stateForJob: cityState[1]});
     // this.props.history.pushState(null, '/results');
     this.context.router.push('/results');
-
-    // window.location.hash = string
-    // #/key
-    // {salary:this.state.salary}
-    // console.log(this.state.salary);
   }
 
 
@@ -78,7 +76,7 @@ class Search extends React.Component{
 
   render() {
     return (
-      <div>
+      <div className="search-wrapper">
         <SearchInput history={this.props.history} getDatafromServer={this.getDatafromServer.bind(this)} findStack={this.findStack.bind(this)} findCityState={this.findCityState.bind(this)} />
       </div>
     );
@@ -99,7 +97,7 @@ Search.contextTypes = {
 
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({setSearch: setSearch}, dispatch);
+  return bindActionCreators({setSearch: setSearch, setCityState: setCityState }, dispatch);
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Search);

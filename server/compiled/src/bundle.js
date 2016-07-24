@@ -25383,7 +25383,7 @@ module.exports =
 	      ),
 	      _react2.default.createElement(
 	        "p",
-	        null,
+	        { className: "text-center" },
 	        "An app for software engineers to post and view anonymous salary info based on their stack and location."
 	      )
 	    );
@@ -25471,14 +25471,11 @@ module.exports =
 	      // window.salary = this.state.salary;
 	      // var data = {stack: this.state.stack, city: cityState[0].toLowerCase(), state:cityState[1].toLowerCase()};
 	      // var self = this;
+	      var cityState = this.state.cityState.split(", ");
 	      this.props.setSearch(this.state.salary);
+	      this.props.setCityState({ cityForJob: cityState[0], stateForJob: cityState[1] });
 	      // this.props.history.pushState(null, '/results');
 	      this.context.router.push('/results');
-
-	      // window.location.hash = string
-	      // #/key
-	      // {salary:this.state.salary}
-	      // console.log(this.state.salary);
 	    }
 	  }, {
 	    key: 'getDatafromServer',
@@ -25514,7 +25511,7 @@ module.exports =
 	    value: function render() {
 	      return _react2.default.createElement(
 	        'div',
-	        null,
+	        { className: 'search-wrapper' },
 	        _react2.default.createElement(_searchInput2.default, { history: this.props.history, getDatafromServer: this.getDatafromServer.bind(this), findStack: this.findStack.bind(this), findCityState: this.findCityState.bind(this) })
 	      );
 	    }
@@ -25538,7 +25535,7 @@ module.exports =
 	}
 
 	function mapDispatchToProps(dispatch) {
-	  return (0, _redux.bindActionCreators)({ setSearch: _actionCreator.setSearch }, dispatch);
+	  return (0, _redux.bindActionCreators)({ setSearch: _actionCreator.setSearch, setCityState: _actionCreator.setCityState }, dispatch);
 	}
 
 	exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(Search);
@@ -35388,12 +35385,12 @@ module.exports =
 	    _react2.default.createElement(
 	      'div',
 	      { className: 'input-group' },
+	      _react2.default.createElement('span', { className: 'glyphicon glyphicon-search' }),
 	      _react2.default.createElement('input', { type: 'text', className: 'form-control', value: props.stack, onChange: props.findStack, placeholder: 'Add your tech stack separated by commas' }),
 	      _react2.default.createElement('input', { type: 'text', className: 'city form-control', value: props.cityState, onChange: props.findCityState, placeholder: 'New York, NY' }),
 	      _react2.default.createElement(
 	        'button',
 	        { className: 'btn btn-primary' },
-	        _react2.default.createElement('span', { className: 'glyphicon glyphicon-search' }),
 	        'Search'
 	      )
 	    )
@@ -37118,15 +37115,26 @@ module.exports =
 	  value: true
 	});
 	exports.setSearch = setSearch;
+	exports.setCityState = setCityState;
 	exports.setUserInfo = setUserInfo;
 	var SET_SEARCH = exports.SET_SEARCH = 'SET_SEARCH';
 	var SET_USERINFO = exports.SET_USERINFO = 'SET_USERINFO';
+	var SET_CITYSTATE = exports.SET_CITYSTATE = 'SET_CITYSTATE';
 
 	function setSearch(searchInput) {
 	  // console.log("Search Obj", searchInput);
 	  return {
 	    type: SET_SEARCH,
 	    payload: searchInput
+	  };
+	  // console.log("OUR ACTION ", JSON.stringify(results));
+	}
+
+	function setCityState(cityState) {
+	  // console.log("Search Obj", searchInput);
+	  return {
+	    type: SET_CITYSTATE,
+	    payload: cityState
 	  };
 	  // console.log("OUR ACTION ", JSON.stringify(results));
 	}
@@ -47276,10 +47284,10 @@ module.exports =
 	var Jobs = function (_React$Component) {
 	  _inherits(Jobs, _React$Component);
 
-	  function Jobs() {
+	  function Jobs(props) {
 	    _classCallCheck(this, Jobs);
 
-	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Jobs).call(this));
+	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Jobs).call(this, props));
 
 	    _this.state = {
 	      jobs: [],
@@ -47299,10 +47307,10 @@ module.exports =
 
 	      var self = this;
 
-	      console.log(this.props.salary.label);
 	      // Our query parameters
-	      var query = { publisher: "5453642953934453", format: "json", q: "javascript", l: "Austin, TX", v: 2 };
+	      var query = { publisher: "5453642953934453", format: "json", q: "javascript", l: this.props.cityState.cityForJob + ', ' + this.props.cityState.stateForJob, v: 2 };
 
+	      console.log(query);
 	      _jquery2.default.ajax({
 	        data: query,
 	        dataType: 'jsonp',
@@ -47339,12 +47347,12 @@ module.exports =
 
 	function mapStateToProps(state) {
 	  return {
-	    salary: state.salary
+	    cityState: state.cityState
 	  };
 	}
 
 	function mapDispatchToProps(dispatch) {
-	  return (0, _redux.bindActionCreators)({ setSearch: _actionCreator.setSearch }, dispatch);
+	  return (0, _redux.bindActionCreators)({ setSearch: _actionCreator.setSearch, setCityState: _actionCreator.setCityState }, dispatch);
 	}
 
 	exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(Jobs);
@@ -55699,13 +55707,13 @@ module.exports =
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var AdvanceSearch = function (_React$Component) {
-	  _inherits(AdvanceSearch, _React$Component);
+	var AdvancedSearch = function (_React$Component) {
+	  _inherits(AdvancedSearch, _React$Component);
 
-	  function AdvanceSearch() {
-	    _classCallCheck(this, AdvanceSearch);
+	  function AdvancedSearch() {
+	    _classCallCheck(this, AdvancedSearch);
 
-	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(AdvanceSearch).call(this));
+	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(AdvancedSearch).call(this));
 
 	    _this.state = {
 	      stack: [],
@@ -55719,7 +55727,7 @@ module.exports =
 	    return _this;
 	  }
 
-	  _createClass(AdvanceSearch, [{
+	  _createClass(AdvancedSearch, [{
 	    key: 'findCity',
 	    value: function findCity(e) {
 	      this.setState({
@@ -55762,33 +55770,22 @@ module.exports =
 	  }, {
 	    key: 'redirectToResults',
 	    value: function redirectToResults() {
-	      // window.salary = this.state.salary;
-	      // var data = {stack: this.state.stack, city: cityState[0].toLowerCase(), state:cityState[1].toLowerCase()};
-	      // var self = this;
-	      console.log(this.state.salary);
 	      this.props.setSearch(this.state.salary);
-	      // this.props.history.pushState(null, '/results');
 	      this.context.router.push('/results');
-
-	      // window.location.hash = string
-	      // #/key
-	      // {salary:this.state.salary}
-	      // console.log(this.state.salary);
 	    }
 	  }, {
-	    key: 'GetAdvanceSearchData',
-	    value: function GetAdvanceSearchData(e) {
+	    key: 'GetAdvancedSearchData',
+	    value: function GetAdvancedSearchData(e) {
 	      var _data;
 
 	      e.preventDefault();
 
 	      var self = this;
-	      var cityState = this.state.cityState.split(", ");
 
 	      // Remember to lowercase -- its only not in lowercase now because you input the data in as MEAN
 	      // .toLowerCase()
 
-	      var data = (_data = { stack: this.state.stack, city: cityState[0], state: cityState[1], education: this.state.education }, _defineProperty(_data, 'education', this.state.education), _defineProperty(_data, 'gender', this.state.gender), _defineProperty(_data, 'experience', this.state.experience), _data);
+	      var data = (_data = { stack: this.state.stack, city: this.state.city, state: this.state.state, education: this.state.education }, _defineProperty(_data, 'education', this.state.education), _defineProperty(_data, 'gender', this.state.gender), _defineProperty(_data, 'experience', this.state.experience), _data);
 
 	      _jquery2.default.ajax({
 	        url: "http://localhost:3000/search",
@@ -55824,22 +55821,21 @@ module.exports =
 	          _react2.default.createElement(
 	            'div',
 	            { className: 'col-md-4' },
-	            _react2.default.createElement(_advanceSearchInput2.default, { GetAdvanceSearchData: this.GetAdvanceSearchData.bind(this), findStack: this.findStack.bind(this), findCity: this.findCity.bind(this), findState: this.findState.bind(this), findEducation: this.findEducation.bind(this), findGender: this.findGender.bind(this), findExperience: this.findExperience.bind(this) })
+	            _react2.default.createElement(_advanceSearchInput2.default, { GetAdvancedSearchData: this.GetAdvancedSearchData.bind(this), findStack: this.findStack.bind(this), findCity: this.findCity.bind(this), findState: this.findState.bind(this), findEducation: this.findEducation.bind(this), findGender: this.findGender.bind(this), findExperience: this.findExperience.bind(this) })
 	          )
 	        )
 	      );
 	    }
 	  }]);
 
-	  return AdvanceSearch;
+	  return AdvancedSearch;
 	}(_react2.default.Component);
 
 	;
 
-	// AdvanceSearch.contextTypes= {
-	//   router: React.PropTypes.object.isRequired
-	// };
-
+	AdvancedSearch.contextTypes = {
+	  router: _react2.default.PropTypes.object.isRequired
+	};
 
 	function mapStateToProps(state) {
 	  return {
@@ -55851,7 +55847,7 @@ module.exports =
 	  return (0, _redux.bindActionCreators)({ setSearch: _actionCreator.setSearch }, dispatch);
 	}
 
-	exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(AdvanceSearch);
+	exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(AdvancedSearch);
 
 /***/ },
 /* 415 */
@@ -55871,13 +55867,13 @@ module.exports =
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var AdvanceSearchInput = function AdvanceSearchInput(props) {
+	var AdvancedSearchInput = function AdvancedSearchInput(props) {
 	  return _react2.default.createElement(
 	    'div',
 	    { className: 'signup-input' },
 	    _react2.default.createElement(
 	      'form',
-	      { onSubmit: props.GetAdvanceSearchData },
+	      { onSubmit: props.GetAdvancedSearchData },
 	      _react2.default.createElement('input', { type: 'city', value: props.city, onChange: props.addCity, className: 'city-input', placeholder: 'City' }),
 	      _react2.default.createElement('input', { type: 'state', value: props.state, onChange: props.addState, className: 'state-input', placeholder: 'State' }),
 	      _react2.default.createElement('input', { type: 'education', value: props.education, onChange: props.addEducation, className: 'education-input', placeholder: 'Education' }),
@@ -55893,7 +55889,7 @@ module.exports =
 	  );
 	};
 
-	exports.default = AdvanceSearchInput;
+	exports.default = AdvancedSearchInput;
 
 /***/ },
 /* 416 */
@@ -56063,13 +56059,13 @@ module.exports =
 	var LoginInput = function LoginInput(props) {
 	  return _react2.default.createElement(
 	    'div',
-	    { className: 'loginBox' },
+	    { className: 'loginbox center-block text-center' },
 	    _react2.default.createElement(
-	      'div',
-	      { className: 'login-input' },
+	      'form',
+	      { onSubmit: props.loginToServer },
 	      _react2.default.createElement(
-	        'form',
-	        { onSubmit: props.loginToServer },
+	        'div',
+	        { className: 'row root' },
 	        _react2.default.createElement(
 	          'h3',
 	          null,
@@ -56078,22 +56074,48 @@ module.exports =
 	            { to: '/', className: 'no-decoration' },
 	            'Stack Salaries'
 	          )
+	        )
+	      ),
+	      _react2.default.createElement(
+	        'fieldset',
+	        { className: 'form-group row gray' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'col-sm-1' },
+	          _react2.default.createElement('span', { className: 'glyphicon glyphicon-envelope' })
 	        ),
 	        _react2.default.createElement(
 	          'div',
-	          { className: 'form-group' },
-	          _react2.default.createElement('input', { type: 'email', value: props.email, onChange: props.changeUser, className: 'form-control', placeholder: 'email' }),
-	          _react2.default.createElement(
-	            'small',
-	            { className: 'text-muted' },
-	            'We\'ll never share your email with anyone else.'
-	          )
+	          { className: 'col-sm-11' },
+	          _react2.default.createElement('input', { type: 'email', value: props.email, onChange: props.changeUser, className: 'form-control', placeholder: 'email' })
+	        )
+	      ),
+	      _react2.default.createElement(
+	        'fieldset',
+	        { className: 'form-group row' },
+	        _react2.default.createElement(
+	          'small',
+	          { className: 'text-muted' },
+	          'We\'ll never share your email with anyone else.'
+	        )
+	      ),
+	      _react2.default.createElement(
+	        'fieldset',
+	        { className: 'form-group row gray' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'col-sm-1' },
+	          _react2.default.createElement('span', { className: 'glyphicon glyphicon-lock' })
 	        ),
 	        _react2.default.createElement(
 	          'div',
-	          { className: 'form-group' },
+	          { className: 'col-sm-11' },
 	          _react2.default.createElement('input', { type: 'password', value: props.password, onChange: props.changePassword, className: 'form-control', placeholder: 'Password' })
-	        ),
+	        )
+	      ),
+	      _react2.default.createElement(
+	        'div',
+	        { className: 'row' },
 	        _react2.default.createElement(
 	          'button',
 	          { type: 'submit', className: 'btn btn-primary' },
@@ -56299,7 +56321,7 @@ module.exports =
 	var SignupInput = function SignupInput(props) {
 	  return _react2.default.createElement(
 	    "div",
-	    { className: "signup-input" },
+	    { className: "loginBox center-block text-center" },
 	    _react2.default.createElement(
 	      "form",
 	      { onSubmit: props.SignUpToServer },
@@ -56339,9 +56361,9 @@ module.exports =
 
 	var _jquery2 = _interopRequireDefault(_jquery);
 
-	var _dashboardDatainput = __webpack_require__(422);
+	var _dashboardDataInput = __webpack_require__(422);
 
-	var _dashboardDatainput2 = _interopRequireDefault(_dashboardDatainput);
+	var _dashboardDataInput2 = _interopRequireDefault(_dashboardDataInput);
 
 	var _reactRedux = __webpack_require__(228);
 
@@ -56372,7 +56394,8 @@ module.exports =
 	      education: '',
 	      gender: '',
 	      experience: '',
-	      stack: []
+	      stack: [],
+	      showInfo: false
 	    };
 	    return _this;
 	  }
@@ -56380,52 +56403,81 @@ module.exports =
 	  // displays current users data
 	  // add a button that ask if the user wants to input more data
 
-	  _createClass(Dashboard, [{
-	    key: 'submitToStore',
-	    value: function submitToStore() {
-	      // window.salary = this.state.salary;
-	      // var data = {stack: this.state.stack, city: cityState[0].toLowerCase(), state:cityState[1].toLowerCase()};
-	      // var self = this;
-	      console.log(this.state.salary);
-	      this.props.setSearch(this.state.salary);
-	      // this.props.history.pushState(null, '/results');
-	      this.context.router.push('/results');
 
-	      // window.location.hash = string
-	      // #/key
-	      // {salary:this.state.salary}
-	      // console.log(this.state.salary);
+	  _createClass(Dashboard, [{
+	    key: 'addCity',
+	    value: function addCity(e) {
+	      this.setState({
+	        city: e.target.value
+	      });
 	    }
+	  }, {
+	    key: 'addState',
+	    value: function addState(e) {
+	      this.setState({
+	        state: e.target.value
+	      });
+	    }
+	  }, {
+	    key: 'addEducation',
+	    value: function addEducation(e) {
+	      this.setState({
+	        education: e.target.value
+	      });
+	    }
+	  }, {
+	    key: 'addExperience',
+	    value: function addExperience(e) {
+	      this.setState({
+	        experience: e.target.value
+	      });
+	    }
+	  }, {
+	    key: 'addStack',
+	    value: function addStack(e) {
+	      this.state.stack.push(e.target.value);
+	    }
+	  }, {
+	    key: 'hideInput',
+	    value: function hideInput(e) {
+	      this.setState({});
+	    }
+
+	    // submitToStore() {
+	    //   // console.log(this.state.salary);
+	    //   var data = {stack: this.state.stack, city: this.state.city, state:this.state.state, education:this.state.education, gender:this.state.gender, experience:this.state.experience};
+	    //   this.props.setUserInfo(data);
+	    // }
+
+
 	  }, {
 	    key: 'inputData',
 	    value: function inputData(e) {
 	      e.preventDefault();
 
 	      var self = this;
-	      var cityState = this.state.cityState.split(", ");
-
-	      // Remember to lowercase -- its only not in lowercase now because you input the data in as MEAN
-	      // .toLowerCase()
-
 	      var data = { stack: this.state.stack, city: this.state.city, state: this.state.state, education: this.state.education, gender: this.state.gender, experience: this.state.experience };
 
 	      _jquery2.default.ajax({
-	        url: "http://localhost:3000/search",
+	        url: "http://localhost:3000/stackentry",
 	        type: "POST",
 	        contentType: "application/json",
 	        data: JSON.stringify(data),
 	        success: function success(data) {
-	          self.setState({
-	            salary: data
-	          });
-
-	          self.redirectToResults(data);
+	          // self.submitToStore();
+	          console.log("YOUR THING WORKED, " + data);
 	        },
 	        error: function error(err) {
 	          console.log(err);
 	        }
 	      });
 	    }
+	    // <li>Location: {this.props.userInfo.city}, {this.props.userInfo.state}</li>
+	    //   <li>Education: {this.props.userInfo.education} </li>
+	    //   <li>Experience: {this.props.userInfo.experience} </li>
+	    //   <li>Stack: {this.props.userInfo.stack}</li>
+	    //   <li>Salary: {this.props.userInfo.salary}</li>
+
 	  }, {
 	    key: 'render',
 	    value: function render() {
@@ -56440,49 +56492,12 @@ module.exports =
 	        _react2.default.createElement(
 	          'div',
 	          { className: 'col-md-4' },
-	          _react2.default.createElement(
-	            'ul',
-	            null,
-	            _react2.default.createElement(
-	              'li',
-	              null,
-	              'Location: ',
-	              this.props.city,
-	              ',',
-	              this.props.state
-	            ),
-	            _react2.default.createElement(
-	              'li',
-	              null,
-	              'Education: ',
-	              this.props.eduation,
-	              ' '
-	            ),
-	            _react2.default.createElement(
-	              'li',
-	              null,
-	              'Experience: ',
-	              this.props.experience,
-	              ' '
-	            ),
-	            _react2.default.createElement(
-	              'li',
-	              null,
-	              'Stack: ',
-	              this.props.stack
-	            ),
-	            _react2.default.createElement(
-	              'li',
-	              null,
-	              'Salary: ',
-	              this.props.salary
-	            )
-	          )
+	          _react2.default.createElement('ul', null)
 	        ),
 	        _react2.default.createElement(
 	          'div',
 	          { className: 'col-md-4' },
-	          _react2.default.createElement(_dashboardDatainput2.default, null)
+	          _react2.default.createElement(_dashboardDataInput2.default, { inputData: this.inputData.bind(this), addStack: this.addStack.bind(this), addCity: this.addCity.bind(this), addState: this.addState.bind(this), addEducation: this.addEducation.bind(this), addExperience: this.addExperience.bind(this) })
 	        )
 	      );
 	    }
@@ -56491,22 +56506,23 @@ module.exports =
 	  return Dashboard;
 	}(_react2.default.Component);
 
-	function mapStateToProps(state) {
-	  return {
-	    salary: state.salary,
-	    state: state.state,
-	    city: state.city,
-	    education: state.education,
-	    experience: state.experience,
-	    stack: state.stack
-	  };
-	}
+	Dashboard.contextTypes = {
+	  router: _react2.default.PropTypes.object.isRequired
+	};
 
-	function mapDispatchToProps(dispatch) {
-	  return (0, _redux.bindActionCreators)({ setUserInfo: _actionCreator.setUserInfo }, dispatch);
-	}
+	//   function mapStateToProps(state) {
+	//     return {
+	//       userInfo: state.userInfo
+	//     }
+	//   }
 
-	exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(Dashboard);
+
+	// function mapDispatchToProps(dispatch) {
+	//   return bindActionCreators({setUserInfo: setUserInfo}, dispatch);
+	// }
+
+	// export default connect(mapStateToProps, mapDispatchToProps)(Dashboard);
+	exports.default = Dashboard;
 
 /***/ },
 /* 422 */
@@ -56526,23 +56542,26 @@ module.exports =
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 	var DataInput = function DataInput(props) {
+	  var _React$createElement, _React$createElement2, _React$createElement3, _React$createElement4, _React$createElement5, _React$createElement6;
+
 	  return _react2.default.createElement(
 	    'div',
 	    { className: 'data-input' },
 	    _react2.default.createElement(
 	      'form',
-	      null,
-	      _react2.default.createElement('input', { type: 'city', value: props.city, onChange: props.addCity, className: 'city-input', placeholder: 'City' }),
-	      _react2.default.createElement('input', { type: 'state', value: props.state, onChange: props.addState, className: 'state-input', placeholder: 'State' }),
-	      _react2.default.createElement('input', { type: 'education', value: props.education, onChange: props.addEducation, className: 'education-input', placeholder: 'Education' }),
-	      _react2.default.createElement('input', { type: 'gender', value: props.gender, onChange: props.addGender, className: 'gender-input', placeholder: 'Gender' }),
-	      _react2.default.createElement('input', { type: 'experience', value: props.experience, onChange: props.addGender, className: 'experience-input', placeholder: 'Experience' }),
-	      _react2.default.createElement('input', { type: 'salary', value: props.salary, onChange: props.addSalary, className: 'salary-input', placeholder: 'Salary' }),
-	      _react2.default.createElement('input', { type: 'stack', value: props.stack, onChange: props.addStack, className: 'stack-input', placeholder: 'Stack' }),
+	      { onSubmit: props.inputData },
+	      _react2.default.createElement('input', (_React$createElement = { className: 'form-control', type: 'city', value: props.city, onChange: props.addCity }, _defineProperty(_React$createElement, 'className', 'city-input'), _defineProperty(_React$createElement, 'placeholder', 'City'), _React$createElement)),
+	      _react2.default.createElement('input', (_React$createElement2 = { className: 'form-control', type: 'state', value: props.state, onChange: props.addState }, _defineProperty(_React$createElement2, 'className', 'state-input'), _defineProperty(_React$createElement2, 'placeholder', 'State'), _React$createElement2)),
+	      _react2.default.createElement('input', (_React$createElement3 = { className: 'form-control', type: 'education', value: props.education, onChange: props.addEducation }, _defineProperty(_React$createElement3, 'className', 'education-input'), _defineProperty(_React$createElement3, 'placeholder', 'Education'), _React$createElement3)),
+	      _react2.default.createElement('input', (_React$createElement4 = { className: 'form-control', type: 'experience', value: props.experience, onChange: props.addExperience }, _defineProperty(_React$createElement4, 'className', 'experience-input'), _defineProperty(_React$createElement4, 'placeholder', 'Experience'), _React$createElement4)),
+	      _react2.default.createElement('input', (_React$createElement5 = { className: 'form-control', type: 'salary', value: props.salary, onChange: props.addSalary }, _defineProperty(_React$createElement5, 'className', 'salary-input'), _defineProperty(_React$createElement5, 'placeholder', 'Salary'), _React$createElement5)),
+	      _react2.default.createElement('input', (_React$createElement6 = { className: 'form-control', type: 'stack', value: props.stack, onChange: props.addStack }, _defineProperty(_React$createElement6, 'className', 'stack-input'), _defineProperty(_React$createElement6, 'placeholder', 'Stack'), _React$createElement6)),
 	      _react2.default.createElement(
 	        'button',
-	        { type: 'submit' },
+	        { type: 'submit', className: 'btn btn-primary' },
 	        'Submit'
 	      )
 	    )

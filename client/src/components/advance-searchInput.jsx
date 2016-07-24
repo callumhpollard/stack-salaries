@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-var AdvanceSearchInput = (props) => (
+var AdvancedSearchInput = (props) => (
 
   <div className="signup-input">
-    <form onSubmit={props.GetAdvanceSearchData} >
+    <form onSubmit={props.GetAdvancedSearchData} >
       <input type="city" value={props.city} onChange={props.addCity} className="city-input" placeholder="City" />
       <input type="state" value={props.state} onChange={props.addState} className="state-input" placeholder="State" />
       <input type="education" value={props.education} onChange={props.addEducation} className="education-input" placeholder="Education" />
@@ -17,6 +17,6 @@ var AdvanceSearchInput = (props) => (
 
 );
 
-export default AdvanceSearchInput;
+export default AdvancedSearchInput;
 
 

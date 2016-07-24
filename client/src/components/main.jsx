@@ -5,7 +5,7 @@ const Main = React.createClass({
     return (
       <div>
         <h1 className="feature">Stack Salaries</h1>
-        <p>An app for software engineers to post and view anonymous salary info based on their stack and location.</p>
+        <p className="text-center">An app for software engineers to post and view anonymous salary info based on their stack and location.</p>
       </div>
     );
   }

@@ -4,7 +4,7 @@ import LoginInput from './login-input';
 import Login from './login';
 import { History } from 'react-router';
 import { Router } from 'react-router';
-import AdvanceSearch from './advance-search';
+import AdvancedSearch from './advance-search';
 import Flash from './flash';
 
 class LoginForm extends React.Component{

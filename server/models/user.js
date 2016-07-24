@@ -1,13 +1,17 @@
 var mongoose = require('mongoose');
 var bcrypt = require('bcrypt-nodejs');
+var AutoIncrement = require('mongoose-sequence');
 
 var userSchema = new mongoose.Schema({
   name: String,
   email: {type: String, unique: true, lowercase: true},
   password: String,
+  gender: String,
   githubId: Number,
-  userData: []
+  userData: [],
 });
+
+userSchema.plugin(AutoIncrement, {inc_field: 'id'});
 
 // Presave hook to run before saving a user
 // Salt and hash the user password before saving

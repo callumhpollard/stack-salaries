@@ -3,7 +3,7 @@ import React from 'react';
 var SignupInput = (props) => (
 
 
-  <div className="signup-input">
+  <div className="loginBox center-block text-center">
     <form onSubmit={props.SignUpToServer} >
       <input type="name" value={props.user} onChange={props.addUser} className="signup-user" placeholder="Username" />
       <input type="email" value={props.email} onChange={props.addEmail} className="signup-email" placeholder="Email" />
