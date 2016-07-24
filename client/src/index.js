@@ -19,15 +19,3 @@ ReactDOM.render(( <Provider store={createStore(reducers)}>
 ), document.getElementById('app'));
 
 
-function initialize() {
-  var options = {
-    types: ['(cities)'],
-    componentRestrictions: {country: "us"}
-  };
-  var input = document.getElementById('searchTextField');
-  var autocomplete = new google.maps.places.Autocomplete(input, options);
-};
-
-
-
-google.maps.event.addDomListener(window, 'load', initialize);
