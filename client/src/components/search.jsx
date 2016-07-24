@@ -29,7 +29,7 @@ class Search extends React.Component{
 
   findStack(e) {
     this.setState({
-      stack: e.target.value
+      stack: e.target.value.toLowerCase().split(', ')
     });
   }
 
@@ -49,8 +49,7 @@ class Search extends React.Component{
     e.preventDefault();
 
     var self = this;
-    var cityState = this.state.cityState.split(", ");
-
+    var cityState = document.getElementById("searchTextField").value.toLowerCase().split(", ");
     // Remember to lowercase -- its only not in lowercase now because you input the data in as MEAN
     // .toLowerCase()
     var data = {stack: this.state.stack, city: cityState[0], state:cityState[1]};
