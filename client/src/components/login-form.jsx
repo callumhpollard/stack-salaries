@@ -35,21 +35,15 @@ class LoginForm extends React.Component{
   }
 
   redirectToDashboard(err){
-    // this.context.router.push({token: dataToken}, '/dashboard');
-
     if(!err){
       this.context.router.push('/dashboard');
-      // this.context.router.push('/advance-search');
     } else {
        this.setState({
           hasError: true,
           errorType: "alert alert-danger",
           errorMessage: "Please check your email and password and try again!"
         });
-       console.log(this.state);
-      // this.context.router.push('/login');
     }
-    // this.props.history.pushState({token: dataToken}, '/jobs');
   }
 
   loginToServer(e) {
@@ -80,7 +74,7 @@ class LoginForm extends React.Component{
 
   render() {
      var toggle = "";
-     if(this.state.hasError){
+     if(!this.state.hasError){
         toggle = "hide";
      }
 

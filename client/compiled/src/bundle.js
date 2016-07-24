@@ -37493,21 +37493,15 @@
 	  }, {
 	    key: 'redirectToDashboard',
 	    value: function redirectToDashboard(err) {
-	      // this.context.router.push({token: dataToken}, '/dashboard');
-
 	      if (!err) {
 	        this.context.router.push('/dashboard');
-	        // this.context.router.push('/advance-search');
 	      } else {
 	        this.setState({
 	          hasError: true,
 	          errorType: "alert alert-danger",
 	          errorMessage: "Please check your email and password and try again!"
 	        });
-	        console.log(this.state);
-	        // this.context.router.push('/login');
 	      }
-	      // this.props.history.pushState({token: dataToken}, '/jobs');
 	    }
 	  }, {
 	    key: 'loginToServer',
@@ -37538,7 +37532,7 @@
 	    key: 'render',
 	    value: function render() {
 	      var toggle = "";
-	      if (this.state.hasError) {
+	      if (!this.state.hasError) {
 	        toggle = "hide";
 	      }
 
@@ -37908,8 +37902,11 @@
 	  _createClass(Flash, [{
 	    key: "render",
 	    value: function render() {
-	      console.log(this.props);
-	      return _react2.default.createElement("div", null);
+	      return _react2.default.createElement(
+	        "div",
+	        { className: this.props.type },
+	        this.props.message
+	      );
 	    }
 	  }]);
 
@@ -37917,10 +37914,6 @@
 	}(_react2.default.Component);
 
 	exports.default = Flash;
-
-	// <div className={this.state.type}>
-	//           <p>{this.state.message}</p>
-	//         </div>
 
 /***/ },
 /* 262 */
@@ -38368,57 +38361,27 @@
 	      this.getJobs();
 	    }
 	  }, {
-	    key: 'parseJobs',
-	    value: function parseJobs() {
-
-	      // This binding
-	      var self = this;
-
-	      // Replace that random hex bug
-	      var data = this.state.serialized.replace('﻿', "");
-
-	      // Parse the serialized XML string and assign it to the jobs state
-	      parser.parseString(data, function (err, result) {
-	        self.setState({
-	          jobs: result.response.results[0].result
-	        });
-	      });
-	    }
-	  }, {
 	    key: 'getJobs',
 	    value: function getJobs() {
 
-	      // This binding
 	      var self = this;
 
-	      // Declare a new instance of the XMLSerializer
-	      var serializer = new XMLSerializer();
-
 	      // Our query parameters
-	      var query = { publisher: "5453642953934453", q: "javascript", l: "Austin, TX", v: 2 };
+	      var query = { publisher: "5453642953934453", format: "json", q: "javascript", l: "Austin, TX", v: 2 };
 
-	      // GET request to fetch the jobs
 	      _jquery2.default.ajax({
-	        url: "http://api.indeed.com/ads/apisearch",
-	        type: "GET",
-	        contentType: "application/xml",
-	        headers: { 'Access-Control-Allow-Origin': '*' },
 	        data: query,
-	        success: function success(results) {
-	          // If successful, serialize the XML result
-	          var serializedData = serializer.serializeToString(results);
-
-	          // Set the jobs array to the serialized data
+	        dataType: 'jsonp',
+	        type: 'GET',
+	        timeout: 5000,
+	        url: 'http://api.indeed.com/ads/apisearch',
+	        success: function success(result) {
 	          self.setState({
-	            serialized: serializedData
+	            jobs: result.results
 	          });
-
-	          // Call the parser so we can parse the string
-	          // into an object we can use
-	          self.parseJobs();
 	        },
 	        error: function error(err) {
-	          throw err;
+	          console.log(err);
 	        }
 	      });
 	    }
@@ -38481,7 +38444,7 @@
 /* 268 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -38491,53 +38454,61 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _jquery = __webpack_require__(225);
+
+	var _jquery2 = _interopRequireDefault(_jquery);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var JobsItem = function JobsItem(props) {
+	  // API sends description back without escaping tags
+	  // A quick reg ex to sanitize the description
+	  var description = props.job.snippet.replace(/<\/?[^>]+(>|$)/g, "");
+
 	  return _react2.default.createElement(
-	    "div",
-	    { className: "col-md-4", key: props.job.jobkey },
+	    'div',
+	    { className: 'col-md-4', key: props.job.jobkey },
 	    _react2.default.createElement(
-	      "div",
-	      { className: "panel panel-default" },
+	      'div',
+	      { className: 'panel panel-default' },
 	      _react2.default.createElement(
-	        "div",
-	        { className: "panel-heading" },
+	        'div',
+	        { className: 'panel-heading' },
 	        _react2.default.createElement(
-	          "div",
-	          { className: "panel-title text-center" },
-	          props.job.jobtitle[0]
+	          'div',
+	          { className: 'panel-title text-center' },
+	          props.job.jobtitle
 	        ),
 	        _react2.default.createElement(
-	          "div",
-	          { className: "text-center" },
-	          "@ ",
-	          props.job.company[0]
+	          'div',
+	          { className: 'text-center' },
+	          '@ ',
+	          props.job.company
 	        )
 	      ),
 	      _react2.default.createElement(
-	        "div",
-	        { className: "panel-body" },
+	        'div',
+	        { className: 'panel-body' },
 	        _react2.default.createElement(
-	          "p",
+	          'p',
 	          null,
-	          props.job.snippet[0]
+	          description
 	        ),
 	        _react2.default.createElement(
-	          "p",
-	          { className: "text-center" },
+	          'p',
+	          { className: 'text-center' },
 	          _react2.default.createElement(
-	            "a",
+	            'a',
 	            { href: props.job.url },
-	            "Click to Read More"
+	            'Click to Read More'
 	          )
 	        )
 	      ),
 	      _react2.default.createElement(
-	        "div",
-	        { className: "panel-footer text-center" },
-	        _react2.default.createElement("span", { className: "glyphicon glyphicon-time" }),
-	        " ",
+	        'div',
+	        { className: 'panel-footer text-center' },
+	        _react2.default.createElement('span', { className: 'glyphicon glyphicon-time' }),
+	        ' ',
 	        props.job.date
 	      )
 	    )
