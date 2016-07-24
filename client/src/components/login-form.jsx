@@ -47,7 +47,9 @@ class LoginForm extends React.Component {
           errorMessage: "Please check your email and password and try again!"
         });
     }
-  }
+      // this.context.router.push('/login');
+    }
+    // this.props.history.pushState({token: dataToken}, '/jobs');
 
   loginToServer(e) {
     e.preventDefault();
@@ -75,9 +77,9 @@ class LoginForm extends React.Component {
 
 
   render() {
-    console.log(localStorage.token);
+
      var toggle = "";
-     if(!this.state.hasError){
+     if(this.state.hasError){
         toggle = "hide";
      }
 

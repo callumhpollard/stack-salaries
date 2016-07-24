@@ -14,6 +14,3 @@ var stackdataSchema = mongoose.Schema({
 var StackData = mongoose.model('StackData', stackdataSchema);
 
 module.exports = StackData;
-
-
-// Find any stackData where user_id = 1

@@ -89,6 +89,40 @@ class Dashboard extends React.Component {
         console.log(err);
       }
     });
+  }
+      // <li>Location: {this.props.userInfo.city}, {this.props.userInfo.state}</li>
+          //   <li>Education: {this.props.userInfo.education} </li>
+          //   <li>Experience: {this.props.userInfo.experience} </li>
+          //   <li>Stack: {this.props.userInfo.stack}</li>
+          //   <li>Salary: {this.props.userInfo.salary}</li>
+
+
+  // submitToStore() {
+  //   // console.log(this.state.salary);
+  //   var data = {stack: this.state.stack, city: this.state.city, state:this.state.state, education:this.state.education, gender:this.state.gender, experience:this.state.experience};
+  //   this.props.setUserInfo(data);
+  // }
+
+
+  inputData(e) {
+    e.preventDefault();
+
+    var self = this;
+    var data = {stack: this.state.stack, city: this.state.city, state:this.state.state, education:this.state.education, gender:this.state.gender, experience:this.state.experience};
+
+    $.ajax({
+      url:"http://localhost:3000/stackentry",
+      type:"POST",
+      contentType:"application/json",
+      data: JSON.stringify(data),
+      success: function(data) {
+        // self.submitToStore();
+        console.log("YOUR THING WORKED, " + data);
+      },
+      error: function(err) {
+        console.log(err);
+      }
+    });
 
   }
       // <li>Location: {this.props.userInfo.city}, {this.props.userInfo.state}</li>
@@ -109,7 +143,6 @@ class Dashboard extends React.Component {
       <div className="dashboard row">
         <h1>Welcome to the Dashboard</h1>
         <div className="col-md-4">
-
           <ul>
 
           </ul>

@@ -30,8 +30,6 @@ class Jobs extends React.Component {
   // Our query parameters
   var query = {publisher: "5453642953934453", format:"json", q: "javascript", l: `${this.props.cityState.cityForJob}, ${this.props.cityState.stateForJob}`, v: 2}
 
-
-  console.log(query);
     $.ajax({
       data: query,
       dataType: 'jsonp',

@@ -8,7 +8,7 @@ var userSchema = new mongoose.Schema({
   password: String,
   gender: String,
   githubId: Number,
-  userData: [],
+  userData: []
 });
 
 userSchema.plugin(AutoIncrement, {inc_field: 'id'});

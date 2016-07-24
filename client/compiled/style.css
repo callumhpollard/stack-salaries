@@ -223,6 +223,7 @@ svg {
   fill: #E60900;
 }
 
+
 /* Input Placeholder Styles */
 .form-control::-webkit-input-placeholder { color: #1abc9c;; }
 .form-control:-moz-placeholder { color: #1abc9c;; }
@@ -230,10 +231,10 @@ svg {
 .form-control:-ms-input-placeholder { color: #1abc9c;; }
 
 /* Flash Messages */
+
 .hide {
   display: none;
 }
-
 
 /* Main Search Styles */
 

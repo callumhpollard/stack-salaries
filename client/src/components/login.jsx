@@ -1,15 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-
 var Login = (props) => {
 
-  console.log(props.loggedIn);
-
-    return (
-       <div>
-
-            {props.loggedIn ? (
+  return(
+    <div>
+        {props.loggedIn ? (
               <div>
                 <button className="btn btn-primary login"><Link to='/dashboard'>Dashboard</Link></button>
                 <button className="btn btn-primary login"><Link to='/logout'>Log Out</Link></button>
@@ -20,8 +16,9 @@ var Login = (props) => {
                 <button className="btn btn-primary login"><Link to='/signup'>Sign Up</Link></button>
               </div>
         )}
-      </div>
-    );
+
+    </div>
+  );
 
 }
 
