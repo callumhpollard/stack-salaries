@@ -149,8 +149,6 @@ var Axis = React.createClass({
   }
 });
 
-var changeDataTrue = true;
-
 class Results extends React.Component {
     constructor(props){
       super(props);
@@ -166,6 +164,7 @@ class Results extends React.Component {
     }
 
     render() {
+
         return (
           <div>
             <div className="selection">
