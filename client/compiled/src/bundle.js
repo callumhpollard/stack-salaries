@@ -38329,6 +38329,16 @@
 
 	var _jobsList2 = _interopRequireDefault(_jobsList);
 
+	var _reactRedux = __webpack_require__(227);
+
+	var _search = __webpack_require__(224);
+
+	var _search2 = _interopRequireDefault(_search);
+
+	var _redux = __webpack_require__(234);
+
+	var _actionCreator = __webpack_require__(253);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -38366,6 +38376,7 @@
 
 	      var self = this;
 
+	      console.log(this.props.salary.label);
 	      // Our query parameters
 	      var query = { publisher: "5453642953934453", format: "json", q: "javascript", l: "Austin, TX", v: 2 };
 
@@ -38403,7 +38414,18 @@
 	  return Jobs;
 	}(_react2.default.Component);
 
-	exports.default = Jobs;
+	function mapStateToProps(state) {
+	  return {
+	    salary: state.salary
+	  };
+	}
+
+	function mapDispatchToProps(dispatch) {
+	  return (0, _redux.bindActionCreators)({ setSearch: _actionCreator.setSearch }, dispatch);
+	}
+
+	exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(Jobs);
+	// export default Results;
 
 /***/ },
 /* 267 */

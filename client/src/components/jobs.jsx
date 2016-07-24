@@ -3,6 +3,11 @@ import $ from 'jquery';
 var xml2js = require('xml2js');
 var parser = new xml2js.Parser();
 import JobsList from './jobs-list';
+import { connect } from 'react-redux';
+import search from './search';
+import { bindActionCreators } from 'redux';
+import { setSearch } from '../actions/actionCreator';
+
 
 class Jobs extends React.Component {
 
@@ -23,6 +28,8 @@ class Jobs extends React.Component {
 
   var self = this;
 
+
+  console.log(this.props.salary.label);
   // Our query parameters
   var query = {publisher: "5453642953934453", format:"json", q: "javascript", l: "Austin, TX", v: 2}
 
@@ -58,4 +65,17 @@ class Jobs extends React.Component {
 
 }
 
-export default Jobs;
+
+function mapStateToProps(state) {
+  return {
+    salary: state.salary
+  }
+}
+
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({setSearch: setSearch}, dispatch);
+}
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(Jobs);
+// export default Results;
