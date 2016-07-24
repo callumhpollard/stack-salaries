@@ -3,11 +3,15 @@ import $ from 'jquery';
 var xml2js = require('xml2js');
 var parser = new xml2js.Parser();
 import JobsList from './jobs-list';
+import { connect } from 'react-redux';
+import search from './search';
+import { bindActionCreators } from 'redux';
+import { setSearch, setCityState } from '../actions/actionCreator';
 
 class Jobs extends React.Component {
 
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
       jobs: [],
@@ -19,57 +23,31 @@ class Jobs extends React.Component {
     this.getJobs();
   }
 
-  parseJobs(){
-
-    // This binding
-    var self = this;
-
-    // Replace that random hex bug
-    var data = this.state.serialized.replace("\ufeff", "");
-
-    // Parse the serialized XML string and assign it to the jobs state
-    parser.parseString(data, function (err, result) {
-       self.setState({
-          jobs: result.response.results[0].result
-        });
-    });
-  }
-
   getJobs(){
 
-    // This binding
-    var self = this;
+  var self = this;
 
-    // Declare a new instance of the XMLSerializer
-    var serializer = new XMLSerializer();
 
-    // Our query parameters
-    var query = {publisher: "5453642953934453", q: "javascript", l: "Austin, TX", v: 2}
+  console.log("THIS IS THE CITYSTATE " + JSON.stringify(this.props.cityState));
+  // Our query parameters
+  var query = {publisher: "5453642953934453", format:"json", q: "javascript", l: "Austin, TX", v: 2}
 
-    // GET request to fetch the jobs
     $.ajax({
-      url:"http://api.indeed.com/ads/apisearch",
-      type:"GET",
-      contentType:"application/xml",
-      headers: { 'Access-Control-Allow-Origin': '*' },
       data: query,
-      success: function(results) {
-        // If successful, serialize the XML result
-        var serializedData = serializer.serializeToString(results);
-
-        // Set the jobs array to the serialized data
-         self.setState({
-          serialized: serializedData
+      dataType: 'jsonp',
+      type: 'GET',
+      timeout: 5000,
+      url: 'http://api.indeed.com/ads/apisearch',
+      success: function(result){
+        self.setState({
+          jobs: result.results
         });
-
-        // Call the parser so we can parse the string
-        // into an object we can use
-         self.parseJobs();
       },
-      error: function(err) {
-        throw err;
+      error: function(err){
+        console.log(err);
       }
     });
+
   }
 
 
@@ -86,4 +64,17 @@ class Jobs extends React.Component {
 
 }
 
-export default Jobs;
+
+function mapStateToProps(state) {
+  return {
+    cityState: state.cityState
+  }
+}
+
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({setSearch: setSearch, setCityState:setCityState}, dispatch);
+}
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(Jobs);
+// export default Results;

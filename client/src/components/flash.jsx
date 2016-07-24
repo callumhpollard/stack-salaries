@@ -13,9 +13,8 @@ class Flash extends React.Component {
   }
 
   render() {
-      console.log(this.props);
       return(
-        <div></div>
+        <div className={this.props.type}>{this.props.message}</div>
       )
   }
 
@@ -24,8 +23,3 @@ class Flash extends React.Component {
 
 
 export default Flash;
-
-
-// <div className={this.state.type}>
-//           <p>{this.state.message}</p>
-//         </div>

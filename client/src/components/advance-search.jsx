@@ -57,31 +57,20 @@ class AdvanceSearch extends React.Component{
     this.state.stack.push(e.target.value);
   }
 
-  redirectToResults(){
-    // window.salary = this.state.salary;
-    // var data = {stack: this.state.stack, city: cityState[0].toLowerCase(), state:cityState[1].toLowerCase()};
-    // var self = this;
-    console.log(this.state.salary);
+  redirectToResults() {
     this.props.setSearch(this.state.salary);
-    // this.props.history.pushState(null, '/results');
     this.context.router.push('/results');
-
-    // window.location.hash = string
-    // #/key
-    // {salary:this.state.salary}
-    // console.log(this.state.salary);
   }
 
   GetAdvanceSearchData(e) {
     e.preventDefault();
 
     var self = this;
-    var cityState = this.state.cityState.split(", ");
 
     // Remember to lowercase -- its only not in lowercase now because you input the data in as MEAN
     // .toLowerCase()
 
-    var data = {stack: this.state.stack, city: cityState[0], state:cityState[1], education: this.state.education, education:this.state.education, gender:this.state.gender, experience:this.state.experience};
+    var data = {stack: this.state.stack, city: this.state.city, state:this.state.state, education: this.state.education, education:this.state.education, gender:this.state.gender, experience:this.state.experience};
 
     $.ajax({
       url:"http://localhost:3000/search",
@@ -117,9 +106,9 @@ class AdvanceSearch extends React.Component{
   }
 };
 
-// AdvanceSearch.contextTypes= {
-//   router: React.PropTypes.object.isRequired
-// };
+AdvanceSearch.contextTypes= {
+  router: React.PropTypes.object.isRequired
+};
 
 
   function mapStateToProps(state) {

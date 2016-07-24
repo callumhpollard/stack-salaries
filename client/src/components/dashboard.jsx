@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router';
 import { Router } from 'react-router';
 import $ from 'jquery';
-import DataInput from './dashboard-datainput';
+import DataInput from './dashboard-dataInput';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { setUserInfo } from '../actions/actionCreator';
@@ -19,51 +19,71 @@ class Dashboard extends React.Component {
       education: '',
       gender: '',
       experience: '',
-      stack: []
+      stack: [],
+      showInfo:false
     };
   }
 // enter in data, then receive a view of data and make the input disappear area.
 // displays current users data
 // add a button that ask if the user wants to input more data
 
-    submitToStore() {
-    // window.salary = this.state.salary;
-    // var data = {stack: this.state.stack, city: cityState[0].toLowerCase(), state:cityState[1].toLowerCase()};
-    // var self = this;
-    console.log(this.state.salary);
-    this.props.setSearch(this.state.salary);
-    // this.props.history.pushState(null, '/results');
-    this.context.router.push('/results');
 
-    // window.location.hash = string
-    // #/key
-    // {salary:this.state.salary}
-    // console.log(this.state.salary);
+  addCity(e) {
+    this.setState({
+      city:e.target.value
+    });
   }
+
+  addState(e) {
+    this.setState({
+      state:e.target.value
+    });
+  }
+
+  addEducation(e) {
+    this.setState({
+      education:e.target.value
+    });
+  }
+
+  addExperience(e) {
+    this.setState({
+      experience:e.target.value
+    });
+  }
+
+  addStack(e) {
+    this.state.stack.push(e.target.value);
+  }
+
+  hideInput(e) {
+    this.setState({
+
+    });
+  }
+
+
+  // submitToStore() {
+  //   // console.log(this.state.salary);
+  //   var data = {stack: this.state.stack, city: this.state.city, state:this.state.state, education:this.state.education, gender:this.state.gender, experience:this.state.experience};
+  //   this.props.setUserInfo(data);
+  // }
 
 
   inputData(e) {
     e.preventDefault();
 
     var self = this;
-    var cityState = this.state.cityState.split(", ");
-
-    // Remember to lowercase -- its only not in lowercase now because you input the data in as MEAN
-    // .toLowerCase()
-
     var data = {stack: this.state.stack, city: this.state.city, state:this.state.state, education:this.state.education, gender:this.state.gender, experience:this.state.experience};
 
     $.ajax({
-      url:"http://localhost:3000/search",
+      url:"http://localhost:3000/stackentry",
       type:"POST",
       contentType:"application/json",
       data: JSON.stringify(data),
       success: function(data) {
-        self.setState({
-          salary: data
-        });
-
-        self.redirectToResults(data);
+        // self.submitToStore();
+        console.log("YOUR THING WORKED, " + data);
       },
       error: function(err) {
         console.log(err);
@@ -71,6 +91,11 @@ class Dashboard extends React.Component {
     });
 
   }
+      // <li>Location: {this.props.userInfo.city}, {this.props.userInfo.state}</li>
+          //   <li>Education: {this.props.userInfo.education} </li>
+          //   <li>Experience: {this.props.userInfo.experience} </li>
+          //   <li>Stack: {this.props.userInfo.stack}</li>
+          //   <li>Salary: {this.props.userInfo.salary}</li>
 
   render() {
     return(
@@ -78,35 +103,31 @@ class Dashboard extends React.Component {
         <h1>Welcome to the Dashboard</h1>
         <div className="col-md-4">
           <ul>
-            <li>Location: {this.props.city},{this.props.state}</li>
-            <li>Education: {this.props.eduation} </li>
-            <li>Experience: {this.props.experience} </li>
-            <li>Stack: {this.props.stack}</li>
-            <li>Salary: {this.props.salary}</li>
+
           </ul>
         </div>
          <div className="col-md-4">
-          <DataInput />
+          <DataInput inputData={this.inputData.bind(this)} addStack={this.addStack.bind(this)} addCity={this.addCity.bind(this)} addState={this.addState.bind(this)} addEducation={this.addEducation.bind(this)} addExperience={this.addExperience.bind(this)} />
         </div>
       </div>
     );
   }
 }
 
-  function mapStateToProps(state) {
-    return {
-      salary: state.salary,
-      state: state.state,
-      city: state.city,
-      education: state.education,
-      experience:state.experience,
-      stack: state.stack
-    }
-  }
+Dashboard.contextTypes = {
+  router: React.PropTypes.object.isRequired
+};
+
+//   function mapStateToProps(state) {
+//     return {
+//       userInfo: state.userInfo
+//     }
+//   }
 
 
-function mapDispatchToProps(dispatch) {
-  return bindActionCreators({setUserInfo: setUserInfo}, dispatch);
-}
+// function mapDispatchToProps(dispatch) {
+//   return bindActionCreators({setUserInfo: setUserInfo}, dispatch);
+// }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Dashboard);
+// export default connect(mapStateToProps, mapDispatchToProps)(Dashboard);
+export default Dashboard;

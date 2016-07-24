@@ -227,3 +227,7 @@ svg {
 .hide {
   display: none;
 }
+
+.login-input input {
+  color: #000;
+}

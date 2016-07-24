@@ -53,6 +53,7 @@
 	__webpack_require__(254);
 	__webpack_require__(255);
 	__webpack_require__(259);
+	__webpack_require__(260);
 	__webpack_require__(261);
 	__webpack_require__(256);
 	__webpack_require__(257);
@@ -66,7 +67,7 @@
 	__webpack_require__(250);
 	__webpack_require__(435);
 	__webpack_require__(436);
-	module.exports = __webpack_require__(438);
+	module.exports = __webpack_require__(439);
 
 
 /***/ },
@@ -25520,14 +25521,11 @@
 	      // window.salary = this.state.salary;
 	      // var data = {stack: this.state.stack, city: cityState[0].toLowerCase(), state:cityState[1].toLowerCase()};
 	      // var self = this;
+	      var cityState = this.state.cityState.split(", ");
 	      this.props.setSearch(this.state.salary);
+	      this.props.setCityState({ cityForJob: cityState[0], stateForJob: cityState[1] });
 	      // this.props.history.pushState(null, '/results');
 	      this.context.router.push('/results');
-
-	      // window.location.hash = string
-	      // #/key
-	      // {salary:this.state.salary}
-	      // console.log(this.state.salary);
 	    }
 	  }, {
 	    key: 'getDatafromServer',
@@ -25587,7 +25585,7 @@
 	}
 
 	function mapDispatchToProps(dispatch) {
-	  return (0, _redux.bindActionCreators)({ setSearch: _actionCreator.setSearch }, dispatch);
+	  return (0, _redux.bindActionCreators)({ setSearch: _actionCreator.setSearch, setCityState: _actionCreator.setCityState }, dispatch);
 	}
 
 	exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(Search);
@@ -37057,15 +37055,26 @@
 	  value: true
 	});
 	exports.setSearch = setSearch;
+	exports.setCityState = setCityState;
 	exports.setUserInfo = setUserInfo;
 	var SET_SEARCH = exports.SET_SEARCH = 'SET_SEARCH';
 	var SET_USERINFO = exports.SET_USERINFO = 'SET_USERINFO';
+	var SET_CITYSTATE = exports.SET_CITYSTATE = 'SET_CITYSTATE';
 
 	function setSearch(searchInput) {
 	  // console.log("Search Obj", searchInput);
 	  return {
 	    type: SET_SEARCH,
 	    payload: searchInput
+	  };
+	  // console.log("OUR ACTION ", JSON.stringify(results));
+	}
+
+	function setCityState(cityState) {
+	  // console.log("Search Obj", searchInput);
+	  return {
+	    type: SET_CITYSTATE,
+	    payload: cityState
 	  };
 	  // console.log("OUR ACTION ", JSON.stringify(results));
 	}
@@ -37316,18 +37325,20 @@
 	    }
 	  }, {
 	    key: 'redirectToDashboard',
-	    value: function redirectToDashboard(dataToken) {
+	    value: function redirectToDashboard(err) {
 	      // this.context.router.push({token: dataToken}, '/dashboard');
-	      if (dataToken) {
+
+	      if (!err) {
 	        this.context.router.push('/dashboard');
 	        // this.context.router.push('/advance-search');
 	      } else {
 	        this.setState({
 	          hasError: true,
 	          errorType: "alert alert-danger",
-	          merrorMessage: "Please check your email and password and try again!"
+	          errorMessage: "Please check your email and password and try again!"
 	        });
-	        this.context.router.push('/login');
+	        console.log(this.state);
+	        // this.context.router.push('/login');
 	      }
 	      // this.props.history.pushState({token: dataToken}, '/jobs');
 	    }
@@ -37348,20 +37359,30 @@
 	          localStorage.setItem('token', data.token), self.setState({
 	            authToken: data.token
 	          });
-	          self.redirectToDashboard(data.token);
+	          console.log(data.token);
+	          self.redirectToDashboard();
 	        },
 	        error: function error(err) {
-	          console.log(err);
+	          self.redirectToDashboard("meow");
 	        }
 	      });
 	    }
 	  }, {
 	    key: 'render',
 	    value: function render() {
+	      var toggle = "";
+	      if (this.state.hasError) {
+	        toggle = "hide";
+	      }
+
 	      return _react2.default.createElement(
 	        'div',
 	        null,
-	        this.state.hasError ? _react2.default.createElement(_flash2.default, { type: this.state.errorType, message: this.state.errorMessage }) : null,
+	        _react2.default.createElement(
+	          'div',
+	          { className: toggle },
+	          _react2.default.createElement(_flash2.default, { type: this.state.errorType, message: this.state.errorMessage })
+	        ),
 	        _react2.default.createElement(_loginInput2.default, { history: this.props.history, loginToServer: this.loginToServer.bind(this), changeUser: this.changeUser.bind(this), changePassword: this.changePassword.bind(this) })
 	      );
 	    }
@@ -37545,18 +37566,8 @@
 	  }, {
 	    key: 'redirectToResults',
 	    value: function redirectToResults() {
-	      // window.salary = this.state.salary;
-	      // var data = {stack: this.state.stack, city: cityState[0].toLowerCase(), state:cityState[1].toLowerCase()};
-	      // var self = this;
-	      console.log(this.state.salary);
 	      this.props.setSearch(this.state.salary);
-	      // this.props.history.pushState(null, '/results');
 	      this.context.router.push('/results');
-
-	      // window.location.hash = string
-	      // #/key
-	      // {salary:this.state.salary}
-	      // console.log(this.state.salary);
 	    }
 	  }, {
 	    key: 'GetAdvanceSearchData',
@@ -37566,12 +37577,11 @@
 	      e.preventDefault();
 
 	      var self = this;
-	      var cityState = this.state.cityState.split(", ");
 
 	      // Remember to lowercase -- its only not in lowercase now because you input the data in as MEAN
 	      // .toLowerCase()
 
-	      var data = (_data = { stack: this.state.stack, city: cityState[0], state: cityState[1], education: this.state.education }, _defineProperty(_data, 'education', this.state.education), _defineProperty(_data, 'gender', this.state.gender), _defineProperty(_data, 'experience', this.state.experience), _data);
+	      var data = (_data = { stack: this.state.stack, city: this.state.city, state: this.state.state, education: this.state.education }, _defineProperty(_data, 'education', this.state.education), _defineProperty(_data, 'gender', this.state.gender), _defineProperty(_data, 'experience', this.state.experience), _data);
 
 	      _jquery2.default.ajax({
 	        url: "http://localhost:3000/search",
@@ -37619,9 +37629,9 @@
 
 	;
 
-	// AdvanceSearch.contextTypes= {
-	//   router: React.PropTypes.object.isRequired
-	// };
+	AdvanceSearch.contextTypes = {
+	  router: _react2.default.PropTypes.object.isRequired
+	};
 
 	function mapStateToProps(state) {
 	  return {
@@ -37719,8 +37729,11 @@
 	  _createClass(Flash, [{
 	    key: "render",
 	    value: function render() {
-	      console.log(this.props);
-	      return _react2.default.createElement("div", null);
+	      return _react2.default.createElement(
+	        "div",
+	        { className: this.props.type },
+	        this.props.message
+	      );
 	    }
 	  }]);
 
@@ -37728,10 +37741,6 @@
 	}(_react2.default.Component);
 
 	exports.default = Flash;
-
-	// <div className={this.state.type}>
-	//           <p>{this.state.message}</p>
-	//         </div>
 
 /***/ },
 /* 259 */
@@ -37755,9 +37764,9 @@
 
 	var _jquery2 = _interopRequireDefault(_jquery);
 
-	var _dashboardDatainput = __webpack_require__(260);
+	var _dashboardDataInput = __webpack_require__(260);
 
-	var _dashboardDatainput2 = _interopRequireDefault(_dashboardDatainput);
+	var _dashboardDataInput2 = _interopRequireDefault(_dashboardDataInput);
 
 	var _reactRedux = __webpack_require__(226);
 
@@ -37788,7 +37797,8 @@
 	      education: '',
 	      gender: '',
 	      experience: '',
-	      stack: []
+	      stack: [],
+	      showInfo: false
 	    };
 	    return _this;
 	  }
@@ -37797,34 +37807,79 @@
 	  // add a button that ask if the user wants to input more data
 
 	  _createClass(Dashboard, [{
+	    key: 'addCity',
+	    value: function addCity(e) {
+	      this.setState({
+	        city: e.target.value
+	      });
+	    }
+	  }, {
+	    key: 'addState',
+	    value: function addState(e) {
+	      this.setState({
+	        state: e.target.value
+	      });
+	    }
+	  }, {
+	    key: 'addEducation',
+	    value: function addEducation(e) {
+	      this.setState({
+	        education: e.target.value
+	      });
+	    }
+	  }, {
+	    key: 'addExperience',
+	    value: function addExperience(e) {
+	      this.setState({
+	        experience: e.target.value
+	      });
+	    }
+	  }, {
+	    key: 'addStack',
+	    value: function addStack(e) {
+	      this.state.stack.push(e.target.value);
+	    }
+	  }, {
+	    key: 'hideInput',
+	    value: function hideInput(e) {
+	      this.setState({});
+	    }
+
+	    // submitToStore() {
+	    //   // console.log(this.state.salary);
+	    //   var data = {stack: this.state.stack, city: this.state.city, state:this.state.state, education:this.state.education, gender:this.state.gender, experience:this.state.experience};
+	    //   this.props.setUserInfo(data);
+	    // }
+
+	  }, {
 	    key: 'inputData',
 	    value: function inputData(e) {
 	      e.preventDefault();
 
 	      var self = this;
-	      var cityState = this.state.cityState.split(", ");
-
-	      // Remember to lowercase -- its only not in lowercase now because you input the data in as MEAN
-	      // .toLowerCase()
-	      var data = { stack: this.state.stack, city: cityState[0], state: cityState[1] };
+	      var data = { stack: this.state.stack, city: this.state.city, state: this.state.state, education: this.state.education, gender: this.state.gender, experience: this.state.experience };
 
 	      _jquery2.default.ajax({
-	        url: "http://localhost:3000/search",
+	        url: "http://localhost:3000/stackentry",
 	        type: "POST",
 	        contentType: "application/json",
 	        data: JSON.stringify(data),
 	        success: function success(data) {
-	          self.setState({
-	            salary: data
-	          });
-
-	          self.redirectToResults(data);
+	          // self.submitToStore();
+	          console.log("YOUR THING WORKED, " + data);
 	        },
 	        error: function error(err) {
 	          console.log(err);
 	        }
 	      });
 	    }
+
+	    // <li>Location: {this.props.userInfo.city}, {this.props.userInfo.state}</li>
+	    //   <li>Education: {this.props.userInfo.education} </li>
+	    //   <li>Experience: {this.props.userInfo.experience} </li>
+	    //   <li>Stack: {this.props.userInfo.stack}</li>
+	    //   <li>Salary: {this.props.userInfo.salary}</li>
+
 	  }, {
 	    key: 'render',
 	    value: function render() {
@@ -37836,11 +37891,15 @@
 	          null,
 	          'Welcome to the Dashboard'
 	        ),
-	        _react2.default.createElement('div', { className: 'col-md-4' }),
 	        _react2.default.createElement(
 	          'div',
 	          { className: 'col-md-4' },
-	          _react2.default.createElement(_dashboardDatainput2.default, null)
+	          _react2.default.createElement('ul', null)
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'col-md-4' },
+	          _react2.default.createElement(_dashboardDataInput2.default, { inputData: this.inputData.bind(this), addStack: this.addStack.bind(this), addCity: this.addCity.bind(this), addState: this.addState.bind(this), addEducation: this.addEducation.bind(this), addExperience: this.addExperience.bind(this) })
 	        )
 	      );
 	    }
@@ -37849,22 +37908,22 @@
 	  return Dashboard;
 	}(_react2.default.Component);
 
-	function mapStateToProps(state) {
-	  return {
-	    salary: state.salary,
-	    state: state.state,
-	    city: state.city,
-	    education: state.education,
-	    experience: state.experience,
-	    stack: state.stack
-	  };
-	}
+	Dashboard.contextTypes = {
+	  router: _react2.default.PropTypes.object.isRequired
+	};
 
-	function mapDispatchToProps(dispatch) {
-	  return (0, _redux.bindActionCreators)({ setUserInfo: _actionCreator.setUserInfo }, dispatch);
-	}
+	//   function mapStateToProps(state) {
+	//     return {
+	//       userInfo: state.userInfo
+	//     }
+	//   }
 
-	exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(Dashboard);
+	// function mapDispatchToProps(dispatch) {
+	//   return bindActionCreators({setUserInfo: setUserInfo}, dispatch);
+	// }
+
+	// export default connect(mapStateToProps, mapDispatchToProps)(Dashboard);
+	exports.default = Dashboard;
 
 /***/ },
 /* 260 */
@@ -37884,23 +37943,26 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 	var DataInput = function DataInput(props) {
+	  var _React$createElement, _React$createElement2, _React$createElement3, _React$createElement4, _React$createElement5, _React$createElement6;
+
 	  return _react2.default.createElement(
 	    'div',
 	    { className: 'data-input' },
 	    _react2.default.createElement(
 	      'form',
-	      null,
-	      _react2.default.createElement('input', { type: 'city', value: props.city, onChange: props.addCity, className: 'city-input', placeholder: 'City' }),
-	      _react2.default.createElement('input', { type: 'state', value: props.state, onChange: props.addState, className: 'state-input', placeholder: 'State' }),
-	      _react2.default.createElement('input', { type: 'education', value: props.education, onChange: props.addEducation, className: 'education-input', placeholder: 'Education' }),
-	      _react2.default.createElement('input', { type: 'gender', value: props.gender, onChange: props.addGender, className: 'gender-input', placeholder: 'Gender' }),
-	      _react2.default.createElement('input', { type: 'experience', value: props.experience, onChange: props.addGender, className: 'experience-input', placeholder: 'Experience' }),
-	      _react2.default.createElement('input', { type: 'salary', value: props.salary, onChange: props.addSalary, className: 'salary-input', placeholder: 'Salary' }),
-	      _react2.default.createElement('input', { type: 'stack', value: props.stack, onChange: props.addStack, className: 'stack-input', placeholder: 'Stack' }),
+	      { onSubmit: props.inputData },
+	      _react2.default.createElement('input', (_React$createElement = { className: 'form-control', type: 'city', value: props.city, onChange: props.addCity }, _defineProperty(_React$createElement, 'className', 'city-input'), _defineProperty(_React$createElement, 'placeholder', 'City'), _React$createElement)),
+	      _react2.default.createElement('input', (_React$createElement2 = { className: 'form-control', type: 'state', value: props.state, onChange: props.addState }, _defineProperty(_React$createElement2, 'className', 'state-input'), _defineProperty(_React$createElement2, 'placeholder', 'State'), _React$createElement2)),
+	      _react2.default.createElement('input', (_React$createElement3 = { className: 'form-control', type: 'education', value: props.education, onChange: props.addEducation }, _defineProperty(_React$createElement3, 'className', 'education-input'), _defineProperty(_React$createElement3, 'placeholder', 'Education'), _React$createElement3)),
+	      _react2.default.createElement('input', (_React$createElement4 = { className: 'form-control', type: 'experience', value: props.experience, onChange: props.addExperience }, _defineProperty(_React$createElement4, 'className', 'experience-input'), _defineProperty(_React$createElement4, 'placeholder', 'Experience'), _React$createElement4)),
+	      _react2.default.createElement('input', (_React$createElement5 = { className: 'form-control', type: 'salary', value: props.salary, onChange: props.addSalary }, _defineProperty(_React$createElement5, 'className', 'salary-input'), _defineProperty(_React$createElement5, 'placeholder', 'Salary'), _React$createElement5)),
+	      _react2.default.createElement('input', (_React$createElement6 = { className: 'form-control', type: 'stack', value: props.stack, onChange: props.addStack }, _defineProperty(_React$createElement6, 'className', 'stack-input'), _defineProperty(_React$createElement6, 'placeholder', 'Stack'), _React$createElement6)),
 	      _react2.default.createElement(
 	        'button',
-	        { type: 'submit' },
+	        { type: 'submit', className: 'btn btn-primary' },
 	        'Submit'
 	      )
 	    )
@@ -38089,6 +38151,16 @@
 
 	var _jobsList2 = _interopRequireDefault(_jobsList);
 
+	var _reactRedux = __webpack_require__(226);
+
+	var _search = __webpack_require__(223);
+
+	var _search2 = _interopRequireDefault(_search);
+
+	var _redux = __webpack_require__(233);
+
+	var _actionCreator = __webpack_require__(250);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -38103,10 +38175,10 @@
 	var Jobs = function (_React$Component) {
 	  _inherits(Jobs, _React$Component);
 
-	  function Jobs() {
+	  function Jobs(props) {
 	    _classCallCheck(this, Jobs);
 
-	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Jobs).call(this));
+	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Jobs).call(this, props));
 
 	    _this.state = {
 	      jobs: [],
@@ -38121,57 +38193,28 @@
 	      this.getJobs();
 	    }
 	  }, {
-	    key: 'parseJobs',
-	    value: function parseJobs() {
-
-	      // This binding
-	      var self = this;
-
-	      // Replace that random hex bug
-	      var data = this.state.serialized.replace('﻿', "");
-
-	      // Parse the serialized XML string and assign it to the jobs state
-	      parser.parseString(data, function (err, result) {
-	        self.setState({
-	          jobs: result.response.results[0].result
-	        });
-	      });
-	    }
-	  }, {
 	    key: 'getJobs',
 	    value: function getJobs() {
 
-	      // This binding
 	      var self = this;
 
-	      // Declare a new instance of the XMLSerializer
-	      var serializer = new XMLSerializer();
-
+	      console.log("THIS IS THE CITYSTATE " + JSON.stringify(this.props.cityState));
 	      // Our query parameters
-	      var query = { publisher: "5453642953934453", q: "javascript", l: "Austin, TX", v: 2 };
+	      var query = { publisher: "5453642953934453", format: "json", q: "javascript", l: "Austin, TX", v: 2 };
 
-	      // GET request to fetch the jobs
 	      _jquery2.default.ajax({
-	        url: "http://api.indeed.com/ads/apisearch",
-	        type: "GET",
-	        contentType: "application/xml",
-	        headers: { 'Access-Control-Allow-Origin': '*' },
 	        data: query,
-	        success: function success(results) {
-	          // If successful, serialize the XML result
-	          var serializedData = serializer.serializeToString(results);
-
-	          // Set the jobs array to the serialized data
+	        dataType: 'jsonp',
+	        type: 'GET',
+	        timeout: 5000,
+	        url: 'http://api.indeed.com/ads/apisearch',
+	        success: function success(result) {
 	          self.setState({
-	            serialized: serializedData
+	            jobs: result.results
 	          });
-
-	          // Call the parser so we can parse the string
-	          // into an object we can use
-	          self.parseJobs();
 	        },
 	        error: function error(err) {
-	          throw err;
+	          console.log(err);
 	        }
 	      });
 	    }
@@ -38193,7 +38236,18 @@
 	  return Jobs;
 	}(_react2.default.Component);
 
-	exports.default = Jobs;
+	function mapStateToProps(state) {
+	  return {
+	    cityState: state.cityState
+	  };
+	}
+
+	function mapDispatchToProps(dispatch) {
+	  return (0, _redux.bindActionCreators)({ setSearch: _actionCreator.setSearch, setCityState: _actionCreator.setCityState }, dispatch);
+	}
+
+	exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(Jobs);
+	// export default Results;
 
 /***/ },
 /* 264 */
@@ -60791,13 +60845,18 @@
 
 	var _userInfoReducer2 = _interopRequireDefault(_userInfoReducer);
 
+	var _cityStateReducer = __webpack_require__(438);
+
+	var _cityStateReducer2 = _interopRequireDefault(_cityStateReducer);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	// import Redux from 'redux';
 
 	var rootReducer = (0, _redux.combineReducers)({
 	  salary: _searchReducer2.default,
-	  userInfo: _userInfoReducer2.default
+	  userInfo: _userInfoReducer2.default,
+	  cityState: _cityStateReducer2.default
 	});
 
 	// module.exports = Redux.applyMiddleware(thunk)(logger)(Redux.createStore)(rootReducer);
@@ -60864,11 +60923,36 @@
 
 	'use strict';
 
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	exports.default = function () {
+	  var state = arguments.length <= 0 || arguments[0] === undefined ? null : arguments[0];
+	  var action = arguments[1];
+
+	  switch (action.type) {
+	    case _actionCreator.SET_CITYSTATE:
+	      // console.log("Yo ur reducer did work", action.payload);
+	      return action.payload;
+	  }
+	  // console.log("Whats up your reducer didnt work", action.payload);
+	  return state;
+	};
+
+	var _actionCreator = __webpack_require__(250);
+
+/***/ },
+/* 439 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
 	var _react = __webpack_require__(2);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactDom = __webpack_require__(439);
+	var _reactDom = __webpack_require__(440);
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
@@ -60876,7 +60960,7 @@
 
 	var _reactRouter = __webpack_require__(160);
 
-	var _router = __webpack_require__(440);
+	var _router = __webpack_require__(441);
 
 	var _router2 = _interopRequireDefault(_router);
 
@@ -60884,7 +60968,7 @@
 
 	var _combine2 = _interopRequireDefault(_combine);
 
-	var _reduxLogger = __webpack_require__(443);
+	var _reduxLogger = __webpack_require__(444);
 
 	var _reduxLogger2 = _interopRequireDefault(_reduxLogger);
 
@@ -60906,7 +60990,7 @@
 	), document.getElementById('app'));
 
 /***/ },
-/* 439 */
+/* 440 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -60915,7 +60999,7 @@
 
 
 /***/ },
-/* 440 */
+/* 441 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -60930,7 +61014,7 @@
 
 	var _reactRouter = __webpack_require__(160);
 
-	var _mainLayout = __webpack_require__(441);
+	var _mainLayout = __webpack_require__(442);
 
 	var _mainLayout2 = _interopRequireDefault(_mainLayout);
 
@@ -60938,7 +61022,7 @@
 
 	var _app2 = _interopRequireDefault(_app);
 
-	var _stats = __webpack_require__(442);
+	var _stats = __webpack_require__(443);
 
 	var _stats2 = _interopRequireDefault(_stats);
 
@@ -61009,7 +61093,7 @@
 	);
 
 /***/ },
-/* 441 */
+/* 442 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -61043,7 +61127,7 @@
 	exports.default = MainLayout;
 
 /***/ },
-/* 442 */
+/* 443 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -61150,7 +61234,7 @@
 	exports.default = Stats;
 
 /***/ },
-/* 443 */
+/* 444 */
 /***/ function(module, exports) {
 
 	"use strict";

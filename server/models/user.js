@@ -5,6 +5,7 @@ var userSchema = new mongoose.Schema({
   name: String,
   email: {type: String, unique: true, lowercase: true},
   password: String,
+  gender: String,
   githubId: Number,
   userData: []
 });
