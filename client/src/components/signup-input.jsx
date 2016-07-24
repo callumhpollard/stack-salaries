@@ -1,15 +1,63 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 var SignupInput = (props) => (
 
 
-  <div className="loginBox center-block text-center">
+  <div className="loginbox center-block text-center">
     <form onSubmit={props.SignUpToServer} >
-      <input type="name" value={props.user} onChange={props.addUser} className="signup-user" placeholder="Username" />
-      <input type="email" value={props.email} onChange={props.addEmail} className="signup-email" placeholder="Email" />
-      <input type="password" value={props.password} onChange={props.addPassword} className="signup-password" placeholder="Password" />
-    <button type="submit">Submit</button>
+      <div className="row root">
+        <h3><Link to='/' className="no-decoration">Stack Salaries</Link></h3>
+      </div>
+
+      <fieldset className="form-group row gray">
+        <div className="col-sm-1">
+            <span className="glyphicon glyphicon-user"></span>
+        </div>
+
+        <div className="col-sm-11">
+          <input type="name" value={props.user} onChange={props.addUser} className="form-control" placeholder="Name" />
+        </div>
+      </fieldset>
+
+      <fieldset className="form-group row gray">
+        <div className="col-sm-1">
+            <span className="glyphicon glyphicon-envelope"></span>
+        </div>
+
+        <div className="col-sm-11">
+          <input type="email" value={props.email} onChange={props.addEmail} className="form-control" placeholder="Email" />
+        </div>
+      </fieldset>
+
+
+      <fieldset className="form-group row gray">
+        <div className="col-sm-1">
+            <span className="glyphicon glyphicon-lock"></span>
+        </div>
+
+        <div className="col-sm-11">
+          <input type="password" value={props.password} onChange={props.addPassword} className="form-control" placeholder="Password" />
+        </div>
+      </fieldset>
+
+      <fieldset className="form-group row gray">
+        <select className="center-block form-control fit">
+          <option value="" disabled selected>Gender</option>
+          <option>Male</option>
+          <option>Female</option>
+          <option>Other</option>
+        </select>
+      </fieldset>
+
+      <div className="row">
+        <button type="submit" className="btn btn-primary">Submit</button>
+      </div>
     </form>
+
+    <div id="small-link" className="row">
+        <p>Already have an account? <Link to='/login'>Log In</Link></p>
+    </div>
   </div>
 )
 

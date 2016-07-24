@@ -19,9 +19,10 @@ var LoginInput = (props) => (
         <div className="col-sm-11">
           <input type="email" value={props.email} onChange={props.changeUser} className="form-control" placeholder="email" />
         </div>
+
       </fieldset>
 
-      <fieldset className="form-group row">
+      <fieldset className="form-group">
         <small className="text-muted">We'll never share your email with anyone else.</small>
       </fieldset>
 
@@ -37,6 +38,10 @@ var LoginInput = (props) => (
 
       <div className="row">
         <button type="submit" className="btn btn-primary">Submit</button>
+      </div>
+
+      <div id="small-link" className="row">
+        <p>Don't have an account? <Link to='/signup'>Sign Up</Link></p>
       </div>
 
     </form>

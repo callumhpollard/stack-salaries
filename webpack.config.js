@@ -10,7 +10,7 @@ var clientConfig = {
       './client/src/components/login-input.jsx',
       './client/src/components/dashboard.jsx',
       './client/src/components/signup-form.jsx',
-      './client/src/components/advance-search.jsx',
+      './client/src/components/advanced-search.jsx',
       './client/src/components/advance-searchInput.jsx',
       './client/src/components/signup-input.jsx',
       './client/src/components/search.jsx',

@@ -4,10 +4,13 @@ import LoginInput from './login-input';
 import Login from './login';
 import { History } from 'react-router';
 import { Router } from 'react-router';
-import AdvancedSearch from './advance-search';
+import AdvancedSearch from './advanced-search';
 import Flash from './flash';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { setUserInfo } from '../actions/actionCreator';
 
-class LoginForm extends React.Component{
+class LoginForm extends React.Component {
   constructor() {
 
     super();
@@ -62,7 +65,6 @@ class LoginForm extends React.Component{
         self.setState({
           authToken: data.token,
         });
-        console.log(data.token);
         self.redirectToDashboard();
       },
       error: function(err) {
@@ -73,13 +75,14 @@ class LoginForm extends React.Component{
 
 
   render() {
+    console.log(localStorage.token);
      var toggle = "";
      if(!this.state.hasError){
         toggle = "hide";
      }
 
     return (
-      <div>
+      <div className="loginMain">
         <div className={toggle}>
           <Flash type={this.state.errorType} message={this.state.errorMessage} />
         </div>
@@ -93,4 +96,18 @@ LoginForm.contextTypes= {
   router: React.PropTypes.object.isRequired
 };
 
-export default LoginForm;
+  function mapStateToProps(state) {
+    return {
+      userInfo: state.userInfo
+    }
+  }
+
+
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({setUserInfo: setUserInfo}, dispatch);
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(LoginForm);
+
+
+// export default LoginForm;

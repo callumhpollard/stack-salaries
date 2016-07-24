@@ -6,7 +6,7 @@ import DataInput from './dashboard-dataInput';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { setUserInfo } from '../actions/actionCreator';
-
+import Logo from './logo';
 
 class Dashboard extends React.Component {
 
@@ -98,10 +98,18 @@ class Dashboard extends React.Component {
           //   <li>Salary: {this.props.userInfo.salary}</li>
 
   render() {
+
+    console.log(this.props);
     return(
+
+      <div className="container results">
+          <nav id="resultNav" className="navbar navbar-default navbar-fixed-top">
+            <Logo/>
+          </nav>
       <div className="dashboard row">
         <h1>Welcome to the Dashboard</h1>
         <div className="col-md-4">
+
           <ul>
 
           </ul>
@@ -110,6 +118,7 @@ class Dashboard extends React.Component {
           <DataInput inputData={this.inputData.bind(this)} addStack={this.addStack.bind(this)} addCity={this.addCity.bind(this)} addState={this.addState.bind(this)} addEducation={this.addEducation.bind(this)} addExperience={this.addExperience.bind(this)} />
         </div>
       </div>
+    </div>
     );
   }
 }
@@ -118,16 +127,15 @@ Dashboard.contextTypes = {
   router: React.PropTypes.object.isRequired
 };
 
-//   function mapStateToProps(state) {
-//     return {
-//       userInfo: state.userInfo
-//     }
-//   }
+  function mapStateToProps(state) {
+    return {
+      userInfo: state.userInfo
+    }
+  }
 
 
-// function mapDispatchToProps(dispatch) {
-//   return bindActionCreators({setUserInfo: setUserInfo}, dispatch);
-// }
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({setUserInfo: setUserInfo}, dispatch);
+}
 
-// export default connect(mapStateToProps, mapDispatchToProps)(Dashboard);
-export default Dashboard;
+export default connect(mapStateToProps, mapDispatchToProps)(Dashboard);

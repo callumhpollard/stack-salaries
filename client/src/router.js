@@ -8,10 +8,11 @@ import Search from './components/search';
 import LoginForm from './components/login-form';
 import SignupForm from './components/signup-form';
 import Dashboard from './components/dashboard';
-import AdvancedSearch from './components/advance-search';
+import AdvancedSearch from './components/advanced-search';
 import Results from './components/results';
 import Jobs from './components/jobs';
-
+import Logout from './components/logout';
+import { loggedIn, logOut } from './auth/auth';
 
 export default (
   <Route path="/" component={MainLayout}>
@@ -22,7 +23,7 @@ export default (
     </Route>
 
     <Route path="login">
-      <IndexRoute component={LoginForm} />
+      <IndexRoute component={LoginForm} onEnter={loggedIn}/>
     </Route>
 
     <Route path="signup">
@@ -30,15 +31,19 @@ export default (
     </Route>
 
     <Route path="dashboard">
-      <IndexRoute component={Dashboard} />
+      <IndexRoute component={Dashboard}/>
     </Route>
 
-     <Route path="advance-search">
+     <Route path="advancedsearch">
       <IndexRoute component={AdvancedSearch} />
     </Route>
 
-     <Route path="jobs">
+    <Route path="jobs">
       <IndexRoute component={Jobs} />
+    </Route>
+
+    <Route path="logout">
+      <IndexRoute component={Logout} />
     </Route>
 
   </Route>

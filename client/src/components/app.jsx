@@ -4,11 +4,16 @@ import Main from './main';
 import Search from './search';
 import Cloud from './cloud';
 import { Link } from 'react-router';
+import { loggedIn } from '../auth/auth';
 
 class App extends React.Component {
 
   constructor() {
     super();
+
+    this.state = {
+      loggedIn: loggedIn()
+    }
   }
 
   render() {
@@ -17,7 +22,7 @@ class App extends React.Component {
       <div id="main" className="front">
         <div>
           <nav className="navbar navbar-default navbar-fixed-top">
-            <Login />
+            <Login loggedIn={this.state.loggedIn}/>
           </nav>
           <Main/>
 

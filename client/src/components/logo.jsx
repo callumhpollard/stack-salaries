@@ -2,9 +2,9 @@ import React from 'react';
 import { Link } from 'react-router';
 
 
-const Logo = React.createClass({
-  render: function() {
-    return(
+var Logo = (props) => {
+  console.log(props);
+  return(
     <div>
       <div className="row logo-headline">
         <div className="left">
@@ -12,14 +12,22 @@ const Logo = React.createClass({
         </div>
 
         <div className="right">
-          <button className="btn btn-primary login"><Link to='/login'>Dashboard</Link></button>
-          <button className="btn btn-primary login"><Link to='/jobs'>Jobs</Link></button>
-
+          {props.loggedIn ? (
+              <div>
+                <button className="btn btn-primary login"><Link to='/dashboard'>Dashboard</Link></button>
+                <button className="btn btn-primary login"><Link to='/advancedsearch'>Advanced Search</Link></button>
+                <button className="btn btn-primary login"><Link to='/logout'>Log Out</Link></button>
+              </div>
+            ) : (
+              <div>
+                <button className="btn btn-primary login"><Link to='/login'>Login</Link></button>
+                <button className="btn btn-primary login"><Link to='/signup'>Sign Up</Link></button>
+              </div>
+          )}
         </div>
       </div>
     </div>
     );
-  }
-});
+}
 
 export default Logo;

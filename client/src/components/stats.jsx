@@ -5,13 +5,19 @@ import Results from './results';
 import Search from './search';
 import Footer from './footer';
 import Jobs from './jobs';
-import AdvancedSearch from './advance-search';
+import AdvancedSearch from './advanced-search';
 import { History } from 'react-router';
+import { loggedIn } from '../auth/auth';
+
 
 class Stats extends React.Component {
 
   constructor() {
     super();
+
+    this.state = {
+      loggedIn: loggedIn()
+    }
   }
 
   componentDidMount(){
@@ -21,7 +27,7 @@ class Stats extends React.Component {
     return (
       <div className="container results">
           <nav id="resultNav" className="navbar navbar-default navbar-fixed-top">
-            <Logo/>
+            <Logo loggedIn={this.state.loggedIn} />
           </nav>
         <div>
           <div className="d3">
