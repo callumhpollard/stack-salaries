@@ -14,6 +14,7 @@ class SignForm extends React.Component{
       name: "",
       password: "",
       email: "",
+      gender: "",
       authToken: ""
     };
   }
@@ -36,6 +37,12 @@ class SignForm extends React.Component{
     });
   }
 
+  addGender(e){
+    this.setState({
+      gender: e.target.value
+    })
+  }
+
  redirectToDashboard(dataToken){
     this.props.history.pushState({token: dataToken}, '/dashboard');
   }
@@ -45,9 +52,9 @@ class SignForm extends React.Component{
     e.preventDefault();
     var self = this;
 
-    var data = {name: this.state.name, email: this.state.email, password: this.state.password};
+    var data = {name: this.state.name, email: this.state.email, password: this.state.password, gender: this.state.gender};
 
-    // console.log(data);
+    console.log(data);
     $.ajax({
       url:"http://localhost:3000/signup",
       type:"POST",

@@ -42,8 +42,12 @@ var SignupInput = (props) => (
       </fieldset>
 
       <fieldset className="form-group row gray">
-        <select className="center-block form-control fit">
-          <option value="" disabled selected>Gender</option>
+        <select
+        className="center-block form-control fit"
+        value={props.gender}
+        onChange={props.addGender}
+        >
+          <option disabled selected>Gender</option>
           <option>Male</option>
           <option>Female</option>
           <option>Other</option>

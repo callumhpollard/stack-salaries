@@ -37586,10 +37586,7 @@
 	          errorMessage: "Please check your email and password and try again!"
 	        });
 	      }
-	      // this.context.router.push('/login');
 	    }
-	    // this.props.history.pushState({token: dataToken}, '/jobs');
-
 	  }, {
 	    key: 'loginToServer',
 	    value: function loginToServer(e) {
@@ -38368,6 +38365,7 @@
 	      name: "",
 	      password: "",
 	      email: "",
+	      gender: "",
 	      authToken: ""
 	    };
 	    return _this;
@@ -38395,6 +38393,13 @@
 	      });
 	    }
 	  }, {
+	    key: 'addGender',
+	    value: function addGender(e) {
+	      this.setState({
+	        gender: e.target.value
+	      });
+	    }
+	  }, {
 	    key: 'redirectToDashboard',
 	    value: function redirectToDashboard(dataToken) {
 	      this.props.history.pushState({ token: dataToken }, '/dashboard');
@@ -38405,9 +38410,9 @@
 	      e.preventDefault();
 	      var self = this;
 
-	      var data = { name: this.state.name, email: this.state.email, password: this.state.password };
+	      var data = { name: this.state.name, email: this.state.email, password: this.state.password, gender: this.state.gender };
 
-	      // console.log(data);
+	      console.log(data);
 	      _jquery2.default.ajax({
 	        url: "http://localhost:3000/signup",
 	        type: "POST",
@@ -38526,10 +38531,14 @@
 	        { className: 'form-group row gray' },
 	        _react2.default.createElement(
 	          'select',
-	          { className: 'center-block form-control fit' },
+	          {
+	            className: 'center-block form-control fit',
+	            value: props.gender,
+	            onChange: props.addGender
+	          },
 	          _react2.default.createElement(
 	            'option',
-	            { value: '', disabled: true, selected: true },
+	            { disabled: true, selected: true },
 	            'Gender'
 	          ),
 	          _react2.default.createElement(
