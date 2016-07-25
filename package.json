@@ -16,11 +16,6 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "babel-core": "^6.10.4",
-    "babel-loader": "^6.2.4",
-    "babel-preset-es2015": "^6.1.18",
-    "babel-preset-react": "^6.1.18",
-    "babel-plugin-transform-decorators-legacy": "^1.3.4",
     "chai": "^3.5.0",
     "chai-jquery": "^2.0.0",
     "jsdom": "^8.1.0",
@@ -29,6 +24,11 @@
     "webpack-dev-server": "^1.14.0"
   },
   "dependencies": {
+    "babel-core": "^6.10.4",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.1.18",
+    "babel-preset-react": "^6.1.18",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
     "babel-preset-stage-1": "^6.1.18",
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.15.2",
