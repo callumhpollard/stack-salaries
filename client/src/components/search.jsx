@@ -33,10 +33,8 @@ class Search extends React.Component{
     });
   }
 
-  redirectToResults(salaryresults){
-    var cityState = this.state.cityState.split(", ");
+  redirectToResults(search){
     this.props.setSearch(this.state.salary);
-    this.props.setCityState({cityForJob: cityState[0], stateForJob: cityState[1]});
     this.context.router.push('/results');
   }
 
@@ -51,16 +49,16 @@ class Search extends React.Component{
     var data = {stack: this.state.stack, city: cityState[0], state:cityState[1]};
 
     $.ajax({
-      url:"http://localhost:3000/search",
+      url:"https://localhost:3000/search",
       type:"POST",
       contentType:"application/json",
       data: JSON.stringify(data),
-      success: function(data) {
+      success: function(results) {
         self.setState({
-          salary: data
+          salary: results
         });
-
-        self.redirectToResults(data);
+        self.props.setCityState({stack: self.state.stack, cityForJob: cityState[0], stateForJob: cityState[1] });
+        self.redirectToResults(results);
       },
       error: function(err) {
         console.log(err);

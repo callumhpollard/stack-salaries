@@ -68,9 +68,10 @@ body {
   transition: .2s;
 }
 
-.btn-primary:hover a:hover {
-  color: #fff;
-}
+/*.btn-primary:hover a:hover {
+  color: #1abc9c;
+  border: 1px solid #1abc9c;
+}*/
 
 .form-control {
   max-width: 500px;
@@ -181,7 +182,14 @@ svg {
   line-height: 1;
   text-align: center;
   margin-bottom: 20px;
+  text-decoration: none;
 }
+
+.logo-headline a {
+  text-decoration: none;
+}
+
+
 
 .left {
    /* This will be twice as big as the small item. */
@@ -201,10 +209,20 @@ svg {
 }
 
 .right .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
-    color: #3998d7;
-    background-color: #fff;
-    border-color: #285e8e; /*set the color you want here*/
+    color: #fff;
+    background-color: #1abc9c;
+    border-color: 1px solid #1abc9c;
 }
+
+.right .btn-primary:hover a {
+  color: #fff;
+}
+
+
+/*.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+  color: #1abc9c;
+  border: 1px solid #1abc9c;
+}*/
 
 #bar0 rect{
   fill: #f39c12;

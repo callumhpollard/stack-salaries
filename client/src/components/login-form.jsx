@@ -24,6 +24,11 @@ class LoginForm extends React.Component {
     };
   }
 
+
+  componentWillMount(){
+    // console.log("You're here!");
+  }
+
   changeUser(e) {
     this.setState({
       email: e.target.value
@@ -57,7 +62,7 @@ class LoginForm extends React.Component {
     var self = this;
 
     $.ajax({
-      url:"http://localhost:3000/signin",
+      url:"https://localhost:3000/signin",
       type:"POST",
       contentType:"application/json",
       data: JSON.stringify(data),
@@ -87,7 +92,7 @@ class LoginForm extends React.Component {
         <div className={toggle}>
           <Flash type={this.state.errorType} message={this.state.errorMessage} />
         </div>
-        <LoginInput history={this.props.history} loginToServer={this.loginToServer.bind(this)} changeUser={this.changeUser.bind(this)} changePassword={this.changePassword.bind(this)} />
+        <LoginInput history={this.props.history} loginToServer={this.loginToServer.bind(this)} changeUser={this.changeUser.bind(this)} changePassword={this.changePassword.bind(this)}/>
       </div>
     );
   }

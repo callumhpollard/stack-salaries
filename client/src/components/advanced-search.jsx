@@ -73,7 +73,7 @@ class AdvancedSearch extends React.Component{
     var data = {stack: this.state.stack, city: this.state.city, state:this.state.state, education: this.state.education, education:this.state.education, gender:this.state.gender, experience:this.state.experience};
 
     $.ajax({
-      url:"http://localhost:3000/search",
+      url:"https://localhost:3000/search",
       type:"POST",
       contentType:"application/json",
       data: JSON.stringify(data),

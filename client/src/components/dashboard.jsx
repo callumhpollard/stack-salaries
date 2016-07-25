@@ -8,6 +8,8 @@ import { bindActionCreators } from 'redux';
 import { setUserInfo } from '../actions/actionCreator';
 import Logo from './logo';
 import { loggedIn } from '../auth/auth';
+import Flash from './flash';
+
 
 class Dashboard extends React.Component {
 
@@ -75,13 +77,13 @@ class Dashboard extends React.Component {
     var data = {stack: this.state.stack, city: this.state.city, state:this.state.state, education:this.state.education, experience:this.state.experience, position:this.state.position};
 
     $.ajax({
-      url:"http://localhost:3000/stackentry",
+      url:"https://localhost:3000/stackentry",
       type:"POST",
       contentType:"application/json",
       data: JSON.stringify(data),
       success: function(data) {
         self.submitToStore();
-        console.log("YOUR THING WORKED, " + data);
+        self.context.router.push('/');
       },
       error: function(err) {
         console.log(err);
@@ -92,7 +94,7 @@ class Dashboard extends React.Component {
 
   render() {
 
-    console.log(this.props);
+    // console.log(this.props);
 
     return (
 
@@ -103,6 +105,7 @@ class Dashboard extends React.Component {
       </nav>
 
       <div className="row under-nav">
+
         <div>
             {this.props.userInfo ? (
 

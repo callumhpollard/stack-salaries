@@ -44,9 +44,16 @@ var LoginInput = (props) => (
         <p>Don't have an account? <Link to='/signup'>Sign Up</Link></p>
       </div>
 
+      <div id="small-link" className="row">
+        <p><a href="/auth/github/">Sign In With Github</a></p>
+      </div>
+
     </form>
 </div>
 
 )
+
+
+
 
 export default LoginInput;

@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 
 
 var Logo = (props) => {
-  console.log(props);
+  // console.log(props);
   return(
     <div>
       <div className="row logo-headline">

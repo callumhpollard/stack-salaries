@@ -1,7 +1,5 @@
 import React from 'react';
 import $ from 'jquery';
-var xml2js = require('xml2js');
-var parser = new xml2js.Parser();
 import JobsList from './jobs-list';
 import { connect } from 'react-redux';
 import search from './search';
@@ -27,15 +25,17 @@ class Jobs extends React.Component {
 
   var self = this;
 
+  // console.log(this.props.cityState);
+
   // Our query parameters
-  var query = {publisher: "5453642953934453", format:"json", q: "javascript", l: `${this.props.cityState.cityForJob}, ${this.props.cityState.stateForJob}`, v: 2}
+  var query = {publisher: "5453642953934453", format:"json", q: JSON.stringify(this.props.cityState.stack), l: `${this.props.cityState.cityForJob}, ${this.props.cityState.stateForJob}`, v: 2}
 
     $.ajax({
       data: query,
       dataType: 'jsonp',
       type: 'GET',
       timeout: 5000,
-      url: 'http://api.indeed.com/ads/apisearch',
+      url: 'https://api.indeed.com/ads/apisearch',
       success: function(result){
         self.setState({
           jobs: result.results

@@ -4,8 +4,6 @@ var secret = require('../secret');
 var GitHubStrategy = require('passport-github').Strategy;
 
 
-
-
 var githubLogin = new GitHubStrategy({
     clientID: '1ca06fb585c9cadd3def',
     clientSecret: '9e2ce18dccdfebb6c90ec47be0691ccb42f21e95',
