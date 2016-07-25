@@ -47350,7 +47350,7 @@ module.exports =
 	        ),
 	        _react2.default.createElement(
 	          'p',
-	          { 'class': 'lead' },
+	          { className: 'lead' },
 	          '© 2016 Stack Salaries'
 	        )
 	      )
@@ -47922,6 +47922,8 @@ module.exports =
 	  value: true
 	});
 
+	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
+
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 	var _react = __webpack_require__(2);
@@ -48005,6 +48007,7 @@ module.exports =
 	  }, {
 	    key: 'redirectToDashboard',
 	    value: function redirectToDashboard(userData) {
+	      console.log(typeof userData === 'undefined' ? 'undefined' : _typeof(userData));
 	      if (userData !== undefined) {
 	        this.props.setUserInfo(userData);
 	        this.context.router.push('/dashboard');
@@ -48343,6 +48346,7 @@ module.exports =
 	  }, {
 	    key: 'redirectToDashboard',
 	    value: function redirectToDashboard(userData) {
+	      console.log("WHATS IN THIS " + JSON.stringify(userData));
 	      this.props.setUserInfo(userData.user);
 	      this.context.router.push('/dashboard');
 	    }
@@ -48377,7 +48381,7 @@ module.exports =
 	      return _react2.default.createElement(
 	        'div',
 	        null,
-	        _react2.default.createElement(_signupInput2.default, { SignUpToServer: this.SignUpToServer.bind(this), addUser: this.addUser.bind(this), addEmail: this.addEmail.bind(this), addPassword: this.addPassword.bind(this) })
+	        _react2.default.createElement(_signupInput2.default, { SignUpToServer: this.SignUpToServer.bind(this), addUser: this.addUser.bind(this), addEmail: this.addEmail.bind(this), addPassword: this.addPassword.bind(this), addGender: this.addGender.bind(this) })
 	      );
 	    }
 	  }]);

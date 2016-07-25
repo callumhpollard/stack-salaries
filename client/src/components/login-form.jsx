@@ -42,6 +42,7 @@ class LoginForm extends React.Component {
   }
 
   redirectToDashboard(userData){
+    console.log(typeof userData);
     if(userData !== undefined){
       this.props.setUserInfo(userData);
       this.context.router.push('/dashboard');

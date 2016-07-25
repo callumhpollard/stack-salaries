@@ -46,6 +46,7 @@ class SignForm extends React.Component{
   }
 
  redirectToDashboard(userData){
+    console.log("WHATS IN THIS " + JSON.stringify(userData));
     this.props.setUserInfo(userData.user);
     this.context.router.push('/dashboard');
   }
@@ -79,7 +80,7 @@ class SignForm extends React.Component{
   render() {
     return (
       <div>
-        <SignupInput SignUpToServer={this.SignUpToServer.bind(this)} addUser={this.addUser.bind(this)} addEmail={this.addEmail.bind(this)} addPassword={this.addPassword.bind(this)} />
+        <SignupInput SignUpToServer={this.SignUpToServer.bind(this)} addUser={this.addUser.bind(this)} addEmail={this.addEmail.bind(this)} addPassword={this.addPassword.bind(this)} addGender={this.addGender.bind(this)}/>
       </div>
     );
   }
