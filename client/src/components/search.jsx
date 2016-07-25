@@ -49,7 +49,7 @@ class Search extends React.Component{
     var data = {stack: this.state.stack, city: cityState[0], state:cityState[1]};
 
     $.ajax({
-      url:"http://stacksalaries.herokuapp.com/search",
+      url:"https://stacksalaries.herokuapp.com/search",
       type:"POST",
       contentType:"application/json",
       data: JSON.stringify(data),
