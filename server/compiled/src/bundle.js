@@ -47524,8 +47524,6 @@ module.exports =
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -47556,41 +47554,43 @@ module.exports =
 	    key: 'findCity',
 	    value: function findCity(e) {
 	      this.setState({
-	        city: e.target.value
+	        city: e.target.value.toLowerCase()
 	      });
 	    }
 	  }, {
 	    key: 'findState',
 	    value: function findState(e) {
 	      this.setState({
-	        state: e.target.value
+	        state: e.target.value.toLowerCase()
 	      });
 	    }
 	  }, {
 	    key: 'findEducation',
 	    value: function findEducation(e) {
 	      this.setState({
-	        education: e.target.value
+	        education: e.target.value.toLowerCase()
 	      });
 	    }
 	  }, {
 	    key: 'findGender',
 	    value: function findGender(e) {
 	      this.setState({
-	        gender: e.target.value
+	        gender: e.target.value.toLowerCase()
 	      });
 	    }
 	  }, {
 	    key: 'findExperience',
 	    value: function findExperience(e) {
 	      this.setState({
-	        experience: e.target.value
+	        experience: e.target.value.toLowerCase()
 	      });
 	    }
 	  }, {
 	    key: 'findStack',
 	    value: function findStack(e) {
-	      this.state.stack.push(e.target.value);
+	      this.setState({
+	        stack: e.target.value.toLowerCase().split(', ')
+	      });
 	    }
 	  }, {
 	    key: 'redirectToResults',
@@ -47601,27 +47601,29 @@ module.exports =
 	  }, {
 	    key: 'GetAdvancedSearchData',
 	    value: function GetAdvancedSearchData(e) {
-	      var _data;
-
 	      e.preventDefault();
 
 	      var self = this;
-	      // Remember to lowercase -- its only not in lowercase now because you input the data in as MEAN
-	      // .toLowerCase()
 
-	      var data = (_data = { stack: this.state.stack, city: this.state.city, state: this.state.state, education: this.state.education }, _defineProperty(_data, 'education', this.state.education), _defineProperty(_data, 'gender', this.state.gender), _defineProperty(_data, 'experience', this.state.experience), _data);
+	      var data = {
+	        stack: this.state.stack,
+	        city: this.state.city,
+	        state: this.state.state,
+	        education: this.state.education,
+	        gender: this.state.gender,
+	        experience: this.state.experience
+	      };
 
 	      _jquery2.default.ajax({
 	        url: "http://localhost:3000/search",
 	        type: "POST",
 	        contentType: "application/json",
 	        data: JSON.stringify(data),
-	        success: function success(data) {
+	        success: function success(results) {
 	          self.setState({
-	            salary: data
+	            salary: results
 	          });
-
-	          self.redirectToResults(data);
+	          self.redirectToResults(results);
 	        },
 	        error: function error(err) {
 	          console.log(err);
@@ -47698,12 +47700,12 @@ module.exports =
 	    _react2.default.createElement(
 	      'form',
 	      { onSubmit: props.GetAdvancedSearchData },
-	      _react2.default.createElement('input', { type: 'city', value: props.city, onChange: props.addCity, className: 'city-input', placeholder: 'City' }),
-	      _react2.default.createElement('input', { type: 'state', value: props.state, onChange: props.addState, className: 'state-input', placeholder: 'State' }),
-	      _react2.default.createElement('input', { type: 'education', value: props.education, onChange: props.addEducation, className: 'education-input', placeholder: 'Education' }),
-	      _react2.default.createElement('input', { type: 'gender', value: props.gender, onChange: props.addGender, className: 'gender-input', placeholder: 'Gender' }),
-	      _react2.default.createElement('input', { type: 'experience', value: props.experience, onChange: props.addExperience, className: 'experience-input', placeholder: 'Experience' }),
-	      _react2.default.createElement('input', { type: 'stack', value: props.stack, onChange: props.addStack, className: 'stack-input', placeholder: 'Stack' }),
+	      _react2.default.createElement('input', { type: 'city', value: props.city, onChange: props.findCity, className: 'city-input', placeholder: 'City' }),
+	      _react2.default.createElement('input', { type: 'state', value: props.state, onChange: props.findState, className: 'state-input', placeholder: 'State' }),
+	      _react2.default.createElement('input', { type: 'education', value: props.education, onChange: props.findEducation, className: 'education-input', placeholder: 'Education' }),
+	      _react2.default.createElement('input', { type: 'gender', value: props.gender, onChange: props.findGender, className: 'gender-input', placeholder: 'Gender' }),
+	      _react2.default.createElement('input', { type: 'experience', value: props.experience, onChange: props.findExperience, className: 'experience-input', placeholder: 'Experience' }),
+	      _react2.default.createElement('input', { type: 'stack', value: props.stack, onChange: props.findStack, className: 'stack-input', placeholder: 'Stack' }),
 	      _react2.default.createElement(
 	        'button',
 	        { type: 'submit' },
