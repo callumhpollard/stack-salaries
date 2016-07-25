@@ -3,15 +3,79 @@ import { Link } from 'react-router';
 
 var AdvancedSearchInput = (props) => (
 
-  <div className="signup-input">
+  <div className="dashboard center-block text-center">
+
     <form onSubmit={props.GetAdvancedSearchData} >
-      <input type="city" value={props.city} onChange={props.findCity} className="city-input" placeholder="City" />
-      <input type="state" value={props.state} onChange={props.findState} className="state-input" placeholder="State" />
-      <input type="education" value={props.education} onChange={props.findEducation} className="education-input" placeholder="Education" />
-      <input type="gender" value={props.gender} onChange={props.findGender} className="gender-input" placeholder="Gender" />
-      <input type="experience" value={props.experience} onChange={props.findExperience} className="experience-input" placeholder="Experience" />
-      <input type="stack" value={props.stack} onChange={props.findStack} className="stack-input" placeholder="Stack" />
-    <button type="submit">Submit</button>
+     <fieldset className="form-group row gray">
+        <div className="col-sm-1">
+            <span className="glyphicon glyphicon-globe"></span>
+        </div>
+
+        <div className="col-sm-11">
+          <input type="text" value={props.city} className="form-control" onChange={props.findCity} placeholder="Add your desired city" />
+        </div>
+
+      </fieldset>
+
+     <fieldset className="form-group row gray">
+      <div className="col-sm-1">
+          <span className="glyphicon glyphicon-globe"></span>
+      </div>
+
+      <div className="col-sm-11">
+        <input type="text" value={props.state} className="form-control" onChange={props.findState} placeholder="Add your desired state" />
+
+      </div>
+
+    </fieldset>
+
+    <fieldset className="form-group row gray">
+      <div className="col-sm-1">
+          <span className="glyphicon glyphicon-education"></span>
+      </div>
+
+      <div className="col-sm-11">
+        <input type="text" value={props.education} className="form-control" onChange={props.findEducation} placeholder="Education Level" />
+
+      </div>
+
+    </fieldset>
+
+    <fieldset className="form-group row gray">
+      <div className="col-sm-1">
+          <span className="glyphicon glyphicon-user"></span>
+      </div>
+
+      <div className="col-sm-11">
+        <input type="text" value={props.gender} className="form-control" onChange={props.findGender} placeholder="Gender" />
+      </div>
+
+    </fieldset>
+
+    <fieldset className="form-group row gray">
+      <div className="col-sm-1">
+          <span className="glyphicon glyphicon-briefcase"></span>
+      </div>
+
+      <div className="col-sm-11">
+        <input type="text" value={props.experience} className="form-control" onChange={props.findExperience} placeholder="Years of experience" />
+      </div>
+
+    </fieldset>
+
+     <fieldset className="form-group row gray">
+      <div className="col-sm-1">
+          <span className="glyphicon glyphicon-equalizer"></span>
+      </div>
+
+      <div className="col-sm-11">
+        <input type="text" value={props.stack} className="form-control" onChange={props.addStack} placeholder="Add any stack skills separated by commas" />
+      </div>
+    </fieldset>
+
+     <div className="row">
+        <button type="submit" className="btn btn-primary">Submit</button>
+      </div>
     </form>
   </div>
 

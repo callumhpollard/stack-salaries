@@ -6,7 +6,8 @@ import AdvancedSearchInput from './advance-searchInput';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { setSearch } from '../actions/actionCreator';
-
+import { loggedIn } from '../auth/auth';
+import Logo from './logo';
 
 class AdvancedSearch extends React.Component{
 
@@ -19,7 +20,8 @@ class AdvancedSearch extends React.Component{
       education: "",
       gender: "",
       experience: "",
-      salary: {}
+      salary: {},
+      loggedIn: loggedIn()
     };
   }
 
@@ -99,14 +101,18 @@ class AdvancedSearch extends React.Component{
 
   render() {
     return (
-      <div>
+    <div id="dashboard" className="container results">
+      <nav id="resultNav" className="navbar navbar-default navbar-fixed-top">
+        <Logo loggedIn={this.state.loggedIn} />
+      </nav>
+
+      <div className="row dashboard-row center-block">
         <div className="dashboard row">
           <h1>Advance Search</h1>
-          <div className="col-md-4">
             <AdvancedSearchInput GetAdvancedSearchData={this.GetAdvancedSearchData.bind(this)} findStack={this.findStack.bind(this)} findCity={this.findCity.bind(this)} findState={this.findState.bind(this)} findEducation={this.findEducation.bind(this)} findGender={this.findGender.bind(this)} findExperience={this.findExperience.bind(this)} />
-          </div>
         </div>
       </div>
+    </div>
     );
   }
 };

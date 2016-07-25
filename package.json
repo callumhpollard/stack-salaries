@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "",
-  "engines":{
-    "node":"6.2.2"
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "convert": "webpack",
@@ -13,10 +10,8 @@
     "compile-server": "babel ./server/server.js --out-file ./server/server-c.js --presets=es2015,react --ignore=node_modules,compiled --source-maps inline",
     "dev": "open 'http://localhost:8080/webpack-dev-server/#/'; webpack-dev-server --content-base ./client/compiled/",
     "live": "nodemon ./server/server-c.js",
-    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
-    "quick": "npm run convert && npm run live",
-    "prod": "NODE_ENV=production node ./server/server-c.js",
-    "postinstall": "webpack -p"
+    "start": "npm run compile-server && npm run convert && npm run live",
+    "quick": "npm run convert && npm run live"
   },
   "author": "",
   "license": "ISC",
@@ -71,6 +66,12 @@
     "babel-loader": "^6.2.4",
     "babel-preset-es2015": "^6.1.18",
     "babel-preset-react": "^6.1.18",
-    "babel-plugin-transform-decorators-legacy": "^1.3.4"
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "chai": "^3.5.0",
+    "chai-jquery": "^2.0.0",
+    "jsdom": "^8.1.0",
+    "mocha": "^2.4.5",
+    "react-addons-test-utils": "^0.14.7",
+    "webpack-dev-server": "^1.14.0"
   }
 }

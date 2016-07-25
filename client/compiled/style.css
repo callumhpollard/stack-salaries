@@ -157,9 +157,10 @@ svg {
 
 .footer {
   background-color: #2c3e50;
-  display: flex;
-  margin: 0 -15px 0 -15px;
-  min-height: 250px;
+/*  display: flex;
+*/  margin: 0 -15px 0 -15px;
+  min-height: 100px;
+  padding: 30px;
 }
 
 .footer p {
@@ -225,15 +226,15 @@ svg {
 }*/
 
 #bar0 rect{
-  fill: #f39c12;
+  fill: #c0392b
 }
 
 #bar1 rect{
-  fill: #30A2E6;
+  fill: #f39c12;
 }
 
 #bar2 rect{
-  fill: #E60900;
+  fill: #1abc9c;
 }
 
 
@@ -494,3 +495,12 @@ svg {
   padding: 30px;
 }
 
+.inner-search {
+  margin-top: 10px;
+}
+
+.inner-search .search-wrapper {
+  background-color: #ecf0f1;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}

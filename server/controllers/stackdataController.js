@@ -9,6 +9,7 @@ var getQuery = function(query, callback){
       clear[k] = query[k];
     }
   }
+  console.log(clear);
   callback(clear);
 }
 

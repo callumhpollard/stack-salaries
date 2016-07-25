@@ -33,7 +33,10 @@ class Stats extends React.Component {
           <div className="d3">
             <Results history={this.props.history}/>
           </div>
-          <Search/>
+          <div className="inner-search">
+            <p className="lead text-center">Another Search?</p>
+            <Search/>
+          </div>
           <div>
             <p className="lead text-center">Related Jobs in Your Area</p>
             <Jobs />

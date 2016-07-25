@@ -37326,6 +37326,16 @@ module.exports =
 	          ),
 	          _react2.default.createElement(
 	            'div',
+	            { className: 'inner-search' },
+	            _react2.default.createElement(
+	              'p',
+	              { className: 'lead text-center' },
+	              'Another Search?'
+	            ),
+	            _react2.default.createElement(_search2.default, null)
+	          ),
+	          _react2.default.createElement(
+	            'div',
 	            null,
 	            _react2.default.createElement(
 	              'p',
@@ -37334,7 +37344,6 @@ module.exports =
 	            ),
 	            _react2.default.createElement(_jobs2.default, null)
 	          ),
-	          _react2.default.createElement(_search2.default, null),
 	          _react2.default.createElement(_footer2.default, null)
 	        )
 	      );
@@ -37660,20 +37669,12 @@ module.exports =
 
 	    _this.state = {
 	      width: 500,
-	      height: 500,
-	      data: [{ x: 'a', y: _this.props.salary.lowest }, { x: 'b', y: _this.props.salary.average }, { x: 'c', y: _this.props.salary.highest }]
+	      height: 500
 	    };
 	    return _this;
 	  }
 
 	  _createClass(Results, [{
-	    key: 'componentWillMount',
-	    value: function componentWillMount() {
-	      this.setState({
-	        data: [{ x: 'a', y: this.props.salary.lowest }, { x: 'b', y: this.props.salary.average }, { x: 'c', y: this.props.salary.highest }]
-	      });
-	    }
-	  }, {
 	    key: 'render',
 	    value: function render() {
 
@@ -37694,7 +37695,7 @@ module.exports =
 	          Chart,
 	          { width: this.state.width,
 	            height: this.state.height },
-	          _react2.default.createElement(Bar, { data: this.state.data,
+	          _react2.default.createElement(Bar, { data: [{ x: 'a', y: this.props.salary.lowest }, { x: 'b', y: this.props.salary.average }, { x: 'c', y: this.props.salary.highest }],
 	            width: this.state.width,
 	            height: this.state.height })
 	        )
@@ -47282,7 +47283,7 @@ module.exports =
 /* 261 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -47292,46 +47293,65 @@ module.exports =
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _reactRouter = __webpack_require__(158);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var Footer = _react2.default.createClass({
-	  displayName: "Footer",
+	  displayName: 'Footer',
 
 	  render: function render() {
 	    return _react2.default.createElement(
-	      "div",
-	      { className: "footer text-center" },
+	      'div',
+	      { className: 'footer center-block text-center' },
 	      _react2.default.createElement(
-	        "div",
-	        { className: "row" },
+	        'div',
+	        { className: 'row' },
 	        _react2.default.createElement(
-	          "ul",
-	          { className: "list-inline" },
+	          'ul',
+	          { className: 'list-inline' },
 	          _react2.default.createElement(
-	            "li",
+	            'li',
 	            null,
-	            "About"
+	            _react2.default.createElement(
+	              _reactRouter.Link,
+	              { to: '/' },
+	              'About'
+	            ),
+	            ' '
 	          ),
 	          _react2.default.createElement(
-	            "li",
+	            'li',
 	            null,
-	            "Jobs"
+	            _react2.default.createElement(
+	              _reactRouter.Link,
+	              { to: '/' },
+	              'Jobs'
+	            )
 	          ),
 	          _react2.default.createElement(
-	            "li",
+	            'li',
 	            null,
-	            "Team Onix"
+	            _react2.default.createElement(
+	              _reactRouter.Link,
+	              { to: '/' },
+	              'Team Onix'
+	            )
 	          ),
 	          _react2.default.createElement(
-	            "li",
+	            'li',
 	            null,
-	            "Contact"
+	            _react2.default.createElement(
+	              _reactRouter.Link,
+	              { to: '/' },
+	              'Contact'
+	            )
 	          )
 	        ),
 	        _react2.default.createElement(
-	          "p",
-	          null,
-	          "2016 Stack Salaries"
+	          'p',
+	          { 'class': 'lead' },
+	          '© 2016 Stack Salaries'
 	        )
 	      )
 	    );
@@ -47603,9 +47623,13 @@ module.exports =
 
 	var _actionCreator = __webpack_require__(254);
 
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	var _auth = __webpack_require__(256);
 
-	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+	var _logo = __webpack_require__(258);
+
+	var _logo2 = _interopRequireDefault(_logo);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -47628,7 +47652,8 @@ module.exports =
 	      education: "",
 	      gender: "",
 	      experience: "",
-	      salary: {}
+	      salary: {},
+	      loggedIn: (0, _auth.loggedIn)()
 	    };
 	    return _this;
 	  }
@@ -47637,41 +47662,43 @@ module.exports =
 	    key: 'findCity',
 	    value: function findCity(e) {
 	      this.setState({
-	        city: e.target.value
+	        city: e.target.value.toLowerCase()
 	      });
 	    }
 	  }, {
 	    key: 'findState',
 	    value: function findState(e) {
 	      this.setState({
-	        state: e.target.value
+	        state: e.target.value.toLowerCase()
 	      });
 	    }
 	  }, {
 	    key: 'findEducation',
 	    value: function findEducation(e) {
 	      this.setState({
-	        education: e.target.value
+	        education: e.target.value.toLowerCase()
 	      });
 	    }
 	  }, {
 	    key: 'findGender',
 	    value: function findGender(e) {
 	      this.setState({
-	        gender: e.target.value
+	        gender: e.target.value.toLowerCase()
 	      });
 	    }
 	  }, {
 	    key: 'findExperience',
 	    value: function findExperience(e) {
 	      this.setState({
-	        experience: e.target.value
+	        experience: e.target.value.toLowerCase()
 	      });
 	    }
 	  }, {
 	    key: 'findStack',
 	    value: function findStack(e) {
-	      this.state.stack.push(e.target.value);
+	      this.setState({
+	        stack: e.target.value.toLowerCase().split(', ')
+	      });
 	    }
 	  }, {
 	    key: 'redirectToResults',
@@ -47682,27 +47709,29 @@ module.exports =
 	  }, {
 	    key: 'GetAdvancedSearchData',
 	    value: function GetAdvancedSearchData(e) {
-	      var _data;
-
 	      e.preventDefault();
 
 	      var self = this;
-	      // Remember to lowercase -- its only not in lowercase now because you input the data in as MEAN
-	      // .toLowerCase()
 
-	      var data = (_data = { stack: this.state.stack, city: this.state.city, state: this.state.state, education: this.state.education }, _defineProperty(_data, 'education', this.state.education), _defineProperty(_data, 'gender', this.state.gender), _defineProperty(_data, 'experience', this.state.experience), _data);
+	      var data = {
+	        stack: this.state.stack,
+	        city: this.state.city,
+	        state: this.state.state,
+	        education: this.state.education,
+	        gender: this.state.gender,
+	        experience: this.state.experience
+	      };
 
 	      _jquery2.default.ajax({
 	        url: "http://localhost:3000/search",
 	        type: "POST",
 	        contentType: "application/json",
 	        data: JSON.stringify(data),
-	        success: function success(data) {
+	        success: function success(results) {
 	          self.setState({
-	            salary: data
+	            salary: results
 	          });
-
-	          self.redirectToResults(data);
+	          self.redirectToResults(results);
 	        },
 	        error: function error(err) {
 	          console.log(err);
@@ -47714,18 +47743,23 @@ module.exports =
 	    value: function render() {
 	      return _react2.default.createElement(
 	        'div',
-	        null,
+	        { id: 'dashboard', className: 'container results' },
+	        _react2.default.createElement(
+	          'nav',
+	          { id: 'resultNav', className: 'navbar navbar-default navbar-fixed-top' },
+	          _react2.default.createElement(_logo2.default, { loggedIn: this.state.loggedIn })
+	        ),
 	        _react2.default.createElement(
 	          'div',
-	          { className: 'dashboard row' },
-	          _react2.default.createElement(
-	            'h1',
-	            null,
-	            'Advance Search'
-	          ),
+	          { className: 'row dashboard-row center-block' },
 	          _react2.default.createElement(
 	            'div',
-	            { className: 'col-md-4' },
+	            { className: 'dashboard row' },
+	            _react2.default.createElement(
+	              'h1',
+	              null,
+	              'Advance Search'
+	            ),
 	            _react2.default.createElement(_advanceSearchInput2.default, { GetAdvancedSearchData: this.GetAdvancedSearchData.bind(this), findStack: this.findStack.bind(this), findCity: this.findCity.bind(this), findState: this.findState.bind(this), findEducation: this.findEducation.bind(this), findGender: this.findGender.bind(this), findExperience: this.findExperience.bind(this) })
 	          )
 	        )
@@ -47775,20 +47809,102 @@ module.exports =
 	var AdvancedSearchInput = function AdvancedSearchInput(props) {
 	  return _react2.default.createElement(
 	    'div',
-	    { className: 'signup-input' },
+	    { className: 'dashboard center-block text-center' },
 	    _react2.default.createElement(
 	      'form',
 	      { onSubmit: props.GetAdvancedSearchData },
-	      _react2.default.createElement('input', { type: 'city', value: props.city, onChange: props.addCity, className: 'city-input', placeholder: 'City' }),
-	      _react2.default.createElement('input', { type: 'state', value: props.state, onChange: props.addState, className: 'state-input', placeholder: 'State' }),
-	      _react2.default.createElement('input', { type: 'education', value: props.education, onChange: props.addEducation, className: 'education-input', placeholder: 'Education' }),
-	      _react2.default.createElement('input', { type: 'gender', value: props.gender, onChange: props.addGender, className: 'gender-input', placeholder: 'Gender' }),
-	      _react2.default.createElement('input', { type: 'experience', value: props.experience, onChange: props.addExperience, className: 'experience-input', placeholder: 'Experience' }),
-	      _react2.default.createElement('input', { type: 'stack', value: props.stack, onChange: props.addStack, className: 'stack-input', placeholder: 'Stack' }),
 	      _react2.default.createElement(
-	        'button',
-	        { type: 'submit' },
-	        'Submit'
+	        'fieldset',
+	        { className: 'form-group row gray' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'col-sm-1' },
+	          _react2.default.createElement('span', { className: 'glyphicon glyphicon-globe' })
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'col-sm-11' },
+	          _react2.default.createElement('input', { type: 'text', value: props.city, className: 'form-control', onChange: props.findCity, placeholder: 'Add your desired city' })
+	        )
+	      ),
+	      _react2.default.createElement(
+	        'fieldset',
+	        { className: 'form-group row gray' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'col-sm-1' },
+	          _react2.default.createElement('span', { className: 'glyphicon glyphicon-globe' })
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'col-sm-11' },
+	          _react2.default.createElement('input', { type: 'text', value: props.state, className: 'form-control', onChange: props.findState, placeholder: 'Add your desired state' })
+	        )
+	      ),
+	      _react2.default.createElement(
+	        'fieldset',
+	        { className: 'form-group row gray' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'col-sm-1' },
+	          _react2.default.createElement('span', { className: 'glyphicon glyphicon-education' })
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'col-sm-11' },
+	          _react2.default.createElement('input', { type: 'text', value: props.education, className: 'form-control', onChange: props.findEducation, placeholder: 'Education Level' })
+	        )
+	      ),
+	      _react2.default.createElement(
+	        'fieldset',
+	        { className: 'form-group row gray' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'col-sm-1' },
+	          _react2.default.createElement('span', { className: 'glyphicon glyphicon-user' })
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'col-sm-11' },
+	          _react2.default.createElement('input', { type: 'text', value: props.gender, className: 'form-control', onChange: props.findGender, placeholder: 'Gender' })
+	        )
+	      ),
+	      _react2.default.createElement(
+	        'fieldset',
+	        { className: 'form-group row gray' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'col-sm-1' },
+	          _react2.default.createElement('span', { className: 'glyphicon glyphicon-briefcase' })
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'col-sm-11' },
+	          _react2.default.createElement('input', { type: 'text', value: props.experience, className: 'form-control', onChange: props.findExperience, placeholder: 'Years of experience' })
+	        )
+	      ),
+	      _react2.default.createElement(
+	        'fieldset',
+	        { className: 'form-group row gray' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'col-sm-1' },
+	          _react2.default.createElement('span', { className: 'glyphicon glyphicon-equalizer' })
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'col-sm-11' },
+	          _react2.default.createElement('input', { type: 'text', value: props.stack, className: 'form-control', onChange: props.addStack, placeholder: 'Add any stack skills separated by commas' })
+	        )
+	      ),
+	      _react2.default.createElement(
+	        'div',
+	        { className: 'row' },
+	        _react2.default.createElement(
+	          'button',
+	          { type: 'submit', className: 'btn btn-primary' },
+	          'Submit'
+	        )
 	      )
 	    )
 	  );
@@ -48236,8 +48352,6 @@ module.exports =
 	      e.preventDefault();
 	      var self = this;
 
-	      console.log(this.state.gender);
-
 	      var data = { name: this.state.name, email: this.state.email, password: this.state.password, gender: this.state.gender };
 
 	      _jquery2.default.ajax({
@@ -48246,6 +48360,7 @@ module.exports =
 	        contentType: "application/json",
 	        data: JSON.stringify(data),
 	        success: function success(results) {
+	          console.log(data);
 	          localStorage.setItem('token', results.token), self.setState({
 	            authToken: results.token
 	          });
@@ -48383,17 +48498,17 @@ module.exports =
 	          ),
 	          _react2.default.createElement(
 	            'option',
-	            { onclick: props.addGender },
+	            { value: 'Male' },
 	            'Male'
 	          ),
 	          _react2.default.createElement(
 	            'option',
-	            { onclick: props.addGender },
+	            { value: 'Female' },
 	            'Female'
 	          ),
 	          _react2.default.createElement(
 	            'option',
-	            { onclick: props.addGender },
+	            { value: 'Other' },
 	            'Other'
 	          )
 	        )

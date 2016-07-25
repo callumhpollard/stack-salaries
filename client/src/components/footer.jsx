@@ -1,17 +1,18 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 const Footer = React.createClass({
   render: function() {
     return(
-      <div className="footer text-center">
+      <div className="footer center-block text-center">
         <div className="row">
           <ul className="list-inline">
-            <li>About</li>
-            <li>Jobs</li>
-            <li>Team Onix</li>
-            <li>Contact</li>
+            <li><Link to='/'>About</Link> </li>
+              <li><Link to='/'>Jobs</Link></li>
+             <li><Link to='/'>Team Onix</Link></li>
+             <li><Link to='/'>Contact</Link></li>
           </ul>
-          <p>2016 Stack Salaries</p>
+          <p class="lead">&copy; 2016 Stack Salaries</p>
         </div>
       </div>
     );
