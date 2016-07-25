@@ -62,7 +62,7 @@ class LoginForm extends React.Component {
     var self = this;
 
     $.ajax({
-      url:"https://localhost:3000/signin",
+      url:"http://localhost:3000/signin",
       type:"POST",
       contentType:"application/json",
       data: JSON.stringify(data),

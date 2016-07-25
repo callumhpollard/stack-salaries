@@ -49,7 +49,7 @@ class Search extends React.Component{
     var data = {stack: this.state.stack, city: cityState[0], state:cityState[1]};
 
     $.ajax({
-      url:"https://localhost:3000/search",
+      url:"http://localhost:3000/search",
       type:"POST",
       contentType:"application/json",
       data: JSON.stringify(data),

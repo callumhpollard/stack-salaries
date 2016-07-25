@@ -77,7 +77,7 @@ class Dashboard extends React.Component {
     var data = {stack: this.state.stack, city: this.state.city, state:this.state.state, education:this.state.education, experience:this.state.experience, position:this.state.position};
 
     $.ajax({
-      url:"https://localhost:3000/stackentry",
+      url:"http://localhost:3000/stackentry",
       type:"POST",
       contentType:"application/json",
       data: JSON.stringify(data),
@@ -106,10 +106,10 @@ class Dashboard extends React.Component {
 
       <div className="row under-nav">
 
-        <div>
+        <div className= "gray-box panel panel-default">
             {this.props.userInfo ? (
 
-        <div className="row dashboard-row center-block">
+        <div className="row dashboard-row center-block panel-body">
           <h1>Welcome <span className="color">{this.props.userInfo.name}</span> to the Dashboard</h1>
 
          <div>

@@ -37903,7 +37903,6 @@
 	      e.preventDefault();
 
 	      var self = this;
-
 	      // Remember to lowercase -- its only not in lowercase now because you input the data in as MEAN
 	      // .toLowerCase()
 
@@ -38228,10 +38227,10 @@
 	          { className: 'row under-nav' },
 	          _react2.default.createElement(
 	            'div',
-	            null,
+	            { className: 'gray-box panel panel-default' },
 	            this.props.userInfo ? _react2.default.createElement(
 	              'div',
-	              { className: 'row dashboard-row center-block' },
+	              { className: 'row dashboard-row center-block panel-body' },
 	              _react2.default.createElement(
 	                'h1',
 	                null,
@@ -38550,6 +38549,8 @@
 	      e.preventDefault();
 	      var self = this;
 
+	      console.log(this.state.gender);
+
 	      var data = { name: this.state.name, email: this.state.email, password: this.state.password, gender: this.state.gender };
 
 	      _jquery2.default.ajax({
@@ -38695,17 +38696,17 @@
 	          ),
 	          _react2.default.createElement(
 	            'option',
-	            null,
+	            { onclick: props.addGender },
 	            'Male'
 	          ),
 	          _react2.default.createElement(
 	            'option',
-	            null,
+	            { onclick: props.addGender },
 	            'Female'
 	          ),
 	          _react2.default.createElement(
 	            'option',
-	            null,
+	            { onclick: props.addGender },
 	            'Other'
 	          )
 	        )

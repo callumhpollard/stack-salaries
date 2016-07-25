@@ -489,3 +489,8 @@ svg {
   margin-bottom: 100px;
 }
 
+.gray-box {
+  background-color: #ecf0f1;
+  padding: 30px;
+}
+

@@ -66,14 +66,13 @@ class AdvancedSearch extends React.Component{
     e.preventDefault();
 
     var self = this;
-
     // Remember to lowercase -- its only not in lowercase now because you input the data in as MEAN
     // .toLowerCase()
 
     var data = {stack: this.state.stack, city: this.state.city, state:this.state.state, education: this.state.education, education:this.state.education, gender:this.state.gender, experience:this.state.experience};
 
     $.ajax({
-      url:"https://localhost:3000/search",
+      url:"http://localhost:3000/search",
       type:"POST",
       contentType:"application/json",
       data: JSON.stringify(data),
