@@ -35712,15 +35712,15 @@
 
 	var _warning2 = _interopRequireDefault(_warning);
 
-	var _isPlainObject = __webpack_require__(247);
+	var _isPlainObject = __webpack_require__(248);
 
 	var _isPlainObject2 = _interopRequireDefault(_isPlainObject);
 
-	var _hoistNonReactStatics = __webpack_require__(251);
+	var _hoistNonReactStatics = __webpack_require__(203);
 
 	var _hoistNonReactStatics2 = _interopRequireDefault(_hoistNonReactStatics);
 
-	var _invariant = __webpack_require__(252);
+	var _invariant = __webpack_require__(168);
 
 	var _invariant2 = _interopRequireDefault(_invariant);
 
@@ -36143,23 +36143,23 @@
 
 	var _createStore2 = _interopRequireDefault(_createStore);
 
-	var _combineReducers = __webpack_require__(242);
+	var _combineReducers = __webpack_require__(243);
 
 	var _combineReducers2 = _interopRequireDefault(_combineReducers);
 
-	var _bindActionCreators = __webpack_require__(244);
+	var _bindActionCreators = __webpack_require__(245);
 
 	var _bindActionCreators2 = _interopRequireDefault(_bindActionCreators);
 
-	var _applyMiddleware = __webpack_require__(245);
+	var _applyMiddleware = __webpack_require__(246);
 
 	var _applyMiddleware2 = _interopRequireDefault(_applyMiddleware);
 
-	var _compose = __webpack_require__(246);
+	var _compose = __webpack_require__(247);
 
 	var _compose2 = _interopRequireDefault(_compose);
 
-	var _warning = __webpack_require__(243);
+	var _warning = __webpack_require__(244);
 
 	var _warning2 = _interopRequireDefault(_warning);
 
@@ -36196,7 +36196,7 @@
 
 	var _isPlainObject2 = _interopRequireDefault(_isPlainObject);
 
-	var _symbolObservable = __webpack_require__(240);
+	var _symbolObservable = __webpack_require__(241);
 
 	var _symbolObservable2 = _interopRequireDefault(_symbolObservable);
 
@@ -36454,8 +36454,8 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	var getPrototype = __webpack_require__(237),
-	    isHostObject = __webpack_require__(238),
-	    isObjectLike = __webpack_require__(239);
+	    isHostObject = __webpack_require__(239),
+	    isObjectLike = __webpack_require__(240);
 
 	/** `Object#toString` result references. */
 	var objectTag = '[object Object]';
@@ -36527,7 +36527,9 @@
 
 /***/ },
 /* 237 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
+
+	var overArg = __webpack_require__(238);
 
 	/* Built-in method references for those with the same name as other `lodash` methods. */
 	var nativeGetPrototype = Object.getPrototypeOf;
@@ -36539,15 +36541,34 @@
 	 * @param {*} value The value to query.
 	 * @returns {null|Object} Returns the `[[Prototype]]`.
 	 */
-	function getPrototype(value) {
-	  return nativeGetPrototype(Object(value));
-	}
+	var getPrototype = overArg(nativeGetPrototype, Object);
 
 	module.exports = getPrototype;
 
 
 /***/ },
 /* 238 */
+/***/ function(module, exports) {
+
+	/**
+	 * Creates a function that invokes `func` with its first argument transformed.
+	 *
+	 * @private
+	 * @param {Function} func The function to wrap.
+	 * @param {Function} transform The argument transform.
+	 * @returns {Function} Returns the new function.
+	 */
+	function overArg(func, transform) {
+	  return function(arg) {
+	    return func(transform(arg));
+	  };
+	}
+
+	module.exports = overArg;
+
+
+/***/ },
+/* 239 */
 /***/ function(module, exports) {
 
 	/**
@@ -36573,7 +36594,7 @@
 
 
 /***/ },
-/* 239 */
+/* 240 */
 /***/ function(module, exports) {
 
 	/**
@@ -36608,18 +36629,18 @@
 
 
 /***/ },
-/* 240 */
+/* 241 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {/* global window */
 	'use strict';
 
-	module.exports = __webpack_require__(241)(global || window || this);
+	module.exports = __webpack_require__(242)(global || window || this);
 
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 241 */
+/* 242 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -36644,7 +36665,7 @@
 
 
 /***/ },
-/* 242 */
+/* 243 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
@@ -36658,7 +36679,7 @@
 
 	var _isPlainObject2 = _interopRequireDefault(_isPlainObject);
 
-	var _warning = __webpack_require__(243);
+	var _warning = __webpack_require__(244);
 
 	var _warning2 = _interopRequireDefault(_warning);
 
@@ -36777,7 +36798,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5)))
 
 /***/ },
-/* 243 */
+/* 244 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -36807,7 +36828,7 @@
 	}
 
 /***/ },
-/* 244 */
+/* 245 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -36863,7 +36884,7 @@
 	}
 
 /***/ },
-/* 245 */
+/* 246 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -36874,7 +36895,7 @@
 
 	exports["default"] = applyMiddleware;
 
-	var _compose = __webpack_require__(246);
+	var _compose = __webpack_require__(247);
 
 	var _compose2 = _interopRequireDefault(_compose);
 
@@ -36926,7 +36947,7 @@
 	}
 
 /***/ },
-/* 246 */
+/* 247 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -36971,12 +36992,12 @@
 	}
 
 /***/ },
-/* 247 */
+/* 248 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var getPrototype = __webpack_require__(248),
-	    isHostObject = __webpack_require__(249),
-	    isObjectLike = __webpack_require__(250);
+	var getPrototype = __webpack_require__(249),
+	    isHostObject = __webpack_require__(251),
+	    isObjectLike = __webpack_require__(252);
 
 	/** `Object#toString` result references. */
 	var objectTag = '[object Object]';
@@ -37047,8 +37068,10 @@
 
 
 /***/ },
-/* 248 */
-/***/ function(module, exports) {
+/* 249 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var overArg = __webpack_require__(250);
 
 	/* Built-in method references for those with the same name as other `lodash` methods. */
 	var nativeGetPrototype = Object.getPrototypeOf;
@@ -37060,15 +37083,34 @@
 	 * @param {*} value The value to query.
 	 * @returns {null|Object} Returns the `[[Prototype]]`.
 	 */
-	function getPrototype(value) {
-	  return nativeGetPrototype(Object(value));
-	}
+	var getPrototype = overArg(nativeGetPrototype, Object);
 
 	module.exports = getPrototype;
 
 
 /***/ },
-/* 249 */
+/* 250 */
+/***/ function(module, exports) {
+
+	/**
+	 * Creates a function that invokes `func` with its first argument transformed.
+	 *
+	 * @private
+	 * @param {Function} func The function to wrap.
+	 * @param {Function} transform The argument transform.
+	 * @returns {Function} Returns the new function.
+	 */
+	function overArg(func, transform) {
+	  return function(arg) {
+	    return func(transform(arg));
+	  };
+	}
+
+	module.exports = overArg;
+
+
+/***/ },
+/* 251 */
 /***/ function(module, exports) {
 
 	/**
@@ -37094,7 +37136,7 @@
 
 
 /***/ },
-/* 250 */
+/* 252 */
 /***/ function(module, exports) {
 
 	/**
@@ -37127,120 +37169,6 @@
 
 	module.exports = isObjectLike;
 
-
-/***/ },
-/* 251 */
-/***/ function(module, exports) {
-
-	/**
-	 * Copyright 2015, Yahoo! Inc.
-	 * Copyrights licensed under the New BSD License. See the accompanying LICENSE file for terms.
-	 */
-	'use strict';
-
-	var REACT_STATICS = {
-	    childContextTypes: true,
-	    contextTypes: true,
-	    defaultProps: true,
-	    displayName: true,
-	    getDefaultProps: true,
-	    mixins: true,
-	    propTypes: true,
-	    type: true
-	};
-
-	var KNOWN_STATICS = {
-	    name: true,
-	    length: true,
-	    prototype: true,
-	    caller: true,
-	    arguments: true,
-	    arity: true
-	};
-
-	var isGetOwnPropertySymbolsAvailable = typeof Object.getOwnPropertySymbols === 'function';
-
-	module.exports = function hoistNonReactStatics(targetComponent, sourceComponent, customStatics) {
-	    if (typeof sourceComponent !== 'string') { // don't hoist over string (html) components
-	        var keys = Object.getOwnPropertyNames(sourceComponent);
-
-	        /* istanbul ignore else */
-	        if (isGetOwnPropertySymbolsAvailable) {
-	            keys = keys.concat(Object.getOwnPropertySymbols(sourceComponent));
-	        }
-
-	        for (var i = 0; i < keys.length; ++i) {
-	            if (!REACT_STATICS[keys[i]] && !KNOWN_STATICS[keys[i]] && (!customStatics || !customStatics[keys[i]])) {
-	                try {
-	                    targetComponent[keys[i]] = sourceComponent[keys[i]];
-	                } catch (error) {
-
-	                }
-	            }
-	        }
-	    }
-
-	    return targetComponent;
-	};
-
-
-/***/ },
-/* 252 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/* WEBPACK VAR INJECTION */(function(process) {/**
-	 * Copyright 2013-2015, Facebook, Inc.
-	 * All rights reserved.
-	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
-	 */
-
-	'use strict';
-
-	/**
-	 * Use invariant() to assert state which your program assumes to be true.
-	 *
-	 * Provide sprintf-style format (only %s is supported) and arguments
-	 * to provide information about what broke and what you were
-	 * expecting.
-	 *
-	 * The invariant message will be stripped in production, but the invariant
-	 * will remain to ensure logic does not differ in production.
-	 */
-
-	var invariant = function(condition, format, a, b, c, d, e, f) {
-	  if (process.env.NODE_ENV !== 'production') {
-	    if (format === undefined) {
-	      throw new Error('invariant requires an error message argument');
-	    }
-	  }
-
-	  if (!condition) {
-	    var error;
-	    if (format === undefined) {
-	      error = new Error(
-	        'Minified exception occurred; use the non-minified dev environment ' +
-	        'for the full error message and additional helpful warnings.'
-	      );
-	    } else {
-	      var args = [a, b, c, d, e, f];
-	      var argIndex = 0;
-	      error = new Error(
-	        format.replace(/%s/g, function() { return args[argIndex++]; })
-	      );
-	      error.name = 'Invariant Violation';
-	    }
-
-	    error.framesToPop = 1; // we don't care about invariant's own frame
-	    throw error;
-	  }
-	};
-
-	module.exports = invariant;
-
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5)))
 
 /***/ },
 /* 253 */
@@ -37821,8 +37749,6 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -37853,41 +37779,43 @@
 	    key: 'findCity',
 	    value: function findCity(e) {
 	      this.setState({
-	        city: e.target.value
+	        city: e.target.value.toLowerCase()
 	      });
 	    }
 	  }, {
 	    key: 'findState',
 	    value: function findState(e) {
 	      this.setState({
-	        state: e.target.value
+	        state: e.target.value.toLowerCase()
 	      });
 	    }
 	  }, {
 	    key: 'findEducation',
 	    value: function findEducation(e) {
 	      this.setState({
-	        education: e.target.value
+	        education: e.target.value.toLowerCase()
 	      });
 	    }
 	  }, {
 	    key: 'findGender',
 	    value: function findGender(e) {
 	      this.setState({
-	        gender: e.target.value
+	        gender: e.target.value.toLowerCase()
 	      });
 	    }
 	  }, {
 	    key: 'findExperience',
 	    value: function findExperience(e) {
 	      this.setState({
-	        experience: e.target.value
+	        experience: e.target.value.toLowerCase()
 	      });
 	    }
 	  }, {
 	    key: 'findStack',
 	    value: function findStack(e) {
-	      this.state.stack.push(e.target.value);
+	      this.setState({
+	        stack: e.target.value.toLowerCase().split(', ')
+	      });
 	    }
 	  }, {
 	    key: 'redirectToResults',
@@ -37898,27 +37826,29 @@
 	  }, {
 	    key: 'GetAdvancedSearchData',
 	    value: function GetAdvancedSearchData(e) {
-	      var _data;
-
 	      e.preventDefault();
 
 	      var self = this;
-	      // Remember to lowercase -- its only not in lowercase now because you input the data in as MEAN
-	      // .toLowerCase()
 
-	      var data = (_data = { stack: this.state.stack, city: this.state.city, state: this.state.state, education: this.state.education }, _defineProperty(_data, 'education', this.state.education), _defineProperty(_data, 'gender', this.state.gender), _defineProperty(_data, 'experience', this.state.experience), _data);
+	      var data = {
+	        stack: this.state.stack,
+	        city: this.state.city,
+	        state: this.state.state,
+	        education: this.state.education,
+	        gender: this.state.gender,
+	        experience: this.state.experience
+	      };
 
 	      _jquery2.default.ajax({
 	        url: "http://localhost:3000/search",
 	        type: "POST",
 	        contentType: "application/json",
 	        data: JSON.stringify(data),
-	        success: function success(data) {
+	        success: function success(results) {
 	          self.setState({
-	            salary: data
+	            salary: results
 	          });
-
-	          self.redirectToResults(data);
+	          self.redirectToResults(results);
 	        },
 	        error: function error(err) {
 	          console.log(err);
@@ -37995,12 +37925,12 @@
 	    _react2.default.createElement(
 	      'form',
 	      { onSubmit: props.GetAdvancedSearchData },
-	      _react2.default.createElement('input', { type: 'city', value: props.city, onChange: props.addCity, className: 'city-input', placeholder: 'City' }),
-	      _react2.default.createElement('input', { type: 'state', value: props.state, onChange: props.addState, className: 'state-input', placeholder: 'State' }),
-	      _react2.default.createElement('input', { type: 'education', value: props.education, onChange: props.addEducation, className: 'education-input', placeholder: 'Education' }),
-	      _react2.default.createElement('input', { type: 'gender', value: props.gender, onChange: props.addGender, className: 'gender-input', placeholder: 'Gender' }),
-	      _react2.default.createElement('input', { type: 'experience', value: props.experience, onChange: props.addExperience, className: 'experience-input', placeholder: 'Experience' }),
-	      _react2.default.createElement('input', { type: 'stack', value: props.stack, onChange: props.addStack, className: 'stack-input', placeholder: 'Stack' }),
+	      _react2.default.createElement('input', { type: 'city', value: props.city, onChange: props.findCity, className: 'city-input', placeholder: 'City' }),
+	      _react2.default.createElement('input', { type: 'state', value: props.state, onChange: props.findState, className: 'state-input', placeholder: 'State' }),
+	      _react2.default.createElement('input', { type: 'education', value: props.education, onChange: props.findEducation, className: 'education-input', placeholder: 'Education' }),
+	      _react2.default.createElement('input', { type: 'gender', value: props.gender, onChange: props.findGender, className: 'gender-input', placeholder: 'Gender' }),
+	      _react2.default.createElement('input', { type: 'experience', value: props.experience, onChange: props.findExperience, className: 'experience-input', placeholder: 'Experience' }),
+	      _react2.default.createElement('input', { type: 'stack', value: props.stack, onChange: props.findStack, className: 'stack-input', placeholder: 'Stack' }),
 	      _react2.default.createElement(
 	        'button',
 	        { type: 'submit' },
@@ -38549,8 +38479,6 @@
 	      e.preventDefault();
 	      var self = this;
 
-	      console.log(this.state.gender);
-
 	      var data = { name: this.state.name, email: this.state.email, password: this.state.password, gender: this.state.gender };
 
 	      _jquery2.default.ajax({
@@ -38559,6 +38487,7 @@
 	        contentType: "application/json",
 	        data: JSON.stringify(data),
 	        success: function success(results) {
+	          console.log(data);
 	          localStorage.setItem('token', results.token), self.setState({
 	            authToken: results.token
 	          });
@@ -38696,17 +38625,17 @@
 	          ),
 	          _react2.default.createElement(
 	            'option',
-	            { onclick: props.addGender },
+	            { value: 'Male', onChange: props.addGender },
 	            'Male'
 	          ),
 	          _react2.default.createElement(
 	            'option',
-	            { onclick: props.addGender },
+	            { value: 'Female', onChange: props.addGender },
 	            'Female'
 	          ),
 	          _react2.default.createElement(
 	            'option',
-	            { onclick: props.addGender },
+	            { value: 'Other', onChange: props.addGender },
 	            'Other'
 	          )
 	        )
@@ -39184,20 +39113,12 @@
 
 	    _this.state = {
 	      width: 500,
-	      height: 500,
-	      data: [{ x: 'a', y: _this.props.salary.lowest }, { x: 'b', y: _this.props.salary.average }, { x: 'c', y: _this.props.salary.highest }]
+	      height: 500
 	    };
 	    return _this;
 	  }
 
 	  _createClass(Results, [{
-	    key: 'componentWillMount',
-	    value: function componentWillMount() {
-	      this.setState({
-	        data: [{ x: 'a', y: this.props.salary.lowest }, { x: 'b', y: this.props.salary.average }, { x: 'c', y: this.props.salary.highest }]
-	      });
-	    }
-	  }, {
 	    key: 'render',
 	    value: function render() {
 
@@ -39218,7 +39139,7 @@
 	          Chart,
 	          { width: this.state.width,
 	            height: this.state.height },
-	          _react2.default.createElement(Bar, { data: this.state.data,
+	          _react2.default.createElement(Bar, { data: [{ x: 'a', y: this.props.salary.lowest }, { x: 'b', y: this.props.salary.average }, { x: 'c', y: this.props.salary.highest }],
 	            width: this.state.width,
 	            height: this.state.height })
 	        )
@@ -49217,6 +49138,7 @@
 	            { className: 'd3' },
 	            _react2.default.createElement(_results2.default, { history: this.props.history })
 	          ),
+	          _react2.default.createElement(_search2.default, null),
 	          _react2.default.createElement(
 	            'div',
 	            null,
@@ -49227,7 +49149,6 @@
 	            ),
 	            _react2.default.createElement(_jobs2.default, null)
 	          ),
-	          _react2.default.createElement(_search2.default, null),
 	          _react2.default.createElement(_footer2.default, null)
 	        )
 	      );

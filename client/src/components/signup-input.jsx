@@ -48,9 +48,9 @@ var SignupInput = (props) => (
         onChange={props.addGender}
         >
           <option disabled selected>Gender</option>
-          <option>Male</option>
-          <option>Female</option>
-          <option>Other</option>
+          <option value='Male'>Male</option>
+          <option value='Female'>Female</option>
+          <option value='Other'>Other</option>
         </select>
       </fieldset>
 

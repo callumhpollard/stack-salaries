@@ -3,12 +3,13 @@ var SD = require('../models/stackdata');
 var getQuery = function(query, callback){
   var clear = {}
   for(var k in query){
-    if(k === 'stack' && query[k]){
+    if(k === 'stack' && query[k].length > 0){
       clear['stack'] = {$all: query[k]};
-    } else if (query[k]){
+    } else if (query[k] && query[k].length > 0){
       clear[k] = query[k];
     }
   }
+  console.log(clear);
   callback(clear);
 }
 
@@ -43,7 +44,7 @@ var calculateSalary = function(query, callback){
   getSalary(query, function(results){
     var salaries = [];
     var calcSalary = {};
-
+    console.log(results);
     if(results.length > 0){
       for(var s of results){
         salaries.push(s.salary);

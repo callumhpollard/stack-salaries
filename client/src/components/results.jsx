@@ -157,23 +157,7 @@ class Results extends React.Component {
       this.state = {
         width: 500,
         height: 500,
-        data: [
-              {x: 'a', y: this.props.salary.lowest},
-              {x: 'b', y: this.props.salary.average},
-              {x: 'c', y: this.props.salary.highest}
-            ]
       }
-    }
-
-
-    componentWillMount() {
-      this.setState({
-        data: [
-              {x: 'a', y: this.props.salary.lowest},
-              {x: 'b', y: this.props.salary.average},
-              {x: 'c', y: this.props.salary.highest}
-            ]
-      });
     }
 
     render() {
@@ -186,9 +170,13 @@ class Results extends React.Component {
             <hr/>
             <Chart width={this.state.width}
                    height={this.state.height}>
-              <Bar data={this.state.data}
-                          width={this.state.width}
-                          height={this.state.height} />
+              <Bar data={[
+                  {x: 'a', y: this.props.salary.lowest},
+                  {x: 'b', y: this.props.salary.average},
+                  {x: 'c', y: this.props.salary.highest}
+                ]}
+                    width={this.state.width}
+                    height={this.state.height} />
             </Chart>
           </div>
         );
