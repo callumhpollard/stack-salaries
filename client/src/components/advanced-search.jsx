@@ -25,36 +25,38 @@ class AdvancedSearch extends React.Component{
 
   findCity(e) {
     this.setState({
-      city:e.target.value
+      city:e.target.value.toLowerCase()
     });
   }
 
   findState(e) {
     this.setState({
-      state:e.target.value
+      state:e.target.value.toLowerCase()
     });
   }
 
   findEducation(e) {
     this.setState({
-      education:e.target.value
+      education:e.target.value.toLowerCase()
     });
   }
 
   findGender(e) {
     this.setState({
-      gender:e.target.value
+      gender:e.target.value.toLowerCase()
     });
   }
 
   findExperience(e) {
     this.setState({
-      experience:e.target.value
+      experience:e.target.value.toLowerCase()
     });
   }
 
   findStack(e) {
-    this.state.stack.push(e.target.value);
+    this.setState({
+      stack: e.target.value.toLowerCase().split(', ')
+    });
   }
 
   redirectToResults() {
@@ -66,22 +68,26 @@ class AdvancedSearch extends React.Component{
     e.preventDefault();
 
     var self = this;
-    // Remember to lowercase -- its only not in lowercase now because you input the data in as MEAN
-    // .toLowerCase()
 
-    var data = {stack: this.state.stack, city: this.state.city, state:this.state.state, education: this.state.education, education:this.state.education, gender:this.state.gender, experience:this.state.experience};
+    var data = {
+      stack: this.state.stack,
+      city: this.state.city,
+      state:this.state.state,
+      education: this.state.education,
+      gender:this.state.gender,
+      experience:this.state.experience
+    };
 
     $.ajax({
-      url:"https://stacksalaries.herokuapp.com/search",
+      url:"http://stacksalaries.herokuapp.com/search",
       type:"POST",
       contentType:"application/json",
       data: JSON.stringify(data),
-      success: function(data) {
+      success: function(results) {
         self.setState({
-          salary: data
+          salary: results
         });
-
-        self.redirectToResults(data);
+        self.redirectToResults(results);
       },
       error: function(err) {
         console.log(err);

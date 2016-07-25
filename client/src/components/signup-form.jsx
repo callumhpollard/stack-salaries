@@ -55,16 +55,15 @@ class SignForm extends React.Component{
     e.preventDefault();
     var self = this;
 
-    console.log(this.state.gender);
-
     var data = {name: this.state.name, email: this.state.email, password: this.state.password, gender: this.state.gender};
 
     $.ajax({
-      url:"https://stacksalaries.herokuapp.com/signup",
+      url:"http://localhost:3000/signup",
       type:"POST",
       contentType:"application/json",
       data: JSON.stringify(data),
       success: function(results) {
+        console.log(data);
         localStorage.setItem('token', results.token),
         self.setState({
           authToken: results.token
