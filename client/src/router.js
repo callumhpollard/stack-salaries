@@ -23,7 +23,7 @@ export default (
     </Route>
 
     <Route path="login">
-      <IndexRoute component={LoginForm} onEnter={loggedIn}/>
+      <IndexRoute component={LoginForm}/>
     </Route>
 
     <Route path="signup">

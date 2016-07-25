@@ -34,13 +34,9 @@ class Search extends React.Component{
   }
 
   redirectToResults(salaryresults){
-    // window.salary = this.state.salary;
-    // var data = {stack: this.state.stack, city: cityState[0].toLowerCase(), state:cityState[1].toLowerCase()};
-    // var self = this;
     var cityState = this.state.cityState.split(", ");
     this.props.setSearch(this.state.salary);
     this.props.setCityState({cityForJob: cityState[0], stateForJob: cityState[1]});
-    // this.props.history.pushState(null, '/results');
     this.context.router.push('/results');
   }
 
@@ -88,8 +84,6 @@ Search.contextTypes = {
 
   function mapStateToProps(state) {
     return {
-      // stack: state.stack,
-      // cityState: state.cityState,
       salary : state.salary
     }
   }

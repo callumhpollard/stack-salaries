@@ -6,9 +6,7 @@ import { History } from 'react-router';
 import { Router } from 'react-router';
 import AdvancedSearch from './advanced-search';
 import Flash from './flash';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-import { setUserInfo } from '../actions/actionCreator';
+
 
 class LoginForm extends React.Component {
   constructor() {
@@ -96,18 +94,5 @@ LoginForm.contextTypes= {
   router: React.PropTypes.object.isRequired
 };
 
-  function mapStateToProps(state) {
-    return {
-      userInfo: state.userInfo
-    }
-  }
 
-
-function mapDispatchToProps(dispatch) {
-  return bindActionCreators({setUserInfo: setUserInfo}, dispatch);
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(LoginForm);
-
-
-// export default LoginForm;
+export default LoginForm;

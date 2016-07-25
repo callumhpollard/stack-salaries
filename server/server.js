@@ -100,6 +100,7 @@ app.get('/users/:id', function(req, res, next) {
 // The middleware will verify credentials
 // If successful, hand a token
 app.post('/signin', requireSignIn, function(req, res, next) {
+
   var userToken = generateToken(req.user);
 
   res.send({token: userToken });
@@ -109,6 +110,7 @@ app.post('/signup', function(req, res, next) {
   var name = req.body.name;
   var email = req.body.email;
   var password = req.body.password;
+  var gender = req.body.gender;
 
   // Validation to check if all the fields were being passed
   if(!email || !password || !name){
@@ -131,13 +133,17 @@ app.post('/signup', function(req, res, next) {
       name: name,
       email: email,
       password: password,
+      gender: gender
     });
 
     user.save(function(err){
       if (err) { return next(err); }
 
+      // Generate a token
+      var token = generateToken(user);
+
       // Send user back a JWT upon successful account creation
-      res.json({ token: generateToken(user)});
+      res.json({user: user, token: token});
     });
 
   });

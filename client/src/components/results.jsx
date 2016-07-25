@@ -149,6 +149,8 @@ var Axis = React.createClass({
   }
 });
 
+var changeDataTrue = true;
+
 class Results extends React.Component {
     constructor(props){
       super(props);
@@ -161,6 +163,17 @@ class Results extends React.Component {
               {x: 'c', y: this.props.salary.highest}
             ]
       }
+    }
+
+
+    componentWillMount() {
+      this.setState({
+        data: [
+              {x: 'a', y: this.props.salary.lowest},
+              {x: 'b', y: this.props.salary.average},
+              {x: 'c', y: this.props.salary.highest}
+            ]
+      });
     }
 
     render() {
@@ -194,4 +207,3 @@ function mapDispatchToProps(dispatch) {
 
 
 export default connect(mapStateToProps, mapDispatchToProps)(Results);
-// export default Results;

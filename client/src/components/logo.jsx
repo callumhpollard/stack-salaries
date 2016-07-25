@@ -31,3 +31,5 @@ var Logo = (props) => {
 }
 
 export default Logo;
+
+

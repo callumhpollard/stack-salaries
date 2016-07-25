@@ -10,8 +10,8 @@ import Logo from './logo';
 
 class Dashboard extends React.Component {
 
-  constructor (props){
-    super(props);
+  constructor (){
+    super();
     this.state = {
       state:'',
       city: '',
@@ -20,12 +20,9 @@ class Dashboard extends React.Component {
       gender: '',
       experience: '',
       stack: [],
-      showInfo:false
+      position:''
     };
   }
-// enter in data, then receive a view of data and make the input disappear area.
-// displays current users data
-// add a button that ask if the user wants to input more data
 
 
   addCity(e) {
@@ -53,28 +50,29 @@ class Dashboard extends React.Component {
   }
 
   addStack(e) {
-    this.state.stack.push(e.target.value);
-  }
-
-  hideInput(e) {
     this.setState({
+      stack: e.target.value
+    });
+  }
 
+  addPosition(e) {
+    this.setState({
+      position:e.target.value
     });
   }
 
 
-  // submitToStore() {
-  //   // console.log(this.state.salary);
-  //   var data = {stack: this.state.stack, city: this.state.city, state:this.state.state, education:this.state.education, gender:this.state.gender, experience:this.state.experience};
-  //   this.props.setUserInfo(data);
-  // }
-
+  submitToStore() {
+    var data = {stack: this.state.stack, city: this.state.city, state:this.state.state, education:this.state.education, experience:this.state.experience, position:this.state.position};
+    this.props.setUserInfo(data);
+  }
 
   inputData(e) {
     e.preventDefault();
-
     var self = this;
-    var data = {stack: this.state.stack, city: this.state.city, state:this.state.state, education:this.state.education, gender:this.state.gender, experience:this.state.experience};
+    var data = {stack: this.state.stack, city: this.state.city, state:this.state.state, education:this.state.education, experience:this.state.experience, position:this.state.position};
+
+        console.log(data);
 
     $.ajax({
       url:"http://localhost:3000/stackentry",
@@ -82,41 +80,7 @@ class Dashboard extends React.Component {
       contentType:"application/json",
       data: JSON.stringify(data),
       success: function(data) {
-        // self.submitToStore();
-        console.log("YOUR THING WORKED, " + data);
-      },
-      error: function(err) {
-        console.log(err);
-      }
-    });
-  }
-      // <li>Location: {this.props.userInfo.city}, {this.props.userInfo.state}</li>
-          //   <li>Education: {this.props.userInfo.education} </li>
-          //   <li>Experience: {this.props.userInfo.experience} </li>
-          //   <li>Stack: {this.props.userInfo.stack}</li>
-          //   <li>Salary: {this.props.userInfo.salary}</li>
-
-
-  // submitToStore() {
-  //   // console.log(this.state.salary);
-  //   var data = {stack: this.state.stack, city: this.state.city, state:this.state.state, education:this.state.education, gender:this.state.gender, experience:this.state.experience};
-  //   this.props.setUserInfo(data);
-  // }
-
-
-  inputData(e) {
-    e.preventDefault();
-
-    var self = this;
-    var data = {stack: this.state.stack, city: this.state.city, state:this.state.state, education:this.state.education, gender:this.state.gender, experience:this.state.experience};
-
-    $.ajax({
-      url:"http://localhost:3000/stackentry",
-      type:"POST",
-      contentType:"application/json",
-      data: JSON.stringify(data),
-      success: function(data) {
-        // self.submitToStore();
+        self.submitToStore();
         console.log("YOUR THING WORKED, " + data);
       },
       error: function(err) {
@@ -125,30 +89,31 @@ class Dashboard extends React.Component {
     });
 
   }
-      // <li>Location: {this.props.userInfo.city}, {this.props.userInfo.state}</li>
-          //   <li>Education: {this.props.userInfo.education} </li>
-          //   <li>Experience: {this.props.userInfo.experience} </li>
-          //   <li>Stack: {this.props.userInfo.stack}</li>
-          //   <li>Salary: {this.props.userInfo.salary}</li>
 
   render() {
 
-    console.log(this.props);
-    return(
+    return (
 
-      <div className="container results">
-          <nav id="resultNav" className="navbar navbar-default navbar-fixed-top">
-            <Logo/>
-          </nav>
-      <div className="dashboard row">
-        <h1>Welcome to the Dashboard</h1>
-        <div className="col-md-4">
+      <div id="dashboard" className="container results">
+
+      <nav id="resultNav" className="navbar navbar-default navbar-fixed-top">
+        <Logo/>
+      </nav>
+
+      <div className="row under-nav">
+        <h1 className="headline">Welcome <span className="color"></span> to the Dashboard</h1>
+        <div>
           <ul>
 
           </ul>
         </div>
-         <div className="col-md-4">
-          <DataInput inputData={this.inputData.bind(this)} addStack={this.addStack.bind(this)} addCity={this.addCity.bind(this)} addState={this.addState.bind(this)} addEducation={this.addEducation.bind(this)} addExperience={this.addExperience.bind(this)} />
+      </div>
+
+
+
+      <div className="row dashboard-row center-block">
+         <div className="loginMain">
+          <DataInput inputData={this.inputData.bind(this)} addStack={this.addStack.bind(this)} addCity={this.addCity.bind(this)} addState={this.addState.bind(this)} addEducation={this.addEducation.bind(this)} addExperience={this.addExperience.bind(this)} addPosition={this.addPosition.bind(this)}/>
         </div>
       </div>
     </div>
@@ -171,4 +136,8 @@ function mapDispatchToProps(dispatch) {
   return bindActionCreators({setUserInfo: setUserInfo}, dispatch);
 }
 
+
 export default connect(mapStateToProps, mapDispatchToProps)(Dashboard);
+
+
+// {this.props.userInfo.name}

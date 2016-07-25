@@ -3,7 +3,9 @@ import $ from 'jquery';
 import { History } from 'react-router';
 import { Router } from 'react-router';
 import SignupInput from './signup-input';
-
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { setUserInfo } from '../actions/actionCreator';
 
 class SignForm extends React.Component{
   constructor() {
@@ -43,8 +45,10 @@ class SignForm extends React.Component{
     })
   }
 
- redirectToDashboard(dataToken){
-    this.props.history.pushState({token: dataToken}, '/dashboard');
+ redirectToDashboard(userData){
+    console.log("WHAT IS INSIDE DATA.USER " + JSON.stringify(userData.user));
+    this.props.setUserInfo(userData.user);
+    this.context.router.push('/dashboard');
   }
 
 
@@ -54,19 +58,18 @@ class SignForm extends React.Component{
 
     var data = {name: this.state.name, email: this.state.email, password: this.state.password, gender: this.state.gender};
 
-    console.log(data);
     $.ajax({
       url:"http://localhost:3000/signup",
       type:"POST",
       contentType:"application/json",
       data: JSON.stringify(data),
-      success: function(data) {
-        // console.log(data.token);
-        localStorage.setItem('token', data.token),
+      success: function(results) {
+        console.log(results);
+        localStorage.setItem('token', results.token),
         self.setState({
-          authToken: data.token
+          authToken: results.token
         });
-        self.redirectToDashboard(data.token);
+        self.redirectToDashboard(results);
       },
       error: function(err) {
         console.log(err);
@@ -83,4 +86,21 @@ class SignForm extends React.Component{
   }
 }
 
-export default SignForm;
+
+SignForm.contextTypes= {
+  router: React.PropTypes.object.isRequired
+};
+
+
+  function mapStateToProps(state) {
+    return {
+      userInfo: state.userInfo
+    }
+  }
+
+
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({setUserInfo: setUserInfo}, dispatch);
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(SignForm);
