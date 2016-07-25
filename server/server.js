@@ -101,9 +101,17 @@ app.get('/users/:id', function(req, res, next) {
 // If successful, hand a token
 app.post('/signin', requireSignIn, function(req, res, next) {
 
-  var userToken = generateToken(req.user);
+  // console.log(req.user);
 
-  res.send({token: userToken });
+  // var userToken = generateToken(req.user);
+
+  // res.send({token: userToken });
+
+  // Generate a token
+  var token = generateToken(req.user);
+
+  // Send user back a JWT upon successful account creation
+  res.json({user: req.user, token: token});
 });
 
 app.post('/signup', function(req, res, next) {

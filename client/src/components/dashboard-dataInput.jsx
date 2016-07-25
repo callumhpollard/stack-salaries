@@ -7,13 +7,17 @@ var DataInput = (props) => (
   <div className="dashboard center-block text-center">
     <form onSubmit={props.inputData}>
 
+      <div className="row">
+        <h3>Add a Salary</h3>
+      </div>
+
       <fieldset className="form-group row gray">
         <div className="col-sm-1">
             <span className="glyphicon glyphicon-globe"></span>
         </div>
 
         <div className="col-sm-11">
-          <input type="text" value={props.city} className="form-control" onChange={props.addCity} placeholder="City" />
+          <input type="text" value={props.city} className="form-control" onChange={props.addCity} placeholder="Add your city" />
         </div>
 
       </fieldset>
@@ -24,7 +28,7 @@ var DataInput = (props) => (
         </div>
 
         <div className="col-sm-11">
-          <input type="text" value={props.state} className="form-control" onChange={props.addState} placeholder="State" />
+          <input type="text" value={props.state} className="form-control" onChange={props.addState} placeholder="Add your state" />
 
         </div>
 
@@ -37,7 +41,7 @@ var DataInput = (props) => (
         </div>
 
         <div className="col-sm-11">
-          <input type="text" value={props.education} className="form-control" onChange={props.addEducation} placeholder="Education" />
+          <input type="text" value={props.education} className="form-control" onChange={props.addEducation} placeholder="Add your education level" />
 
         </div>
 
@@ -50,12 +54,10 @@ var DataInput = (props) => (
         </div>
 
         <div className="col-sm-11">
-          <input type="text" value={props.experience} className="form-control" onChange={props.addExperience} placeholder="Experience" />
-
+          <input type="text" value={props.experience} className="form-control" onChange={props.addExperience} placeholder="Years of experience" />
         </div>
 
       </fieldset>
-
 
        <fieldset className="form-group row gray">
         <div className="col-sm-1">
@@ -63,7 +65,7 @@ var DataInput = (props) => (
         </div>
 
         <div className="col-sm-11">
-          <input type="text" value={props.position} className="form-control" onChange={props.addPosition} placeholder="Position" />
+          <input type="text" value={props.position} className="form-control" onChange={props.addPosition} placeholder="Position title" />
 
         </div>
 
@@ -87,10 +89,8 @@ var DataInput = (props) => (
         </div>
 
         <div className="col-sm-11">
-          <input type="text" value={props.stack} className="form-control" onChange={props.addStack} placeholder="Stack" />
-
+          <input type="text" value={props.stack} className="form-control" onChange={props.addStack} placeholder="Add any stack skills separated by commas" />
         </div>
-
       </fieldset>
 
       <div className="row">
@@ -104,46 +104,3 @@ var DataInput = (props) => (
 
 
 export default DataInput;
-
-// <div className="loginbox center-block text-center">
-
-//     <form onSubmit={props.loginToServer} >
-//       <div className="row root">
-//         <h3><Link to='/' className="no-decoration">Stack Salaries</Link></h3>
-//       </div>
-
-      // <fieldset className="form-group row gray">
-      //   <div className="col-sm-1">
-      //       <span className="glyphicon glyphicon-envelope"></span>
-      //   </div>
-
-      //   <div className="col-sm-11">
-      //     <input type="email" value={props.email} onChange={props.changeUser} className="form-control" placeholder="email" />
-      //   </div>
-
-      // </fieldset>
-
-//       <fieldset className="form-group">
-//         <small className="text-muted">We'll never share your email with anyone else.</small>
-//       </fieldset>
-
-//       <fieldset className="form-group row gray">
-//        <div className="col-sm-1">
-//         <span className="glyphicon glyphicon-lock"></span>
-//        </div>
-
-//         <div className="col-sm-11">
-//           <input type="password" value={props.password} onChange={props.changePassword} className="form-control" placeholder="Password" />
-//         </div>
-//       </fieldset>
-
-      // <div className="row">
-      //   <button type="submit" className="btn btn-primary">Submit</button>
-      // </div>
-
-//       <div id="small-link" className="row">
-//         <p>Don't have an account? <Link to='/signup'>Sign Up</Link></p>
-//       </div>
-
-//     </form>
-// </div>

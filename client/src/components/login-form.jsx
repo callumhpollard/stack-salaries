@@ -2,11 +2,12 @@ import React from 'react';
 import $ from 'jquery';
 import LoginInput from './login-input';
 import Login from './login';
-import { History } from 'react-router';
-import { Router } from 'react-router';
+import { History, Router } from 'react-router';
 import AdvancedSearch from './advanced-search';
 import Flash from './flash';
-
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { setUserInfo } from '../actions/actionCreator';
 
 class LoginForm extends React.Component {
   constructor() {
@@ -35,8 +36,9 @@ class LoginForm extends React.Component {
     });
   }
 
-  redirectToDashboard(err){
-    if(!err){
+  redirectToDashboard(userData){
+    if(userData !== undefined){
+      this.props.setUserInfo(userData);
       this.context.router.push('/dashboard');
     } else {
        this.setState({
@@ -51,22 +53,23 @@ class LoginForm extends React.Component {
     e.preventDefault();
 
     var data = {email: this.state.email, password: this.state.password};
+
     var self = this;
+
     $.ajax({
       url:"http://localhost:3000/signin",
       type:"POST",
       contentType:"application/json",
       data: JSON.stringify(data),
       success: function(data) {
-        // console.log(data.token);
         localStorage.setItem('token', data.token),
         self.setState({
           authToken: data.token,
         });
-        self.redirectToDashboard();
+        self.redirectToDashboard(data.user);
       },
       error: function(err) {
-        self.redirectToDashboard("meow");
+        self.redirectToDashboard(err);
       }
     });
   }
@@ -94,5 +97,14 @@ LoginForm.contextTypes= {
   router: React.PropTypes.object.isRequired
 };
 
+function mapStateToProps(state) {
+  return {
+    userInfo: state.userInfo
+  }
+}
 
-export default LoginForm;
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({setUserInfo: setUserInfo}, dispatch);
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(LoginForm);

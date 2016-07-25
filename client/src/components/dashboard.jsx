@@ -7,6 +7,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { setUserInfo } from '../actions/actionCreator';
 import Logo from './logo';
+import { loggedIn } from '../auth/auth';
 
 class Dashboard extends React.Component {
 
@@ -20,7 +21,8 @@ class Dashboard extends React.Component {
       gender: '',
       experience: '',
       stack: [],
-      position:''
+      position:'',
+      loggedIn: loggedIn()
     };
   }
 
@@ -72,8 +74,6 @@ class Dashboard extends React.Component {
     var self = this;
     var data = {stack: this.state.stack, city: this.state.city, state:this.state.state, education:this.state.education, experience:this.state.experience, position:this.state.position};
 
-        console.log(data);
-
     $.ajax({
       url:"http://localhost:3000/stackentry",
       type:"POST",
@@ -92,24 +92,34 @@ class Dashboard extends React.Component {
 
   render() {
 
+    console.log(this.props);
+
     return (
 
       <div id="dashboard" className="container results">
 
       <nav id="resultNav" className="navbar navbar-default navbar-fixed-top">
-        <Logo/>
+        <Logo loggedIn={this.state.loggedIn} />
       </nav>
 
       <div className="row under-nav">
-        <h1 className="headline">Welcome <span className="color"></span> to the Dashboard</h1>
         <div>
-          <ul>
+            {this.props.userInfo ? (
 
-          </ul>
+        <div className="row dashboard-row center-block">
+          <h1>Welcome <span className="color">{this.props.userInfo.name}</span> to the Dashboard</h1>
+
+         <div>
+              <p className="lead">Name: {this.props.userInfo.name} </p>
+              <p className="lead">Email: {this.props.userInfo.email} </p>
+              <p className="lead">Gender: {this.props.userInfo.gender} </p>
+          </div>
+        </div>
+            ) : (
+              <div></div>
+        )}
         </div>
       </div>
-
-
 
       <div className="row dashboard-row center-block">
          <div className="loginMain">

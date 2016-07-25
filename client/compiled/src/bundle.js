@@ -106,6 +106,12 @@
 
 	var _auth = __webpack_require__(255);
 
+	var _reactRedux = __webpack_require__(227);
+
+	var _redux = __webpack_require__(234);
+
+	var _actionCreator = __webpack_require__(253);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -143,7 +149,7 @@
 	            _react2.default.createElement(
 	              'nav',
 	              { className: 'navbar navbar-default navbar-fixed-top' },
-	              _react2.default.createElement(_login2.default, { loggedIn: this.state.loggedIn })
+	              _react2.default.createElement(_login2.default, { loggedIn: this.state.loggedIn, userInfo: this.props.userInfo })
 	            ),
 	            _react2.default.createElement(_main2.default, null),
 	            _react2.default.createElement(_search2.default, { history: this.props.history }),
@@ -162,7 +168,17 @@
 	  router: _react2.default.PropTypes.object.isRequired
 	};
 
-	exports.default = App;
+	function mapStateToProps(state) {
+	  return {
+	    userInfo: state.userInfo
+	  };
+	}
+
+	function mapDispatchToProps(dispatch) {
+	  return (0, _redux.bindActionCreators)({ setUserInfo: _actionCreator.setUserInfo }, dispatch);
+	}
+
+	exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(App);
 
 /***/ },
 /* 2 */
@@ -19807,7 +19823,7 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var Login = function Login(props) {
-
+	  console.log(props.userInfo);
 	  return _react2.default.createElement(
 	    'div',
 	    null,
@@ -37260,6 +37276,7 @@
 	}
 
 	function setUserInfo(userData) {
+	  // console.log("setUserInfo", userData);
 	  return {
 	    type: SET_USERINFO,
 	    payload: userData
@@ -37520,6 +37537,12 @@
 
 	var _flash2 = _interopRequireDefault(_flash);
 
+	var _reactRedux = __webpack_require__(227);
+
+	var _redux = __webpack_require__(234);
+
+	var _actionCreator = __webpack_require__(253);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -37563,8 +37586,9 @@
 	    }
 	  }, {
 	    key: 'redirectToDashboard',
-	    value: function redirectToDashboard(err) {
-	      if (!err) {
+	    value: function redirectToDashboard(userData) {
+	      if (userData !== undefined) {
+	        this.props.setUserInfo(userData);
 	        this.context.router.push('/dashboard');
 	      } else {
 	        this.setState({
@@ -37580,21 +37604,22 @@
 	      e.preventDefault();
 
 	      var data = { email: this.state.email, password: this.state.password };
+
 	      var self = this;
+
 	      _jquery2.default.ajax({
 	        url: "http://localhost:3000/signin",
 	        type: "POST",
 	        contentType: "application/json",
 	        data: JSON.stringify(data),
 	        success: function success(data) {
-	          // console.log(data.token);
 	          localStorage.setItem('token', data.token), self.setState({
 	            authToken: data.token
 	          });
-	          self.redirectToDashboard();
+	          self.redirectToDashboard(data.user);
 	        },
 	        error: function error(err) {
-	          self.redirectToDashboard("meow");
+	          self.redirectToDashboard(err);
 	        }
 	      });
 	    }
@@ -37627,7 +37652,17 @@
 	  router: _react2.default.PropTypes.object.isRequired
 	};
 
-	exports.default = LoginForm;
+	function mapStateToProps(state) {
+	  return {
+	    userInfo: state.userInfo
+	  };
+	}
+
+	function mapDispatchToProps(dispatch) {
+	  return (0, _redux.bindActionCreators)({ setUserInfo: _actionCreator.setUserInfo }, dispatch);
+	}
+
+	exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(LoginForm);
 
 /***/ },
 /* 259 */
@@ -38050,6 +38085,8 @@
 
 	var _logo2 = _interopRequireDefault(_logo);
 
+	var _auth = __webpack_require__(255);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -38074,7 +38111,8 @@
 	      gender: '',
 	      experience: '',
 	      stack: [],
-	      position: ''
+	      position: '',
+	      loggedIn: (0, _auth.loggedIn)()
 	    };
 	    return _this;
 	  }
@@ -38134,8 +38172,6 @@
 	      var self = this;
 	      var data = { stack: this.state.stack, city: this.state.city, state: this.state.state, education: this.state.education, experience: this.state.experience, position: this.state.position };
 
-	      console.log(data);
-
 	      _jquery2.default.ajax({
 	        url: "http://localhost:3000/stackentry",
 	        type: "POST",
@@ -38154,28 +38190,62 @@
 	    key: 'render',
 	    value: function render() {
 
+	      console.log(this.props);
+
 	      return _react2.default.createElement(
 	        'div',
 	        { id: 'dashboard', className: 'container results' },
 	        _react2.default.createElement(
 	          'nav',
 	          { id: 'resultNav', className: 'navbar navbar-default navbar-fixed-top' },
-	          _react2.default.createElement(_logo2.default, null)
+	          _react2.default.createElement(_logo2.default, { loggedIn: this.state.loggedIn })
 	        ),
 	        _react2.default.createElement(
 	          'div',
 	          { className: 'row under-nav' },
 	          _react2.default.createElement(
-	            'h1',
-	            { className: 'headline' },
-	            'Welcome ',
-	            _react2.default.createElement('span', { className: 'color' }),
-	            ' to the Dashboard'
-	          ),
-	          _react2.default.createElement(
 	            'div',
 	            null,
-	            _react2.default.createElement('ul', null)
+	            this.props.userInfo ? _react2.default.createElement(
+	              'div',
+	              { className: 'row dashboard-row center-block' },
+	              _react2.default.createElement(
+	                'h1',
+	                null,
+	                'Welcome ',
+	                _react2.default.createElement(
+	                  'span',
+	                  { className: 'color' },
+	                  this.props.userInfo.name
+	                ),
+	                ' to the Dashboard'
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                null,
+	                _react2.default.createElement(
+	                  'p',
+	                  { className: 'lead' },
+	                  'Name: ',
+	                  this.props.userInfo.name,
+	                  ' '
+	                ),
+	                _react2.default.createElement(
+	                  'p',
+	                  { className: 'lead' },
+	                  'Email: ',
+	                  this.props.userInfo.email,
+	                  ' '
+	                ),
+	                _react2.default.createElement(
+	                  'p',
+	                  { className: 'lead' },
+	                  'Gender: ',
+	                  this.props.userInfo.gender,
+	                  ' '
+	                )
+	              )
+	            ) : _react2.default.createElement('div', null)
 	          )
 	        ),
 	        _react2.default.createElement(
@@ -38238,17 +38308,12 @@
 	      'form',
 	      { onSubmit: props.inputData },
 	      _react2.default.createElement(
-	        'fieldset',
-	        { className: 'form-group row gray' },
+	        'div',
+	        { className: 'row' },
 	        _react2.default.createElement(
-	          'div',
-	          { className: 'col-sm-1' },
-	          _react2.default.createElement('span', { className: 'glyphicon glyphicon-globe' })
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'col-sm-11' },
-	          _react2.default.createElement('input', { type: 'text', value: props.city, className: 'form-control', onChange: props.addCity, placeholder: 'City' })
+	          'h3',
+	          null,
+	          'Add a Salary'
 	        )
 	      ),
 	      _react2.default.createElement(
@@ -38262,7 +38327,21 @@
 	        _react2.default.createElement(
 	          'div',
 	          { className: 'col-sm-11' },
-	          _react2.default.createElement('input', { type: 'text', value: props.state, className: 'form-control', onChange: props.addState, placeholder: 'State' })
+	          _react2.default.createElement('input', { type: 'text', value: props.city, className: 'form-control', onChange: props.addCity, placeholder: 'Add your city' })
+	        )
+	      ),
+	      _react2.default.createElement(
+	        'fieldset',
+	        { className: 'form-group row gray' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'col-sm-1' },
+	          _react2.default.createElement('span', { className: 'glyphicon glyphicon-globe' })
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'col-sm-11' },
+	          _react2.default.createElement('input', { type: 'text', value: props.state, className: 'form-control', onChange: props.addState, placeholder: 'Add your state' })
 	        )
 	      ),
 	      _react2.default.createElement(
@@ -38276,7 +38355,7 @@
 	        _react2.default.createElement(
 	          'div',
 	          { className: 'col-sm-11' },
-	          _react2.default.createElement('input', { type: 'text', value: props.education, className: 'form-control', onChange: props.addEducation, placeholder: 'Education' })
+	          _react2.default.createElement('input', { type: 'text', value: props.education, className: 'form-control', onChange: props.addEducation, placeholder: 'Add your education level' })
 	        )
 	      ),
 	      _react2.default.createElement(
@@ -38290,7 +38369,7 @@
 	        _react2.default.createElement(
 	          'div',
 	          { className: 'col-sm-11' },
-	          _react2.default.createElement('input', { type: 'text', value: props.experience, className: 'form-control', onChange: props.addExperience, placeholder: 'Experience' })
+	          _react2.default.createElement('input', { type: 'text', value: props.experience, className: 'form-control', onChange: props.addExperience, placeholder: 'Years of experience' })
 	        )
 	      ),
 	      _react2.default.createElement(
@@ -38304,7 +38383,7 @@
 	        _react2.default.createElement(
 	          'div',
 	          { className: 'col-sm-11' },
-	          _react2.default.createElement('input', { type: 'text', value: props.position, className: 'form-control', onChange: props.addPosition, placeholder: 'Position' })
+	          _react2.default.createElement('input', { type: 'text', value: props.position, className: 'form-control', onChange: props.addPosition, placeholder: 'Position title' })
 	        )
 	      ),
 	      _react2.default.createElement(
@@ -38332,7 +38411,7 @@
 	        _react2.default.createElement(
 	          'div',
 	          { className: 'col-sm-11' },
-	          _react2.default.createElement('input', { type: 'text', value: props.stack, className: 'form-control', onChange: props.addStack, placeholder: 'Stack' })
+	          _react2.default.createElement('input', { type: 'text', value: props.stack, className: 'form-control', onChange: props.addStack, placeholder: 'Add any stack skills separated by commas' })
 	        )
 	      ),
 	      _react2.default.createElement(
@@ -38349,49 +38428,6 @@
 	};
 
 	exports.default = DataInput;
-
-	// <div className="loginbox center-block text-center">
-
-	//     <form onSubmit={props.loginToServer} >
-	//       <div className="row root">
-	//         <h3><Link to='/' className="no-decoration">Stack Salaries</Link></h3>
-	//       </div>
-
-	// <fieldset className="form-group row gray">
-	//   <div className="col-sm-1">
-	//       <span className="glyphicon glyphicon-envelope"></span>
-	//   </div>
-
-	//   <div className="col-sm-11">
-	//     <input type="email" value={props.email} onChange={props.changeUser} className="form-control" placeholder="email" />
-	//   </div>
-
-	// </fieldset>
-
-	//       <fieldset className="form-group">
-	//         <small className="text-muted">We'll never share your email with anyone else.</small>
-	//       </fieldset>
-
-	//       <fieldset className="form-group row gray">
-	//        <div className="col-sm-1">
-	//         <span className="glyphicon glyphicon-lock"></span>
-	//        </div>
-
-	//         <div className="col-sm-11">
-	//           <input type="password" value={props.password} onChange={props.changePassword} className="form-control" placeholder="Password" />
-	//         </div>
-	//       </fieldset>
-
-	// <div className="row">
-	//   <button type="submit" className="btn btn-primary">Submit</button>
-	// </div>
-
-	//       <div id="small-link" className="row">
-	//         <p>Don't have an account? <Link to='/signup'>Sign Up</Link></p>
-	//       </div>
-
-	//     </form>
-	// </div>
 
 /***/ },
 /* 265 */
@@ -38482,7 +38518,6 @@
 	  }, {
 	    key: 'redirectToDashboard',
 	    value: function redirectToDashboard(userData) {
-	      console.log("WHAT IS INSIDE DATA.USER " + JSON.stringify(userData.user));
 	      this.props.setUserInfo(userData.user);
 	      this.context.router.push('/dashboard');
 	    }
@@ -38500,7 +38535,6 @@
 	        contentType: "application/json",
 	        data: JSON.stringify(data),
 	        success: function success(results) {
-	          console.log(results);
 	          localStorage.setItem('token', results.token), self.setState({
 	            authToken: results.token
 	          });

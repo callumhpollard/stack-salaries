@@ -2,7 +2,6 @@ export const SET_SEARCH = 'SET_SEARCH';
 export const SET_USERINFO = 'SET_USERINFO';
 export const SET_CITYSTATE = 'SET_CITYSTATE';
 
-
 export function setSearch(searchInput) {
   // console.log("Search Obj", searchInput);
   return {
@@ -22,6 +21,7 @@ export function setCityState(cityState) {
 }
 
 export function setUserInfo(userData)  {
+  // console.log("setUserInfo", userData);
   return {
     type: SET_USERINFO,
     payload: userData

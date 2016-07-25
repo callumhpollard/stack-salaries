@@ -68,11 +68,6 @@ body {
   transition: .2s;
 }
 
-.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
-  background-color: #2c3e50;
-  border: 1px solid #2c3e50;
-}
-
 .btn-primary:hover a:hover {
   color: #fff;
 }
@@ -393,6 +388,12 @@ svg {
   font-size: 40px;
 }
 
+#dashboard .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+  background-color: #1abc9c;
+  border: 1px solid #1abc9c;
+}
+
+
 .under-nav {
   margin-top: 150px;
 }
@@ -465,3 +466,8 @@ svg {
 .dashboard-row {
   width: 500px;
 }
+
+.dashboard {
+  margin-bottom: 100px;
+}
+

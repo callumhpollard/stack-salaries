@@ -46,7 +46,6 @@ class SignForm extends React.Component{
   }
 
  redirectToDashboard(userData){
-    console.log("WHAT IS INSIDE DATA.USER " + JSON.stringify(userData.user));
     this.props.setUserInfo(userData.user);
     this.context.router.push('/dashboard');
   }
@@ -64,7 +63,6 @@ class SignForm extends React.Component{
       contentType:"application/json",
       data: JSON.stringify(data),
       success: function(results) {
-        console.log(results);
         localStorage.setItem('token', results.token),
         self.setState({
           authToken: results.token
