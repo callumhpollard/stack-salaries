@@ -3,9 +3,9 @@ var SD = require('../models/stackdata');
 var getQuery = function(query, callback){
   var clear = {}
   for(var k in query){
-    if(k === 'stack' && query[k]){
+    if(k === 'stack' && query[k].length > 0){
       clear['stack'] = {$all: query[k]};
-    } else if (query[k]){
+    } else if (query[k] && query[k].length > 0){
       clear[k] = query[k];
     }
   }
@@ -28,7 +28,7 @@ exports.createSalary = function(data, callback){
     }
     if(k === 'stack'){
       for(var i = 0; i < data[k].length; i++){
-        data[k][i] = data[k][i].charAt(0).toLowerCase() + data[k][i].slice(1);
+        data[k][i] = data[k][i].toLowerCase();
       }
     }
   }
@@ -43,7 +43,6 @@ var calculateSalary = function(query, callback){
   getSalary(query, function(results){
     var salaries = [];
     var calcSalary = {};
-
     if(results.length > 0){
       for(var s of results){
         salaries.push(s.salary);
@@ -90,17 +89,3 @@ exports.querySalary = function(query, callback){
     callback(result)
   });
 }
-
-/*
-example query
-{
-  state: String,
-  city: String,
-  salary: Number,
-  stack: Array,
-  education: String,
-  gender: String,
-  experience: Number
-}
-
-*/
