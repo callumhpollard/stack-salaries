@@ -31,7 +31,7 @@ app.use(express.static(path.join(__dirname, '../client/compiled')));
 // Mongoose Connection (Refactor into Separate File)
 var databaseURL = process.env.MONGODB_URI ||'mongodb://localhost:27017/stack-salaries'
 
-mongoose.connect(databaseURL);
+mongoose.connect('mongodb://heroku_13f6g32b:d4n5cimcpk69v7g87q0r7bn3fv@ds021771.mlab.com:21771/heroku_13f6g32b');
 
 // Helper Methods (Refactor into Separate File)
 function generateToken(user){
