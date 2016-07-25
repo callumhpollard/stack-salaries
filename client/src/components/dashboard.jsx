@@ -77,7 +77,7 @@ class Dashboard extends React.Component {
     var data = {stack: this.state.stack, city: this.state.city, state:this.state.state, education:this.state.education, experience:this.state.experience, position:this.state.position};
 
     $.ajax({
-      url:"http://localhost:3000/stackentry",
+      url:"https://stacksalaries.herokuapp.com/stackentry",
       type:"POST",
       contentType:"application/json",
       data: JSON.stringify(data),

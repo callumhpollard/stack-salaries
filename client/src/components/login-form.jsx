@@ -62,7 +62,7 @@ class LoginForm extends React.Component {
     var self = this;
 
     $.ajax({
-      url:"http://localhost:3000/signin",
+      url:"https://stacksalaries.herokuapp.com/signin",
       type:"POST",
       contentType:"application/json",
       data: JSON.stringify(data),
