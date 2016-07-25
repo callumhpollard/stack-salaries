@@ -74,7 +74,7 @@ class LoginForm extends React.Component {
         self.redirectToDashboard(data.user);
       },
       error: function(err) {
-        self.redirectToDashboard(false);
+        self.redirectToDashboard(err);
       }
     });
   }

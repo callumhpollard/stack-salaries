@@ -37540,7 +37540,7 @@
 	  }, {
 	    key: 'redirectToDashboard',
 	    value: function redirectToDashboard(userData) {
-	      if (userData !== undefined) {
+	      if (userData.id) {
 	        this.props.setUserInfo(userData);
 	        this.context.router.push('/dashboard');
 	      } else {
@@ -37580,9 +37580,9 @@
 	    key: 'render',
 	    value: function render() {
 
-	      var toggle = "";
+	      var toggle = "hide";
 	      if (this.state.hasError) {
-	        toggle = "hide";
+	        toggle = "";
 	      }
 
 	      return _react2.default.createElement(
