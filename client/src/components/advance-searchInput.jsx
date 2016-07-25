@@ -6,7 +6,6 @@ var AdvancedSearchInput = (props) => (
   <div className="dashboard center-block text-center">
 
     <form onSubmit={props.GetAdvancedSearchData} >
-
      <fieldset className="form-group row gray">
         <div className="col-sm-1">
             <span className="glyphicon glyphicon-globe"></span>
@@ -77,7 +76,6 @@ var AdvancedSearchInput = (props) => (
      <div className="row">
         <button type="submit" className="btn btn-primary">Submit</button>
       </div>
-
     </form>
   </div>
 

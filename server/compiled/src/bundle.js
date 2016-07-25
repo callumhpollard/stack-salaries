@@ -25524,7 +25524,7 @@ module.exports =
 	      var data = { stack: this.state.stack, city: cityState[0], state: cityState[1] };
 
 	      _jquery2.default.ajax({
-	        url: "http://localhost:3000/search",
+	        url: "https://stacksalaries.herokuapp.com/search",
 	        type: "POST",
 	        contentType: "application/json",
 	        data: JSON.stringify(data),
@@ -35610,15 +35610,15 @@ module.exports =
 
 	var _warning2 = _interopRequireDefault(_warning);
 
-	var _isPlainObject = __webpack_require__(248);
+	var _isPlainObject = __webpack_require__(249);
 
 	var _isPlainObject2 = _interopRequireDefault(_isPlainObject);
 
-	var _hoistNonReactStatics = __webpack_require__(252);
+	var _hoistNonReactStatics = __webpack_require__(201);
 
 	var _hoistNonReactStatics2 = _interopRequireDefault(_hoistNonReactStatics);
 
-	var _invariant = __webpack_require__(253);
+	var _invariant = __webpack_require__(166);
 
 	var _invariant2 = _interopRequireDefault(_invariant);
 
@@ -36040,23 +36040,23 @@ module.exports =
 
 	var _createStore2 = _interopRequireDefault(_createStore);
 
-	var _combineReducers = __webpack_require__(243);
+	var _combineReducers = __webpack_require__(244);
 
 	var _combineReducers2 = _interopRequireDefault(_combineReducers);
 
-	var _bindActionCreators = __webpack_require__(245);
+	var _bindActionCreators = __webpack_require__(246);
 
 	var _bindActionCreators2 = _interopRequireDefault(_bindActionCreators);
 
-	var _applyMiddleware = __webpack_require__(246);
+	var _applyMiddleware = __webpack_require__(247);
 
 	var _applyMiddleware2 = _interopRequireDefault(_applyMiddleware);
 
-	var _compose = __webpack_require__(247);
+	var _compose = __webpack_require__(248);
 
 	var _compose2 = _interopRequireDefault(_compose);
 
-	var _warning = __webpack_require__(244);
+	var _warning = __webpack_require__(245);
 
 	var _warning2 = _interopRequireDefault(_warning);
 
@@ -36092,7 +36092,7 @@ module.exports =
 
 	var _isPlainObject2 = _interopRequireDefault(_isPlainObject);
 
-	var _symbolObservable = __webpack_require__(241);
+	var _symbolObservable = __webpack_require__(242);
 
 	var _symbolObservable2 = _interopRequireDefault(_symbolObservable);
 
@@ -36350,8 +36350,8 @@ module.exports =
 /***/ function(module, exports, __webpack_require__) {
 
 	var getPrototype = __webpack_require__(238),
-	    isHostObject = __webpack_require__(239),
-	    isObjectLike = __webpack_require__(240);
+	    isHostObject = __webpack_require__(240),
+	    isObjectLike = __webpack_require__(241);
 
 	/** `Object#toString` result references. */
 	var objectTag = '[object Object]';
@@ -36423,7 +36423,9 @@ module.exports =
 
 /***/ },
 /* 238 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
+
+	var overArg = __webpack_require__(239);
 
 	/* Built-in method references for those with the same name as other `lodash` methods. */
 	var nativeGetPrototype = Object.getPrototypeOf;
@@ -36435,15 +36437,34 @@ module.exports =
 	 * @param {*} value The value to query.
 	 * @returns {null|Object} Returns the `[[Prototype]]`.
 	 */
-	function getPrototype(value) {
-	  return nativeGetPrototype(Object(value));
-	}
+	var getPrototype = overArg(nativeGetPrototype, Object);
 
 	module.exports = getPrototype;
 
 
 /***/ },
 /* 239 */
+/***/ function(module, exports) {
+
+	/**
+	 * Creates a function that invokes `func` with its first argument transformed.
+	 *
+	 * @private
+	 * @param {Function} func The function to wrap.
+	 * @param {Function} transform The argument transform.
+	 * @returns {Function} Returns the new function.
+	 */
+	function overArg(func, transform) {
+	  return function(arg) {
+	    return func(transform(arg));
+	  };
+	}
+
+	module.exports = overArg;
+
+
+/***/ },
+/* 240 */
 /***/ function(module, exports) {
 
 	/**
@@ -36469,7 +36490,7 @@ module.exports =
 
 
 /***/ },
-/* 240 */
+/* 241 */
 /***/ function(module, exports) {
 
 	/**
@@ -36504,17 +36525,17 @@ module.exports =
 
 
 /***/ },
-/* 241 */
+/* 242 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* global window */
 	'use strict';
 
-	module.exports = __webpack_require__(242)(global || window || this);
+	module.exports = __webpack_require__(243)(global || window || this);
 
 
 /***/ },
-/* 242 */
+/* 243 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -36539,7 +36560,7 @@ module.exports =
 
 
 /***/ },
-/* 243 */
+/* 244 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -36553,7 +36574,7 @@ module.exports =
 
 	var _isPlainObject2 = _interopRequireDefault(_isPlainObject);
 
-	var _warning = __webpack_require__(244);
+	var _warning = __webpack_require__(245);
 
 	var _warning2 = _interopRequireDefault(_warning);
 
@@ -36671,7 +36692,7 @@ module.exports =
 	}
 
 /***/ },
-/* 244 */
+/* 245 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -36701,7 +36722,7 @@ module.exports =
 	}
 
 /***/ },
-/* 245 */
+/* 246 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -36757,7 +36778,7 @@ module.exports =
 	}
 
 /***/ },
-/* 246 */
+/* 247 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -36768,7 +36789,7 @@ module.exports =
 
 	exports["default"] = applyMiddleware;
 
-	var _compose = __webpack_require__(247);
+	var _compose = __webpack_require__(248);
 
 	var _compose2 = _interopRequireDefault(_compose);
 
@@ -36820,7 +36841,7 @@ module.exports =
 	}
 
 /***/ },
-/* 247 */
+/* 248 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -36865,12 +36886,12 @@ module.exports =
 	}
 
 /***/ },
-/* 248 */
+/* 249 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var getPrototype = __webpack_require__(249),
-	    isHostObject = __webpack_require__(250),
-	    isObjectLike = __webpack_require__(251);
+	var getPrototype = __webpack_require__(250),
+	    isHostObject = __webpack_require__(252),
+	    isObjectLike = __webpack_require__(253);
 
 	/** `Object#toString` result references. */
 	var objectTag = '[object Object]';
@@ -36941,8 +36962,10 @@ module.exports =
 
 
 /***/ },
-/* 249 */
-/***/ function(module, exports) {
+/* 250 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var overArg = __webpack_require__(251);
 
 	/* Built-in method references for those with the same name as other `lodash` methods. */
 	var nativeGetPrototype = Object.getPrototypeOf;
@@ -36954,15 +36977,34 @@ module.exports =
 	 * @param {*} value The value to query.
 	 * @returns {null|Object} Returns the `[[Prototype]]`.
 	 */
-	function getPrototype(value) {
-	  return nativeGetPrototype(Object(value));
-	}
+	var getPrototype = overArg(nativeGetPrototype, Object);
 
 	module.exports = getPrototype;
 
 
 /***/ },
-/* 250 */
+/* 251 */
+/***/ function(module, exports) {
+
+	/**
+	 * Creates a function that invokes `func` with its first argument transformed.
+	 *
+	 * @private
+	 * @param {Function} func The function to wrap.
+	 * @param {Function} transform The argument transform.
+	 * @returns {Function} Returns the new function.
+	 */
+	function overArg(func, transform) {
+	  return function(arg) {
+	    return func(transform(arg));
+	  };
+	}
+
+	module.exports = overArg;
+
+
+/***/ },
+/* 252 */
 /***/ function(module, exports) {
 
 	/**
@@ -36988,7 +37030,7 @@ module.exports =
 
 
 /***/ },
-/* 251 */
+/* 253 */
 /***/ function(module, exports) {
 
 	/**
@@ -37020,121 +37062,6 @@ module.exports =
 	}
 
 	module.exports = isObjectLike;
-
-
-/***/ },
-/* 252 */
-/***/ function(module, exports) {
-
-	/**
-	 * Copyright 2015, Yahoo! Inc.
-	 * Copyrights licensed under the New BSD License. See the accompanying LICENSE file for terms.
-	 */
-	'use strict';
-
-	var REACT_STATICS = {
-	    childContextTypes: true,
-	    contextTypes: true,
-	    defaultProps: true,
-	    displayName: true,
-	    getDefaultProps: true,
-	    mixins: true,
-	    propTypes: true,
-	    type: true
-	};
-
-	var KNOWN_STATICS = {
-	    name: true,
-	    length: true,
-	    prototype: true,
-	    caller: true,
-	    arguments: true,
-	    arity: true
-	};
-
-	var isGetOwnPropertySymbolsAvailable = typeof Object.getOwnPropertySymbols === 'function';
-
-	module.exports = function hoistNonReactStatics(targetComponent, sourceComponent, customStatics) {
-	    if (typeof sourceComponent !== 'string') { // don't hoist over string (html) components
-	        var keys = Object.getOwnPropertyNames(sourceComponent);
-
-	        /* istanbul ignore else */
-	        if (isGetOwnPropertySymbolsAvailable) {
-	            keys = keys.concat(Object.getOwnPropertySymbols(sourceComponent));
-	        }
-
-	        for (var i = 0; i < keys.length; ++i) {
-	            if (!REACT_STATICS[keys[i]] && !KNOWN_STATICS[keys[i]] && (!customStatics || !customStatics[keys[i]])) {
-	                try {
-	                    targetComponent[keys[i]] = sourceComponent[keys[i]];
-	                } catch (error) {
-
-	                }
-	            }
-	        }
-	    }
-
-	    return targetComponent;
-	};
-
-
-/***/ },
-/* 253 */
-/***/ function(module, exports) {
-
-	/**
-	 * Copyright 2013-2015, Facebook, Inc.
-	 * All rights reserved.
-	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
-	 */
-
-	'use strict';
-
-	/**
-	 * Use invariant() to assert state which your program assumes to be true.
-	 *
-	 * Provide sprintf-style format (only %s is supported) and arguments
-	 * to provide information about what broke and what you were
-	 * expecting.
-	 *
-	 * The invariant message will be stripped in production, but the invariant
-	 * will remain to ensure logic does not differ in production.
-	 */
-
-	var NODE_ENV = process.env.NODE_ENV;
-
-	var invariant = function(condition, format, a, b, c, d, e, f) {
-	  if (NODE_ENV !== 'production') {
-	    if (format === undefined) {
-	      throw new Error('invariant requires an error message argument');
-	    }
-	  }
-
-	  if (!condition) {
-	    var error;
-	    if (format === undefined) {
-	      error = new Error(
-	        'Minified exception occurred; use the non-minified dev environment ' +
-	        'for the full error message and additional helpful warnings.'
-	      );
-	    } else {
-	      var args = [a, b, c, d, e, f];
-	      var argIndex = 0;
-	      error = new Error(
-	        format.replace(/%s/g, function() { return args[argIndex++]; })
-	      );
-	      error.name = 'Invariant Violation';
-	    }
-
-	    error.framesToPop = 1; // we don't care about invariant's own frame
-	    throw error;
-	  }
-	};
-
-	module.exports = invariant;
 
 
 /***/ },
@@ -47723,7 +47650,7 @@ module.exports =
 	      };
 
 	      _jquery2.default.ajax({
-	        url: "http://localhost:3000/search",
+	        url: "https://stacksalaries.herokuapp.com/search",
 	        type: "POST",
 	        contentType: "application/json",
 	        data: JSON.stringify(data),
@@ -48029,7 +47956,7 @@ module.exports =
 	      var self = this;
 
 	      _jquery2.default.ajax({
-	        url: "http://localhost:3000/signin",
+	        url: "https://stacksalaries.herokuapp.com/signin",
 	        type: "POST",
 	        contentType: "application/json",
 	        data: JSON.stringify(data),
@@ -48359,7 +48286,7 @@ module.exports =
 	      var data = { name: this.state.name, email: this.state.email, password: this.state.password, gender: this.state.gender };
 
 	      _jquery2.default.ajax({
-	        url: "http://localhost:3000/signup",
+	        url: "https://stacksalaries.herokuapp.com/signup",
 	        type: "POST",
 	        contentType: "application/json",
 	        data: JSON.stringify(data),
@@ -48674,7 +48601,7 @@ module.exports =
 	      var data = { stack: this.state.stack, city: this.state.city, state: this.state.state, education: this.state.education, experience: this.state.experience, position: this.state.position };
 
 	      _jquery2.default.ajax({
-	        url: "http://localhost:3000/stackentry",
+	        url: "https://stacksalaries.herokuapp.com/stackentry",
 	        type: "POST",
 	        contentType: "application/json",
 	        data: JSON.stringify(data),

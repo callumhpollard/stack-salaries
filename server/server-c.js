@@ -85,7 +85,7 @@ app.use(_bodyParser2.default.json());
 app.use(_express2.default.static(_path2.default.join(__dirname, '../client/compiled')));
 
 // Mongoose Connection (Refactor into Separate File)
-var databaseURL = process.env.MONGOLABS || 'mongodb://localhost:27017/stack-salaries';
+var databaseURL = process.env.MONGODB_URI|| 'mongodb://localhost:27017/stack-salaries';
 
 _mongoose2.default.connect(databaseURL);
 
