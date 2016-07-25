@@ -82,8 +82,9 @@ class LoginForm extends React.Component {
 
   render() {
 
-     var toggle = "hide";
-     if(this.state.hasError){
+
+    var toggle = "hide";
+    if(this.state.hasError){
         toggle = "";
      }
 
