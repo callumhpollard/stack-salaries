@@ -38479,8 +38479,6 @@
 	      e.preventDefault();
 	      var self = this;
 
-	      console.log(this.state.gender);
-
 	      var data = { name: this.state.name, email: this.state.email, password: this.state.password, gender: this.state.gender };
 
 	      _jquery2.default.ajax({
@@ -38489,6 +38487,7 @@
 	        contentType: "application/json",
 	        data: JSON.stringify(data),
 	        success: function success(results) {
+	          console.log(data);
 	          localStorage.setItem('token', results.token), self.setState({
 	            authToken: results.token
 	          });
@@ -38626,17 +38625,17 @@
 	          ),
 	          _react2.default.createElement(
 	            'option',
-	            null,
+	            { value: 'Male', onChange: props.addGender },
 	            'Male'
 	          ),
 	          _react2.default.createElement(
 	            'option',
-	            null,
+	            { value: 'Female', onChange: props.addGender },
 	            'Female'
 	          ),
 	          _react2.default.createElement(
 	            'option',
-	            null,
+	            { value: 'Other', onChange: props.addGender },
 	            'Other'
 	          )
 	        )
