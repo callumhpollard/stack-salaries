@@ -59,7 +59,7 @@ class SignForm extends React.Component{
     var data = {name: this.state.name, email: this.state.email, password: this.state.password, gender: this.state.gender};
 
     $.ajax({
-      url:"https://stacksalaries.herokuapp.com/signup",
+      url:"https://localhost:3000/signup",
       type:"POST",
       contentType:"application/json",
       data: JSON.stringify(data),

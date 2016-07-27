@@ -81,7 +81,7 @@ class AdvancedSearch extends React.Component{
     };
 
     $.ajax({
-      url:"https://stacksalaries.herokuapp.com/search",
+      url:"https://stack-salaries.herokuapp.com/search",
       type:"POST",
       contentType:"application/json",
       data: JSON.stringify(data),
