@@ -42,8 +42,7 @@ class LoginForm extends React.Component {
   }
 
   redirectToDashboard(userData){
-    console.log(typeof userData);
-    if(userData !== undefined){
+    if(userData.id){
       this.props.setUserInfo(userData);
       this.context.router.push('/dashboard');
     } else {
@@ -83,9 +82,10 @@ class LoginForm extends React.Component {
 
   render() {
 
-     var toggle = "";
-     if(this.state.hasError){
-        toggle = "hide";
+
+    var toggle = "hide";
+    if(this.state.hasError){
+        toggle = "";
      }
 
     return (

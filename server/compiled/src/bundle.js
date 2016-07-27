@@ -47922,8 +47922,6 @@ module.exports =
 	  value: true
 	});
 
-	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
-
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 	var _react = __webpack_require__(2);
@@ -48007,8 +48005,7 @@ module.exports =
 	  }, {
 	    key: 'redirectToDashboard',
 	    value: function redirectToDashboard(userData) {
-	      console.log(typeof userData === 'undefined' ? 'undefined' : _typeof(userData));
-	      if (userData !== undefined) {
+	      if (userData.id) {
 	        this.props.setUserInfo(userData);
 	        this.context.router.push('/dashboard');
 	      } else {
@@ -48048,9 +48045,9 @@ module.exports =
 	    key: 'render',
 	    value: function render() {
 
-	      var toggle = "";
+	      var toggle = "hide";
 	      if (this.state.hasError) {
-	        toggle = "hide";
+	        toggle = "";
 	      }
 
 	      return _react2.default.createElement(
