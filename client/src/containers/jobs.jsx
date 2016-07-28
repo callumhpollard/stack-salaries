@@ -1,10 +1,15 @@
+// Import all required modules
 import React from 'react';
 import $ from 'jquery';
-import JobsList from './jobs-list';
 import { connect } from 'react-redux';
-import search from './search';
 import { bindActionCreators } from 'redux';
 import { setSearch, setCityState } from '../actions/actionCreator';
+
+// Import all actions & helper methods
+import JobsList from '../components/jobs-list';
+
+// Import all containers
+import search from '../containers/search';
 
 class Jobs extends React.Component {
 
@@ -25,10 +30,15 @@ class Jobs extends React.Component {
 
   var self = this;
 
-  // console.log(this.props.cityState);
-
   // Our query parameters
-  var query = {publisher: "5453642953934453", format:"json", q: JSON.stringify(this.props.cityState.stack), l: `${this.props.cityState.cityForJob}, ${this.props.cityState.stateForJob}`, v: 2}
+  var query = {
+    publisher: "5453642953934453",
+    format:"json",
+    q: JSON.stringify(this.props.cityState.stack),
+    l: `${this.props.cityState.cityForJob},
+    ${this.props.cityState.stateForJob}`,
+    v: 2
+  };
 
     $.ajax({
       data: query,
@@ -75,4 +85,3 @@ function mapDispatchToProps(dispatch) {
 
 
 export default connect(mapStateToProps, mapDispatchToProps)(Jobs);
-// export default Results;

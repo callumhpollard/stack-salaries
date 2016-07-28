@@ -1,8 +1,8 @@
+// Import all required modules
 import React from 'react';
 import { Link } from 'react-router';
 
 var SignupInput = (props) => (
-
 
   <div className="loginbox center-block text-center">
     <form onSubmit={props.SignUpToServer} >

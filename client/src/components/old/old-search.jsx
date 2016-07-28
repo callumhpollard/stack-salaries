@@ -1,15 +1,17 @@
+// Import all required modules
 import React from 'react';
 import $ from 'jquery';
-import SearchInput from './search-input';
-import { History } from 'react-router';
-import { Router } from 'react-router';
+import { History, Router } from 'react-router';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+
+// Import all actions & helper methods
 import { setSearch, setCityState } from '../actions/actionCreator';
 
-// import Results from './results';
+// Import all needed components
+import SearchInput from './search-input';
 
-// containers are glorfied components - containers have access to redux
+
 class Search extends React.Component{
 
   constructor() {
@@ -49,7 +51,7 @@ class Search extends React.Component{
     var data = {stack: this.state.stack, city: cityState[0], state:cityState[1]};
 
     $.ajax({
-      url:"https://localhost:3000/search",
+      url:"http://localhost:3000/search",
       type:"POST",
       contentType:"application/json",
       data: JSON.stringify(data),

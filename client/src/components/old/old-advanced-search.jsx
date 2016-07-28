@@ -1,12 +1,16 @@
+// Import all required modules
 import React from 'react';
 import $ from 'jquery';
-import { History } from 'react-router';
-import { Router } from 'react-router';
-import AdvancedSearchInput from './advance-searchInput';
+import { History, Router } from 'react-router';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+
+// Import all actions & helper methods
 import { setSearch } from '../actions/actionCreator';
 import { loggedIn } from '../auth/auth';
+
+// Import all needed components
+import AdvancedSearchInput from './advance-searchInput';
 import Logo from './logo';
 
 class AdvancedSearch extends React.Component{
@@ -81,7 +85,7 @@ class AdvancedSearch extends React.Component{
     };
 
     $.ajax({
-      url:"https://stack-salaries.herokuapp.com/search",
+      url:"http://localhost:3000/search",
       type:"POST",
       contentType:"application/json",
       data: JSON.stringify(data),

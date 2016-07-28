@@ -4,12 +4,7 @@ import { logOut } from '../auth/auth';
 
 class Logout extends React.Component {
   constructor() {
-
     super();
-
-    this.state = {
-
-    };
   }
 
   componentWillMount(){

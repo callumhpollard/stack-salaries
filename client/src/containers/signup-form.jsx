@@ -1,11 +1,15 @@
+// Import all required modules
 import React from 'react';
 import $ from 'jquery';
-import { History } from 'react-router';
-import { Router } from 'react-router';
-import SignupInput from './signup-input';
+import { Router, History } from 'react-router';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+
+// Import all actions & helper methods
 import { setUserInfo } from '../actions/actionCreator';
+
+// Import all needed components
+import SignupInput from '../components/signup-input';
 
 class SignForm extends React.Component{
   constructor() {
@@ -59,7 +63,7 @@ class SignForm extends React.Component{
     var data = {name: this.state.name, email: this.state.email, password: this.state.password, gender: this.state.gender};
 
     $.ajax({
-      url:"https://localhost:3000/signup",
+      url:"http://localhost:3000/signup",
       type:"POST",
       contentType:"application/json",
       data: JSON.stringify(data),

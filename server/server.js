@@ -101,12 +101,6 @@ app.get('/users/:id', function(req, res, next) {
 // If successful, hand a token
 app.post('/signin', requireSignIn, function(req, res, next) {
 
-  // console.log(req.user);
-
-  // var userToken = generateToken(req.user);
-
-  // res.send({token: userToken });
-
   // Generate a token
   var token = generateToken(req.user);
 
@@ -158,6 +152,8 @@ app.post('/signup', function(req, res, next) {
 
 });
 
+// Log out a user
+// Note, React Router is currently handling this
 app.get('/logout', logout(), function(req, res, next){
   res.redirect('/login');
 });

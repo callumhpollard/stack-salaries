@@ -1,14 +1,20 @@
+// Import all required modules
 import React from 'react';
-import Login from './login';
-import Logo from './logo';
-import Results from './results';
-import Search from './search';
-import Footer from './footer';
-import Jobs from './jobs';
-import AdvancedSearch from './advanced-search';
 import { History } from 'react-router';
+
+// Import all actions & helper methods
 import { loggedIn } from '../auth/auth';
 
+// Import all needed components
+import Login from './login';
+import Logo from './logo';
+import Footer from './footer';
+
+// Import all containers
+import Jobs from '../containers/jobs';
+import Search from '../containers/search';
+import Results from '../containers/results';
+import AdvancedSearch from '../containers/advanced-search';
 
 class Stats extends React.Component {
 
@@ -18,9 +24,6 @@ class Stats extends React.Component {
     this.state = {
       loggedIn: loggedIn()
     }
-  }
-
-  componentDidMount(){
   }
 
   render() {

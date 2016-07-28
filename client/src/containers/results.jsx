@@ -1,17 +1,20 @@
+// Import all required modules
 import React from 'react';
 import d3 from 'd3';
-import { History } from 'react-router';
-import { Router } from 'react-router';
+import { History, Router } from 'react-router';
 import { connect } from 'react-redux';
-import search from './search';
 import { bindActionCreators } from 'redux';
+
+// Import all actions & helper methods
 import { setSearch } from '../actions/actionCreator';
+
+// Import all containers
+import search from '../containers/search';
 
 
 var SetIntervalMixin = {
   componentWillMount: function() {
     this.intervals = [];
-    // console.log("COMPONENT " + JSON.stringify(this.props));
   },
   setInterval: function() {
     this.intervals.push(setInterval.apply(null, arguments));

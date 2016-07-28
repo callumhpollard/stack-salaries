@@ -1,13 +1,18 @@
+// Import all required modules
 import React from 'react';
+import { Link } from 'react-router';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+
+// Import all actions & helper methods
+import { loggedIn } from '../auth/auth';
+import { setUserInfo } from '../actions/actionCreator';
+
+// Import all needed components
 import Login from './login';
 import Main from './main';
 import Search from './search';
 import Cloud from './cloud';
-import { Link } from 'react-router';
-import { loggedIn } from '../auth/auth';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-import { setUserInfo } from '../actions/actionCreator';
 
 class App extends React.Component {
 
@@ -17,11 +22,6 @@ class App extends React.Component {
     this.state = {
       loggedIn: loggedIn()
     }
-  }
-
-
-  componentWillMount(){
-
   }
 
   render() {

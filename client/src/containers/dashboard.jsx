@@ -1,15 +1,18 @@
+// Import all required modules
 import React from 'react';
-import { Link } from 'react-router';
-import { Router } from 'react-router';
 import $ from 'jquery';
-import DataInput from './dashboard-dataInput';
+import { Router, Link } from 'react-router';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { setUserInfo } from '../actions/actionCreator';
-import Logo from './logo';
-import { loggedIn } from '../auth/auth';
-import Flash from './flash';
 
+// Import all actions & helper methods
+import { setUserInfo } from '../actions/actionCreator';
+import { loggedIn } from '../auth/auth';
+import Flash from '../utils/flash';
+
+// Import all needed components
+import DataInput from '../components/dashboard-dataInput';
+import Logo from '../components/logo';
 
 class Dashboard extends React.Component {
 
@@ -26,8 +29,16 @@ class Dashboard extends React.Component {
       position:'',
       loggedIn: loggedIn()
     };
-  }
 
+
+    this.inputData = this.inputData.bind(this);
+    this.addStack = this.addStack.bind(this);
+    this.addCity = this.addCity.bind(this);
+    this.addState = this.addState.bind(this);
+    this.addEducation = this.addEducation.bind(this);
+    this.addExperience = this.addExperience.bind(this);
+    this.addPosition = this.addPosition.bind(this);
+  }
 
   addCity(e) {
     this.setState({
@@ -67,17 +78,34 @@ class Dashboard extends React.Component {
 
 
   submitToStore() {
-    var data = {stack: this.state.stack, city: this.state.city, state:this.state.state, education:this.state.education, experience:this.state.experience, position:this.state.position};
+    var data = {
+      stack: this.state.stack,
+      city: this.state.city,
+      state:this.state.state,
+      education:this.state.education,
+      experience:this.state.experience,
+      position:this.state.position
+    };
+
     this.props.setUserInfo(data);
   }
 
   inputData(e) {
     e.preventDefault();
+
     var self = this;
-    var data = {stack: this.state.stack, city: this.state.city, state:this.state.state, education:this.state.education, experience:this.state.experience, position:this.state.position};
+
+    var data = {
+      stack: this.state.stack,
+      city: this.state.city,
+      state:this.state.state,
+      education:this.state.education,
+      experience:this.state.experience,
+      position:this.state.position
+    };
 
     $.ajax({
-      url:"https://localhost:3000/stackentry",
+      url:"http://localhost:3000/stackentry",
       type:"POST",
       contentType:"application/json",
       data: JSON.stringify(data),
@@ -93,8 +121,6 @@ class Dashboard extends React.Component {
   }
 
   render() {
-
-    // console.log(this.props);
 
     return (
 
@@ -126,7 +152,15 @@ class Dashboard extends React.Component {
 
       <div className="row dashboard-row center-block">
          <div className="loginMain">
-          <DataInput inputData={this.inputData.bind(this)} addStack={this.addStack.bind(this)} addCity={this.addCity.bind(this)} addState={this.addState.bind(this)} addEducation={this.addEducation.bind(this)} addExperience={this.addExperience.bind(this)} addPosition={this.addPosition.bind(this)}/>
+          <DataInput
+            inputData = {this.inputData}
+            addStack = {this.addStack}
+            addCity = {this.addCity}
+            addState = {this.addState}
+            addEducation = {this.addEducation}
+            addExperience = {this.addExperience}
+            addPosition = {this.addPosition}
+          />
         </div>
       </div>
     </div>
@@ -151,6 +185,3 @@ function mapDispatchToProps(dispatch) {
 
 
 export default connect(mapStateToProps, mapDispatchToProps)(Dashboard);
-
-
-// {this.props.userInfo.name}

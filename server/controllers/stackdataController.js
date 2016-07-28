@@ -1,7 +1,7 @@
 var SD = require('../models/stackdata');
 
-
-//takes the object that's sent to the server and modifies it into a query for mongoose.
+//takes the object that's sent to the server
+// and modifies it into a query for mongoose.
 var getQuery = function(query, callback){
   var clear = {}
   for(var k in query){
@@ -15,7 +15,8 @@ var getQuery = function(query, callback){
   callback(clear);
 }
 
-//uses the query from getQuery to perform a search in mongoose to get a list of salaries back.
+//uses the query from getQuery to perform a search in mongoose
+// to get a list of salaries back.
 var getSalary = function(query, callback){
   getQuery(query, function(results){
     SD.find(results, {salary: 1, _id : 0}).exec(function(err, results){
@@ -25,7 +26,8 @@ var getSalary = function(query, callback){
   });
 };
 
-//takes the object that's sent to the server and converts it to be made into a salary entry.
+//takes the object that's sent to the server and
+// converts it to be made into a salary entry.
 exports.createSalary = function(data, callback){
   for(var k in data){
     if(typeof(data[k]) === 'string'){
@@ -44,7 +46,8 @@ exports.createSalary = function(data, callback){
   })
 };
 
-//Calculates the lowest salary, average salary, and highest salary from the results of getSalary.
+//Calculates the lowest salary, average salary, and highest salary
+// from the results of getSalary
 var calculateSalary = function(query, callback){
   getSalary(query, function(results){
     var salaries = [];
@@ -69,7 +72,8 @@ var calculateSalary = function(query, callback){
   });
 }
 
-//Creates a label and adds it to the object created from calculateSalary and returns that object.
+//Creates a label and adds it to the object created
+// from calculateSalary and returns that object
 exports.querySalary = function(query, callback){
   calculateSalary(query, function(result){
     if(result.average !== 0){

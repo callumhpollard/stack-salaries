@@ -64,54 +64,63 @@ module.exports =
 
 	var _reactRouter = __webpack_require__(158);
 
-	var _mainLayout = __webpack_require__(221);
+	var _auth = __webpack_require__(221);
+
+	var _mainLayout = __webpack_require__(222);
 
 	var _mainLayout2 = _interopRequireDefault(_mainLayout);
 
-	var _app = __webpack_require__(222);
-
-	var _app2 = _interopRequireDefault(_app);
-
-	var _stats = __webpack_require__(257);
+	var _stats = __webpack_require__(223);
 
 	var _stats2 = _interopRequireDefault(_stats);
 
-	var _search = __webpack_require__(225);
-
-	var _search2 = _interopRequireDefault(_search);
-
-	var _loginForm = __webpack_require__(267);
-
-	var _loginForm2 = _interopRequireDefault(_loginForm);
-
-	var _signupForm = __webpack_require__(270);
-
-	var _signupForm2 = _interopRequireDefault(_signupForm);
-
-	var _dashboard = __webpack_require__(272);
-
-	var _dashboard2 = _interopRequireDefault(_dashboard);
-
-	var _advancedSearch = __webpack_require__(265);
-
-	var _advancedSearch2 = _interopRequireDefault(_advancedSearch);
-
-	var _results = __webpack_require__(259);
-
-	var _results2 = _interopRequireDefault(_results);
-
-	var _jobs = __webpack_require__(262);
-
-	var _jobs2 = _interopRequireDefault(_jobs);
-
-	var _logout = __webpack_require__(274);
+	var _logout = __webpack_require__(264);
 
 	var _logout2 = _interopRequireDefault(_logout);
 
-	var _auth = __webpack_require__(256);
+	var _app = __webpack_require__(265);
+
+	var _app2 = _interopRequireDefault(_app);
+
+	var _jobs = __webpack_require__(227);
+
+	var _jobs2 = _interopRequireDefault(_jobs);
+
+	var _dashboard = __webpack_require__(268);
+
+	var _dashboard2 = _interopRequireDefault(_dashboard);
+
+	var _signupForm = __webpack_require__(271);
+
+	var _signupForm2 = _interopRequireDefault(_signupForm);
+
+	var _loginForm = __webpack_require__(273);
+
+	var _loginForm2 = _interopRequireDefault(_loginForm);
+
+	var _search = __webpack_require__(258);
+
+	var _search2 = _interopRequireDefault(_search);
+
+	var _results = __webpack_require__(260);
+
+	var _results2 = _interopRequireDefault(_results);
+
+	var _advancedSearch = __webpack_require__(262);
+
+	var _advancedSearch2 = _interopRequireDefault(_advancedSearch);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+	// The react router renders components based on
+	// desired path
+
+
+	// Import all containers
+
+
+	// Import all actions & helper methods
+	// Import all required modules
 	exports.default = _react2.default.createElement(
 	  _reactRouter.Route,
 	  { path: '/', component: _mainLayout2.default },
@@ -152,6 +161,8 @@ module.exports =
 	    _react2.default.createElement(_reactRouter.IndexRoute, { component: _logout2.default })
 	  )
 	);
+
+	// Import all components
 
 /***/ },
 /* 2 */
@@ -25178,6 +25189,40 @@ module.exports =
 
 /***/ },
 /* 221 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.loggedIn = loggedIn;
+	exports.logOut = logOut;
+	exports.retrieveToken = retrieveToken;
+	// This file contains client side authentication helper methods
+	// The server sends back JWT tokens when a login/sign up is successful
+	// It also sends back the full user object that you can use in your reducers
+	// To check for authentication, we store the token in localStorage, which
+	// automatically expires when the browser is closed (not tabs)
+
+	// Return a true/false whether localStorage token exists
+	function loggedIn() {
+	  return !!localStorage.token;
+	}
+
+	// Deletes the localStorage token
+	// New tokens are sent every time a user logs in
+	function logOut() {
+	  delete localStorage.token;
+	}
+
+	// Retrieves a given token from localStorage
+	function retrieveToken() {
+	  return localStorage.token;
+	}
+
+/***/ },
+/* 222 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25211,7 +25256,7 @@ module.exports =
 	exports.default = MainLayout;
 
 /***/ },
-/* 222 */
+/* 223 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25226,31 +25271,37 @@ module.exports =
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _login = __webpack_require__(223);
+	var _reactRouter = __webpack_require__(158);
+
+	var _auth = __webpack_require__(221);
+
+	var _login = __webpack_require__(224);
 
 	var _login2 = _interopRequireDefault(_login);
 
-	var _main = __webpack_require__(224);
+	var _logo = __webpack_require__(225);
 
-	var _main2 = _interopRequireDefault(_main);
+	var _logo2 = _interopRequireDefault(_logo);
 
-	var _search = __webpack_require__(225);
+	var _footer = __webpack_require__(226);
+
+	var _footer2 = _interopRequireDefault(_footer);
+
+	var _jobs = __webpack_require__(227);
+
+	var _jobs2 = _interopRequireDefault(_jobs);
+
+	var _search = __webpack_require__(258);
 
 	var _search2 = _interopRequireDefault(_search);
 
-	var _cloud = __webpack_require__(255);
+	var _results = __webpack_require__(260);
 
-	var _cloud2 = _interopRequireDefault(_cloud);
+	var _results2 = _interopRequireDefault(_results);
 
-	var _reactRouter = __webpack_require__(158);
+	var _advancedSearch = __webpack_require__(262);
 
-	var _auth = __webpack_require__(256);
-
-	var _reactRedux = __webpack_require__(228);
-
-	var _redux = __webpack_require__(235);
-
-	var _actionCreator = __webpack_require__(254);
+	var _advancedSearch2 = _interopRequireDefault(_advancedSearch);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -25258,15 +25309,25 @@ module.exports =
 
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } // Import all required modules
 
-	var App = function (_React$Component) {
-	  _inherits(App, _React$Component);
 
-	  function App() {
-	    _classCallCheck(this, App);
+	// Import all actions & helper methods
 
-	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(App).call(this));
+
+	// Import all needed components
+
+
+	// Import all containers
+
+
+	var Stats = function (_React$Component) {
+	  _inherits(Stats, _React$Component);
+
+	  function Stats() {
+	    _classCallCheck(this, Stats);
+
+	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Stats).call(this));
 
 	    _this.state = {
 	      loggedIn: (0, _auth.loggedIn)()
@@ -25274,57 +25335,58 @@ module.exports =
 	    return _this;
 	  }
 
-	  _createClass(App, [{
-	    key: 'componentWillMount',
-	    value: function componentWillMount() {}
-	  }, {
+	  _createClass(Stats, [{
 	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
 	        'div',
-	        null,
+	        { className: 'container results' },
+	        _react2.default.createElement(
+	          'nav',
+	          { id: 'resultNav', className: 'navbar navbar-default navbar-fixed-top' },
+	          _react2.default.createElement(_logo2.default, { loggedIn: this.state.loggedIn })
+	        ),
 	        _react2.default.createElement(
 	          'div',
-	          { id: 'main', className: 'front' },
+	          null,
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'd3' },
+	            _react2.default.createElement(_results2.default, { history: this.props.history })
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'inner-search' },
+	            _react2.default.createElement(
+	              'p',
+	              { className: 'lead text-center' },
+	              'Another Search?'
+	            ),
+	            _react2.default.createElement(_search2.default, null)
+	          ),
 	          _react2.default.createElement(
 	            'div',
 	            null,
 	            _react2.default.createElement(
-	              'nav',
-	              { className: 'navbar navbar-default navbar-fixed-top' },
-	              _react2.default.createElement(_login2.default, { loggedIn: this.state.loggedIn, userInfo: this.props.userInfo })
+	              'p',
+	              { className: 'lead text-center' },
+	              'Related Jobs in Your Area'
 	            ),
-	            _react2.default.createElement(_main2.default, null),
-	            _react2.default.createElement(_search2.default, { history: this.props.history }),
-	            _react2.default.createElement(_cloud2.default, null)
-	          )
-	        ),
-	        _react2.default.createElement('div', { className: 'art' })
+	            _react2.default.createElement(_jobs2.default, null)
+	          ),
+	          _react2.default.createElement(_footer2.default, null)
+	        )
 	      );
 	    }
 	  }]);
 
-	  return App;
+	  return Stats;
 	}(_react2.default.Component);
 
-	App.contextTypes = {
-	  router: _react2.default.PropTypes.object.isRequired
-	};
-
-	function mapStateToProps(state) {
-	  return {
-	    userInfo: state.userInfo
-	  };
-	}
-
-	function mapDispatchToProps(dispatch) {
-	  return (0, _redux.bindActionCreators)({ setUserInfo: _actionCreator.setUserInfo }, dispatch);
-	}
-
-	exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(App);
+	exports.default = Stats;
 
 /***/ },
-/* 223 */
+/* 224 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25342,7 +25404,6 @@ module.exports =
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var Login = function Login(props) {
-	  // console.log(props.userInfo);
 	  return _react2.default.createElement(
 	    'div',
 	    null,
@@ -25395,10 +25456,10 @@ module.exports =
 	exports.default = Login;
 
 /***/ },
-/* 224 */
+/* 225 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -25408,33 +25469,175 @@ module.exports =
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _reactRouter = __webpack_require__(158);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var Main = _react2.default.createClass({
-	  displayName: "Main",
+	var Logo = function Logo(props) {
+	  return _react2.default.createElement(
+	    'div',
+	    null,
+	    _react2.default.createElement(
+	      'div',
+	      { className: 'row logo-headline' },
+	      _react2.default.createElement(
+	        'div',
+	        { className: 'left' },
+	        _react2.default.createElement(
+	          _reactRouter.Link,
+	          { to: '/' },
+	          _react2.default.createElement(
+	            'h3',
+	            { className: 'text-left' },
+	            'STACK SALARIES'
+	          )
+	        )
+	      ),
+	      _react2.default.createElement(
+	        'div',
+	        { className: 'right' },
+	        props.loggedIn ? _react2.default.createElement(
+	          'div',
+	          null,
+	          _react2.default.createElement(
+	            'button',
+	            { className: 'btn btn-primary login' },
+	            _react2.default.createElement(
+	              _reactRouter.Link,
+	              { to: '/dashboard' },
+	              'Dashboard'
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'button',
+	            { className: 'btn btn-primary login' },
+	            _react2.default.createElement(
+	              _reactRouter.Link,
+	              { to: '/advancedsearch' },
+	              'Advanced Search'
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'button',
+	            { className: 'btn btn-primary login' },
+	            _react2.default.createElement(
+	              _reactRouter.Link,
+	              { to: '/logout' },
+	              'Log Out'
+	            )
+	          )
+	        ) : _react2.default.createElement(
+	          'div',
+	          null,
+	          _react2.default.createElement(
+	            'button',
+	            { className: 'btn btn-primary login' },
+	            _react2.default.createElement(
+	              _reactRouter.Link,
+	              { to: '/login' },
+	              'Login'
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'button',
+	            { className: 'btn btn-primary login' },
+	            _react2.default.createElement(
+	              _reactRouter.Link,
+	              { to: '/signup' },
+	              'Sign Up'
+	            )
+	          )
+	        )
+	      )
+	    )
+	  );
+	};
+
+	exports.default = Logo;
+
+/***/ },
+/* 226 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(158);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var Footer = _react2.default.createClass({
+	  displayName: 'Footer',
 
 	  render: function render() {
 	    return _react2.default.createElement(
-	      "div",
-	      null,
+	      'div',
+	      { className: 'footer center-block text-center' },
 	      _react2.default.createElement(
-	        "h1",
-	        { className: "feature" },
-	        "Stack Salaries"
-	      ),
-	      _react2.default.createElement(
-	        "p",
-	        { className: "text-center" },
-	        "An app for software engineers to post and view anonymous salary info based on their stack and location."
+	        'div',
+	        { className: 'row' },
+	        _react2.default.createElement(
+	          'ul',
+	          { className: 'list-inline' },
+	          _react2.default.createElement(
+	            'li',
+	            null,
+	            _react2.default.createElement(
+	              _reactRouter.Link,
+	              { to: '/' },
+	              'About'
+	            ),
+	            ' '
+	          ),
+	          _react2.default.createElement(
+	            'li',
+	            null,
+	            _react2.default.createElement(
+	              _reactRouter.Link,
+	              { to: '/' },
+	              'Jobs'
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'li',
+	            null,
+	            _react2.default.createElement(
+	              _reactRouter.Link,
+	              { to: '/' },
+	              'Team Onix'
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'li',
+	            null,
+	            _react2.default.createElement(
+	              _reactRouter.Link,
+	              { to: '/' },
+	              'Contact'
+	            )
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          { className: 'lead' },
+	          '© 2016 Stack Salaries'
+	        )
 	      )
 	    );
 	  }
 	});
 
-	exports.default = Main;
+	exports.default = Footer;
 
 /***/ },
-/* 225 */
+/* 227 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25449,21 +25652,23 @@ module.exports =
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _jquery = __webpack_require__(226);
+	var _jquery = __webpack_require__(228);
 
 	var _jquery2 = _interopRequireDefault(_jquery);
 
-	var _searchInput = __webpack_require__(227);
+	var _reactRedux = __webpack_require__(229);
 
-	var _searchInput2 = _interopRequireDefault(_searchInput);
+	var _redux = __webpack_require__(236);
 
-	var _reactRouter = __webpack_require__(158);
+	var _actionCreator = __webpack_require__(255);
 
-	var _reactRedux = __webpack_require__(228);
+	var _jobsList = __webpack_require__(256);
 
-	var _redux = __webpack_require__(235);
+	var _jobsList2 = _interopRequireDefault(_jobsList);
 
-	var _actionCreator = __webpack_require__(254);
+	var _search = __webpack_require__(258);
+
+	var _search2 = _interopRequireDefault(_search);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -25471,69 +25676,60 @@ module.exports =
 
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } // Import all required modules
 
-	// import Results from './results';
 
-	// containers are glorfied components - containers have access to redux
-	var Search = function (_React$Component) {
-	  _inherits(Search, _React$Component);
+	// Import all actions & helper methods
 
-	  function Search() {
-	    _classCallCheck(this, Search);
 
-	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Search).call(this));
+	// Import all containers
+
+
+	var Jobs = function (_React$Component) {
+	  _inherits(Jobs, _React$Component);
+
+	  function Jobs(props) {
+	    _classCallCheck(this, Jobs);
+
+	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Jobs).call(this, props));
 
 	    _this.state = {
-	      stack: [],
-	      cityState: "",
-	      salary: {}
+	      jobs: [],
+	      serialized: []
 	    };
 	    return _this;
 	  }
 
-	  _createClass(Search, [{
-	    key: 'findCityState',
-	    value: function findCityState(e) {
-	      this.setState({
-	        cityState: e.target.value
-	      });
+	  _createClass(Jobs, [{
+	    key: 'componentWillMount',
+	    value: function componentWillMount() {
+	      this.getJobs();
 	    }
 	  }, {
-	    key: 'findStack',
-	    value: function findStack(e) {
-	      this.setState({
-	        stack: e.target.value.toLowerCase().split(', ')
-	      });
-	    }
-	  }, {
-	    key: 'redirectToResults',
-	    value: function redirectToResults(search) {
-	      this.props.setSearch(this.state.salary);
-	      this.context.router.push('/results');
-	    }
-	  }, {
-	    key: 'getDatafromServer',
-	    value: function getDatafromServer(e) {
-	      e.preventDefault();
+	    key: 'getJobs',
+	    value: function getJobs() {
 
 	      var self = this;
-	      var cityState = document.getElementById("searchTextField").value.toLowerCase().split(", ");
-	      // Remember to lowercase -- its only not in lowercase now because you input the data in as MEAN
-	      // .toLowerCase()
-	      var data = { stack: this.state.stack, city: cityState[0], state: cityState[1] };
+
+	      // Our query parameters
+	      var query = {
+	        publisher: "5453642953934453",
+	        format: "json",
+	        q: JSON.stringify(this.props.cityState.stack),
+	        l: this.props.cityState.cityForJob + ',\n    ' + this.props.cityState.stateForJob,
+	        v: 2
+	      };
 
 	      _jquery2.default.ajax({
-	        url: "https://localhost:3000/search",
-	        type: "POST",
-	        contentType: "application/json",
-	        data: JSON.stringify(data),
-	        success: function success(results) {
+	        data: query,
+	        dataType: 'jsonp',
+	        type: 'GET',
+	        timeout: 5000,
+	        url: 'http://api.indeed.com/ads/apisearch',
+	        success: function success(result) {
 	          self.setState({
-	            salary: results
+	            jobs: result.results
 	          });
-	          self.props.setCityState({ stack: self.state.stack, cityForJob: cityState[0], stateForJob: cityState[1] });
-	          self.redirectToResults(results);
 	        },
 	        error: function error(err) {
 	          console.log(err);
@@ -25545,24 +25741,22 @@ module.exports =
 	    value: function render() {
 	      return _react2.default.createElement(
 	        'div',
-	        { className: 'search-wrapper' },
-	        _react2.default.createElement(_searchInput2.default, { history: this.props.history, getDatafromServer: this.getDatafromServer.bind(this), findStack: this.findStack.bind(this), findCityState: this.findCityState.bind(this) })
+	        { className: 'row' },
+	        _react2.default.createElement(
+	          'div',
+	          { id: 'jobs' },
+	          _react2.default.createElement(_jobsList2.default, { jobs: this.state.jobs })
+	        )
 	      );
 	    }
 	  }]);
 
-	  return Search;
+	  return Jobs;
 	}(_react2.default.Component);
-
-	;
-
-	Search.contextTypes = {
-	  router: _react2.default.PropTypes.object.isRequired
-	};
 
 	function mapStateToProps(state) {
 	  return {
-	    salary: state.salary
+	    cityState: state.cityState
 	  };
 	}
 
@@ -25570,10 +25764,10 @@ module.exports =
 	  return (0, _redux.bindActionCreators)({ setSearch: _actionCreator.setSearch, setCityState: _actionCreator.setCityState }, dispatch);
 	}
 
-	exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(Search);
+	exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(Jobs);
 
 /***/ },
-/* 226 */
+/* 228 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -35393,46 +35587,7 @@ module.exports =
 
 
 /***/ },
-/* 227 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _react = __webpack_require__(2);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactRouter = __webpack_require__(158);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	var SearchInput = function SearchInput(props) {
-	  return _react2.default.createElement(
-	    'form',
-	    { className: 'flexcontainer', onSubmit: props.getDatafromServer },
-	    _react2.default.createElement(
-	      'div',
-	      { className: 'input-group' },
-	      _react2.default.createElement('span', { className: 'glyphicon glyphicon-search' }),
-	      _react2.default.createElement('input', { type: 'text', className: 'form-control', value: props.stack, onChange: props.findStack, placeholder: 'Add your tech stack separated by commas' }),
-	      _react2.default.createElement('input', { type: 'text', id: 'searchTextField', className: 'city form-control', value: props.cityState, onChange: props.findCityState, placeholder: 'New York, NY' }),
-	      _react2.default.createElement(
-	        'button',
-	        { className: 'btn btn-primary' },
-	        'Search'
-	      )
-	    )
-	  );
-	};
-
-	exports.default = SearchInput;
-
-/***/ },
-/* 228 */
+/* 229 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -35440,11 +35595,11 @@ module.exports =
 	exports.__esModule = true;
 	exports.connect = exports.Provider = undefined;
 
-	var _Provider = __webpack_require__(229);
+	var _Provider = __webpack_require__(230);
 
 	var _Provider2 = _interopRequireDefault(_Provider);
 
-	var _connect = __webpack_require__(232);
+	var _connect = __webpack_require__(233);
 
 	var _connect2 = _interopRequireDefault(_connect);
 
@@ -35454,7 +35609,7 @@ module.exports =
 	exports.connect = _connect2["default"];
 
 /***/ },
-/* 229 */
+/* 230 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -35464,11 +35619,11 @@ module.exports =
 
 	var _react = __webpack_require__(2);
 
-	var _storeShape = __webpack_require__(230);
+	var _storeShape = __webpack_require__(231);
 
 	var _storeShape2 = _interopRequireDefault(_storeShape);
 
-	var _warning = __webpack_require__(231);
+	var _warning = __webpack_require__(232);
 
 	var _warning2 = _interopRequireDefault(_warning);
 
@@ -35537,7 +35692,7 @@ module.exports =
 	};
 
 /***/ },
-/* 230 */
+/* 231 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -35553,7 +35708,7 @@ module.exports =
 	});
 
 /***/ },
-/* 231 */
+/* 232 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -35582,7 +35737,7 @@ module.exports =
 	}
 
 /***/ },
-/* 232 */
+/* 233 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -35594,31 +35749,31 @@ module.exports =
 
 	var _react = __webpack_require__(2);
 
-	var _storeShape = __webpack_require__(230);
+	var _storeShape = __webpack_require__(231);
 
 	var _storeShape2 = _interopRequireDefault(_storeShape);
 
-	var _shallowEqual = __webpack_require__(233);
+	var _shallowEqual = __webpack_require__(234);
 
 	var _shallowEqual2 = _interopRequireDefault(_shallowEqual);
 
-	var _wrapActionCreators = __webpack_require__(234);
+	var _wrapActionCreators = __webpack_require__(235);
 
 	var _wrapActionCreators2 = _interopRequireDefault(_wrapActionCreators);
 
-	var _warning = __webpack_require__(231);
+	var _warning = __webpack_require__(232);
 
 	var _warning2 = _interopRequireDefault(_warning);
 
-	var _isPlainObject = __webpack_require__(248);
+	var _isPlainObject = __webpack_require__(249);
 
 	var _isPlainObject2 = _interopRequireDefault(_isPlainObject);
 
-	var _hoistNonReactStatics = __webpack_require__(252);
+	var _hoistNonReactStatics = __webpack_require__(253);
 
 	var _hoistNonReactStatics2 = _interopRequireDefault(_hoistNonReactStatics);
 
-	var _invariant = __webpack_require__(253);
+	var _invariant = __webpack_require__(254);
 
 	var _invariant2 = _interopRequireDefault(_invariant);
 
@@ -35980,7 +36135,7 @@ module.exports =
 	}
 
 /***/ },
-/* 233 */
+/* 234 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -36011,7 +36166,7 @@ module.exports =
 	}
 
 /***/ },
-/* 234 */
+/* 235 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -36019,7 +36174,7 @@ module.exports =
 	exports.__esModule = true;
 	exports["default"] = wrapActionCreators;
 
-	var _redux = __webpack_require__(235);
+	var _redux = __webpack_require__(236);
 
 	function wrapActionCreators(actionCreators) {
 	  return function (dispatch) {
@@ -36028,7 +36183,7 @@ module.exports =
 	}
 
 /***/ },
-/* 235 */
+/* 236 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -36036,27 +36191,27 @@ module.exports =
 	exports.__esModule = true;
 	exports.compose = exports.applyMiddleware = exports.bindActionCreators = exports.combineReducers = exports.createStore = undefined;
 
-	var _createStore = __webpack_require__(236);
+	var _createStore = __webpack_require__(237);
 
 	var _createStore2 = _interopRequireDefault(_createStore);
 
-	var _combineReducers = __webpack_require__(243);
+	var _combineReducers = __webpack_require__(244);
 
 	var _combineReducers2 = _interopRequireDefault(_combineReducers);
 
-	var _bindActionCreators = __webpack_require__(245);
+	var _bindActionCreators = __webpack_require__(246);
 
 	var _bindActionCreators2 = _interopRequireDefault(_bindActionCreators);
 
-	var _applyMiddleware = __webpack_require__(246);
+	var _applyMiddleware = __webpack_require__(247);
 
 	var _applyMiddleware2 = _interopRequireDefault(_applyMiddleware);
 
-	var _compose = __webpack_require__(247);
+	var _compose = __webpack_require__(248);
 
 	var _compose2 = _interopRequireDefault(_compose);
 
-	var _warning = __webpack_require__(244);
+	var _warning = __webpack_require__(245);
 
 	var _warning2 = _interopRequireDefault(_warning);
 
@@ -36079,7 +36234,7 @@ module.exports =
 	exports.compose = _compose2["default"];
 
 /***/ },
-/* 236 */
+/* 237 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -36088,11 +36243,11 @@ module.exports =
 	exports.ActionTypes = undefined;
 	exports["default"] = createStore;
 
-	var _isPlainObject = __webpack_require__(237);
+	var _isPlainObject = __webpack_require__(238);
 
 	var _isPlainObject2 = _interopRequireDefault(_isPlainObject);
 
-	var _symbolObservable = __webpack_require__(241);
+	var _symbolObservable = __webpack_require__(242);
 
 	var _symbolObservable2 = _interopRequireDefault(_symbolObservable);
 
@@ -36346,12 +36501,12 @@ module.exports =
 	}
 
 /***/ },
-/* 237 */
+/* 238 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var getPrototype = __webpack_require__(238),
-	    isHostObject = __webpack_require__(239),
-	    isObjectLike = __webpack_require__(240);
+	var getPrototype = __webpack_require__(239),
+	    isHostObject = __webpack_require__(240),
+	    isObjectLike = __webpack_require__(241);
 
 	/** `Object#toString` result references. */
 	var objectTag = '[object Object]';
@@ -36422,7 +36577,7 @@ module.exports =
 
 
 /***/ },
-/* 238 */
+/* 239 */
 /***/ function(module, exports) {
 
 	/* Built-in method references for those with the same name as other `lodash` methods. */
@@ -36443,7 +36598,7 @@ module.exports =
 
 
 /***/ },
-/* 239 */
+/* 240 */
 /***/ function(module, exports) {
 
 	/**
@@ -36469,7 +36624,7 @@ module.exports =
 
 
 /***/ },
-/* 240 */
+/* 241 */
 /***/ function(module, exports) {
 
 	/**
@@ -36504,17 +36659,17 @@ module.exports =
 
 
 /***/ },
-/* 241 */
+/* 242 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* global window */
 	'use strict';
 
-	module.exports = __webpack_require__(242)(global || window || this);
+	module.exports = __webpack_require__(243)(global || window || this);
 
 
 /***/ },
-/* 242 */
+/* 243 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -36539,7 +36694,7 @@ module.exports =
 
 
 /***/ },
-/* 243 */
+/* 244 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -36547,13 +36702,13 @@ module.exports =
 	exports.__esModule = true;
 	exports["default"] = combineReducers;
 
-	var _createStore = __webpack_require__(236);
+	var _createStore = __webpack_require__(237);
 
-	var _isPlainObject = __webpack_require__(237);
+	var _isPlainObject = __webpack_require__(238);
 
 	var _isPlainObject2 = _interopRequireDefault(_isPlainObject);
 
-	var _warning = __webpack_require__(244);
+	var _warning = __webpack_require__(245);
 
 	var _warning2 = _interopRequireDefault(_warning);
 
@@ -36671,7 +36826,7 @@ module.exports =
 	}
 
 /***/ },
-/* 244 */
+/* 245 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -36701,7 +36856,7 @@ module.exports =
 	}
 
 /***/ },
-/* 245 */
+/* 246 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -36757,7 +36912,7 @@ module.exports =
 	}
 
 /***/ },
-/* 246 */
+/* 247 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -36768,7 +36923,7 @@ module.exports =
 
 	exports["default"] = applyMiddleware;
 
-	var _compose = __webpack_require__(247);
+	var _compose = __webpack_require__(248);
 
 	var _compose2 = _interopRequireDefault(_compose);
 
@@ -36820,7 +36975,7 @@ module.exports =
 	}
 
 /***/ },
-/* 247 */
+/* 248 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -36865,12 +37020,12 @@ module.exports =
 	}
 
 /***/ },
-/* 248 */
+/* 249 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var getPrototype = __webpack_require__(249),
-	    isHostObject = __webpack_require__(250),
-	    isObjectLike = __webpack_require__(251);
+	var getPrototype = __webpack_require__(250),
+	    isHostObject = __webpack_require__(251),
+	    isObjectLike = __webpack_require__(252);
 
 	/** `Object#toString` result references. */
 	var objectTag = '[object Object]';
@@ -36941,7 +37096,7 @@ module.exports =
 
 
 /***/ },
-/* 249 */
+/* 250 */
 /***/ function(module, exports) {
 
 	/* Built-in method references for those with the same name as other `lodash` methods. */
@@ -36962,7 +37117,7 @@ module.exports =
 
 
 /***/ },
-/* 250 */
+/* 251 */
 /***/ function(module, exports) {
 
 	/**
@@ -36988,7 +37143,7 @@ module.exports =
 
 
 /***/ },
-/* 251 */
+/* 252 */
 /***/ function(module, exports) {
 
 	/**
@@ -37023,7 +37178,7 @@ module.exports =
 
 
 /***/ },
-/* 252 */
+/* 253 */
 /***/ function(module, exports) {
 
 	/**
@@ -37079,7 +37234,7 @@ module.exports =
 
 
 /***/ },
-/* 253 */
+/* 254 */
 /***/ function(module, exports) {
 
 	/**
@@ -37138,7 +37293,7 @@ module.exports =
 
 
 /***/ },
-/* 254 */
+/* 255 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -37149,30 +37304,28 @@ module.exports =
 	exports.setSearch = setSearch;
 	exports.setCityState = setCityState;
 	exports.setUserInfo = setUserInfo;
+	// These constants are used in different reducers
+	// Using a constant ensures you'll only need to change
+	// a string value in one place - easier to maintain
 	var SET_SEARCH = exports.SET_SEARCH = 'SET_SEARCH';
 	var SET_USERINFO = exports.SET_USERINFO = 'SET_USERINFO';
 	var SET_CITYSTATE = exports.SET_CITYSTATE = 'SET_CITYSTATE';
 
 	function setSearch(searchInput) {
-	  // console.log("Search Obj", searchInput);
 	  return {
 	    type: SET_SEARCH,
 	    payload: searchInput
 	  };
-	  // console.log("OUR ACTION ", JSON.stringify(results));
 	}
 
 	function setCityState(cityState) {
-	  // console.log("Search Obj", searchInput);
 	  return {
 	    type: SET_CITYSTATE,
 	    payload: cityState
 	  };
-	  // console.log("OUR ACTION ", JSON.stringify(results));
 	}
 
 	function setUserInfo(userData) {
-	  // console.log("setUserInfo", userData);
 	  return {
 	    type: SET_USERINFO,
 	    payload: userData
@@ -37180,7 +37333,7 @@ module.exports =
 	}
 
 /***/ },
-/* 255 */
+/* 256 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -37193,44 +37346,26 @@ module.exports =
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _jobsItem = __webpack_require__(257);
+
+	var _jobsItem2 = _interopRequireDefault(_jobsItem);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var Cloud = _react2.default.createClass({
-	  displayName: 'Cloud',
-
-	  render: function render() {
+	var JobsList = function JobsList(props) {
+	  if (props.jobs) {
+	    return _react2.default.createElement(
+	      'div',
+	      null,
+	      props.jobs.map(function (job) {
+	        return _react2.default.createElement(_jobsItem2.default, { key: job.jobkey, job: job });
+	      })
+	    );
+	  } else {
 	    return _react2.default.createElement('div', null);
 	  }
-	});
-
-	exports.default = Cloud;
-
-/***/ },
-/* 256 */
-/***/ function(module, exports) {
-
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	exports.loggedIn = loggedIn;
-	exports.logOut = logOut;
-	exports.retrieveToken = retrieveToken;
-	// Return a true/false whether localStorage token exists
-	function loggedIn() {
-	  return !!localStorage.token;
-	}
-
-	// Deletes the localStorage token
-	// New tokens are sent every time a user logs in
-	function logOut() {
-	  delete localStorage.token;
-	}
-
-	function retrieveToken() {
-	  return localStorage.token;
-	}
+	};
+	exports.default = JobsList;
 
 /***/ },
 /* 257 */
@@ -37242,118 +37377,71 @@ module.exports =
 	  value: true
 	});
 
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
 	var _react = __webpack_require__(2);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _login = __webpack_require__(223);
+	var _jquery = __webpack_require__(228);
 
-	var _login2 = _interopRequireDefault(_login);
-
-	var _logo = __webpack_require__(258);
-
-	var _logo2 = _interopRequireDefault(_logo);
-
-	var _results = __webpack_require__(259);
-
-	var _results2 = _interopRequireDefault(_results);
-
-	var _search = __webpack_require__(225);
-
-	var _search2 = _interopRequireDefault(_search);
-
-	var _footer = __webpack_require__(261);
-
-	var _footer2 = _interopRequireDefault(_footer);
-
-	var _jobs = __webpack_require__(262);
-
-	var _jobs2 = _interopRequireDefault(_jobs);
-
-	var _advancedSearch = __webpack_require__(265);
-
-	var _advancedSearch2 = _interopRequireDefault(_advancedSearch);
-
-	var _reactRouter = __webpack_require__(158);
-
-	var _auth = __webpack_require__(256);
+	var _jquery2 = _interopRequireDefault(_jquery);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	var JobsItem = function JobsItem(props) {
+	  // API sends description back without escaping tags
+	  // A quick reg ex to sanitize the description
+	  var description = props.job.snippet.replace(/<\/?[^>]+(>|$)/g, "");
 
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var Stats = function (_React$Component) {
-	  _inherits(Stats, _React$Component);
-
-	  function Stats() {
-	    _classCallCheck(this, Stats);
-
-	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Stats).call(this));
-
-	    _this.state = {
-	      loggedIn: (0, _auth.loggedIn)()
-	    };
-	    return _this;
-	  }
-
-	  _createClass(Stats, [{
-	    key: 'componentDidMount',
-	    value: function componentDidMount() {}
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(
+	  return _react2.default.createElement(
+	    'div',
+	    { className: 'col-md-4', key: props.job.jobkey },
+	    _react2.default.createElement(
+	      'div',
+	      { className: 'panel panel-default' },
+	      _react2.default.createElement(
 	        'div',
-	        { className: 'container results' },
+	        { className: 'panel-heading' },
 	        _react2.default.createElement(
-	          'nav',
-	          { id: 'resultNav', className: 'navbar navbar-default navbar-fixed-top' },
-	          _react2.default.createElement(_logo2.default, { loggedIn: this.state.loggedIn })
+	          'div',
+	          { className: 'panel-title text-center' },
+	          props.job.jobtitle
 	        ),
 	        _react2.default.createElement(
 	          'div',
-	          null,
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'd3' },
-	            _react2.default.createElement(_results2.default, { history: this.props.history })
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'inner-search' },
-	            _react2.default.createElement(
-	              'p',
-	              { className: 'lead text-center' },
-	              'Another Search?'
-	            ),
-	            _react2.default.createElement(_search2.default, null)
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            null,
-	            _react2.default.createElement(
-	              'p',
-	              { className: 'lead text-center' },
-	              'Related Jobs in Your Area'
-	            ),
-	            _react2.default.createElement(_jobs2.default, null)
-	          ),
-	          _react2.default.createElement(_footer2.default, null)
+	          { className: 'text-center' },
+	          '@ ',
+	          props.job.company
 	        )
-	      );
-	    }
-	  }]);
-
-	  return Stats;
-	}(_react2.default.Component);
-
-	exports.default = Stats;
+	      ),
+	      _react2.default.createElement(
+	        'div',
+	        { className: 'panel-body' },
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          description
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          { className: 'text-center' },
+	          _react2.default.createElement(
+	            'a',
+	            { href: props.job.url },
+	            'Click to Read More'
+	          )
+	        )
+	      ),
+	      _react2.default.createElement(
+	        'div',
+	        { className: 'panel-footer text-center' },
+	        _react2.default.createElement('span', { className: 'glyphicon glyphicon-time' }),
+	        ' ',
+	        props.job.date
+	      )
+	    )
+	  );
+	};
+	exports.default = JobsItem;
 
 /***/ },
 /* 258 */
@@ -37365,6 +37453,166 @@ module.exports =
 	  value: true
 	});
 
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _jquery = __webpack_require__(228);
+
+	var _jquery2 = _interopRequireDefault(_jquery);
+
+	var _reactRouter = __webpack_require__(158);
+
+	var _reactRedux = __webpack_require__(229);
+
+	var _redux = __webpack_require__(236);
+
+	var _actionCreator = __webpack_require__(255);
+
+	var _searchInput = __webpack_require__(259);
+
+	var _searchInput2 = _interopRequireDefault(_searchInput);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } // Import all required modules
+
+
+	// Import all actions & helper methods
+
+
+	// Import all needed components
+
+
+	var Search = function (_React$Component) {
+	  _inherits(Search, _React$Component);
+
+	  function Search() {
+	    _classCallCheck(this, Search);
+
+	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Search).call(this));
+
+	    _this.state = {
+	      stack: [],
+	      cityState: "",
+	      salary: {}
+	    };
+
+	    _this.getDatafromServer = _this.getDatafromServer.bind(_this);
+	    _this.findStack = _this.findStack.bind(_this);
+	    _this.findCityState = _this.findCityState.bind(_this);
+	    return _this;
+	  }
+
+	  _createClass(Search, [{
+	    key: 'findCityState',
+	    value: function findCityState(e) {
+	      this.setState({
+	        cityState: e.target.value
+	      });
+	    }
+	  }, {
+	    key: 'findStack',
+	    value: function findStack(e) {
+	      this.setState({
+	        stack: e.target.value.toLowerCase().split(', ')
+	      });
+	    }
+	  }, {
+	    key: 'redirectToResults',
+	    value: function redirectToResults(search) {
+	      this.props.setSearch(this.state.salary);
+	      this.context.router.push('/results');
+	    }
+	  }, {
+	    key: 'getDatafromServer',
+	    value: function getDatafromServer(e) {
+	      e.preventDefault();
+
+	      var self = this;
+	      var cityState = document.getElementById("searchTextField").value.toLowerCase().split(", ");
+	      // Remember to lowercase -- its only not in lowercase now because you input the data in as MEAN
+	      // .toLowerCase()
+	      var data = {
+	        stack: this.state.stack,
+	        city: cityState[0],
+	        state: cityState[1]
+	      };
+
+	      _jquery2.default.ajax({
+	        url: "http://localhost:3000/search",
+	        type: "POST",
+	        contentType: "application/json",
+	        data: JSON.stringify(data),
+	        success: function success(results) {
+	          self.setState({
+	            salary: results
+	          });
+	          self.props.setCityState({
+	            stack: self.state.stack,
+	            cityForJob: cityState[0],
+	            stateForJob: cityState[1]
+	          });
+	          self.redirectToResults(results);
+	        },
+	        error: function error(err) {
+	          console.log(err);
+	        }
+	      });
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'search-wrapper' },
+	        _react2.default.createElement(_searchInput2.default, {
+	          history: this.props.history,
+	          getDatafromServer: this.getDatafromServer,
+	          findStack: this.findStack,
+	          findCityState: this.findCityState
+	        })
+	      );
+	    }
+	  }]);
+
+	  return Search;
+	}(_react2.default.Component);
+
+	;
+
+	Search.contextTypes = {
+	  router: _react2.default.PropTypes.object.isRequired
+	};
+
+	function mapStateToProps(state) {
+	  return {
+	    salary: state.salary
+	  };
+	}
+
+	function mapDispatchToProps(dispatch) {
+	  return (0, _redux.bindActionCreators)({ setSearch: _actionCreator.setSearch, setCityState: _actionCreator.setCityState }, dispatch);
+	}
+
+	exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(Search);
+
+/***/ },
+/* 259 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
 	var _react = __webpack_require__(2);
 
 	var _react2 = _interopRequireDefault(_react);
@@ -37373,91 +37621,42 @@ module.exports =
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var Logo = function Logo(props) {
-	  // console.log(props);
+	var SearchInput = function SearchInput(props) {
 	  return _react2.default.createElement(
-	    'div',
-	    null,
+	    'form',
+	    { className: 'flexcontainer', onSubmit: props.getDatafromServer },
 	    _react2.default.createElement(
 	      'div',
-	      { className: 'row logo-headline' },
+	      { className: 'input-group' },
+	      _react2.default.createElement('span', { className: 'glyphicon glyphicon-search' }),
+	      _react2.default.createElement('input', {
+	        type: 'text',
+	        className: 'form-control',
+	        value: props.stack,
+	        onChange: props.findStack,
+	        placeholder: 'Add your tech stack separated by commas'
+	      }),
+	      _react2.default.createElement('input', {
+	        type: 'text',
+	        id: 'searchTextField',
+	        className: 'city form-control',
+	        value: props.cityState,
+	        onChange: props.findCityState,
+	        placeholder: 'New York, NY'
+	      }),
 	      _react2.default.createElement(
-	        'div',
-	        { className: 'left' },
-	        _react2.default.createElement(
-	          _reactRouter.Link,
-	          { to: '/' },
-	          _react2.default.createElement(
-	            'h3',
-	            { className: 'text-left' },
-	            'STACK SALARIES'
-	          )
-	        )
-	      ),
-	      _react2.default.createElement(
-	        'div',
-	        { className: 'right' },
-	        props.loggedIn ? _react2.default.createElement(
-	          'div',
-	          null,
-	          _react2.default.createElement(
-	            'button',
-	            { className: 'btn btn-primary login' },
-	            _react2.default.createElement(
-	              _reactRouter.Link,
-	              { to: '/dashboard' },
-	              'Dashboard'
-	            )
-	          ),
-	          _react2.default.createElement(
-	            'button',
-	            { className: 'btn btn-primary login' },
-	            _react2.default.createElement(
-	              _reactRouter.Link,
-	              { to: '/advancedsearch' },
-	              'Advanced Search'
-	            )
-	          ),
-	          _react2.default.createElement(
-	            'button',
-	            { className: 'btn btn-primary login' },
-	            _react2.default.createElement(
-	              _reactRouter.Link,
-	              { to: '/logout' },
-	              'Log Out'
-	            )
-	          )
-	        ) : _react2.default.createElement(
-	          'div',
-	          null,
-	          _react2.default.createElement(
-	            'button',
-	            { className: 'btn btn-primary login' },
-	            _react2.default.createElement(
-	              _reactRouter.Link,
-	              { to: '/login' },
-	              'Login'
-	            )
-	          ),
-	          _react2.default.createElement(
-	            'button',
-	            { className: 'btn btn-primary login' },
-	            _react2.default.createElement(
-	              _reactRouter.Link,
-	              { to: '/signup' },
-	              'Sign Up'
-	            )
-	          )
-	        )
+	        'button',
+	        { className: 'btn btn-primary' },
+	        'Search'
 	      )
 	    )
 	  );
 	};
 
-	exports.default = Logo;
+	exports.default = SearchInput;
 
 /***/ },
-/* 259 */
+/* 260 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -37472,21 +37671,21 @@ module.exports =
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _d = __webpack_require__(260);
+	var _d = __webpack_require__(261);
 
 	var _d2 = _interopRequireDefault(_d);
 
 	var _reactRouter = __webpack_require__(158);
 
-	var _reactRedux = __webpack_require__(228);
+	var _reactRedux = __webpack_require__(229);
 
-	var _search = __webpack_require__(225);
+	var _redux = __webpack_require__(236);
+
+	var _actionCreator = __webpack_require__(255);
+
+	var _search = __webpack_require__(258);
 
 	var _search2 = _interopRequireDefault(_search);
-
-	var _redux = __webpack_require__(235);
-
-	var _actionCreator = __webpack_require__(254);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -37494,12 +37693,18 @@ module.exports =
 
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } // Import all required modules
+
+
+	// Import all actions & helper methods
+
+
+	// Import all containers
+
 
 	var SetIntervalMixin = {
 	  componentWillMount: function componentWillMount() {
 	    this.intervals = [];
-	    // console.log("COMPONENT " + JSON.stringify(this.props));
 	  },
 	  setInterval: function (_setInterval) {
 	    function setInterval() {
@@ -37721,7 +37926,7 @@ module.exports =
 	exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(Results);
 
 /***/ },
-/* 260 */
+/* 261 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;!function() {
@@ -47280,87 +47485,6 @@ module.exports =
 	}();
 
 /***/ },
-/* 261 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _react = __webpack_require__(2);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactRouter = __webpack_require__(158);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	var Footer = _react2.default.createClass({
-	  displayName: 'Footer',
-
-	  render: function render() {
-	    return _react2.default.createElement(
-	      'div',
-	      { className: 'footer center-block text-center' },
-	      _react2.default.createElement(
-	        'div',
-	        { className: 'row' },
-	        _react2.default.createElement(
-	          'ul',
-	          { className: 'list-inline' },
-	          _react2.default.createElement(
-	            'li',
-	            null,
-	            _react2.default.createElement(
-	              _reactRouter.Link,
-	              { to: '/' },
-	              'About'
-	            ),
-	            ' '
-	          ),
-	          _react2.default.createElement(
-	            'li',
-	            null,
-	            _react2.default.createElement(
-	              _reactRouter.Link,
-	              { to: '/' },
-	              'Jobs'
-	            )
-	          ),
-	          _react2.default.createElement(
-	            'li',
-	            null,
-	            _react2.default.createElement(
-	              _reactRouter.Link,
-	              { to: '/' },
-	              'Team Onix'
-	            )
-	          ),
-	          _react2.default.createElement(
-	            'li',
-	            null,
-	            _react2.default.createElement(
-	              _reactRouter.Link,
-	              { to: '/' },
-	              'Contact'
-	            )
-	          )
-	        ),
-	        _react2.default.createElement(
-	          'p',
-	          { className: 'lead' },
-	          '© 2016 Stack Salaries'
-	        )
-	      )
-	    );
-	  }
-	});
-
-	exports.default = Footer;
-
-/***/ },
 /* 262 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -47376,256 +47500,25 @@ module.exports =
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _jquery = __webpack_require__(226);
-
-	var _jquery2 = _interopRequireDefault(_jquery);
-
-	var _jobsList = __webpack_require__(263);
-
-	var _jobsList2 = _interopRequireDefault(_jobsList);
-
-	var _reactRedux = __webpack_require__(228);
-
-	var _search = __webpack_require__(225);
-
-	var _search2 = _interopRequireDefault(_search);
-
-	var _redux = __webpack_require__(235);
-
-	var _actionCreator = __webpack_require__(254);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var Jobs = function (_React$Component) {
-	  _inherits(Jobs, _React$Component);
-
-	  function Jobs(props) {
-	    _classCallCheck(this, Jobs);
-
-	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Jobs).call(this, props));
-
-	    _this.state = {
-	      jobs: [],
-	      serialized: []
-	    };
-	    return _this;
-	  }
-
-	  _createClass(Jobs, [{
-	    key: 'componentWillMount',
-	    value: function componentWillMount() {
-	      this.getJobs();
-	    }
-	  }, {
-	    key: 'getJobs',
-	    value: function getJobs() {
-
-	      var self = this;
-
-	      // console.log(this.props.cityState);
-
-	      // Our query parameters
-	      var query = { publisher: "5453642953934453", format: "json", q: JSON.stringify(this.props.cityState.stack), l: this.props.cityState.cityForJob + ', ' + this.props.cityState.stateForJob, v: 2 };
-
-	      _jquery2.default.ajax({
-	        data: query,
-	        dataType: 'jsonp',
-	        type: 'GET',
-	        timeout: 5000,
-	        url: 'http://api.indeed.com/ads/apisearch',
-	        success: function success(result) {
-	          self.setState({
-	            jobs: result.results
-	          });
-	        },
-	        error: function error(err) {
-	          console.log(err);
-	        }
-	      });
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(
-	        'div',
-	        { className: 'row' },
-	        _react2.default.createElement(
-	          'div',
-	          { id: 'jobs' },
-	          _react2.default.createElement(_jobsList2.default, { jobs: this.state.jobs })
-	        )
-	      );
-	    }
-	  }]);
-
-	  return Jobs;
-	}(_react2.default.Component);
-
-	function mapStateToProps(state) {
-	  return {
-	    cityState: state.cityState
-	  };
-	}
-
-	function mapDispatchToProps(dispatch) {
-	  return (0, _redux.bindActionCreators)({ setSearch: _actionCreator.setSearch, setCityState: _actionCreator.setCityState }, dispatch);
-	}
-
-	exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(Jobs);
-	// export default Results;
-
-/***/ },
-/* 263 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _react = __webpack_require__(2);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _jobsItem = __webpack_require__(264);
-
-	var _jobsItem2 = _interopRequireDefault(_jobsItem);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	var JobsList = function JobsList(props) {
-	  if (props.jobs) {
-	    return _react2.default.createElement(
-	      'div',
-	      null,
-	      props.jobs.map(function (job) {
-	        return _react2.default.createElement(_jobsItem2.default, { key: job.jobkey, job: job });
-	      })
-	    );
-	  } else {
-	    return _react2.default.createElement('div', null);
-	  }
-	};
-	exports.default = JobsList;
-
-/***/ },
-/* 264 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _react = __webpack_require__(2);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _jquery = __webpack_require__(226);
-
-	var _jquery2 = _interopRequireDefault(_jquery);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	var JobsItem = function JobsItem(props) {
-	  // API sends description back without escaping tags
-	  // A quick reg ex to sanitize the description
-	  var description = props.job.snippet.replace(/<\/?[^>]+(>|$)/g, "");
-
-	  return _react2.default.createElement(
-	    'div',
-	    { className: 'col-md-4', key: props.job.jobkey },
-	    _react2.default.createElement(
-	      'div',
-	      { className: 'panel panel-default' },
-	      _react2.default.createElement(
-	        'div',
-	        { className: 'panel-heading' },
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'panel-title text-center' },
-	          props.job.jobtitle
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'text-center' },
-	          '@ ',
-	          props.job.company
-	        )
-	      ),
-	      _react2.default.createElement(
-	        'div',
-	        { className: 'panel-body' },
-	        _react2.default.createElement(
-	          'p',
-	          null,
-	          description
-	        ),
-	        _react2.default.createElement(
-	          'p',
-	          { className: 'text-center' },
-	          _react2.default.createElement(
-	            'a',
-	            { href: props.job.url },
-	            'Click to Read More'
-	          )
-	        )
-	      ),
-	      _react2.default.createElement(
-	        'div',
-	        { className: 'panel-footer text-center' },
-	        _react2.default.createElement('span', { className: 'glyphicon glyphicon-time' }),
-	        ' ',
-	        props.job.date
-	      )
-	    )
-	  );
-	};
-	exports.default = JobsItem;
-
-/***/ },
-/* 265 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(2);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _jquery = __webpack_require__(226);
+	var _jquery = __webpack_require__(228);
 
 	var _jquery2 = _interopRequireDefault(_jquery);
 
 	var _reactRouter = __webpack_require__(158);
 
-	var _advanceSearchInput = __webpack_require__(266);
+	var _reactRedux = __webpack_require__(229);
+
+	var _redux = __webpack_require__(236);
+
+	var _actionCreator = __webpack_require__(255);
+
+	var _auth = __webpack_require__(221);
+
+	var _advanceSearchInput = __webpack_require__(263);
 
 	var _advanceSearchInput2 = _interopRequireDefault(_advanceSearchInput);
 
-	var _reactRedux = __webpack_require__(228);
-
-	var _redux = __webpack_require__(235);
-
-	var _actionCreator = __webpack_require__(254);
-
-	var _auth = __webpack_require__(256);
-
-	var _logo = __webpack_require__(258);
+	var _logo = __webpack_require__(225);
 
 	var _logo2 = _interopRequireDefault(_logo);
 
@@ -47635,7 +47528,14 @@ module.exports =
 
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } // Import all required modules
+
+
+	// Import all actions & helper methods
+
+
+	// Import all needed components
+
 
 	var AdvancedSearch = function (_React$Component) {
 	  _inherits(AdvancedSearch, _React$Component);
@@ -47655,6 +47555,15 @@ module.exports =
 	      salary: {},
 	      loggedIn: (0, _auth.loggedIn)()
 	    };
+
+	    // Assign bindings to avoid cluttering the render method
+	    _this.GetAdvancedSearchData = _this.GetAdvancedSearchData.bind(_this);
+	    _this.findStack = _this.findStack.bind(_this);
+	    _this.findCity = _this.findCity.bind(_this);
+	    _this.findState = _this.findState.bind(_this);
+	    _this.findEducation = _this.findEducation.bind(_this);
+	    _this.findGender = _this.findGender.bind(_this);
+	    _this.findExperience = _this.findExperience.bind(_this);
 	    return _this;
 	  }
 
@@ -47723,7 +47632,7 @@ module.exports =
 	      };
 
 	      _jquery2.default.ajax({
-	        url: "https://stack-salaries.herokuapp.com/search",
+	        url: "http://localhost:3000/search",
 	        type: "POST",
 	        contentType: "application/json",
 	        data: JSON.stringify(data),
@@ -47760,7 +47669,15 @@ module.exports =
 	              null,
 	              'Advance Search'
 	            ),
-	            _react2.default.createElement(_advanceSearchInput2.default, { GetAdvancedSearchData: this.GetAdvancedSearchData.bind(this), findStack: this.findStack.bind(this), findCity: this.findCity.bind(this), findState: this.findState.bind(this), findEducation: this.findEducation.bind(this), findGender: this.findGender.bind(this), findExperience: this.findExperience.bind(this) })
+	            _react2.default.createElement(_advanceSearchInput2.default, {
+	              GetAdvancedSearchData: this.GetAdvancedSearchData,
+	              findStack: this.findStack,
+	              findCity: this.findCity,
+	              findState: this.findState,
+	              findEducation: this.findEducation,
+	              findGender: this.findGender,
+	              findExperience: this.findExperience
+	            })
 	          )
 	        )
 	      );
@@ -47789,7 +47706,7 @@ module.exports =
 	exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(AdvancedSearch);
 
 /***/ },
-/* 266 */
+/* 263 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -47913,7 +47830,7 @@ module.exports =
 	exports.default = AdvancedSearchInput;
 
 /***/ },
-/* 267 */
+/* 264 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -47928,33 +47845,9 @@ module.exports =
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _jquery = __webpack_require__(226);
-
-	var _jquery2 = _interopRequireDefault(_jquery);
-
-	var _loginInput = __webpack_require__(268);
-
-	var _loginInput2 = _interopRequireDefault(_loginInput);
-
-	var _login = __webpack_require__(223);
-
-	var _login2 = _interopRequireDefault(_login);
-
 	var _reactRouter = __webpack_require__(158);
 
-	var _advancedSearch = __webpack_require__(265);
-
-	var _advancedSearch2 = _interopRequireDefault(_advancedSearch);
-
-	var _flash = __webpack_require__(269);
-
-	var _flash2 = _interopRequireDefault(_flash);
-
-	var _reactRedux = __webpack_require__(228);
-
-	var _redux = __webpack_require__(235);
-
-	var _actionCreator = __webpack_require__(254);
+	var _auth = __webpack_require__(221);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -47964,109 +47857,142 @@ module.exports =
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var LoginForm = function (_React$Component) {
-	  _inherits(LoginForm, _React$Component);
+	var Logout = function (_React$Component) {
+	  _inherits(Logout, _React$Component);
 
-	  function LoginForm() {
-	    _classCallCheck(this, LoginForm);
+	  function Logout() {
+	    _classCallCheck(this, Logout);
 
-	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(LoginForm).call(this));
-
-	    _this.state = {
-	      email: "",
-	      password: "",
-	      authToken: null,
-	      hasError: false,
-	      errorType: "",
-	      errorMessage: ""
-	    };
-	    return _this;
+	    return _possibleConstructorReturn(this, Object.getPrototypeOf(Logout).call(this));
 	  }
 
-	  _createClass(LoginForm, [{
+	  _createClass(Logout, [{
 	    key: 'componentWillMount',
 	    value: function componentWillMount() {
-	      // console.log("You're here!");
-	    }
-	  }, {
-	    key: 'changeUser',
-	    value: function changeUser(e) {
-	      this.setState({
-	        email: e.target.value
-	      });
-	    }
-	  }, {
-	    key: 'changePassword',
-	    value: function changePassword(e) {
-	      this.setState({
-	        password: e.target.value
-	      });
-	    }
-	  }, {
-	    key: 'redirectToDashboard',
-	    value: function redirectToDashboard(userData) {
-	      if (userData.id) {
-	        this.props.setUserInfo(userData);
-	        this.context.router.push('/dashboard');
-	      } else {
-	        this.setState({
-	          hasError: true,
-	          errorType: "alert alert-danger",
-	          errorMessage: "Please check your email and password and try again!"
-	        });
-	      }
-	    }
-	  }, {
-	    key: 'loginToServer',
-	    value: function loginToServer(e) {
-	      e.preventDefault();
-
-	      var data = { email: this.state.email, password: this.state.password };
-
-	      var self = this;
-
-	      _jquery2.default.ajax({
-	        url: "https://localhost:3000/signin",
-	        type: "POST",
-	        contentType: "application/json",
-	        data: JSON.stringify(data),
-	        success: function success(data) {
-	          localStorage.setItem('token', data.token), self.setState({
-	            authToken: data.token
-	          });
-	          self.redirectToDashboard(data.user);
-	        },
-	        error: function error(err) {
-	          self.redirectToDashboard(err);
-	        }
-	      });
+	      (0, _auth.logOut)();
+	      this.context.router.push('/');
 	    }
 	  }, {
 	    key: 'render',
 	    value: function render() {
+	      return _react2.default.createElement('div', null);
+	    }
+	  }]);
 
-	      var toggle = "hide";
-	      if (this.state.hasError) {
-	        toggle = "";
-	      }
+	  return Logout;
+	}(_react2.default.Component);
 
+	Logout.contextTypes = {
+	  router: _react2.default.PropTypes.object.isRequired
+	};
+
+	exports.default = Logout;
+
+/***/ },
+/* 265 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(158);
+
+	var _reactRedux = __webpack_require__(229);
+
+	var _redux = __webpack_require__(236);
+
+	var _auth = __webpack_require__(221);
+
+	var _actionCreator = __webpack_require__(255);
+
+	var _login = __webpack_require__(224);
+
+	var _login2 = _interopRequireDefault(_login);
+
+	var _main = __webpack_require__(266);
+
+	var _main2 = _interopRequireDefault(_main);
+
+	var _cloud = __webpack_require__(267);
+
+	var _cloud2 = _interopRequireDefault(_cloud);
+
+	var _search = __webpack_require__(258);
+
+	var _search2 = _interopRequireDefault(_search);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } // Import all required modules
+
+
+	// Import all actions & helper methods
+
+
+	// Import all needed components
+
+
+	// Import all containers
+
+
+	var App = function (_React$Component) {
+	  _inherits(App, _React$Component);
+
+	  function App() {
+	    _classCallCheck(this, App);
+
+	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(App).call(this));
+
+	    _this.state = {
+	      loggedIn: (0, _auth.loggedIn)()
+	    };
+	    return _this;
+	  }
+
+	  _createClass(App, [{
+	    key: 'render',
+	    value: function render() {
 	      return _react2.default.createElement(
 	        'div',
-	        { className: 'loginMain' },
+	        null,
 	        _react2.default.createElement(
 	          'div',
-	          { className: toggle },
-	          _react2.default.createElement(_flash2.default, { type: this.state.errorType, message: this.state.errorMessage })
+	          { id: 'main', className: 'front' },
+	          _react2.default.createElement(
+	            'div',
+	            null,
+	            _react2.default.createElement(
+	              'nav',
+	              { className: 'navbar navbar-default navbar-fixed-top' },
+	              _react2.default.createElement(_login2.default, { loggedIn: this.state.loggedIn, userInfo: this.props.userInfo })
+	            ),
+	            _react2.default.createElement(_main2.default, null),
+	            _react2.default.createElement(_search2.default, { history: this.props.history }),
+	            _react2.default.createElement(_cloud2.default, null)
+	          )
 	        ),
-	        _react2.default.createElement(_loginInput2.default, { history: this.props.history, loginToServer: this.loginToServer.bind(this), changeUser: this.changeUser.bind(this), changePassword: this.changePassword.bind(this) })
+	        _react2.default.createElement('div', { className: 'art' })
 	      );
 	    }
 	  }]);
 
-	  return LoginForm;
+	  return App;
 	}(_react2.default.Component);
 
-	LoginForm.contextTypes = {
+	App.contextTypes = {
 	  router: _react2.default.PropTypes.object.isRequired
 	};
 
@@ -48080,7 +48006,72 @@ module.exports =
 	  return (0, _redux.bindActionCreators)({ setUserInfo: _actionCreator.setUserInfo }, dispatch);
 	}
 
-	exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(LoginForm);
+	exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(App);
+
+/***/ },
+/* 266 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var Main = _react2.default.createClass({
+	  displayName: "Main",
+
+	  render: function render() {
+	    return _react2.default.createElement(
+	      "div",
+	      null,
+	      _react2.default.createElement(
+	        "h1",
+	        { className: "feature" },
+	        "Stack Salaries"
+	      ),
+	      _react2.default.createElement(
+	        "p",
+	        { className: "text-center" },
+	        "An app for software engineers to post and view anonymous salary info based on their stack and location."
+	      )
+	    );
+	  }
+	});
+
+	exports.default = Main;
+
+/***/ },
+/* 267 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var Cloud = _react2.default.createClass({
+	  displayName: 'Cloud',
+
+	  render: function render() {
+	    return _react2.default.createElement('div', null);
+	  }
+	});
+
+	exports.default = Cloud;
 
 /***/ },
 /* 268 */
@@ -48092,506 +48083,52 @@ module.exports =
 	  value: true
 	});
 
-	var _react = __webpack_require__(2);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactRouter = __webpack_require__(158);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	var LoginInput = function LoginInput(props) {
-	  return _react2.default.createElement(
-	    'div',
-	    { className: 'loginbox center-block text-center' },
-	    _react2.default.createElement(
-	      'form',
-	      { onSubmit: props.loginToServer },
-	      _react2.default.createElement(
-	        'div',
-	        { className: 'row root' },
-	        _react2.default.createElement(
-	          'h3',
-	          null,
-	          _react2.default.createElement(
-	            _reactRouter.Link,
-	            { to: '/', className: 'no-decoration' },
-	            'Stack Salaries'
-	          )
-	        )
-	      ),
-	      _react2.default.createElement(
-	        'fieldset',
-	        { className: 'form-group row gray' },
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'col-sm-1' },
-	          _react2.default.createElement('span', { className: 'glyphicon glyphicon-envelope' })
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'col-sm-11' },
-	          _react2.default.createElement('input', { type: 'email', value: props.email, onChange: props.changeUser, className: 'form-control', placeholder: 'email' })
-	        )
-	      ),
-	      _react2.default.createElement(
-	        'fieldset',
-	        { className: 'form-group' },
-	        _react2.default.createElement(
-	          'small',
-	          { className: 'text-muted' },
-	          'We\'ll never share your email with anyone else.'
-	        )
-	      ),
-	      _react2.default.createElement(
-	        'fieldset',
-	        { className: 'form-group row gray' },
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'col-sm-1' },
-	          _react2.default.createElement('span', { className: 'glyphicon glyphicon-lock' })
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'col-sm-11' },
-	          _react2.default.createElement('input', { type: 'password', value: props.password, onChange: props.changePassword, className: 'form-control', placeholder: 'Password' })
-	        )
-	      ),
-	      _react2.default.createElement(
-	        'div',
-	        { className: 'row' },
-	        _react2.default.createElement(
-	          'button',
-	          { type: 'submit', className: 'btn btn-primary' },
-	          'Submit'
-	        )
-	      ),
-	      _react2.default.createElement(
-	        'div',
-	        { id: 'small-link', className: 'row' },
-	        _react2.default.createElement(
-	          'p',
-	          null,
-	          'Don\'t have an account? ',
-	          _react2.default.createElement(
-	            _reactRouter.Link,
-	            { to: '/signup' },
-	            'Sign Up'
-	          )
-	        )
-	      ),
-	      _react2.default.createElement(
-	        'div',
-	        { id: 'small-link', className: 'row' },
-	        _react2.default.createElement(
-	          'p',
-	          null,
-	          _react2.default.createElement(
-	            'a',
-	            { href: '/auth/github/' },
-	            'Sign In With Github'
-	          )
-	        )
-	      )
-	    )
-	  );
-	};
-
-	exports.default = LoginInput;
-
-/***/ },
-/* 269 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 	var _react = __webpack_require__(2);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var Flash = function (_React$Component) {
-	  _inherits(Flash, _React$Component);
-
-	  function Flash(props) {
-	    _classCallCheck(this, Flash);
-
-	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Flash).call(this, props));
-
-	    _this.state = {
-	      type: "",
-	      message: ""
-	    };
-	    return _this;
-	  }
-
-	  _createClass(Flash, [{
-	    key: "render",
-	    value: function render() {
-	      return _react2.default.createElement(
-	        "div",
-	        { className: this.props.type },
-	        this.props.message
-	      );
-	    }
-	  }]);
-
-	  return Flash;
-	}(_react2.default.Component);
-
-	exports.default = Flash;
-
-/***/ },
-/* 270 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(2);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _jquery = __webpack_require__(226);
+	var _jquery = __webpack_require__(228);
 
 	var _jquery2 = _interopRequireDefault(_jquery);
 
 	var _reactRouter = __webpack_require__(158);
 
-	var _signupInput = __webpack_require__(271);
+	var _reactRedux = __webpack_require__(229);
 
-	var _signupInput2 = _interopRequireDefault(_signupInput);
+	var _redux = __webpack_require__(236);
 
-	var _reactRedux = __webpack_require__(228);
+	var _actionCreator = __webpack_require__(255);
 
-	var _redux = __webpack_require__(235);
-
-	var _actionCreator = __webpack_require__(254);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var SignForm = function (_React$Component) {
-	  _inherits(SignForm, _React$Component);
-
-	  function SignForm() {
-	    _classCallCheck(this, SignForm);
-
-	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(SignForm).call(this));
-
-	    _this.state = {
-	      name: "",
-	      password: "",
-	      email: "",
-	      gender: "",
-	      authToken: ""
-	    };
-	    return _this;
-	  }
-
-	  _createClass(SignForm, [{
-	    key: 'addUser',
-	    value: function addUser(e) {
-	      this.setState({
-	        name: e.target.value
-	      });
-	    }
-	  }, {
-	    key: 'addPassword',
-	    value: function addPassword(e) {
-	      this.setState({
-	        password: e.target.value
-	      });
-	    }
-	  }, {
-	    key: 'addEmail',
-	    value: function addEmail(e) {
-	      this.setState({
-	        email: e.target.value
-	      });
-	    }
-	  }, {
-	    key: 'addGender',
-	    value: function addGender(e) {
-	      this.setState({
-	        gender: e.target.value
-	      });
-	    }
-	  }, {
-	    key: 'redirectToDashboard',
-	    value: function redirectToDashboard(userData) {
-	      console.log("WHATS IN THIS " + JSON.stringify(userData));
-	      this.props.setUserInfo(userData.user);
-	      this.context.router.push('/dashboard');
-	    }
-	  }, {
-	    key: 'SignUpToServer',
-	    value: function SignUpToServer(e) {
-	      e.preventDefault();
-	      var self = this;
-
-	      var data = { name: this.state.name, email: this.state.email, password: this.state.password, gender: this.state.gender };
-
-	      _jquery2.default.ajax({
-	        url: "https://localhost:3000/signup",
-	        type: "POST",
-	        contentType: "application/json",
-	        data: JSON.stringify(data),
-	        success: function success(results) {
-	          console.log(data);
-	          localStorage.setItem('token', results.token), self.setState({
-	            authToken: results.token
-	          });
-	          self.redirectToDashboard(results);
-	        },
-	        error: function error(err) {
-	          console.log(err);
-	        }
-	      });
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(
-	        'div',
-	        null,
-	        _react2.default.createElement(_signupInput2.default, { SignUpToServer: this.SignUpToServer.bind(this), addUser: this.addUser.bind(this), addEmail: this.addEmail.bind(this), addPassword: this.addPassword.bind(this), addGender: this.addGender.bind(this) })
-	      );
-	    }
-	  }]);
-
-	  return SignForm;
-	}(_react2.default.Component);
-
-	SignForm.contextTypes = {
-	  router: _react2.default.PropTypes.object.isRequired
-	};
-
-	function mapStateToProps(state) {
-	  return {
-	    userInfo: state.userInfo
-	  };
-	}
-
-	function mapDispatchToProps(dispatch) {
-	  return (0, _redux.bindActionCreators)({ setUserInfo: _actionCreator.setUserInfo }, dispatch);
-	}
-
-	exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(SignForm);
-
-/***/ },
-/* 271 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _react = __webpack_require__(2);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactRouter = __webpack_require__(158);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	var SignupInput = function SignupInput(props) {
-	  return _react2.default.createElement(
-	    'div',
-	    { className: 'loginbox center-block text-center' },
-	    _react2.default.createElement(
-	      'form',
-	      { onSubmit: props.SignUpToServer },
-	      _react2.default.createElement(
-	        'div',
-	        { className: 'row root' },
-	        _react2.default.createElement(
-	          'h3',
-	          null,
-	          _react2.default.createElement(
-	            _reactRouter.Link,
-	            { to: '/', className: 'no-decoration' },
-	            'Stack Salaries'
-	          )
-	        )
-	      ),
-	      _react2.default.createElement(
-	        'fieldset',
-	        { className: 'form-group row gray' },
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'col-sm-1' },
-	          _react2.default.createElement('span', { className: 'glyphicon glyphicon-user' })
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'col-sm-11' },
-	          _react2.default.createElement('input', { type: 'name', value: props.user, onChange: props.addUser, className: 'form-control', placeholder: 'Name' })
-	        )
-	      ),
-	      _react2.default.createElement(
-	        'fieldset',
-	        { className: 'form-group row gray' },
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'col-sm-1' },
-	          _react2.default.createElement('span', { className: 'glyphicon glyphicon-envelope' })
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'col-sm-11' },
-	          _react2.default.createElement('input', { type: 'email', value: props.email, onChange: props.addEmail, className: 'form-control', placeholder: 'Email' })
-	        )
-	      ),
-	      _react2.default.createElement(
-	        'fieldset',
-	        { className: 'form-group row gray' },
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'col-sm-1' },
-	          _react2.default.createElement('span', { className: 'glyphicon glyphicon-lock' })
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'col-sm-11' },
-	          _react2.default.createElement('input', { type: 'password', value: props.password, onChange: props.addPassword, className: 'form-control', placeholder: 'Password' })
-	        )
-	      ),
-	      _react2.default.createElement(
-	        'fieldset',
-	        { className: 'form-group row gray' },
-	        _react2.default.createElement(
-	          'select',
-	          {
-	            className: 'center-block form-control fit',
-	            value: props.gender,
-	            onChange: props.addGender
-	          },
-	          _react2.default.createElement(
-	            'option',
-	            { disabled: true, selected: true },
-	            'Gender'
-	          ),
-	          _react2.default.createElement(
-	            'option',
-	            { value: 'Male' },
-	            'Male'
-	          ),
-	          _react2.default.createElement(
-	            'option',
-	            { value: 'Female' },
-	            'Female'
-	          ),
-	          _react2.default.createElement(
-	            'option',
-	            { value: 'Other' },
-	            'Other'
-	          )
-	        )
-	      ),
-	      _react2.default.createElement(
-	        'div',
-	        { className: 'row' },
-	        _react2.default.createElement(
-	          'button',
-	          { type: 'submit', className: 'btn btn-primary' },
-	          'Submit'
-	        )
-	      )
-	    ),
-	    _react2.default.createElement(
-	      'div',
-	      { id: 'small-link', className: 'row' },
-	      _react2.default.createElement(
-	        'p',
-	        null,
-	        'Already have an account? ',
-	        _react2.default.createElement(
-	          _reactRouter.Link,
-	          { to: '/login' },
-	          'Log In'
-	        )
-	      )
-	    )
-	  );
-	};
-
-	exports.default = SignupInput;
-
-/***/ },
-/* 272 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(2);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactRouter = __webpack_require__(158);
-
-	var _jquery = __webpack_require__(226);
-
-	var _jquery2 = _interopRequireDefault(_jquery);
-
-	var _dashboardDataInput = __webpack_require__(273);
-
-	var _dashboardDataInput2 = _interopRequireDefault(_dashboardDataInput);
-
-	var _reactRedux = __webpack_require__(228);
-
-	var _redux = __webpack_require__(235);
-
-	var _actionCreator = __webpack_require__(254);
-
-	var _logo = __webpack_require__(258);
-
-	var _logo2 = _interopRequireDefault(_logo);
-
-	var _auth = __webpack_require__(256);
+	var _auth = __webpack_require__(221);
 
 	var _flash = __webpack_require__(269);
 
 	var _flash2 = _interopRequireDefault(_flash);
 
+	var _dashboardDataInput = __webpack_require__(270);
+
+	var _dashboardDataInput2 = _interopRequireDefault(_dashboardDataInput);
+
+	var _logo = __webpack_require__(225);
+
+	var _logo2 = _interopRequireDefault(_logo);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } // Import all required modules
+
+
+	// Import all actions & helper methods
+
+
+	// Import all needed components
+
 
 	var Dashboard = function (_React$Component) {
 	  _inherits(Dashboard, _React$Component);
@@ -48612,6 +48149,14 @@ module.exports =
 	      position: '',
 	      loggedIn: (0, _auth.loggedIn)()
 	    };
+
+	    _this.inputData = _this.inputData.bind(_this);
+	    _this.addStack = _this.addStack.bind(_this);
+	    _this.addCity = _this.addCity.bind(_this);
+	    _this.addState = _this.addState.bind(_this);
+	    _this.addEducation = _this.addEducation.bind(_this);
+	    _this.addExperience = _this.addExperience.bind(_this);
+	    _this.addPosition = _this.addPosition.bind(_this);
 	    return _this;
 	  }
 
@@ -48660,18 +48205,35 @@ module.exports =
 	  }, {
 	    key: 'submitToStore',
 	    value: function submitToStore() {
-	      var data = { stack: this.state.stack, city: this.state.city, state: this.state.state, education: this.state.education, experience: this.state.experience, position: this.state.position };
+	      var data = {
+	        stack: this.state.stack,
+	        city: this.state.city,
+	        state: this.state.state,
+	        education: this.state.education,
+	        experience: this.state.experience,
+	        position: this.state.position
+	      };
+
 	      this.props.setUserInfo(data);
 	    }
 	  }, {
 	    key: 'inputData',
 	    value: function inputData(e) {
 	      e.preventDefault();
+
 	      var self = this;
-	      var data = { stack: this.state.stack, city: this.state.city, state: this.state.state, education: this.state.education, experience: this.state.experience, position: this.state.position };
+
+	      var data = {
+	        stack: this.state.stack,
+	        city: this.state.city,
+	        state: this.state.state,
+	        education: this.state.education,
+	        experience: this.state.experience,
+	        position: this.state.position
+	      };
 
 	      _jquery2.default.ajax({
-	        url: "https://localhost:3000/stackentry",
+	        url: "http://localhost:3000/stackentry",
 	        type: "POST",
 	        contentType: "application/json",
 	        data: JSON.stringify(data),
@@ -48687,8 +48249,6 @@ module.exports =
 	  }, {
 	    key: 'render',
 	    value: function render() {
-
-	      // console.log(this.props);
 
 	      return _react2.default.createElement(
 	        'div',
@@ -48752,7 +48312,15 @@ module.exports =
 	          _react2.default.createElement(
 	            'div',
 	            { className: 'loginMain' },
-	            _react2.default.createElement(_dashboardDataInput2.default, { inputData: this.inputData.bind(this), addStack: this.addStack.bind(this), addCity: this.addCity.bind(this), addState: this.addState.bind(this), addEducation: this.addEducation.bind(this), addExperience: this.addExperience.bind(this), addPosition: this.addPosition.bind(this) })
+	            _react2.default.createElement(_dashboardDataInput2.default, {
+	              inputData: this.inputData,
+	              addStack: this.addStack,
+	              addCity: this.addCity,
+	              addState: this.addState,
+	              addEducation: this.addEducation,
+	              addExperience: this.addExperience,
+	              addPosition: this.addPosition
+	            })
 	          )
 	        )
 	      );
@@ -48778,10 +48346,66 @@ module.exports =
 
 	exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(Dashboard);
 
-	// {this.props.userInfo.name}
+/***/ },
+/* 269 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	// The flash class is a basic utility to display
+	// flash messages.
+
+	var Flash = function (_React$Component) {
+	  _inherits(Flash, _React$Component);
+
+	  function Flash(props) {
+	    _classCallCheck(this, Flash);
+
+	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Flash).call(this, props));
+
+	    _this.state = {
+	      type: "",
+	      message: ""
+	    };
+	    return _this;
+	  }
+
+	  _createClass(Flash, [{
+	    key: "render",
+	    value: function render() {
+	      return _react2.default.createElement(
+	        "div",
+	        { className: this.props.type },
+	        this.props.message
+	      );
+	    }
+	  }]);
+
+	  return Flash;
+	}(_react2.default.Component);
+
+	exports.default = Flash;
 
 /***/ },
-/* 273 */
+/* 270 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -48928,7 +48552,7 @@ module.exports =
 	exports.default = DataInput;
 
 /***/ },
-/* 274 */
+/* 271 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -48943,9 +48567,21 @@ module.exports =
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _jquery = __webpack_require__(228);
+
+	var _jquery2 = _interopRequireDefault(_jquery);
+
 	var _reactRouter = __webpack_require__(158);
 
-	var _auth = __webpack_require__(256);
+	var _reactRedux = __webpack_require__(229);
+
+	var _redux = __webpack_require__(236);
+
+	var _actionCreator = __webpack_require__(255);
+
+	var _signupInput = __webpack_require__(272);
+
+	var _signupInput2 = _interopRequireDefault(_signupInput);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -48953,41 +48589,572 @@ module.exports =
 
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } // Import all required modules
 
-	var Logout = function (_React$Component) {
-	  _inherits(Logout, _React$Component);
 
-	  function Logout() {
-	    _classCallCheck(this, Logout);
+	// Import all actions & helper methods
 
-	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Logout).call(this));
 
-	    _this.state = {};
+	// Import all needed components
+
+
+	var SignForm = function (_React$Component) {
+	  _inherits(SignForm, _React$Component);
+
+	  function SignForm() {
+	    _classCallCheck(this, SignForm);
+
+	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(SignForm).call(this));
+
+	    _this.state = {
+	      name: "",
+	      password: "",
+	      email: "",
+	      gender: "",
+	      authToken: ""
+	    };
 	    return _this;
 	  }
 
-	  _createClass(Logout, [{
-	    key: 'componentWillMount',
-	    value: function componentWillMount() {
-	      (0, _auth.logOut)();
-	      this.context.router.push('/');
+	  _createClass(SignForm, [{
+	    key: 'addUser',
+	    value: function addUser(e) {
+	      this.setState({
+	        name: e.target.value
+	      });
+	    }
+	  }, {
+	    key: 'addPassword',
+	    value: function addPassword(e) {
+	      this.setState({
+	        password: e.target.value
+	      });
+	    }
+	  }, {
+	    key: 'addEmail',
+	    value: function addEmail(e) {
+	      this.setState({
+	        email: e.target.value
+	      });
+	    }
+	  }, {
+	    key: 'addGender',
+	    value: function addGender(e) {
+	      this.setState({
+	        gender: e.target.value
+	      });
+	    }
+	  }, {
+	    key: 'redirectToDashboard',
+	    value: function redirectToDashboard(userData) {
+	      console.log("WHATS IN THIS " + JSON.stringify(userData));
+	      this.props.setUserInfo(userData.user);
+	      this.context.router.push('/dashboard');
+	    }
+	  }, {
+	    key: 'SignUpToServer',
+	    value: function SignUpToServer(e) {
+	      e.preventDefault();
+	      var self = this;
+
+	      var data = { name: this.state.name, email: this.state.email, password: this.state.password, gender: this.state.gender };
+
+	      _jquery2.default.ajax({
+	        url: "http://localhost:3000/signup",
+	        type: "POST",
+	        contentType: "application/json",
+	        data: JSON.stringify(data),
+	        success: function success(results) {
+	          console.log(data);
+	          localStorage.setItem('token', results.token), self.setState({
+	            authToken: results.token
+	          });
+	          self.redirectToDashboard(results);
+	        },
+	        error: function error(err) {
+	          console.log(err);
+	        }
+	      });
 	    }
 	  }, {
 	    key: 'render',
 	    value: function render() {
-	      return _react2.default.createElement('div', null);
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(_signupInput2.default, { SignUpToServer: this.SignUpToServer.bind(this), addUser: this.addUser.bind(this), addEmail: this.addEmail.bind(this), addPassword: this.addPassword.bind(this), addGender: this.addGender.bind(this) })
+	      );
 	    }
 	  }]);
 
-	  return Logout;
+	  return SignForm;
 	}(_react2.default.Component);
 
-	Logout.contextTypes = {
+	SignForm.contextTypes = {
 	  router: _react2.default.PropTypes.object.isRequired
 	};
 
-	exports.default = Logout;
+	function mapStateToProps(state) {
+	  return {
+	    userInfo: state.userInfo
+	  };
+	}
+
+	function mapDispatchToProps(dispatch) {
+	  return (0, _redux.bindActionCreators)({ setUserInfo: _actionCreator.setUserInfo }, dispatch);
+	}
+
+	exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(SignForm);
+
+/***/ },
+/* 272 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(158);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	// Import all required modules
+	var SignupInput = function SignupInput(props) {
+	  return _react2.default.createElement(
+	    'div',
+	    { className: 'loginbox center-block text-center' },
+	    _react2.default.createElement(
+	      'form',
+	      { onSubmit: props.SignUpToServer },
+	      _react2.default.createElement(
+	        'div',
+	        { className: 'row root' },
+	        _react2.default.createElement(
+	          'h3',
+	          null,
+	          _react2.default.createElement(
+	            _reactRouter.Link,
+	            { to: '/', className: 'no-decoration' },
+	            'Stack Salaries'
+	          )
+	        )
+	      ),
+	      _react2.default.createElement(
+	        'fieldset',
+	        { className: 'form-group row gray' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'col-sm-1' },
+	          _react2.default.createElement('span', { className: 'glyphicon glyphicon-user' })
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'col-sm-11' },
+	          _react2.default.createElement('input', { type: 'name', value: props.user, onChange: props.addUser, className: 'form-control', placeholder: 'Name' })
+	        )
+	      ),
+	      _react2.default.createElement(
+	        'fieldset',
+	        { className: 'form-group row gray' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'col-sm-1' },
+	          _react2.default.createElement('span', { className: 'glyphicon glyphicon-envelope' })
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'col-sm-11' },
+	          _react2.default.createElement('input', { type: 'email', value: props.email, onChange: props.addEmail, className: 'form-control', placeholder: 'Email' })
+	        )
+	      ),
+	      _react2.default.createElement(
+	        'fieldset',
+	        { className: 'form-group row gray' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'col-sm-1' },
+	          _react2.default.createElement('span', { className: 'glyphicon glyphicon-lock' })
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'col-sm-11' },
+	          _react2.default.createElement('input', { type: 'password', value: props.password, onChange: props.addPassword, className: 'form-control', placeholder: 'Password' })
+	        )
+	      ),
+	      _react2.default.createElement(
+	        'fieldset',
+	        { className: 'form-group row gray' },
+	        _react2.default.createElement(
+	          'select',
+	          {
+	            className: 'center-block form-control fit',
+	            value: props.gender,
+	            onChange: props.addGender
+	          },
+	          _react2.default.createElement(
+	            'option',
+	            { disabled: true, selected: true },
+	            'Gender'
+	          ),
+	          _react2.default.createElement(
+	            'option',
+	            { value: 'Male' },
+	            'Male'
+	          ),
+	          _react2.default.createElement(
+	            'option',
+	            { value: 'Female' },
+	            'Female'
+	          ),
+	          _react2.default.createElement(
+	            'option',
+	            { value: 'Other' },
+	            'Other'
+	          )
+	        )
+	      ),
+	      _react2.default.createElement(
+	        'div',
+	        { className: 'row' },
+	        _react2.default.createElement(
+	          'button',
+	          { type: 'submit', className: 'btn btn-primary' },
+	          'Submit'
+	        )
+	      )
+	    ),
+	    _react2.default.createElement(
+	      'div',
+	      { id: 'small-link', className: 'row' },
+	      _react2.default.createElement(
+	        'p',
+	        null,
+	        'Already have an account? ',
+	        _react2.default.createElement(
+	          _reactRouter.Link,
+	          { to: '/login' },
+	          'Log In'
+	        )
+	      )
+	    )
+	  );
+	};
+
+	exports.default = SignupInput;
+
+/***/ },
+/* 273 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _jquery = __webpack_require__(228);
+
+	var _jquery2 = _interopRequireDefault(_jquery);
+
+	var _reactRouter = __webpack_require__(158);
+
+	var _reactRedux = __webpack_require__(229);
+
+	var _redux = __webpack_require__(236);
+
+	var _actionCreator = __webpack_require__(255);
+
+	var _flash = __webpack_require__(269);
+
+	var _flash2 = _interopRequireDefault(_flash);
+
+	var _loginInput = __webpack_require__(274);
+
+	var _loginInput2 = _interopRequireDefault(_loginInput);
+
+	var _login = __webpack_require__(224);
+
+	var _login2 = _interopRequireDefault(_login);
+
+	var _advancedSearch = __webpack_require__(262);
+
+	var _advancedSearch2 = _interopRequireDefault(_advancedSearch);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } // Import all required modules
+
+
+	// Import all actions & helper methods
+
+
+	// Import all needed components
+
+
+	// Import all containers
+
+
+	var LoginForm = function (_React$Component) {
+	  _inherits(LoginForm, _React$Component);
+
+	  function LoginForm() {
+	    _classCallCheck(this, LoginForm);
+
+	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(LoginForm).call(this));
+
+	    _this.state = {
+	      email: "",
+	      password: "",
+	      authToken: null,
+	      hasError: false,
+	      errorType: "",
+	      errorMessage: ""
+	    };
+
+	    _this.loginToServer = _this.loginToServer.bind(_this);
+	    _this.changeUser = _this.changeUser.bind(_this);
+	    _this.changePassword = _this.changePassword.bind(_this);
+
+	    return _this;
+	  }
+
+	  _createClass(LoginForm, [{
+	    key: 'changeUser',
+	    value: function changeUser(e) {
+	      this.setState({
+	        email: e.target.value
+	      });
+	    }
+	  }, {
+	    key: 'changePassword',
+	    value: function changePassword(e) {
+	      this.setState({
+	        password: e.target.value
+	      });
+	    }
+	  }, {
+	    key: 'redirectToDashboard',
+	    value: function redirectToDashboard(userData) {
+	      if (userData.id) {
+	        this.props.setUserInfo(userData);
+	        this.context.router.push('/dashboard');
+	      } else {
+	        this.setState({
+	          hasError: true,
+	          errorType: "alert alert-danger",
+	          errorMessage: "Please check your email and password and try again!"
+	        });
+	      }
+	    }
+	  }, {
+	    key: 'loginToServer',
+	    value: function loginToServer(e) {
+	      e.preventDefault();
+
+	      var data = {
+	        email: this.state.email,
+	        password: this.state.password
+	      };
+
+	      var self = this;
+
+	      _jquery2.default.ajax({
+	        url: "http://localhost:3000/signin",
+	        type: "POST",
+	        contentType: "application/json",
+	        data: JSON.stringify(data),
+	        success: function success(data) {
+	          localStorage.setItem('token', data.token), self.setState({
+	            authToken: data.token
+	          });
+	          self.redirectToDashboard(data.user);
+	        },
+	        error: function error(err) {
+	          self.redirectToDashboard(err);
+	        }
+	      });
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+
+	      var toggle = "hide";
+	      if (this.state.hasError) {
+	        toggle = "";
+	      }
+
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'loginMain' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: toggle },
+	          _react2.default.createElement(_flash2.default, {
+	            type: this.state.errorType,
+	            message: this.state.errorMessage
+	          })
+	        ),
+	        _react2.default.createElement(_loginInput2.default, {
+	          history: this.props.history,
+	          loginToServer: this.loginToServer,
+	          changeUser: this.changeUser,
+	          changePassword: this.changePassword
+	        })
+	      );
+	    }
+	  }]);
+
+	  return LoginForm;
+	}(_react2.default.Component);
+
+	LoginForm.contextTypes = {
+	  router: _react2.default.PropTypes.object.isRequired
+	};
+
+	function mapStateToProps(state) {
+	  return {
+	    userInfo: state.userInfo
+	  };
+	}
+
+	function mapDispatchToProps(dispatch) {
+	  return (0, _redux.bindActionCreators)({ setUserInfo: _actionCreator.setUserInfo }, dispatch);
+	}
+
+	exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(LoginForm);
+
+/***/ },
+/* 274 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(158);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var LoginInput = function LoginInput(props) {
+	  return _react2.default.createElement(
+	    'div',
+	    { className: 'loginbox center-block text-center' },
+	    _react2.default.createElement(
+	      'form',
+	      { onSubmit: props.loginToServer },
+	      _react2.default.createElement(
+	        'div',
+	        { className: 'row root' },
+	        _react2.default.createElement(
+	          'h3',
+	          null,
+	          _react2.default.createElement(
+	            _reactRouter.Link,
+	            { to: '/', className: 'no-decoration' },
+	            'Stack Salaries'
+	          )
+	        )
+	      ),
+	      _react2.default.createElement(
+	        'fieldset',
+	        { className: 'form-group row gray' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'col-sm-1' },
+	          _react2.default.createElement('span', { className: 'glyphicon glyphicon-envelope' })
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'col-sm-11' },
+	          _react2.default.createElement('input', { type: 'email', value: props.email, onChange: props.changeUser, className: 'form-control', placeholder: 'email' })
+	        )
+	      ),
+	      _react2.default.createElement(
+	        'fieldset',
+	        { className: 'form-group' },
+	        _react2.default.createElement(
+	          'small',
+	          { className: 'text-muted' },
+	          'We\'ll never share your email with anyone else.'
+	        )
+	      ),
+	      _react2.default.createElement(
+	        'fieldset',
+	        { className: 'form-group row gray' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'col-sm-1' },
+	          _react2.default.createElement('span', { className: 'glyphicon glyphicon-lock' })
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'col-sm-11' },
+	          _react2.default.createElement('input', { type: 'password', value: props.password, onChange: props.changePassword, className: 'form-control', placeholder: 'Password' })
+	        )
+	      ),
+	      _react2.default.createElement(
+	        'div',
+	        { className: 'row' },
+	        _react2.default.createElement(
+	          'button',
+	          { type: 'submit', className: 'btn btn-primary' },
+	          'Submit'
+	        )
+	      ),
+	      _react2.default.createElement(
+	        'div',
+	        { id: 'small-link', className: 'row' },
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          'Don\'t have an account? ',
+	          _react2.default.createElement(
+	            _reactRouter.Link,
+	            { to: '/signup' },
+	            'Sign Up'
+	          )
+	        )
+	      ),
+	      _react2.default.createElement(
+	        'div',
+	        { id: 'small-link', className: 'row' },
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          _react2.default.createElement(
+	            'a',
+	            { href: '/auth/github/' },
+	            'Sign In With Github'
+	          )
+	        )
+	      )
+	    )
+	  );
+	};
+
+	exports.default = LoginInput;
 
 /***/ }
 /******/ ]);

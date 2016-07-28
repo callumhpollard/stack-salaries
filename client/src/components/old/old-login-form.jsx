@@ -1,13 +1,19 @@
+// Import all required modules
 import React from 'react';
 import $ from 'jquery';
-import LoginInput from './login-input';
-import Login from './login';
 import { History, Router } from 'react-router';
-import AdvancedSearch from './advanced-search';
-import Flash from './flash';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+
+// Import all actions & helper methods
 import { setUserInfo } from '../actions/actionCreator';
+import Flash from './flash';
+
+// Import all needed components
+import LoginInput from './login-input';
+import Login from './login';
+import AdvancedSearch from './advanced-search';
+
 
 class LoginForm extends React.Component {
   constructor() {
@@ -22,11 +28,6 @@ class LoginForm extends React.Component {
       errorType: "",
       errorMessage: ""
     };
-  }
-
-
-  componentWillMount(){
-    // console.log("You're here!");
   }
 
   changeUser(e) {
@@ -62,7 +63,7 @@ class LoginForm extends React.Component {
     var self = this;
 
     $.ajax({
-      url:"https://localhost:3000/signin",
+      url:"http://localhost:3000/signin",
       type:"POST",
       contentType:"application/json",
       data: JSON.stringify(data),

@@ -1,19 +1,27 @@
+// Import all required modules
 import React from 'react';
 import { Route, browserHistory, IndexRoute } from 'react-router';
 
-import MainLayout from './components/main-layout';
-import App from './components/app';
-import Stats from './components/stats';
-import Search from './components/search';
-import LoginForm from './components/login-form';
-import SignupForm from './components/signup-form';
-import Dashboard from './components/dashboard';
-import AdvancedSearch from './components/advanced-search';
-import Results from './components/results';
-import Jobs from './components/jobs';
-import Logout from './components/logout';
+// Import all actions & helper methods
 import { loggedIn, logOut } from './auth/auth';
 
+// Import all components
+import MainLayout from './components/main-layout';
+import Stats from './components/stats';
+import Logout from './components/logout';
+
+// Import all containers
+import App from './containers/app';
+import Jobs from './containers/jobs';
+import Dashboard from './containers/dashboard';
+import SignupForm from './containers/signup-form';
+import LoginForm from './containers/login-form';
+import Search from './containers/search';
+import Results from './containers/results';
+import AdvancedSearch from './containers/advanced-search';
+
+// The react router renders components based on
+// desired path
 export default (
   <Route path="/" component={MainLayout}>
     <IndexRoute component={App} />
