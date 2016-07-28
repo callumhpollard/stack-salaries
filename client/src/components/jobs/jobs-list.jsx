@@ -1,5 +1,5 @@
 import React from 'react';
-import JobsItem from './jobs-item';
+import JobsItem from '../jobs/jobs-item';
 
 var JobsList = (props) => {
   if(props.jobs){

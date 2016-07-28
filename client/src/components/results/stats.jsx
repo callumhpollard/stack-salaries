@@ -3,18 +3,18 @@ import React from 'react';
 import { History } from 'react-router';
 
 // Import all actions & helper methods
-import { loggedIn } from '../auth/auth';
+import { loggedIn } from '../../auth/auth';
 
 // Import all needed components
-import Login from './login';
-import Logo from './logo';
-import Footer from './footer';
+import Login from '../authentication/login';
+import Logo from '../navigation/logo';
+import Footer from '../layout/footer';
 
 // Import all containers
-import Jobs from '../containers/jobs';
-import Search from '../containers/search';
-import Results from '../containers/results';
-import AdvancedSearch from '../containers/advanced-search';
+import Jobs from '../../containers/jobs';
+import Search from '../../containers/search';
+import Results from '../../containers/results';
+import AdvancedSearch from '../../containers/advanced-search';
 
 class Stats extends React.Component {
 

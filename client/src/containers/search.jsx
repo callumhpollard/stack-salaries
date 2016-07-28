@@ -9,7 +9,7 @@ import { bindActionCreators } from 'redux';
 import { setSearch, setCityState } from '../actions/actionCreator';
 
 // Import all needed components
-import SearchInput from '../components/search-input';
+import SearchInput from '../components/search/search-input';
 
 class Search extends React.Component{
 

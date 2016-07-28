@@ -9,7 +9,7 @@ import { bindActionCreators } from 'redux';
 import { setUserInfo } from '../actions/actionCreator';
 
 // Import all needed components
-import SignupInput from '../components/signup-input';
+import SignupInput from '../components/authentication/signup-input';
 
 class SignForm extends React.Component{
   constructor() {

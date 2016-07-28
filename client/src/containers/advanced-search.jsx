@@ -10,8 +10,8 @@ import { setSearch } from '../actions/actionCreator';
 import { loggedIn } from '../auth/auth';
 
 // Import all needed components
-import AdvancedSearchInput from '../components/advance-searchInput';
-import Logo from '../components/logo';
+import AdvancedSearchInput from '../components/search/advance-searchInput';
+import Logo from '../components/navigation/logo';
 
 class AdvancedSearch extends React.Component{
 

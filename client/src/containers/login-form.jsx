@@ -10,8 +10,8 @@ import { setUserInfo } from '../actions/actionCreator';
 import Flash from '../utils/flash';
 
 // Import all needed components
-import LoginInput from '../components/login-input';
-import Login from '../components/login';
+import LoginInput from '../components/authentication/login-input';
+import Login from '../components/authentication/login';
 
 // Import all containers
 import AdvancedSearch from '../containers/advanced-search';

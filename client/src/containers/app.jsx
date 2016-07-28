@@ -9,9 +9,9 @@ import { loggedIn } from '../auth/auth';
 import { setUserInfo } from '../actions/actionCreator';
 
 // Import all needed components
-import Login from '../components/login';
-import Main from '../components/main';
-import Cloud from '../components/cloud';
+import Login from '../components/authentication/login';
+import Main from '../components/layout/main';
+import Cloud from '../components/keywordCloud/cloud';
 
 // Import all containers
 import Search from '../containers/search';

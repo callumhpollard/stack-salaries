@@ -11,8 +11,8 @@ import { loggedIn } from '../auth/auth';
 import Flash from '../utils/flash';
 
 // Import all needed components
-import DataInput from '../components/dashboard-dataInput';
-import Logo from '../components/logo';
+import DataInput from '../components/dashboard/dashboard-dataInput';
+import Logo from '../components/navigation/logo';
 
 class Dashboard extends React.Component {
 

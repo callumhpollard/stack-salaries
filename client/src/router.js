@@ -6,9 +6,9 @@ import { Route, browserHistory, IndexRoute } from 'react-router';
 import { loggedIn, logOut } from './auth/auth';
 
 // Import all components
-import MainLayout from './components/main-layout';
-import Stats from './components/stats';
-import Logout from './components/logout';
+import MainLayout from './components/layout/main-layout';
+import Stats from './components/results/stats';
+import Logout from './components/authentication/logout';
 
 // Import all containers
 import App from './containers/app';

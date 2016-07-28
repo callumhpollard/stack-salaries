@@ -6,7 +6,7 @@ import { bindActionCreators } from 'redux';
 import { setSearch, setCityState } from '../actions/actionCreator';
 
 // Import all actions & helper methods
-import JobsList from '../components/jobs-list';
+import JobsList from '../components/jobs/jobs-list';
 
 // Import all containers
 import search from '../containers/search';

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
-import { logOut } from '../auth/auth';
+import { logOut } from '../../auth/auth';
 
 class Logout extends React.Component {
   constructor() {
